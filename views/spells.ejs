@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angezeigte Zauber</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: #ccc;
+        }
+
+        .filter-sort-options {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .filter-sort-options label {
+            display: inline-block;
+            margin-right: 10px;
+            color: #ddd;
+        }
+
+        .filter-sort-options select {
+            padding: 8px;
+            background-color: #444;
+            color: #f0f0f0;
+            border: 1px solid #777;
+            border-radius: 3px;
+            margin-right: 15px;
+        }
+
+        .spell-list {
+            margin-top: 20px;
+        }
+
+        .spell-item {
+            border: 1px solid #555;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .spell-item h3 {
+            color: #ddd;
+            margin-top: 0;
+        }
+
+        .spell-item p {
+            margin-bottom: 5px;
+        }
+
+        .spell-item .classes {
+            font-style: italic;
+            color: #bbb;
+        }
+
+        a {
+            color: #5cb85c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Angezeigte Zauber</h1>
+
+    <div class="filter-sort-options">
+        <form action="/spells" method="GET">
+            <label for="stufe">Stufe:</label>
+            <select name="stufe" id="stufe">
+                <option value="">Alle</option>
+                <option value="0" <%=locals.filterStufe==='0' ? 'selected' : '' %>>Zaubertrick</option>
+                <option value="1" <%=locals.filterStufe==='1' ? 'selected' : '' %>>1</option>
+                <option value="2" <%=locals.filterStufe==='2' ? 'selected' : '' %>>2</option>
+                <option value="3" <%=locals.filterStufe==='3' ? 'selected' : '' %>>3</option>
+                <option value="4" <%=locals.filterStufe==='4' ? 'selected' : '' %>>4</option>
+                <option value="5" <%=locals.filterStufe==='5' ? 'selected' : '' %>>5</option>
+                <option value="6" <%=locals.filterStufe==='6' ? 'selected' : '' %>>6</option>
+                <option value="7" <%=locals.filterStufe==='7' ? 'selected' : '' %>>7</option>
+                <option value="8" <%=locals.filterStufe==='8' ? 'selected' : '' %>>8</option>
+                <option value="9" <%=locals.filterStufe==='9' ? 'selected' : '' %>>9</option>
+            </select>
+
+            <label for="schule">Schule:</label>
+            <select name="schule" id="schule">
+                <option value="">Alle</option>
+                <option value="Beschwörung" <%=locals.filterSchule==='Beschwörung' ? 'selected' : '' %>>Beschwörung
+                </option>
+                <option value="Verzauberung" <%=locals.filterSchule==='Verzauberung' ? 'selected' : '' %>>Verzauberung
+                </option>
+                <option value="Hervorrufung" <%=locals.filterSchule==='Hervorrufung' ? 'selected' : '' %>>Hervorrufung
+                </option>
+                <option value="Nekromantie" <%=locals.filterSchule==='Nekromantie' ? 'selected' : '' %>>Nekromantie
+                </option>
+                <option value="Weissagung" <%=locals.filterSchule==='Weissagung' ? 'selected' : '' %>>Weissagung
+                </option>
+                <option value="Bannzauber" <%=locals.filterSchule==='Bannzauber' ? 'selected' : '' %>>Bannzauber
+                </option>
+                <option value="Illusion" <%=locals.filterSchule==='Illusion' ? 'selected' : '' %>>Illusion</option>
+                <option value="Verwandlung" <%=locals.filterSchule==='Verwandlung' ? 'selected' : '' %>>Verwandlung
+                </option>
+            </select>
+
+            <label for="sortierung">Sortieren nach:</label>
+            <select name="sortierung" id="sortierung">
+                <option value="name_asc" <%=locals.sortierung==='name_asc' ? 'selected' : '' %>>Name (A-Z)</option>
+                <option value="name_desc" <%=locals.sortierung==='name_desc' ? 'selected' : '' %>>Name (Z-A)</option>
+                <option value="stufe_asc" <%=locals.sortierung==='stufe_asc' ? 'selected' : '' %>>Stufe (aufsteigend)
+                </option>
+                <option value="stufe_desc" <%=locals.sortierung==='stufe_desc' ? 'selected' : '' %>>Stufe (absteigend)
+                </option>
+                <option value="schule_asc" <%=locals.sortierung==='schule_asc' ? 'selected' : '' %>>Schule (A-Z)
+                </option>
+                <option value="schule_desc" <%=locals.sortierung==='schule_desc' ? 'selected' : '' %>>Schule (Z-A)
+                </option>
+            </select>
+
+            <button type="submit">Anwenden</button>
+        </form>
+    </div>
+
+    <div class="spell-list">
+        <% if (spells && spells.length> 0) { %>
+            <% spells.forEach(spell=> { %>
+                <div class="spell-item">
+                    <h3>
+                        <%= spell.Name %> (Stufe <%= spell.Stufe %>, <%= spell.Schule %>)
+                    </h3>
+                    <p><strong>Zeitaufwand:</strong>
+                        <%= spell.Zeitaufwand %>
+                    </p>
+                    <p><strong>Reichweite:</strong>
+                        <%= spell.Reichweite %>
+                    </p>
+                    <% if (spell.Konzentration) { %>
+                        <p><strong>Konzentration:</strong> Ja</p>
+                        <% } %>
+                            <p><strong>Dauer:</strong>
+                                <%= spell.Dauer %>
+                            </p>
+                            <% if (spell.Ritual) { %>
+                                <p><strong>Ritual:</strong> Ja</p>
+                                <% } %>
+                                    <p><strong>Komponenten:</strong>
+                                        <% if (spell.Verbal) { %>V<% } %>
+                                                <% if (spell.Gestik) { %>S<% } %>
+                                                        <% if (spell.Material) { %>M (<%= spell.Material %>)<% } %>
+                                    </p>
+                                    <p><strong>Text:</strong>
+                                        <%= spell.Text %>
+                                    </p>
+                                    <p class="classes"><strong>Klassen:</strong>
+                                        <%= spell.Klasse.join(', ') %></p>
+                    <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
+                </div>
+                <p><a href="/edit/<%= spell.Name %>">Bearbeiten</a></p>
+            <% }); %>
+        <% } else { %>
+            <p>Es sind noch keine Zauber gespeichert.</p>
+        <% } %>
+    </div>
+    <p><a href="/">Zurück zum Formular</a></p>
+</body>
+</html>
