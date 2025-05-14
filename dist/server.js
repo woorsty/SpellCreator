@@ -68,11 +68,58 @@ async function writeJsonFile(data) {
     }
 }
 app.get('/spells', async (req, res) => {
+    const filterStufe = req.query.stufe;
+    const filterKlasse = req.query.klasse;
+    const filterSchule = req.query.schule;
+    const sortierung = req.query.sortierung;
     const spellData = await readJsonFile();
-    res.render('spells', { spells: spellData.spells });
+    let gefilterteZauber = [...spellData.spells]; // Erstelle eine Kopie zum Filtern
+    // Filterlogik
+    if (filterStufe) {
+        gefilterteZauber = gefilterteZauber.filter(spell => spell.Stufe.toString() === filterStufe);
+    }
+    if (filterSchule) {
+        gefilterteZauber = gefilterteZauber.filter(spell => spell.Schule === filterSchule);
+    }
+    if (filterKlasse) {
+        gefilterteZauber = gefilterteZauber.filter(spell => spell.Klasse.includes(filterKlasse));
+    }
+    // Sortierlogik
+    if (sortierung) {
+        switch (sortierung) {
+            case 'name_asc':
+                gefilterteZauber.sort((a, b) => a.Name.localeCompare(b.Name));
+                break;
+            case 'name_desc':
+                gefilterteZauber.sort((a, b) => b.Name.localeCompare(a.Name));
+                break;
+            case 'stufe_asc':
+                gefilterteZauber.sort((a, b) => a.Stufe - b.Stufe);
+                break;
+            case 'stufe_desc':
+                gefilterteZauber.sort((a, b) => b.Stufe - a.Stufe);
+                break;
+            case 'schule_asc':
+                gefilterteZauber.sort((a, b) => a.Schule.localeCompare(b.Schule));
+                break;
+            case 'schule_desc':
+                gefilterteZauber.sort((a, b) => b.Schule.localeCompare(a.Schule));
+                break;
+        }
+    }
+    res.render('spells', {
+        spells: gefilterteZauber,
+        filterStufe: filterStufe,
+        filterKlasse: filterKlasse,
+        filterSchule: filterSchule,
+        sortierung: sortierung,
+    });
 });
 app.get('/add', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, '../public/form.html'));
+});
+app.get('/', (req, res) => {
+    res.send('<a href="/add">Hinzufügen</a><br/><a href="/spells">Anzeigen</a>');
 });
 app.get('/edit/:name', async (req, res) => {
     const spellName = req.params.name;

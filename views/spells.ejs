@@ -96,6 +96,21 @@
                 <option value="9" <%=locals.filterStufe==='9' ? 'selected' : '' %>>9</option>
             </select>
 
+            <label for="klasse">Klasse:</label>
+            <select name="klasse" id="klasse">
+                <option value="">Alle</option>
+                <option value="Barde" <%=locals.filterKlasse==='Barde' ? 'selected' : '' %>>Barde</option>
+                <option value="Druide" <%=locals.filterKlasse==='Druide' ? 'selected' : '' %>>Druide</option>
+                <option value="Hexenmeister" <%=locals.filterKlasse==='Hexenmeister' ? 'selected' : '' %>>Hexenmeister
+                </option>
+                <option value="Kleriker" <%=locals.filterKlasse==='Kleriker' ? 'selected' : '' %>>Kleriker</option>
+                <option value="Magier" <%=locals.filterKlasse==='Magier' ? 'selected' : '' %>>Magier</option>
+                <option value="Paladin" <%=locals.filterKlasse==='Paladin' ? 'selected' : '' %>>Paladin</option>
+                <option value="Waldläufer" <%=locals.filterKlasse==='Waldläufer' ? 'selected' : '' %>>Waldläufer
+                </option>
+                <option value="Zauberer" <%=locals.filterKlasse==='Zauberer' ? 'selected' : '' %>>Zauberer</option>
+            </select>
+
             <label for="schule">Schule:</label>
             <select name="schule" id="schule">
                 <option value="">Alle</option>
