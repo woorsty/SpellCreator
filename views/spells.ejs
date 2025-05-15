@@ -62,6 +62,7 @@
         }
         .spell-item p {
             margin-bottom: 5px;
+            margin-top: 10px;
         }
         .spell-item .classes {
             font-style: italic;
@@ -87,6 +88,33 @@
             background-color: #444;
             color: #f0f0f0;
             white-space: pre-wrap; /* Zeilenumbrüche im Text beibehalten */
+            position: relative; /* Für die optionale "Mehr anzeigen"-Überlagerung */
+            overflow: hidden;
+            max-height: 150px; /* Beispiel: Definiere die anfängliche Höhe */
+            transition: max-height 0.3s ease-out; /* Sanfte Animation beim Ausklappen */
+        }
+
+        .spell-text-container.expanded {
+            max-height: none; /* Entfernt die Höhenbegrenzung */
+        }
+
+        .spell-text-container::after {
+            content: 'Mehr anzeigen';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)); /* Transparenter Farbverlauf */
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .spell-text-container.expanded::after {
+            content: '';
+            opacity: 0;
         }
 
         .spell-text-container p.spell-text-label {
@@ -104,19 +132,6 @@
             padding-left: 20px; /* Einrückung für die Liste */
         }
         .spell-text-container .spell-list-items li {
-        }
-        .spell-text-container div p {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-        .spell-text-container div ul {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-
-        .spell-text-container div li {
-            margin-top: 0.2em;
-            margin-bottom: 0.2em;
         }
         .spell-text-container p {
             white-space: pre-wrap; /* Zeilenumbrüche beibehalten */
@@ -232,9 +247,11 @@
                     <p><strong>Dauer:</strong> <%= spell.Dauer %></p>
                     <% if (spell.Ritual) { %><p><strong>Ritual:</strong> Ja</p><% } %>
                     <p><strong>Komponenten:</strong>
+                    <br/>
                         <% if (spell.Verbal) { %>V<% } %>
-                        <% if (spell.Gestik) { %>S<% } %>
-                        <% if (spell.Material) { %>M (<%= spell.Material %>)<% } %>
+                        <% if (spell.Gestik) { %>G<% } %>
+                        <br/>
+                        <% if (spell.Material) { %><%= spell.Material %><% } %>
                     </p>
                     <div class="spell-text-container"><%- locals.renderMarkdown(spell.Text) %></div>
                     <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
@@ -274,6 +291,35 @@
                 stufeBisSelect.value = stufeVonSelect.value;
             }
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const spellTextContainers = document.querySelectorAll('.spell-text-container');
+
+        spellTextContainers.forEach(container => {
+            if (container.scrollHeight > container.offsetHeight) {
+                container.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            } else {
+                // Wenn der Text nicht überläuft, "Mehr anzeigen" entfernen
+                const afterElement = window.getComputedStyle(container, '::after'); // Verwende 'container' statt 'this'
+                if (afterElement.content !== 'none') {
+                    // Suche nach einem Element-Kindknoten, dessen ::after Content übereinstimmt
+                    const pseudoElement = Array.from(container.children).find(element => {
+                        const elementAfter = window.getComputedStyle(element, '::after');
+                        return elementAfter.content === afterElement.content;
+                    });
+                    if (pseudoElement) {
+                        // Wir wollen das Pseudo-Element des Containers entfernen, nicht das eines Kindes
+                        // Eine direkte Entfernung des Pseudo-Elements ist nicht möglich.
+                        // Stattdessen blenden wir es aus.
+                        container.classList.add('expanded'); // Stelle sicher, dass ::after ausgeblendet wird
+                    }
+                }
+            }
+        });
+    });
     </script>
 </body>
 </html>
