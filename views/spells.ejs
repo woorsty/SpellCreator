@@ -104,10 +104,21 @@
             padding-left: 20px; /* Einrückung für die Liste */
         }
         .spell-text-container .spell-list-items li {
-            margin-bottom: 5px; /* Abstand zwischen Listenelementen */
+        }
+        .spell-text-container div p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        .spell-text-container div ul {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .spell-text-container div li {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
         }
         .spell-text-container p {
-            margin-bottom: 10px; /* Abstand zwischen normalen Absätzen */
             white-space: pre-wrap; /* Zeilenumbrüche beibehalten */
         }
     </style>
@@ -225,9 +236,7 @@
                         <% if (spell.Gestik) { %>S<% } %>
                         <% if (spell.Material) { %>M (<%= spell.Material %>)<% } %>
                     </p>
-                    <div class="spell-text-container">
-                        <p class="spell-text-value"><%- locals.renderMarkdown(spell.Text) %></p>
-                    </div>
+                    <div class="spell-text-container"><%- locals.renderMarkdown(spell.Text) %></div>
                     <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
                     <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
                 </div>
