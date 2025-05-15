@@ -33,6 +33,9 @@
             border-radius: 3px;
             margin-right: 15px;
         }
+        .filter-sort-options select[multiple] {
+            height: 80px; /* Genug Platz für mehrere Einträge */
+        }
         .spell-list-header {
             display: flex;
             justify-content: space-between;
@@ -125,6 +128,22 @@
                 <option value="Illusion" <%= locals.filterSchule === 'Illusion' ? 'selected' : '' %>>Illusion</option>
                 <option value="Verwandlung" <%= locals.filterSchule === 'Verwandlung' ? 'selected' : '' %>>Verwandlung</option>
             </select>
+
+            <label for="klasse">Klasse(n):</label>
+            <select name="klasse" id="klasse">
+                <option value="">Alle</option>
+                <option value="Barde" <%= locals.filterKlasse && locals.filterKlasse.includes('Barde') ? 'selected' : '' %>>Barde</option>
+                <option value="Hexenmeister" <%= locals.filterKlasse && locals.filterKlasse.includes('Hexenmeister') ? 'selected' : '' %>>Hexenmeister</option>
+                <option value="Magier" <%= locals.filterKlasse && locals.filterKlasse.includes('Magier') ? 'selected' : '' %>>Magier</option>
+                <option value="Kleriker" <%= locals.filterKlasse && locals.filterKlasse.includes('Kleriker') ? 'selected' : '' %>>Kleriker</option>
+                <option value="Druide" <%= locals.filterKlasse && locals.filterKlasse.includes('Druide') ? 'selected' : '' %>>Druide</option>
+                <option value="Krieger" <%= locals.filterKlasse && locals.filterKlasse.includes('Krieger') ? 'selected' : '' %>>Krieger</option>
+                <option value="Paladin" <%= locals.filterKlasse && locals.filterKlasse.includes('Paladin') ? 'selected' : '' %>>Paladin</option>
+                <option value="Waldläufer" <%= locals.filterKlasse && locals.filterKlasse.includes('Waldläufer') ? 'selected' : '' %>>Waldläufer</option>
+                <option value="Schurke" <%= locals.filterKlasse && locals.filterKlasse.includes('Schurke') ? 'selected' : '' %>>Schurke</option>
+                <option value="Mönch" <%= locals.filterKlasse && locals.filterKlasse.includes('Mönch') ? 'selected' : '' %>>Mönch</option>
+                <option value="Zauberer" <%= locals.filterKlasse && locals.filterKlasse.includes('Zauberer') ? 'selected' : '' %>>Zauberer</option>
+                </select>
 
             <label for="sortierung">Sortieren nach:</label>
             <select name="sortierung" id="sortierung">
