@@ -80,6 +80,8 @@
         .spell-text-container {
             margin-top: 10px;
             padding: 10px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             border: 1px solid #777;
             border-radius: 3px;
             background-color: #444;
@@ -95,6 +97,18 @@
 
         .spell-text-container p.spell-text-value {
             margin-bottom: 0; /* Unteren Margin entfernen, falls vorhanden */
+        }
+
+        .spell-text-container .spell-list-items {
+            list-style-type: disc; /* Oder eine andere Listenpunkt-Art */
+            padding-left: 20px; /* Einrückung für die Liste */
+        }
+        .spell-text-container .spell-list-items li {
+            margin-bottom: 5px; /* Abstand zwischen Listenelementen */
+        }
+        .spell-text-container p {
+            margin-bottom: 10px; /* Abstand zwischen normalen Absätzen */
+            white-space: pre-wrap; /* Zeilenumbrüche beibehalten */
         }
     </style>
 </head>
@@ -117,7 +131,7 @@
                 <option value="Schurke" <%= locals.filterKlasse && locals.filterKlasse.includes('Schurke') ? 'selected' : '' %>>Schurke</option>
                 <option value="Mönch" <%= locals.filterKlasse && locals.filterKlasse.includes('Mönch') ? 'selected' : '' %>>Mönch</option>
                 <option value="Zauberer" <%= locals.filterKlasse && locals.filterKlasse.includes('Zauberer') ? 'selected' : '' %>>Zauberer</option>
-                </select>
+            </select>
 
             <br/>
 
@@ -200,31 +214,29 @@
         <% if (spells && spells.length > 0) { %>
             <% spells.forEach(spell => { %>
                 <div class="spell-item">
-                    <h3><%= spell.Name %> (<%= spell.Stufe === "0" ? 'Zaubertrick' : 'Stufe ' + spell.Stufe %>, <%= spell.Schule %>)</h3>
-                    <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
+                    <h3><%= spell.Name %> (<%= spell.Stufe === 0 ? 'Zaubertrick' : 'Stufe ' + spell.Stufe %>, <%= spell.Schule %>)</h3>
                     <p><strong>Zeitaufwand:</strong> <%= spell.Zeitaufwand %></p>
                     <p><strong>Reichweite:</strong> <%= spell.Reichweite %></p>
                     <% if (spell.Konzentration) { %><p><strong>Konzentration:</strong> Ja</p><% } %>
-                    <p><strong>Wirkungsdauer:</strong> <%= spell.Dauer %></p>
+                    <p><strong>Dauer:</strong> <%= spell.Dauer %></p>
                     <% if (spell.Ritual) { %><p><strong>Ritual:</strong> Ja</p><% } %>
                     <p><strong>Komponenten:</strong>
-                        <% if (spell.Verbal) { %>Verbal<% } %>
-                        <% if (spell.Gestik) { %>Gestik<% } %>
-                        <% if (spell.Material) { %>Material (<%= spell.Material %>)<% } %>
+                        <% if (spell.Verbal) { %>V<% } %>
+                        <% if (spell.Gestik) { %>S<% } %>
+                        <% if (spell.Material) { %>M (<%= spell.Material %>)<% } %>
                     </p>
                     <div class="spell-text-container">
-                        <p id="spell-text-value"> <%= spell.Text %></p>
-                        <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
+                        <p class="spell-text-value"><%- locals.renderMarkdown(spell.Text) %></p>
                     </div>
+                    <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
+                    <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
                 </div>
-                <!-- <p><a href="/edit/<%= spell.Name %>">Bearbeiten</a></p>-->
-            <% }); %>
+                <% }); %>
         <% } else { %>
             <p>Es sind noch keine Zauber gespeichert oder die Filterkriterien haben keine Treffer ergeben.</p>
         <% } %>
     </div>
-
-    <script>
+    <script>  
         const stufeVonSelect = document.getElementById('stufeVon');
         const stufeBisContainer = document.getElementById('stufeBisContainer');
         const stufeBisBR = document.getElementById('stufeBisBR');
