@@ -99,8 +99,9 @@
         }
 
         .spell-text-container::after {
-            content: 'Mehr anzeigen';
+            content: ' ';
             position: absolute;
+            color: #333;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -111,6 +112,49 @@
             opacity: 1;
             transition: opacity 0.3s ease-out;
         }
+
+        .filter-sort-options button[type="submit"] {
+            font-size: 1.2em; /* Größere Schrift */
+            padding: 12px 20px; /* Mehr Innenabstand */
+            margin-top: 10px; /* Etwas Abstand zu den Filterelementen darüber */
+            width: 100%; /* Volle Breite für einfacheres Tippen */
+            display: block; /* Button als Block-Element */
+        }
+        .filter-sort-options label {
+        display: block; /* Labels über den Auswahlfeldern anzeigen */
+        margin-bottom: 5px; /* Etwas Abstand zwischen Label und Feld */
+        font-size: 1em; /* Angemessene Schriftgröße */
+    }
+
+    #stufeBisContainer {
+        width: 100%;
+    }
+
+    .filter-sort-options div select, .filter-sort-options select {
+        width: 100%; /* Volle Breite für die Auswahlfelder */
+        padding: 10px; /* Angenehmer Innenabstand */
+        margin-bottom: 10px; /* Abstand zwischen den Auswahlfeldern */
+        font-size: 1em;
+        -webkit-appearance: none; /* Standard-Dropdown-Pfeil entfernen (für eigenes Styling) */
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Eigener Dropdown-Pfeil */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 1em;
+        border: 1px solid #777;
+        border-radius: 4px;
+        color: #f0f0f0;
+        background-color: #444;
+    }
+
+    .filter-sort-options select[multiple] {
+        height: auto; /* Höhe automatisch anpassen */
+    }
+
+    .filter-sort-options br {
+        display: none; /* Zeilenumbrüche entfernen, da Labels jetzt block sind */
+    }
 
         .spell-text-container.expanded::after {
             content: '';
@@ -135,6 +179,36 @@
         }
         .spell-text-container p {
             white-space: pre-wrap; /* Zeilenumbrüche beibehalten */
+        }
+        .spell-text-container.expanded-short::after {
+            content: '';
+            opacity: 0;
+            display: none; /* Zusätzlich ausblenden, um sicherzugehen */
+        }
+
+        /* Akzentfarbe für Buttons */
+        .filter-sort-options button[type="submit"] {
+    background-color: #4cae4c; /* Dunkleres Grün */
+    border-color: #398439;
+    color: #fff; /* Weißer Text für besseren Kontrast */
+}
+
+.filter-sort-options button[type="submit"]:hover {
+    background-color: #398439;
+}
+
+        /* Akzentfarbe für Links */
+        a {
+            color: #5bc0de;
+        }
+
+        a:hover {
+            color: #46b8da;
+        }
+
+        /* Akzentfarbe für Zaubernamen */
+        .spell-item h3 {
+            color: #8ab4f8; /* Beispiel: Orange */
         }
     </style>
 </head>
@@ -294,31 +368,25 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        const spellTextContainers = document.querySelectorAll('.spell-text-container');
+    const spellTextContainers = document.querySelectorAll('.spell-text-container');
 
-        spellTextContainers.forEach(container => {
-            if (container.scrollHeight > container.offsetHeight) {
-                container.addEventListener('click', function() {
-                    this.classList.toggle('expanded');
-                });
-            } else {
-                // Wenn der Text nicht überläuft, "Mehr anzeigen" entfernen
-                const afterElement = window.getComputedStyle(container, '::after'); // Verwende 'container' statt 'this'
-                if (afterElement.content !== 'none') {
-                    // Suche nach einem Element-Kindknoten, dessen ::after Content übereinstimmt
-                    const pseudoElement = Array.from(container.children).find(element => {
-                        const elementAfter = window.getComputedStyle(element, '::after');
-                        return elementAfter.content === afterElement.content;
-                    });
-                    if (pseudoElement) {
-                        // Wir wollen das Pseudo-Element des Containers entfernen, nicht das eines Kindes
-                        // Eine direkte Entfernung des Pseudo-Elements ist nicht möglich.
-                        // Stattdessen blenden wir es aus.
-                        container.classList.add('expanded'); // Stelle sicher, dass ::after ausgeblendet wird
-                    }
-                }
+    spellTextContainers.forEach(container => {
+        // Überprüfen, ob der innere Inhalt die max-height überschreitet
+        const innerDiv = container.querySelector('div'); // Annahme: Der Text ist in einem <div>
+        if (innerDiv && innerDiv.scrollHeight > container.offsetHeight) {
+            // Text ist länger, Klick-Listener hinzufügen
+            container.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+            });
+        } else {
+            // Text ist kurz genug, "Mehr anzeigen" entfernen (falls vorhanden)
+            const afterElement = window.getComputedStyle(container, '::after');
+            if (afterElement.content !== 'none') {
+                // Pseudo-Element stilistisch entfernen, da direkter Zugriff nicht möglich ist
+                container.classList.add('expanded-short');
             }
-        });
+        }
+    });
     });
     </script>
 </body>
