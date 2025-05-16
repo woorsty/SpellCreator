@@ -41,7 +41,7 @@ const fs = __importStar(require("fs/promises"));
 const path_1 = __importDefault(require("path"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const app = (0, express_1.default)();
-const port = 80;
+const port = 3000;
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
