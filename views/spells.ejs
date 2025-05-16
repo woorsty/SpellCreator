@@ -438,9 +438,9 @@
                     </p>
                     <p><strong>Zeitaufwand:</strong> <%= spell.Zeitaufwand %></p>
                     <p><strong>Reichweite:</strong> <%= spell.Reichweite %></p>
-                    <% if (spell.Konzentration) { %><p><strong>Konzentration:</strong> Ja</p><% } %>
+                    <% if (spell.Konzentration) { %><p><strong>Konzentration</strong></p><% } %>
                     <p><strong>Dauer:</strong> <%= spell.Dauer %></p>
-                    <% if (spell.Ritual) { %><p><strong>Ritual:</strong> Ja</p><% } %>
+                    <% if (spell.Ritual) { %><p><strong>Ritual</strong></p><% } %>
                     <p><strong>Komponenten:</strong>
                     <br/>
                         <% if (spell.Verbal) { %>V<% } %>
@@ -449,8 +449,8 @@
                         <% if (spell.Material) { %><%= spell.Material %><% } %>
                     </p>
                     <div class="spell-text-container"><%- locals.renderMarkdown(spell.Text) %></div>
-                    <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
                     <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
+                    <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
                 </div>
                 <% }); %>
         <% } else { %>

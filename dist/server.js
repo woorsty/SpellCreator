@@ -219,6 +219,9 @@ async function checkSpellData() {
             typeof spell.Konzentration !== "boolean") {
             errors.push(`Zauber "${spell.Name}" (Index ${index}): Konzentration muss ein Boolean sein.`);
         }
+        if (spell.Konzentration && !spell.Dauer.startsWith("Bis zu")) {
+            errors.push(`Zauber "${spell.Name}" (Index ${index}): Dauer muss mit 'Bis zu' anfangen, wenn Konzentration true ist`);
+        }
         if (spell.Ritual !== undefined && typeof spell.Ritual !== "boolean") {
             errors.push(`Zauber "${spell.Name}" (Index ${index}): Ritual muss ein Boolean sein.`);
         }
