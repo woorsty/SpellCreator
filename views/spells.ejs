@@ -284,6 +284,22 @@
             background-color: #444;
         }
 
+        #spell-search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #777;
+            border-radius: 4px;
+            background-color: #444;
+            color: #f0f0f0;
+            font-size: 1em;
+            box-sizing: border-box; /* Wichtig, damit Padding die Breite nicht beeinflusst */
+        }
+
+        #spell-search::placeholder {
+            color: #aaa;
+        }
+
         .filter-sort-options select[multiple] {
             height: auto;
         }
@@ -320,6 +336,7 @@
 </head>
 <body>
      <div class="filter-sort-container fixed-top">
+        <input type="text" id="spell-search" placeholder="Zauber suchen...">
         <button id="toggle-filter-sort" class="collapse-button">Filter & Sortieren</button>
         <div class="filter-sort-options collapsed">
             <form action="/spells" method="GET">
@@ -495,6 +512,27 @@
                         container.classList.add('expanded-short');
                     }
                 }
+            });
+
+            const searchInput = document.getElementById('spell-search');
+            const spellItems = document.querySelectorAll('.spell-item');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+
+                spellItems.forEach(item => {
+                    const spellName = item.querySelector('h3').textContent.toLowerCase();
+                    const spellClasses = item.querySelector('.classes').textContent.toLowerCase();
+                    const spellText = item.querySelector('.spell-text-container div').textContent.toLowerCase();
+                    const spellMeta = item.querySelector('.spell-meta').textContent.toLowerCase();
+
+                    if (spellName.includes(searchTerm)) {
+                        item.style.display = ''; // Zeige das Element
+                    } else {
+                        item.style.display = 'none'; // Blende das Element aus
+                    }
+                });
+                
             });
         });
     </script>
