@@ -210,96 +210,197 @@
         .spell-item h3 {
             color: #8ab4f8; /* Beispiel: Orange */
         }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Hintergrundfarbe für den fixierten Bereich */
+            color: #f0f0f0;
+            z-index: 100; /* Stellt sicher, dass er über anderen Inhalten liegt */
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optionaler Schatten */
+        }
+
+        .collapse-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #444;
+            color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .collapse-button::after {
+            content: '\25BE'; /* Unicode für einen nach unten zeigenden Pfeil */
+            float: right;
+        }
+
+        .collapse-button.expanded::after {
+            content: '\25B4'; /* Unicode für einen nach oben zeigenden Pfeil */
+        }
+
+        .filter-sort-options {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+            padding: 0 15px; /* Anfangs kein vertikales Padding */
+        }
+
+        .filter-sort-options.expanded {
+            max-height: 500px; /* Beispielhöhe */
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .filter-sort-options label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .filter-sort-options select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+            border: 1px solid #777;
+            border-radius: 4px;
+            color: #f0f0f0;
+            background-color: #444;
+        }
+
+        .filter-sort-options select[multiple] {
+            height: auto;
+        }
+
+        .filter-sort-options br {
+            display: none;
+        }
+
+        .filter-sort-options button[type="submit"] {
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: auto; /* Standardbreite */
+            display: inline-block; /* Standardanzeige */
+            margin-top: 10px;
+        }
+
+        .filter-sort-options button[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .spell-item .spell-meta {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: 0.2em;
+            margin-bottom: 0.5em;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
-    <h1>Angezeigte Zauber</h1>
-
-    <div class="filter-sort-options">
-        <form action="/spells" method="GET">
-            <label for="klasse">Klasse:</label>
-            <select name="klasse" id="klasse">
-                <option value="">Alle</option>
-                <option value="Barde" <%= locals.filterKlasse && locals.filterKlasse.includes('Barde') ? 'selected' : '' %>>Barde</option>
-                <option value="Hexenmeister" <%= locals.filterKlasse && locals.filterKlasse.includes('Hexenmeister') ? 'selected' : '' %>>Hexenmeister</option>
-                <option value="Magier" <%= locals.filterKlasse && locals.filterKlasse.includes('Magier') ? 'selected' : '' %>>Magier</option>
-                <option value="Kleriker" <%= locals.filterKlasse && locals.filterKlasse.includes('Kleriker') ? 'selected' : '' %>>Kleriker</option>
-                <option value="Druide" <%= locals.filterKlasse && locals.filterKlasse.includes('Druide') ? 'selected' : '' %>>Druide</option>
-                <option value="Krieger" <%= locals.filterKlasse && locals.filterKlasse.includes('Krieger') ? 'selected' : '' %>>Krieger</option>
-                <option value="Paladin" <%= locals.filterKlasse && locals.filterKlasse.includes('Paladin') ? 'selected' : '' %>>Paladin</option>
-                <option value="Waldläufer" <%= locals.filterKlasse && locals.filterKlasse.includes('Waldläufer') ? 'selected' : '' %>>Waldläufer</option>
-                <option value="Schurke" <%= locals.filterKlasse && locals.filterKlasse.includes('Schurke') ? 'selected' : '' %>>Schurke</option>
-                <option value="Mönch" <%= locals.filterKlasse && locals.filterKlasse.includes('Mönch') ? 'selected' : '' %>>Mönch</option>
-                <option value="Zauberer" <%= locals.filterKlasse && locals.filterKlasse.includes('Zauberer') ? 'selected' : '' %>>Zauberer</option>
-            </select>
-
-            <br/>
-
-            <label for="stufeVon">Stufe Von:</label>
-            <select name="stufeVon" id="stufeVon">
-                <option value="">Alle</option>
-                <option value="0" <%= locals.filterStufeVon === '0' ? 'selected' : '' %>>Zaubertrick</option>
-                <option value="1" <%= locals.filterStufeVon === '1' ? 'selected' : '' %>>1</option>
-                <option value="2" <%= locals.filterStufeVon === '2' ? 'selected' : '' %>>2</option>
-                <option value="3" <%= locals.filterStufeVon === '3' ? 'selected' : '' %>>3</option>
-                <option value="4" <%= locals.filterStufeVon === '4' ? 'selected' : '' %>>4</option>
-                <option value="5" <%= locals.filterStufeVon === '5' ? 'selected' : '' %>>5</option>
-                <option value="6" <%= locals.filterStufeVon === '6' ? 'selected' : '' %>>6</option>
-                <option value="7" <%= locals.filterStufeVon === '7' ? 'selected' : '' %>>7</option>
-                <option value="8" <%= locals.filterStufeVon === '8' ? 'selected' : '' %>>8</option>
-                <option value="9" <%= locals.filterStufeVon === '9' ? 'selected' : '' %>>9</option>
-            </select>
-
-            <br/>
-
-            <div id="stufeBisContainer">
-                <label for="stufeBis">Stufe Bis:</label>
-                <select name="stufeBis" id="stufeBis">
+     <div class="filter-sort-container fixed-top">
+        <button id="toggle-filter-sort" class="collapse-button">Filter & Sortieren</button>
+        <div class="filter-sort-options collapsed">
+            <form action="/spells" method="GET">
+                <label for="klasse">Klasse:</label>
+                <select name="klasse" id="klasse">
                     <option value="">Alle</option>
-                    <option value="0" <%= locals.filterStufeBis === '0' ? 'selected' : '' %>>Zaubertrick</option>
-                    <option value="1" <%= locals.filterStufeBis === '1' ? 'selected' : '' %>>1</option>
-                    <option value="2" <%= locals.filterStufeBis === '2' ? 'selected' : '' %>>2</option>
-                    <option value="3" <%= locals.filterStufeBis === '3' ? 'selected' : '' %>>3</option>
-                    <option value="4" <%= locals.filterStufeBis === '4' ? 'selected' : '' %>>4</option>
-                    <option value="5" <%= locals.filterStufeBis === '5' ? 'selected' : '' %>>5</option>
-                    <option value="6" <%= locals.filterStufeBis === '6' ? 'selected' : '' %>>6</option>
-                    <option value="7" <%= locals.filterStufeBis === '7' ? 'selected' : '' %>>7</option>
-                    <option value="8" <%= locals.filterStufeBis === '8' ? 'selected' : '' %>>8</option>
-                    <option value="9" <%= locals.filterStufeBis === '9' ? 'selected' : '' %>>9</option>
+                    <option value="Barde" <%= locals.filterKlasse && locals.filterKlasse.includes('Barde') ? 'selected' : '' %>>Barde</option>
+                    <option value="Hexenmeister" <%= locals.filterKlasse && locals.filterKlasse.includes('Hexenmeister') ? 'selected' : '' %>>Hexenmeister</option>
+                    <option value="Magier" <%= locals.filterKlasse && locals.filterKlasse.includes('Magier') ? 'selected' : '' %>>Magier</option>
+                    <option value="Kleriker" <%= locals.filterKlasse && locals.filterKlasse.includes('Kleriker') ? 'selected' : '' %>>Kleriker</option>
+                    <option value="Druide" <%= locals.filterKlasse && locals.filterKlasse.includes('Druide') ? 'selected' : '' %>>Druide</option>
+                    <option value="Krieger" <%= locals.filterKlasse && locals.filterKlasse.includes('Krieger') ? 'selected' : '' %>>Krieger</option>
+                    <option value="Paladin" <%= locals.filterKlasse && locals.filterKlasse.includes('Paladin') ? 'selected' : '' %>>Paladin</option>
+                    <option value="Waldläufer" <%= locals.filterKlasse && locals.filterKlasse.includes('Waldläufer') ? 'selected' : '' %>>Waldläufer</option>
+                    <option value="Schurke" <%= locals.filterKlasse && locals.filterKlasse.includes('Schurke') ? 'selected' : '' %>>Schurke</option>
+                    <option value="Mönch" <%= locals.filterKlasse && locals.filterKlasse.includes('Mönch') ? 'selected' : '' %>>Mönch</option>
+                    <option value="Zauberer" <%= locals.filterKlasse && locals.filterKlasse.includes('Zauberer') ? 'selected' : '' %>>Zauberer</option>
                 </select>
-            </div>
 
-            <br id="stufeBisBR" style="display: none"/>
+                <label for="stufeVon">Stufe Von:</label>
+                <select name="stufeVon" id="stufeVon">
+                    <option value="">Alle</option>
+                    <option value="0" <%= locals.filterStufeVon === '0' ? 'selected' : '' %>>Zaubertrick</option>
+                    <option value="1" <%= locals.filterStufeVon === '1' ? 'selected' : '' %>>1</option>
+                    <option value="2" <%= locals.filterStufeVon === '2' ? 'selected' : '' %>>2</option>
+                    <option value="3" <%= locals.filterStufeVon === '3' ? 'selected' : '' %>>3</option>
+                    <option value="4" <%= locals.filterStufeVon === '4' ? 'selected' : '' %>>4</option>
+                    <option value="5" <%= locals.filterStufeVon === '5' ? 'selected' : '' %>>5</option>
+                    <option value="6" <%= locals.filterStufeVon === '6' ? 'selected' : '' %>>6</option>
+                    <option value="7" <%= locals.filterStufeVon === '7' ? 'selected' : '' %>>7</option>
+                    <option value="8" <%= locals.filterStufeVon === '8' ? 'selected' : '' %>>8</option>
+                    <option value="9" <%= locals.filterStufeVon === '9' ? 'selected' : '' %>>9</option>
+                </select>
 
-            <label for="schule">Schule:</label>
-            <select name="schule" id="schule">
-                <option value="">Alle</option>
-                <option value="Beschwörung" <%= locals.filterSchule === 'Beschwörung' ? 'selected' : '' %>>Beschwörung</option>
-                <option value="Verzauberung" <%= locals.filterSchule === 'Verzauberung' ? 'selected' : '' %>>Verzauberung</option>
-                <option value="Hervorrufung" <%= locals.filterSchule === 'Hervorrufung' ? 'selected' : '' %>>Hervorrufung</option>
-                <option value="Nekromantie" <%= locals.filterSchule === 'Nekromantie' ? 'selected' : '' %>>Nekromantie</option>
-                <option value="Weissagung" <%= locals.filterSchule === 'Weissagung' ? 'selected' : '' %>>Weissagung</option>
-                <option value="Bannzauber" <%= locals.filterSchule === 'Bannzauber' ? 'selected' : '' %>>Bannzauber</option>
-                <option value="Illusion" <%= locals.filterSchule === 'Illusion' ? 'selected' : '' %>>Illusion</option>
-                <option value="Verwandlung" <%= locals.filterSchule === 'Verwandlung' ? 'selected' : '' %>>Verwandlung</option>
-            </select>
+                <div id="stufeBisContainer">
+                    <label for="stufeBis">Stufe Bis:</label>
+                    <select name="stufeBis" id="stufeBis">
+                        <option value="">Alle</option>
+                        <option value="0" <%= locals.filterStufeBis === '0' ? 'selected' : '' %>>Zaubertrick</option>
+                        <option value="1" <%= locals.filterStufeBis === '1' ? 'selected' : '' %>>1</option>
+                        <option value="2" <%= locals.filterStufeBis === '2' ? 'selected' : '' %>>2</option>
+                        <option value="3" <%= locals.filterStufeBis === '3' ? 'selected' : '' %>>3</option>
+                        <option value="4" <%= locals.filterStufeBis === '4' ? 'selected' : '' %>>4</option>
+                        <option value="5" <%= locals.filterStufeBis === '5' ? 'selected' : '' %>>5</option>
+                        <option value="6" <%= locals.filterStufeBis === '6' ? 'selected' : '' %>>6</option>
+                        <option value="7" <%= locals.filterStufeBis === '7' ? 'selected' : '' %>>7</option>
+                        <option value="8" <%= locals.filterStufeBis === '8' ? 'selected' : '' %>>8</option>
+                        <option value="9" <%= locals.filterStufeBis === '9' ? 'selected' : '' %>>9</option>
+                    </select>
+                </div>
 
-            <br/>
+                <label for="schule">Schule:</label>
+                <select name="schule" id="schule">
+                    <option value="">Alle</option>
+                    <option value="Beschwörung" <%= locals.filterSchule === 'Beschwörung' ? 'selected' : '' %>>Beschwörung</option>
+                    <option value="Verzauberung" <%= locals.filterSchule === 'Verzauberung' ? 'selected' : '' %>>Verzauberung</option>
+                    <option value="Hervorrufung" <%= locals.filterSchule === 'Hervorrufung' ? 'selected' : '' %>>Hervorrufung</option>
+                    <option value="Nekromantie" <%= locals.filterSchule === 'Nekromantie' ? 'selected' : '' %>>Nekromantie</option>
+                    <option value="Weissagung" <%= locals.filterSchule === 'Weissagung' ? 'selected' : '' %>>Weissagung</option>
+                    <option value="Bannzauber" <%= locals.filterSchule === 'Bannzauber' ? 'selected' : '' %>>Bannzauber</option>
+                    <option value="Illusion" <%= locals.filterSchule === 'Illusion' ? 'selected' : '' %>>Illusion</option>
+                    <option value="Verwandlung" <%= locals.filterSchule === 'Verwandlung' ? 'selected' : '' %>>Verwandlung</option>
+                </select>
 
-            <label for="sortierung">Sortieren nach:</label>
-            <select name="sortierung" id="sortierung">
-                <option value="name_asc" <%= locals.sortierung === 'name_asc' ? 'selected' : '' %>>Name (A-Z)</option>
-                <option value="name_desc" <%= locals.sortierung === 'name_desc' ? 'selected' : '' %>>Name (Z-A)</option>
-                <option value="stufe_asc" <%= locals.sortierung === 'stufe_asc' ? 'selected' : '' %>>Stufe (aufsteigend)</option>
-                <option value="stufe_desc" <%= locals.sortierung === 'stufe_desc' ? 'selected' : '' %>>Stufe (absteigend)</option>
-                <option value="schule_asc" <%= locals.sortierung === 'schule_asc' ? 'selected' : '' %>>Schule (A-Z)</option>
-                <option value="schule_desc" <%= locals.sortierung === 'schule_desc' ? 'selected' : '' %>>Schule (Z-A)</option>
-            </select>
+                <label for="sortierung">Sortieren nach:</label>
+                <select name="sortierung" id="sortierung">
+                    <option value="name_asc" <%= locals.sortierung === 'name_asc' ? 'selected' : '' %>>Name (A-Z)</option>
+                    <option value="name_desc" <%= locals.sortierung === 'name_desc' ? 'selected' : '' %>>Name (Z-A)</option>
+                    <option value="stufe_asc" <%= locals.sortierung === 'stufe_asc' ? 'selected' : '' %>>Stufe (aufsteigend)</option>
+                    <option value="stufe_desc" <%= locals.sortierung === 'stufe_desc' ? 'selected' : '' %>>Stufe (absteigend)</option>
+                    <option value="schule_asc" <%= locals.sortierung === 'schule_asc' ? 'selected' : '' %>>Schule (A-Z)</option>
+                    <option value="schule_desc" <%= locals.sortierung === 'schule_desc' ? 'selected' : '' %>>Schule (Z-A)</option>
+                </select>
 
-            <br/>
+                <button type="submit">Anwenden</button>
+            </form>
+        </div>
+    </div>
 
-            <button type="submit">Anwenden</button>
-        </form>
+    <h1>Angezeigte Zauber</h1>
+        
     </div>
 
     <div class="spell-list-header">
@@ -314,7 +415,10 @@
         <% if (spells && spells.length > 0) { %>
             <% spells.forEach(spell => { %>
                 <div class="spell-item">
-                    <h3><%= spell.Name %> (<%= spell.Stufe === 0 ? 'Zaubertrick' : 'Stufe ' + spell.Stufe %>, <%= spell.Schule %>)</h3>
+                     <h3><%= spell.Name %></h3>
+                    <p class="spell-meta">
+                         <%= spell.Stufe === "0" ? 'Zaubertrick' : "Stufe: " + spell.Stufe %>, <%= spell.Schule %>
+                    </p>
                     <p><strong>Zeitaufwand:</strong> <%= spell.Zeitaufwand %></p>
                     <p><strong>Reichweite:</strong> <%= spell.Reichweite %></p>
                     <% if (spell.Konzentration) { %><p><strong>Konzentration:</strong> Ja</p><% } %>
@@ -367,27 +471,32 @@
         }
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const spellTextContainers = document.querySelectorAll('.spell-text-container');
-
-    spellTextContainers.forEach(container => {
-        // Überprüfen, ob der innere Inhalt die max-height überschreitet
-        const innerDiv = container.querySelector('div'); // Annahme: Der Text ist in einem <div>
-        if (innerDiv && innerDiv.scrollHeight > container.offsetHeight) {
-            // Text ist länger, Klick-Listener hinzufügen
-            container.addEventListener('click', function() {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Filter & Sortieren Toggle
+            const toggleButton = document.getElementById('toggle-filter-sort');
+            const filterSortOptions = document.querySelector('.filter-sort-options');
+            toggleButton.addEventListener('click', function() {
+                filterSortOptions.classList.toggle('expanded');
                 this.classList.toggle('expanded');
             });
-        } else {
-            // Text ist kurz genug, "Mehr anzeigen" entfernen (falls vorhanden)
-            const afterElement = window.getComputedStyle(container, '::after');
-            if (afterElement.content !== 'none') {
-                // Pseudo-Element stilistisch entfernen, da direkter Zugriff nicht möglich ist
-                container.classList.add('expanded-short');
-            }
-        }
-    });
-    });
+
+            // Spell-Text-Container Expand/Collapse
+            const spellTextContainers = document.querySelectorAll('.spell-text-container');
+            spellTextContainers.forEach(container => {
+                // Prüfen, ob der Inhalt die max-height überschreitet
+                if (container.scrollHeight > container.offsetHeight) {
+                    container.addEventListener('click', function() {
+                        this.classList.toggle('expanded');
+                    });
+                } else {
+                    // Pseudo-Element stilistisch entfernen, da direkter Zugriff nicht möglich ist
+                    const afterElement = window.getComputedStyle(container, '::after');
+                    if (afterElement.content !== 'none') {
+                        container.classList.add('expanded-short');
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>

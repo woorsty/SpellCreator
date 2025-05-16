@@ -117,7 +117,7 @@ const validSchools = [
   // Füge hier alle weiteren gültigen Schulen hinzu
 ];
 
-function renderMarkdown(text) {
+function renderMarkdown(text: string) {
   const lines = text.split("\n");
   let output = "<div>";
   let inList = false;
