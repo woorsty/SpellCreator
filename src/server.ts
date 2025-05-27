@@ -439,6 +439,6 @@ app.post("/add-spell", async (req: Request, res: Response) => {
   res.end();
 });
 
-app.listen(port, () => {
+app.listen(port, "::", () => {
   console.log(`Server läuft auf http://0.0.0.0:${port}`);
 });
