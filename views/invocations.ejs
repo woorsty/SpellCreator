@@ -337,26 +337,10 @@
 <body>
      <div class="filter-sort-container fixed-top">
      <a href="/">Zurück</a>
-        <input type="text" id="spell-search" placeholder="Zauber suchen...">
+        <input type="text" id="spell-search" placeholder="Schauerliche Anrufung suchen...">
         <button id="toggle-filter-sort" class="collapse-button">Filter & Sortieren</button>
         <div class="filter-sort-options collapsed">
-            <form action="/spells" method="GET">
-                <label for="klasse">Klasse:</label>
-                <select name="klasse" id="klasse">
-                    <option value="">Alle</option>
-                    <option value="Barde" <%= locals.filterKlasse && locals.filterKlasse.includes('Barde') ? 'selected' : '' %>>Barde</option>
-                    <option value="Hexenmeister" <%= locals.filterKlasse && locals.filterKlasse.includes('Hexenmeister') ? 'selected' : '' %>>Hexenmeister</option>
-                    <option value="Magier" <%= locals.filterKlasse && locals.filterKlasse.includes('Magier') ? 'selected' : '' %>>Magier</option>
-                    <option value="Kleriker" <%= locals.filterKlasse && locals.filterKlasse.includes('Kleriker') ? 'selected' : '' %>>Kleriker</option>
-                    <option value="Druide" <%= locals.filterKlasse && locals.filterKlasse.includes('Druide') ? 'selected' : '' %>>Druide</option>
-                    <option value="Krieger" <%= locals.filterKlasse && locals.filterKlasse.includes('Krieger') ? 'selected' : '' %>>Krieger</option>
-                    <option value="Paladin" <%= locals.filterKlasse && locals.filterKlasse.includes('Paladin') ? 'selected' : '' %>>Paladin</option>
-                    <option value="Waldläufer" <%= locals.filterKlasse && locals.filterKlasse.includes('Waldläufer') ? 'selected' : '' %>>Waldläufer</option>
-                    <option value="Schurke" <%= locals.filterKlasse && locals.filterKlasse.includes('Schurke') ? 'selected' : '' %>>Schurke</option>
-                    <option value="Mönch" <%= locals.filterKlasse && locals.filterKlasse.includes('Mönch') ? 'selected' : '' %>>Mönch</option>
-                    <option value="Zauberer" <%= locals.filterKlasse && locals.filterKlasse.includes('Zauberer') ? 'selected' : '' %>>Zauberer</option>
-                </select>
-
+            <form action="/invocation" method="GET">
                 <label for="stufeVon">Stufe Von:</label>
                 <select name="stufeVon" id="stufeVon">
                     <option value="">Alle</option>
@@ -389,19 +373,6 @@
                     </select>
                 </div>
 
-                <label for="schule">Schule:</label>
-                <select name="schule" id="schule">
-                    <option value="">Alle</option>
-                    <option value="Beschwörung" <%= locals.filterSchule === 'Beschwörung' ? 'selected' : '' %>>Beschwörung</option>
-                    <option value="Verzauberung" <%= locals.filterSchule === 'Verzauberung' ? 'selected' : '' %>>Verzauberung</option>
-                    <option value="Hervorrufung" <%= locals.filterSchule === 'Hervorrufung' ? 'selected' : '' %>>Hervorrufung</option>
-                    <option value="Nekromantie" <%= locals.filterSchule === 'Nekromantie' ? 'selected' : '' %>>Nekromantie</option>
-                    <option value="Weissagung" <%= locals.filterSchule === 'Weissagung' ? 'selected' : '' %>>Weissagung</option>
-                    <option value="Bannzauber" <%= locals.filterSchule === 'Bannzauber' ? 'selected' : '' %>>Bannzauber</option>
-                    <option value="Illusion" <%= locals.filterSchule === 'Illusion' ? 'selected' : '' %>>Illusion</option>
-                    <option value="Verwandlung" <%= locals.filterSchule === 'Verwandlung' ? 'selected' : '' %>>Verwandlung</option>
-                </select>
-
                 <label for="sortierung">Sortieren nach:</label>
                 <select name="sortierung" id="sortierung">
                     <option value="name_asc" <%= locals.sortierung === 'name_asc' ? 'selected' : '' %>>Name (A-Z)</option>
@@ -419,44 +390,35 @@
 
     <br/>
 
-    <h1>Angezeigte Zauber</h1>
+    <h1>Angezeigte Hexenmeister: Schauerliche Anrufungen</h1>
         
     </div>
 
     <div class="spell-list-header">
-        <% if (spells) { %>
-            <p>Anzahl der angezeigten Zauber: <%= spells.length %></p>
+        <% if (invocations) { %>
+            <p>Anzahl der angezeigten Zauber: <%= invocations.length %></p>
         <% } else { %>
             <p>Keine Zauber gefunden.</p>
         <% } %>
     </div>
 
     <div class="spell-list">
-        <% if (spells && spells.length > 0) { %>
-            <% spells.forEach(spell => { %>
+        <% if (invocations && invocations.length > 0) { %>
+            <% invocations.forEach(invocation => { %>
                 <div class="spell-item">
-                     <h3><%= spell.Name %></h3>
+                     <h3><%= invocation.Name %></h3>
                     <p class="spell-meta">
-                         <%= spell.Stufe === "0" ? 'Zaubertrick' : "Stufe: " + spell.Stufe %>, <%= spell.Schule %>
+                         <%= "Stufe: " + invocation.Stufe %>
                     </p>
-                    <p><strong>Zeitaufwand:</strong> <%= spell.Zeitaufwand %></p>
-                    <p><strong>Reichweite:</strong> <%= spell.Reichweite %></p>
-                    <% if (spell.Konzentration) { %><p><strong>Konzentration</strong></p><% } %>
-                    <p><strong>Dauer:</strong> <%= spell.Dauer %></p>
-                    <% if (spell.Ritual) { %><p><strong>Ritual</strong></p><% } %>
-                    <p><strong>Komponenten:</strong>
-                    <br/>
-                        <% if (spell.Verbal) { %>V<% } %>
-                        <% if (spell.Gestik) { %>G<% } %>
-                        <br/>
-                        <% if (spell.Material) { %><%= spell.Material %><% } %>
-                    </p>
-                    <div class="spell-text-container"><%- locals.renderMarkdown(spell.Text) %></div>
-                    <% if (spell.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= spell.HöhereLevel %></p><% } %>
-                    <p class="classes"><strong>Klassen:</strong> <%= spell.Klasse.join(', ') %></p>
-                <a href="/spell/edit/<%= spell.Name %>" class="spell-link">Bearbeiten</a>
+
+                    <div class="spell-text-container"><%- locals.renderMarkdown(invocation.Text) %></div>
+                <% if (invocation.Zauber) { %>
+                    <a href="/spell/<%= invocation.Zauber.Name %>"><%=invocation.Zauber.Name%></a>
+                     <!--%- include("spells", { spells: [invocation.Zauber] }) %-->
+                <% }%>
                 </div>
-                <% }); %>
+                
+            <% }); %>
         <% } else { %>
             <p>Es sind noch keine Zauber gespeichert oder die Filterkriterien haben keine Treffer ergeben.</p>
         <% } %>

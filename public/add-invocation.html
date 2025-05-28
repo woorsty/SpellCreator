@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuen Zauber hinzufügen</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        /* Dunkelgrau */
+        color: #f0f0f0;
+        /* Helles Grau */
+        font-family: sans-serif;
+      }
+
+      h1 {
+        color: #ccc;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #ddd;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #555;
+        background-color: #333;
+        color: #f0f0f0;
+        box-sizing: border-box;
+        /* Wichtig für die Größenangabe */
+      }
+
+      textarea {
+        height: 150px;
+        /* Größere Rich-Textboxen */
+      }
+
+      button[type="submit"] {
+        background-color: #5cb85c;
+        /* Grün */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #4cae4c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Neue Schauerliche Anrufung hinzufügen</h1>
+    <form action="/invocation/add" method="POST">
+      <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required /><br /><br />
+      </div>
+      <div>
+        <label for="Stufe">Stufe:</label>
+        <input type="number" id="Stufe" name="Stufe" required /><br /><br />
+      </div>
+      <div>
+        <label for="Voraussetzung">Voraussetzung:</label>
+        <input
+          type="text"
+          id="Voraussetzung"
+          name="Voraussetzung"
+        /><br /><br />
+      </div>
+      <div>
+        <label for="Text">Text:</label>
+        <textarea id="Text" name="Text" required></textarea><br /><br />
+      </div>
+      <div>
+        <label for="Zauber">Zauber:</label>
+        <input
+          type="text" id="Zauber" name="Zauber"></input><br /><br />
+      </div>
+      <button type="submit">Schauerliche Anrufung hinzufügen</button>
+    </form>
+  </body>
+</html>

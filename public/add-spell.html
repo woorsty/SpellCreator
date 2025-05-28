@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuen Zauber hinzufügen</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        /* Dunkelgrau */
+        color: #f0f0f0;
+        /* Helles Grau */
+        font-family: sans-serif;
+      }
+
+      h1 {
+        color: #ccc;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #ddd;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #555;
+        background-color: #333;
+        color: #f0f0f0;
+        box-sizing: border-box;
+        /* Wichtig für die Größenangabe */
+      }
+
+      textarea {
+        height: 150px;
+        /* Größere Rich-Textboxen */
+      }
+
+      button[type="submit"] {
+        background-color: #5cb85c;
+        /* Grün */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #4cae4c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Neuen Zauber hinzufügen</h1>
+    <form action="/spell/add" method="POST">
+      <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required /><br /><br />
+      </div>
+      <div>
+        <label for="Schule">Schule:</label>
+        <input type="text" id="Schule" name="Schule" required /><br /><br />
+      </div>
+      <div>
+        <label for="Stufe">Stufe:</label>
+        <input type="number" id="Stufe" name="Stufe" required /><br /><br />
+      </div>
+      <div>
+        <label for="Klasse">Klasse (Komma-separiert):</label>
+        <input type="text" id="Klasse" name="Klasse" required /><br /><br />
+      </div>
+      <div>
+        <label for="Zeitaufwand">Zeitaufwand:</label>
+        <input
+          type="text"
+          id="Zeitaufwand"
+          name="Zeitaufwand"
+          required
+        /><br /><br />
+      </div>
+      <div>
+        <label for="Ritual">Ritual:</label>
+        <input type="checkbox" id="Ritual" name="Ritual" /><br /><br />
+      </div>
+      <div>
+        <label for="Reichweite">Reichweite:</label>
+        <input
+          type="text"
+          id="Reichweite"
+          name="Reichweite"
+          required
+        /><br /><br />
+      </div>
+      <div>
+        <label for="Verbal">Verbal:</label>
+        <input type="checkbox" id="Verbal" name="Verbal" /><br /><br />
+      </div>
+      <div>
+        <label for="Gestik">Gestik:</label>
+        <input type="checkbox" id="Gestik" name="Gestik" /><br /><br />
+      </div>
+      <div>
+        <label for="Material">Material:</label>
+        <textarea id="Material" name="Material"></textarea><br /><br />
+      </div>
+      <div>
+        <label for="Konzentration">Konzentration:</label>
+        <input
+          type="checkbox"
+          id="Konzentration"
+          name="Konzentration"
+        /><br /><br />
+      </div>
+      <div>
+        <label for="Dauer">Dauer:</label>
+        <input type="text" id="Dauer" name="Dauer" required /><br /><br />
+      </div>
+      <div>
+        <label for="Text">Text:</label>
+        <textarea id="Text" name="Text" required></textarea><br /><br />
+      </div>
+      <div>
+        <label for="HöhereLevel">Höhere Level:</label>
+        <textarea id="HöhereLevel" name="HöhereLevel"></textarea><br /><br />
+      </div>
+      <button type="submit">Zauber hinzufügen</button>
+    </form>
+  </body>
+</html>

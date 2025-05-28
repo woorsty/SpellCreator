@@ -1,0 +1,196 @@
+[
+  {
+    "Name": "Absteigender Schritt",
+    "Stufe": "5",
+    "Zauber": "Schweben",
+    "Text": "Du kannst Schweben auf dich selbst wirken, ohne einen Zauberplatz zu verbrauchen."
+  },
+  {
+    "Name": "Ausserweltlicher Sprung",
+    "Stufe": "2",
+    "Zauber": "Springen",
+    "Text": "Du kannst Springen auf dich selbst wirken, ohne einen Zauberplatz zu verbrauchen."
+  },
+  {
+    "Name": "Dürstende Klinge",
+    "Stufe": "5",
+    "Voraussetzung": "Anrufung Pakt der Klinge",
+    "Text": "Du erhältst das Merkmal Zusätzlicher Angriff, das nur für deine Paktwaffe gilt. Wenn du in deinem Zug die Angriffsaktion ausführst, kannst du mit dieser Waffe zweimal statt einmal angreifen.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Gabe der Beschützer",
+    "Stufe": "9",
+    "Voraussetzung": "Anrufung Pakt des Buches",
+    "Text": "In deinem Buch der Schatten erscheint eine neue Seite, wenn du es beschwörst. Eine Kreatur kann mit deiner Erlaubnis eine Aktion ausführen, um ihren Namen auf diese Seite zu schreiben. Die höchstmögliche Anzahl von Namen auf der Seite entspricht deinem Charismamodifikator (mindestens ein Name).\r\nWenn die Trefferpunkte einer Kreatur, deren Name auf der Seite steht, auf 0 sinken, die Kreatur aber noch nicht stirbt, erhält sie auf magische Art einen Trefferpunkt zurück. WEnn diese Magie ausgelöst wurde, kann sie erst nach einer langen Rast erneut verwendet werden.\r\nAls magische Aktion kannst du einen Namen von der Seite entfernen, indem du ihn berührst.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Gabe der Tiefen",
+    "Stufe": "5",
+    "Voraussetzung": "",
+    "Text": "Du kannst unter Wasser atmen und erhältst eine Schwimmbewegungsrate in Höhe deiner Bewegungsrate.\r\nAußerdem kannst du den Zauber Wasser atmen wirken, ohne einen Zauberplatz zu verbrauchen. Du erhältst die Fähigkeit, ihn auf diese Art zu wirken, nach einer langen Rast zurück.",
+    "Zauber": "Wasser Atmen"
+  },
+  {
+    "Name": "Gabe des Kettenmeisters",
+    "Stufe": "5",
+    "Voraussetzung": "Anrufung Pakt der Kette",
+    "Text": "Voraussetzung: Ab 5. Hexenmeisterstufe, Anrufung Pakt der Kette \r\nWenn du Vertrauten finden wirkst, verleihst du dem beschworenen Vertrauten etwas von deiner schauerlichen Kraft und gewährst ihm damit folgende Vorzüge \r\n- Flugfähig oder aquatisch: Der Vertraute erhält entweder eine Flug- oder eine Schwimmbewegungsrate (nach deiner Wahl) von zwölf Metern. \r\n- Schneller Angriff: Als Bonusaktion kannst du deinem Vertrauten befehlen, die Angriffsaktion auszuführen. \r\n- Gleißender oder nekrotischer Schaden: Wann immer der Vertraute Hieb, Stich oder Wuchtschaden bewirkt, kannst du diesen in gleißenden oder nekrotischen Schaden umwandeln. \r\n- Dein Rettungswurf SG: Wenn der Vertraute eine Kreatur zu einem Rettungswurf zwingt, gilt dein Zauberrettungswurf SG. \r\n- Resistenz: Wenn der Vertraute Schaden erleidet, kannst du eine Reaktion ausführen, um ihm Resistenz gegen diese Schadensart zu gewähren. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Gedankenblick",
+    "Stufe": "5",
+    "Voraussetzung": "",
+    "Text": "Du kannst eine Bonusaktion verwenden, um eine bereitwillige Kreatur zu berühren und bis zum Ende deines nächsten Zugs ihre Sinne zu nutzen. Solange sich diese Kreatur auf derselben Existenzebene wie du befindet, kannst du in den nächsten Zügen eine Bonusaktion ausführen, um die Verbindung aufrechtzuhalten und die Wirkungsdauer bis zum Ende deines jeweils nächsten Zugs zu verlängern. Die Verbindung endet, wenn sie nicht auf diese Weise aufrechterhalten wird. \r\nWährend du die Sinne der anderen Kreatur nutzt. stehen dir auch all ihre Spezialsinne zur Verfügung, und sofern der Abstand zwischen euch höchstens 18 Meter beträgt, kannst du Zauber nach deiner Wahl von deinem Bereich oder von dem der Kreatur aus wirken",
+    "Zauber": ""
+  },
+  {
+    "Name": "Grabesflüstern",
+    "Stufe": "7",
+    "Voraussetzung": "",
+    "Text": "Du kannst Mit Toten sprechen wirken, ohne einen Zauberplatz zu verbrauchen",
+    "Zauber": "Mit Toten sprechen"
+  },
+  {
+    "Name": "Hexensicht",
+    "Stufe": "15",
+    "Voraussetzung": "",
+    "Text": "Du hast Wahrer Blick mit einer Reichweite von neun Metern.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Lebenstrinker",
+    "Stufe": "9",
+    "Voraussetzung": "Anrufung Pakt der Klinge",
+    "Text": "Einmal pro Zug kannst du, wenn du eine Kreatur mit deiner Paktwaffe triffst, der Kreatur zusätzlich 1W6 gleißenden, nekrotischen oder psychischen Schaden (nach deiner Wahl) zufügen, und du kannst einen deiner Trefferpunktewürfel verbrauchen, mit ihm würfeln und eine Anzahl von Trefferpunkten in Höhe des Ergebnisses plus deines Konstitutionsmodifikators (mindestens 1 Trefferpunkt) zurückerhalten. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Lektionen der Ältesten",
+    "Stufe": "2",
+    "Voraussetzung": "",
+    "Text": "Du hast Wissen von einer Ältesten-Wesenheit des Multiversums erhalten, das dir ein Herkunftstalent deiner Wahl (siehe Kapitel 5) gewährt. \r\n- Kann wiederholt werden: Du kannst diese Anrufung mehr als einmal erhalten. Wähle bei Wiederholung ein anderes Herkunftstalent aus.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Maske der vielen Gesichter",
+    "Stufe": "2",
+    "Voraussetzung": "",
+    "Text": "Du kannst Selbstverkleidung wirken, ohne einen Zauberplatz zu verbrauchen",
+    "Zauber": "Selbstverkleidung"
+  },
+  {
+    "Name": "Meister der myriaden Formen",
+    "Stufe": "5",
+    "Voraussetzung": "",
+    "Text": "Du kannst Gestalt verändern wirken, ohne einen Zauberplatz zu verbrauchen",
+    "Zauber": "Gestalt verändern"
+  },
+  {
+    "Name": "Mit den Schatten verschmelzen",
+    "Stufe": "5",
+    "Voraussetzung": "",
+    "Text": "In dämmrigem Licht oder Dunkelheit kannst du Unsichtbar auf dich selbst wirken ohne einen Zauberplatz zu verbrauchen.",
+    "Zauber": "Unsichtbarkeit"
+  },
+  {
+    "Name": "Neblige Visionen",
+    "Stufe": "2",
+    "Voraussetzung": "",
+    "Text": "Du kannst Lautloses Trugbild wirken, ohne einen Zauberplatz zu verbrauchen.",
+    "Zauber": "Lautloses Trugbild"
+  },
+  {
+    "Name": "Pakt des Buches",
+    "Stufe": "0",
+    "Voraussetzung": "",
+    "Text": "Du fügst die Fäden der Schatten zusammen und beschwör am Ende einer kurzen oder langen Rast ein Buch in deiner Hand. Dieses Buch der Schatten (du bestimmst son Erscheinungsbild) enthält mystische Magie, die nur dir Verfügung steht und dir die unten beschriebenen Vorzüge gewährt. Das Buch verschwindet, wenn du ein weiteres Buch mit diesem Merkmal beschwörst oder wenn du stirbst. \r\n- Zaubertricks und Rituale: Wenn das Buch erscheint, wähle drei Zaubertricks und zwei Zauber des 1. Grades i die als Rituale gekennzeichnet sind. Die Zauber dürfen aus Zauberlisten aller Klassen stammen. Es muss sich um Zauber handeln, die du nicht schon vorbereitet hast. Solange du das Buch bei dir hast, sind die ausgewählten Zauber vorbereitet und zählen für dich als Hexenmeisterzauber. \r\n- Zauberfokus: Du kannst das Buch als Zauberfokus verwenden. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Pakt der Kette",
+    "Stufe": "0",
+    "Voraussetzung": "",
+    "Text": "Du erlernst den Zauber Vertrauten finden und kannst ihn als magische Aktion wirken, ohne einen Zauberplatz zu verbrauchen. \r\nWenn du den Zauber wirkst, wählst du für deinen Vertrauten eine der normalen Gestalten oder eine der folgenden besonderen Gestalten aus: Feengeist. Giftschlange, Pseudodrache. Quasit. Skelett. Slaad-Larve, Sphinx des Wunders oder Teufelchen (Wertekasten des Vertrauten siehe Anhang B). \r\nWenn du außerdem in deinem Zug die Angriffsaktion ausführst, kannst du auf einen deiner Angriffe verzichten und stattdessen deinen Vertrauten mit seiner Reaktion einen eigenen Angriff ausführen lassen. ",
+    "Zauber": "Vertrauten finden"
+  },
+  {
+    "Name": "Pakt der Klinge",
+    "Stufe": "0",
+    "Voraussetzung": "",
+    "Text": "Als Bonusaktion kannst du eine Paktwaffe in deiner Hand beschwören eine einfache Nahkampfwaffe oder eine Nahkampf Kriegswaffe deiner Wahl, mit der du eine Bindung herstellst oder eine Bindung mit einer magischen Waffe herstellen, indem du sie berührst. Du kannst keine Bindung mit einer magischen Waffe herstellen, wenn jemand anders auf sie eingestimmt oder ein anderer Hexenmeister an sie gebunden ist. Bis die Bindung endet, hast du Übung im Umgang mit der Waffe und kannst sie als Zauberfokus verwenden. \r\nWann immer du einen Angriff mit der Waffe ausführst an die du gebunden bist, kannst du bei den Angriffs- und Schadenswürfen deinen Charismamodifikator statt Stärke oder Geschicklichkeit verwenden, und du kannst mit der Waffe gleißenden, nekrotischen oder psychisches Schaden oder ihre normale Schadensart bewirken. \r\nDeine Bindung an die Waffe endet, wenn du die Bonusaktion dieses Merkmals erneut einsetzt werde Waffe länger als eine Minute mehr als 1.5 Meter von dir entfernt ist oder wenn du stirbst. Eine beschworene Waffe verschwindet, wenn die Bindung endet. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Qualvoller Strahl",
+    "Stufe": "2",
+    "Voraussetzung": "Hexenmeister Zaubertrick, der Schaden bewirkt",
+    "Text": "Wähle einen der dir bekannten Hexenmeisterzaubertricks aus, die Schaden bewirken. Du kannat den Schadenswürfen des Zaubers deinen Charismamodifikator hinzufügen. \r\nKann wiederholt werden: Du kannst diese Anrufung mehr als einmal erhalten. Wähle bei Wiederholung einen anderen passenden Zaubertrick aus. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Schattenrüstung",
+    "Stufe": "0",
+    "Voraussetzung": "",
+    "Text": "Du kannst Magierrüstung auf dich selbst wirken, ohne einen Zauberplatz zu verbrauchen",
+    "Zauber": "Magierrüstung"
+  },
+  {
+    "Name": "Schauerlicher Verstand",
+    "Stufe": "0",
+    "Voraussetzung": "",
+    "Text": "Du bist bei Konstitutionsrettungswürfen zum Aufrechterhalten von Konzentration im Vorteil.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Schauerliches Niederstrecken",
+    "Stufe": "5",
+    "Voraussetzung": "Anrufung Pakt der Klinge",
+    "Text": "Einmal pro Zug kannst du, wenn du eine Kreatur mit deiner Paktwaffe triffst, einen Paktmagie Zauberplatz verbrauchen, um dem Ziel zusätzlich 1W8 Energieschaden sowie 1W8 pro Zauberplatzgrad zuzufügen. Wenn das Ziel von höchstens riesiger Größe ist, kannst du es außerdem umstoßen. ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Teufelssicht",
+    "Stufe": "2",
+    "Voraussetzung": "",
+    "Text": "Du hast bei dämmrigem Licht und bei Dunkelheit - sowohl magischer als auch nichtmagischer - normale Sicht mit einer Reichweite von 36 Metern.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Unheimlicher Speer",
+    "Stufe": "2",
+    "Voraussetzung": "Hexenmeister Zaubertrick, der Schaden bewirkt",
+    "Text": "Wähle einen der dir bekannten Hexenmeisterzaubertricks aus, die Schaden bewirken und eine Reichweite von mindestens drei Metern haben. Wenn du diesen Zauber wirkst, ist seine Reichweite um das Zehnfache deiner Hexenmeisterstufe erhöht. \r\nKann wiederholt werden: Du kannst diese Anrufung mehr als einmal erhalten. Wähle bei Wiederholung einen anderen passenden Zaubertrick aus ",
+    "Zauber": ""
+  },
+  {
+    "Name": "Unholde Vitalität",
+    "Stufe": "2",
+    "Voraussetzung": "",
+    "Text": "Du kannst Falsches Leben auf dich selbst wirken, ohne einen Zauberplatz zu verbrauchen. Wenn du den Zauber mit diesem Merkmal wirkst, würfelst du nicht, um die temporären Trefferpunkte zu ermitteln, sondern erhältst automatisch das höchste Würfelergebnis. ",
+    "Zauber": "Falsches Leben"
+  },
+  {
+    "Name": "Verschlingende Klinge",
+    "Stufe": "12",
+    "Voraussetzung": "Anrufung Dürstende Klinge",
+    "Text": "Der Zusätzliche Angriff deiner Anrufung Dürstende Klinge bewirkt jetzt zwei zusätzliche Angriffe statt einem.",
+    "Zauber": ""
+  },
+  {
+    "Name": "Visionen von fernen Gefilden",
+    "Stufe": "9",
+    "Voraussetzung": "",
+    "Text": "Du kannst Arkanes Auge wirken, ohne einen Zauberplatz zu verbrauchen",
+    "Zauber": "Arkanes Auge"
+  },
+  {
+    "Name": "Zurückdrängender Strahl",
+    "Stufe": "2",
+    "Voraussetzung": "Hexenmeister Zaubertrick, der Schaden bewirkt",
+    "Text": "Wähle einen dir bekannten Hexenmeisterzaubertrick der einen Angriffswurf erfordert. Wenn du eine Kreatur von höchstens großer Größe mit diesem Zaubertrick triffst. kannst du sie um bis zu drei Meter in gerader Linie von dir wegstoßen. \r\n- Kann wiederholt werden: Du kannst diese Anrufung mehr als einmal erhalten. Wähle bei Wiederholung einen anderen passenden Zaubertrick aus ",
+    "Zauber": ""
+  }
+]
