@@ -115,7 +115,7 @@ class SpellController {
         spellData.push(newSpell);
         await util_1.Util.writeJsonFile(spellData, spellModel_1.JsonFilePath);
         res.statusCode = 303;
-        res.setHeader("Location", "/add");
+        res.setHeader("Location", "/spell/add");
         res.end();
     }
     static async edit(req, res) {

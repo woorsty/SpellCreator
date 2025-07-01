@@ -131,7 +131,7 @@ export class SpellController {
     spellData.push(newSpell);
     await Util.writeJsonFile(spellData, JsonFilePath);
     res.statusCode = 303;
-    res.setHeader("Location", "/add");
+    res.setHeader("Location", "/spell/add");
     res.end();
   }
 

@@ -1,0 +1,38 @@
+<form method="GET" action="/spellcard/cards">
+  <label>Klasse:
+    <select name="klasse">
+        <option value="">Alle</option>
+        <option value="Barde">Barde</option>
+        <option value="Hexenmeister">Hexenmeister</option>
+        <option value="Magier">Magier</option>
+        <option value="Kleriker">Kleriker</option>
+        <option value="Druide">Druide</option>
+        <option value="Krieger">Krieger</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Waldläufer">Waldläufer</option>
+        <option value="Schurke">Schurke</option>
+        <option value="Mönch">Mönch</option>
+        <option value="Zauberer">Zauberer</option>
+        <option value="Tüftler">Tüftler</option>
+      <!-- Weitere Klassen hier -->
+    </select>
+  </label>
+
+  <label>Stufe von:
+    <select name="stufeVon">
+      <% for (let i = 0; i <= 9; i++) { %>
+        <option value="<%= i %>"><%= i %></option>
+      <% } %>
+    </select>
+  </label>
+
+  <label>Stufe bis:
+    <select name="stufeBis">
+      <% for (let i = 0; i <= 9; i++) { %>
+        <option value="<%= i %>"><%= i %></option>
+      <% } %>
+    </select>
+  </label>
+
+  <button type="submit">PDF erzeugen</button>
+</form>

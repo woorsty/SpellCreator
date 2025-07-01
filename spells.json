@@ -45,16 +45,18 @@
     "Zeitaufwand": "1 Minute",
     "Reichweite": "9 Meter",
     "Dauer": "8 Stunden",
-    "Ritual": true,
-    "Verbal": true,
-    "Gestik": true,
     "Material": "Glocke oder Silberdraht",
     "Text": "Du erschaffst einen Alarm gegen Eindringen. Wähle eine Tür, ein Fenster oder einen Bereich in Reichweite aus, der nicht größer als ein Würfel mit sechs Metern Kantenlänge sein darf. Für die Wirkungsdauer warnt dich ein Alarm, wann immer eine Kreatur den geschützten Bereich berührt oder in ihm eindringt. Wenn du den Zauber wirkst, kannst du Kreaturen bestimmen, die den Alarm nicht ausläsen. Außerdem wählst du aus, ob der Alarm akustisch oder mental erfolgt.\r\nAkustischer Alarm: Der Alarm erzeugt ein Abstand von bis zu 18 Metern vom geschützten Bereich zehn Sekunden lang das Geräusch einer Handglocke.\r\nMentaler Alarm: Du wirst von einem mentalen Ping gewarnt, wenn du dich im Abstand von bis zu 1,6 Kilometern vom geschützten Bereich befindest. Dieser Ping weckt dich, wenn du schläfst",
+    "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
-    "HöhereLevel": ""
+    "Konzentration": false,
+    "Ritual": true,
+    "Verbal": true,
+    "Gestik": true
   },
   {
     "Name": "Ansteckung",
@@ -135,18 +137,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Arkane Vitalität",
     "Schule": "Bann",
-    "Stufe": "2",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du zapfst deine Lebenskraft an, um dich zu heilen.\r\nWürfle mit einem oder zwei deiner unverbrauchten Trefferpunktwürfel, und du erhältst eine Anzahl von Trefferpunkten in Höhe des Gesamtergebnisses plus deines Zauberwirken-Attributsmodifikators zurück. Die Würfel werden dabei verbraucht.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. wird die Anzahl von unverbrauchten Trefferwürfeln, mit denen du würfeln kannst, um eins erhöht.",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -154,17 +157,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Arkanes Auge",
     "Schule": "Erkenntnis",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein Stück Fledermausfell",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Ein Stück Fledermausfell",
     "Text": "Du erschaffst ein unsichtbares und unverwundbares Auge in Reichweite, das für die Wirkungsdauer in der Luft schwebt. Es kann in jede Richtung blicken und übermittelt dir mental seine visuellen Informationen. Außerdem verfügt es über Dunkelsicht mit einer Reichweite von neun Metern.\r\nAls Bonusaktion kannst du das Auge bis zu neun Meter weit in jede Richtung bewegen. Außerdem kann es nicht durch massive Barrieren gelangen, jedoch Öffnungen mit mindestens 2,5 Zentimetern Durchmesser passieren.",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -172,17 +176,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Arkanes Schloss",
     "Schule": "Bann",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Goldstaub im Wert von mindestens 25 GM, den der Zauber verbraucht",
     "Dauer": "Bis der Zauber gebannt wird",
+    "Material": "Goldstaub im Wert von mindestens 25 GM, den der Zauber verbraucht",
     "Text": "Du berührst eine geschlossene Tür, ein Fenster, ein Tor, einen Behälter oder eine Luke und verschließt diesen Gegenstand für die Wirkungsdauer auf magische Art. Dieses Schloss kann mit nichtmagischen Methoden nicht entfernt werden. Du und alle Kreaturen, die du beim Wirken des Zaubers bestimmst, könnt den Gegenstand trotz des Schlosses normal öffnen und schließen. Du kannst auch ein Kennwort festlegen, das diesen Gegenstand im Abstand von bis zu 1,5 Metern eine Minute lang öffnet. ",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -270,13 +275,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Attribut verbessern",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Etwas Fell oder eine Feder",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Etwas Fell oder eine Feder",
     "Text": "Du berührst eine Kreatur und wählst Charisma, Geschicklichkeit, Intelligenz, Stärke oder Weisheit aus. Für die Wirkungsdauer ist das Ziel bei Attributswürfen mit dem ausgewählten Attribut im Vorteil.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. kannst du auf eine weitere Kreatur zielen. Du kannst für jedes Ziel ein anders Attribut bestimmen. ",
     "Klasse": [
@@ -285,7 +290,8 @@
       "Kleriker",
       "Magier",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -408,13 +414,13 @@
     "Gestik": false
   },
   {
+    "Stufe": "0",
     "Name": "Ausbessern",
     "Schule": "Verwandlung",
-    "Stufe": "0",
     "Zeitaufwand": "1 Minute",
     "Reichweite": "Berührung",
-    "Material": "Zwei Magnetsteine",
     "Dauer": "Unmittelbar",
+    "Material": "Zwei Magnetsteine",
     "Text": "Dieser Zauber repariert einen Gegenstand, den du berührst und der eine Bruchstelle oder einen Riss hat, beispielsweise ein kaputtes Kettenglied, einen zerbrochenen Schlüssel, einen zerrissenen Umhang oder einen lecken Weinschlauch. Wenn der Riss oder die Bruchstelle in keiner Abmessung größer als 30 Zentimeter ist, wird nicht mehr zu erkennen sein, dass der Gegenstand beschädigt war. \r\nDieser Zauber kann magische Gegenstände physisch reparieren, deren Magie jedoch nicht wiederherstellen. ",
     "HöhereLevel": "",
     "Klasse": [
@@ -422,7 +428,8 @@
       "Druide",
       "Kleriker",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -511,13 +518,13 @@
     "Gestik": false
   },
   {
+    "Stufe": "2",
     "Name": "Beistand6",
     "Schule": "Bann",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein weißer Stoffstreifen",
     "Dauer": "8 Stunden",
+    "Material": "Ein weißer Stoffstreifen",
     "Text": "Wähle bis zu drei Kreaturen in Reichweite aus. Für die Wirkungsdauer werden Trefferpunktemaximum sowie aktuelle Trefferpunkte jedes Ziels um 5 erhöht \r\nVerwenden von Zauberplätzen höheren Grades: Für jeden Zauberplatzgrad über dem 2. werden die Trefferpunkte jedes Ziels um jeweils 5 erhöht ",
     "HöhereLevel": "",
     "Klasse": [
@@ -525,7 +532,8 @@
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -533,20 +541,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Bewegungsfreiheit",
     "Schule": "Bann",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Ein Lederriemen",
     "Dauer": "1 Stunde",
+    "Material": "Ein Lederriemen",
     "Text": "Du berührst eine bereitwillige Kreatur. Für die Wirkungs dauer ist die Bewegungsrate des Ziels auf schwierigem Gelände nicht eingeschränkt. Zudem können Zauber und andere magische Effekte weder seine Bewegungsrate verringern noch das Ziel lähmen oder festsetzen. Das Ziel hat ferner eine Schwimmbewegungsrate in Höhe seiner Bewegungsrate. \r\nEs kann außerdem 1,5 Meter seiner Bewegungsrate \r\nverbrauchen, um nichtmagischen Fesseln (beispielsweise Handschellen oder einer Kreatur, die es gepackt hält) automatisch zu entkommen",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 4. kannst du auf eine weitere Kreatur zielen. ",
     "Klasse": [
       "Barde",
       "Druide",
       "Kleriker",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -554,18 +563,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Bigbys Hand",
     "Schule": "Hervorrufung",
-    "Stufe": "5",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "Eine Eierschale und ein Handschuh",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Eine Eierschale und ein Handschuh",
     "Text": "Energie in einem freien Bereich in Reichweite, den du sehen kannst. Die Hand bleibt für die Wirkungsdauer bestehen. Sie bewegt sich auf deinen Befehl und imitiert die Bewegungen deiner eigenen Hand. \r\nDie Hand ist ein Gegenstand mit einer RK von 20. Ihre Trefferpunkte entsprechen deinem Trefferpunktemaximum. Wenn ihre Trefferpunkte auf O sinken, endet der Zauber. Die Hand besetzt ihren Bereich nicht. \r\nNach dem Wirken des Zaubers sowie als Bonusaktion in deinen folgenden Zügen kannst du die Hand bis zu 18 Meter weit bewegen und einen der folgenden Effekte bewirken:\r\nBlockierende Hand: Die Hand gewährt dir Teildeckung gegen Angriffe und andere Effekte, die von ihrem Bereich ausgehen oder ihn durchqueren. Außerdem zählt ihr Bereich für deine Gegner als schwieriges Gelände. \r\nGeballte Faust: Die Hand schlägt ein Ziel im Abstand von bis zu 1,5 Metern von ihr. Führe einen Nahkampf Zauberangriff aus. Bei einem Treffer erleidet das Ziel 5W8 Energieschaden. \r\nschuh) \r\nGreifende Hand: Die Hand versucht, eine Kreatur von höchstens riesiger Größe im Abstand von bis zu 1,5 Metern von ihr zu packen. Das Ziel muss einen Geschicklichkeitsrettungswurf bestehen, oder es wird gepackt (der Rettungswurf-SG entspricht deinem Zauberrettungswurf SG). Solange die Hand das Ziel gepackt hat, kannst du eine Bonusaktion verwenden, damit sie es zerquetscht. Dabei fügt sie ihm Wuchtschaden in Höhe von 4W6 plus deinem Zauberwirken-Attributsmodifikator zu. \r\nKraftvolle Hand: Die Hand versucht, eine Kreatur von höchstens riesiger Größe im Abstand von bis zu 1,5 Metern von ihr zu stoßen. Das Ziel muss einen Stärkerettungswurf bestehen, oder die Hand schiebt es bis zu 1,5 Meter plus 1,5-mal dein Zauberwirken-Attributs-modifikator (in Metern) weit in eine Richtung deiner Wahl. Die Hand bewegt sich mit dem Ziel und bleibt im Abstand von bis zu 1,5 Metern von ihm. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 5, wird der Schaden der geballten Faust um 2W8 und der Schaden der greifenden Hand um 2W6 erhöht. ",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -710,20 +720,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Botschaft",
     "Schule": "Verwandlung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "Ein Stück Kupferdraht",
     "Dauer": "1 Runde",
+    "Material": "Ein Stück Kupferdraht",
     "Text": "Du deutest auf eine Kreatur in Reichweite und flüsterst eine Botschaft. Das Ziel (und nur dieses) hört die Botschaft und kann mit einem Flüstern antworten, das nur du hörst. \r\nDu kannst diesen Zauber durch massive Gegenstände hindurch wirken, wenn du mit dem Ziel vertraut bist und weißt, dass es sich hinter der Barriere befindet. Magische Stille, 50 Zentimeter Stein, Metall oder Holz sowie dünnes Bleiblech blockieren den Zauber. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Druide",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -806,19 +817,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Dauerhafte Flamme",
     "Schule": "Hervorrufung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Rubinstaub im Wert von mindestens 50 GM, den der Zauber verbraucht",
     "Dauer": "Bis der Zauber gebannt wird",
+    "Material": "Rubinstaub im Wert von mindestens 50 GM, den der Zauber verbraucht",
     "Text": "Eine Flamme bricht aus einem Gegenstand hervor. \r\nden du berührst. Der Effekt spendet in einem Radius von sechs Metern helles Licht und in einem Radius von weiteren sechs Metern dämmriges Licht. Er wirkt wie eine normale Flamme, erzeugt jedoch keine Wärme und verbraucht keinen Brennstoff. Die Flamme kann verdeckt oder verborgen, aber nicht erstickt oder gelöscht werden",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -904,13 +916,13 @@
     "Gestik": false
   },
   {
+    "Stufe": "0",
     "Name": "Donnerschlag",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Jede Kreatur in einer Ausströmung von 1.5 Metern, die von dir angeht, muss einen Konstitutionsrettungswurf bestehen. oder sie erleidet 1W6 Schallschaden. Der Donnerhall des Zaubers ist bis zu 30 Meter weit zu hören. ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W6 erhöht, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst",
     "Klasse": [
@@ -918,7 +930,8 @@
       "Druide",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -965,17 +978,18 @@
     "Gestik": false
   },
   {
+    "Stufe": "0",
     "Name": "Dornenpeitsche",
     "Schule": "Verwandlung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Stängel einer Dornenpflanze",
     "Dauer": "Unmittelbar",
+    "Material": "Stängel einer Dornenpflanze",
     "Text": "Du erzeugst eine rankenartige Peitsche, die mit Dornen bedeckt ist und auf deinen Befehl hin nach einer Kreatur in Reichweite schlägt. Führe einen Nahkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 1W6 Stichschaden, und wenn es von höchstens großer Größe ist, kannst du es bis zu drei Meter weit zu dir ziehen",
     "HöhereLevel": "Der Schaden wird um jeweils 1W6 erhöht, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst",
     "Klasse": [
-      "Druide"
+      "Druide",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1038,18 +1052,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Drachenodem",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Berührung",
-    "Material": "Eine Scharfe Pfefferschote",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Eine Scharfe Pfefferschote",
     "Text": "Du berührst eine bereit willige Kreatur und wählst Blitz, Feuer, Gift, Kälte oder Säure aus. Bis der Zauber endet. kann das Ziel eine magische Aktion ausführen, um einen Kegel von 4,5 Metern auszuatmen. Jede Kreatur in diesem Bereich führt einen Geschicklichkeitsrettungswurf aus. Scheitert der Wurf, so erleidet sie 3W6 Schaden der ausgewählten Art, anderenfalls die Hälfte ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. wird der Schaden um 1W6 erhöht. ",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -1113,20 +1128,21 @@
     "Gestik": false
   },
   {
+    "Stufe": "2",
     "Name": "Dunkelsicht",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Eine getrocknete Karotte",
     "Dauer": "8 Stunden",
+    "Material": "Eine getrocknete Karotte",
     "Text": "Für die Wirkungsdauer hat eine bereit willige Kreatur, die di berührst, Dunkelsicht mit einer Reichweite von 45 Metern ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Magier",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1315,19 +1331,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Elementalismus",
     "Schule": "Verwandlung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Du kontrollierst die Elemente und erzeugst in Reichweite \r\neinen der folgenden Effekte. \r\nElement formen: Du lässt eine Menge von Erde. Sand, Feuer, Rauch, Nebel oder Wasser, die in einen Würfel mit 30 Zentimetern Kantenlänge passt, eine Stunde lang eine grobe Gestalt annehmen (beispielsweise die einer Kreatur) Erde anlocken: Du erzeugst eine dünne Staub-oder \r\nSandschicht, die Oberflächen in einem Bereich von 2.3 Quadratmetern bedeckt, oder du lässt in einem Flecken Erde oder Sand ein einzelnes Wort in deiner \r\nHandschrift erscheinen. \r\nFeuer anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge eine dünne Wolke aus harmlosen Funken und farbigem duftendem Rauch. Du wählst Farbe and Duft aus. Die Funken können Kerzen, Fackeln und Lampen im Bereich entzünden. Der Duft des Rauchs bleibt \r\neine Minute lang erhalten. \r\nLuft anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge einen Windstoß, der stark genug ist, um Stoff und Laub zu bewegen. Staub aufzuwirbeln und offene Türen und Fensterläden zu schließen. Türen und Fensterläden. die von jemandem oder etwas festgehalten werden, sind nicht betroffen \r\nWasser anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge kühlen Nebel, der Kreaturen und Gegenstände benetzt. Alternativ erzeugst du eine Tasse sauberen Wassers entweder in einem Behälter oder auf einer Oberfläche. Das Wasser ist nach einer Minute verdampft ",
+    "Material": "",
+    "Text": "Du kontrollierst die Elemente und erzeugst in Reichweite \r\neinen der folgenden Effekte. \r\n- Element formen: Du lässt eine Menge von Erde. Sand, Feuer, Rauch, Nebel oder Wasser, die in einen Würfel mit 30 Zentimetern Kantenlänge passt, eine Stunde lang eine grobe Gestalt annehmen (beispielsweise die einer Kreatur) \r\n- Erde anlocken: Du erzeugst eine dünne Staub oder Sandschicht, die Oberflächen in einem Bereich von 2.3 Quadratmetern bedeckt, oder du lässt in einem Flecken Erde oder Sand ein einzelnes Wort in deiner Handschrift erscheinen. \r\n- Feuer anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge eine dünne Wolke aus harmlosen Funken und farbigem duftendem Rauch. Du wählst Farbe and Duft aus. Die Funken können Kerzen, Fackeln und Lampen im Bereich entzünden. Der Duft des Rauchs bleibt eine Minute lang erhalten. \r\n- Luft anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge einen Windstoß, der stark genug ist, um Stoff und Laub zu bewegen. Staub aufzuwirbeln und offene Türen und Fensterläden zu schließen. Türen und Fensterläden. die von jemandem oder etwas festgehalten werden, sind nicht betroffen \r\n- Wasser anlocken: Du erzeugst in einem Würfel mit 15 Metern Kantenlänge kühlen Nebel, der Kreaturen und Gegenstände benetzt. Alternativ erzeugst du eine Tasse sauberen Wassers entweder in einem Behälter oder auf einer Oberfläche. Das Wasser ist nach einer Minute verdampft ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1374,18 +1391,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Erschaffung",
     "Schule": "Illusion",
-    "Stufe": "5",
     "Zeitaufwand": "1 Minute",
     "Reichweite": "9 Meter",
-    "Material": "Ein Farbpinsel",
     "Dauer": "Besonders",
+    "Material": "Ein Farbpinsel",
     "Text": "Du ziehst Fäden aus Schattenmaterial aus dem Schattensaum und erschaffst einen Gegenstand in Reichweite. Es kann sich entweder um einen Gegenstand aus pflanzlichem Material (Textilien, Seil, Holz und dergleichen) oder um einen Gegenstand aus mineralischem Material (Stein, Kristall, Metall und dergleichen) handeln. Der Gegenstand darf nicht größer als ein Würfel mit 1,5 Metern Kantenlänge sein und muss aus einem Material bestehen sowie eine Form besitzen, die du bereits gesehen bast. \r\nDie Wirkungsdauer des Zaubers hängt vom Material des Gegenstands ab, wie in der Tabelle Materialien dargestellt. Besteht der Gegenstand aus mehreren Materialien, so verwende die kürzeste Wirkungsdauer Wenn ein mit diesem Zauber erschaffener Gegenstand als Materialkomponente für einen anderen Zauber verwendet wird, scheitert der andere Zauber.\r\n\r\nMaterial\tWirkungsdauer \r\nPflanzliches Material\t24 Stunden \r\nStein oder Kristall\t12 Stunden \r\nEdelmetalle\t1 Stunde \r\nEdelsteine\t10 Minuten \r\nAdamant oder Mithral\t1 Minute ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 5. wird der Würfel um 1,5 Meter vergrößert",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1497,7 +1515,8 @@
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. erhältst du 5 zusätzliche temporäre Trefferpunkte",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1505,19 +1524,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Federfall",
     "Schule": "Verwandlung",
-    "Stufe": "1",
     "Zeitaufwand": "Reaktion, die du ausführst, wenn du oder eine Kreatur im Abstand von bis zu 18 Metern von dir, die du sehen kannst, stürzt",
     "Reichweite": "18 Meter",
-    "Material": "Eine kleine Feder oder Daune",
     "Dauer": "1 Minute",
+    "Material": "Eine kleine Feder oder Daune",
     "Text": "Wähle bis zu fünf Kreaturen in Reichweite aus, die gerade stürzen. Ihre Fallgeschwindigkeit verlangsamt sich für die Wirkungsdauer auf 18 Meter pro Runde. Wenn eine Kreatur während der Wirkungsdauer landet, erleidet sie keinen Schaden durch den Stura, und der Zauber endet bei dieser Kreatur ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1525,18 +1545,19 @@
     "Gestik": false
   },
   {
+    "Stufe": "1",
     "Name": "Feenfeuer",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "",
     "Text": "Gegenstände innerhalb eines Würfels mit sechs Metern Kantenlänge in Reichweite werden von blauem, grünem oder violettem Licht (nach deiner Wahl) umrahmt. Auch Kreaturen im Würfel werden umrahmt, es sei denn, sie bestehen einen Geschicklichkeitsrettungswurf. Betroffene Gegenstände und Kreaturen spenden für die Wirkungsdauer in einem Radius von drei Metern dämmriges Licht und profitieren nicht von Unsichtbarkeit \r\nAngreifer sind bei Angriffswürfen gegen betroffene Kreaturen oder Gegenstände im Vorteil, sofern sie ihr Ziel sehen können. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
-      "Druide"
+      "Druide",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -1639,18 +1660,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Feuerpfeil",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du schleuderst einen Feuerfunken auf eine Kreatur oder einen Gegenstand in Reichweite. Führe einen Fernkampf Zauberangriff gegen das Ziel aus, Bei einem Treffer erleidet das Ziel 1W10 Feuerschaden. Der Zauber setzt brennbare Gegenstände in Brand, die er trifft und die nicht getragen oder gehalten werden. ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W10 erhöht, wenn du die 5. (2W10), die 11: (3W10) und die 17. (4W10) Stufe erreichst. ",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -1853,19 +1875,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Fliegen",
     "Schule": "Verwandlung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Eine Feder",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "Eine Feder",
     "Text": "Du berührst eine bereitwillige Kreatur. Für die Wirkungsdauer erhält das Ziel eine Flugbewegungsrate von 18 Meter und kann schweben. Wenn der Zauber endet und das Ziel noch fliegt, stürzt es ab, sofern es den Sturz nicht verhindern kann. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 3. kannst du auf eine weitere Kreatur zielen. ",
     "Klasse": [
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -1873,18 +1896,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Flimmern",
     "Schule": "Verwandlung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Minute",
+    "Material": "",
     "Text": "Würfle während der Wirkungsdauer am Ende jedes deiner Züge mit 1W6. Bei einem Ergebnis von 4-6 verschwindest du von deiner aktuellen Existenzebene und erscheinst auf der Ätherebene (der Zauber endet sofort, wenn du dich bereits auf dieser Ebene befindest). Von der Atherebene aus kannst du die Ebene, die du verlassen hast, wahrnehmen. Du siehst sie jedoch nur in Graustufen, und deine Sicht weite beträgt höchstens 18 Meter. Du kannst nur andere Kreaturen auf der Atherebene beeinflussen oder von ihnen beeinflusst werden. Kreaturen auf der anderen Ebene können dich nicht wahrnehmen, es sei denn, eine Spezialfähigkeit erlaubt ihnen, Dinge auf der Atherebene wahrzunehmen. \r\nDu kehrst zu Beginn deines nächsten Zugs oder wenn der Zauber endet, während du dich auf der Ätherebene befindest auf die andere Ebene zurück. Du kehrst in einen freien Bereich deiner Wahl, den du sehen kannst. im Abstand von bis zu drei Metern vom Bereich zurück. den du verlassen hast. Ist innerhalb dieser Reichweite kein freier Bereich vorhanden, so erscheinst du im nächstgelegenen freien Bereich. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -2157,19 +2181,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Gegenstand beleben",
     "Schule": "Verwandlung",
-    "Stufe": "5",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "",
     "Text": "Auf deinen Befehl hin werden Gegenstände belebt. Wähle eine Anzahl nichtmagischer Gegenstände in Reichweite aus, die nicht getragen oder gehalten werden, nicht an einer Oberfläche fixiert und kleiner als gigantisch sind. Die maximale Anzahl von Gegenständen entspricht deinem Zauberwirken Attributsmodifikator. Dabei zählt ein Ziel von höchstens mittelgroßer Größe als ein Gegenstand, ein großes Ziel zählt als zwei Gegenstände, und ein riesiges Ziel zählt als drei Gegenstände. \r\nJedes Ziel wird belebt, es erhält Beine und wird au einem Konstrukt, das den Wertekasten eines belebten \r\nGegenstands verwendet. Diese Kreatur steht unter deiner Kontrolle, bis der Zauber endet oder seine Trefferpunkte auf O sinken. Jede Kreatur, die du mit diesem Zauber erzeugst, ist mit dir und deinen Verbündeten verbündet. Im Kampl teilt sie deinen Initiativewert und ist unmittelbar nach dir am Zug. Bis der Zauber endet, kannst du als Bonusaktion jede Kreatur, die du mit diesem Zauber erschaffen hast und die sich im Abstand von bis zu 150 Metern von dir befindet, mental befehligen. Handelt es sich um mehrere Kreaturen, so kannst du beliebig viele von ihnen gleichzeitig befehligen, wobei jeweils der gleiche Befehl erteilt wird. Wenn du keine Befehle erteilst, führt die Kreatur die Ausweichaktion aus und bewegt sich nur, um Schaden zu vermeiden. Wenn die Trefferpunkte der Kreatur auf 0 sinken, nimmt sie wieder ihre unbelebte Form an. Überschüssiger Schaden wird auf diese Form übertragen.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 5. wird der Hiebschaden der Kreatur um 1W4 (höchstens mittelgroß), 1W6 (groß) oder 1W12 (riesig) erhöht.",
     "Klasse": [
       "Barde",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -2233,18 +2258,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Gestalt verändern",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "",
     "Text": "Du veränderst deine physische Gestalt. Entscheide dich für eine der folgenden Optionen. Die Effekte bleiben für die Wirkungsdauer bestehen. Währenddessen kannst du eine magische Aktion ausführen, um die ausgewählte Option durch eine andere zu ersetzen. \r\nAquatische Anpassung: Dir wachsen Kiemen und Schwimmhäute. Du kannst unter Wasser atmen und erhältst eine Schwimmbewegungsrate in Höhe deiner Bewegungsrate. \r\n- Aussehen ändern: Du veränderst dein Aussehen. \r\nDu bestimmst, wie du aussiehst: Größe, Gewicht, Gesichtszüge. Stimme, Haarlänge, Haarfarbe und andere besondere Merkmale. Du kannst dich auch als Mitglied einer anderen Spezies ausgeben. Deine Spielwerte bleiben jedoch unverändert. Du kannst nicht als Kreatur einer anderen Größenkategorie erscheinen. Deine grundlegende Gestalt bleibt ebenfalls gleich, beispielsweise kannst du dich mit diesem Zauber nicht von einem Zweibeiner in einen Vierbeiner verwandeln. Für die Wirkungsdauer kannst du eine magische Aktion ausführen, um dein Erscheinungsbild erneut auf diese Art zu ändern. \r\n- Natürliche Waffen: Dir wachsen Klauen (Hieb), Fangzähne (Stich), Hörner (Stich) oder Hufe (Wucht), Verwendest du deinen waffenlosen Angriff, um mit diesen natürlichen Waffen Schaden zu bewirken, so bewirkt dieser Angriff 1W6 Schaden der in Klammern angegebenen Art statt des normalen Schadens deines waffenlosen Angriffs, und du verwendest für die Angriffs- und Schadenswürfe deinen Zauberwirken Attributsmodifikator statt Stärke. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -2292,20 +2318,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Gift versprühen",
     "Schule": "Nekromantie",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du sprühst giftigen Nebel auf eine Kreatur in Reichweite. Führe einen Fernkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 1W12 Giftschaden. ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W12 erhöht, wenn du die 5. (2W12), die 11. (3W12) und die 17. (4W12) Stufe erreichst. ",
     "Klasse": [
       "Druide",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -2325,7 +2352,8 @@
     "Klasse": [
       "Barde",
       "Kleriker",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -2333,18 +2361,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Göttliche Führung",
     "Schule": "Erkenntnis",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "",
     "Text": "Du berührst eine bereitwillige Kreatur und wählst eine Fertigkeit aus. Bis der Zauber endet, fügt die Kreatur jedem Attributswurf, der die ausgewählte Fertigkeit verwendet, 1W4 hinzu. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
-      "Kleriker"
+      "Kleriker",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -2483,18 +2512,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Hast",
     "Schule": "Verwandlung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein Span Süßholzwurzel",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Ein Span Süßholzwurzel",
     "Text": "Wähle eine bereitwillige Kreatur in Reichweite aus, die du sehen kannst. Für die Wirkungsdauer ist die Bewegungsrate des Ziels verdoppelt. Außerdem erhält das Ziel einen Bonus von -2 auf seine Rüstungsklasse, ist bei Geschicklichkeitsrettungswürfen im Vorteil und kann in jedem seiner Züge eine zusätzliche Aktion ausführen. Diese Aktion kann nur für Folgendes eingesetzt werden: Angriff (nur ein Angriff), Rückzug, Spurt, Verstecken, Verwenden. \r\nWenn der Zauber endet, ist das Ziel bis zum Ende seines nächsten Zugs kampfunfähig und hat eine Bewegungsrate von 0, weil es von einer Welle der Lethargie ergriffen wird. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -2576,17 +2606,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Heiligtum",
     "Schule": "Bann",
-    "Stufe": "1",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "9 Meter",
-    "Material": "Eine Spiegelscherbe",
     "Dauer": "1 Minute",
+    "Material": "Eine Spiegelscherbe",
     "Text": "Du schützt eine Kreatur in Reichweite. Für die Wirkungsdauer muss jede Kreatur, die mit einem Angriffswurf oder Schadenszauber auf die geschützte Kreatur zielt, einen Weisheitsrettungswurf bestehen. Scheitert der Wurf, so muss sie ein neues Ziel auswählen, oder sie verliert den Angriff oder Zauber. Dieser Zauber schützt das Ziel nicht vor Wirkungsbereichen. Der Zauber endet, wenn die geschützte Kreatur einen Angriffswurf ausführt, einen Zauber wirkt oder Schaden bewirkt. ",
     "HöhereLevel": "",
     "Klasse": [
-      "Kleriker"
+      "Kleriker",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -2768,18 +2799,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Identifizieren",
     "Schule": "Erkenntnis",
-    "Stufe": "1",
     "Zeitaufwand": "1 Minute",
     "Reichweite": "Berührung",
-    "Material": "Eine Perle im Wert von mindestens 100 GM",
     "Dauer": "Unmittelbar",
+    "Material": "Eine Perle im Wert von mindestens 100 GM",
     "Text": "Du berührst einen Gegenstand, solange du den Zanber wirkst. Falls es sich um einen magischen. Gegenstand handelt, erkennst du seine Eigenschaften und ihre Anwendung, und du weißt, ob er Einstimmung erfordert und wie viele Ladungen er besitzt, falls zutreffend. Du erfährst, ob aktuell Zauber auf den Gegenstand wirken, \r\nund wenn ja, welche. Falls der Gegenstand durch einen Zauber erzeugt wurde, erfährst du dessen Namen. Wenn du stattdessen beim Wirken des Zaubers eine Kreatur durchgehend berührst, erfährst du, von welchen Zaubern sie derzeit betroffen ist, falls zutreffend",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -2904,18 +2936,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Kältestrahl",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Auf eine Kreatur in Reichweite schießt ein eisiger blau-weißer Lichtstrahl zu. Führe einen Fernkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet es 1W8 Kälteschaden, und seine Bewegungsrate ist bis zum Beginn deines nächsten Zugs um drei Meter verringert ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W8 erhöht, wenn du die 5. (2W8), die 11. (3W8) und die 17. (4W8) Stufe erreichst. ",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3019,17 +3052,18 @@
     "Gestik": false
   },
   {
+    "Stufe": "4",
     "Name": "Konstrukt herbeirufen",
     "Schule": "Beschwörung",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "27 Meter",
-    "Material": "Eine Schatulle im Wert von mindestens 400 GM",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Eine Schatulle im Wert von mindestens 400 GM",
     "Text": "Du rufst den Geist eines Konstrukts herbei. Er erscheint in einem freien Bereich in Reichweite, den du sehen kannst, und verwendet den Wertekasten eines Konstruktgeists Wenn du den Zauber wirkst, entscheide dich für ein Material: Lehm, Eisen oder Stein. Die Kreatur sieht aus wie eine belebte Statue (du bestimmst das Erscheinungsbild) aus dem ausgewählten Material, durch welches einige Details im Wertekasten bestimmt werden. Die Kreatur verschwindet, wenn ihre Trefferpunkte auf O sinken oder der Zauber endet. \r\nDie Kreatur ist mit die und deinen Verbündeten verbündet. im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweichaktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden. ",
     "HöhereLevel": "Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -3079,19 +3113,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Kreis der Macht",
     "Schule": "Bann",
-    "Stufe": "5",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "",
     "Text": "Für die Wirkungsdauer geht eine Aura mit einer Ausströmung von neun Metern von dir aus. In der Aura seid du und deine Verbündeten bei Rettungswürfen gegen Zauber und andere magische Effekte im Vorteil. Außerdem erleidet eine betroffene Kreatur bei einem erfolgreichen Rettungswurf gegen Zauber oder magische Effekte, der den Schaden halbiert, stattdessen gar keinen Schaden",
     "HöhereLevel": "",
     "Klasse": [
       "Kleriker",
       "Magier",
-      "Paladin"
+      "Paladin",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -3178,20 +3213,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Lange Schritte",
     "Schule": "Verwandlung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Eine Prise Erde",
     "Dauer": "1 Stunde",
+    "Material": "Eine Prise Erde",
     "Text": "Du berührst eine Kreatur. Für die Wirkungsdauer ist die Bewegungsrate des Ziels um drei Meter erhöht.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. kannst du auf eine weitere Kreatur zielen",
     "Klasse": [
       "Barde",
       "Druide",
       "Magier",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3255,17 +3291,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Leomunds geheime Truhe",
     "Schule": "Beschwörung",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Eine Truhe in den Abmessungen 90 mal 60 mal 60 Zentimeter aus seltenen Materialien im Wert von mindestens 5.000 GM und eine winzige Nachbildung der Truhe aus den gleichen Materialien im Wert von mindestens 50 GM",
     "Dauer": "Bis der Zauber gebannt wird",
+    "Material": "Eine Truhe in den Abmessungen 90 mal 60 mal 60 Zentimeter aus seltenen Materialien im Wert von mindestens 5.000 GM und eine winzige Nachbildung der Truhe aus den gleichen Materialien im Wert von mindestens 50 GM",
     "Text": "Du versteckst eine Truhe mit ihrem gesamten Inhalt auf der Atherebene. Dazu musst du beide Materialkomponenten für den Zauber berühren, die Truhe und die winzige Nachbildung. Die Truhe fasst bis zu 324 Liter anorganischen Materials (90 mal 60 mal 60 Zentimeter). \r\nSolange sich die Truhe auf der Atherebene befindet. kannst du mit einer magischen Aktion die Nachbildung berühren, um die Truhe herbeizurufen. Sie erscheint in einem freien Bereich auf dem Boden im Abstand von bis zu 15 Metern von dir. Du kannst die Truhe wieder auf die Atherebene zurückschicken, indem du mit einer magischen Aktion die Truhe und ihre Nachbildung gleichzeitig berührst. \r\nNach 60 Tagen besteht am Ende jedes Tages eine kumulative Chance von fünf Prozent, dass der Zauber endet. Er endet auch dann, wenn du den Zauber erneut wirkst oder die kleine Nachbildung zerstört wird. Wenn der Zauber endet, während sich die große Truhe auf der Ätherebene befindet, bleibt sie dort, bis sie von dir oder Jemand anderem gefunden wird.",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3310,20 +3347,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Licht",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Ein Glühwürmchen oder phosphoreszierendes Moos",
     "Dauer": "1 Stunde",
+    "Material": "Ein Glühwürmchen oder phosphoreszierendes Moos",
     "Text": "Du berührst einen Gegenstand von höchstens großer Grüße, der nicht von jemand anderem getragen oder gehalten wird. Für die Wirkungsdauer spendet dieser Gegenstand in einem Radius von sechs Metern helles Licht und in einem Radius von weiteren sechs Metern dämmriges Licht. Du kannst die Farbe des Lichts frei wählen.\r\nWird der Gegenstand mit etwas Undurchsichtigem abgedeckt, so wird das Licht blockiert. Der Zauber endet vorzeitig, wenn du ihn erneut wirkst. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Kleriker",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3392,13 +3430,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Magie bannen",
     "Schule": "Bann",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Wähle eine Kreatur, einen Gegenstand oder einen magischen Effekt in Reichweite aus. Jeder Zauber des höchstens 3. Grades, der aktuell auf das Ziel wirkt, wird beendet. Führe für jeden Zauber des mindestens 4. Grades, der auf das Ziel wirkt, einen Attributswurf mit deinem Attribut zum Zauberwirken (SG 10 plus Grad des Zaubers) aus. Bei einem Erfolg endet der Zauber. ",
     "HöhereLevel": "Du beendest automatisch einen Zauber, der auf das Ziel wirkt, wenn dessen Grad höchstens dem des Zauberplatzes entspricht, den du verwendest",
     "Klasse": [
@@ -3409,7 +3447,8 @@
       "Magier",
       "Paladin",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3417,13 +3456,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Magie entdecken",
     "Schule": "Erkenntnis",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "",
     "Text": "Während der Wirkungsdauer nimmst du magische Effekte im Abstand von bis zu neun Metern von dir wahr. Wens du magische Effekte wahrnimmst, kannst du die magische Aktion ausführen, um rund um sichtbare Kreaturen und Gegenstände im Bereich auf welche die Magle wirkt, eine schwache Aura zu sehen. Wurde der Effekt durch einen Zauber hervorgerufen, so erkennst du dessen Schule der Magle \r\nDer Zauber wird von 30 Zentimetern Stein, Erde oder Holz sowie von 2.5 Zentimetern Metall oder einer dünnen Bleischicht blockiert. ",
     "HöhereLevel": "",
     "Klasse": [
@@ -3433,7 +3472,8 @@
       "Magier",
       "Paladin",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": true,
@@ -3441,20 +3481,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Magierhand",
     "Schule": "Beschwörung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "",
     "Dauer": "1 Minute",
+    "Material": "",
     "Text": "An einem Punkt deiner Wahl in Reichweite erscheint eine geisterhafte schwebende Hand. Sie bleibt für die Wirkungsdauer bestehen. Die Hand verschwindet, wenn sie weiter als neun Meter von dir entfernt ist oder du den Zauber erneut wirkst \r\nWenn du den Zauber wirkst, kannst du mithilfe der Hand mit Gegenständen interagieren, unverschlossene Türen oder Behälter öffnen, Gegenstände in einem Behälter verstauen oder duraus hervorholen oder den Inhalt einer Phiole ausgießen. \r\nIn deinen folgenden Zügen kannst du die Hand als magische Aktion erneut auf diese Art kontrollieren. Als Teil dieser Aktion kannst du die Hand bis zu neun Meter weit bewegen. \r\nDie Hand kann nicht angreifen, keine magischen Gegenstände aktivieren und nicht mehr als fünf Kilogramm Gewicht tragen. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3502,18 +3543,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Magischer Mund",
     "Schule": "Illusion",
-    "Stufe": "2",
     "Zeitaufwand": "1 Minute",
     "Reichweite": "9 Meter",
-    "Material": "Jadestaub im Wert von mindestens 10 GM, den der Zauber verbraucht",
     "Dauer": "Bis der Zauber gebannt wird",
+    "Material": "Jadestaub im Wert von mindestens 10 GM, den der Zauber verbraucht",
     "Text": "Du implantierst eine Botschaft in einen Gegenstand in Reichweite. Diese Botschaft wird bei einer bestimmten Auslösebedingung ausgesprochen. Wähle einen Gegenstand aus, den du sehen kannst und der nicht von einer anderen Kreatur getragen oder gehalten wird. Sprich dann die Botschaft aus. Sie kann höchstens 25 Worte enthalten. jedoch über einen Zeitraum von bis zu zehn Minuten übermittelt werden. Bestimme zum Schluss den Umstand, unter dem der Zauber ausgelöst und deine Botschaft übermittelt wird. \r\nWenn dieser Auslöser eintritt, erscheint ein magischer Mund auf dem Gegenstand und spricht die Botschaft mit deiner Stimme und deiner Sprachlautstärke. Verfugt der ausgewählte Gegenstand über einen Mund oder etwas, das wie ein Mund aussieht, beispielsweise den Mund einer Statue, so erscheint der magische Mund dort, sodass die Worte aus dem Mund des Gegenstands zu kommen scheinen. Wenn du diesen Zauber wirkst, kannst du entscheiden, ob er nach einmaligem Übermitteln der Botschaft endet oder aber bestehen bleibt und die Botschaft jeweils wiederholt wird, wenn die Auslösebedingung erneut erfüllt ist. \r\nDer Auslöser kann beliebig allgemein oder detailliert sein. Er muss jedoch auf sichtbaren und hörbaren Umständen basieren, die im Abstand von bis zu neun Metern um den Gegenstand auftreten. Beispielweise könntest du bestimmen, dass die Botschaft übermittelt wird, sobald eine Kreatur sich dem Gegenstand auf neun Meter nähert oder wenn im Abstand von bis zu neun Metern vom Gegenstand eine Silberglocke geläutet wird",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -3653,18 +3695,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Metall erhitzen",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "Ein Stück Eisen und eine Flamme",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Ein Stück Eisen und eine Flamme",
     "Text": "Wähle einen verarbeiteten Gegenstand aus Metall in Reichweite aus, den du sehen kannst beispielsweise eine metallene Waffe oder eine schwere oder mittelschwere metallene Rüstung. Du lässt den Gegenstand glühend heiß werden. Wenn du den Zauber wirkst, erleiden alle Kreaturen in physischem Kontakt mit dem Gegenstand 2W8 Feuerschaden. Für die Wirkungsdauer kannst du in jedem deiner folgenden Züge eine Bonusaktion verwenden, um diesen Schaden erneut zu bewirken. sofern der Gegenstand sich in Reichweite befindet. \r\nTrägt eine Kreatur den Gegenstand oder hält ihn in der Hand, während sie den Schaden erleidet, so muss sie einen Konstitutionsrettungswurf bestehen, um den Gegenstand fallenzulassen, falls möglich. Wenn sie den Gegenstand nicht fallen lässt, ist sie bis zum Beginn deines nächsten Zugs bei Angriffs- und Attributswürfen im Nachteil.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. wird der Schaden um 1W8 erhöht",
     "Klasse": [
       "Barde",
-      "Druide"
+      "Druide",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -3854,18 +3897,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "7",
     "Name": "Mordenkainens herrliches Herrenhaus",
     "Schule": "Beschwörung",
-    "Stufe": "7",
     "Zeitaufwand": "1 Minute",
     "Reichweite": "90 Meter",
-    "Material": "Eine Miniatur-Tür im Wert von mindestens 15 GM",
     "Dauer": "24 Stunden",
+    "Material": "Eine Miniatur-Tür im Wert von mindestens 15 GM",
     "Text": "Du beschwörst in Reichweite eine schimmernde Tür, die für die Wirkungsdauer bestehen bleibt. Sie ist 1,5 Meter breit und drei Meter hoch, und sie führt zu einem extradimensionalen Anwesen. Du und jede Kreatur, die du beim Wirken des Zaubers bestimmst, könnt das extradimensionale Anwesen betreten, solange die Tür geöffnet ist. Du kannst sie öffnen oder schließen (keine Aktion erforderlich), wenn du dich im Abstand von bis zu neun Metern davon befindest. Ist die Tür geschlossen, so ist sie nicht wahrnehmbar. \r\nHinter der Tür liegt eine herrliche Eingangshalle mit zahlreichen Zimmern. Die Atmosphäre des Anwesens ist sauber, frisch und warm. \r\nDu kannst einen beliebigen Grundriss erstellen. der allerdings 50 zusammenhängende Würfel mit je drei Metern Kantenlänge nicht überschreiten kann. Das Anwesen ist nach deinen Wünschen eingerichtet und dekoriert. Es gibt ausreichend Nahrung, um bis zu 100 Personen ein Festmahl mit neun Gängen zu servieren. Möbel und andere Gegenstände, die durch diesen Zauber erschaffen wurden, lösen sich in Rauch auf, wenn sie aus dem Anwesen entfernt werden. \r\n100 fast transparente Diener nehmen sich der Wünsche aller Gäste an. Du bestimmst, wie die Diener aussehen und welche Kleidung sie tragen. Sie sind unverwundbar und gehorchen deinen Befehlen. Dabei können sie Aufgaben ausführen, die auch Menschen ausführen könnten. Sie können jedoch nicht angreifen oder Aktionen ausführen, die anderen Kreaturen direkten Schaden zufügen würden. Die Diener können Gegenstände holen und reinigen, Kleidung zusammenlegen, Feuer entfachen, Essen servieren, Wein einschenken und dergleichen. Sie können das Anwesen jedoch nicht verlassen. \r\nWenn der Zauber endet, werden alle Kreaturen und Gegenstände aus dem extradimensionalen Bereich in dir freien Bereiche ausgestoßen, die dem Eingang am nächsten liegen. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3873,17 +3917,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Mordenkainens privates Heiligtum",
     "Schule": "Bann",
-    "Stufe": "4",
     "Zeitaufwand": "10 Minuten",
     "Reichweite": "36 Meter",
-    "Material": "Ein dünnes Bleiblech",
     "Dauer": "24 Stunden",
+    "Material": "Ein dünnes Bleiblech",
     "Text": "Du sicherst einen Bereich in Reichweite auf magische Welse. Dabei handelt es sich um einen Würfel mit einer Kantenlänge zwischen 1,5 und 30 Metern. Der Zauber bleibt für die Wirkungsdauer bestehen. \r\nBeim Wirken des Zaubers entscheidest du, welche Sicherheit er bietet. Du kannst eine beliebige der folgenden Eigenschaften auswählen: \r\n- Geräusche können die Barriere am Rand des geschützten Bereichs nicht durchdringen. \r\n- Die Barriere des geschützten Bereichs erscheint dunkel und neblig und verhindert jegliche Sicht (auch Dunkelsicht). \r\n- Sensoren von Erkenntniszaubern können weder im geschützten Bereich erscheinen noch den Rand der Barriere durchdringen. \r\n- Kreaturen in dem Bereich können nicht zum Ziel von Erkenntniszaubern werden. \r\n- Nichts kann in den bewachten Bereich hinein- oder aus \r\nihm herausteleportiert werden. \r\n- Ebenenreisen werden innerhalb des geschützten Bereichs blockiert. \r\nWenn du diesen Zauber 365 Tage lang täglich am selben Ort wirkst, wird der Effekt dauerhaft. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 4 kannst du die Kantenlänge des Würfels um 30 Meter vergrößern. ",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -3928,19 +3973,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Nahrung und Wasser erschaffen",
     "Schule": "Beschwörung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "3 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du erschaffet 22,5 Kilogramm Nahrung und 120 Liter Wasser auf dem Boden oder in Behältern in Reichweite-nützlich, um den Gefahren von Unterernährung und Dehydrierung vorzubeugen. Die Nahrung sieht aus wie Essen deiner Wahl und ist schlicht, aber nahrhaft Das Wasser ist sauber. Die Nahrung verdirbt innerhalb von 24 Stunden, wenn sie nicht gegessen wird. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
-      "Paladin"
+      "Paladin",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -3948,19 +3994,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Nahrung und Wasser reinigen",
     "Schule": "Verwandlung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "3 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du entfernst Gifte und Verderbnis aus nichtmagischen Speisen und Getränken in einer Kugel mit einem Radius von 1,5 Metern um einen Punkt deiner Wahl in Reichweite. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
-      "Paladin"
+      "Paladin",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -4009,18 +4056,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Netz",
     "Schule": "Beschwörung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "Einige Spinnenweben",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Einige Spinnenweben",
     "Text": "Du beschwörst an einem Punkt in Reichweite eine Maste aus klebrigen Netzen. Für die Wirkungsdauer füllen die Netze dort einen Würfel mit sechs Metern Kantenlänge. Die Netze sind schwieriges Gelände, und ihr Bereich ist leicht verschleiert. \r\nWenn sich die Netze nicht zwischen zwei festen Gegenständen wie Mauern oder Bäumen befinden oder über einen Fußboden, eine Wand oder unter einer Decke gespannt sind, fallen sie in sich zusammen, und zu Beginn deines nächsten Zugs endet der Zauber. Netze, die über eine flache Oberfläche ausgebreitet sind, besitzen eine Dicke von 1,5 Metern. \r\nWenn eine Kreatur in einem Zug die Netze erstmals betritt oder ihren Zug darin beginnt. muss sie einen Geschicklichkeitsrettungswurf bestehen, oder sie ist festgesetzt, solange sie sich in den Netzen befindet oder bis sie sich befreit. \r\nEine von den Netzen festgesetzte Kreatur kann als Aktion einen Stärkewurf (Athletik) gegen deinen Zauberrettungswurf-SG ausführen. Bei einem Erfolg ist sie nicht länger festgesetzt. \r\nDie Netze sind brennbar. Alle Netze innerhalb eines Würfels mit 1,5 Metern Kantenlänge verbrennen innerhalb von einer Runde, wenn sie mit Feuer in Kontakt kommen, und fügen dabei allen Kreaturen, die ihren Zug im Feuer beginnen, 2W4 Feuerschaden zu. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -4083,17 +4131,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Otilukes unverwüstliche Sphäre",
     "Schule": "Bann",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Eine Glaskugel",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Eine Glaskugel",
     "Text": "Eine schimmernde Kugel unischließt eine Kreatur oder einen Gegenstand von jeweils höchstens großer Größe in Reichweite. Eine nicht bereitwillige Kreatur muss einen Geschicklichkeitsrettungswurf bestehen, oder sie wird für die Wirkungsdauer eingeschlossen. \r\nPhysische Gegenstände, Energien und Zaubereffekte können die Barriere weder von Julien noch von innen durchdringen. Eine Kreatur in der Kugel kann jedoch atmen. Die Kugel ist gegen alle Schadensarten immun. und eine Kreatur oder ein Gegenstand darin kann weder durch Angriffe noch Effekte von außerhalb Schaden erleiden. Gleichermaßen kann eine Kreatur in der Kugel keinen Schaden außerhalb der Kugel bewirken \r\nDie Kugel ist schwerelos und gerade groß genug für die Kreatur oder den Gegenstand darin. Eine gefangene Kreatur kann sich als Aktion gegen die Wand der Kugel lehnen und die Kugel so bis zur halben Bewegungsrate der Kreatur bewegen. Ebenso kann die Kugel von anderen Kreaturen aufgehoben und bewegt werden \r\nWird der Zauber Auflösung auf die Kugel gewirkt, so wird die Kugel zerstört, ohne dass etwas im Inneren Schaden erleidet ",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -4298,19 +4347,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Rascher Rückzug",
     "Schule": "Verwandlung",
-    "Stufe": "1",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "",
     "Text": "Du führst die Spurt-Aktion aus, und bis der Zauber endet, kannst du sie erneut als Bonusaktion ausführen.",
     "HöhereLevel": "",
     "Klasse": [
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -4509,18 +4559,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Säurespritzer",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du erzeugst an einem Punkt in Reichweite eine Säureblase, die in einer Kugel mit einem Radios von 1.5 Metern explodiert. Jede Kreatur in der Kugel muss einen Geschicklichkeitsrettungswurf bestehen, oder sie erleidet 1W6 Säureschaden. ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W6 erhöht, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -4644,18 +4695,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Schmieren",
     "Schule": "Beschwörung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "Ein Stück Schweineschwarte oder Butter",
     "Dauer": "1 Minute",
+    "Material": "Ein Stück Schweineschwarte oder Butter",
     "Text": "In einem quadratischen Bereich mit drei Metern Kantenlänge um einen Punkt in Reichweite bedeckt nichtbrennbares Fett den Boden und macht ihn für die Wirkungsdauer zu schwierigem Gelände. \r\nWenn das Schmierfett erscheint, muss jede Kreatur in diesem Bereich einen Geschicklichkeitsrettungswurf bestehen, oder sie rutscht aus und stürzt hin, sodass sie liegend ist. Auch Kreaturen, die den Bereich betreten oder ihren Zug darin beginnen, müssen diesen Rettungswurf bestehen, um nicht auszurutschen. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -4701,18 +4753,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Schockgriff",
     "Schule": "Hervorrufung",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Von dir springt ein Blitz auf eine Kreatur über, die du zu berühren versuchst. Führe einen Nahkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 1W8 Blitzschaden und kann bis zum Beginn seines nächsten Zugs keine Gelegenheitsangriffe ausführen. ",
     "HöhereLevel": "Der Schaden wird um jeweils 1W8 erhöht, wenn du die 5. (2W8), die 11. (3W8) und die 17. (4W8) Stufe erreichst. ",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -4738,13 +4791,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Schutz vor Energie",
     "Schule": "Bann",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "",
     "Text": "Für die Wirkungsdauer ist eine bereitwillige Kreatur, die du berührst, gegen eine Schadensart deiner Wahl resistent: Blitz, Feuer, Kälte, Säure oder Schall",
     "HöhereLevel": "",
     "Klasse": [
@@ -4752,7 +4805,8 @@
       "Kleriker",
       "Magier",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -4760,20 +4814,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Schutz vor Gift",
     "Schule": "Bann",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "1 Stunde",
+    "Material": "",
     "Text": "Du berührst eine Kreatur und beendest bei ihr den Zustand Vergiftet. Für die Wirkungsdauer ist das Ziel bei Rettungswürfen zum Vermeiden oder Beenden des Zustands Vergiftet im Vorteil und gegen Giftschaden resistent. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -4898,13 +4953,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Schwache Genesung",
     "Schule": "Bann",
-    "Stufe": "2",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du berührst eine Kreatur und beendest einen Zustand bei ihr: Blind, Gelähmt, Taub oder Vergiftet.",
     "HöhereLevel": "",
     "Klasse": [
@@ -4912,7 +4967,8 @@
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -4939,18 +4995,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Schweben",
     "Schule": "Verzauberung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "Eine Metallfeder",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "Eine Metallfeder",
     "Text": "Ein Ziel (eine Kreatur oder ein loser Gegenstand) deiner Wahl in Reichweite, das du sehen kannst, steigt senkrecht sechs Meter empor und schweht für die Wirkungsdauer in der Luft. Der Zauber kann Gegenstände mit einem Maximalgewicht von 250 Kilogramm anheben. \r\nBesteht eine nicht bereit willige Kreutur einen \r\nKonstitutionsrettungswurf, so ist sie nicht betroffen. \r\nDas Ziel kann sich nur bewegen, indem es sich von festen Gegenständen oder Oberflächen wie Wänden oder Decken \r\nin Reichweite abstößt oder sich daran entlanghangelt. Dabei gilt die Kletterbewegungsrate. Während deines Zugs kannst du das Ziel um bis zu sechs Meter anheben oder absenken. Wenn du selbst das Ziel bist, kannst du dich im Rahmen deiner Bewegung anheben oder absenken. Anderenfalls kannst du das Ziel mit einer magischen Aktion bewegen. Dahei musst du die Reichweite des Zaubers einhalten. \r\nWenn der Zauber endet und das Ziel noch schwebt, sinkt es sanft zu Boden",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -4997,17 +5054,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Seiltrick",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Ein Stück Seil",
     "Dauer": "1 Stunde",
+    "Material": "Ein Stück Seil",
     "Text": "Du berührst ein Seil. Ein Seilende erhebt sich in die Luft, bis das gesamte Seil senkrecht zum Boden in der Luft hängt oder das Seilende eine Decke erreicht. Am oberen Ende des Seils öffnet sich ein unsichtbares Portal zu einem extradimensionalen Raum. Das Portal ist einen Meter mal 15 Meter groß und bleibt für die Wirkungsdauer bestehen. Der Raum kann über das Seil erreicht werden, das in den Raum hineingezogen werden oder heraushängen kann. \r\nDer Raum fasst bis zu acht Kreaturen von höchstens mittelgroßer Größe. Angriffe. Zauber und andere Effekte können den extradimensionalen Raum weder von innen noch von außen durchdringen. Kreaturen im Raum können jedoch durch das Portal nach draußen blicken Alles, was im Raum enthalten ist, fällt heraus, wenn der Zauber endet. ",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -5015,19 +5073,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Selbstverkleidung",
     "Schule": "Illusion",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Stunde",
+    "Material": "",
     "Text": "Du veränderst dein Aussehen einschließlich Kleidung. Rüstung, Waffen und anderer Habseligkeiten, bis der Zauber endet oder du ihn mit einer Aktion beendest. Du kannst 30 Zentimeter größer oder kleiner sowie schwerer oder leichter erscheinen. Allerdings musst du eine Gestalt atit der gleichen Grundanordnung von Gliedmaßen annehmm Abgesehen davon sind die Einzelheiten der Illusion dir überlassen. \r\nEiner genauen körperlichen Untersuchung halten die Veränderungen dieser Illusion nicht stand. Wenn du diesen Zauber beispielsweise nutzt, um dir einen Hut aufzusetzen, durchdringen Gegenstände diesen einfach Will jemand den Hut berühren, so fühlt er dort nichts. \r\nUm deine Verkleidung als solche zu erkennen, muss eine Kreatur die Studieren Aktion ausführen, um dein Aussehen zu untersuchen, und einen Intelligenzwurf (Nachforschungen) gegen deinen Zauberrettungswurf SG bestehen. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -5190,19 +5249,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Spinnenklettern",
     "Schule": "Verwandlung",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Etwas Pech und eine Spinne",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Etwas Pech und eine Spinne",
     "Text": "Eine bereitwillige Kreatur, die du berührst, erhält für die Wirkungsdauer die Fähigkeit, sich in alle Richtungen und mit freien Händen über senkrechte Oberflächen sowie an Decken zu bewegen, Außerdem erhält das Ziel eine Kletterbewegungsrate in Höhe seiner Bewegungsrate.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. kannst du auf eine weitere Kreatur zielen.",
     "Klasse": [
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -5310,19 +5370,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Stein formen",
     "Schule": "Verwandlung",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Weicher Lehm",
     "Dauer": "Unmittelbar",
+    "Material": "Weicher Lehm",
     "Text": "Du berührst einen steinernen Gegenstand von höchstens mittelgroßer Größe oder einen Abschnitt aus Stein, der in keiner Abmessung größer als 1,5 Meter sein darf. und verformst ihn nach deinen Wünschen. Du könntest beispielsweise eine Waffe, eine Statue oder eine Truhe aus einem Felsbrocken formen oder einen kleinen Durchgang in einer Mauer schaffen, die höchstens 1.5 Meter dick ist. Du könntest auch eine Steintür oder ihren Rahmen teilweise umformen, um sie zu versiegeln. Der von dir erschaffene Gegenstand kann bis zu zwei Scharniere und einen Riegel besitzen, feinere mechanische Details sind jedoch nicht möglich. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -5330,20 +5391,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Steinhaut",
     "Schule": "Verwandlung",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Diamantstab im Wert von mindestens 100 GM, den der Zauber verbraucht",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Diamantstab im Wert von mindestens 100 GM, den der Zauber verbraucht",
     "Text": "Bis der Zauber endet, ist eine bereitwillige Kreatur, die du berührst, gegen Hieb, Stich und Wuchtschaden resistent. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Magier",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -5351,19 +5413,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Steinwand",
     "Schule": "Hervorrufung",
-    "Stufe": "5",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "Ein Granitwürfel",
     "Dauer": "Bis zu 10 Minuten",
+    "Material": "Ein Granitwürfel",
     "Text": "An einem Punkt deiner Wahl in Reichweite erscheint eine nichtmagische Wand aus massivem Stein. Sie ist 15 Zentimeter dick und besteht aus zehn quadratischen Platten mit drei Metern Kantenlänge jede Platte muss an eine andere angrenzen. Alternativ kannst du drei Meter mal sechs Meter große Platten erschaffen, die nur 7,5 Zentimeter dick sind. \r\nErschaffst du die Wand so, dass sie den Bereich einer Kreatur durchdringt, so wird die Kreatur auf eine Seite der Wand (nach deiner Wahl) gestoßen. Wenn eine Kreatur auf allen Seiten von der Wand umschlossen (oder zwischen der Wand und einer anderen soliden Oberfläche eingeschlossen) wäre, kann diese Kreatur einen Geschicklichkeitsrettungswurf ausführen. Bei einem Erfolg kann sie ihre Reaktion verwenden, um sich bis zu ihrer Bewegungsrate zu bewegen, sodass sie nicht länger eingeschlossen ist, \r\nDie Wand kann jede gewünschte Form annehmen, jedoch nicht denselben Bereich wie eine Kreatur oder ein Gegenstand einnehmen. Sie muss nicht senkrecht sein oder auf festem Untergrund stehen. Allerdings muss sie mit bestehendem Stein verschmelzen und von ihm getragen werden. Somit kannst du diesen Zauber verwenden, um eine Schlucht zu überwinden oder eine Rampe zu erschaffen. \r\nWenn du eine Brücke von mehr als sechs Metern Länge erschaffen willst, musst du die halbe Größe jeder Platte für Stützpfeiler verbrauchen. Du kannst die Steinwand grob formen, um Wehranlagen und dergleichen zu erschaffen. \r\nDie Wand ist ein Gegenstand aus Stein, der beschädigt und somit durchbrochen werden kann. Jede Platte besitzt eine RK von 15. 50 Trefferpunkte pro 2,5 Zentimetern Dicke und ist gegen Giftschaden und psychischen Schaden immun. Wenn die Trefferpunkte einer Platte auf O sinken, wird sie zerstört, was angrenzende Platten nach Ermessen des SL zum Einsturz bringen könnte. \r\nKonzentrierst du dich für die gesamte Wirkungsdauer auf diesen Zauber, so wird die Wand dauerhaft und kann nicht gebannt werden. Anderenfalls verschwindet sie, wenn der Zauber endet.",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -5549,19 +5612,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Tanzende Lichter",
     "Schule": "Illusion",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "Etwas Phosphor",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "Etwas Phosphor",
     "Text": "Du kannst bis zu vier Lichter in Fackelgröße in Reichweite erzeugen und als Fackeln, Laternen oder Leuchtkugeln erscheinen lassen, die für die Wirkungsdauer in der Luft schweben. Alternativ kannst du die vier Lichter zu einer leuchtenden, entfernt humanoiden Gestalt mittlerer Größe kombinieren. Unabhängig von der Form spendet jedes Licht dämmriges Licht in einem Radius von drei Metern, Als Bonusaktion kannst du die Lichter bis zu 18 Meter weit in einen Bereich in Reichweite bewegen. Jedes Licht muss sich im Abstand von bis zu sechs Metern von einem anderen durch diesen Zauber erzeugten Licht befinden. Wenn ein Licht die Reichweite des Zaubers verlässt, erlischt es. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -5576,13 +5640,14 @@
     "Reichweite": "3 Meter",
     "Dauer": "Bis zu 1 Stunde",
     "Material": "",
-    "Text": "Du erzeugst einen magischen Effekt in Reichweite. Wähle den Effekt aus den Optionen unten aus. Wenn du diesen Zauber mehrmals wirkst, können bis zu drei der langfristigen Effekte gleichzeitig aktiv sein. \r\n- Sensorischer Effekt: Du erzeugst einen unmittelbaren, \r\nharmlosen sensorischen Effekt, beispielsweise einen Funkenregen, einen Windstoß, eine leise Melodie oder einen merkwürdigen Geruch. \r\n- Feuerspiel: Du entzündest oder löschst unmittelbar eine Kerze, eine Fackel oder ein kleines Lagerfeuer. \r\nSauber oder schmutzig: Du kannst unmittelbar einen Gegenstand, der nicht größer als ein Würfel mit 30 Zentimetern Metern Kantenlänge ist, säubern oder verschmutzen. \r\n- Einfache Sinneswahrnehmung: Du kannst unbelebtes Material, das nicht größer als ein Würfel mit 30 Zentimetern Metern Kantenlänge ist, abkühlen, erhitzen oder würzen. Dies hält eine Stunde lang an. \r\n- Magisches Zeichen: Du lässt eine Stunde lang einen \r\nFarbfleck, ein Mal oder ein Symbol auf einem Gegenstand oder einer Oberfläche erscheinen. \r\n- Einfache Schöpfung: Du erzeugst ein nichtmagisches Schmuckstück oder ein illusionäres Bild, das in deine Hand passt. Es bleibt bis zum Ende deines nächsten Zugs bestehen. Diese Schöpfung kann keinen Schaden bewirken und hat keinen Geldwert. ",
+    "Text": "Du erzeugst einen magischen Effekt in Reichweite. Wähle den Effekt aus den Optionen unten aus. Wenn du diesen Zauber mehrmals wirkst, können bis zu drei der langfristigen Effekte gleichzeitig aktiv sein. \r\n- Sensorischer Effekt: Du erzeugst einen unmittelbaren, harmlosen sensorischen Effekt, beispielsweise einen Funkenregen, einen Windstoß, eine leise Melodie oder einen merkwürdigen Geruch. \r\n- Feuerspiel: Du entzündest oder löschst unmittelbar eine Kerze, eine Fackel oder ein kleines Lagerfeuer. Sauber oder schmutzig: Du kannst unmittelbar einen Gegenstand, der nicht größer als ein Würfel mit 30 Zentimetern Metern Kantenlänge ist, säubern oder verschmutzen. \r\n- Einfache Sinneswahrnehmung: Du kannst unbelebtes Material, das nicht größer als ein Würfel mit 30 Zentimetern Metern Kantenlänge ist, abkühlen, erhitzen oder würzen. Dies hält eine Stunde lang an. \r\n- Magisches Zeichen: Du lässt eine Stunde lang einen Farbfleck, ein Mal oder ein Symbol auf einem Gegenstand oder einer Oberfläche erscheinen. \r\n- Einfache Schöpfung: Du erzeugst ein nichtmagisches Schmuckstück oder ein illusionäres Bild, das in deine Hand passt. Es bleibt bis zum Ende deines nächsten Zugs bestehen. Diese Schöpfung kann keinen Schaden bewirken und hat keinen Geldwert. ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -6190,19 +6255,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Unsichtbares sehen",
     "Schule": "Erkenntnis",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "Eine Prise Talk",
     "Dauer": "1 Stunde",
+    "Material": "Eine Prise Talk",
     "Text": "Für die Wirkungsdauer siehst du unsichtbare Kreaturen und Gegenstände, als wären sie sichtbar. Du kannst zudem in die Ätherebene blicken. Kreaturen und Gegenstände dort erscheinen geisterhaft.",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -6210,20 +6276,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Unsichtbarkeit",
     "Schule": "Illusion",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Eine Wimper in Gummiarabikum",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "Eine Wimper in Gummiarabikum",
     "Text": "Eine Kreatur, die du berührst, wird unsichtbar, bis der Zauber endet. Der Zauber endet vorzeitig, sobald das Ziel einen Angriffswurf ausgeführt, Schaden bewirkt oder selbst einen Zauber gewirkt hat.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. kannst du auf eine weitere Kreatur zielen.",
     "Klasse": [
       "Barde",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -6290,17 +6357,18 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Verarbeitung",
     "Schule": "Verwandlung",
-    "Stufe": "4",
     "Zeitaufwand": "10 Minuten",
     "Reichweite": "36 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du wandelst Rohmaterial in Erzeugnisse aus dem gleichen Material um. Du kannst beispielsweise aus einem Stück Baum eine Holzbrücke erschaffen, aus etwas Hanf ein Seil, aus Flachs oder Wolle Kleidung. \r\nWähle Rohmaterial in Reichweite aus, das du sehen kannst. Du kannst einen Gegenstand von höchstens großer Größe herstellen, der in einen Würfel mit drei Metern Kantenlänge oder in acht verbundene Würfel mit jeweils 1,5 Metern Kantenlänge passt, sofern du über genügend Material verfügst. Wenn du mit Metall. Stein oder einem anderen Mineral arbeitest, kann der hergestellte Gegenstand von höchstens mittelgroßer Größe sein. Er muss in einen Würfel mit 1,5 Metern Kantenlänge passen. Die Qualität der mit dem Zauber erschaffenen Gegenstände hängt von der Qualität des Rohmaterials ab. \r\nMit diesem Zauber können weder Kreaturen noch magische Gegenstände erschaffen werden. Du kannst zudem keine Gegenstände wie Schmuck, Waffen, Glas oder Rüstung erschaffen, die ein hohes Maß an Können erfordern, es sei denn, du bist im Umgang mit dem passenden Handwerkszeug geübt. ",
     "HöhereLevel": "",
     "Klasse": [
-      "Magier"
+      "Magier",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -6404,7 +6472,7 @@
     "Gestik": true
   },
   {
-    "Name": "Vergrössern/Verkleinern",
+    "Name": "Vergrössern bzw. Verkleinern",
     "Schule": "Verwandlung",
     "Stufe": "2",
     "Zeitaufwand": "Aktion",
@@ -6417,7 +6485,8 @@
       "Barde",
       "Druide",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -6445,18 +6514,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "0",
     "Name": "Verschonung der Sterbenden",
     "Schule": "Nekromantie",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "4,5 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Wähle eine Kreatur in Reichweite aus, deren Treffer-punkte auf 0 gesunken sind, die jedoch noch nicht tot ist. Die Kreatur wird stabil.",
+    "Material": "",
+    "Text": "Wähle eine Kreatur in Reichweite aus, deren Trefferpunkte auf 0 gesunken sind, die jedoch noch nicht tot ist. Die Kreatur wird stabil.",
     "HöhereLevel": "Die Reichweite wird jeweils verdoppelt, wenn du die 5. (neun Meter), die 11. (18 Meter) und die 17. (36 Meter) Stufe erreichst. ",
     "Klasse": [
       "Druide",
-      "Kleriker"
+      "Kleriker",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -6464,18 +6534,19 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Verschwimmen",
     "Schule": "Illusion",
-    "Stufe": "2",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
+    "Material": "",
     "Text": "Dein Körper wird unscharf. Für die Wirkungsdauer sind Kreaturen bei Angriffswürfen gegen dich im Nachteil. Angreifer, die dich mit Blindsicht oder Wahrer Blick wahrnehmen, sind gegen diesen Effekt immun.",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -6600,13 +6671,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Vollständige Genesung",
     "Schule": "Bann",
-    "Stufe": "5",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Diamantstaub im Wert von mindestens 100 GM, den der Zauber verbraucht",
     "Dauer": "Unmittelbar",
+    "Material": "Diamantstaub im Wert von mindestens 100 GM, den der Zauber verbraucht",
     "Text": "Du berührst eine Kreatur und hebst auf magische Art einen der folgenden Effekte bei ihr auf \r\n- 1 Erschöpfungsstufe \r\n- Einen der Zustände Bezaubert oder Versteinert \r\n- Einen Fluch oder die Einstimmung des Ziels auf einen verfluchten magischen Gegenstand \r\n- Jegliche Verringerung eines der Attributswerte des Ziels\r\n- Jegliche Verringerung des Trefferpunktemaximums des Ziels ",
     "HöhereLevel": "",
     "Klasse": [
@@ -6614,7 +6685,8 @@
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -6816,20 +6888,21 @@
     "Gestik": false
   },
   {
+    "Stufe": "3",
     "Name": "Wasser Atmen",
     "Schule": "Verwandlung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein kurzes Schilfrohr",
     "Dauer": "24 Stunden",
+    "Material": "Ein kurzes Schilfrohr",
     "Text": "Bis zu zehn bereitwillige Kreaturen deiner Wahl in Reichweite können für die Wirkungsdauer unter Wasser atmen. Betroffene Kreaturen verfügen weiterhin über ihre normale Atmung",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Magier",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -6876,20 +6949,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Wasserwandeln",
     "Schule": "Verzauberung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein Stück Kork",
     "Dauer": "1 Stunde",
+    "Material": "Ein Stück Kork",
     "Text": "Dieser Zauber verleiht die Fähigkeit, sich über flüssige Oberflächen zu bewegen, darunter Wasser, Säure, Schlamm, Schnee. Treibsand oder Lava, als handele es sich um ungefährlichen, festen Boden (Kreaturen, die sich über geschmolzene Lava bewegen, können jedoch trotzdem Hitzeschaden erleiden). Bis zu zehn bereitwillige Kreaturen deiner Wahl in Reichweite erhalten für die Wirkungsdauer diese Fähigkeit \r\nEin betroffenes Ziel muss eine Bonusaktion ausführen, um von der Oberfläche der Flüssigkeit in die Flüssigkeit zu gelangen und umgekehrt. Wenn das Ziel jedoch in den Bereich fällt, gelangt es automatisch durch die Oberfläche in die Flüssigkeit darunter. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
       "Waldläufer",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": true,
@@ -7013,20 +7087,21 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Wiederbeleben",
     "Schule": "Nekromantie",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "Ein Diamant im Wert von mindestens 300 GM, den der Zauber verbraucht",
     "Dauer": "Unmittelbar",
+    "Material": "Ein Diamant im Wert von mindestens 300 GM, den der Zauber verbraucht",
     "Text": "Du berührst eine Kreatur, die innerhalb der letzten Minute gestorben ist. Diese Kreatur wird mit 1 Trefferpunkt wiederbelebt. Dieser Zauber kann keine Kreaturen wiederbeleben, die an Altersschwäche gestorben sind. und stellt auch keine fehlenden Körperteile wieder her. ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -7247,13 +7322,13 @@
     "Gestik": false
   },
   {
+    "Stufe": "1",
     "Name": "Wunden heilen",
     "Schule": "Bann",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Eine Kreatur, die du berührst, erhält Trefferpunkte in Hohe von 2W8 plus deinem Zauberwirken-Attributsmodifikator zurück  ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird die Heilung um 2W8 Trefferpunkte erhöht.",
     "Klasse": [
@@ -7261,7 +7336,8 @@
       "Druide",
       "Kleriker",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -7400,20 +7476,21 @@
     "Gestik": false
   },
   {
+    "Stufe": "0",
     "Name": "Zielsicherer Schlag",
     "Schule": "Erkenntnis",
-    "Stufe": "0",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "Eine Waffe, mit der du Übung hast, im Wert von mindestens 1 KM",
     "Dauer": "Unmittelbar",
+    "Material": "Eine Waffe, mit der du Übung hast, im Wert von mindestens 1 KM",
     "Text": "Von einem Blitz magischer Einsicht geleitet führst du einen Angriff mit der Waffe aus, die du zum Wirken des Zaubers verwendet hast. Der Zauber nutzt dein Attribut zum Zauberwirken für den Angriff und Schadenswürfe statt Stärke oder Geschicklichkeit. Wenn der Angriff Schaden bewirkt, kann dies gleißender Schaden oder die normale Schadensart der Waffe sein (nach deiner Wahl)",
     "HöhereLevel": "Unabhängig davon, ob du gleißenden Schaden oder die normale Schadensart der Waffe bewirkst, bewirkt der Angriff zusätzlich gleißenden Schaden, wenn du die 5. (1W6), die 11. (2W6) und die 17. (3W6) Stufe erreichst.",
     "Klasse": [
       "Barde",
       "Hexenmeister",
       "Magier",
-      "Zauberer"
+      "Zauberer",
+      "Tüftler"
     ],
     "Konzentration": false,
     "Ritual": false,
@@ -7517,19 +7594,20 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Elementare Waffe",
     "Schule": "Verwandlung",
-    "Stufe": "3",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Berührung",
-    "Material": "",
     "Dauer": "Bis zu 1 Stunde",
+    "Material": "",
     "Text": "Durch deine Berührung wird eine nichtmagische Waffe zu einer magischen Waffe. Wähle eine der folgenden Schadensarten aus: Blitz, Feuer, Kälte, Säure oder Schall. Für die Wirkungsdauer hat die Waffe einen Bonus von +1 auf Angriffswürfe und bewirkt bei einem Treffer zusätzlich 1W4 Schaden der ausgewählten Art. ",
     "HöhereLevel": "Bei einem Zauberplätze des 5.-6. Grades wird der Bonus Angriffswürfe auf 2 erhöht, und der zusätzliche Schaden wird auf 2W4 erhöht. Bei einem Zauberplatz ab dem 7. Grad wird der Bonus auf +3 und der zusätzliche Schaden auf 3W4 erhöht ",
     "Klasse": [
       "Druide",
       "Paladin",
-      "Waldläufer"
+      "Waldläufer",
+      "Tüftler"
     ],
     "Konzentration": true,
     "Ritual": false,
@@ -7630,6 +7708,24 @@
     ],
     "Konzentration": true,
     "Ritual": false,
+    "Verbal": true,
+    "Gestik": true
+  },
+  {
+    "Stufe": "2",
+    "Name": "Homunculus Servant",
+    "Schule": "Beschwörung",
+    "Zeitaufwand": "1 Stunde",
+    "Reichweite": "3 Meter",
+    "Dauer": "Unmittelbar",
+    "Material": "Ein Edelstein mit einem Wert von 100 GM oder mehr, der verbraucht wird",
+    "Text": "Du beschwörst einen besonderen Homunkulus in einem freien Feld in Reichweite. Diese Kreatur nutzt die Werte des Homunkulus-Dieners. Falls du bereits einen Homunkulus durch diesen Zauber hast, wird dieser durch den neuen ersetzt. Du bestimmst das Aussehen des Homunkulus, z. B. ein mechanisch aussehender Vogel.\r\n- Kampf. Der Homunkulus ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt er deine Initiative, ist aber unmittelbar nach dir an der Reihe. Er gehorcht deinen Befehlen (keine Aktion erforderlich).\r\n\r\n\r\nHOMUNKULUS-DIENER\r\nWinziges Konstrukt, Neutral\r\nRK 13\r\nTP 5 + 5 pro Zaubergrad (der Homunkulus hat eine Anzahl\r\nan Trefferwürfeln [d4] entsprechend dem Zaubergrad)\r\nBewegungsrate 6 m, Fliegen 9 m\r\nWert | Modifier | Rettungswurf\r\nStä 4 −3 −3 Ges 15 +2 +2 Kon 12 +1 +1\r\nInt 10 +0 +0 Wei 10 +0 +0 Cha 7 −2 −2\r\nImmunitäten Gift; Erschöpfung, Vergiftet\r\nSinne Dunkelsicht 18 m; Passive Wahrnehmung 10\r\nSprachen Telepathie 1,6 km (funktioniert nur mit dir)\r\nSG Keine (EP 0; PB entspricht deinem Übungsbonus)\r\nEIGENSCHAFTEN\r\n- Ausweichen. Wenn der Homunkulus einem Effekt ausgesetzt ist, der ihm einen Geschicklichkeitsrettungswurf erlaubt, um nur halben Schaden zu erleiden, erleidet er stattdessen keinen Schaden, wenn der Rettungswurf gelingt, und nur halben Schaden, wenn er fehlschlägt. Er kann diese Eigenschaft nicht nutzen, wenn er sich im Zustand Handlungsunfähig befindet.\r\n- Magische Bindung. Addiere den Zaubergrad zu jedem Fähigkeits- oder Rettungswurf des Homunkulus.\r\nAKTIONEN\r\n- Machtschlag. Nahkampf- oder Fernkampfangriffswurf: Bonus entspricht deinem Zauberangriffsmodifikator, Reichweite 1,5 m oder 9 m. Treffer: 1W6 plus die Stufe des Machtschadens des Zaubers.\r\nREAKTIONEN\r\n- Magie kanalisieren. Auslöser: Du wirkst einen Zauber mit Berührungsreichweite, während sich der Homunkulus innerhalb von 36 m von dir befindet. Reaktion: Der Homunkulus wirkt den Zauber durch seine Berührung.",
+    "HöhereLevel": "Andere Werte im Stat-Block",
+    "Klasse": [
+      "Tüftler"
+    ],
+    "Konzentration": false,
+    "Ritual": true,
     "Verbal": true,
     "Gestik": true
   }
