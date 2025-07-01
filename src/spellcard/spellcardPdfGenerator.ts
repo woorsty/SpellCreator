@@ -1,11 +1,22 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { Spell } from "../spell/spellModel";
+import fs from "fs";
+import path from "path";
 
 export type Spellcard = {
   title: string;
+  index: number;
   body: string;
-  headerLines: string[];
+  stufe: number;
+  komponenten: { verbal?: boolean; gestik?: boolean; material?: string };
+  klasse: string[];
+  konzentration?: boolean;
+  ritual?: boolean;
+  schule: string;
+  zeitaufwand: string;
+  reichweite: string;
+  dauer: string;
 };
 
 const CARD_WIDTH = 63;
@@ -15,27 +26,10 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 
-const MAX_CHARACTERS_PER_CARD = 700; // abhängig von Schriftgröße etc.
+const MAX_CHARACTERS_PER_CARD = 800; // abhängig von Schriftgröße etc.
+const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1250; // für Karten ohne Header
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
-  const headerLines = [
-    `Stufe: ${spell.Stufe}`,
-    `Schule: ${spell.Schule}`,
-    `Zeitaufwand: ${spell.Zeitaufwand}`,
-    `Reichweite: ${spell.Reichweite}`,
-    `Dauer: ${spell.Dauer}`,
-    `Komponenten: ${[
-      spell.Verbal ? "V" : "",
-      spell.Gestik ? "G" : "",
-      spell.Material || "",
-    ]
-      .filter((x) => x)
-      .join(", ")}`,
-    `Klassen: ${spell.Klasse.join(", ")}`,
-    spell.Konzentration ? "Konzentration" : "",
-    spell.Ritual ? "Ritualzauber" : "",
-  ].filter(Boolean);
-
   const clean = (s: string) =>
     s
       .replace(/\r\n|\r/g, "\n")
@@ -56,14 +50,29 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   let part = 1;
 
   for (const sentence of paragraphs) {
+    const fullLength = currentBody.length + sentence.length;
     if (
-      (currentBody + sentence).length > MAX_CHARACTERS_PER_CARD &&
+      ((part === 1 && fullLength > MAX_CHARACTERS_PER_CARD) ||
+        fullLength > MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER) &&
       currentBody
     ) {
       cards.push({
         title: cards.length === 0 ? spell.Name : `${spell.Name} (Teil ${part})`,
+        index: part,
         body: currentBody.trim(),
-        headerLines,
+        stufe: spell.Stufe,
+        komponenten: {
+          verbal: spell.Verbal,
+          gestik: spell.Gestik,
+          material: spell.Material || "",
+        },
+        klasse: spell.Klasse,
+        konzentration: spell.Konzentration,
+        ritual: spell.Ritual,
+        schule: spell.Schule,
+        zeitaufwand: spell.Zeitaufwand,
+        reichweite: spell.Reichweite,
+        dauer: spell.Dauer,
       });
       part++;
       currentBody = "";
@@ -74,8 +83,21 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   if (currentBody.trim()) {
     cards.push({
       title: cards.length === 0 ? spell.Name : `${spell.Name} (Teil ${part})`,
+      index: part,
       body: currentBody.trim(),
-      headerLines,
+      stufe: spell.Stufe,
+      komponenten: {
+        verbal: spell.Verbal,
+        gestik: spell.Gestik,
+        material: spell.Material || "",
+      },
+      klasse: spell.Klasse,
+      konzentration: spell.Konzentration,
+      ritual: spell.Ritual,
+      schule: spell.Schule,
+      zeitaufwand: spell.Zeitaufwand,
+      reichweite: spell.Reichweite,
+      dauer: spell.Dauer,
     });
   }
 
@@ -125,17 +147,146 @@ function drawCard(
   doc.text(card.title, x + width / 2, cursorY, { align: "center" });
   cursorY += 4;
 
+  doc.setFontSize(8);
+  doc.setFont("helvetica", "normal");
+  doc.text(
+    (card.stufe == 0 ? "Zaubertrick der " : `Stufe ${card.stufe} `) +
+      card.schule,
+    x + width / 2,
+    cursorY,
+    { align: "center" }
+  );
+
   doc.setFontSize(6);
   doc.setFont("helvetica", "normal");
-  for (const line of card.headerLines) {
-    doc.text(line, x + 2, cursorY);
+  const classesText = card.klasse.join(", ");
+  const classLines = doc.splitTextToSize(classesText, width - 4);
+  for (const line of classLines) {
     cursorY += 3;
+    doc.text(line, x + width / 2, cursorY, { align: "center" });
   }
 
-  cursorY += 1;
+  doc.setFontSize(8);
+  doc.setFont("helvetica", "normal");
+  x += 2;
+  if (card.index == 1) {
+    x -= 2;
+    cursorY += 3;
+    let subline3 = "";
 
+    if (card.ritual) {
+      subline3 += "Ritual";
+    }
+    if (card.konzentration) {
+      if (subline3.length > 0) {
+        subline3 += ", ";
+      }
+      subline3 += "Konzentration";
+    }
+
+    if (subline3.length === 0) {
+      cursorY += 3;
+      doc.text(subline3, x + width / 2, cursorY, { align: "center" });
+    }
+
+    x += 2;
+    doc.setFontSize(6);
+
+    cursorY += 3;
+    const rangeIcon = fs.readFileSync(
+      path.resolve(__dirname, "../assets/icons/25px-Range_icon.png")
+    );
+    doc.addImage(rangeIcon, "PNG", x, cursorY - 3, 4, 4);
+    doc.text(card.reichweite, x + 4, cursorY);
+
+    cursorY += 3;
+    doc.text("Dauer: " + card.dauer, x, cursorY);
+    cursorY += 3;
+
+    doc.text("Komponenten:", x, cursorY);
+
+    let componentsText = card.komponenten.verbal ? "Verbal" : "";
+
+    if (componentsText.length > 0) {
+      componentsText += ", ";
+    }
+    componentsText += card.komponenten.gestik ? "Gestik" : "";
+
+    if (componentsText.length > 0) {
+      componentsText += ", ";
+    }
+    componentsText += card.komponenten.material
+      ? card.komponenten.material
+      : "";
+
+    const componentLines = doc.splitTextToSize(componentsText, width - 4);
+    for (const line of componentLines) {
+      cursorY += 3;
+      doc.text(line, x, cursorY);
+    }
+  }
+  cursorY += 5;
+
+  doc.setFontSize(7);
   const textLines = doc.splitTextToSize(card.body, width - 4);
-  doc.setFontSize(6);
   doc.setFont("helvetica", "italic");
-  doc.text(textLines, x + 2, cursorY);
+  doc.text(textLines, x, cursorY);
+
+  printPropertyLine(doc, card, x, y + height - 2, width);
+}
+
+function printPropertyLine(
+  doc: jsPDF,
+  card: Spellcard,
+  x: number,
+  y: number,
+  width: number
+) {
+  let coursorX = x;
+
+  if (card.zeitaufwand === "Aktion") {
+    addHorizontalIcon(doc, "../assets/icons/34px-Action_Icon.png", coursorX, y);
+    addHorizontalText(doc, "Aktion", coursorX + 4, y);
+  } else if (card.zeitaufwand === "Bonusaktion") {
+    addHorizontalIcon(
+      doc,
+      "../assets/icons/34px-Bonus_Action_Icon.png",
+      coursorX,
+      y
+    );
+    addHorizontalText(doc, "Bonusaktion", coursorX + 4, y);
+  } else {
+    addHorizontalText(doc, card.zeitaufwand, coursorX + 4, y);
+  }
+  coursorX += card.zeitaufwand.length * 1 + 2;
+
+  if (card.ritual) {
+    addHorizontalIcon(
+      doc,
+      "../assets/icons/Ritual_Spell_Icon.png",
+      x + width / 2 - 10,
+      y
+    );
+    addHorizontalText(doc, "Ritual", x + width / 2 - 6, y);
+  }
+
+  if (card.konzentration) {
+    addHorizontalIcon(
+      doc,
+      "../assets/icons/25px-Concentration_Icon.png",
+      x + width - 24,
+      y
+    );
+    addHorizontalText(doc, "Konzentration", x + width - 20, y);
+  }
+}
+
+function addHorizontalIcon(doc: jsPDF, iconPath: string, x: number, y: number) {
+  const icon = fs.readFileSync(path.resolve(__dirname, iconPath));
+  doc.addImage(icon, "PNG", x, y - 3, 4, 4);
+  x += 4;
+}
+
+function addHorizontalText(doc: jsPDF, text: string, x: number, y: number) {
+  doc.text(text, x, y);
 }
