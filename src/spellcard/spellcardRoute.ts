@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 const router = express.Router();
 import fs from "fs";
-import { generateCardPDF } from "./spellcardPdfHandler";
+import { generateCardPDF } from "./spellcardPdfGenerator";
 
 router.get("/", (req, res) => res.render("spellcardFilter"));
 router.get("/cards", (req: Request, res: Response) => {
@@ -21,7 +21,11 @@ router.get("/cards", (req: Request, res: Response) => {
     }
   );
 
-  generateCardPDF(filtered, res);
+  const jsPdf = generateCardPDF(filtered);
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
+  const buffer = jsPdf.output("arraybuffer");
+  res.send(Buffer.from(buffer));
 });
 
 export default router;

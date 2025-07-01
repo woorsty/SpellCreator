@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 const fs_1 = __importDefault(require("fs"));
-const spellcardPdfHandler_1 = require("./spellcardPdfHandler");
+const spellcardPdfGenerator_1 = require("./spellcardPdfGenerator");
 router.get("/", (req, res) => res.render("spellcardFilter"));
 router.get("/cards", (req, res) => {
     const { klasse, stufeVon, stufeBis } = req.query;
@@ -19,6 +19,10 @@ router.get("/cards", (req, res) => {
         const matchKlasse = !klasse || spell.Klasse.includes(klasse);
         return matchStufe && matchKlasse;
     });
-    (0, spellcardPdfHandler_1.generateCardPDF)(filtered, res);
+    const jsPdf = (0, spellcardPdfGenerator_1.generateCardPDF)(filtered);
+    res.setHeader("Content-Type", "application/pdf");
+    res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
+    const buffer = jsPdf.output("arraybuffer");
+    res.send(Buffer.from(buffer));
 });
 exports.default = router;
