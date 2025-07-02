@@ -66,7 +66,7 @@
     "Reichweite": "Berührung",
     "Dauer": "7 Tage",
     "Material": "",
-    "Text": "Deine Berührung verursacht eine magische Ansteckung. Das Ziel muss einen Konstitutionsrettungswurf bestehen, oder es erleidet 11W8 nekrotischen Schaden und ist vergiftet. Wähle außerdem ein Attribut aus, wenn du den Zauber wirkst. Das vergiftete Ziel ist bei Rettungswürfen mit dem ausgewählten Attribut im Nachteil. Das Ziel muss den Rettungswurf am Ende jedes seiner Züge wiederholen, bis es insgesamt drei Erfolge oder drei Misserfolge hatte. Bei drei Erfolgen endet der Zauber bei dem Ziel. Bei drei Misserfolgen wirkt der Zauber sieben Tage lang auf das Ziel. Wann immer das vergiftete Ziel einen Effekt erhält, der den Zustand Vergiftet beenden würde, muss es einen Konstitutionsrettungswurf besehe, oder der Zustand Vergiftet endet nicht.",
+    "Text": "Deine Berührung verursacht eine magische Ansteckung. Das Ziel muss einen Konstitutionsrettungswurf bestehen, oder es erleidet 11W8 nekrotischen Schaden und ist vergiftet. Wähle außerdem ein Attribut aus, wenn du den Zauber wirkst. Das vergiftete Ziel ist bei Rettungswürfen mit dem ausgewählten Attribut im Nachteil. Das Ziel muss den Rettungswurf am Ende jedes seiner Züge wiederholen, bis es insgesamt drei Erfolge oder drei Misserfolge hatte. Bei drei Erfolgen endet der Zauber bei dem Ziel. Bei drei Misserfolgen wirkt der Zauber sieben Tage lang auf das Ziel. Wann immer das vergiftete Ziel einen Effekt erhält, der den Zustand Vergiftet beenden würde, muss es einen Konstitutionsrettungswurf besehen, oder der Zustand Vergiftet endet nicht.",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
@@ -457,14 +457,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Ausspähung",
     "Schule": "Erkenntnis",
-    "Stufe": "5",
     "Zeitaufwand": "10 Minuten",
     "Reichweite": "Selbst",
-    "Material": "Ein Fokus im Wert von mindestens 1.000 GM, beispielsweise eine Kristallkugel, ein Spiegel oder ein mit Wasser gefülltes Becken",
     "Dauer": "Bis zu 10 Minuten",
-    "Text": "Du kannst eine Kreatur deiner Wahl, die sich auf derselben Existenzebene wie du befindet, hören und sehen. Das Ziel führt einen Weisheitsrettungswurf aus, der dadurch modifiziert wird, wie gut du das Ziel kennst und ob du einen Gegenstand hast, der dich mit ihm verbindet (siehe Tabellen unten). Das Ziel weiß nicht, wogegen es den Rettungswurf ausführt. Es fühlt sich nur vage unwohl. \r\n\r\nDein Wissen über das Ziel ist...\tRettungswurf-Modifikator \r\naus zweiter Hand (du hast von dem Ziel gehört)\t+5 \r\naus erster Hand (du bist dem Ziel begegnet)\t-0 \r\numfassend (du kennst das Ziel gut)\t-5 \r\n\r\nDu hast etwas vom Ziel, und zwar...\tRettungswurf-Modifikator \r\nein Abbild oder Porträt\t-2\r\nein Kleidungsstück oder anderen Besitz\t-4 \r\nein Körperteil, Nagelstück oder eine Haarlocke\t-10 \r\n\r\nBei einem erfolgreichen Rettungswurf ist das Ziel nicht betroffen, und du kannst diesen Zauber erst nach 24 Stunden erneut auf das Ziel wirken. \r\nScheitert der Wurf, so erschafft der Zauber einen unsichtbaren, immateriellen Sensor im Abstand von bis zu drei Metern vom Ziel. Du kannst durch den Sensor hören und sehen, als ob du dich in seinem Bereich befändest. Der Sensor bewegt sich mit dem Ziel und bleibt für die \r\nWirkungsdauer im Abstand von bis zu drei Metern von ihm. Wer den Sensor sehen kann, sieht ihn als leuchtende, etwa faustgroße Kugel.\r\nAnstelle einer Kreatur kannst du auf einen Ort zielen, den du schon einmal gesehen hast. In diesem Fall erscheint der Sensor an diesem Ort und bewegt sich nicht.",
+    "Material": "Ein Fokus im Wert von mindestens 1.000 GM, beispielsweise eine Kristallkugel, ein Spiegel oder ein mit Wasser gefülltes Becken",
+    "Text": "Du kannst eine Kreatur deiner Wahl, die sich auf derselben Existenzebene wie du befindet, hören und sehen. Das Ziel führt einen Weisheitsrettungswurf aus, der dadurch modifiziert wird, wie gut du das Ziel kennst und ob du einen Gegenstand hast, der dich mit ihm verbindet (siehe Tabellen unten). Das Ziel weiß nicht, wogegen es den Rettungswurf ausführt. Es fühlt sich nur vage unwohl. \r\n\r\nDein Wissen über das Ziel ist: Rettungswurf-Modifikator \r\naus zweiter Hand (du hast von dem Ziel gehört): +5 \r\naus erster Hand (du bist dem Ziel begegnet): -0 \r\numfassend (du kennst das Ziel gut): -5 \r\n\r\nDu hast etwas vom Ziel, und zwar: Rettungswurf-Modifikator \r\nein Abbild oder Porträt: -2\r\nein Kleidungsstück oder anderen Besitz: -4 \r\nein Körperteil, Nagelstück oder eine Haarlocke: -10 \r\n\r\nBei einem erfolgreichen Rettungswurf ist das Ziel nicht betroffen, und du kannst diesen Zauber erst nach 24 Stunden erneut auf das Ziel wirken. \r\nScheitert der Wurf, so erschafft der Zauber einen unsichtbaren, immateriellen Sensor im Abstand von bis zu drei Metern vom Ziel. Du kannst durch den Sensor hören und sehen, als ob du dich in seinem Bereich befändest. Der Sensor bewegt sich mit dem Ziel und bleibt für die Wirkungsdauer im Abstand von bis zu drei Metern von ihm. Wer den Sensor sehen kann, sieht ihn als leuchtende, etwa faustgroße Kugel.\r\nAnstelle einer Kreatur kannst du auf einen Ort zielen, den du schon einmal gesehen hast. In diesem Fall erscheint der Sensor an diesem Ort und bewegt sich nicht.",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
@@ -3014,14 +3014,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "8",
     "Name": "Klon",
     "Schule": "Nekromantie",
-    "Stufe": "8",
     "Zeitaufwand": "1 Stunde",
     "Reichweite": "Berührung",
-    "Material": "Ein Diamant im Wert von mindestens 1.000 GM, den der Zauber verbraucht, und ein verschließbares Gefäß im Wert von mindestens 2.000 GM, das groß genug ist, um die zu klonende Kreatur aufzunehmen",
     "Dauer": "Unmittelbar",
-    "Text": "Du berührst eine Kreatur oder mindestens 16 Kubikzenti meter von ihrem Fleisch. Im Gefäli, das du für den Zauber verwendet hast, wächst ein regloses Duplikat der Kreatur Es ist nach 120 Tagen ausgewachsen. Du bestiumst. ob es so alt wie die Kreatur oder jünger ist. Der Kion bleibt reglos und beliebig lange erhalten, sofern das Gefäßi nicht geöffnet wird \r\nStirbt die ursprüngliche Kreatur, wenn der Klon ausgewachsen ist, so wird ihre Seele auf den Klon übertragen, sofern sie frei und bereit willig ist. Der Klon ist körperlich mit dem Original identisch und besitzt dessen Persönlichkeit, seine Erinnerungen und Fähigkeiten, jedoch nicht seine Ausrüstung Überreste der ursprünglichen Kreatur werden gegebenenfalls reglos und können nicht wiederbelebt werden, da sich die Seele der Kreatur anderswo befindet. ",
+    "Material": "Ein Diamant im Wert von mindestens 1.000 GM, den der Zauber verbraucht, und ein verschließbares Gefäß im Wert von mindestens 2.000 GM, das groß genug ist, um die zu klonende Kreatur aufzunehmen",
+    "Text": "Du berührst eine Kreatur oder mindestens 16 Kubikzentimeter von ihrem Fleisch. Im Gefäß, das du für den Zauber verwendet hast, wächst ein regloses Duplikat der Kreatur Es ist nach 120 Tagen ausgewachsen. Du bestimmst, ob es so alt wie die Kreatur oder jünger ist. Der Klon bleibt reglos und beliebig lange erhalten, sofern das Gefäß nicht geöffnet wird, Stirbt die ursprüngliche Kreatur, wenn der Klon ausgewachsen ist, so wird ihre Seele auf den Klon übertragen, sofern sie frei und bereit willig ist. Der Klon ist körperlich mit dem Original identisch und besitzt dessen Persönlichkeit, seine Erinnerungen und Fähigkeiten, jedoch nicht seine Ausrüstung Überreste der ursprünglichen Kreatur werden gegebenenfalls reglos und können nicht wiederbelebt werden, da sich die Seele der Kreatur anderswo befindet. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier"
@@ -7558,14 +7558,14 @@
     "Gestik": false
   },
   {
+    "Stufe": "6",
     "Name": "Zutritt verwehren",
     "Schule": "Bann",
-    "Stufe": "6",
     "Zeitaufwand": "10 Minuten",
     "Reichweite": "Berührung",
-    "Material": "Rubinstaub im Wert von mindestens 1.000 GM",
     "Dauer": "1 Tag",
-    "Text": "Du erschaffst einen Schutz gegen magische Reisen, der einen Bereich von bis zu 3.700 Quadratmetern mit einer Höhe von bis zu neun Metern über dem Boden abdeckt. Für die Wirkungsdauer können sich Kreaturen weder in den Bereich teleportieren noch Portale wie durch den Zauber Tor verwenden, um in den Bereich zu gelangen. Der Zauber schützt den Bereich gegen Ebenenreisen und verhindert damit, dass Kreaturen aus der Astralebene. der Ätherebene, der Feenwildnis, dem Schattensaum oder mit dem Zauber Ebenenwechsel in den Bereich gelangen. Außerdem fügt der Zauber Kreaturentypen, die do beim Wirken bestimmst, Schaden zu. Wähle mindestens einen der folgenden Kreaturentypen aus. Aberrationen. celestische Wesen, Feenwesen, Unholde und Untote Wenn eine Kreatur eines ausgewählten Typs den Bereich des Zaubers in einem Zug erstmals betritt oder ihren Zug darin beendet, erleidet sie 5W10 gleißenden oder nekrotischen Schaden (nach deiner Wahl beim Wirken des Zaubers). \r\nDu kannst ein Kennwort festlegen, wenn du den Zauber wirkst. Spricht eine Kreatur das Kennwort aus, wenn sie den Bereich betritt, so erleidet sie durch den Zauber keinen Schaden. \r\nDer Bereich des Zaubers kann sich nicht mit dem Bereich eines anderen Zaubers Zutritt verwehren. überschneiden. Wenn du Zutritt verwehren 30 Tage lang am selben Ort wirkst, bleibt der Effekt bestehen, bis er gebannt wird. Die Materialkomponenten werden beim letzten Wirken verbraucht. ",
+    "Material": "Rubinstaub im Wert von mindestens 1.000 GM",
+    "Text": "Du erschaffst einen Schutz gegen magische Reisen, der einen Bereich von bis zu 3.700 Quadratmetern mit einer Höhe von bis zu neun Metern über dem Boden abdeckt. Für die Wirkungsdauer können sich Kreaturen weder in den Bereich teleportieren noch Portale wie durch den Zauber Tor verwenden, um in den Bereich zu gelangen. Der Zauber schützt den Bereich gegen Ebenenreisen und verhindert damit, dass Kreaturen aus der Astralebene. der Ätherebene, der Feenwildnis, dem Schattensaum oder mit dem Zauber Ebenenwechsel in den Bereich gelangen. Außerdem fügt der Zauber Kreaturentypen, die do beim Wirken bestimmst, Schaden zu. \r\nWähle mindestens einen der folgenden Kreaturentypen aus. Aberrationen, celestische Wesen, Feenwesen, Unholde und Untote. Wenn eine Kreatur eines ausgewählten Typs den Bereich des Zaubers in einem Zug erstmals betritt oder ihren Zug darin beendet, erleidet sie 5W10 gleißenden oder nekrotischen Schaden. (nach deiner Wahl beim Wirken des Zaubers). \r\nDu kannst ein Kennwort festlegen, wenn du den Zauber wirkst. Spricht eine Kreatur das Kennwort aus, wenn sie den Bereich betritt, so erleidet sie durch den Zauber keinen Schaden. \r\nDer Bereich des Zaubers kann sich nicht mit dem Bereich eines anderen Zaubers Zutritt verwehren. überschneiden. Wenn du Zutritt verwehren 30 Tage lang am selben Ort wirkst, bleibt der Effekt bestehen, bis er gebannt wird. Die Materialkomponenten werden beim letzten Wirken verbraucht. ",
     "HöhereLevel": "",
     "Klasse": [
       "Kleriker"
@@ -7680,7 +7680,7 @@
     "Reichweite": "36 Meter",
     "Dauer": "Bis zu 2 Stunde",
     "Material": "Eine Miniaturschaufel",
-    "Text": "Wähle einen viereckigen Bereich des Geländes in Reichweite mit einer Seitenlänge von höchstens zwölf Metern aus. Für die Wirkungsdauer kannst du Erde, Lehm oder Sand in dem Bereich beliebig umformen. Du kannst den Bereich anheben oder absenken, einen Graben erschaffen oder zuschütten, eine Mauer errichten oder niederreißen oder eine Säule errichten. Das Ausmaß dieser Änderungen darf die Hälfte der größten Abmessung des Bereichs nicht überschreiten. Beeinflusst du beispielsweise einen Bereich mit einer Seitenlänge von zwölf Metern, so kannst du eine bis zu sechs Meter hohe Säule erschaffen, den Bereich um bis zu sechs Meter anheben oder absenken, einen Graben mit bis zu sechs Metern Tiefe ausheben und so weiter. Es dauert zehn Minuten, diese Änderungen zu bewirken. Da die Veränderung des Geländes langsam erfolgt, können Kreaturen im Bereich normalerweise nicht durch die Bodenbewegung gefangen oder verletzt werden. Nach jeweils zehn Minuten Konzentration auf der Zauber kannst du einen neuen Bereich in Reichweite auswählen und beeinflussen Dieser Zauber kann weder Naturgestein noch Steingebäude beeinflussen. Felsen und Gebäude verschieben sich, um sich dem neuen Gelände anzupassen. Wenn deine Veränderung des Geländes ein Gebäude instabil macht, so stürzt es möglicherweise ein. Dieser Zauber hat keinen direkten Einfluss auf Pflanzenwachstum. Die bewegte Erde nimmt Pflanzen mit sich ",
+    "Text": "Wähle einen viereckigen Bereich des Geländes in Reichweite mit einer Seitenlänge von höchstens zwölf Metern aus. Für die Wirkungsdauer kannst du Erde, Lehm oder Sand in dem Bereich beliebig umformen. Du kannst den Bereich anheben oder absenken, einen Graben erschaffen oder zuschütten, eine Mauer errichten oder niederreißen oder eine Säule errichten. Das Ausmaß dieser Änderungen darf die Hälfte der größten Abmessung des Bereichs nicht überschreiten. Beeinflusst du beispielsweise einen Bereich mit einer Seitenlänge von zwölf Metern, so kannst du eine bis zu sechs Meter hohe Säule erschaffen, den Bereich um bis zu sechs Meter anheben oder absenken, einen Graben mit bis zu sechs Metern Tiefe ausheben und so weiter.\r\nEs dauert zehn Minuten, diese Änderungen zu bewirken. Da die Veränderung des Geländes langsam erfolgt, können Kreaturen im Bereich normalerweise nicht durch die Bodenbewegung gefangen oder verletzt werden. Nach jeweils zehn Minuten Konzentration auf der Zauber kannst du einen neuen Bereich in Reichweite auswählen und beeinflussen Dieser Zauber kann weder Naturgestein noch Steingebäude beeinflussen. Felsen und Gebäude verschieben sich, um sich dem neuen Gelände anzupassen. Wenn deine Veränderung des Geländes ein Gebäude instabil macht, so stürzt es möglicherweise ein. Dieser Zauber hat keinen direkten Einfluss auf Pflanzenwachstum. Die bewegte Erde nimmt Pflanzen mit sich ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",

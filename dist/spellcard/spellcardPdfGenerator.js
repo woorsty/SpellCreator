@@ -21,17 +21,17 @@ function splitSpellIntoCards(spell) {
         (spell.HöhereLevel
             ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
             : "");
-    const paragraphs = fullText.split(".");
+    const lines = fullText.split(/(?<=\n)/);
     const cards = [];
-    addCardLines(cards, paragraphs, spell);
+    addCardLines(cards, lines, spell);
     return cards;
 }
 function addCardLines(cards, paragraphs, spell) {
     let currentBody = "";
     let part = 1;
-    for (const sentence of paragraphs) {
-        const newBody = currentBody + sentence + ".";
-        const lineCount = estimateRenderedLineCount(newBody);
+    for (const line of paragraphs) {
+        const newBody = currentBody + line;
+        const lineCount = estimateRenderedLineCount(newBody); // wie vorher
         if (((part === 1 && lineCount > MAX_LINES_PER_CARD) ||
             lineCount > MAX_LINES_PER_CARD_WITHOUT_HEADER) &&
             currentBody.trim()) {
@@ -56,9 +56,7 @@ function addCardLines(cards, paragraphs, spell) {
             part++;
             currentBody = "";
         }
-        if (sentence.trim() !== "") {
-            currentBody += sentence.trim() + ".";
-        }
+        currentBody += line;
     }
     if (currentBody.trim()) {
         cards.push({

@@ -36,12 +36,11 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
     (spell.HöhereLevel
       ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
       : "");
-
-  const paragraphs = fullText.split(".");
+  const lines = fullText.split(/(?<=\n)/);
 
   const cards: Spellcard[] = [];
 
-  addCardLines(cards, paragraphs, spell);
+  addCardLines(cards, lines, spell);
 
   return cards;
 }
@@ -53,9 +52,9 @@ function addCardLines(
 ): void {
   let currentBody = "";
   let part = 1;
-  for (const sentence of paragraphs) {
-    const newBody = currentBody + sentence + ".";
-    const lineCount = estimateRenderedLineCount(newBody);
+  for (const line of paragraphs) {
+    const newBody = currentBody + line;
+    const lineCount = estimateRenderedLineCount(newBody); // wie vorher
 
     if (
       ((part === 1 && lineCount > MAX_LINES_PER_CARD) ||
@@ -84,9 +83,7 @@ function addCardLines(
       currentBody = "";
     }
 
-    if (sentence.trim() !== "") {
-      currentBody += sentence.trim() + ".";
-    }
+    currentBody += line;
   }
 
   if (currentBody.trim()) {
