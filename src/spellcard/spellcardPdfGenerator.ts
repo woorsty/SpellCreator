@@ -1,9 +1,7 @@
 import { jsPDF } from "jspdf";
-import autoTable from "jspdf-autotable";
 import { Spell } from "../spell/spellModel";
 import fs from "fs";
 import path from "path";
-import { count } from "console";
 
 export type Spellcard = {
   title: string;
