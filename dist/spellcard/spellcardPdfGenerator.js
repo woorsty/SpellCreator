@@ -149,10 +149,10 @@ function drawCard(doc, card, x, y, width, height) {
     if (card.index == 1) {
         doc.setFontSize(6);
         cursorY += 4;
-        const rangeIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Range_icon.png"));
+        const rangeIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Range_Icon.png"));
         doc.addImage(rangeIcon, "PNG", x + 10, cursorY - 3, 4, 4);
         doc.text(card.reichweite, x + 14, cursorY);
-        const durationIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Duration_icon.png"));
+        const durationIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Duration_Icon.png"));
         doc.addImage(durationIcon, "PNG", x + width / 2 - 2, cursorY - 3, 4, 4);
         doc.text(card.dauer, x + width / 2 + 2, cursorY);
         cursorY += 5;
