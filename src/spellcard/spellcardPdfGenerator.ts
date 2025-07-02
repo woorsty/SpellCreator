@@ -27,8 +27,8 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 
-const MAX_CHARACTERS_PER_CARD = 800; // abhängig von Schriftgröße etc.
-const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1000; // für Karten ohne Header
+const MAX_CHARACTERS_PER_CARD = 750;
+const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 900;
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   const clean = (s: string) => s.replace(/\r\n|\r/g, "\n").trim();
@@ -54,7 +54,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       currentBody
     ) {
       cards.push({
-        title: cards.length === 0 ? spell.Name : `${spell.Name} (Teil ${part})`,
+        title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
         index: part,
         body: currentBody.trim(),
         stufe: spell.Stufe,
@@ -79,7 +79,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
 
   if (currentBody.trim()) {
     cards.push({
-      title: cards.length === 0 ? spell.Name : `${spell.Name} (Teil ${part})`,
+      title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
       index: part,
       body: currentBody.trim(),
       stufe: spell.Stufe,
