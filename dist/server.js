@@ -18,7 +18,9 @@ app.set("views", path_1.default.join(__dirname, "../views")); // Pfad zum 'views
 app.get("/", (req, res) => {
     res.send('<a href="/spell">Zauber</a>' +
         "<br/>" +
-        '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>');
+        '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>' +
+        "<br/>" +
+        '<a href="/spellcard/">Zauberkarten</a>');
 });
 app.use(express_1.default.json());
 app.use("/spell", spellRoute_1.default);

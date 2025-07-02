@@ -18,7 +18,9 @@ app.get("/", (req: Request, res: Response) => {
   res.send(
     '<a href="/spell">Zauber</a>' +
       "<br/>" +
-      '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>'
+      '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>' +
+      "<br/>" +
+      '<a href="/spellcard/">Zauberkarten</a>'
   );
 });
 
