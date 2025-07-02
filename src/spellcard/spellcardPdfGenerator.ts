@@ -26,24 +26,20 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 
-const MAX_CHARACTERS_PER_CARD = 800; // abhängig von Schriftgröße etc.
-const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1250; // für Karten ohne Header
+const MAX_CHARACTERS_PER_CARD = 900; // abhängig von Schriftgröße etc.
+const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1350; // für Karten ohne Header
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
-  const clean = (s: string) =>
-    s
-      .replace(/\r\n|\r/g, "\n")
-      .replace(/[^.replace(/[^\x00-\x7FäöüÄÖÜßéèêáàâîïçñëÉÊÀÂÇÑ]/g, "")
-      .trim();
+  const clean = (s: string) => s.replace(/\r\n|\r/g, "\n").trim();
 
-  const fullText = [
-    clean(spell.Text),
-    spell.HöhereLevel ? `Auf höheren Stufen: ${clean(spell.HöhereLevel)}` : "",
-  ]
-    .filter(Boolean)
-    .join("\n\n");
+  const fullText =
+    spell.Text +
+    "\n\n" +
+    (spell.HöhereLevel
+      ? "Auf höheren Stufen: " + (spell.HöhereLevel || "")
+      : "");
 
-  const paragraphs = fullText.replace(/\r?\n/g, " ").split(/(?<=\.|\!|\?)\s+/);
+  const paragraphs = fullText.split("\n");
 
   const cards: Spellcard[] = [];
   let currentBody = "";
@@ -77,7 +73,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       part++;
       currentBody = "";
     }
-    currentBody += sentence + " ";
+    currentBody += sentence + "\n";
   }
 
   if (currentBody.trim()) {
@@ -172,22 +168,6 @@ function drawCard(
   if (card.index == 1) {
     x -= 2;
     cursorY += 3;
-    let subline3 = "";
-
-    if (card.ritual) {
-      subline3 += "Ritual";
-    }
-    if (card.konzentration) {
-      if (subline3.length > 0) {
-        subline3 += ", ";
-      }
-      subline3 += "Konzentration";
-    }
-
-    if (subline3.length === 0) {
-      cursorY += 3;
-      doc.text(subline3, x + width / 2, cursorY, { align: "center" });
-    }
 
     x += 2;
     doc.setFontSize(6);
@@ -196,33 +176,36 @@ function drawCard(
     const rangeIcon = fs.readFileSync(
       path.resolve(__dirname, "../assets/icons/25px-Range_icon.png")
     );
-    doc.addImage(rangeIcon, "PNG", x, cursorY - 3, 4, 4);
-    doc.text(card.reichweite, x + 4, cursorY);
+    doc.addImage(rangeIcon, "PNG", x + 8, cursorY - 3, 4, 4);
+    doc.text(card.reichweite, x + 12, cursorY);
 
+    const durationIcon = fs.readFileSync(
+      path.resolve(__dirname, "../assets/icons/25px-Duration_icon.png")
+    );
+    doc.addImage(durationIcon, "PNG", x + width / 2 - 4, cursorY - 3, 4, 4);
+    doc.text(card.dauer, x + width / 2, cursorY);
     cursorY += 3;
-    doc.text("Dauer: " + card.dauer, x, cursorY);
-    cursorY += 3;
 
-    doc.text("Komponenten:", x, cursorY);
-
-    let componentsText = card.komponenten.verbal ? "Verbal" : "";
-
-    if (componentsText.length > 0) {
-      componentsText += ", ";
+    let componentsText = [];
+    if (card.komponenten.verbal) {
+      componentsText.push("Verbal");
     }
-    componentsText += card.komponenten.gestik ? "Gestik" : "";
-
-    if (componentsText.length > 0) {
-      componentsText += ", ";
+    if (card.komponenten.gestik) {
+      componentsText.push("Gestik");
     }
-    componentsText += card.komponenten.material
-      ? card.komponenten.material
-      : "";
+    if (card.komponenten.material) {
+      componentsText.push(card.komponenten.material);
+    }
 
-    const componentLines = doc.splitTextToSize(componentsText, width - 4);
-    for (const line of componentLines) {
-      cursorY += 3;
-      doc.text(line, x, cursorY);
+    if (componentsText.length !== 0) {
+      const componentLines = doc.splitTextToSize(
+        "Komponenten: " + componentsText.join(", "),
+        width - 4
+      );
+      for (const line of componentLines) {
+        cursorY += 3;
+        doc.text(line, x, cursorY);
+      }
     }
   }
   cursorY += 5;
@@ -264,7 +247,7 @@ function printPropertyLine(
     addHorizontalIcon(
       doc,
       "../assets/icons/Ritual_Spell_Icon.png",
-      x + width / 2 - 10,
+      x + width / 2 - 11,
       y
     );
     addHorizontalText(doc, "Ritual", x + width / 2 - 6, y);
@@ -274,7 +257,7 @@ function printPropertyLine(
     addHorizontalIcon(
       doc,
       "../assets/icons/25px-Concentration_Icon.png",
-      x + width - 24,
+      x + width - 25,
       y
     );
     addHorizontalText(doc, "Konzentration", x + width - 20, y);
