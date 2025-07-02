@@ -26,8 +26,8 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 
-const MAX_CHARACTERS_PER_CARD = 900; // abhängig von Schriftgröße etc.
-const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1350; // für Karten ohne Header
+const MAX_CHARACTERS_PER_CARD = 800; // abhängig von Schriftgröße etc.
+const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 900; // für Karten ohne Header
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   const clean = (s: string) => s.replace(/\r\n|\r/g, "\n").trim();
@@ -39,7 +39,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       ? "Auf höheren Stufen: " + (spell.HöhereLevel || "")
       : "");
 
-  const paragraphs = fullText.split("\n");
+  const paragraphs = fullText.split(".");
 
   const cards: Spellcard[] = [];
   let currentBody = "";
@@ -73,7 +73,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       part++;
       currentBody = "";
     }
-    currentBody += sentence + "\n";
+    currentBody += sentence + ".";
   }
 
   if (currentBody.trim()) {
@@ -140,8 +140,12 @@ function drawCard(
   let cursorY = y + 5;
   doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
-  doc.text(card.title, x + width / 2, cursorY, { align: "center" });
-  cursorY += 4;
+  const titleText = card.title;
+  const tileLines = doc.splitTextToSize(titleText, width - 4);
+  for (const line of tileLines) {
+    doc.text(line, x + width / 2, cursorY, { align: "center" });
+    cursorY += 4;
+  }
 
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
@@ -188,10 +192,10 @@ function drawCard(
 
     let componentsText = [];
     if (card.komponenten.verbal) {
-      componentsText.push("Verbal");
+      componentsText.push("V");
     }
     if (card.komponenten.gestik) {
-      componentsText.push("Gestik");
+      componentsText.push("G");
     }
     if (card.komponenten.material) {
       componentsText.push(card.komponenten.material);
@@ -238,6 +242,14 @@ function printPropertyLine(
       y
     );
     addHorizontalText(doc, "Bonusaktion", coursorX + 4, y);
+  } else if (card.zeitaufwand === "Reaktion") {
+    addHorizontalIcon(
+      doc,
+      "../assets/icons/23px-Reaction_Icon.png",
+      coursorX,
+      y
+    );
+    addHorizontalText(doc, "Reaktion", coursorX + 4, y);
   } else {
     addHorizontalText(doc, card.zeitaufwand, coursorX + 4, y);
   }

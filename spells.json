@@ -519,7 +519,7 @@
   },
   {
     "Stufe": "2",
-    "Name": "Beistand6",
+    "Name": "Beistand",
     "Schule": "Bann",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
@@ -605,14 +605,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Blendendes Niederstrecken",
     "Schule": "Hervorrufung",
-    "Stufe": "3",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Minute",
-    "Text": "Das Ziel des Schlags erleidet zusätzlich 3W8 gleißenden Schaden und ist blind, bis der Zauber endet. Das blinde Ziel Führt am Ende jedes seiner Züge einen Konstitutionsrettungswurf aus. Bei einem Erfolg endet der Effekt. ",
+    "Material": "",
+    "Text": "Das Ziel des Angriffs erleidet zusätzlich 3W8 gleißenden Schaden und ist blind, bis der Zauber endet. Das blinde Ziel Führt am Ende jedes seiner Züge einen Konstitutionsrettungswurf aus. Bei einem Erfolg endet der Effekt. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 3. wird der zusätzliche Schaden um 1W8 erhöht ",
     "Klasse": [
       "Paladin"
@@ -681,13 +681,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Blitzpfeil",
     "Schule": "Verwandlung",
-    "Stufe": "3",
-    "Zeitaufwand": "Bonusaktion, di due sofort ausführst, wenn du eine Kreatur mit einer Fernkampfwaffe getroffen oder verfehlt hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Wenn dein Angriff das Ziel trifft oder verfehlt, verwandeln sich die Waffe oder die Geschosse, die verwendet wurden. in einen Blitz. Anstatt Schaden oder andere Effekte durch den Angriff erleidet das Ziel bei einem Treffer 4W8 Blitzschaden, bei einem Fehlschlag die Hälfte. Jede Kreatur im Abstand von bis zu drei Metern vom Ziel führt dann einen Geschicklichkeitsrettungswurf aus. Scheitert der Wurf. \r\n50 erleidet sie 2W8 Blitzschaden, anderenfalls die Hälfte. Danach nehmen Waffe oder Geschosse wieder ihre normale Form an. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 3. wird der Schaden beider Effekte jeweils um 1W8 erhöht. ",
     "Klasse": [
@@ -824,7 +824,7 @@
     "Reichweite": "Berührung",
     "Dauer": "Bis der Zauber gebannt wird",
     "Material": "Rubinstaub im Wert von mindestens 50 GM, den der Zauber verbraucht",
-    "Text": "Eine Flamme bricht aus einem Gegenstand hervor. \r\nden du berührst. Der Effekt spendet in einem Radius von sechs Metern helles Licht und in einem Radius von weiteren sechs Metern dämmriges Licht. Er wirkt wie eine normale Flamme, erzeugt jedoch keine Wärme und verbraucht keinen Brennstoff. Die Flamme kann verdeckt oder verborgen, aber nicht erstickt oder gelöscht werden",
+    "Text": "Eine Flamme bricht aus einem Gegenstand hervor den du berührst. Der Effekt spendet in einem Radius von sechs Metern helles Licht und in einem Radius von weiteren sechs Metern dämmriges Licht. Er wirkt wie eine normale Flamme, erzeugt jedoch keine Wärme und verbraucht keinen Brennstoff. Die Flamme kann verdeckt oder verborgen, aber nicht erstickt oder gelöscht werden",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
@@ -859,14 +859,14 @@
     "Gestik": false
   },
   {
+    "Stufe": "1",
     "Name": "Dissonantes Flüstern",
     "Schule": "Verzauberung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Eine Kreatur deiner Wahl in Reichweite, die du sehen kannst, hört im Geiste eine misstōnende Melodie. Das Ziel führt einen Weisheitsrettungswurf aus. Scheitert der Wurf, so erleidet das Ziel 3W6 psychischen Schaden und muss sofort seine Reaktion verwenden, sofern verfügbar, um sich so weit wie möglich von dir zu entfernen. Dabei nimmt es die sicherste Route. Bei einem erfolgreichen Rettungswurf erleidet das Ziel nur halb so viel Schaden. ",
+    "Material": "",
+    "Text": "Eine Kreatur deiner Wahl in Reichweite, die du sehen kannst, hört im Geiste eine misstönende Melodie. Das Ziel führt einen Weisheitsrettungswurf aus. Scheitert der Wurf, so erleidet das Ziel 3W6 psychischen Schaden und muss sofort seine Reaktion verwenden, sofern verfügbar, um sich so weit wie möglich von dir zu entfernen. Dabei nimmt es die sicherste Route. Bei einem erfolgreichen Rettungswurf erleidet das Ziel nur halb so viel Schaden. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W6 erhöht. ",
     "Klasse": [
       "Barde"
@@ -898,14 +898,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Donnerndes Niederstrecken",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Dein Hieb donnert auf eine Hörweite von bis zu 90 Metern von dir, und das Ziel erleidet zusätzlich 2W6 Schallschaden durch den Angriff. Wenn das Ziel eine Kreatur ist, muss es außerdem einen Stärkerettungswurf bestehen, oder es wird um bis zu drei Meter von dir weg und umgestoßen. ",
+    "Material": "",
+    "Text": "Dein Angriff donnert auf eine Hörweite von bis zu 90 Metern von dir, und das Ziel erleidet zusätzlich 2W6 Schallschaden durch den Angriff. Wenn das Ziel eine Kreatur ist, muss es außerdem einen Stärkerettungswurf bestehen, oder es wird um bis zu drei Meter von dir weg und umgestoßen. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W6 erhöht ",
     "Klasse": [
       "Paladin"
@@ -960,14 +960,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Dornenhagel",
     "Schule": "Beschwörung",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, di due sofort ausführst, wenn du eine Kreatur mit einer Fernkampfwaffe getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Wenn du die Kreatur triffst, lässt dieser Zauber einen Dornenhagel auf sie niederprasseln, der von deiner Fernkampfwaffe oder deinen Geschossen ausgeht. Das Ziel des Angriffs und jede Kreatur im Abstand von bis zu 1.5 Metern von ihm führen einen Geschicklichkeitsrettungswurf au Scheitert der Wurf, so erleidet die Kreatur 1W10 Stich schaden, anderenfalls die Hälfte. ",
+    "Material": "",
+    "Text": "Wenn du die Kreatur mit einem Fernkampfangriff triffst, lässt dieser Zauber einen Dornenhagel auf sie niederprasseln, der von deiner Fernkampfwaffe oder deinen Geschossen ausgeht. Das Ziel des Angriffs und jede Kreatur im Abstand von bis zu 1.5 Metern von ihm führen einen Geschicklichkeitsrettungswurf au Scheitert der Wurf, so erleidet die Kreatur 1W10 Stich schaden, anderenfalls die Hälfte. ",
     "HöhereLevel": "Für jedes Zauberplatzgrad über dem 1. wird der Schaden um 1W10 erhöht ",
     "Klasse": [
       "Waldläufer"
@@ -1527,7 +1527,7 @@
     "Stufe": "1",
     "Name": "Federfall",
     "Schule": "Verwandlung",
-    "Zeitaufwand": "Reaktion, die du ausführst, wenn du oder eine Kreatur im Abstand von bis zu 18 Metern von dir, die du sehen kannst, stürzt",
+    "Zeitaufwand": "Reaktion",
     "Reichweite": "18 Meter",
     "Dauer": "1 Minute",
     "Material": "Eine kleine Feder oder Daune",
@@ -1623,14 +1623,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Fesselnder Schlag",
     "Schule": "Beschwörung",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Waffe getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
-    "Text": "Wenn du das Ziel triffst, erscheinen greifende Ranken an ihm, und es führt einen Stärkerettungswurf aus. Kreaturen von mindestens großer Größe sind bei diesem Rettungswurf im Vorteil. Scheitert der Wurf, so ist das Ziel festgesetzt. bis der Zauber endet. Bei einem erfolgreichen Rettungswurf verwelken die Ranken, und der Zauber endet. \r\nWährend das Ziel festgesetzt ist, erleidet es zu Beginn jedes seiner Züge 1W6 Stichschaden. Das Ziel oder eine Kreatur in seiner Reichweite kann mit einer Aktion einen Stärkewurf (Athletik) gegen deinen Zauberrettungswurf SG ausführen. Bei einem Erfolg endet der Zauber. ",
+    "Material": "",
+    "Text": "Wenn du das Ziel mit einem Angriff triffst, erscheinen greifende Ranken an ihm, und es führt einen Stärkerettungswurf aus. Kreaturen von mindestens großer Größe sind bei diesem Rettungswurf im Vorteil. Scheitert der Wurf, so ist das Ziel festgesetzt. bis der Zauber endet. Bei einem erfolgreichen Rettungswurf verwelken die Ranken, und der Zauber endet. \r\nWährend das Ziel festgesetzt ist, erleidet es zu Beginn jedes seiner Züge 1W6 Stichschaden. Das Ziel oder eine Kreatur in seiner Reichweite kann mit einer Aktion einen Stärkewurf (Athletik) gegen deinen Zauberrettungswurf SG ausführen. Bei einem Erfolg endet der Zauber. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W6 erhöht",
     "Klasse": [
       "Waldläufer"
@@ -2202,13 +2202,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "3",
     "Name": "Gegenzauber",
     "Schule": "Bann",
-    "Stufe": "3",
-    "Zeitaufwand": "Reaktion, die du ausführst, wenn du siehst, wie eine Kreatur im Abstand von bis zu 18 Metern von dir einen Zauber mit Gesten-, Material- oder Verbalkomponente wirkt",
+    "Zeitaufwand": "Reaktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Du versuchst, eine Kreatur beim Wirken eines Zaubers zu unterbrechen. Die Kreatur führt einen Konstitutionsrettungswurf aus. Scheitert der Wurf, so löst der Zauber sich ohne Effekt auf, und die Aktion, Bonusaktion oder Reaktion, mit der er gewirkt wurde ist vergeudet. Wenn der Zauber mit einem Zauberplatz gewirkt wurde, so wird dieser nicht verbraucht. ",
     "HöhereLevel": "",
     "Klasse": [
@@ -2265,7 +2265,7 @@
     "Reichweite": "Selbst",
     "Dauer": "Bis zu 1 Stunde",
     "Material": "",
-    "Text": "Du veränderst deine physische Gestalt. Entscheide dich für eine der folgenden Optionen. Die Effekte bleiben für die Wirkungsdauer bestehen. Währenddessen kannst du eine magische Aktion ausführen, um die ausgewählte Option durch eine andere zu ersetzen. \r\nAquatische Anpassung: Dir wachsen Kiemen und Schwimmhäute. Du kannst unter Wasser atmen und erhältst eine Schwimmbewegungsrate in Höhe deiner Bewegungsrate. \r\n- Aussehen ändern: Du veränderst dein Aussehen. \r\nDu bestimmst, wie du aussiehst: Größe, Gewicht, Gesichtszüge. Stimme, Haarlänge, Haarfarbe und andere besondere Merkmale. Du kannst dich auch als Mitglied einer anderen Spezies ausgeben. Deine Spielwerte bleiben jedoch unverändert. Du kannst nicht als Kreatur einer anderen Größenkategorie erscheinen. Deine grundlegende Gestalt bleibt ebenfalls gleich, beispielsweise kannst du dich mit diesem Zauber nicht von einem Zweibeiner in einen Vierbeiner verwandeln. Für die Wirkungsdauer kannst du eine magische Aktion ausführen, um dein Erscheinungsbild erneut auf diese Art zu ändern. \r\n- Natürliche Waffen: Dir wachsen Klauen (Hieb), Fangzähne (Stich), Hörner (Stich) oder Hufe (Wucht), Verwendest du deinen waffenlosen Angriff, um mit diesen natürlichen Waffen Schaden zu bewirken, so bewirkt dieser Angriff 1W6 Schaden der in Klammern angegebenen Art statt des normalen Schadens deines waffenlosen Angriffs, und du verwendest für die Angriffs- und Schadenswürfe deinen Zauberwirken Attributsmodifikator statt Stärke. ",
+    "Text": "Du veränderst deine physische Gestalt. Entscheide dich für eine der folgenden Optionen. Die Effekte bleiben für die Wirkungsdauer bestehen. Währenddessen kannst du eine magische Aktion ausführen, um die ausgewählte Option durch eine andere zu ersetzen.\r\n- Aquatische Anpassung: Dir wachsen Kiemen und Schwimmhäute. Du kannst unter Wasser atmen und erhältst eine Schwimmbewegungsrate in Höhe deiner Bewegungsrate. \r\n- Aussehen ändern: Du veränderst dein Aussehen. Du bestimmst, wie du aussiehst: Größe, Gewicht, Gesichtszüge. Stimme, Haarlänge, Haarfarbe und andere besondere Merkmale. Du kannst dich auch als Mitglied einer anderen Spezies ausgeben. Deine Spielwerte bleiben jedoch unverändert. Du kannst nicht als Kreatur einer anderen Größenkategorie erscheinen. Deine grundlegende Gestalt bleibt ebenfalls gleich, beispielsweise kannst du dich mit diesem Zauber nicht von einem Zweibeiner in einen Vierbeiner verwandeln. Für die Wirkungsdauer kannst du eine magische Aktion ausführen, um dein Erscheinungsbild erneut auf diese Art zu ändern. \r\n- Natürliche Waffen: Dir wachsen Klauen (Hieb), Fangzähne (Stich), Hörner (Stich) oder Hufe (Wucht), Verwendest du deinen waffenlosen Angriff, um mit diesen natürlichen Waffen Schaden zu bewirken, so bewirkt dieser Angriff 1W6 Schaden der in Klammern angegebenen Art statt des normalen Schadens deines waffenlosen Angriffs, und du verwendest für die Angriffs- und Schadenswürfe deinen Zauberwirken Attributsmodifikator statt Stärke. ",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
@@ -2399,32 +2399,32 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Göttliches Niederstrecken",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Das Ziel erleidet zusätzlich 2W8 gleißenden Schaden durch den Angriff. Der zusätzliche Schaden wird um 1W8 erhöht, wenn das Ziel ein Unhold oder ein Untoter ist. ",
-    "HöhereLevel": "Für jeden Zauberplatzgrad über dem L. wird der Schaden um 1W8 erhöht ",
+    "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W8 erhöht ",
     "Klasse": [
       "Paladin"
     ],
     "Konzentration": false,
     "Ritual": false,
-    "Verbal": true,
+    "Verbal": false,
     "Gestik": false
   },
   {
+    "Stufe": "7",
     "Name": "Göttliches wort",
     "Schule": "Hervorrufung",
-    "Stufe": "7",
     "Zeitaufwand": "Bonusaktion",
     "Reichweite": "9 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Du sprichst ein Wort, das von der Macht der Oberen Ebenen erfüllt ist. Jede Kreatur deiner Wahl in Reichweite führt einen Charismarettungswurf aus. Scheitert der Wurf, so erleidet ein Ziel mit höchstens 50 Trefferpunkten einen Effekt gemäß seiner aktuellen Trefferpunkte wie in der Tabelle Effekte von Göttliches Wort\" gezeigt. Unabhängig von ihren Trefferpunkten werden Ziele, die celestische Wesen, Elementare, Feenwesen oder Unholde sind und deren Rettungswurf scheitert, auf ihre Heimatebene verbannt, sofern sie sich nicht bereits dort befinden. In den nächsten 24 Stunden können sie nur mit dem Zauber Wunsch auf deine aktuelle Ebene zurückkehren. \r\n\r\nTrefferpunkte\tEffekt\r\n0-20\tDas Ziel stirbt.\r\n21-30\tDas Ziel ist eine Stunde lang betäubt, blind und taub.\r\n31-40\tDas Ziel ist zehn Minuten lang blind und taub.\r\n41-50\tDas Ziel ist eine Minute lang taub.",
+    "Material": "",
+    "Text": "Du sprichst ein Wort, das von der Macht der Oberen Ebenen erfüllt ist. Jede Kreatur deiner Wahl in Reichweite führt einen Charismarettungswurf aus. Scheitert der Wurf, so erleidet ein Ziel mit höchstens 50 Trefferpunkten einen Effekt gemäß seiner aktuellen Trefferpunkte wie in der Tabelle Effekte von Göttliches Wort\" gezeigt. Unabhängig von ihren Trefferpunkten werden Ziele, die celestische Wesen, Elementare, Feenwesen oder Unholde sind und deren Rettungswurf scheitert, auf ihre Heimatebene verbannt, sofern sie sich nicht bereits dort befinden. In den nächsten 24 Stunden können sie nur mit dem Zauber Wunsch auf deine aktuelle Ebene zurückkehren. \r\n\r\nTrefferpunkte\tEffekt\r\n0-20: Das Ziel stirbt.\r\n21-30: Das Ziel ist eine Stunde lang betäubt, blind und taub.\r\n31-40: Das Ziel ist zehn Minuten lang blind und taub.\r\n41-50: Das Ziel ist eine Minute lang taub.",
     "HöhereLevel": "",
     "Klasse": [
       "Kleriker"
@@ -2724,13 +2724,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Höllischer Tadel",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
-    "Zeitaufwand": "Reaktion, die du ausführst, wenn du Schaden durch eine Kreatur im Abstand von bis zu 18 Metern von dir erlitten hast, die du sehen kannst",
+    "Zeitaufwand": "Reaktion",
     "Reichweite": "18 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Die Kreatur, die dir Schaden zugefügt hat, ist kurz von grünen Flammen umgeben. Sie führt einen Geschicklichkeitsrettungswurf aus. Scheitert der Wurf, so erleidet sie 2W10 Feuerschaden, anderenfalls die Hälfte.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W10 erhöht ",
     "Klasse": [
@@ -4387,14 +4387,14 @@
     "Gestik": false
   },
   {
+    "Stufe": "7",
     "Name": "Regenbogenspiel",
     "Schule": "Hervorrufung",
-    "Stufe": "7",
     "Zeitaufwand": "Aktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Du verschießt in einem Kegel von 18 Metern acht Lichtstrahlen. Alle Kreaturen im Kegel führen einen Geschicklichkeitsrettungswurf aus. Würfle für jedes Ziel mit 1W8, um die Farbe des Strahls zu bestimmen, der es trifft (Effekt siehe Tabelle Regenbogenstrahlen\") \r\n\r\n1W8\tStrahl\r\n1\tRot: Gescheiterter Rettungswurf, 12/6 Feuerschaden Erfolgreicher Rettungswurf. Halb so viel Schaden. \r\n2\tOrange: Gescheiterter Rettungswurf 12W6 Säureschaden Erfolgreicher Rettungswurf Halb so viel Schaden \r\n3\tGelb: Gescheiterter Rettungswurf 12W6 Blitzschaden. Erfolgreicher Rettungswurf Halb so viel Schaden \r\n4\tGrün: Gescheiterter Rettungswurf: 12W6 Giftschaden. Erfolgreicher Rettungswurf Halb so viel Schaden\r\n5\tBlau: Gescheiterter Rettungswurf 12W6 Kälteschaden. Erfolgreicher Rettungswurf. Halb so viel Schaden \r\n6\tIndigo: Gescheiterter Rettungswurf: Das Ziel ist festgesetzt und führt am Ende jedes seiner Züge einen Konstitutionsrettungswurf aus. Bei drei erfolgreichen Rettungswürfen endet der Zustand. Bei drei gescheiterten Rettungswürfen wird das Ziel versteinert, bis es durch einen Effekt wie den des Zaubers Vollständige Genesung befreit wird. Die Erfolge und Misserfolge müssen nicht aufeinanderfolgen. Notiere einfach beide, bis das Ziel drei von einem hat \r\n7\tViolett: Gescheiterter Rettungswurf. Das Ziel ist blind und führt zu Beginn deines nächsten Zugs einen Weisheitsrettungswurf aus. Bei einem erfolgreichen Rettungswurf endet der Zustand. Scheitert der Wurt so endet der Zustand, und die Kreatur wird auf eine andere Existenzebene (nach Wahl des SL) teleportiert. \r\n8\tBesonders: Das Ziel wird von zwei Strahlen getroffen Würfle zweimal. Bei einem Ergebnis von würfelst du erneut ",
+    "Material": "",
+    "Text": "Du verschießt in einem Kegel von 18 Metern acht Lichtstrahlen. Alle Kreaturen im Kegel führen einen Geschicklichkeitsrettungswurf aus. Würfle für jedes Ziel mit 1W8, um die Farbe des Strahls zu bestimmen, der es trifft (Effekt siehe Tabelle Regenbogenstrahlen\") \r\n\r\n1W8\tStrahl\r\n1: Rot: Gescheiterter Rettungswurf, 12W6 Feuerschaden Erfolgreicher Rettungswurf. Halb so viel Schaden. \r\n2: Orange: Gescheiterter Rettungswurf 12W6 Säureschaden Erfolgreicher Rettungswurf Halb so viel Schaden \r\n3: Gelb: Gescheiterter Rettungswurf 12W6 Blitzschaden. Erfolgreicher Rettungswurf Halb so viel Schaden \r\n4: Grün: Gescheiterter Rettungswurf: 12W6 Giftschaden. Erfolgreicher Rettungswurf Halb so viel Schaden\r\n5: Blau: Gescheiterter Rettungswurf 12W6 Kälteschaden. Erfolgreicher Rettungswurf. Halb so viel Schaden \r\n6: Indigo: Gescheiterter Rettungswurf: Das Ziel ist festgesetzt und führt am Ende jedes seiner Züge einen Konstitutionsrettungswurf aus. Bei drei erfolgreichen Rettungswürfen endet der Zustand. Bei drei gescheiterten Rettungswürfen wird das Ziel versteinert, bis es durch einen Effekt wie den des Zaubers Vollständige Genesung befreit wird. Die Erfolge und Misserfolge müssen nicht aufeinanderfolgen. Notiere einfach beide, bis das Ziel drei von einem hat \r\n7: Violett: Gescheiterter Rettungswurf. Das Ziel ist blind und führt zu Beginn deines nächsten Zugs einen Weisheitsrettungswurf aus. Bei einem erfolgreichen Rettungswurf endet der Zustand. Scheitert der Wurt so endet der Zustand, und die Kreatur wird auf eine andere Existenzebene (nach Wahl des SL) teleportiert. \r\n8: Besonders: Das Ziel wird von zwei Strahlen getroffen Würfle zweimal. Bei einem Ergebnis von würfelst du erneut ",
     "HöhereLevel": "",
     "Klasse": [
       "Barde",
@@ -4618,13 +4618,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Schild",
     "Schule": "Bann",
-    "Stufe": "1",
-    "Zeitaufwand": "Reaktion, die du ausführst, wenn du von einem Angriffswurf getroffen oder als Ziel des Zaubers Magisches Geschoss ausgewählt wirst",
+    "Zeitaufwand": "Reaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Runde",
+    "Material": "",
     "Text": "Eine nicht wahrnehmbare Barriere aus magischer Energie schützt dich. Bis zum Beginn deines nächsten Zugs hast du einen Bonus von 5 auf deine RK (auch gegen den auslösenden Angriff), und du erleidest keinen Schaden durch Magisches Geschoss ",
     "HöhereLevel": "",
     "Klasse": [
@@ -5002,7 +5002,7 @@
     "Reichweite": "18 Meter",
     "Dauer": "Bis zu 10 Minuten",
     "Material": "Eine Metallfeder",
-    "Text": "Ein Ziel (eine Kreatur oder ein loser Gegenstand) deiner Wahl in Reichweite, das du sehen kannst, steigt senkrecht sechs Meter empor und schweht für die Wirkungsdauer in der Luft. Der Zauber kann Gegenstände mit einem Maximalgewicht von 250 Kilogramm anheben. \r\nBesteht eine nicht bereit willige Kreutur einen \r\nKonstitutionsrettungswurf, so ist sie nicht betroffen. \r\nDas Ziel kann sich nur bewegen, indem es sich von festen Gegenständen oder Oberflächen wie Wänden oder Decken \r\nin Reichweite abstößt oder sich daran entlanghangelt. Dabei gilt die Kletterbewegungsrate. Während deines Zugs kannst du das Ziel um bis zu sechs Meter anheben oder absenken. Wenn du selbst das Ziel bist, kannst du dich im Rahmen deiner Bewegung anheben oder absenken. Anderenfalls kannst du das Ziel mit einer magischen Aktion bewegen. Dahei musst du die Reichweite des Zaubers einhalten. \r\nWenn der Zauber endet und das Ziel noch schwebt, sinkt es sanft zu Boden",
+    "Text": "Ein Ziel (eine Kreatur oder ein loser Gegenstand) deiner Wahl in Reichweite, das du sehen kannst, steigt senkrecht sechs Meter empor und schweht für die Wirkungsdauer in der Luft. Der Zauber kann Gegenstände mit einem Maximalgewicht von 250 Kilogramm anheben. Besteht eine nicht bereit willige Kreutur einen Konstitutionsrettungswurf, so ist sie nicht betroffen. Das Ziel kann sich nur bewegen, indem es sich von festen Gegenständen oder Oberflächen wie Wänden oder Decken in Reichweite abstößt oder sich daran entlanghangelt. Dabei gilt die Kletterbewegungsrate. Während deines Zugs kannst du das Ziel um bis zu sechs Meter anheben oder absenken. Wenn du selbst das Ziel bist, kannst du dich im Rahmen deiner Bewegung anheben oder absenken. Anderenfalls kannst du das Ziel mit einer magischen Aktion bewegen. Dahei musst du die Reichweite des Zaubers einhalten. Wenn der Zauber endet und das Ziel noch schwebt, sinkt es sanft zu Boden",
     "HöhereLevel": "",
     "Klasse": [
       "Magier",
@@ -5113,15 +5113,15 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Sengendes Niederstrecken",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Minute",
+    "Material": "",
     "Text": "Wenn du das Ziel triffst, erleidet es zusätzlich 1W6 Feuer schaden durch den Angriff. Für die Wirkungsdauer erleidet das Ziel zu Beginn jedes seiner Züge 1W6 Feuerschaden und führt dann einen Konstitutionsrettungswurf aus Scheitert der Wurf, so wirkt der Zauber weiter. Bei einem erfolgreichen Rettungswurf endet der Zauber.",
-    "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird jeder Schaden um I1W6 erhöht.",
+    "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird jeder Schaden um 1W6 erhöht.",
     "Klasse": [
       "Paladin"
     ],
@@ -5512,14 +5512,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "2",
     "Name": "Strahlendes Niederstrecken",
     "Schule": "Verwandlung",
-    "Stufe": "2",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast ",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
-    "Text": "Das Ziel des Schlags erleidet zusätzlich 2W6 gleißenden Schaden. Bis der Zauber endet, spendet das Ziel in einem Radius von 1,5 Metern helles Licht. Angriffswürfe gegen es sind im Vorteil, und es kann nicht unsichtbar werden.",
+    "Material": "",
+    "Text": "Das Ziel des Angriffs erleidet zusätzlich 2W6 gleißenden Schaden. Bis der Zauber endet, spendet das Ziel in einem Radius von 1,5 Metern helles Licht. Angriffswürfe gegen es sind im Vorteil, und es kann nicht unsichtbar werden.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 2. wird der Schaden um 1W6 erhöht. ",
     "Klasse": [
       "Paladin"
@@ -6376,14 +6376,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Verbannendes Niederstrecken",
     "Schule": "Beschwörung",
-    "Stufe": "5",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Bis zu 1 Minute",
-    "Text": "Das Ziel des Angriffswurfs erleidet zusätzlich 5W10 Energieschaden. Wenn der Angriff die Trefferpunkte \r\ndes Ziels auf höchstens 50 verringert, muss das Ziel einen Charismarettungswurf bestehen, oder es wird für die Wirkungsdauer auf eine harmlose Halbebene transportiert. Solange das Ziel sich dort befindet, ist es kampfunfähig. Wenn der Zauber endet, erscheint das Ziel in dem Bereich, aus dem es wegteleportiert wurde, oder im nächstgelegenen freien Bereich wieder, falls der ursprüngliche inzwischen besetzt ist. ",
+    "Material": "",
+    "Text": "Das Ziel des Angriffswurfs erleidet zusätzlich 5W10 Energieschaden. Wenn der Angriff die Trefferpunkte des Ziels auf höchstens 50 verringert, muss das Ziel einen Charismarettungswurf bestehen, oder es wird für die Wirkungsdauer auf eine harmlose Halbebene transportiert. Solange das Ziel sich dort befindet, ist es kampfunfähig. Wenn der Zauber endet, erscheint das Ziel in dem Bereich, aus dem es wegteleportiert wurde, oder im nächstgelegenen freien Bereich wieder, falls der ursprüngliche inzwischen besetzt ist. ",
     "HöhereLevel": "",
     "Klasse": [
       "Paladin"
@@ -6632,14 +6632,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Verwirrung",
     "Schule": "Verzauberung",
-    "Stufe": "4",
     "Zeitaufwand": "Aktion",
     "Reichweite": "27 Meter",
-    "Material": "Drei Nussschalen",
     "Dauer": "Bis zu 1 Minute",
-    "Text": "Jede Kreatur in einer Kugel mit einem Radius von drei Metern um einen Punkt deiner Wahl in Reichweite muss einen Weisheitsrettungswurf bestehen, oder sie kann weder Bonusaktionen noch Reaktionen ausführen und muss zu Beginn jedes ihrer Züge mit 1W10 würfeln. um anhand der nachstehenden Tabelle ihr Verhalten in diesem Zug zu bestimmen. \r\n\r\n1W10\tVerhalten im Zug\r\n1\tDas Ziel führt keine Aktion aus und verwendet seine gesamte Bewegungsrate, um sich zu bewegen. Würfle die Richtung mit 1W4 aus. 1: Norden, 2: Osten; 3 Süden, 4 Westen \r\n2-6\tDas Ziel bewegt sich nicht und führt keine Aktionen \r\n7-8\tDas Ziel bewegt sich nicht. Es führt die Angriffsaktion aus, um einen Nahkampfangriff gegen eine zufällige Kreatur in Reichweite auszuführen. Wenn sich keine Kreaturen in Reichweite befinden, führt das Ziel keine Aktionen aus \r\n9-10\tDas Ziel wählt sein Verhalten selbst aus. \r\n\r\nEin betroffenes Ziel wiederholt den Rettungswurf am Ende jedes seiner Züge. Bei einem Erfolg endet der Zauber bei diesem Ziel ",
+    "Material": "Drei Nussschalen",
+    "Text": "Jede Kreatur in einer Kugel mit einem Radius von drei Metern um einen Punkt deiner Wahl in Reichweite muss einen Weisheitsrettungswurf bestehen, oder sie kann weder Bonusaktionen noch Reaktionen ausführen und muss zu Beginn jedes ihrer Züge mit 1W10 würfeln. um anhand der nachstehenden Tabelle ihr Verhalten in diesem Zug zu bestimmen. \r\n\r\n1W10\r\n1: Das Ziel führt keine Aktion aus und verwendet seine gesamte Bewegungsrate, um sich zu bewegen. Würfle die Richtung mit 1W4 aus. 1: Norden, 2: Osten; 3 Süden, 4 Westen \r\n2-6: Das Ziel bewegt sich nicht und führt keine Aktionen \r\n7-8: Das Ziel bewegt sich nicht. Es führt die Angriffsaktion aus, um einen Nahkampfangriff gegen eine zufällige Kreatur in Reichweite auszuführen. Wenn sich keine Kreaturen in Reichweite befinden, führt das Ziel keine Aktionen aus \r\n9-10: Das Ziel wählt sein Verhalten selbst aus. \r\n\r\nEin betroffenes Ziel wiederholt den Rettungswurf am Ende jedes seiner Züge. Bei einem Erfolg endet der Zauber bei diesem Ziel ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 4. wird der Radius der Kugel um 1.5 Meter erhöht ",
     "Klasse": [
       "Barde",
@@ -6870,13 +6870,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "4",
     "Name": "Wankendmachendes Niederstrecken",
     "Schule": "Verzauberung",
-    "Stufe": "4",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "Unmittelbar",
+    "Material": "",
     "Text": "Das Ziel erleidet durch den Angriff zusätzlich 4W6 psychischen Schaden und muss einen Weisheitsrettungswurf bestehen, oder es ist bis zum Ende deines nächsten Zugs betäubt.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 4. wird der zusätzliche Schaden um 1W6 erhöht. ",
     "Klasse": [
@@ -7048,14 +7048,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "8",
     "Name": "Wetterkontrolle",
     "Schule": "Verwandlung",
-    "Stufe": "8",
     "Zeitaufwand": "10 Minuten",
     "Reichweite": "Selbst",
-    "Material": "Brenneder Weihrauch",
     "Dauer": "Bis zu 8 Stunden",
-    "Text": "Für die Wirkungsdauer kontrollierst du das Wetter im Abstand von bis zu acht Kilometern. Du musst dich im Freien befinden, wenn du diesen Zauber wirkst. Der Zauber endet vorzeitig, wenn du nach drinnen gehst. \r\nWenn du den Zauber wirkst, änderst du die aktuellen Wetterbedingungen, die vom St. bestimmt werden. Du kannst Niederschlag, Temperatur und Wind beeinflussen. Es dauert 1W4 mal zehn Minuten, bis die neuen Bedingungen in Kraft treten. Danach kannst du die Bedingungen erneut ändern. Wenn der Zauber endet. normalisiert sich das Wetter allmählich. \r\nFinde zum Andern des Wetters eine aktuelle Wetterbedingung in der folgenden Tabelle und andere sie eine Stufe nach oben oder unten. Wenn du den Wind änderst, kannst du auch seine Richtung ändern. \r\n\r\nNiederschlag\r\nPhase\tBedingung\r\n1\tWolkenlos\r\n2\tLeicht bewölkt\r\n3\tBewölkt oder Bodennebel\r\n4\tRegen, Hagel oder Schnee\r\n5\tStarkregen, Hagelsturm oder Schneesturm\r\n\r\nTemperatur\r\nPhase\tBedingung\r\n1\tExtrem heiß\r\n2\tHeiß\r\n3\tWarm\r\n4\tKühl\r\n5\tKalt\r\n6\tEisig\r\n\r\nWind\r\nPhase\tBedingung\r\n1\tFlaute\r\n2\tMäßiger Wind\r\n3\tStarker Wind\r\n4\tStarke Böen\r\n5\tSturm",
+    "Material": "Brenneder Weihrauch",
+    "Text": "Für die Wirkungsdauer kontrollierst du das Wetter im Abstand von bis zu acht Kilometern. Du musst dich im Freien befinden, wenn du diesen Zauber wirkst. Der Zauber endet vorzeitig, wenn du nach drinnen gehst. \r\nWenn du den Zauber wirkst, änderst du die aktuellen Wetterbedingungen, die vom St. bestimmt werden. Du kannst Niederschlag, Temperatur und Wind beeinflussen. Es dauert 1W4 mal zehn Minuten, bis die neuen Bedingungen in Kraft treten. Danach kannst du die Bedingungen erneut ändern. Wenn der Zauber endet. normalisiert sich das Wetter allmählich. \r\nFinde zum Andern des Wetters eine aktuelle Wetterbedingung in der folgenden Tabelle und andere sie eine Stufe nach oben oder unten. Wenn du den Wind änderst, kannst du auch seine Richtung ändern. \r\n\r\nNiederschlag\r\nPhase\r\n1: Wolkenlos\r\n2: Leicht bewölkt\r\n3: Bewölkt oder Bodennebel\r\n4: Regen, Hagel oder Schnee\r\n5: Starkregen, Hagelsturm oder Schneesturm\r\n\r\nTemperatur\r\nPhase\r\n1: Extrem heiß\r\n2: Heiß\r\n3: Warm\r\n4: Kühl\r\n5: Kalt\r\n6: Eisig\r\n\r\nWind\r\nPhase\r\n1: Flaute\r\n2: Mäßiger Wind\r\n3: Starker Wind\r\n4: Starke Böen\r\n5: Sturm",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
@@ -7109,14 +7109,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "5",
     "Name": "Wiedergeburt",
     "Schule": "Nekromantie",
-    "Stufe": "5",
     "Zeitaufwand": "1 Stunde",
     "Reichweite": "Berührung",
-    "Material": "Seltene Öle im Wert von mindestens 1.000 GM, die der Zauber verbraucth",
     "Dauer": "Unmittelbar",
-    "Text": "Du berührst einen toten Humanoiden oder seine \r\nÜberreste. Sofern die Kreatur höchstens zehn Tage lang tot war, erschafft der Zauber einen neuen Körper für sie und ruft die Seele in diesen Körper. Würfle mit 1W10 und bestimme die Spezies des Körpers anhand der Tabelle unten, oder der SL wählt eine andere spielbare Spezies aus. \r\n\r\n1W10\tSpezies\r\n1\tAasimar\r\n2\tDrachenblütiger\r\n3\tElf\r\n4\tGnom\r\n5\tGoliath\r\n6\tHalbling\r\n7\tMensch\r\n8\tOrk\r\n9\tTiefling\r\n10\tZwerg",
+    "Material": "Seltene Öle im Wert von mindestens 1.000 GM, die der Zauber verbraucth",
+    "Text": "Du berührst einen toten Humanoiden oder seine \r\nÜberreste. Sofern die Kreatur höchstens zehn Tage lang tot war, erschafft der Zauber einen neuen Körper für sie und ruft die Seele in diesen Körper. Würfle mit 1W10 und bestimme die Spezies des Körpers anhand der Tabelle unten, oder der SL wählt eine andere spielbare Spezies aus. \r\n\r\n1W10\r\n1: Aasimar\r\n2: Drachenblütiger\r\n3: Elf\r\n4: Gnom\r\n5: Goliath\r\n6: Halbling\r\n7: Mensch\r\n8: Ork\r\n9: Tiefling\r\n10: Zwerg",
     "HöhereLevel": "Die reinkarnierte Kreatur trifft alle Entscheidungen. Merkmale der neuen. welche die Beschreibung ihrer Spezies bietet, und erinnert sich an ihr voriges Leben. Sie behält die Fähigkeiten bei, die sie in der ursprünglichen Gestalt hatte, verliert jedoch die Merkmale der bisherigen Spezies und erhält die Merkmale der neuen.",
     "Klasse": [
       "Druide"
@@ -7518,13 +7518,13 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Zorniges Niederstrecken",
     "Schule": "Nekromantie",
-    "Stufe": "1",
-    "Zeitaufwand": "Bonusaktion, die du sofort ausführst, wenn du eine Kreatur mit einer Nahkampfwaffe oder einem waffenlosen Angriff getroffen hast",
+    "Zeitaufwand": "Bonusaktion",
     "Reichweite": "Selbst",
-    "Material": "",
     "Dauer": "1 Minute",
+    "Material": "",
     "Text": "Das Ziel erleidet zusätzlich 1W6 nekrotischen Schaden durch den Angriff und muss einen Weisheitsrettungswurf bestehen, oder es ist verängstigt, bis der Zauber endet. Das verängstigte Ziel wiederholt den Rettungswurf am Ende jedes seiner Züge. Bei einem Erfolg endet der Zauber.",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W6 erhöht ",
     "Klasse": [
@@ -7673,14 +7673,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "6",
     "Name": "Erde bewegen",
     "Schule": "Verwandlung",
-    "Stufe": "6",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "Eine Miniaturschaufel",
     "Dauer": "Bis zu 2 Stunde",
-    "Text": "Wähle einen viereckigen Bereich des Geländes in Reichweite mit einer Seitenlänge von höchstens zwölf Metern aus. Für die Wirkungsdauer kannst du Erde, Lehm oder Sand in dem Bereich beliebig umformen. Du kannst den Bereich anheben oder absenken, einen Graben erschaffen oder zuschütten, eine Mauer errichten oder niederreißen oder eine Säule errichten. Das Ausmaß dieser Änderungen darf die Hälfte der größten Abmessung des Bereichs nicht überschreiten. Beeinflusst du beispielsweise einen Bereich mit einer Seitenlänge von zwölf Metern, so kannst du eine bis zu sechs Meter hohe Säule erschaffen, den Bereich um bis zu sechs Meter anheben oder absenken, einen Graben mit bis zu sechs Metern Tiefe ausheben und so weiter. Es dauert zehn Minuten, diese Änderungen zu bewirken. Da die Veränderung des Geländes langsam erfolgt, können Kreaturen im Bereich normalerweise nicht durch die \r\nBodenbewegung gefangen oder verletzt werden. Nach jeweils zehn Minuten Konzentration auf der Zauber kannst du einen neuen Bereich in Reichweite auswählen und beeinflussen \r\nDieser Zauber kann weder Naturgestein noch Steingebäude beeinflussen. Felsen und Gebäude verschieben sich, um sich dem neuen Gelände anлиран Wenn deine Veränderung des Geländes ein Gebäude instabil macht, so stürzt es möglicherweise ein. \r\nDieser Zauber hat keinen direkten Einfluss auf Pflanzenwachstum. Die bewegte Erde nimmt Pflanzen mit sich ",
+    "Material": "Eine Miniaturschaufel",
+    "Text": "Wähle einen viereckigen Bereich des Geländes in Reichweite mit einer Seitenlänge von höchstens zwölf Metern aus. Für die Wirkungsdauer kannst du Erde, Lehm oder Sand in dem Bereich beliebig umformen. Du kannst den Bereich anheben oder absenken, einen Graben erschaffen oder zuschütten, eine Mauer errichten oder niederreißen oder eine Säule errichten. Das Ausmaß dieser Änderungen darf die Hälfte der größten Abmessung des Bereichs nicht überschreiten. Beeinflusst du beispielsweise einen Bereich mit einer Seitenlänge von zwölf Metern, so kannst du eine bis zu sechs Meter hohe Säule erschaffen, den Bereich um bis zu sechs Meter anheben oder absenken, einen Graben mit bis zu sechs Metern Tiefe ausheben und so weiter. Es dauert zehn Minuten, diese Änderungen zu bewirken. Da die Veränderung des Geländes langsam erfolgt, können Kreaturen im Bereich normalerweise nicht durch die Bodenbewegung gefangen oder verletzt werden. Nach jeweils zehn Minuten Konzentration auf der Zauber kannst du einen neuen Bereich in Reichweite auswählen und beeinflussen Dieser Zauber kann weder Naturgestein noch Steingebäude beeinflussen. Felsen und Gebäude verschieben sich, um sich dem neuen Gelände anzupassen. Wenn deine Veränderung des Geländes ein Gebäude instabil macht, so stürzt es möglicherweise ein. Dieser Zauber hat keinen direkten Einfluss auf Pflanzenwachstum. Die bewegte Erde nimmt Pflanzen mit sich ",
     "HöhereLevel": "",
     "Klasse": [
       "Druide",
@@ -7719,7 +7719,7 @@
     "Reichweite": "3 Meter",
     "Dauer": "Unmittelbar",
     "Material": "Ein Edelstein mit einem Wert von 100 GM oder mehr, der verbraucht wird",
-    "Text": "Du beschwörst einen besonderen Homunkulus in einem freien Feld in Reichweite. Diese Kreatur nutzt die Werte des Homunkulus-Dieners. Falls du bereits einen Homunkulus durch diesen Zauber hast, wird dieser durch den neuen ersetzt. Du bestimmst das Aussehen des Homunkulus, z. B. ein mechanisch aussehender Vogel.\r\n- Kampf. Der Homunkulus ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt er deine Initiative, ist aber unmittelbar nach dir an der Reihe. Er gehorcht deinen Befehlen (keine Aktion erforderlich).\r\n\r\n\r\nHOMUNKULUS-DIENER\r\nWinziges Konstrukt, Neutral\r\nRK 13\r\nTP 5 + 5 pro Zaubergrad (der Homunkulus hat eine Anzahl\r\nan Trefferwürfeln [d4] entsprechend dem Zaubergrad)\r\nBewegungsrate 6 m, Fliegen 9 m\r\nWert | Modifier | Rettungswurf\r\nStä 4 −3 −3 Ges 15 +2 +2 Kon 12 +1 +1\r\nInt 10 +0 +0 Wei 10 +0 +0 Cha 7 −2 −2\r\nImmunitäten Gift; Erschöpfung, Vergiftet\r\nSinne Dunkelsicht 18 m; Passive Wahrnehmung 10\r\nSprachen Telepathie 1,6 km (funktioniert nur mit dir)\r\nSG Keine (EP 0; PB entspricht deinem Übungsbonus)\r\nEIGENSCHAFTEN\r\n- Ausweichen. Wenn der Homunkulus einem Effekt ausgesetzt ist, der ihm einen Geschicklichkeitsrettungswurf erlaubt, um nur halben Schaden zu erleiden, erleidet er stattdessen keinen Schaden, wenn der Rettungswurf gelingt, und nur halben Schaden, wenn er fehlschlägt. Er kann diese Eigenschaft nicht nutzen, wenn er sich im Zustand Handlungsunfähig befindet.\r\n- Magische Bindung. Addiere den Zaubergrad zu jedem Fähigkeits- oder Rettungswurf des Homunkulus.\r\nAKTIONEN\r\n- Machtschlag. Nahkampf- oder Fernkampfangriffswurf: Bonus entspricht deinem Zauberangriffsmodifikator, Reichweite 1,5 m oder 9 m. Treffer: 1W6 plus die Stufe des Machtschadens des Zaubers.\r\nREAKTIONEN\r\n- Magie kanalisieren. Auslöser: Du wirkst einen Zauber mit Berührungsreichweite, während sich der Homunkulus innerhalb von 36 m von dir befindet. Reaktion: Der Homunkulus wirkt den Zauber durch seine Berührung.",
+    "Text": "Du beschwörst einen besonderen Homunkulus in einem freien Feld in Reichweite. Diese Kreatur nutzt die Werte des Homunkulus-Dieners. Falls du bereits einen Homunkulus durch diesen Zauber hast, wird dieser durch den neuen ersetzt. Du bestimmst das Aussehen des Homunkulus, z. B. ein mechanisch aussehender Vogel.\r\n- Kampf. Der Homunkulus ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt er deine Initiative, ist aber unmittelbar nach dir an der Reihe. Er gehorcht deinen Befehlen (keine Aktion erforderlich).",
     "HöhereLevel": "Andere Werte im Stat-Block",
     "Klasse": [
       "Tüftler"
