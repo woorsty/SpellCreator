@@ -207,13 +207,13 @@ function drawCard(
 
     cursorY += 4;
     const rangeIcon = fs.readFileSync(
-      path.resolve(__dirname, "../assets/icons/25px-Range_icon.png")
+      path.resolve(__dirname, "../assets/icons/25px-Range_Icon.png")
     );
     doc.addImage(rangeIcon, "PNG", x + 10, cursorY - 3, 4, 4);
     doc.text(card.reichweite, x + 14, cursorY);
 
     const durationIcon = fs.readFileSync(
-      path.resolve(__dirname, "../assets/icons/25px-Duration_icon.png")
+      path.resolve(__dirname, "../assets/icons/25px-Duration_Icon.png")
     );
     doc.addImage(durationIcon, "PNG", x + width / 2 - 2, cursorY - 3, 4, 4);
     doc.text(card.dauer, x + width / 2 + 2, cursorY);
