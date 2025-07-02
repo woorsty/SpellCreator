@@ -15,7 +15,7 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 const MAX_CHARACTERS_PER_CARD = 800; // abhängig von Schriftgröße etc.
-const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 900; // für Karten ohne Header
+const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 1000; // für Karten ohne Header
 function splitSpellIntoCards(spell) {
     const clean = (s) => s.replace(/\r\n|\r/g, "\n").trim();
     const fullText = spell.Text +
@@ -123,44 +123,59 @@ function drawCard(doc, card, x, y, width, height) {
     }
     doc.setFontSize(8);
     doc.setFont("helvetica", "normal");
-    x += 2;
+    x;
     if (card.index == 1) {
-        x -= 2;
-        cursorY += 3;
-        x += 2;
         doc.setFontSize(6);
-        cursorY += 3;
+        cursorY += 4;
         const rangeIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Range_icon.png"));
-        doc.addImage(rangeIcon, "PNG", x + 8, cursorY - 3, 4, 4);
-        doc.text(card.reichweite, x + 12, cursorY);
+        doc.addImage(rangeIcon, "PNG", x + 10, cursorY - 3, 4, 4);
+        doc.text(card.reichweite, x + 14, cursorY);
         const durationIcon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, "../assets/icons/25px-Duration_icon.png"));
-        doc.addImage(durationIcon, "PNG", x + width / 2 - 4, cursorY - 3, 4, 4);
-        doc.text(card.dauer, x + width / 2, cursorY);
-        cursorY += 3;
-        let componentsText = [];
+        doc.addImage(durationIcon, "PNG", x + width / 2 - 2, cursorY - 3, 4, 4);
+        doc.text(card.dauer, x + width / 2 + 2, cursorY);
+        cursorY += 5;
+        const imagePositions3 = [
+            x + width / 2 - 9,
+            x + width / 2 - 3,
+            x + width / 2 + 3,
+        ];
+        const imagePositions2 = [x + width / 2 - 6, x + width / 2];
+        const imagePositions1 = [imagePositions3[1]];
+        const imagePositions = [imagePositions1, imagePositions2, imagePositions3];
+        let componentCounter = -1;
+        componentCounter += card.komponenten.verbal ? 1 : 0;
+        componentCounter += card.komponenten.gestik ? 1 : 0;
+        componentCounter += card.komponenten.material ? 1 : 0;
+        let counter = 0;
         if (card.komponenten.verbal) {
-            componentsText.push("V");
+            addHorizontalIcon(doc, "../assets/icons/Persuasion_Icon.png", imagePositions[componentCounter][counter++], cursorY);
         }
         if (card.komponenten.gestik) {
-            componentsText.push("G");
+            addHorizontalIcon(doc, "../assets/icons/Intimidation_Icon.png", imagePositions[componentCounter][counter++], cursorY);
         }
         if (card.komponenten.material) {
-            componentsText.push(card.komponenten.material);
-        }
-        if (componentsText.length !== 0) {
-            const componentLines = doc.splitTextToSize("Komponenten: " + componentsText.join(", "), width - 4);
+            addHorizontalIcon(doc, "../assets/icons/Medicine_Icon.png", imagePositions[componentCounter][counter++], cursorY);
+            doc.setFontSize(6);
+            cursorY += 3;
+            const componentLines = doc.splitTextToSize(card.komponenten.material, width - 4);
             for (const line of componentLines) {
+                doc.text(line, x + width / 2, cursorY, { align: "center" });
                 cursorY += 3;
-                doc.text(line, x, cursorY);
             }
+            cursorY += 2;
+        }
+        else {
+            cursorY += 5;
         }
     }
-    cursorY += 5;
+    else {
+        cursorY += 6;
+    }
     doc.setFontSize(7);
     const textLines = doc.splitTextToSize(card.body, width - 4);
     doc.setFont("helvetica", "italic");
-    doc.text(textLines, x, cursorY);
-    printPropertyLine(doc, card, x, y + height - 2, width);
+    doc.text(textLines, x + 2, cursorY);
+    printPropertyLine(doc, card, x + 2, y + height - 2, width);
 }
 function printPropertyLine(doc, card, x, y, width) {
     let coursorX = x;
@@ -177,7 +192,7 @@ function printPropertyLine(doc, card, x, y, width) {
         addHorizontalText(doc, "Reaktion", coursorX + 4, y);
     }
     else {
-        addHorizontalText(doc, card.zeitaufwand, coursorX + 4, y);
+        addHorizontalText(doc, card.zeitaufwand, coursorX, y);
     }
     coursorX += card.zeitaufwand.length * 1 + 2;
     if (card.ritual) {
@@ -192,7 +207,6 @@ function printPropertyLine(doc, card, x, y, width) {
 function addHorizontalIcon(doc, iconPath, x, y) {
     const icon = fs_1.default.readFileSync(path_1.default.resolve(__dirname, iconPath));
     doc.addImage(icon, "PNG", x, y - 3, 4, 4);
-    x += 4;
 }
 function addHorizontalText(doc, text, x, y) {
     doc.text(text, x, y);
