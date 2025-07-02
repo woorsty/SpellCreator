@@ -27,12 +27,10 @@ const PAGE_MARGIN_Y = 10;
 const GAP_X = 0;
 const GAP_Y = 0;
 
-const MAX_CHARACTERS_PER_CARD = 750;
-const MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER = 900;
+const MAX_LINES_PER_CARD = 19;
+const MAX_LINES_PER_CARD_WITHOUT_HEADER = 24;
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
-  const clean = (s: string) => s.replace(/\r\n|\r/g, "\n").trim();
-
   const fullText =
     spell.Text +
     "\n\n" +
@@ -47,11 +45,14 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   let part = 1;
 
   for (const sentence of paragraphs) {
-    const fullLength = currentBody.length + sentence.length;
+    const newBody = currentBody + sentence + ".";
+    //const lineCount = newBody.split("\n").length;
+    const lineCount = estimateRenderedLineCount(newBody);
+
     if (
-      ((part === 1 && fullLength > MAX_CHARACTERS_PER_CARD) ||
-        fullLength > MAX_CHARACTERS_PER_CARD_WITHOUT_HEADER) &&
-      currentBody
+      ((part === 1 && lineCount > MAX_LINES_PER_CARD) ||
+        lineCount > MAX_LINES_PER_CARD_WITHOUT_HEADER) &&
+      currentBody.trim()
     ) {
       cards.push({
         title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
@@ -74,7 +75,10 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       part++;
       currentBody = "";
     }
-    currentBody += sentence + ".";
+
+    if (sentence.trim() !== "") {
+      currentBody += sentence.trim() + ".";
+    }
   }
 
   if (currentBody.trim()) {
@@ -99,6 +103,32 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   }
 
   return cards;
+}
+
+function estimateRenderedLineCount(
+  text: string,
+  maxLineLength: number = 50
+): number {
+  const lines = text.split("\n");
+  let totalLines = 0;
+
+  for (const line of lines) {
+    const words = line.trim().split(/\s+/);
+    let currentLength = 0;
+
+    for (const word of words) {
+      if (currentLength + word.length + 1 > maxLineLength) {
+        totalLines++;
+        currentLength = word.length;
+      } else {
+        currentLength += word.length + 1;
+      }
+    }
+
+    totalLines++; // Für die aktuelle Zeile oder Leerzeile
+  }
+
+  return totalLines;
 }
 
 export function generateCardPDF(spells: Spell[]): jsPDF {
