@@ -12,3 +12,4 @@ router.get("/edit/:name", spellControler_1.SpellController.getEditForm);
 router.get("/check", spellControler_1.SpellController.checkSpellData);
 router.get("/:name", spellControler_1.SpellController.getSpell);
 exports.default = router;
+//# sourceMappingURL=spellRoute.js.map

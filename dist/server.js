@@ -29,3 +29,4 @@ app.use("/", express_1.default.static(path_1.default.join(__dirname, "./main")))
 app.listen(port, "::", () => {
     console.log(`Server läuft auf http://0.0.0.0:${port}`);
 });
+//# sourceMappingURL=server.js.map

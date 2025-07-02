@@ -33,20 +33,28 @@ const MAX_LINES_PER_CARD_WITHOUT_HEADER = 24;
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   const fullText =
     spell.Text +
-    "\n\n" +
     (spell.HöhereLevel
-      ? "Auf höheren Stufen: " + (spell.HöhereLevel || "")
+      ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
       : "");
 
   const paragraphs = fullText.split(".");
 
   const cards: Spellcard[] = [];
+
+  addCardLines(cards, paragraphs, spell);
+
+  return cards;
+}
+
+function addCardLines(
+  cards: Spellcard[],
+  paragraphs: string[],
+  spell: Spell
+): void {
   let currentBody = "";
   let part = 1;
-
   for (const sentence of paragraphs) {
     const newBody = currentBody + sentence + ".";
-    //const lineCount = newBody.split("\n").length;
     const lineCount = estimateRenderedLineCount(newBody);
 
     if (
@@ -101,8 +109,6 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
       dauer: spell.Dauer,
     });
   }
-
-  return cards;
 }
 
 function estimateRenderedLineCount(
@@ -181,8 +187,9 @@ function drawCard(
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.text(
-    (card.stufe == 0 ? "Zaubertrick der " : `Stufe ${card.stufe} `) +
-      card.schule,
+    card.stufe == 0
+      ? `Zaubertrick der ${card.schule}`
+      : `${card.schule}zauber ${card.stufe}. Grades`,
     x + width / 2,
     cursorY,
     { align: "center" }

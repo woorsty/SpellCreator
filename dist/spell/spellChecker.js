@@ -125,3 +125,4 @@ class SpellChecker {
     }
 }
 exports.SpellChecker = SpellChecker;
+//# sourceMappingURL=spellChecker.js.map

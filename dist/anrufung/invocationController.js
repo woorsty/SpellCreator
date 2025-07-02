@@ -57,3 +57,4 @@ class InvocationController {
     }
 }
 exports.InvocationController = InvocationController;
+//# sourceMappingURL=invocationController.js.map

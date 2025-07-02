@@ -9,3 +9,4 @@ router.post("/add", invocationController_1.InvocationController.add);
 router.post("/edit/:name", invocationController_1.InvocationController.edit);
 router.get("/edit/:name", invocationController_1.InvocationController.getEditForm);
 exports.default = router;
+//# sourceMappingURL=invocationRoute.js.map

@@ -18,17 +18,19 @@ const MAX_LINES_PER_CARD = 19;
 const MAX_LINES_PER_CARD_WITHOUT_HEADER = 24;
 function splitSpellIntoCards(spell) {
     const fullText = spell.Text +
-        "\n\n" +
         (spell.HöhereLevel
-            ? "Auf höheren Stufen: " + (spell.HöhereLevel || "")
+            ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
             : "");
     const paragraphs = fullText.split(".");
     const cards = [];
+    addCardLines(cards, paragraphs, spell);
+    return cards;
+}
+function addCardLines(cards, paragraphs, spell) {
     let currentBody = "";
     let part = 1;
     for (const sentence of paragraphs) {
         const newBody = currentBody + sentence + ".";
-        //const lineCount = newBody.split("\n").length;
         const lineCount = estimateRenderedLineCount(newBody);
         if (((part === 1 && lineCount > MAX_LINES_PER_CARD) ||
             lineCount > MAX_LINES_PER_CARD_WITHOUT_HEADER) &&
@@ -78,7 +80,6 @@ function splitSpellIntoCards(spell) {
             dauer: spell.Dauer,
         });
     }
-    return cards;
 }
 function estimateRenderedLineCount(text, maxLineLength = 50) {
     const lines = text.split("\n");
@@ -133,8 +134,9 @@ function drawCard(doc, card, x, y, width, height) {
     }
     doc.setFontSize(8);
     doc.setFont("helvetica", "normal");
-    doc.text((card.stufe == 0 ? "Zaubertrick der " : `Stufe ${card.stufe} `) +
-        card.schule, x + width / 2, cursorY, { align: "center" });
+    doc.text(card.stufe == 0
+        ? `Zaubertrick der ${card.schule}`
+        : `${card.schule}zauber ${card.stufe}. Grades`, x + width / 2, cursorY, { align: "center" });
     doc.setFontSize(6);
     doc.setFont("helvetica", "normal");
     const classesText = card.klasse.join(", ");
@@ -233,3 +235,4 @@ function addHorizontalIcon(doc, iconPath, x, y) {
 function addHorizontalText(doc, text, x, y) {
     doc.text(text, x, y);
 }
+//# sourceMappingURL=spellcardPdfGenerator.js.map

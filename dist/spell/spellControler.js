@@ -171,3 +171,4 @@ class SpellController {
     }
 }
 exports.SpellController = SpellController;
+//# sourceMappingURL=spellControler.js.map

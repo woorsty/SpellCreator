@@ -17,22 +17,29 @@
       <!-- Weitere Klassen hier -->
     </select>
   </label>
-
-  <label>Stufe von:
+<br>
+  <label>Grad von:
     <select name="stufeVon">
       <% for (let i = 0; i <= 9; i++) { %>
         <option value="<%= i %>"><%= i %></option>
       <% } %>
     </select>
   </label>
-
-  <label>Stufe bis:
+<br>
+  <label>Grad bis:
     <select name="stufeBis">
       <% for (let i = 0; i <= 9; i++) { %>
         <option value="<%= i %>"><%= i %></option>
       <% } %>
     </select>
   </label>
-
+<br>
+<label>Sortiert nach:
+    <select name="sortiertNach">
+        <option value="name">Name</option>
+        <option value="stufe">Grad</option>
+    </select>
+    </label>
+<br>
   <button type="submit">PDF erzeugen</button>
 </form>
