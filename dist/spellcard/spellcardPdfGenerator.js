@@ -99,7 +99,7 @@ function estimateRenderedLineCount(text, maxLineLength = 50) {
     return totalLines;
 }
 function generateCardPDF(spells) {
-    const doc = new jspdf_1.jsPDF();
+    const doc = new jspdf_1.jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
     const allCards = [];
     for (const spell of spells) {
         const parts = splitSpellIntoCards(spell);

@@ -133,7 +133,7 @@ function estimateRenderedLineCount(
 }
 
 export function generateCardPDF(spells: Spell[]): jsPDF {
-  const doc = new jsPDF();
+  const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
 
   const allCards: Spellcard[] = [];
   for (const spell of spells) {
