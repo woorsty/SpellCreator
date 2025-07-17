@@ -11,4 +11,7 @@ export interface Invocation extends Model {
   [key: string]: any;
 }
 
-export const JsonFilePath = path.join(__dirname, "../../invocation.json");
+export const JsonFilePath = path.join(
+  __dirname,
+  "../../assets/invocation.json"
+);

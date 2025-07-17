@@ -10,7 +10,7 @@ const spellcardPdfGenerator_1 = require("./spellcardPdfGenerator");
 router.get("/", (req, res) => res.render("spellcardFilter"));
 router.get("/cards", (req, res) => {
     const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
-    const spells = JSON.parse(fs_1.default.readFileSync("./spells.json", "utf8"));
+    const spells = JSON.parse(fs_1.default.readFileSync("./assets/spells.json", "utf8"));
     const von = parseInt(stufeVon, 10);
     const bis = parseInt(stufeBis, 10);
     const filtered = spells.filter((spell) => {

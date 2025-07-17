@@ -19,4 +19,4 @@ export interface Spell extends Model {
   [key: string]: any;
 }
 
-export const JsonFilePath = path.join(__dirname, "../../spells.json");
+export const JsonFilePath = path.join(__dirname, "../../assets/spells.json");

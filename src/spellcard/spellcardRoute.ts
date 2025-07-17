@@ -8,7 +8,7 @@ router.get("/", (req, res) => res.render("spellcardFilter"));
 router.get("/cards", (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
   const spells = JSON.parse(
-    fs.readFileSync("./spells.json", "utf8")
+    fs.readFileSync("./assets/spells.json", "utf8")
   ) as Spell[];
 
   const von = parseInt(stufeVon as string, 10);

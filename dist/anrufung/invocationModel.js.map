@@ -1,1 +1,1 @@
-{"version":3,"file":"invocationModel.js","sourceRoot":"","sources":["../../src/anrufung/invocationModel.ts"],"names":[],"mappings":";;;;;;AAAA,gDAAwB;AAaX,QAAA,YAAY,GAAG,cAAI,CAAC,IAAI,CAAC,SAAS,EAAE,uBAAuB,CAAC,CAAC"}
+{"version":3,"file":"invocationModel.js","sourceRoot":"","sources":["../../src/anrufung/invocationModel.ts"],"names":[],"mappings":";;;;;;AAAA,gDAAwB;AAaX,QAAA,YAAY,GAAG,cAAI,CAAC,IAAI,CACnC,SAAS,EACT,8BAA8B,CAC/B,CAAC"}

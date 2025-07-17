@@ -1,0 +1,77 @@
+[
+  {
+    "Name": "Barbar",
+    "PrimaryAbility": "Stärke",
+    "HitDice": "1d12",
+    "SavingThrows": ["Stärke", "Konstitution"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Athletik",
+        "Einschüchtern",
+        "Mit Tieren umgehen",
+        "Naturkunde",
+        "Überlebenskunst",
+        "Wahrnehmung"
+      ],
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
+    },
+    "Equipment": [
+      "Zweihandaxt",
+      "4x Beil",
+      "Ein Schild",
+      "Entdeckerausrüstung",
+      "15 Gold"
+    ],
+    "ProficiencBonus": [
+      2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6
+    ],
+    "Features": [
+      {
+        "Name": "Kampfrausch",
+        "Description": "Du kannst dich mit einer Urmacht names Kampfrausch versehen, die dir für eine Minute zusätzliche Stärke und Zähigkeit gewährt. Du hast 2 Anwdendungen. Du kannst dich als Bonusaktion in Kampfrausch vesetzen, sofern du keine schwere Rüstung trägst. Wenn du eine kurze Rast beendest, erhälst du eine verbrauchte Anwendung zurück. Du erhälst alle verbrauchten Anwendungen nach einer Langen Rast zurück.\n-Schadensresistenz: Du bist gegen Hieb-, Stich und Wuchtschaden resistent.\n-Kampfrausch-Schaden: Wenn du einen Angriff ausführst, der Stärke erfordert - entweder mit einer Waffe oder als waffenloser Angriff -, und dem Ziel Schaden zufügst, erhöht sich der Schaden +2.\nStärkevorteil: Du bist bei Stärkewürfen und Stärkerettungswürfen im Vorteil.\nKeine Konzentration und keine Zauber: Du kannst keine Konzentration aufrechterhalten und keine Zauber wirken.\n-Wirkungsdauer: Der Kampfrausch währt bis zum Ende deines nächsten Zugs und endet vorzeitig, wenn du schwere Rüstung anlegst oder kampfunfähig wirst. Wenn dein Kampfrausch in deinem nächsten Zug noch aktiv ist, kannst du ihn um eine weitere Runde verlängern, indem du eine der folgenden Handlungen ausführst:\nFühre einen Angriffswurf gegen einen Genger aus.\nZwinge ein Gegner, einen Rettungswurf auszuführen.\nFühre eine Bonusaktion aus, um deinen Kampfrausch zu verlängern.\nWann immer der Kampfrausch verlängert wird, währt er bis zum Ende deines nächsten Zugs. Du kannst einen Kampfrausch bis zu zehn Minuten lang aufrecht erhalten.",
+        "Stufe": 1,
+        "HöhereStufe": "Der Schaden erhöht sich auf +3 ab Stufe 9 und +4 ab Stufe 16 und die Anzahl der Anwendungen erhöht sich auf 3 ab Stufe 3, 4 ab Stufe 6, 5 ab Stufe 12, 6 ab Stufe 17."
+      },
+      {
+        "Name": "UngerüsteteVerteidigung",
+        "Description": "Wenn du keine Rüstung trägst, beträgt deine Rüstungsklasse 10 + deinen Geschicklichkeitsmodifikator + deinen Konstitutionsmodifikator. Von diesem Vorzug profitierst du auch, wenn du einen Schild verwendest.",
+        "Stufe": 1
+      },
+      {
+        "Name": "Waffenmeisterung",
+        "Description": "Du erhälst Waffenmeisterung mit zwei Waffen deiner Wahl. Du kannst diese Meisterung jederzeit ändern, wenn du eine lange Rast beendest.",
+        "Stufe": 1,
+        "HöhereStufe": "Die Anzahl der Waffenmeisterungen erhöht sich auf 3 ab Stufe 4, 4 ab Stufe 10"
+      },
+      {
+        "Name": "Gefahrengespür",
+        "Description": "Du bekommst einen untrüglichen Sinn dafür, ob die Dinge so sind, wie sie sein sollten, sodass du Gefahren besser ausweichen kannst. Du bist bei Geschicklichkeitsrettungswürfen im Vorteil, sofern du nicht kampfunfähig bist.",
+        "Stufe": 2
+      },
+      {
+        "Name": "Rücksichtsloser Angriff",
+        "Description": "Du kannst deine Verteidung völlig außer Acht lassen und mit noch mehr Wildheit angreifen. Bei deinem ersten Angriffswurf in deinem Zug kannst du beschließen, einen Rücksichtslosen Angriff auszuführen. Damit sind deine Angriffswürfe, die Stärke erfordern, bis zum Beginn deines nächsten Zugs im Vorteil, doch Angriffswürfe gegen dich in dieser Zeit ebenfalls im Vorteil.",
+        "Stufe": 2
+      }
+    ],
+    "Subclasses": [
+      {
+        "Name": "Pfad des Berserkers",
+        "Description": "Barbaren, die den Pfad des Berserkers beschreiten, nutzen ihren Kampfrausch primär, um Gewalt auszuüben. Sie nutzen ungezügelte Wut und genießen das Chaos der Schlacht, während sie ihrem Kampfrausch gestatten, Besitz von ihnen zu ergreifen und sie zu ermächtigen.",
+        "Features": [
+          {
+            "Name": "Raserei",
+            "Description": "Wenn du in einem Kampfrausch deinen Rücksichtslosen Angriff einsetzt, fügst du dem ersten Ziel, das du in deinem Zug mit einem stärkebasierten Angriff triffst, zusätzlichen Schaden zu. Ermittle den zusätzlichen Schaden, indem du mit einer Anzahl von W6 in Höhe deines Kampfrausch-Schadensbonus würfelst und ihre Summe hinzufügst. Der Schaden ist vom selben Typ, wie jender der Angriff.",
+            "Stufe": 3
+          }
+        ]
+      },
+      {
+        "Name": "Pfad des Eiferers",
+        "Description": "Barbaren, die den Pfad des Eiferers beschreiten, erhalten Gaben von einer Gottheit oder einem Pantheon. Sie erleben ihren Kampfrausch als ekstatische Einheit mit einer Gottheit, die sie mit Macht erfüllt. Oft sind sie mit Priestern und anderen Anhängern ihrer Gottheit oder ihres Pnatheons verbündet."
+      }
+    ]
+  }
+]

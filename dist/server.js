@@ -9,6 +9,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const spellRoute_1 = __importDefault(require("./spell/spellRoute"));
 const invocationRoute_1 = __importDefault(require("./anrufung/invocationRoute"));
 const spellcardRoute_1 = __importDefault(require("./spellcard/spellcardRoute"));
+const classRouter_1 = __importDefault(require("./class/classRouter"));
 const app = (0, express_1.default)();
 const port = 3000;
 app.use(body_parser_1.default.json());
@@ -26,6 +27,7 @@ app.use(express_1.default.json());
 app.use("/spell", spellRoute_1.default);
 app.use("/invocation", invocationRoute_1.default);
 app.use("/spellcard", spellcardRoute_1.default);
+app.use("/class", classRouter_1.default);
 // app.use("/", express.static(path.join(__dirname, "../public"))); // Statischer Ordner
 app.use("/", express_1.default.static(path_1.default.join(__dirname, "./main"))); // Statischer Ordner
 app.listen(port, "::", () => {

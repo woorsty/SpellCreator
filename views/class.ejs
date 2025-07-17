@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= currentClass.Name %></title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            font-family: sans-serif;
+        }
+        h1 {
+            color: #ccc;
+        }
+        .filter-sort-options {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+        }
+        .filter-sort-options label {
+            display: inline-block;
+            margin-right: 10px;
+            color: #ddd;
+        }
+        .filter-sort-options select {
+            padding: 8px;
+            background-color: #444;
+            color: #f0f0f0;
+            border: 1px solid #777;
+            border-radius: 3px;
+            margin-right: 15px;
+        }
+        .filter-sort-options select[multiple] {
+            height: 80px; /* Genug Platz für mehrere Einträge */
+        }
+        .spell-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+        .spell-list-header p {
+            margin: 0;
+        }
+        .spell-list {
+            margin-top: 20px;
+        }
+        .spell-item {
+            border: 1px solid #555;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #333;
+        }
+        .spell-item h3 {
+            color: #ddd;
+            margin-top: 0;
+        }
+        .spell-item p {
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .spell-item .classes {
+            font-style: italic;
+            color: #bbb;
+        }
+        a {
+            color: #5cb85c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #stufeBisContainer {
+            display: none; /* Standardmäßig ausgeblendet */
+        }
+        .spell-text-container {
+            margin-top: 10px;
+            padding: 10px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            border: 1px solid #777;
+            border-radius: 3px;
+            background-color: #444;
+            color: #f0f0f0;
+            white-space: pre-wrap; /* Zeilenumbrüche im Text beibehalten */
+            position: relative; /* Für die optionale "Mehr anzeigen"-Überlagerung */
+            overflow: hidden;
+            max-height: 150px; /* Beispiel: Definiere die anfängliche Höhe */
+            transition: max-height 0.3s ease-out; /* Sanfte Animation beim Ausklappen */
+        }
+
+        .spell-text-container.expanded {
+            max-height: none; /* Entfernt die Höhenbegrenzung */
+        }
+
+        .spell-text-container::after {
+            content: ' ';
+            position: absolute;
+            color: #333;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)); /* Transparenter Farbverlauf */
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .filter-sort-options button[type="submit"] {
+            font-size: 1.2em; /* Größere Schrift */
+            padding: 12px 20px; /* Mehr Innenabstand */
+            margin-top: 10px; /* Etwas Abstand zu den Filterelementen darüber */
+            width: 100%; /* Volle Breite für einfacheres Tippen */
+            display: block; /* Button als Block-Element */
+        }
+        .filter-sort-options label {
+        display: block; /* Labels über den Auswahlfeldern anzeigen */
+        margin-bottom: 5px; /* Etwas Abstand zwischen Label und Feld */
+        font-size: 1em; /* Angemessene Schriftgröße */
+    }
+
+    #stufeBisContainer {
+        width: 100%;
+    }
+
+    .filter-sort-options div select, .filter-sort-options select {
+        width: 100%; /* Volle Breite für die Auswahlfelder */
+        padding: 10px; /* Angenehmer Innenabstand */
+        margin-bottom: 10px; /* Abstand zwischen den Auswahlfeldern */
+        font-size: 1em;
+        -webkit-appearance: none; /* Standard-Dropdown-Pfeil entfernen (für eigenes Styling) */
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Eigener Dropdown-Pfeil */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 1em;
+        border: 1px solid #777;
+        border-radius: 4px;
+        color: #f0f0f0;
+        background-color: #444;
+    }
+
+    .filter-sort-options select[multiple] {
+        height: auto; /* Höhe automatisch anpassen */
+    }
+
+    .filter-sort-options br {
+        display: none; /* Zeilenumbrüche entfernen, da Labels jetzt block sind */
+    }
+
+        .spell-text-container.expanded::after {
+            content: '';
+            opacity: 0;
+        }
+
+        .spell-text-container p.spell-text-label {
+            margin-top: 0; /* Oberen Margin entfernen, falls vorhanden */
+            font-weight: bold;
+            color: #bbb;
+        }
+
+        .spell-text-container p.spell-text-value {
+            margin-bottom: 0; /* Unteren Margin entfernen, falls vorhanden */
+        }
+
+        .spell-text-container .spell-list-items {
+            list-style-type: disc; /* Oder eine andere Listenpunkt-Art */
+            padding-left: 20px; /* Einrückung für die Liste */
+        }
+        .spell-text-container .spell-list-items li {
+        }
+        .spell-text-container p {
+            white-space: pre-wrap; /* Zeilenumbrüche beibehalten */
+        }
+        .spell-text-container.expanded-short::after {
+            content: '';
+            opacity: 0;
+            display: none; /* Zusätzlich ausblenden, um sicherzugehen */
+        }
+
+        /* Akzentfarbe für Buttons */
+        .filter-sort-options button[type="submit"] {
+    background-color: #4cae4c; /* Dunkleres Grün */
+    border-color: #398439;
+    color: #fff; /* Weißer Text für besseren Kontrast */
+}
+
+.filter-sort-options button[type="submit"]:hover {
+    background-color: #398439;
+}
+
+        /* Akzentfarbe für Links */
+        a {
+            color: #5bc0de;
+        }
+
+        a:hover {
+            color: #46b8da;
+        }
+
+        /* Akzentfarbe für Zaubernamen */
+        .spell-item h3 {
+            color: #8ab4f8; /* Beispiel: Orange */
+        }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Hintergrundfarbe für den fixierten Bereich */
+            color: #f0f0f0;
+            z-index: 100; /* Stellt sicher, dass er über anderen Inhalten liegt */
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optionaler Schatten */
+        }
+
+        .collapse-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #444;
+            color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .collapse-button::after {
+            content: '\25BE'; /* Unicode für einen nach unten zeigenden Pfeil */
+            float: right;
+        }
+
+        .collapse-button.expanded::after {
+            content: '\25B4'; /* Unicode für einen nach oben zeigenden Pfeil */
+        }
+
+        .filter-sort-options {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+            padding: 0 15px; /* Anfangs kein vertikales Padding */
+        }
+
+        .filter-sort-options.expanded {
+            max-height: 500px; /* Beispielhöhe */
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .filter-sort-options label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .filter-sort-options select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+            border: 1px solid #777;
+            border-radius: 4px;
+            color: #f0f0f0;
+            background-color: #444;
+        }
+
+        #spell-search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #777;
+            border-radius: 4px;
+            background-color: #444;
+            color: #f0f0f0;
+            font-size: 1em;
+            box-sizing: border-box; /* Wichtig, damit Padding die Breite nicht beeinflusst */
+        }
+
+        #spell-search::placeholder {
+            color: #aaa;
+        }
+
+        .filter-sort-options select[multiple] {
+            height: auto;
+        }
+
+        .filter-sort-options br {
+            display: none;
+        }
+
+        .filter-sort-options button[type="submit"] {
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: auto; /* Standardbreite */
+            display: inline-block; /* Standardanzeige */
+            margin-top: 10px;
+        }
+
+        .filter-sort-options button[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .spell-item .spell-meta {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: 0.2em;
+            margin-bottom: 0.5em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+     <div class="filter-sort-container fixed-top">
+     <a href="/class">Zurück</a>
+
+    <br/>
+
+    <h1><%= currentClass.Name %></h1>
+
+    </div>
+
+    <div class="spell-list">
+        <% if (currentClass && currentClass.Features.length > 0) { %>
+            <% currentClass.Features.forEach(feature => { %>
+                <div class="spell-item">
+                     <h3><%= feature.Name %></h3>
+                    <p class="spell-meta">
+                         <%= "Stufe: " + feature.Stufe %>
+                    </p>
+                    <div class="spell-text-container"><%- locals.renderMarkdown(feature.Description) %></div>
+                    <% if (feature.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= feature.HöhereLevel %></p><% } %>
+                <a href="/class/<%= currentClass.Name %>/edit/" class="spell-link">Bearbeiten</a>
+                </div>
+                <% }); %>
+        <% } else { %>
+            <p>Es sind noch keine Klassen gespeichert.</p>
+        <% } %>
+    </div>
+    <script>
+        // Spell-Text-Container Expand/Collapse
+            const spellTextContainers = document.querySelectorAll('.spell-text-container');
+            spellTextContainers.forEach(container => {
+                // Prüfen, ob der Inhalt die max-height überschreitet
+                if (container.scrollHeight > container.offsetHeight) {
+                    container.addEventListener('click', function() {
+                        this.classList.toggle('expanded');
+                    });
+                } else {
+                    // Pseudo-Element stilistisch entfernen, da direkter Zugriff nicht möglich ist
+                    const afterElement = window.getComputedStyle(container, '::after');
+                    if (afterElement.content !== 'none') {
+                        container.classList.add('expanded-short');
+                    }
+                }
+            });
+    </script>
+</body>
+</html>

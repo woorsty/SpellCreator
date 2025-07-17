@@ -40,19 +40,19 @@ const fs = __importStar(require("fs/promises"));
 const path_1 = __importDefault(require("path"));
 async function readJsonFile(filePath) {
     try {
-        const fileContent = await fs.readFile(filePath, 'utf-8');
+        const fileContent = await fs.readFile(filePath, "utf-8");
         return JSON.parse(fileContent);
     }
     catch (error) {
-        console.error('Fehler beim Lesen der JSON-Datei:', error);
+        console.error("Fehler beim Lesen der JSON-Datei:", error);
         throw error;
     }
 }
 async function displaySpellData(data) {
     if (data && data.spells) {
-        console.log('Daten aus der JSON-Datei:');
+        console.log("Daten aus der JSON-Datei:");
         for (const spell of data.spells) {
-            console.log('\n--------------------');
+            console.log("\n--------------------");
             console.log(`Name: ${spell.Name}`);
             console.log(`Stufe: ${spell.Stufe}`);
             console.log(`Schule: ${spell.Schule}`);
@@ -75,19 +75,19 @@ async function displaySpellData(data) {
                 console.log(`Material: ${spell.Material}`);
             }
             console.log(`Text: ${spell.Text.substring(0, 50)}...`); // Nur die ersten 50 Zeichen anzeigen
-            console.log(`Klasse: ${spell.Klasse.join(', ')}`);
+            console.log(`Klasse: ${spell.Klasse.join(", ")}`);
             if (spell.HöhereLevel) {
                 console.log(`Höhere Level: ${spell.HöhereLevel}`);
             }
         }
-        console.log('\n--------------------');
+        console.log("\n--------------------");
     }
     else {
-        console.log('Die JSON-Datei enthält keine gültigen Zauberdaten.');
+        console.log("Die JSON-Datei enthält keine gültigen Zauberdaten.");
     }
 }
 async function main() {
-    const jsonFilePath = path_1.default.join(__dirname, '../spells.json'); // Pfad zur JSON-Datei
+    const jsonFilePath = path_1.default.join(__dirname, "../assets/spells.json"); // Pfad zur JSON-Datei
     try {
         const spellData = await readJsonFile(jsonFilePath);
         await displaySpellData(spellData);
