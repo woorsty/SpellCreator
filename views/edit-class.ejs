@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zauber bearbeiten: <%= spell.Name %>
+    <title>Klassen-Feature bearbeiten: <%= feature.Name %>
     </title>
     <style>
         body {
@@ -74,68 +74,27 @@
 </head>
 
 <body>
-    <h1>Zauber bearbeiten: <%= spell.Name %>
+    <h1>Zauber bearbeiten: <%= feature.Name %>
     </h1>
-    <form action="<%= spell.Name %>" method="POST">
+    <form action="<%= feature.Name %>" method="POST">
         <div>
             <label for="Stufe">Stufe:</label>
-            <input type="number" id="Stufe" name="Stufe" value="<%= spell.Stufe %>" required><br>
+            <input type="number" id="Stufe" name="Stufe" value="<%= feature.Stufe %>" required><br>
         </div>
         <div>
             <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name" value="<%= spell.Name %>" required><br>
+            <input type="text" id="Name" name="Name" value="<%= feature.Name %>" required><br>
         </div>
         <div>
-            <label for="Schule">Schule:</label>
-            <input type="text" id="Schule" name="Schule" value="<%= spell.Schule %>" required><br>
+            <label for="Text">Beschreibung:</label>
+            <textarea id="Text" name="Text" required><%= feature.Description %></textarea><br>
         </div>
         <div>
-            <label for="Zeitaufwand">Zeitaufwand:</label>
-            <input type="text" id="Zeitaufwand" name="Zeitaufwand" value="<%= spell.Zeitaufwand %>" required><br>
-        </div>
-        <div>
-            <label for="Reichweite">Reichweite:</label>
-            <input type="text" id="Reichweite" name="Reichweite" value="<%= spell.Reichweite %>" required><br>
-        </div>
-        <div>
-            <label for="Konzentration">Konzentration:</label>
-            <input type="checkbox" id="Konzentration" name="Konzentration" <%=spell.Konzentration ? 'checked' : ''
-                %>><br>
-        </div>
-        <div>
-            <label for="Dauer">Dauer:</label>
-            <input type="text" id="Dauer" name="Dauer" value="<%= spell.Dauer %>" required><br>
-        </div>
-        <div>
-            <label for="Ritual">Ritual:</label>
-            <input type="checkbox" id="Ritual" name="Ritual" <%=spell.Ritual ? 'checked' : '' %>><br>
-        </div>
-        <div>
-            <label for="Verbal">Verbal:</label>
-            <input type="checkbox" id="Verbal" name="Verbal" <%=spell.Verbal ? 'checked' : '' %>><br>
-        </div>
-        <div>
-            <label for="Gestik">Gestik:</label>
-            <input type="checkbox" id="Gestik" name="Gestik" <%=spell.Gestik ? 'checked' : '' %>><br>
-        </div>
-        <div>
-            <label for="Material">Material:</label>
-            <textarea id="Material" name="Material"><%= spell.Material %></textarea><br>
-        </div>
-        <div>
-            <label for="Text">Text:</label>
-            <textarea id="Text" name="Text" required><%= spell.Text %></textarea><br>
-        </div>
-        <div>
-            <label for="Klasse">Klasse (Komma-separiert):</label>
-            <input type="text" id="Klasse" name="Klasse" value="<%= spell.Klasse.join(', ') %>" required><br>
-        </div>
-        <div>
-            <label for="HöhereLevel">Höhere Level:</label>
-            <textarea id="HöhereLevel" name="HöhereLevel"><%= spell.HöhereLevel %></textarea><br>
+            <label for="HöhereStufe">Höhere Stufen:</label>
+            <textarea id="HöhereStufe" name="HöhereStufe"><%= feature.HöhereStufe %></textarea><br>
         </div>
         <button type="submit">Änderungen speichern</button>
-        <p><a href="/spell">Zurück zur Zauberliste</a></p>
+        <p><a href="/class">Zurück zur Klassenliste</a></p>
     </form>
 </body>
 

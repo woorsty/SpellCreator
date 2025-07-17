@@ -9,21 +9,22 @@ export type Class = {
   Features: ClassFeature[];
 };
 
-type Proficience = {
+export type Proficience = {
   Skills: string[];
   Armor: string[];
   Weapons: string[];
   SkillNumber: number;
 };
 
-type ClassFeature = {
+export type ClassFeature = {
   Name: string;
   Description: string;
   Level: number;
   HigherLevels?: string;
+  Reference?: string;
 };
 
-type Subclass = {
+export type Subclass = {
   Name: string;
   Description: string;
   Features: ClassFeature[];

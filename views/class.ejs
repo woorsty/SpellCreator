@@ -353,8 +353,8 @@
                          <%= "Stufe: " + feature.Stufe %>
                     </p>
                     <div class="spell-text-container"><%- locals.renderMarkdown(feature.Description) %></div>
-                    <% if (feature.HöhereLevel) { %><p><strong>Auf höheren Stufen:</strong> <%= feature.HöhereLevel %></p><% } %>
-                <a href="/class/<%= currentClass.Name %>/edit/" class="spell-link">Bearbeiten</a>
+                    <% if (feature.HöhereStufe) { %><p><strong>Auf höheren Stufen:</strong> <%= feature.HöhereStufe %></p><% } %>
+                <a href="/class/<%= currentClass.Name %>/<%= feature.Name %>/edit/" class="spell-link">Bearbeiten</a>
                 </div>
                 <% }); %>
         <% } else { %>

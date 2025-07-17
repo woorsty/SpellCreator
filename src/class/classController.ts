@@ -1,5 +1,5 @@
 import { Util } from "../util";
-import { Class } from "./class";
+import { Class, ClassFeature } from "./class";
 import express, { Request, Response } from "express";
 import path from "path";
 
@@ -34,17 +34,47 @@ export class ClassController {
     }
   }
 
-  static async getAddForm(req: Request, res: Response) {}
+  static async getAddForm(req: Request, res: Response) {
+    res.render("add-class.ejs", { className: req.params.name });
+  }
 
-  static async add(req: Request, res: Response) {}
+  static async add(req: Request, res: Response) {
+    const { Stufe, Name, Text, HöhereLevel, Referenz } = req.body as any;
+
+    const classFeature: ClassFeature = {
+      Name: Name,
+      Level: Stufe,
+      Description: Text,
+      HigherLevels: HöhereLevel,
+      Reference: Referenz,
+    };
+
+    const classesData = await Util.readJsonFile<Class>(
+      ClassController.jsonFilepath
+    );
+
+    classesData.forEach((cls) => {
+      if (cls.Name.toLowerCase() === req.params.name.toLowerCase()) {
+        cls.Features.push(classFeature);
+      }
+    });
+    await Util.writeJsonFile(classesData, ClassController.jsonFilepath);
+    res.statusCode = 303;
+    res.setHeader("Location", "/class/" + req.body.Klasse + "/add");
+    res.end();
+  }
 
   static async edit(req: Request, res: Response) {}
 
   static async getEditForm(req: Request, res: Response) {
     const className = req.params.name;
-    const cls = ClassController.getCls(className);
-    if (cls) {
-      res.render("edit-class", { class: cls });
+    const featureName = req.params.feature;
+    const cls = await ClassController.getCls(className);
+    const feature = cls?.Features.find(
+      (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+    );
+    if (cls && feature) {
+      res.render("edit-class", { feature: feature });
     } else {
       res.status(404).send("Klasse nicht gefunden");
     }

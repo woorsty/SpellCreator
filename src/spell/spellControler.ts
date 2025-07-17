@@ -174,7 +174,7 @@ export class SpellController {
   }
 
   static async getAddForm(req: Request, res: Response) {
-    res.sendFile(path.join(__dirname, "../../public/add-spell.html"));
+    res.render("add-spell.ejs");
   }
 
   static async checkSpellData(req: Request, res: Response) {

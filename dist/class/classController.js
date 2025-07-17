@@ -27,14 +27,37 @@ class ClassController {
             res.status(404).send("Klasse nicht gefunden");
         }
     }
-    static async getAddForm(req, res) { }
-    static async add(req, res) { }
+    static async getAddForm(req, res) {
+        res.render("add-class.ejs", { className: req.params.name });
+    }
+    static async add(req, res) {
+        const { Stufe, Name, Text, HöhereLevel, Referenz } = req.body;
+        const classFeature = {
+            Name: Name,
+            Level: Stufe,
+            Description: Text,
+            HigherLevels: HöhereLevel,
+            Reference: Referenz,
+        };
+        const classesData = await util_1.Util.readJsonFile(ClassController.jsonFilepath);
+        classesData.forEach((cls) => {
+            if (cls.Name.toLowerCase() === req.params.name.toLowerCase()) {
+                cls.Features.push(classFeature);
+            }
+        });
+        await util_1.Util.writeJsonFile(classesData, ClassController.jsonFilepath);
+        res.statusCode = 303;
+        res.setHeader("Location", "/class/" + req.body.Klasse + "/add");
+        res.end();
+    }
     static async edit(req, res) { }
     static async getEditForm(req, res) {
         const className = req.params.name;
-        const cls = ClassController.getCls(className);
-        if (cls) {
-            res.render("edit-class", { class: cls });
+        const featureName = req.params.feature;
+        const cls = await ClassController.getCls(className);
+        const feature = cls?.Features.find((f) => f.Name.toLowerCase() === featureName.toLowerCase());
+        if (cls && feature) {
+            res.render("edit-class", { feature: feature });
         }
         else {
             res.status(404).send("Klasse nicht gefunden");

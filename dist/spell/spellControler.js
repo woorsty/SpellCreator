@@ -1,12 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpellController = void 0;
 const util_1 = require("../util");
 const spellChecker_1 = require("./spellChecker");
-const path_1 = __importDefault(require("path"));
 const spellModel_1 = require("./spellModel");
 class SpellController {
     static async getAll(req, res) {
@@ -153,7 +149,7 @@ class SpellController {
         }
     }
     static async getAddForm(req, res) {
-        res.sendFile(path_1.default.join(__dirname, "../../public/add-spell.html"));
+        res.render("add-spell.ejs");
     }
     static async checkSpellData(req, res) {
         const errors = await spellChecker_1.SpellChecker.checkSpellData();
