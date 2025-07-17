@@ -74,9 +74,9 @@
 </head>
 
 <body>
-    <h1>Zauber bearbeiten: <%= feature.Name %>
+    <h1>Feature bearbeiten: <%= feature.Name %>
     </h1>
-    <form action="<%= feature.Name %>" method="POST">
+    <form action="../../<%= feature.Name %>/edit" method="POST">
         <div>
             <label for="Stufe">Stufe:</label>
             <input type="number" id="Stufe" name="Stufe" value="<%= feature.Stufe %>" required><br>
@@ -92,6 +92,10 @@
         <div>
             <label for="HöhereStufe">Höhere Stufen:</label>
             <textarea id="HöhereStufe" name="HöhereStufe"><%= feature.HöhereStufe %></textarea><br>
+        </div>
+        <div>
+            <label for="Referenz">Referenz:</label>
+            <input type="text" id="Referenz" name="Referenz" value="<%= feature.Referenz %>" /><br /><br />
         </div>
         <button type="submit">Änderungen speichern</button>
         <p><a href="/class">Zurück zur Klassenliste</a></p>

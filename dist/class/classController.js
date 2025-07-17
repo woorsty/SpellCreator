@@ -12,7 +12,11 @@ class ClassController {
         return classData.find((cls) => cls.Name.toLowerCase() === name.toLowerCase());
     }
     static async getAll(req, res) {
-        const classData = await util_1.Util.readJsonFile(this.jsonFilepath);
+        const classData = await util_1.Util.readJsonFile(ClassController.jsonFilepath);
+        res.render("class-list", {
+            classes: classData,
+            renderMarkdown: util_1.Util.renderMarkdown,
+        });
     }
     static async get(req, res) {
         const className = req.params.name;
@@ -31,12 +35,12 @@ class ClassController {
         res.render("add-class.ejs", { className: req.params.name });
     }
     static async add(req, res) {
-        const { Stufe, Name, Text, HöhereLevel, Referenz } = req.body;
+        const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body;
         const classFeature = {
             Name: Name,
-            Level: Stufe,
+            Stufe: Stufe,
             Description: Text,
-            HigherLevels: HöhereLevel,
+            HöhereStufe: HöhereStufe,
             Reference: Referenz,
         };
         const classesData = await util_1.Util.readJsonFile(ClassController.jsonFilepath);
@@ -50,7 +54,27 @@ class ClassController {
         res.setHeader("Location", "/class/" + req.body.Klasse + "/add");
         res.end();
     }
-    static async edit(req, res) { }
+    static async edit(req, res) {
+        const className = req.params.name;
+        const featureName = req.params.feature;
+        const { Stufe, HöhereStufe, Referenz, Text } = req.body;
+        const classesData = await util_1.Util.readJsonFile(ClassController.jsonFilepath);
+        classesData.forEach((cls) => {
+            if (cls.Name.toLowerCase() === className.toLowerCase()) {
+                const feature = cls.Features.find((f) => f.Name.toLowerCase() === featureName.toLowerCase());
+                if (feature) {
+                    feature.Description = Text;
+                    feature.Stufe = Stufe;
+                    feature.HöhereStufe = HöhereStufe;
+                    feature.Reference = Referenz;
+                }
+            }
+        });
+        await util_1.Util.writeJsonFile(classesData, ClassController.jsonFilepath);
+        res.statusCode = 303;
+        res.setHeader("Location", `/class/${className}`);
+        res.end();
+    }
     static async getEditForm(req, res) {
         const className = req.params.name;
         const featureName = req.params.feature;

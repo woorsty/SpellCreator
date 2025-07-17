@@ -19,8 +19,8 @@ export type Proficience = {
 export type ClassFeature = {
   Name: string;
   Description: string;
-  Level: number;
-  HigherLevels?: string;
+  Stufe: number;
+  HöhereStufe?: string;
   Reference?: string;
 };
 

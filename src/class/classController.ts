@@ -18,7 +18,13 @@ export class ClassController {
   }
 
   static async getAll(req: Request, res: Response) {
-    const classData = await Util.readJsonFile<Class>(this.jsonFilepath);
+    const classData = await Util.readJsonFile<Class>(
+      ClassController.jsonFilepath
+    );
+    res.render("class-list", {
+      classes: classData,
+      renderMarkdown: Util.renderMarkdown,
+    });
   }
 
   static async get(req: Request, res: Response) {
@@ -39,13 +45,13 @@ export class ClassController {
   }
 
   static async add(req: Request, res: Response) {
-    const { Stufe, Name, Text, HöhereLevel, Referenz } = req.body as any;
+    const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body as any;
 
     const classFeature: ClassFeature = {
       Name: Name,
-      Level: Stufe,
+      Stufe: Stufe,
       Description: Text,
-      HigherLevels: HöhereLevel,
+      HöhereStufe: HöhereStufe,
       Reference: Referenz,
     };
 
@@ -64,7 +70,35 @@ export class ClassController {
     res.end();
   }
 
-  static async edit(req: Request, res: Response) {}
+  static async edit(req: Request, res: Response) {
+    const className = req.params.name;
+    const featureName = req.params.feature;
+    const { Stufe, HöhereStufe, Referenz, Text } = req.body as any;
+
+    const classesData = await Util.readJsonFile<Class>(
+      ClassController.jsonFilepath
+    );
+
+    classesData.forEach((cls) => {
+      if (cls.Name.toLowerCase() === className.toLowerCase()) {
+        const feature = cls.Features.find(
+          (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+        );
+
+        if (feature) {
+          feature.Description = Text;
+          feature.Stufe = Stufe;
+          feature.HöhereStufe = HöhereStufe;
+          feature.Reference = Referenz;
+        }
+      }
+    });
+
+    await Util.writeJsonFile(classesData, ClassController.jsonFilepath);
+    res.statusCode = 303;
+    res.setHeader("Location", `/class/${className}`);
+    res.end();
+  }
 
   static async getEditForm(req: Request, res: Response) {
     const className = req.params.name;

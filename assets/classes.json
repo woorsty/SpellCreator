@@ -2,7 +2,7 @@
   {
     "Name": "Barbar",
     "PrimaryAbility": "Stärke",
-    "HitDice": "1d12",
+    "HitDice": "1W12",
     "SavingThrows": ["Stärke", "Konstitution"],
     "Proficiencies": {
       "SkillNumber": 2,
@@ -23,9 +23,6 @@
       "Ein Schild",
       "Entdeckerausrüstung",
       "15 Gold"
-    ],
-    "ProficiencBonus": [
-      2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6
     ],
     "Features": [
       {
@@ -54,6 +51,13 @@
         "Name": "Rücksichtsloser Angriff",
         "Description": "Du kannst deine Verteidung völlig außer Acht lassen und mit noch mehr Wildheit angreifen. Bei deinem ersten Angriffswurf in deinem Zug kannst du beschließen, einen Rücksichtslosen Angriff auszuführen. Damit sind deine Angriffswürfe, die Stärke erfordern, bis zum Beginn deines nächsten Zugs im Vorteil, doch Angriffswürfe gegen dich in dieser Zeit ebenfalls im Vorteil.",
         "Stufe": 2
+      },
+      {
+        "Name": "Urwissen",
+        "Stufe": "3",
+        "Description": "TODO wasrweraw",
+        "HöhereStufe": "",
+        "Reference": "Blitz"
       }
     ],
     "Subclasses": [
@@ -70,7 +74,613 @@
       },
       {
         "Name": "Pfad des Eiferers",
-        "Description": "Barbaren, die den Pfad des Eiferers beschreiten, erhalten Gaben von einer Gottheit oder einem Pantheon. Sie erleben ihren Kampfrausch als ekstatische Einheit mit einer Gottheit, die sie mit Macht erfüllt. Oft sind sie mit Priestern und anderen Anhängern ihrer Gottheit oder ihres Pnatheons verbündet."
+        "Description": "Barbaren, die den Pfad des Eiferers beschreiten, erhalten Gaben von einer Gottheit oder einem Pantheon. Sie erleben ihren Kampfrausch als ekstatische Einheit mit einer Gottheit, die sie mit Macht erfüllt. Oft sind sie mit Priestern und anderen Anhängern ihrer Gottheit oder ihres Pnatheons verbündet.",
+        "Features": []
+      },
+      {
+        "Name": "Pfad des Weltenbaums",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Pfad des Wilden Herzens",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Barde",
+    "PrimaryAbility": "Charisma",
+    "HitDice": "1W8",
+    "SavingThrows": ["Geschicklichkeit", "Charisma"],
+    "Proficiencies": {
+      "SkillNumber": 3,
+      "Skills": [
+        "Akrobatik",
+        "Arkane Kunde",
+        "Athletik",
+        "Einschüchtern",
+        "Fingerfertigkeit",
+        "Geschichte",
+        "Heilkunde",
+        "Heimlichkeit",
+        "Mit Tieren umgehen",
+        "Motiv erkennen",
+        "Nachforschen",
+        "Naturkunde",
+        "Religion",
+        "Täuschen",
+        "Überlebenskunst",
+        "Überzeugen",
+        "Wahrnehmung"
+      ],
+      "Equipment": ["Wähle 3 Musikinstrumente aus"],
+      "Weapons": ["Einfache Waffen"],
+      "Armor": ["Leichte Rüstungen"]
+    },
+    "Equipment": [
+      "Lederüstung",
+      "Zwei Dolche",
+      "Musikinstrument deiner Wahl",
+      "Unterhaltungskünstler-Ausrüstung",
+      "19 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Schule des Tanzes",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schule des Wagemuts",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schule des Wissens",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schule des Zauberbanns",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Druide",
+    "PrimaryAbility": "Weisheit",
+    "HitDice": "1W8",
+    "SavingThrows": ["Weisheit", "Integlligenz"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Arkane Kunde",
+        "Heilkunde",
+        "Mit Tieren umgehen",
+        "Motiv erkennen",
+        "Naturkunde",
+        "Überlebenskunst",
+        "Wahrnehmung"
+      ],
+      "Armor": ["Leichte Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen"],
+      "Equipment": ["Kräuterkundeausrüstung"]
+    },
+    "Equipment": [
+      "Lederüstung",
+      "Schild",
+      "Sichel",
+      "Druidischer Fokus (Kampfstab)",
+      "Entdeckerausrüstung",
+      "Kräuterkundeausrüstung",
+      "9 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Zirkel des Landes",
+        "Description": "",
+        "Features": []
+      },
+
+      {
+        "Name": "Zirkel des Meeres",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Zirkel des Mondes",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Zirkel der Sterne",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Hexenmeister",
+    "PrimaryAbility": "Charisma",
+    "HitDice": "1W8",
+    "SavingThrows": ["Weisheit", "Charisma"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Arkane Kunde",
+        "Einschüchtern",
+        "Geschichte",
+        "Nachforschungen",
+        "Naturkunde",
+        "Religion",
+        "Täuschen"
+      ],
+      "Armor": ["Leichte Rüstungen"],
+      "Weapons": ["Einfache Waffen"]
+    },
+    "Equipment": [
+      "Lederüstung",
+      "Sichel",
+      "Zwei Dolche",
+      "Arkaner Fokus (Kugel)",
+      "Buch (okkulte Überlieferungen)",
+      "Gelehrtenausrüstung",
+      "15 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Celestischer Schutzherr",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Erzfee-Schutzherr",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Großer Alter Schutzherr",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Unhold-Schutzherr",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Kämpfer",
+    "PrimaryAbility": "Stärke",
+    "HitDice": "1W10",
+    "SavingThrows": ["Stärke", "Konstitution"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Akrobatik",
+        "Athletik",
+        "Einschüchtern",
+        "Geschichte",
+        "Mit Tieren umgehen",
+        "Motiv erkennen",
+        "Überlebenskunst",
+        "Überzeugen",
+        "Wahrnehmung"
+      ],
+      "Armor": [
+        "Leichte Rüstungen",
+        "Mittelschwere Rüstungen",
+        "Schwere Rütungen",
+        "Schilde"
+      ],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
+    },
+    "Equipment": [
+      "Kettenpanzer",
+      "Zweihandschwert",
+      "Flegel",
+      "Acht Wurfspeere",
+      "Gewölbeforscherausrüstung",
+      "4 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Champion",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Kampfmeister",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Mystischer Ritter",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Psi-Krieger",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Kleriker",
+    "PrimaryAbility": "Weisheit",
+    "HitDice": "1W8",
+    "SavingThrows": ["Weisheit", "Charisma"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Geschichte",
+        "Heilkunde",
+        "Motiv erkennen",
+        "Religion",
+        "Überzeugen"
+      ],
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen"]
+    },
+    "Equipment": [
+      "Kettenhemd",
+      "Schild",
+      "Streitkolben",
+      "Heiliges Symbol",
+      "Priesterausrüstung",
+      "7 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Domäne des Krieges",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Domäne des Lebens",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Domäne des Lichts",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Domäne der List",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Magier",
+    "PrimaryAbility": "Intelligenz",
+    "HitDice": "1W6",
+    "SavingThrows": ["Intelligenz", "Weisheit"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Arkane Kunde",
+        "Geschichte",
+        "Heilkunde",
+        "Motiv erkennen",
+        "Nachforschen",
+        "Naturkunde",
+        "Religion"
+      ],
+      "Armor": ["Keine"],
+      "Weapons": ["Einfache Waffen"]
+    },
+    "Equipment": [
+      "Zwei Dolche",
+      "Arkaner Fokus (Kampfstab)",
+      "Robe",
+      "Zauberbuch",
+      "Gelehrtenausrüstung",
+      "5 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Bannmagier",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Hervorrufer",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Illusionist",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Seher",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Mönch",
+    "PrimaryAbility": ["Geschicklichkeit", "Weisheit"],
+    "HitDice": "1W8",
+    "SavingThrows": ["Stärke", "Geschicklichkeit"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Akrobatik",
+        "Geschichte",
+        "Heimlichkeit",
+        "Motiv erkennen",
+        "Religion"
+      ],
+      "Armor": ["Keine"],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen mit der Eigenschaft Leicht"],
+      "Equipment": ["Wähle eine Art von Handwerkszeug oder ein Musikinstrument"]
+    },
+    "Equipment": [
+      "Speer",
+      "Fünf Dolche",
+      "Handwerkszeug oder Musikinstrument",
+      "Entdeckerausrüstung",
+      "11 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Krieger der Elemente",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Krieger der Gnade",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Krieger der offenen Hand",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Krieger der Schatten",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Paladin",
+    "PrimaryAbility": ["Stärke", "Charisma"],
+    "HitDice": "1W10",
+    "SavingThrows": ["Weisheit", "Charisma"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Athletik",
+        "Einschüchtern",
+        "Heilkunde",
+        "Motiv erkennen",
+        "Religion",
+        "Überzeugen"
+      ],
+      "Armor": [
+        "Leichte Rüstungen",
+        "Mittelschwere Rüstungen",
+        "Schwere Rüstungen",
+        "Schilde"
+      ],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
+    },
+    "Equipment": [
+      "Kettenpanzer",
+      "Schild",
+      "Langschwert",
+      "Sechs Wurfspeere",
+      "Heiliges Symbol",
+      "Priesterausrüstung",
+      "9 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Schwur der Alten",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schwur der Rache",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schwur der Hingabe",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Schwur des Ruhms",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Schurke",
+    "PrimaryAbility": "Geschicklichkeit",
+    "HitDice": "1W8",
+    "SavingThrows": ["Geschicklichkeit", "Intelligenz"],
+    "Proficiencies": {
+      "SkillNumber": 4,
+      "Skills": [
+        "Akrobatik",
+        "Athletik",
+        "Einschüchtern",
+        "Fingerfertigkeit",
+        "Heimlichkeit",
+        "Motiv erkennen",
+        "Nachforschungen",
+        "Täuschen",
+        "Überlebenskunst",
+        "Wahrnehmung"
+      ],
+      "Weapons": [
+        "Einfache Waffen",
+        "Kriegswaffen mit der Eigenschaft Finesse oder Leicht"
+      ],
+      "Armor": ["Leichte Rüstungen"],
+      "Equipment": ["Diebeswerkzeug"]
+    },
+    "Equipment": [
+      "Lederrüstung",
+      "Zwei Dolche",
+      "Kurzschwert",
+      "Kurzbogen",
+      "20 Pfeile",
+      "Köcher",
+      "Diebeswerkzeug",
+      "Einbrecherwerkzeug",
+      "8 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Arkander Betrüger",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Assassine",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Dieb",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Seelenmesser",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Waldläufer",
+    "PrimaryAbility": ["Geschicklichkeit", "Weisheit"],
+    "HitDice": "1W10",
+    "SavingThrows": ["Stärke", "Geschicklichkeit"],
+    "Proficiencies": {
+      "SkillNumber": 3,
+      "Skills": [
+        "Athletik",
+        "Heimlichkeit",
+        "Mit Tieren umgehen",
+        "Motiv erkennen",
+        "Nachforschungen",
+        "Naturkunde",
+        "Überlebenskunst",
+        "Wahrnehmung"
+      ],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"],
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"]
+    },
+    "Equipment": [
+      "Beschlagene Lederrüstung",
+      "Krummsäbel",
+      "Kurzschwert",
+      "Langbogen",
+      "20 Pfeile",
+      "Köcher",
+      "Druidischer Fokus (Mistelzweig)",
+      "Entdeckerausrüstung",
+      "7 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Düsterpirscher",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Feenwanderer",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Herr der Tiere",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Jäger",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Zauberer",
+    "PrimaryAbility": ["Charisma"],
+    "HitDice": "1W6",
+    "SavingThrows": ["Konstitution", "Charisma"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Arkane Kunde",
+        "Einschüchtern",
+        "Motiv erkennen",
+        "Religion",
+        "Täuschen",
+        "Überzeugen"
+      ],
+      "Weapons": ["Einfache Waffen"],
+      "Armor": ["Keine"]
+    },
+    "Equipment": [
+      "Speer",
+      "Zwei Dolche",
+      "Arkaner Fokus (Kristall)",
+      "Gewölbeforscherausrüstung",
+      "28 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Name": "Aberrante Zauberei",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Drakonische Zauberei",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Uhrwerk Zauberei",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Name": "Wilde-Magie Zauberei",
+        "Description": "",
+        "Features": []
       }
     ]
   }
