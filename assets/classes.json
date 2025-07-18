@@ -62,6 +62,7 @@
     ],
     "Subclasses": [
       {
+        "Id": "berserker",
         "Name": "Pfad des Berserkers",
         "Description": "Barbaren, die den Pfad des Berserkers beschreiten, nutzen ihren Kampfrausch primär, um Gewalt auszuüben. Sie nutzen ungezügelte Wut und genießen das Chaos der Schlacht, während sie ihrem Kampfrausch gestatten, Besitz von ihnen zu ergreifen und sie zu ermächtigen.",
         "Features": [
@@ -73,16 +74,19 @@
         ]
       },
       {
+        "Id": "eiferer",
         "Name": "Pfad des Eiferers",
         "Description": "Barbaren, die den Pfad des Eiferers beschreiten, erhalten Gaben von einer Gottheit oder einem Pantheon. Sie erleben ihren Kampfrausch als ekstatische Einheit mit einer Gottheit, die sie mit Macht erfüllt. Oft sind sie mit Priestern und anderen Anhängern ihrer Gottheit oder ihres Pnatheons verbündet.",
         "Features": []
       },
       {
+        "Id": "weltenbaum",
         "Name": "Pfad des Weltenbaums",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "wildes-herz",
         "Name": "Pfad des Wilden Herzens",
         "Description": "",
         "Features": []
@@ -129,21 +133,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "tanz",
         "Name": "Schule des Tanzes",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "wagemut",
         "Name": "Schule des Wagemuts",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "wissen",
         "Name": "Schule des Wissens",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "zauberbann",
         "Name": "Schule des Zauberbanns",
         "Description": "",
         "Features": []
@@ -182,22 +190,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "land",
         "Name": "Zirkel des Landes",
         "Description": "",
         "Features": []
       },
-
       {
+        "Id": "meer",
         "Name": "Zirkel des Meeres",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "mond",
         "Name": "Zirkel des Mondes",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "sterne",
         "Name": "Zirkel der Sterne",
         "Description": "",
         "Features": []
@@ -235,21 +246,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "celestischer-schutzherr",
         "Name": "Celestischer Schutzherr",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "erzfee-schutzherr",
         "Name": "Erzfee-Schutzherr",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "großer-alter-schutzherr",
         "Name": "Großer Alter Schutzherr",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "unhold-schutzherr",
         "Name": "Unhold-Schutzherr",
         "Description": "",
         "Features": []
@@ -293,21 +308,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "champion",
         "Name": "Champion",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "kampfmeister",
         "Name": "Kampfmeister",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "mystischer-ritter",
         "Name": "Mystischer Ritter",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "psi-krieger",
         "Name": "Psi-Krieger",
         "Description": "",
         "Features": []
@@ -342,21 +361,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "domäne-des-krieges",
         "Name": "Domäne des Krieges",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "domäne-der-macht",
         "Name": "Domäne des Lebens",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "domäne-der-liebe",
         "Name": "Domäne des Lichts",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "domäne-der-list",
         "Name": "Domäne der List",
         "Description": "",
         "Features": []
@@ -393,21 +416,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "bannmagier",
         "Name": "Bannmagier",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "hervorrufer",
         "Name": "Hervorrufer",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "illusionist",
         "Name": "Illusionist",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "seher",
         "Name": "Seher",
         "Description": "",
         "Features": []
@@ -442,21 +469,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "krieger-der-elemente",
         "Name": "Krieger der Elemente",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "krieger-der-gnade",
         "Name": "Krieger der Gnade",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "krieger-der-offenen-hand",
         "Name": "Krieger der offenen Hand",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "krieger-der-schatten",
         "Name": "Krieger der Schatten",
         "Description": "",
         "Features": []
@@ -498,21 +529,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "schwur-der-alten",
         "Name": "Schwur der Alten",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "schwur-der-rache",
         "Name": "Schwur der Rache",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "schwur-der-hingabe",
         "Name": "Schwur der Hingabe",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "schwur-des-ruhms",
         "Name": "Schwur des Ruhms",
         "Description": "",
         "Features": []
@@ -559,21 +594,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "arkander-betrueger",
         "Name": "Arkander Betrüger",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "assassine",
         "Name": "Assassine",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "dieb",
         "Name": "Dieb",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "seelenmesser",
         "Name": "Seelenmesser",
         "Description": "",
         "Features": []
@@ -614,21 +653,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "duesterpirscher",
         "Name": "Düsterpirscher",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "feenwanderer",
         "Name": "Feenwanderer",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "herr-der-tiere",
         "Name": "Herr der Tiere",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "jaeger",
         "Name": "Jäger",
         "Description": "",
         "Features": []
@@ -663,21 +706,25 @@
     "Features": [],
     "Subclasses": [
       {
+        "Id": "aberrant",
         "Name": "Aberrante Zauberei",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "draconisch",
         "Name": "Drakonische Zauberei",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "uhrwerk",
         "Name": "Uhrwerk Zauberei",
         "Description": "",
         "Features": []
       },
       {
+        "Id": "wilde-magie",
         "Name": "Wilde-Magie Zauberei",
         "Description": "",
         "Features": []

@@ -7,6 +7,7 @@ export type Class = {
   Equipment: string[];
   ProficiencBonus: number[];
   Features: ClassFeature[];
+  Subclasses: Subclass[];
 };
 
 export type Proficience = {

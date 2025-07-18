@@ -345,6 +345,11 @@
     <div class="spell-list">
         <% if (classes && classes.length > 0) { %>
             <% classes.forEach(cls => { %>
+            <div>
+                <% cls.Subclasses.forEach(subclass => { %>
+                    <a href="/class/<%= cls.Name %>/<%= subclass.Id %>"><%= subclass.Name %></a>
+                <% }); %>
+            </div>
             <a href="/class/<%= cls.Name %>" class="spell-link">
                 <div class="spell-item">
                      <h3><%= cls.Name %></h3>

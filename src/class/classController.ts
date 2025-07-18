@@ -40,11 +40,26 @@ export class ClassController {
     }
   }
 
-  static async getAddForm(req: Request, res: Response) {
+  static async getAddFeatureForm(req: Request, res: Response) {
     res.render("add-class.ejs", { className: req.params.name });
   }
 
-  static async add(req: Request, res: Response) {
+  static async getAddSubclassFeatureForm(req: Request, res: Response) {
+    res.render("add-class.ejs", {
+      className: req.params.name,
+      subclass: req.params.subclass,
+    });
+  }
+
+  static async addSubclassFeature(req: Request, res: Response) {
+    this.addFeature(req, res, true);
+  }
+
+  static async addFeature(
+    req: Request,
+    res: Response,
+    subclass: boolean = false
+  ) {
     const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body as any;
 
     const classFeature: ClassFeature = {
@@ -61,16 +76,39 @@ export class ClassController {
 
     classesData.forEach((cls) => {
       if (cls.Name.toLowerCase() === req.params.name.toLowerCase()) {
-        cls.Features.push(classFeature);
+        if (subclass) {
+          cls.Subclasses.forEach((sub) => {
+            if (sub.Name.toLowerCase() === req.params.subclass.toLowerCase()) {
+              sub.Features.push(classFeature);
+            }
+          });
+        } else {
+          cls.Features.push(classFeature);
+        }
       }
     });
     await Util.writeJsonFile(classesData, ClassController.jsonFilepath);
     res.statusCode = 303;
-    res.setHeader("Location", "/class/" + req.body.Klasse + "/add");
+    if (subclass) {
+      res.setHeader(
+        "Location",
+        `/class/${req.params.name}/${req.params.subclass}/add`
+      );
+    } else {
+      res.setHeader("Location", "/class/" + req.body.Klasse + "/add");
+    }
     res.end();
   }
 
-  static async edit(req: Request, res: Response) {
+  static async editSubclassFeature(req: Request, res: Response) {
+    this.editFeature(req, res, true);
+  }
+
+  static async editFeature(
+    req: Request,
+    res: Response,
+    subclass: boolean = false
+  ) {
     const className = req.params.name;
     const featureName = req.params.feature;
     const { Stufe, HöhereStufe, Referenz, Text } = req.body as any;
@@ -80,10 +118,21 @@ export class ClassController {
     );
 
     classesData.forEach((cls) => {
+      let feature: ClassFeature | undefined;
       if (cls.Name.toLowerCase() === className.toLowerCase()) {
-        const feature = cls.Features.find(
-          (f) => f.Name.toLowerCase() === featureName.toLowerCase()
-        );
+        if (subclass) {
+          cls.Subclasses.forEach((sub) => {
+            if (sub.Name.toLowerCase() === req.params.subclass.toLowerCase()) {
+              feature = sub.Features.find(
+                (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+              );
+            }
+          });
+        } else {
+          feature = cls.Features.find(
+            (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+          );
+        }
 
         if (feature) {
           feature.Description = Text;
@@ -100,7 +149,7 @@ export class ClassController {
     res.end();
   }
 
-  static async getEditForm(req: Request, res: Response) {
+  static async getEditFeatureForm(req: Request, res: Response) {
     const className = req.params.name;
     const featureName = req.params.feature;
     const cls = await ClassController.getCls(className);
