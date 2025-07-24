@@ -16,13 +16,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../views")); // Pfad zum 'views'-Ordner
 
 app.get("/", (req: Request, res: Response) => {
-  res.send(
-    '<a href="/spell">Zauber</a>' +
-      "<br/>" +
-      '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>' +
-      "<br/>" +
-      '<a href="/spellcard/">Zauberkarten</a>'
-  );
+  res.render("index");
 });
 
 app.use(express.json());

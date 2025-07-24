@@ -70,52 +70,11 @@
             text-decoration: underline;
         }
     </style>
-</head><form method="GET" action="/spellcard/cards">
-  <label>Klasse:
-    <select name="klasse">
-        <option value="">Alle</option>
-        <option value="Barde">Barde</option>
-        <option value="Hexenmeister">Hexenmeister</option>
-        <option value="Magier">Magier</option>
-        <option value="Kleriker">Kleriker</option>
-        <option value="Druide">Druide</option>
-        <option value="Krieger">Krieger</option>
-        <option value="Paladin">Paladin</option>
-        <option value="Waldläufer">Waldläufer</option>
-        <option value="Schurke">Schurke</option>
-        <option value="Mönch">Mönch</option>
-        <option value="Zauberer">Zauberer</option>
-        <option value="Magieschmied">Magieschmied</option>
-    </select>
-  </label>
-<br>
-  <label>Grad von:
-    <select name="stufeVon">
-      <% for (let i = 0; i <= 9; i++) { %>
-        <option value="<%= i %>"><%= i %></option>
-      <% } %>
-    </select>
-  </label>
-<br>
-  <label>Grad bis:
-    <select name="stufeBis">
-      <% for (let i = 0; i <= 9; i++) { %>
-        <option value="<%= i %>"><%= i %></option>
-      <% } %>
-    </select>
-  </label>
-<br>
-<label>Sortiert nach:
-  <select name="sortiertNach">
-    <option value="stufe">Grad</option>
-    <option value="name">Name</option>
-  </select>
-</label>
-<br>
-  <button type="submit">PDF erzeugen</button>
-</form>
-<br/>
-
-<a href="/">Zurück zur Startseite</a>
-</body>
+</head>
+    <body>
+        <a href="/spell"><button>Zauber</button></a> <br/><br/>
+        <a href="/class"><button>Klassen</button></a><br/><br/>
+        <a href="/spellcard"><button>Zauberkarten</button></a><br/><br/>
+        <a href="/invocation"><button>Schauerliche Anrufungen</button></a>
+    </body>
 </html>

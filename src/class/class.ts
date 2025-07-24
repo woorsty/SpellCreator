@@ -26,6 +26,7 @@ export type ClassFeature = {
 };
 
 export type Subclass = {
+  Id: string;
   Name: string;
   Description: string;
   Features: ClassFeature[];

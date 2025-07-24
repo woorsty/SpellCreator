@@ -17,11 +17,7 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path_1.default.join(__dirname, "../views")); // Pfad zum 'views'-Ordner
 app.get("/", (req, res) => {
-    res.send('<a href="/spell">Zauber</a>' +
-        "<br/>" +
-        '<a href="/invocation/">Hexenmeister: Schauerliche Anrufung</a>' +
-        "<br/>" +
-        '<a href="/spellcard/">Zauberkarten</a>');
+    res.render("index");
 });
 app.use(express_1.default.json());
 app.use("/spell", spellRoute_1.default);

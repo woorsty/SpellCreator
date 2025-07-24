@@ -175,7 +175,9 @@
           {
             "Name": "Raserei",
             "Description": "Wenn du in einem Kampfrausch deinen Rücksichtslosen Angriff einsetzt, fügst du dem ersten Ziel, das du in deinem Zug mit einem stärkebasierten Angriff triffst, zusätzlichen Schaden zu. Ermittle den zusätzlichen Schaden, indem du mit einer Anzahl von W6 in Höhe deines Kampfrausch-Schadensbonus würfelst und ihre Summe hinzufügst. Der Schaden ist vom selben Typ, wie jender der Angriff.",
-            "Stufe": 3
+            "Stufe": "3",
+            "HöhereStufe": "",
+            "Reference": ""
           }
         ]
       },

@@ -336,10 +336,22 @@
 </head>
 <body>
      <div class="filter-sort-container fixed-top">
-     <a href="/class">Zurück</a>
+        <a href="/class">Zurück</a>
 
-    <br/>
-    <h1><%= currentClass.Name %></h1>
+        <br/>
+        <h1><%= currentClass.Name %></h1>
+        <div id="subclasses">
+            <% if (currentClass.Subclasses && currentClass.Subclasses.length > 0) { %>
+                <h2>Unterklassen:</h2>
+                <ul>
+                    <% currentClass.Subclasses.forEach(subclass => { %>
+                        <li><a href="/class/<%= currentClass.Name %>/<%= subclass.Id %>"><%= subclass.Name %></a></li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p>Keine Unterklassen verfügbar.</p>
+            <% } %>
+        </div>
     </div>
 
     <div class="spell-list">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klassen</title>
+    <title><%= currentClass.Name %></title>
     <style>
         body {
             background-color: #1e1e1e;
@@ -336,24 +336,52 @@
 </head>
 <body>
      <div class="filter-sort-container fixed-top">
-     <a href="/">Zurück</a>
+        <a href="/class">Zurück</a>
 
-    <br/>
-    <h1>Klassen</h1>
+        <br/>
+        <h1><%= subclass.Name %></h1>
+        <div id="subclasses">
+            <%= subclass.Description %>
+        </div>
     </div>
 
     <div class="spell-list">
-        <% if (classes && classes.length > 0) { %>
-            <% classes.forEach(cls => { %>
-            <a href="/class/<%= cls.Name %>" class="spell-link">
+        <% if (subclass && subclass.Features.length > 0) { %>
+            <% subclass.Features.forEach(feature => { %>
                 <div class="spell-item">
-                     <h3><%= cls.Name %></h3>
+                     <h3><%= feature.Name %></h3>
+                    <p class="spell-meta">
+                         <%= "Stufe: " + feature.Stufe %>
+                    </p>
+                    <div class="spell-text-container"><%- locals.renderMarkdown(feature.Description) %></div>
+                    <% if (feature.HöhereStufe) { %><p><strong>Auf höheren Stufen:</strong> <%= feature.HöhereStufe %></p><% } %>
+                    <% if (feature.Reference) { %>
+                        <a href="/spell/<%= feature.Reference %>"><%= feature.Reference %></a><br/>
+                    <% }%>
+                <a href="/class/<%= currentClass.Name %>/<%= subclass.Id %>/<%= feature.Name %>/edit/" class="spell-link">Bearbeiten</a>
                 </div>
-            </a>
-        <% }); %>
+                <% }); %>
         <% } else { %>
             <p>Es sind noch keine Klassen gespeichert.</p>
         <% } %>
     </div>
+    <script>
+        // Spell-Text-Container Expand/Collapse
+            const spellTextContainers = document.querySelectorAll('.spell-text-container');
+            spellTextContainers.forEach(container => {
+                // Prüfen, ob der Inhalt die max-height überschreitet
+                if (container.scrollHeight > container.offsetHeight) {
+                    container.addEventListener('click', function() {
+                        this.classList.toggle('expanded');
+                    });
+                } else {
+                    // Pseudo-Element stilistisch entfernen, da direkter Zugriff nicht möglich ist
+                    const afterElement = window.getComputedStyle(container, '::after');
+                    if (afterElement.content !== 'none') {
+                        container.classList.add('expanded-short');
+                    }
+                }
+            });
+    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import { render } from "ejs";
 import { Util } from "../util";
 import { Class, ClassFeature } from "./class";
 import express, { Request, Response } from "express";
@@ -37,6 +38,25 @@ export class ClassController {
       });
     } else {
       res.status(404).send("Klasse nicht gefunden");
+    }
+  }
+
+  static async getSubclass(req: Request, res: Response) {
+    const className = req.params.name;
+    const subclassName = req.params.subclass;
+    const currentClass = await ClassController.getCls(className);
+    const subclass = currentClass?.Subclasses.find(
+      (sub) => sub.Id.toLowerCase() === subclassName.toLowerCase()
+    );
+
+    if (currentClass && subclass) {
+      res.render("subclass", {
+        currentClass: currentClass,
+        subclass: subclass,
+        renderMarkdown: Util.renderMarkdown,
+      });
+    } else {
+      res.status(404).send("Unterklasse nicht gefunden");
     }
   }
 
@@ -104,7 +124,28 @@ export class ClassController {
     res.end();
   }
 
+  static async editSubclassFeatureForm(req: Request, res: Response) {
+    const className = req.params.name;
+    const subclassName = req.params.subclass;
+    const featureName = req.params.feature;
+
+    const cls = await ClassController.getCls(className);
+    const subclass = cls?.Subclasses.find(
+      (sub) => sub.Name.toLowerCase() === subclassName.toLowerCase()
+    );
+    const feature = subclass?.Features.find(
+      (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+    );
+
+    if (cls && subclass && feature) {
+      res.render("edit-class", { feature: feature });
+    } else {
+      res.status(404).send("Unterklasse oder Feature nicht gefunden");
+    }
+  }
+
   static async editSubclassFeature(req: Request, res: Response) {
+    console.log("Edit Subclass Feature");
     ClassController.editFeature(req, res, true);
   }
 
@@ -130,7 +171,7 @@ export class ClassController {
       if (cls.Name.toLowerCase() === className.toLowerCase()) {
         if (subclass) {
           cls.Subclasses.forEach((sub) => {
-            if (sub.Name.toLowerCase() === req.params.subclass.toLowerCase()) {
+            if (sub.Id.toLowerCase() === req.params.subclass.toLowerCase()) {
               feature = sub.Features.find(
                 (f) => f.Name.toLowerCase() === featureName.toLowerCase()
               );
@@ -166,6 +207,26 @@ export class ClassController {
     );
     if (cls && feature) {
       res.render("edit-class", { feature: feature });
+    } else {
+      res.status(404).send("Klasse nicht gefunden");
+    }
+  }
+
+  static async getSubclassEditFeatureForm(req: Request, res: Response) {
+    const className = req.params.name;
+    const subclassName = req.params.subclass;
+    const featureName = req.params.feature;
+    const cls = await ClassController.getCls(className);
+    const subclass = cls?.Subclasses.find(
+      (sub) => sub.Id.toLowerCase() === subclassName.toLowerCase()
+    );
+
+    const feature = subclass?.Features.find(
+      (f) => f.Name.toLowerCase() === featureName.toLowerCase()
+    );
+
+    if (cls && feature) {
+      res.render("edit-class", { feature: feature, subclass: subclass });
     } else {
       res.status(404).send("Klasse nicht gefunden");
     }
