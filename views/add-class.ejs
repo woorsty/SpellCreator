@@ -58,8 +58,14 @@
   </head>
 
   <body>
-    <h1>Neues <%= className %> Feature hinzufügen</h1>
-    <form action="/class/<%= className %>/add" method="POST">
+    <% if (typeof subclass !== 'undefined') { %>
+    <h1>Neues <%= className %> <%= subclass %> Feature hinzufügen</h1>
+      <form action="/class/<%= className %>/<%= subclass %>/add" method="POST">
+        <input type="hidden" name="subclass" value="<%= subclass %>" />
+    <% } else { %>
+      <h1>Neues <%= className %> Feature hinzufügen</h1>
+      <form action="/class/<%= className %>/add" method="POST">
+    <% } %>
       <div>
         <label for="Stufe">Stufe:</label>
         <input type="number" id="Stufe" name="Stufe" required /><br /><br />

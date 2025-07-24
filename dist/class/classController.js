@@ -40,8 +40,11 @@ class ClassController {
             subclass: req.params.subclass,
         });
     }
+    static async addClassFeature(req, res) {
+        ClassController.addFeature(req, res, false);
+    }
     static async addSubclassFeature(req, res) {
-        this.addFeature(req, res, true);
+        ClassController.addFeature(req, res, true);
     }
     static async addFeature(req, res, subclass = false) {
         const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body;
@@ -78,7 +81,10 @@ class ClassController {
         res.end();
     }
     static async editSubclassFeature(req, res) {
-        this.editFeature(req, res, true);
+        ClassController.editFeature(req, res, true);
+    }
+    static async editClassFeature(req, res) {
+        ClassController.editFeature(req, res, false);
     }
     static async editFeature(req, res, subclass = false) {
         const className = req.params.name;

@@ -6,8 +6,8 @@ const router = express.Router();
 router.get("/", ClassController.getAll);
 router.get("/:name", ClassController.get);
 router.get("/:name/add", ClassController.getAddFeatureForm);
-router.post("/:name/add", ClassController.addFeature);
-router.post("/:name/:feature/edit", ClassController.editFeature);
+router.post("/:name/add", ClassController.addClassFeature);
+router.post("/:name/:feature/edit", ClassController.editClassFeature);
 router.get("/:name/:feature/edit", ClassController.getEditFeatureForm);
 router.post(
   "/:name/:subclass/:feature/edit",

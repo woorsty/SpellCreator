@@ -51,8 +51,12 @@ export class ClassController {
     });
   }
 
+  static async addClassFeature(req: Request, res: Response) {
+    ClassController.addFeature(req, res, false);
+  }
+
   static async addSubclassFeature(req: Request, res: Response) {
-    this.addFeature(req, res, true);
+    ClassController.addFeature(req, res, true);
   }
 
   static async addFeature(
@@ -101,7 +105,11 @@ export class ClassController {
   }
 
   static async editSubclassFeature(req: Request, res: Response) {
-    this.editFeature(req, res, true);
+    ClassController.editFeature(req, res, true);
+  }
+
+  static async editClassFeature(req: Request, res: Response) {
+    ClassController.editFeature(req, res, false);
   }
 
   static async editFeature(
