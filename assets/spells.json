@@ -798,14 +798,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Chromatische Kugel",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "27 Meter",
-    "Material": "Ein Diamant im Wert von mindestens 50 GM",
     "Dauer": "Unmittelbar",
-    "Text": "Du schleuderst eine Energiekugel auf ein Ziel in Reichweite Wähle für die Art der Kugel Blitz. Feuer, Gift, Kälte Säure oder Schall aus und führe dann einen Fernkamp Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet dax Ziel 3W8 Schaden der ausgewählten Art. \r\nWenn du mit mindestens zwei der W8 dasselbe Ergebnis würfelst, springt die Kugel zu einem weiteren Ziel deiner Wahl im Abstand von bis zu neun Metern vom Ziel. Führe einen Angriffswurf gegen das neue Ziel sowie einen neuen Schadenswurf aus. Die Kugel kann nicht noch einmal springen, sofern du den Zauber nicht mit einem Zauberplatz ab dem 2. Grad wirkst. ",
+    "Material": "Ein Diamant im Wert von mindestens 50 GM",
+    "Text": "Du schleuderst eine Energiekugel auf ein Ziel in Reichweite Wähle für die Art der Kugel Blitz. Feuer, Gift, Kälte Säure oder Schall aus und führe dann einen Fernkamp Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 3W8 Schaden der ausgewählten Art. \r\nWenn du mit mindestens zwei der W8 dasselbe Ergebnis würfelst, springt die Kugel zu einem weiteren Ziel deiner Wahl im Abstand von bis zu neun Metern vom Ziel. Führe einen Angriffswurf gegen das neue Ziel sowie einen neuen Schadenswurf aus. Die Kugel kann nicht noch einmal springen, sofern du den Zauber nicht mit einem Zauberplatz ab dem 2. Grad wirkst. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W8 erhöht. Die Kugel kann höchstens so oft springen, wie es dem Grad des verbrauchten Zauberplatzes entspricht, und jede Kreatur kann nur einmal das Ziel dieses Zaubers sein. ",
     "Klasse": [
       "Magier",
@@ -3581,14 +3581,14 @@
     "Gestik": true
   },
   {
+    "Stufe": "1",
     "Name": "Magisches Geschoss",
     "Schule": "Hervorrufung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "36 Meter",
-    "Material": "",
     "Dauer": "Unmittelbar",
-    "Text": "Du erschaffst drei leuchtende Wurfpfeile aus magischer Energie. Jeder Wurfpfeil trifft eine Kreatur deiner Wahl in Reichweite, die du sehen kannst. Ein Wurfpfeil fügt seinem Ziel 1W4-1 Energieschaden zu. Die Wurfpfeile treffen alle gleichzeitig. Du kannst bestimmen, ob sie dieselbe oder verschiedene Kreaturen treffen. ",
+    "Material": "",
+    "Text": "Du erschaffst drei leuchtende Wurfpfeile aus magischer Energie. Jeder Wurfpfeil trifft eine Kreatur deiner Wahl in Reichweite, die du sehen kannst. Ein Wurfpfeil fügt seinem Ziel 1W4+1 Energieschaden zu. Die Wurfpfeile treffen alle gleichzeitig. Du kannst bestimmen, ob sie dieselbe oder verschiedene Kreaturen treffen. ",
     "HöhereLevel": "Für jeden Zauberplatzgrad über dem 1. erzeugt der Zauber einen weiteren Wurfpfeil. ",
     "Klasse": [
       "Magier",
@@ -5751,13 +5751,13 @@
     "Gestik": false
   },
   {
+    "Stufe": "1",
     "Name": "Tensers schwebende Schiebe",
     "Schule": "Beschwörung",
-    "Stufe": "1",
     "Zeitaufwand": "Aktion",
     "Reichweite": "9 Meter",
-    "Material": "Ein Tropfen Quecksilber",
     "Dauer": "1 Stunde",
+    "Material": "Ein Tropfen Quecksilber",
     "Text": "Dieser Zauber erschafft eine waagerechte runde Fläche aus Energie mit einem Durchmesser von 90 Zentimetern und einer Dicke von 2,5 Zentimetern. Sie schwebt in einem freien Bereich deiner Wahl in Reichweite, den du sehen kannst, 90 Zentimeter über dem Boden. Die Scheibe bleibt für die Wirkungsdauer bestehen und kann bis zu 250 Kilogramm tragen. Wenn sie mit mehr Gewicht belastet wird, endet der Zauber, und alles auf der Scheibe fallt zu Boden. \r\nDie Scheibe ist unbeweglich, solange du dich im Abstand von bis zu sechs Metern von ihr befindest. Entfernst du dich mehr als sechs Meter von ihr, so folgt dir die Scheibe, sodass sie im Abstand von bis zu sechs Metern von dir bleibt Sie kann sich über unebenes Gelände, Treppen, Abhänge und dergleichen bewegen, jedoch keinen Höhenunterschied von mindestens drei Metern überwinden, Beispielsweise kann die Scheibe nicht über eine drei Meter tiefe Grube hinwegschweben oder eine solche Grube verlassen, falls sie darin erschaffen wurde. \r\nWenn du dich um mehr als 30 Meter von der Scheibe entfernst (meist, weil sie sich nicht um ein Hindernis bewegen kann, um dir zu folgen), endet der Zauber. ",
     "HöhereLevel": "",
     "Klasse": [
