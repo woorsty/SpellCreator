@@ -3,10 +3,7 @@
     "Name": "Barbar",
     "PrimaryAbility": "Stärke",
     "HitDice": "1W12",
-    "SavingThrows": [
-      "Stärke",
-      "Konstitution"
-    ],
+    "SavingThrows": ["Stärke", "Konstitution"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -17,15 +14,8 @@
         "Überlebenskunst",
         "Wahrnehmung"
       ],
-      "Armor": [
-        "Leichte Rüstungen",
-        "Mittelschwere Rüstungen",
-        "Schilde"
-      ],
-      "Weapons": [
-        "Einfache Waffen",
-        "Kriegswaffen"
-      ]
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
     },
     "Equipment": [
       "Zweihandaxt",
@@ -205,10 +195,7 @@
     "Name": "Barde",
     "PrimaryAbility": "Charisma",
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Geschicklichkeit",
-      "Charisma"
-    ],
+    "SavingThrows": ["Geschicklichkeit", "Charisma"],
     "Proficiencies": {
       "SkillNumber": 3,
       "Skills": [
@@ -230,15 +217,9 @@
         "Überzeugen",
         "Wahrnehmung"
       ],
-      "Equipment": [
-        "Wähle 3 Musikinstrumente aus"
-      ],
-      "Weapons": [
-        "Einfache Waffen"
-      ],
-      "Armor": [
-        "Leichte Rüstungen"
-      ]
+      "Equipment": ["Wähle 3 Musikinstrumente aus"],
+      "Weapons": ["Einfache Waffen"],
+      "Armor": ["Leichte Rüstungen"]
     },
     "Equipment": [
       "Lederüstung",
@@ -279,10 +260,7 @@
     "Name": "Druide",
     "PrimaryAbility": "Weisheit",
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Weisheit",
-      "Integlligenz"
-    ],
+    "SavingThrows": ["Weisheit", "Integlligenz"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -294,16 +272,9 @@
         "Überlebenskunst",
         "Wahrnehmung"
       ],
-      "Armor": [
-        "Leichte Rüstungen",
-        "Schilde"
-      ],
-      "Weapons": [
-        "Einfache Waffen"
-      ],
-      "Equipment": [
-        "Kräuterkundeausrüstung"
-      ]
+      "Armor": ["Leichte Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen"],
+      "Equipment": ["Kräuterkundeausrüstung"]
     },
     "Equipment": [
       "Lederüstung",
@@ -346,10 +317,7 @@
     "Name": "Hexenmeister",
     "PrimaryAbility": "Charisma",
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Weisheit",
-      "Charisma"
-    ],
+    "SavingThrows": ["Weisheit", "Charisma"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -361,12 +329,8 @@
         "Religion",
         "Täuschen"
       ],
-      "Armor": [
-        "Leichte Rüstungen"
-      ],
-      "Weapons": [
-        "Einfache Waffen"
-      ]
+      "Armor": ["Leichte Rüstungen"],
+      "Weapons": ["Einfache Waffen"]
     },
     "Equipment": [
       "Lederüstung",
@@ -409,10 +373,7 @@
     "Name": "Kämpfer",
     "PrimaryAbility": "Stärke",
     "HitDice": "1W10",
-    "SavingThrows": [
-      "Stärke",
-      "Konstitution"
-    ],
+    "SavingThrows": ["Stärke", "Konstitution"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -432,10 +393,7 @@
         "Schwere Rütungen",
         "Schilde"
       ],
-      "Weapons": [
-        "Einfache Waffen",
-        "Kriegswaffen"
-      ]
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
     },
     "Equipment": [
       "Kettenpanzer",
@@ -477,10 +435,7 @@
     "Name": "Kleriker",
     "PrimaryAbility": "Weisheit",
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Weisheit",
-      "Charisma"
-    ],
+    "SavingThrows": ["Weisheit", "Charisma"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -490,14 +445,8 @@
         "Religion",
         "Überzeugen"
       ],
-      "Armor": [
-        "Leichte Rüstungen",
-        "Mittelschwere Rüstungen",
-        "Schilde"
-      ],
-      "Weapons": [
-        "Einfache Waffen"
-      ]
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"],
+      "Weapons": ["Einfache Waffen"]
     },
     "Equipment": [
       "Kettenhemd",
@@ -539,10 +488,7 @@
     "Name": "Magier",
     "PrimaryAbility": "Intelligenz",
     "HitDice": "1W6",
-    "SavingThrows": [
-      "Intelligenz",
-      "Weisheit"
-    ],
+    "SavingThrows": ["Intelligenz", "Weisheit"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -554,12 +500,8 @@
         "Naturkunde",
         "Religion"
       ],
-      "Armor": [
-        "Keine"
-      ],
-      "Weapons": [
-        "Einfache Waffen"
-      ]
+      "Armor": ["Keine"],
+      "Weapons": ["Einfache Waffen"]
     },
     "Equipment": [
       "Zwei Dolche",
@@ -599,15 +541,9 @@
   },
   {
     "Name": "Mönch",
-    "PrimaryAbility": [
-      "Geschicklichkeit",
-      "Weisheit"
-    ],
+    "PrimaryAbility": ["Geschicklichkeit", "Weisheit"],
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Stärke",
-      "Geschicklichkeit"
-    ],
+    "SavingThrows": ["Stärke", "Geschicklichkeit"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -617,16 +553,9 @@
         "Motiv erkennen",
         "Religion"
       ],
-      "Armor": [
-        "Keine"
-      ],
-      "Weapons": [
-        "Einfache Waffen",
-        "Kriegswaffen mit der Eigenschaft Leicht"
-      ],
-      "Equipment": [
-        "Wähle eine Art von Handwerkszeug oder ein Musikinstrument"
-      ]
+      "Armor": ["Keine"],
+      "Weapons": ["Einfache Waffen", "Kriegswaffen mit der Eigenschaft Leicht"],
+      "Equipment": ["Wähle eine Art von Handwerkszeug oder ein Musikinstrument"]
     },
     "Equipment": [
       "Speer",
@@ -665,15 +594,9 @@
   },
   {
     "Name": "Paladin",
-    "PrimaryAbility": [
-      "Stärke",
-      "Charisma"
-    ],
+    "PrimaryAbility": ["Stärke", "Charisma"],
     "HitDice": "1W10",
-    "SavingThrows": [
-      "Weisheit",
-      "Charisma"
-    ],
+    "SavingThrows": ["Weisheit", "Charisma"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -690,10 +613,7 @@
         "Schwere Rüstungen",
         "Schilde"
       ],
-      "Weapons": [
-        "Einfache Waffen",
-        "Kriegswaffen"
-      ]
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"]
     },
     "Equipment": [
       "Kettenpanzer",
@@ -736,10 +656,7 @@
     "Name": "Schurke",
     "PrimaryAbility": "Geschicklichkeit",
     "HitDice": "1W8",
-    "SavingThrows": [
-      "Geschicklichkeit",
-      "Intelligenz"
-    ],
+    "SavingThrows": ["Geschicklichkeit", "Intelligenz"],
     "Proficiencies": {
       "SkillNumber": 4,
       "Skills": [
@@ -758,12 +675,8 @@
         "Einfache Waffen",
         "Kriegswaffen mit der Eigenschaft Finesse oder Leicht"
       ],
-      "Armor": [
-        "Leichte Rüstungen"
-      ],
-      "Equipment": [
-        "Diebeswerkzeug"
-      ]
+      "Armor": ["Leichte Rüstungen"],
+      "Equipment": ["Diebeswerkzeug"]
     },
     "Equipment": [
       "Lederrüstung",
@@ -806,15 +719,9 @@
   },
   {
     "Name": "Waldläufer",
-    "PrimaryAbility": [
-      "Geschicklichkeit",
-      "Weisheit"
-    ],
+    "PrimaryAbility": ["Geschicklichkeit", "Weisheit"],
     "HitDice": "1W10",
-    "SavingThrows": [
-      "Stärke",
-      "Geschicklichkeit"
-    ],
+    "SavingThrows": ["Stärke", "Geschicklichkeit"],
     "Proficiencies": {
       "SkillNumber": 3,
       "Skills": [
@@ -827,15 +734,8 @@
         "Überlebenskunst",
         "Wahrnehmung"
       ],
-      "Weapons": [
-        "Einfache Waffen",
-        "Kriegswaffen"
-      ],
-      "Armor": [
-        "Leichte Rüstungen",
-        "Mittelschwere Rüstungen",
-        "Schilde"
-      ]
+      "Weapons": ["Einfache Waffen", "Kriegswaffen"],
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"]
     },
     "Equipment": [
       "Beschlagene Lederrüstung",
@@ -878,14 +778,9 @@
   },
   {
     "Name": "Zauberer",
-    "PrimaryAbility": [
-      "Charisma"
-    ],
+    "PrimaryAbility": ["Charisma"],
     "HitDice": "1W6",
-    "SavingThrows": [
-      "Konstitution",
-      "Charisma"
-    ],
+    "SavingThrows": ["Konstitution", "Charisma"],
     "Proficiencies": {
       "SkillNumber": 2,
       "Skills": [
@@ -896,12 +791,8 @@
         "Täuschen",
         "Überzeugen"
       ],
-      "Weapons": [
-        "Einfache Waffen"
-      ],
-      "Armor": [
-        "Keine"
-      ]
+      "Weapons": ["Einfache Waffen"],
+      "Armor": ["Keine"]
     },
     "Equipment": [
       "Speer",
@@ -933,6 +824,66 @@
       {
         "Id": "wilde-magie",
         "Name": "Wilde-Magie Zauberei",
+        "Description": "",
+        "Features": []
+      }
+    ]
+  },
+  {
+    "Name": "Magieschmied",
+    "PrimaryAbility": ["Intelligenz"],
+    "HitDice": "1W8",
+    "SavingThrows": ["Konstitution", "Integlligenz"],
+    "Proficiencies": {
+      "SkillNumber": 2,
+      "Skills": [
+        "Arkane Kunde",
+        "Geschichte",
+        "Nachforschen",
+        "Heilkunde",
+        "Naturkunde",
+        "Wahrnehmung",
+        "Fingerfertigkeit"
+      ],
+      "Weapons": ["Einfache Waffen"],
+      "Armor": ["Leichte Rüstungen", "Mittelschwere Rüstungen", "Schilde"],
+      "Equipment": [
+        "Tüftlerwerkzeug",
+        "Diebeswerkzeug",
+        "Eine Handwerkszeug deiner Wahl"
+      ]
+    },
+    "Equipment": [
+      "Beschlagene Lederrüstung",
+      "Dolch",
+      "Diebeswerkzeug",
+      "Tüftlerwerkzeug",
+      "Gewölbeforscherausrüstung",
+      "16 Gold"
+    ],
+    "Features": [],
+    "Subclasses": [
+      {
+        "Id": "alchemist",
+        "Name": "Alchemist",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Id": "ruestungsschmied",
+        "Name": "Rüstungsschmied",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Id": "attilerist",
+        "Name": "Attilierist",
+        "Description": "",
+        "Features": []
+      },
+      {
+        "Id": "kampfschmied",
+        "Name": "Kampfschmied",
         "Description": "",
         "Features": []
       }
