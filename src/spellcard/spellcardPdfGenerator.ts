@@ -132,6 +132,91 @@ function estimateRenderedLineCount(
   return totalLines;
 }
 
+export function generateCardPDFWithBackside(
+  spells: Spell[],
+  backImage: string | Buffer
+): jsPDF {
+  const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+
+  const allCards: Spellcard[] = [];
+  for (const spell of spells) {
+    const parts = splitSpellIntoCards(spell);
+    allCards.push(...parts);
+  }
+
+  const cardsPerPage = 9;
+  const pageCount = Math.ceil(allCards.length / cardsPerPage);
+
+  // Draw fronts and corresponding backs
+  for (let p = 0; p < pageCount; p++) {
+    // Front page
+    if (p > 0) doc.addPage();
+
+    const start = p * cardsPerPage;
+    const end = Math.min(start + cardsPerPage, allCards.length);
+    for (let i = start; i < end; i++) {
+      const idx = i - start; // 0..8
+      const row = Math.floor(idx / 3);
+      const col = idx % 3;
+      const x = PAGE_MARGIN_X + col * (CARD_WIDTH + GAP_X);
+      const y = PAGE_MARGIN_Y + row * (CARD_HEIGHT + GAP_Y);
+      drawCard(doc, allCards[i], x, y, CARD_WIDTH, CARD_HEIGHT);
+    }
+
+    // Back page for this front page
+    doc.addPage();
+
+    drawBackPage(doc, backImage);
+  }
+
+  return doc;
+}
+
+function drawBackPage(doc: jsPDF, backImage: string | Buffer) {
+  // Load image data
+  let imgData: Buffer | null = null;
+  if (typeof backImage === "string") {
+    try {
+      imgData = fs.readFileSync(path.resolve(backImage));
+    } catch (e) {
+      imgData = null;
+    }
+  } else {
+    imgData = backImage;
+  }
+
+  const iconSize = Math.min(30, CARD_WIDTH * 0.6); // mm
+
+  for (let idx = 0; idx < 9; idx++) {
+    const row = Math.floor(idx / 3);
+    const col = idx % 3;
+    const x = PAGE_MARGIN_X + col * (CARD_WIDTH + GAP_X);
+    const y = PAGE_MARGIN_Y + row * (CARD_HEIGHT + GAP_Y);
+
+    // draw card border (optional)
+    doc.setDrawColor(0);
+    doc.rect(x, y, CARD_WIDTH, CARD_HEIGHT);
+
+    if (imgData) {
+      try {
+        const centerX = x + CARD_WIDTH / 2 - iconSize / 2;
+        const centerY = y + CARD_HEIGHT / 2 - iconSize / 2;
+        doc.addImage(imgData, "PNG", centerX, centerY, iconSize, iconSize);
+      } catch (e) {
+        // ignore image errors
+      }
+    } else {
+      // If no image provided, draw a placeholder symbol
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(20);
+      doc.text("#", x + CARD_WIDTH / 2, y + CARD_HEIGHT / 2, {
+        align: "center",
+        baseline: "middle" as any,
+      });
+    }
+  }
+}
+
 export function generateCardPDF(spells: Spell[]): jsPDF {
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
 

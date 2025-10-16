@@ -1,11 +1,13 @@
 import express, { Request, Response } from "express";
 const router = express.Router();
 import fs from "fs";
-import { generateCardPDF } from "./spellcardPdfGenerator";
+import {
+  generateCardPDF,
+  generateCardPDFWithBackside,
+} from "./spellcardPdfGenerator";
 import { Spell } from "../spell/spellModel";
 
-router.get("/", (req, res) => res.render("spellcardFilter"));
-router.get("/cards", (req: Request, res: Response) => {
+const createSpellcard = (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
   const spells = JSON.parse(
     fs.readFileSync("./assets/spells.json", "utf8")
@@ -30,11 +32,23 @@ router.get("/cards", (req: Request, res: Response) => {
     sorted = filtered.sort((a, b) => a.Stufe - b.Stufe);
   }
 
-  const jsPdf = generateCardPDF(sorted);
+  let jsPdf;
+  if (req.query.withBackimage) {
+    const backImage = fs.readFileSync(
+      "./src/assets/icons/classes/" + klasse + "_Icon.png"
+    );
+    jsPdf = generateCardPDFWithBackside(sorted, backImage);
+  } else {
+    jsPdf = generateCardPDF(sorted);
+  }
+
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
   const buffer = jsPdf.output("arraybuffer");
   res.send(Buffer.from(buffer));
-});
+};
+
+router.get("/", (req, res) => res.render("spellcardFilter"));
+router.get("/cards", createSpellcard);
 
 export default router;

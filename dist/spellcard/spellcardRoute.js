@@ -7,8 +7,8 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 const fs_1 = __importDefault(require("fs"));
 const spellcardPdfGenerator_1 = require("./spellcardPdfGenerator");
-router.get("/", (req, res) => res.render("spellcardFilter"));
-router.get("/cards", (req, res) => {
+const createSpellcard = (req, res) => {
+    console.log("Received request with query:", req.query);
     const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
     const spells = JSON.parse(fs_1.default.readFileSync("./assets/spells.json", "utf8"));
     const von = parseInt(stufeVon, 10);
@@ -26,11 +26,21 @@ router.get("/cards", (req, res) => {
     if (sortiertNach === "stufe") {
         sorted = filtered.sort((a, b) => a.Stufe - b.Stufe);
     }
-    const jsPdf = (0, spellcardPdfGenerator_1.generateCardPDF)(sorted);
+    let jsPdf;
+    console.log("Request parameter withBackimage:", req.query);
+    if (req.query.withBackimage) {
+        const backImage = fs_1.default.readFileSync("./src/assets/icons/classes/" + klasse + "_Icon.png");
+        jsPdf = (0, spellcardPdfGenerator_1.generateCardPDFWithBackside)(sorted, backImage);
+    }
+    else {
+        jsPdf = (0, spellcardPdfGenerator_1.generateCardPDF)(sorted);
+    }
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
     const buffer = jsPdf.output("arraybuffer");
     res.send(Buffer.from(buffer));
-});
+};
+router.get("/", (req, res) => res.render("spellcardFilter"));
+router.get("/cards", createSpellcard);
 exports.default = router;
 //# sourceMappingURL=spellcardRoute.js.map
