@@ -100,7 +100,6 @@ function estimateRenderedLineCount(text, maxLineLength = 50) {
     return totalLines;
 }
 function generateCardPDFWithBackside(spells, backImage) {
-    console.log("Generating PDF with backside image:", backImage);
     const doc = new jspdf_1.jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
     const allCards = [];
     for (const spell of spells) {

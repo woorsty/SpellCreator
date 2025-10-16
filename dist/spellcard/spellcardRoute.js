@@ -8,7 +8,6 @@ const router = express_1.default.Router();
 const fs_1 = __importDefault(require("fs"));
 const spellcardPdfGenerator_1 = require("./spellcardPdfGenerator");
 const createSpellcard = (req, res) => {
-    console.log("Received request with query:", req.query);
     const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
     const spells = JSON.parse(fs_1.default.readFileSync("./assets/spells.json", "utf8"));
     const von = parseInt(stufeVon, 10);
@@ -27,7 +26,6 @@ const createSpellcard = (req, res) => {
         sorted = filtered.sort((a, b) => a.Stufe - b.Stufe);
     }
     let jsPdf;
-    console.log("Request parameter withBackimage:", req.query);
     if (req.query.withBackimage) {
         const backImage = fs_1.default.readFileSync("./src/assets/icons/classes/" + klasse + "_Icon.png");
         jsPdf = (0, spellcardPdfGenerator_1.generateCardPDFWithBackside)(sorted, backImage);
