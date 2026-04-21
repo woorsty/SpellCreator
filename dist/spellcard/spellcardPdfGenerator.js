@@ -115,6 +115,7 @@ function generateCardPDFWithBackside(spells, backImage) {
             doc.addPage();
         const start = p * cardsPerPage;
         const end = Math.min(start + cardsPerPage, allCards.length);
+        const cardCount = end - start;
         for (let i = start; i < end; i++) {
             const idx = i - start; // 0..8
             const row = Math.floor(idx / 3);
@@ -125,11 +126,11 @@ function generateCardPDFWithBackside(spells, backImage) {
         }
         // Back page for this front page
         doc.addPage();
-        drawBackPage(doc, backImage);
+        drawBackPage(doc, backImage, cardCount);
     }
     return doc;
 }
-function drawBackPage(doc, backImage) {
+function drawBackPage(doc, backImage, cardCount) {
     // Load image data
     let imgData = null;
     if (typeof backImage === "string") {
@@ -144,14 +145,14 @@ function drawBackPage(doc, backImage) {
         imgData = backImage;
     }
     const iconSize = Math.min(30, CARD_WIDTH * 0.6); // mm
-    for (let idx = 0; idx < 9; idx++) {
+    for (let idx = 0; idx < cardCount; idx++) {
         const row = Math.floor(idx / 3);
         const col = idx % 3;
         const x = PAGE_MARGIN_X + col * (CARD_WIDTH + GAP_X);
         const y = PAGE_MARGIN_Y + row * (CARD_HEIGHT + GAP_Y);
         // draw card border (optional)
         doc.setDrawColor(0);
-        doc.rect(x, y, CARD_WIDTH, CARD_HEIGHT);
+        // doc.rect(x, y, CARD_WIDTH, CARD_HEIGHT);
         if (imgData) {
             try {
                 const centerX = x + CARD_WIDTH / 2 - iconSize / 2;

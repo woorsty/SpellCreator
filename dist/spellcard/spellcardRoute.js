@@ -27,14 +27,14 @@ const createSpellcard = (req, res) => {
     }
     let jsPdf;
     if (req.query.withBackimage) {
-        const backImage = fs_1.default.readFileSync("./src/assets/icons/classes/" + klasse + "_Icon.png");
+        const backImage = fs_1.default.readFileSync("./dist/assets/icons/classes/" + klasse + "_Icon.png");
         jsPdf = (0, spellcardPdfGenerator_1.generateCardPDFWithBackside)(sorted, backImage);
     }
     else {
         jsPdf = (0, spellcardPdfGenerator_1.generateCardPDF)(sorted);
     }
     res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
+    res.setHeader("Content-Disposition", "attachment; filename=" + klasse + "_" + stufeVon + "-" + stufeBis + ".pdf");
     const buffer = jsPdf.output("arraybuffer");
     res.send(Buffer.from(buffer));
 };

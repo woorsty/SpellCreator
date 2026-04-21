@@ -10,7 +10,7 @@ import { Spell } from "../spell/spellModel";
 const createSpellcard = (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
   const spells = JSON.parse(
-    fs.readFileSync("./assets/spells.json", "utf8")
+    fs.readFileSync("./assets/spells.json", "utf8"),
   ) as Spell[];
 
   const von = parseInt(stufeVon as string, 10);
@@ -35,7 +35,7 @@ const createSpellcard = (req: Request, res: Response) => {
   let jsPdf;
   if (req.query.withBackimage) {
     const backImage = fs.readFileSync(
-      "./src/assets/icons/classes/" + klasse + "_Icon.png"
+      "./dist/assets/icons/classes/" + klasse + "_Icon.png",
     );
     jsPdf = generateCardPDFWithBackside(sorted, backImage);
   } else {
@@ -43,7 +43,10 @@ const createSpellcard = (req: Request, res: Response) => {
   }
 
   res.setHeader("Content-Type", "application/pdf");
-  res.setHeader("Content-Disposition", "attachment; filename=spellcards.pdf");
+  res.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + klasse + "_" + stufeVon + "-" + stufeBis + ".pdf",
+  );
   const buffer = jsPdf.output("arraybuffer");
   res.send(Buffer.from(buffer));
 };

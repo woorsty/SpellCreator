@@ -46,7 +46,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
 function addCardLines(
   cards: Spellcard[],
   paragraphs: string[],
-  spell: Spell
+  spell: Spell,
 ): void {
   let currentBody = "";
   let part = 1;
@@ -108,7 +108,7 @@ function addCardLines(
 
 function estimateRenderedLineCount(
   text: string,
-  maxLineLength: number = 50
+  maxLineLength: number = 50,
 ): number {
   const lines = text.split("\n");
   let totalLines = 0;
@@ -134,7 +134,7 @@ function estimateRenderedLineCount(
 
 export function generateCardPDFWithBackside(
   spells: Spell[],
-  backImage: string | Buffer
+  backImage: string | Buffer,
 ): jsPDF {
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
 
@@ -154,6 +154,8 @@ export function generateCardPDFWithBackside(
 
     const start = p * cardsPerPage;
     const end = Math.min(start + cardsPerPage, allCards.length);
+    const cardCount = end - start;
+
     for (let i = start; i < end; i++) {
       const idx = i - start; // 0..8
       const row = Math.floor(idx / 3);
@@ -166,13 +168,17 @@ export function generateCardPDFWithBackside(
     // Back page for this front page
     doc.addPage();
 
-    drawBackPage(doc, backImage);
+    drawBackPage(doc, backImage, cardCount);
   }
 
   return doc;
 }
 
-function drawBackPage(doc: jsPDF, backImage: string | Buffer) {
+function drawBackPage(
+  doc: jsPDF,
+  backImage: string | Buffer,
+  cardCount: number,
+) {
   // Load image data
   let imgData: Buffer | null = null;
   if (typeof backImage === "string") {
@@ -187,7 +193,7 @@ function drawBackPage(doc: jsPDF, backImage: string | Buffer) {
 
   const iconSize = Math.min(30, CARD_WIDTH * 0.6); // mm
 
-  for (let idx = 0; idx < 9; idx++) {
+  for (let idx = 0; idx < cardCount; idx++) {
     const row = Math.floor(idx / 3);
     const col = idx % 3;
     const x = PAGE_MARGIN_X + col * (CARD_WIDTH + GAP_X);
@@ -195,7 +201,7 @@ function drawBackPage(doc: jsPDF, backImage: string | Buffer) {
 
     // draw card border (optional)
     doc.setDrawColor(0);
-    doc.rect(x, y, CARD_WIDTH, CARD_HEIGHT);
+    // doc.rect(x, y, CARD_WIDTH, CARD_HEIGHT);
 
     if (imgData) {
       try {
@@ -249,7 +255,7 @@ function drawCard(
   x: number,
   y: number,
   width: number,
-  height: number
+  height: number,
 ) {
   doc.setDrawColor(0);
   doc.rect(x, y, width, height);
@@ -272,7 +278,7 @@ function drawCard(
       : `${card.schule}zauber ${card.stufe}. Grades`,
     x + width / 2,
     cursorY,
-    { align: "center" }
+    { align: "center" },
   );
 
   doc.setFontSize(6);
@@ -292,13 +298,13 @@ function drawCard(
 
     cursorY += 4;
     const rangeIcon = fs.readFileSync(
-      path.resolve(__dirname, "../assets/icons/25px-Range_Icon.png")
+      path.resolve(__dirname, "../assets/icons/25px-Range_Icon.png"),
     );
     doc.addImage(rangeIcon, "PNG", x + 10, cursorY - 3, 4, 4);
     doc.text(card.reichweite, x + 14, cursorY);
 
     const durationIcon = fs.readFileSync(
-      path.resolve(__dirname, "../assets/icons/25px-Duration_Icon.png")
+      path.resolve(__dirname, "../assets/icons/25px-Duration_Icon.png"),
     );
     doc.addImage(durationIcon, "PNG", x + width / 2 - 2, cursorY - 3, 4, 4);
     doc.text(card.dauer, x + width / 2 + 2, cursorY);
@@ -324,7 +330,7 @@ function drawCard(
         doc,
         "../assets/icons/Persuasion_Icon.png",
         imagePositions[componentCounter][counter++],
-        cursorY
+        cursorY,
       );
     }
     if (card.komponenten.gestik) {
@@ -332,7 +338,7 @@ function drawCard(
         doc,
         "../assets/icons/Intimidation_Icon.png",
         imagePositions[componentCounter][counter++],
-        cursorY
+        cursorY,
       );
     }
     if (card.komponenten.material) {
@@ -340,13 +346,13 @@ function drawCard(
         doc,
         "../assets/icons/Medicine_Icon.png",
         imagePositions[componentCounter][counter++],
-        cursorY
+        cursorY,
       );
       doc.setFontSize(6);
       cursorY += 3;
       const componentLines = doc.splitTextToSize(
         card.komponenten.material,
-        width - 4
+        width - 4,
       );
       for (const line of componentLines) {
         doc.text(line, x + width / 2, cursorY, { align: "center" });
@@ -373,7 +379,7 @@ function printPropertyLine(
   card: Spellcard,
   x: number,
   y: number,
-  width: number
+  width: number,
 ) {
   let coursorX = x;
 
@@ -385,7 +391,7 @@ function printPropertyLine(
       doc,
       "../assets/icons/34px-Bonus_Action_Icon.png",
       coursorX,
-      y
+      y,
     );
     addHorizontalText(doc, "Bonusaktion", coursorX + 4, y);
   } else if (card.zeitaufwand === "Reaktion") {
@@ -393,7 +399,7 @@ function printPropertyLine(
       doc,
       "../assets/icons/23px-Reaction_Icon.png",
       coursorX,
-      y
+      y,
     );
     addHorizontalText(doc, "Reaktion", coursorX + 4, y);
   } else {
@@ -406,7 +412,7 @@ function printPropertyLine(
       doc,
       "../assets/icons/Ritual_Spell_Icon.png",
       x + width / 2 - 11,
-      y
+      y,
     );
     addHorizontalText(doc, "Ritual", x + width / 2 - 6, y);
   }
@@ -416,7 +422,7 @@ function printPropertyLine(
       doc,
       "../assets/icons/25px-Concentration_Icon.png",
       x + width - 25,
-      y
+      y,
     );
     addHorizontalText(doc, "Konzentration", x + width - 20, y);
   }
