@@ -1,4 +1,4 @@
-import { Util as Util } from "../util";
+import { Util as Util } from "../../util";
 import { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
 import path from "path";
@@ -22,11 +22,11 @@ export class SpellController {
       if (filterStufeBis && filterStufeBis !== "") {
         const bis = parseInt(filterStufeBis, 10);
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.Stufe >= von && spell.Stufe <= bis
+          (spell) => spell.Stufe >= von && spell.Stufe <= bis,
         );
       } else {
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.Stufe === von
+          (spell) => spell.Stufe === von,
         );
       }
     } else if (filterStufeBis && filterStufeBis !== "") {
@@ -36,12 +36,12 @@ export class SpellController {
 
     if (filterSchule) {
       gefilterteZauber = gefilterteZauber.filter(
-        (spell) => spell.Schule === filterSchule
+        (spell) => spell.Schule === filterSchule,
       );
     }
     if (filterKlasse) {
       gefilterteZauber = gefilterteZauber.filter((spell) =>
-        spell.Klasse.includes(filterKlasse)
+        spell.Klasse.includes(filterKlasse),
       );
     }
 

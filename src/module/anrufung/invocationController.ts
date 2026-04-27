@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Util } from "../util";
+import { Util } from "../../util";
 import { Invocation, JsonFilePath } from "./invocationModel";
 import path from "path";
 import { SpellController } from "../spell/spellControler";
@@ -33,7 +33,7 @@ export class InvocationController {
 
     for (const invocation of invocationData) {
       invocation.Zauber = await SpellController.getSpellByName(
-        invocation.Zauber as string
+        invocation.Zauber as string,
       );
     }
 

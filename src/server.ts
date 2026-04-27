@@ -1,12 +1,11 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import bodyParser from "body-parser";
-import ejs from "ejs";
-import spellRoutes from "./spell/spellRoute";
-import invocationRoutes from "./anrufung/invocationRoute";
-import spellCardRoutes from "./spellcard/spellcardRoute";
-import classRoutes from "./class/classRouter";
-import dataRoutes from "./data/dataRouter";
+import spellRoutes from "./module/spell/spellRoute";
+import invocationRoutes from "./module/anrufung/invocationRoute";
+import spellCardRoutes from "./module/spellcard/spellcardRoute";
+import classRoutes from "./module/class/classRouter";
+import dataRoutes from "./module/data/dataRouter";
 
 const app = express();
 const port = 3000;

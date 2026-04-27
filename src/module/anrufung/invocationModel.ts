@@ -1,7 +1,7 @@
 import path from "path";
 import { Spell } from "../spell/spellModel";
 import { Mode } from "fs";
-import { Model as Model } from "../util/modelData";
+import { Model as Model } from "../../util/modelData";
 
 export interface Invocation extends Model {
   Stufe: number;
@@ -13,5 +13,5 @@ export interface Invocation extends Model {
 
 export const JsonFilePath = path.join(
   __dirname,
-  "../../assets/invocation.json"
+  "../../assets/invocation.json",
 );

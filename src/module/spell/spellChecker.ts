@@ -1,4 +1,4 @@
-import { Util } from "../util";
+import { Util } from "../../util";
 import { JsonFilePath } from "./spellModel";
 
 const requiredFields = [
@@ -77,7 +77,7 @@ export class SpellChecker {
           (Array.isArray(spell[field]) && spell[field].length === 0)
         ) {
           errors.push(
-            `Zauber "${spell.Name}" (Index ${index}) fehlt das Feld "${field}" oder es ist leer.`
+            `Zauber "${spell.Name}" (Index ${index}) fehlt das Feld "${field}" oder es ist leer.`,
           );
         }
       });
@@ -91,20 +91,20 @@ export class SpellChecker {
         spellStufeNumber > 9
       ) {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Stufe ist ungültig (muss eine ganze Zahl zwischen 0 und 9 sein). Ist: ${spell.Stufe}`
+          `Zauber "${spell.Name}" (Index ${index}): Stufe ist ungültig (muss eine ganze Zahl zwischen 0 und 9 sein). Ist: ${spell.Stufe}`,
         );
       }
       if (!Array.isArray(spell.Klasse)) {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Klasse ist kein Array.`
+          `Zauber "${spell.Name}" (Index ${index}): Klasse ist kein Array.`,
         );
       } else if (
         spell.Klasse.some(
-          (k: string) => typeof k !== "string" || k.trim() === ""
+          (k: string) => typeof k !== "string" || k.trim() === "",
         )
       ) {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Nicht alle Einträge im Klassen-Array sind gültige Strings.`
+          `Zauber "${spell.Name}" (Index ${index}): Nicht alle Einträge im Klassen-Array sind gültige Strings.`,
         );
       } else {
         spell.Klasse.forEach((className: string) => {
@@ -113,8 +113,8 @@ export class SpellChecker {
               `Zauber "${
                 spell.Name
               }" (Index ${index}): Ungültiger Klassenname "${className}". Erlaubte Klassen sind: ${validClasses.join(
-                ", "
-              )}`
+                ", ",
+              )}`,
             );
           }
         });
@@ -124,27 +124,27 @@ export class SpellChecker {
         typeof spell.Konzentration !== "boolean"
       ) {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Konzentration muss ein Boolean sein.`
+          `Zauber "${spell.Name}" (Index ${index}): Konzentration muss ein Boolean sein.`,
         );
       }
       if (spell.Konzentration && !spell.Dauer.startsWith("Bis zu")) {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Dauer muss mit 'Bis zu' anfangen, wenn Konzentration true ist`
+          `Zauber "${spell.Name}" (Index ${index}): Dauer muss mit 'Bis zu' anfangen, wenn Konzentration true ist`,
         );
       }
       if (spell.Ritual !== undefined && typeof spell.Ritual !== "boolean") {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Ritual muss ein Boolean sein.`
+          `Zauber "${spell.Name}" (Index ${index}): Ritual muss ein Boolean sein.`,
         );
       }
       if (spell.Verbal !== undefined && typeof spell.Verbal !== "boolean") {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Verbal muss ein Boolean sein.`
+          `Zauber "${spell.Name}" (Index ${index}): Verbal muss ein Boolean sein.`,
         );
       }
       if (spell.Gestik !== undefined && typeof spell.Gestik !== "boolean") {
         errors.push(
-          `Zauber "${spell.Name}" (Index ${index}): Gestik muss ein Boolean sein.`
+          `Zauber "${spell.Name}" (Index ${index}): Gestik muss ein Boolean sein.`,
         );
       }
 
@@ -153,7 +153,7 @@ export class SpellChecker {
         errors.push(
           `Zauber "${spell.Name}" (Index ${index}): Ungültige Reichweite "${
             spell.Reichweite
-          }". Erlaubte Reichweiten sind: ${validRanges.join(", ")}`
+          }". Erlaubte Reichweiten sind: ${validRanges.join(", ")}`,
         );
       }
 
@@ -162,7 +162,7 @@ export class SpellChecker {
         errors.push(
           `Zauber "${spell.Name}" (Index ${index}): Ungültige Schule "${
             spell.Schule
-          }". Erlaubte Schulen sind: ${validSchools.join(", ")}`
+          }". Erlaubte Schulen sind: ${validSchools.join(", ")}`,
         );
       }
     });
