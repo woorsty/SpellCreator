@@ -66,21 +66,46 @@
 
     .top {
       display: grid;
-      grid-template-columns: 3fr 1fr 2fr 1.2fr;
-      gap: 14px;
-      width: 100%;
+      grid-template-columns: 3fr 1fr 1.4fr 1.2fr;
+      gap: 10px;
       align-items: stretch;
     }
 
-    /* optional auf großen Screens */
+    .top .label {
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+
+    .top .value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .top .card {
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .top .quickbox {
+      padding: 10px;
+    }
+
     .sheet {
       max-width: 100%;
     }
 
     .page {
       display: grid;
-      grid-template-columns: 340px 1fr 360px;
-      gap: 20px;
+      grid-template-columns: 440px minmax(520px, 1fr) 360px;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .firstpage {
+      display: grid;
+      grid-template-columns: 480px 1fr;
+      gap: 14px;
+      align-items: start;
     }
 
     .left,
@@ -88,7 +113,8 @@
     .right {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 14px;
+      align-self: start;
     }
 
     .abilities {
@@ -98,6 +124,7 @@
     }
 
     .ability {
+      overflow: hidden;
       background: var(--panel2);
       border: 1px solid var(--line);
       border-radius: 12px;
@@ -130,13 +157,6 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
-    }
-
-    .quickbox {
-      background: var(--panel2);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
     }
 
     .quickbox .label {
@@ -228,8 +248,9 @@
 
     .skill-row {
       display: grid;
-      grid-template-columns: 24px 50px 1fr;
+      grid-template-columns: 24px 50px minmax(0, 1fr);
       gap: 8px;
+      min-width: 0;
       align-items: center;
       padding: 4px 0;
       border-bottom: 1px solid rgba(255, 255, 255, .06);
@@ -264,6 +285,9 @@
 
     .skill-name {
       font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     /* =========================
@@ -347,6 +371,25 @@ Links / Rechts Spalten
       line-height: 1;
     }
 
+    .character-info .label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .character-info .value {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .character-info {
+      background: var(--panel2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
     @media (max-width:1300px) {
       .page {
         grid-template-columns: 1fr;
@@ -388,7 +431,7 @@ Links / Rechts Spalten
     <div class="top">
 
       <div class="grid-2">
-        <div class="quickbox">
+        <div class="character-info">
           <div class="card">
             <div class="label">Charaktername</div>
             <div class="value"><%= character.name %></div>
@@ -454,6 +497,7 @@ Links / Rechts Spalten
               <div class="value"><%= character.temporaryHitpoints %></div>
             </div>
           </div>
+
         </div>
         <div class="quickbox">
           <h2 class="section-title">Trefferwürfel</h2>
@@ -475,7 +519,7 @@ Links / Rechts Spalten
     </div>
 
     <!-- PAGE -->
-    <div class="page">
+    <div class="firstpage">
 
       <!-- LEFT -->
       <div class="left">

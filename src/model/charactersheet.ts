@@ -269,7 +269,7 @@ export class CharacterSheet {
         new Weapon({
           name: "Longsword",
           attackBonus: 5,
-          difficultyBonus: 0,
+          difficultyBonus: 3,
           damage: "1d8+3",
           damageType: "Slashing",
           notes: "Versatile (1d10)",
@@ -277,7 +277,7 @@ export class CharacterSheet {
         new Weapon({
           name: "Shortbow",
           attackBonus: 5,
-          difficultyBonus: 0,
+          difficultyBonus: 3,
           damage: "1d6+3",
           damageType: "Piercing",
           notes: "Range 80/320",
