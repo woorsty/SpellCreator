@@ -1,6 +1,6 @@
 export class Skill {
-  name: string = "";
-  proficiency: boolean = false;
-  modifier: number = 0;
-  expertise: boolean = false;
+  name = "";
+  proficiency = false;
+  modifier = 0;
+  expertise = false;
 }

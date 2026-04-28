@@ -14,6 +14,7 @@ class CharacterSheet {
         this.background = "";
         this.class = "";
         this.species = species_1.Species.Human;
+        this.subclass = "";
         this.level = 1;
         this.xp = 0;
         this.armorClass = 0;

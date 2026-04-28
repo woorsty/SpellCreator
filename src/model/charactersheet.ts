@@ -12,7 +12,7 @@ export class CharacterSheet {
   background = "";
   class = "";
   species = Species.Human;
-  subclass?: string;
+  subclass = "";
 
   level = 1;
   xp = 0;

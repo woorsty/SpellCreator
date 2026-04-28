@@ -2,325 +2,618 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= character.name %> – Charakterbogen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= character.name %> – Charakterbogen</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel2: #33363c;
+      --line: #4b4f57;
+      --text: #f5f5f5;
+      --muted: #b8bcc5;
+      --green: #57d37c;
+    }
 
-        body {
-            margin: 0;
-            padding: 25px;
-            background: #1b1b1b;
-            color: #f2f2f2;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .sheet {
-            max-width: 1400px;
-            margin: auto;
-            background: #242424;
-            border: 2px solid #555;
-            border-radius: 14px;
-            padding: 25px;
-        }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        h1, h2, h3 {
-            margin: 0 0 10px 0;
-            color: #fff;
-        }
+    .sheet {
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        .topbar {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
 
-        .box {
-            background: #2f2f2f;
-            border: 1px solid #555;
-            border-radius: 10px;
-            padding: 12px;
-        }
+    .section-title {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
 
-        .label {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #aaa;
-            margin-bottom: 6px;
-        }
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
 
-        .value {
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .value {
+      font-size: 18px;
+      font-weight: 700;
+    }
 
-        .main {
-            display: grid;
-            grid-template-columns: 220px 1fr 320px;
-            gap: 20px;
-        }
+    .top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 14px;
+    }
 
-        .abilities {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+    .page {
+      display: grid;
+      grid-template-columns: 340px 1fr 360px;
+      gap: 20px;
+    }
 
-        .ability {
-            background: #2f2f2f;
-            border: 1px solid #555;
-            border-radius: 10px;
-            text-align: center;
-            padding: 12px;
-        }
+    .left,
+    .center,
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        .ability-name {
-            font-size: 14px;
-            color: #bbb;
-            text-transform: uppercase;
-        }
+    .abilities {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
 
-        .ability-score {
-            font-size: 34px;
-            font-weight: bold;
-            margin: 8px 0;
-        }
+    .ability {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
 
-        .ability-mod {
-            font-size: 18px;
-            color: #ddd;
-        }
+    .ability-name {
+      font-size: 14px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
 
-        .center-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    .ability-score {
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
 
-        .skills table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+    .ability-mod {
+      font-size: 18px;
+      color: var(--green);
+    }
 
-        .skills td {
-            padding: 6px;
-            border-bottom: 1px solid #444;
-        }
+    .quickstats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
 
-        .skills tr:last-child td {
-            border-bottom: none;
-        }
+    .quickbox {
+      background: var(--panel2);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
 
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-        .hp {
-            text-align: center;
-        }
+    th,
+    td {
+      padding: 8px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
 
-        .hp-value {
-            font-size: 42px;
-            font-weight: bold;
-        }
+    th {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-        ul {
-            margin: 0;
-            padding-left: 18px;
-        }
+    tr:last-child td {
+      border-bottom: none;
+    }
 
-        .small {
-            font-size: 14px;
-            color: #ccc;
-        }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-        @media (max-width: 1100px) {
-            .main {
-                grid-template-columns: 1fr;
-            }
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
 
-            .topbar {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+    .list li {
+      margin-bottom: 6px;
+    }
 
-        @media (max-width: 700px) {
-            .topbar {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .money {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .money .quickbox {
+      padding: 10px;
+    }
+
+    .spellslots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    textarea.fake {
+      width: 100%;
+      min-height: 180px;
+      resize: none;
+      border: none;
+      background: var(--panel2);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    @media (max-width:1300px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:800px) {
+      .top {
+        grid-template-columns: 1fr;
+      }
+
+      .abilities {
+        grid-template-columns: 1fr;
+      }
+
+      .quickstats,
+      .grid-2,
+      .money,
+      .spellslots {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="sheet">
+  <% function mod(score){
+   return Math.floor((score - 10) / 2);
+}
+function sign(n){
+   return n >= 0 ? "+" + n : n;
+} %>
 
-    <!-- Kopfbereich -->
-    <div class="topbar">
-        <div class="box">
+  <div class="sheet">
+
+    <!-- TOP -->
+    <div class="top">
+
+      <div class="grid-2">
+        <div class="quickbox">
+          <div class="card">
             <div class="label">Charaktername</div>
             <div class="value"><%= character.name %></div>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="label">Hintergrund</div>
+              <div class="value"><%= character.background %></div>
+            </div>
+            <div class="card">
+              <div class="label">Klasse</div>
+              <div class="value"><%= character.class %></div>
+            </div>
+            <div class="card">
+              <div class="label">Volk</div>
+              <div class="value"><%= character.species %></div>
+            </div>
+            <div class="card">
+              <div class="label">Unterklasse</div>
+              <div class="value"><%= character.subclass %></div>
+            </div>
+          </div>
         </div>
 
-        <div class="box">
-            <div class="label">Klasse / Level</div>
-            <div class="value"><%= character.class %> <%= character.level %></div>
+        <div class="quickbox">
+          <div class="card">
+            <div class="label">Stufe</div>
+            <div class="value"><%= character.level %></div>
+          </div>
+
+          <div class="card">
+            <div class="label">EP</div>
+            <div class="value"><%= character.xp %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quickbox">
+        <div class="card">
+          <div class="label">Rüstungsklasse</div>
+          <div class="value"><%= character.armorClass %></div>
+        </div>
+      </div>
+
+      <div class="quickbox">
+        <h2 class="section-title">Trefferpunkte</h2>
+
+        <div class="quickstats">
+
+          <div class="card">
+            <div class="label">Aktuell</div>
+            <div class="value"><%= character.currentHitpoints %></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="label">Maximal</div>
+              <div class="value"><%= character.maxHitpoints %></div>
+            </div>
+
+            <div class="card">
+              <div class="label">Temporär</div>
+              <div class="value"><%= character.temporaryHitpoints %></div>
+            </div>
+          </div>
+        </div>
+        <div class="quickbox">
+          <h2 class="section-title">Trefferwürfel</h2>
+          <div class="card">
+            <div class="value"><%= character.currentHitDice %></div>
+            <div class="label">Verbraucht</div>
+          </div>
+          <div class="card">
+            <div class="value"><%= character.maxHitDice %></div>
+            <div class="label">Maximal</div>
+          </div>
         </div>
 
-        <div class="box">
-            <div class="label">Hintergrund</div>
-            <div class="value"><%= character.background %></div>
-        </div>
+      </div>
+      <div class="quickbox">
+        <h2 class="section-title">Todesrettungswürfe</h2>
 
-        <div class="box">
-            <div class="label">Volk</div>
-            <div class="value"><%= character.species %></div>
-        </div>
+      </div>
     </div>
 
-    <div class="main">
+    <!-- PAGE -->
+    <div class="page">
 
-        <!-- Attribute -->
-        <div class="abilities">
+      <!-- LEFT -->
+      <div class="left">
 
-            <% const stats = [
-                { key: "strength", name: "Stärke" },
-                { key: "dexterity", name: "Geschick" },
-                { key: "constitution", name: "Konsti" },
-                { key: "intelligence", name: "Intelligenz" },
-                { key: "wisdom", name: "Weisheit" },
-                { key: "charisma", name: "Charisma" }
-            ]; %>
+        <div class="card">
+          <h2 class="section-title">Attribute</h2>
 
-            <% stats.forEach(stat => { 
-                const score = character[stat.key];
-                const mod = Math.floor((score - 10) / 2);
-            %>
+          <div class="abilities">
+
+            <div class="quickbox">
+              <div class="label">Übungsbonus</div>
+              <div class="value">+<%= character.proficiencyBonus %></div>
+            </div>
 
             <div class="ability">
-                <div class="ability-name"><%= stat.name %></div>
-                <div class="ability-score"><%= score %></div>
-                <div class="ability-mod">
-                    <%= mod >= 0 ? "+" + mod : mod %>
-                </div>
-            </div>
+              <div class="ability-name">Stärke</div>
+              <div class="grid-2">
+                <div class="ability-mod"><%= sign(mod(character.strength.value)) %></div>
+                <div class="ability-score"><%= character.strength.value %></div>
+              </div>
+              <div class="ability-name">Athletik</div>
+              <div class="ability-mod"><%= sign(mod(character.strength.value) + character.athletics.proficiency ? character.proficiencyBonus : 0) %></div>
+              <div class="ability-score"><%= character.athletics.proficiency %></div>
 
+
+            </div>
+            <div class="ability">
+              <div class="ability-name">Geschicklichkeit</div>
+              <div class="ability-mod"><%= sign(mod(character.dexterity.value)) %></div>
+              <div class="ability-score"><%= character.dexterity.value %></div>
+            </div>
+            <div class="ability">
+              <div class="ability-name">Konstitution</div>
+              <div class="ability-mod"><%= sign(mod(character.constitution.value)) %></div>
+              <div class="ability-score"><%= character.constitution.value %></div>
+            </div>
+            <div class="ability">
+              <div class="ability-name">Intelligenz</div>
+              <div class="ability-score"><%= character.intelligence.value %></div>
+              <div class="ability-mod"><%= sign(mod(character.intelligence.value)) %></div>
+            </div>
+            <div class="ability">
+              <div class="ability-name">Weisheit</div>
+              <div class="ability-mod"><%= sign(mod(character.wisdom.value)) %></div>
+              <div class="ability-score"><%= character.wisdom.value %></div>
+            </div>
+            <div class="ability">
+              <div class="ability-name">Charisma</div>
+              <div class="ability-mod"><%= sign(mod(character.charisma.value)) %></div>
+              <div class="ability-score"><%= character.charisma.value %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="center">
+
+        <div class="card">
+          <div class="card">
+            <div class="quickstats">
+
+              <div class="quickbox">
+                <div class="label">Initiative</div>
+                <div class="value"><%= sign(character.initiative) %></div>
+              </div>
+
+              <div class="quickbox">
+                <div class="label">Bewegungsrate</div>
+                <div class="value"><%= character.speed %></div>
+              </div>
+
+              <div class="quickbox">
+                <div class="label">Größe</div>
+                <div class="value"><%= character.size %></div>
+              </div>
+
+              <div class="quickbox">
+                <div class="label">Passive Wahrnehmung</div>
+                <div class="value"><%= character.passivePerception %></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Waffen & Angriffszauber</h2>
+
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Bonus</th>
+              <th>SG</th>
+              <th>Schaden</th>
+              <th>Art</th>
+              <th>Notizen</th>
+            </tr>
+
+            <% character.weapons.forEach(w=>{ %>
+            <tr>
+              <td><%= w.name %></td>
+              <td>+<%= w.attackBonus %></td>
+              <td><%= w.damage %></td>
+              <td><%= w.type %></td>
+              <td><%= w.notes %></td>
+            </tr>
             <% }) %>
 
+            <% character.damageCantrips.forEach(w=>{ %>
+            <tr>
+              <td><%= w.name %></td>
+              <td>+<%= w.attackBonus %></td>
+              <td><%= w.damage %></td>
+              <td><%= w.type %></td>
+              <td><%= w.notes %></td>
+            </tr>
+            <% }) %>
+
+          </table>
         </div>
 
-        <!-- Mitte -->
-        <div class="center-column">
+        <div class="grid-2">
 
-            <div class="box">
-                <h2>Fertigkeiten</h2>
+          <div class="card">
+            <h2 class="section-title">Klassenmerkmale</h2>
+            <ul class="list">
+              <% character.classFeatures.forEach(x=>{ %>
+              <li><%= x %></li>
+              <% }) %>
+            </ul>
+          </div>
 
-                <div class="skills">
-                    <table>
-                        <% const skills = [
-                            { key: "strength", name: "Stärke" },
-                            { key: "dexterity", name: "Geschick" },
-                            { key: "constitution", name: "Konsti" },
-                            { key: "intelligence", name: "Intelligenz" },
-                            { key: "wisdom", name: "Weisheit" },
-                            { key: "charisma", name: "Charisma" }
-                        ]; %>
-                        <% skills.forEach(skill => { %>
-                        <tr>
-                            <td><%= skill.name %></td>
-                            <td style="text-align:right;">
-                                <%= skill.mod >= 0 ? "+" + skill.mod : skill.mod %>
-                            </td>
-                        </tr>
-                        <% }) %>
-                    </table>
-                </div>
-            </div>
-
-            <div class="box">
-                <h2>Angriffe</h2>
-
-                <ul>
-                    <% 
-                    console.log(character);
-                    character.weapons.forEach(attack => { %>
-                        <li>
-                            <strong><%= attack.name %></strong>
-                            (+<%= attack.attackBonus %>) –
-                            <%= attack.damage %>
-                        </li>
-                    <% }) %> 
-                    <% character.damageCantrips.forEach(attack => { %>
-                        <li>
-                            <strong><%= attack.name %></strong>
-                            (+<%= attack.attackBonus %>) –
-                            <%= attack.damage %>
-                        </li>
-                    <% }) %>
-                </ul>
-            </div>
-
-            <div class="box">
-                <h2>Ausrüstung</h2>
-
-                <ul>
-                    <% character.equipment.forEach(item => { %>
-                        <li><%= item %></li>
-                    <% }) %>
-                </ul>
-            </div>
+          <div class="card">
+            <h2 class="section-title">Volksmerkmale</h2>
+            <ul class="list">
+              <% character.speciesTraits.forEach(x=>{ %>
+              <li><%= x %></li>
+              <% }) %>
+            </ul>
+          </div>
 
         </div>
 
-        <!-- Rechts -->
-        <div class="right-column">
 
-            <div class="box hp">
-                <div class="label">Trefferpunkte</div>
-                <div class="hp-value"><%= character.currentHitpoints %></div>
-                <div class="small">Max <%= character.maxHitpoints %></div>
+        <div class="card">
+          <h2 class="section-title">Talente</h2>
+          <ul class="list">
+            <% character.feats.forEach(x=>{ %>
+            <li><%= x %></li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+
+      <br />
+      <!-- RIGHT -->
+      <div class="page">
+
+        <div class="card">
+          <h2 class="section-title">Zauberwirken</h2>
+
+          <div class="quickstats">
+            <div class="quickbox">
+              <div class="label">Attribut</div>
+              <div class="value"><%= character.spellcastingAbility %></div>
             </div>
 
-            <div class="box">
-                <div class="label">Rüstungsklasse</div>
-                <div class="value"><%= character.armorClass %></div>
+            <div class="quickbox">
+              <div class="label">Mod</div>
+              <div class="value"><%= sign(character.spellAttackBonus - character.proficiencyBonus) %></div>
             </div>
 
-            <div class="box">
-                <div class="label">Initiative</div>
-                <div class="value">
-                    <%= character.initiative >= 0 ? "+" + character.initiative : character.initiative %>
-                </div>
+            <div class="quickbox">
+              <div class="label">SG</div>
+              <div class="value"><%= character.spellSaveDC %></div>
             </div>
 
-            <div class="box">
-                <div class="label">Bewegung</div>
-                <div class="value"><%= character.speed %> ft</div>
+            <div class="quickbox">
+              <div class="label">Angriff</div>
+              <div class="value">+<%= character.spellAttackBonus %></div>
             </div>
-
-            <div class="box">
-                <div class="label">Übungsbonus</div>
-                <div class="value">+<%= character.proficiency %></div>
-            </div>
-
-            <div class="box">
-                <h3>Passive Wahrnehmung</h3>
-                <div class="value"><%= character.passivePerception %></div>
-            </div>
+          </div>
 
         </div>
+
+        <div class="card">
+          <h2 class="section-title">Zauberplätze</h2>
+
+          <div class="spellslots">
+
+            <% for(let i=1;i<=9;i++){ %>
+            <div class="quickbox">
+              <div class="label">Grad<%= i %></div>
+              <div class="value">
+                <%= character["usedSpellSlots"+i] %>/<%= character["totalSpellSlots"+i] %>
+              </div>
+            </div>
+            <% } %>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Zauber</h2>
+
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Grad</th>
+            </tr>
+
+            <% character.cantripsAndPreparedSpells.forEach(spell=>{ %>
+            <tr>
+              <td><%= spell.name %></td>
+              <td><%= spell.level %></td>
+            </tr>
+            <% }) %>
+
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Sprachen</h2>
+          <ul class="list">
+            <% character.languages.forEach(x=>{ %>
+            <li><%= x %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Ausrüstung</h2>
+          <ul class="list">
+            <% character.equipment.forEach(x=>{ %>
+            <li><%= x %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Münzen</h2>
+
+          <div class="money">
+
+            <div class="quickbox">
+              <div class="label">KM</div>
+              <div class="value"><%= character.copper %></div>
+            </div>
+            <div class="quickbox">
+              <div class="label">SM</div>
+              <div class="value"><%= character.silver %></div>
+            </div>
+            <div class="quickbox">
+              <div class="label">EM</div>
+              <div class="value"><%= character.electrum %></div>
+            </div>
+            <div class="quickbox">
+              <div class="label">GM</div>
+              <div class="value"><%= character.gold %></div>
+            </div>
+            <div class="quickbox">
+              <div class="label">PM</div>
+              <div class="value"><%= character.platinum %></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
-</div>
+    <!-- BOTTOM ROLEPLAY -->
+    <div class="grid-2">
+
+      <div class="card">
+        <h2 class="section-title">Aussehen</h2>
+        <div><%= character.appearance %></div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Hintergrundgeschichte & Persönlichkeit</h2>
+        <div><%= character.backstory %></div>
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
+
 </html>
