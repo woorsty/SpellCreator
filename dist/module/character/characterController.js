@@ -23,7 +23,7 @@ class CharacterController {
         }
         else {
             res.render("character-detail", {
-                character: new charactersheet_1.CharacterSheet(),
+                character: charactersheet_1.CharacterSheet.getTestCharacter(),
                 renderMarkdown: util_1.Util.renderMarkdown,
             });
         }

@@ -1,1 +1,1 @@
-{"version":3,"file":"attribute.js","sourceRoot":"","sources":["../../src/model/attribute.ts"],"names":[],"mappings":";;;AAAA,mCAAgC;AAEhC,MAAa,SAAU,SAAQ,aAAK;IAApC;;QACE,UAAK,GAAG,CAAC,CAAC;QACV,gBAAW,GAAG,CAAC,CAAC;IAClB,CAAC;CAAA;AAHD,8BAGC"}
+{"version":3,"file":"attribute.js","sourceRoot":"","sources":["../../src/model/attribute.ts"],"names":[],"mappings":";;;AAAA,mCAAgC;AAEhC,MAAa,SAAU,SAAQ,aAAK;IAIlC,YAAmB,IAAyB;QAC1C,KAAK,CAAC,IAAI,CAAC,CAAC;QAJd,UAAK,GAAG,CAAC,CAAC;QACV,gBAAW,GAAG,CAAC,CAAC;QAId,MAAM,CAAC,MAAM,CAAC,IAAI,EAAE,IAAI,CAAC,CAAC;IAC5B,CAAC;CACF;AARD,8BAQC"}

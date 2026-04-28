@@ -26,7 +26,7 @@ export class CharacterController {
       });
     } else {
       res.render("character-detail", {
-        character: new CharacterSheet(),
+        character: CharacterSheet.getTestCharacter(),
         renderMarkdown: Util.renderMarkdown,
       });
     }

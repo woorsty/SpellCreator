@@ -5,4 +5,8 @@ export class Weapon {
   damage: string = "";
   damageType: string = "";
   notes: string = "";
+
+  public constructor(init?: Partial<Weapon>) {
+    Object.assign(this, init);
+  }
 }
