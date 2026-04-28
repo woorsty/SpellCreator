@@ -115,6 +115,10 @@
       color: var(--green);
     }
 
+    .ability-proficiency {
+      font-size: 18px;
+    }
+
     .quickstats {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -223,10 +227,7 @@
 
 <body>
 
-  <% function mod(score){
-   return Math.floor((score - 10) / 2);
-}
-function sign(n){
+<% function sign(n){
    return n >= 0 ? "+" + n : n;
 } %>
 
@@ -341,40 +342,141 @@ function sign(n){
             <div class="ability">
               <div class="ability-name">Stärke</div>
               <div class="grid-2">
-                <div class="ability-mod"><%= sign(mod(character.strength.value)) %></div>
+                <div class="ability-mod"><%= sign(character.strength.modifier) %></div>
                 <div class="ability-score"><%= character.strength.value %></div>
               </div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.strength.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.strength.proficiency %></div>
+
               <div class="ability-name">Athletik</div>
-              <div class="ability-mod"><%= sign(mod(character.strength.value) + character.athletics.proficiency ? character.proficiencyBonus : 0) %></div>
-              <div class="ability-score"><%= character.athletics.proficiency %></div>
-
-
+              <div class="ability-mod"><%= sign(character.athletics.modifier) %></div>
+              <div class="ability-proficiency"><%= character.athletics.proficiency %></div>
             </div>
+
             <div class="ability">
               <div class="ability-name">Geschicklichkeit</div>
-              <div class="ability-mod"><%= sign(mod(character.dexterity.value)) %></div>
+              <div class="ability-mod"><%= sign(character.dexterity.modifier) %></div>
               <div class="ability-score"><%= character.dexterity.value %></div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.dexterity.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.dexterity.proficiency %></div>
+
+              <div class="ability-name">Akrobatik</div>
+              <div class="ability-mod"><%= sign(character.acrobatics.modifier) %></div>
+              <div class="ability-proficiency"><%= character.acrobatics.proficiency %></div>
+
+              <div class="ability-name">Fingerfertigkeit</div>
+              <div class="ability-mod"><%= sign(character.sleightOfHand.modifier) %></div>
+              <div class="ability-proficiency"><%= character.sleightOfHand.proficiency %></div>
+
+              <div class="ability-name">Heimlichkeit</div>
+              <div class="ability-mod"><%= sign(character.stealth.modifier) %></div>
+              <div class="ability-proficiency"><%= character.stealth.proficiency %></div>
             </div>
+
             <div class="ability">
               <div class="ability-name">Konstitution</div>
-              <div class="ability-mod"><%= sign(mod(character.constitution.value)) %></div>
+              <div class="ability-mod"><%= sign(character.constitution.modifier) %></div>
               <div class="ability-score"><%= character.constitution.value %></div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.constitution.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.constitution.proficiency %></div>
             </div>
+
             <div class="ability">
               <div class="ability-name">Intelligenz</div>
               <div class="ability-score"><%= character.intelligence.value %></div>
-              <div class="ability-mod"><%= sign(mod(character.intelligence.value)) %></div>
+              <div class="ability-mod"><%= sign(character.intelligence.modifier) %></div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.intelligence.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.intelligence.proficiency %></div>
+
+              <div class="ability-name">Arkane Kunde</div>
+              <div class="ability-mod"><%= sign(character.arcana.modifier) %></div>
+              <div class="ability-proficiency"><%= character.arcana.proficiency %></div>
+
+              <div class="ability-name">Geschichte</div>
+              <div class="ability-mod"><%= sign(character.history.modifier) %></div>
+              <div class="ability-proficiency"><%= character.history.proficiency %></div>
+
+              <div class="ability-name">Nachforschen</div>
+              <div class="ability-mod"><%= sign(character.investigation.modifier) %></div>
+              <div class="ability-proficiency"><%= character.investigation.proficiency %></div>
+
+              <div class="ability-name">Naturkunde</div>
+              <div class="ability-mod"><%= sign(character.nature.modifier) %></div>
+              <div class="ability-proficiency"><%= character.nature.proficiency %></div>
+
+              <div class="ability-name">Religion</div>
+              <div class="ability-mod"><%= sign(character.religion.modifier) %></div>
+              <div class="ability-proficiency"><%= character.religion.proficiency %></div>
+
             </div>
+
             <div class="ability">
               <div class="ability-name">Weisheit</div>
-              <div class="ability-mod"><%= sign(mod(character.wisdom.value)) %></div>
+              <div class="ability-mod"><%= sign(character.wisdom.modifier) %></div>
               <div class="ability-score"><%= character.wisdom.value %></div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.wisdom.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.wisdom.proficiency %></div>
+
+              <div class="ability-name">Heilkunde</div>
+              <div class="ability-mod"><%= sign(character.medicine.modifier) %></div>
+              <div class="ability-proficiency"><%= character.medicine.proficiency %></div>
+
+              <div class="ability-name">Mit Tieren umgehen</div>
+              <div class="ability-mod"><%= sign(character.animalHandling.modifier) %></div>
+              <div class="ability-proficiency"><%= character.animalHandling.proficiency %></div>
+
+              <div class="ability-name">Motiv erkennen</div>
+              <div class="ability-mod"><%= sign(character.insight.modifier) %></div>
+              <div class="ability-proficiency"><%= character.insight.proficiency %></div>
+
+              <div class="ability-name">Überlebenskunst</div>
+              <div class="ability-mod"><%= sign(character.survival.modifier) %></div>
+              <div class="ability-proficiency"><%= character.survival.proficiency %></div>
+
+              <div class="ability-name">Wahrnehmung</div>
+              <div class="ability-mod"><%= sign(character.perception.modifier) %></div>
+              <div class="ability-proficiency"><%= character.perception.proficiency %></div>
             </div>
+
             <div class="ability">
               <div class="ability-name">Charisma</div>
-              <div class="ability-mod"><%= sign(mod(character.charisma.value)) %></div>
+              <div class="ability-mod"><%= sign(character.charisma.modifier) %></div>
               <div class="ability-score"><%= character.charisma.value %></div>
+
+              <div class="ability-name">Rettungswurf</div>
+              <div class="ability-mod"><%= sign(character.charisma.savingThrow) %></div>
+              <div class="ability-proficiency"><%= character.charisma.proficiency %></div>
+
+              <div class="ability-name">Auftreten</div>
+              <div class="ability-mod"><%= sign(character.performance.modifier) %></div>
+              <div class="ability-proficiency"><%= character.performance.proficiency %></div>
+
+              <div class="ability-name">Einschüchtern</div>
+              <div class="ability-mod"><%= sign(character.intimidation.modifier) %></div>
+              <div class="ability-proficiency"><%= character.intimidation.proficiency %></div>
+
+              <div class="ability-name">Täuschen</div>
+              <div class="ability-mod"><%= sign(character.deception.modifier) %></div>
+              <div class="ability-proficiency"><%= character.deception.proficiency %></div>
+
+              <div class="ability-name">Überzeugen</div>
+              <div class="ability-mod"><%= sign(character.persuasion.modifier) %></div>
+              <div class="ability-proficiency"><%= character.persuasion.proficiency %></div>
+
             </div>
+
+            <!-- Rüstung, Waffen und Werkzeuge -->
+
           </div>
         </div>
       </div>
@@ -423,7 +525,7 @@ function sign(n){
               <th>Notizen</th>
             </tr>
 
-            <% character.weapons.forEach(w=>{ %>
+<% character.weapons.forEach(w=>{ %>
             <tr>
               <td><%= w.name %></td>
               <td>+<%= w.attackBonus %></td>
@@ -431,9 +533,9 @@ function sign(n){
               <td><%= w.type %></td>
               <td><%= w.notes %></td>
             </tr>
-            <% }) %>
+<% }) %>
 
-            <% character.damageCantrips.forEach(w=>{ %>
+<% character.damageCantrips.forEach(w=>{ %>
             <tr>
               <td><%= w.name %></td>
               <td>+<%= w.attackBonus %></td>
@@ -441,7 +543,7 @@ function sign(n){
               <td><%= w.type %></td>
               <td><%= w.notes %></td>
             </tr>
-            <% }) %>
+<% }) %>
 
           </table>
         </div>
@@ -451,30 +553,29 @@ function sign(n){
           <div class="card">
             <h2 class="section-title">Klassenmerkmale</h2>
             <ul class="list">
-              <% character.classFeatures.forEach(x=>{ %>
+<% character.classFeatures.forEach(x=>{ %>
               <li><%= x %></li>
-              <% }) %>
+<% }) %>
             </ul>
           </div>
 
           <div class="card">
             <h2 class="section-title">Volksmerkmale</h2>
             <ul class="list">
-              <% character.speciesTraits.forEach(x=>{ %>
+<% character.speciesTraits.forEach(x=>{ %>
               <li><%= x %></li>
-              <% }) %>
+<% }) %>
             </ul>
           </div>
 
         </div>
 
-
         <div class="card">
           <h2 class="section-title">Talente</h2>
           <ul class="list">
-            <% character.feats.forEach(x=>{ %>
+<% character.feats.forEach(x=>{ %>
             <li><%= x %></li>
-            <% }) %>
+<% }) %>
           </ul>
         </div>
       </div>
@@ -515,14 +616,14 @@ function sign(n){
 
           <div class="spellslots">
 
-            <% for(let i=1;i<=9;i++){ %>
+<% for(let i=1;i<=9;i++){ %>
             <div class="quickbox">
               <div class="label">Grad<%= i %></div>
               <div class="value">
-                <%= character["usedSpellSlots"+i] %>/<%= character["totalSpellSlots"+i] %>
+<%= character["usedSpellSlots"+i] %>/<%= character["totalSpellSlots"+i] %>
               </div>
             </div>
-            <% } %>
+<% } %>
 
           </div>
         </div>
@@ -536,12 +637,12 @@ function sign(n){
               <th>Grad</th>
             </tr>
 
-            <% character.cantripsAndPreparedSpells.forEach(spell=>{ %>
+<% character.cantripsAndPreparedSpells.forEach(spell=>{ %>
             <tr>
               <td><%= spell.name %></td>
               <td><%= spell.level %></td>
             </tr>
-            <% }) %>
+<% }) %>
 
           </table>
         </div>
@@ -549,18 +650,18 @@ function sign(n){
         <div class="card">
           <h2 class="section-title">Sprachen</h2>
           <ul class="list">
-            <% character.languages.forEach(x=>{ %>
+<% character.languages.forEach(x=>{ %>
             <li><%= x %></li>
-            <% }) %>
+<% }) %>
           </ul>
         </div>
 
         <div class="card">
           <h2 class="section-title">Ausrüstung</h2>
           <ul class="list">
-            <% character.equipment.forEach(x=>{ %>
+<% character.equipment.forEach(x=>{ %>
             <li><%= x %></li>
-            <% }) %>
+<% }) %>
           </ul>
         </div>
 
