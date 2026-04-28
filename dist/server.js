@@ -11,6 +11,7 @@ const invocationRoute_1 = __importDefault(require("./module/anrufung/invocationR
 const spellcardRoute_1 = __importDefault(require("./module/spellcard/spellcardRoute"));
 const classRouter_1 = __importDefault(require("./module/class/classRouter"));
 const dataRouter_1 = __importDefault(require("./module/data/dataRouter"));
+const characterRouter_1 = __importDefault(require("./module/character/characterRouter"));
 const app = (0, express_1.default)();
 const port = 3000;
 app.use(body_parser_1.default.json());
@@ -26,6 +27,7 @@ app.use("/invocation", invocationRoute_1.default);
 app.use("/spellcard", spellcardRoute_1.default);
 app.use("/class", classRouter_1.default);
 app.use("/data", dataRouter_1.default);
+app.use("/character", characterRouter_1.default);
 app.use("/", express_1.default.static(path_1.default.join(__dirname, "./main"))); // Statischer Ordner
 app.listen(port, "::", () => {
     console.log(`Server läuft auf http://0.0.0.0:${port}`);

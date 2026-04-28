@@ -2,7 +2,7 @@ import { Util as Util } from "../../util";
 import { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
 import path from "path";
-import { JsonFilePath, Spell } from "./spellModel";
+import { JsonFilePath, Spell } from "../../model/spell";
 import { render } from "ejs";
 
 export class SpellController {

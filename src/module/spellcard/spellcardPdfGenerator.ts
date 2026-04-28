@@ -1,5 +1,5 @@
 import { jsPDF } from "jspdf";
-import { Spell } from "../spell/spellModel";
+import { Spell } from "../../model/spell";
 import fs from "fs";
 import path from "path";
 

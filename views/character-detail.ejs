@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= character.name %> – Charakterbogen</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            background: #1b1b1b;
+            color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .sheet {
+            max-width: 1400px;
+            margin: auto;
+            background: #242424;
+            border: 2px solid #555;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        h1, h2, h3 {
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+
+        .topbar {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .box {
+            background: #2f2f2f;
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 6px;
+        }
+
+        .value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 220px 1fr 320px;
+            gap: 20px;
+        }
+
+        .abilities {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ability {
+            background: #2f2f2f;
+            border: 1px solid #555;
+            border-radius: 10px;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .ability-name {
+            font-size: 14px;
+            color: #bbb;
+            text-transform: uppercase;
+        }
+
+        .ability-score {
+            font-size: 34px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .ability-mod {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        .center-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skills table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .skills td {
+            padding: 6px;
+            border-bottom: 1px solid #444;
+        }
+
+        .skills tr:last-child td {
+            border-bottom: none;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hp {
+            text-align: center;
+        }
+
+        .hp-value {
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .small {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @media (max-width: 1100px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .topbar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+    <!-- Kopfbereich -->
+    <div class="topbar">
+        <div class="box">
+            <div class="label">Charaktername</div>
+            <div class="value"><%= character.name %></div>
+        </div>
+
+        <div class="box">
+            <div class="label">Klasse / Level</div>
+            <div class="value"><%= character.class %> <%= character.level %></div>
+        </div>
+
+        <div class="box">
+            <div class="label">Hintergrund</div>
+            <div class="value"><%= character.background %></div>
+        </div>
+
+        <div class="box">
+            <div class="label">Volk</div>
+            <div class="value"><%= character.species %></div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <!-- Attribute -->
+        <div class="abilities">
+
+            <% const stats = [
+                { key: "strength", name: "Stärke" },
+                { key: "dexterity", name: "Geschick" },
+                { key: "constitution", name: "Konsti" },
+                { key: "intelligence", name: "Intelligenz" },
+                { key: "wisdom", name: "Weisheit" },
+                { key: "charisma", name: "Charisma" }
+            ]; %>
+
+            <% stats.forEach(stat => { 
+                const score = character[stat.key];
+                const mod = Math.floor((score - 10) / 2);
+            %>
+
+            <div class="ability">
+                <div class="ability-name"><%= stat.name %></div>
+                <div class="ability-score"><%= score %></div>
+                <div class="ability-mod">
+                    <%= mod >= 0 ? "+" + mod : mod %>
+                </div>
+            </div>
+
+            <% }) %>
+
+        </div>
+
+        <!-- Mitte -->
+        <div class="center-column">
+
+            <div class="box">
+                <h2>Fertigkeiten</h2>
+
+                <div class="skills">
+                    <table>
+                        <% const skills = [
+                            { key: "strength", name: "Stärke" },
+                            { key: "dexterity", name: "Geschick" },
+                            { key: "constitution", name: "Konsti" },
+                            { key: "intelligence", name: "Intelligenz" },
+                            { key: "wisdom", name: "Weisheit" },
+                            { key: "charisma", name: "Charisma" }
+                        ]; %>
+                        <% skills.forEach(skill => { %>
+                        <tr>
+                            <td><%= skill.name %></td>
+                            <td style="text-align:right;">
+                                <%= skill.mod >= 0 ? "+" + skill.mod : skill.mod %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </table>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Angriffe</h2>
+
+                <ul>
+                    <% 
+                    console.log(character);
+                    character.weapons.forEach(attack => { %>
+                        <li>
+                            <strong><%= attack.name %></strong>
+                            (+<%= attack.attackBonus %>) –
+                            <%= attack.damage %>
+                        </li>
+                    <% }) %> 
+                    <% character.damageCantrips.forEach(attack => { %>
+                        <li>
+                            <strong><%= attack.name %></strong>
+                            (+<%= attack.attackBonus %>) –
+                            <%= attack.damage %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Ausrüstung</h2>
+
+                <ul>
+                    <% character.equipment.forEach(item => { %>
+                        <li><%= item %></li>
+                    <% }) %>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Rechts -->
+        <div class="right-column">
+
+            <div class="box hp">
+                <div class="label">Trefferpunkte</div>
+                <div class="hp-value"><%= character.currentHitpoints %></div>
+                <div class="small">Max <%= character.maxHitpoints %></div>
+            </div>
+
+            <div class="box">
+                <div class="label">Rüstungsklasse</div>
+                <div class="value"><%= character.armorClass %></div>
+            </div>
+
+            <div class="box">
+                <div class="label">Initiative</div>
+                <div class="value">
+                    <%= character.initiative >= 0 ? "+" + character.initiative : character.initiative %>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="label">Bewegung</div>
+                <div class="value"><%= character.speed %> ft</div>
+            </div>
+
+            <div class="box">
+                <div class="label">Übungsbonus</div>
+                <div class="value">+<%= character.proficiency %></div>
+            </div>
+
+            <div class="box">
+                <h3>Passive Wahrnehmung</h3>
+                <div class="value"><%= character.passivePerception %></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

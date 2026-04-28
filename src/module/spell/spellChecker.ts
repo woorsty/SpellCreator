@@ -1,5 +1,5 @@
 import { Util } from "../../util";
-import { JsonFilePath } from "./spellModel";
+import { JsonFilePath } from "../../model/spell";
 
 const requiredFields = [
   "Stufe",

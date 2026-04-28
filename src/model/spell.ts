@@ -1,5 +1,5 @@
 import path from "path";
-import { Model } from "../../util/modelData";
+import { Model } from "../util/modelData";
 
 export interface Spell extends Model {
   Stufe: number;

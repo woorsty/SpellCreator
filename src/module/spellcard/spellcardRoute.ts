@@ -5,7 +5,7 @@ import {
   generateCardPDF,
   generateCardPDFWithBackside,
 } from "./spellcardPdfGenerator";
-import { Spell } from "../spell/spellModel";
+import { Spell } from "../../model/spell";
 
 const createSpellcard = (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;

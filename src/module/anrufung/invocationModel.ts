@@ -1,5 +1,5 @@
 import path from "path";
-import { Spell } from "../spell/spellModel";
+import { Spell } from "../../model/spell";
 import { Mode } from "fs";
 import { Model as Model } from "../../util/modelData";
 

@@ -6,6 +6,7 @@ import invocationRoutes from "./module/anrufung/invocationRoute";
 import spellCardRoutes from "./module/spellcard/spellcardRoute";
 import classRoutes from "./module/class/classRouter";
 import dataRoutes from "./module/data/dataRouter";
+import characterRouter from "./module/character/characterRouter";
 
 const app = express();
 const port = 3000;
@@ -25,6 +26,7 @@ app.use("/invocation", invocationRoutes);
 app.use("/spellcard", spellCardRoutes);
 app.use("/class", classRoutes);
 app.use("/data", dataRoutes);
+app.use("/character", characterRouter);
 app.use("/", express.static(path.join(__dirname, "./main"))); // Statischer Ordner
 
 app.listen(port, "::", () => {
