@@ -62,7 +62,7 @@ class CharacterSheet {
         this.shieldTraining = false;
         this.weaponTrainingSimple = false;
         this.weaponTrainingMartial = false;
-        this.toolTraining = [];
+        this.toolProficiencies = [];
         this.initiative = 0;
         this.speed = 0;
         this.size = "";
@@ -239,7 +239,7 @@ class CharacterSheet {
             shieldTraining: true,
             weaponTrainingSimple: true,
             weaponTrainingMartial: true,
-            toolTraining: ["Smith's Tools"],
+            toolProficiencies: ["Smith's Tools"],
             initiative: 1,
             speed: 30,
             size: "Medium",

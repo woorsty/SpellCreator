@@ -71,7 +71,7 @@ export class CharacterSheet {
   shieldTraining = false;
   weaponTrainingSimple = false;
   weaponTrainingMartial = false;
-  toolTraining: string[] = [];
+  toolProficiencies: string[] = [];
 
   initiative = 0;
   speed = 0;
@@ -260,7 +260,7 @@ export class CharacterSheet {
       shieldTraining: true,
       weaponTrainingSimple: true,
       weaponTrainingMartial: true,
-      toolTraining: ["Smith's Tools"],
+      toolProficiencies: ["Smith's Tools"],
       initiative: 1,
       speed: 30,
       size: "Medium",

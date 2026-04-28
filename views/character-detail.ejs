@@ -46,7 +46,7 @@
 
     .section-title {
       margin: 0 0 12px 0;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       border-bottom: 1px solid var(--line);
       padding-bottom: 8px;
@@ -167,7 +167,7 @@
 
     .quickbox .value {
       display: block;
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 700;
     }
 
@@ -203,7 +203,13 @@
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 14px;
+    }
+
+    .grid-2-small {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
     }
 
     .list {
@@ -248,11 +254,11 @@
 
     .skill-row {
       display: grid;
-      grid-template-columns: 24px 50px minmax(0, 1fr);
+      grid-template-columns: 22px 60px 1fr;
       gap: 8px;
       min-width: 0;
       align-items: center;
-      padding: 4px 0;
+      padding: 2px 0;
       border-bottom: 1px solid rgba(255, 255, 255, .06);
     }
 
@@ -285,15 +291,11 @@
 
     .skill-name {
       font-size: 14px;
+      min-width: 0;
+      white-space: normal;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
     }
-
-    /* =========================
-2024 Attribute Layout
-Links / Rechts Spalten
-========================= */
 
     .abilities {
       display: grid;
@@ -373,8 +375,8 @@ Links / Rechts Spalten
 
     .character-info .label {
       display: block;
-      margin-bottom: 8px;
-      font-size: 12px;
+      margin-bottom: 5px;
+      font-size: 10px;
     }
 
     .character-info .value {
@@ -388,6 +390,51 @@ Links / Rechts Spalten
       border-radius: 12px;
       padding: 12px;
       text-align: center;
+    }
+
+    .death-saves {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .death-column {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .death-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .death-row {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .training-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .training-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     @media (max-width:1300px) {
@@ -436,7 +483,7 @@ Links / Rechts Spalten
             <div class="label">Charaktername</div>
             <div class="value"><%= character.name %></div>
           </div>
-          <div class="grid-2">
+          <div class="grid-2-small">
             <div class="card">
               <div class="label">Hintergrund</div>
               <div class="value"><%= character.background %></div>
@@ -477,43 +524,88 @@ Links / Rechts Spalten
       </div>
 
       <div class="quickbox">
-        <h2 class="section-title">Trefferpunkte</h2>
 
-        <div class="quickstats">
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px;">
 
+          <!-- HP BLOCK -->
           <div class="card">
-            <div class="label">Aktuell</div>
-            <div class="value"><%= character.currentHitpoints %></div>
+
+            <div class="label">Trefferpunkte</div>
+
+            <div style="display:flex; gap:10px; align-items:stretch;">
+
+              <!-- Current -->
+              <div style="flex:1; text-align:center;">
+                <div class="label">Aktuell</div>
+                <div class="value"><%= character.currentHitpoints %></div>
+              </div>
+
+              <!-- Max + Temp -->
+              <div style="flex:1; display:flex; flex-direction:column; gap:6px; text-align:center;">
+                <div>
+                  <div class="label">Max</div>
+                  <div class="value"><%= character.maxHitpoints %></div>
+                </div>
+                <div>
+                  <div class="label">Temp</div>
+                  <div class="value"><%= character.temporaryHitpoints %></div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div class="grid-2">
-            <div class="card">
-              <div class="label">Maximal</div>
-              <div class="value"><%= character.maxHitpoints %></div>
+          <!-- HIT DICE -->
+          <div class="card" style="text-align:center;">
+
+            <div class="label">Trefferwürfel</div>
+
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;">
+              <div>
+                <div class="label">Verbraucht</div>
+                <div class="value"><%= character.spentHitDice %></div>
+              </div>
+
+              <div>
+                <div class="label">Max</div>
+                <div class="value"><%= character.level + "W" + character.hitDiceValue %></div>
+              </div>
             </div>
 
-            <div class="card">
-              <div class="label">Temporär</div>
-              <div class="value"><%= character.temporaryHitpoints %></div>
-            </div>
           </div>
 
-        </div>
-        <div class="quickbox">
-          <h2 class="section-title">Trefferwürfel</h2>
-          <div class="card">
-            <div class="value"><%= character.currentHitDice %></div>
-            <div class="label">Verbraucht</div>
-          </div>
-          <div class="card">
-            <div class="value"><%= character.maxHitDice %></div>
-            <div class="label">Maximal</div>
-          </div>
         </div>
 
       </div>
       <div class="quickbox">
+
         <h2 class="section-title">Todesrettungswürfe</h2>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+
+          <!-- SUCCESS -->
+          <div class="death-column">
+            <div class="death-label">Erfolge</div>
+
+            <div class="death-row">
+              <div class="skill-check<%= character.successDeathSaves >= 1 ? 'filled' : '' %>"></div>
+              <div class="skill-check<%= character.successDeathSaves >= 2 ? 'filled' : '' %>"></div>
+              <div class="skill-check<%= character.successDeathSaves >= 3 ? 'filled' : '' %>"></div>
+            </div>
+          </div>
+
+          <!-- FAILS -->
+          <div class="death-column">
+            <div class="death-label">Fehlschläge</div>
+
+            <div class="death-row">
+              <div class="skill-check<%= character.failedDeathSaves >= 1 ? 'filled' : '' %>"></div>
+              <div class="skill-check<%= character.failedDeathSaves >= 2 ? 'filled' : '' %>"></div>
+              <div class="skill-check<%= character.failedDeathSaves >= 3 ? 'filled' : '' %>"></div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </div>
@@ -558,13 +650,13 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.strength.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.strength.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.strength.savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.athletics.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.athletics.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.athletics.modifier) %></div>
                   <div class="skill-name">Athletik</div>
                 </div>
@@ -588,25 +680,25 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.dexterity.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.dexterity.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.dexterity.savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.acrobatics.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.acrobatics.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.acrobatics.modifier) %></div>
                   <div class="skill-name">Akrobatik</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.sleightOfHand.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.sleightOfHand.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.sleightOfHand.modifier) %></div>
                   <div class="skill-name">Fingerfertigkeit</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.stealth.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.stealth.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.stealth.modifier) %></div>
                   <div class="skill-name">Heimlichkeit</div>
                 </div>
@@ -630,7 +722,7 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.constitution.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.constitution.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.constitution.modifier) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
@@ -638,7 +730,7 @@ Links / Rechts Spalten
 
               <div class="mini-stat">
                 <div class="label">Heroische Inspiration</div>
-                <div class="heroic-circle <%= character.heroicInspiration ? 'filled' : '' %>"></div>
+                <div class="heroic-circle<%= character.heroicInspiration ? 'filled' : '' %>"></div>
               </div>
             </div>
 
@@ -661,31 +753,31 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.arcana.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.arcana.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.arcana.modifier) %></div>
                   <div class="skill-name">Arkane Kunde</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.history.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.history.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.history.modifier) %></div>
                   <div class="skill-name">Geschichte</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.investigation.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.investigation.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.investigation.modifier) %></div>
                   <div class="skill-name">Nachforschung</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.nature.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.nature.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.nature.modifier) %></div>
                   <div class="skill-name">Naturkunde</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.religion.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.religion.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.religion.modifier) %></div>
                   <div class="skill-name">Religion</div>
                 </div>
@@ -709,32 +801,32 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.wisdom.savingThrow ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.wisdom.savingThrow ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.wisdom.savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.medicine.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.medicine.proficiency ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.medicine.modifier) %></div>
                   <div class="skill-name">Heilkunde</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.animalHandling.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.animalHandling.proficiency ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.animalHandling.modifier) %></div>
                   <div class="skill-name">Mit Tieren umgehen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.insight.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.insight.proficiency ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.insight.modifier) %></div>
                   <div class="skill-name">Motiv erkennen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.survival.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.survival.proficiency ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.survival.modifier) %></div>
                   <div class="skill-name">Überlebenskunst</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.perception.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.perception.proficiency ? ' filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.perception.modifier) %></div>
                   <div class="skill-name">Wahrnehmung</div>
                 </div>
@@ -758,27 +850,27 @@ Links / Rechts Spalten
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check <%= character.charisma.savingThrow ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.charisma.savingThrow ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.charisma.savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.performance.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.performance.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.performance.modifier) %></div>
                   <div class="skill-name">Auftreten</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.intimidation.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.intimidation.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.intimidation.modifier) %></div>
                   <div class="skill-name">Einschüchtern</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.deception.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.deception.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.deception.modifier) %></div>
                   <div class="skill-name">Täuschen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check <%= character.persuasion.proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-check<%= character.persuasion.proficiency ? 'filled' : '' %>"></div>
                   <div class="skill-mod"><%= sign(character.persuasion.modifier) %></div>
                   <div class="skill-name">Überzeugen</div>
                 </div>
@@ -789,6 +881,76 @@ Links / Rechts Spalten
             <!-- Rüstung, Waffen und Werkzeuge -->
 
           </div>
+          <div class="card">
+
+            <div class="section-title">Übung & Kompetenzen</div>
+
+            <!-- RÜSTUNGEN + SCHILD -->
+            <div class="label">Rüstung</div>
+            <div class="training-grid-4">
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.lightArmorTraining ? ' filled' : '' %>"></div>
+                <div class="skill-name">Leichte</div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.mediumArmorTraining ? ' filled' : '' %>"></div>
+                <div class="skill-name">Mittlere</div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.heavyArmorTraining ? ' filled' : '' %>"></div>
+                <div class="skill-name">Schwere</div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.shieldTraining ? ' filled' : '' %>"></div>
+                <div class="skill-name">Schilde</div>
+              </div>
+
+            </div>
+
+            <!-- WAFFEN -->
+            <div class="label">Waffen</div>
+            <div class="training-grid-2" style="margin-top:12px;">
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.weaponTrainingSimple ? ' filled' : '' %>"></div>
+                <div class="skill-name">Einfache</div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-check<%= character.weaponTrainingMartial ? ' filled' : '' %>"></div>
+                <div class="skill-name">Kriegswaffen</div>
+              </div>
+
+            </div>
+
+            <!-- WERKZEUGE -->
+            <div style="margin-top:12px;">
+              <div class="label">Werkzeuge</div>
+
+              <% if(character.toolProficiencies && character.toolProficiencies.length > 0 ) { %>
+              <div class="tool-list">
+                <% if(character.toolProficiencies && character.toolProficiencies.length > 0) { %>
+                <div><%= character.toolProficiencies.join(", ") %></div>
+                <% } else { %>
+                <div class="skill-row">
+                  <div class="skill-check"></div>
+                  <div class="skill-name" style="color:var(--muted);">Keine</div>
+                </div>
+                <% } %>
+              </div>
+              <% } else { %>
+              <div class="skill-row">
+                <div class="skill-name" style="color:var(--muted);">Keine</div>
+              </div>
+              <% } %>
+
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -796,31 +958,28 @@ Links / Rechts Spalten
       <div class="center">
 
         <div class="card">
-          <div class="card">
-            <div class="quickstats">
+          <div class="quickstats">
 
-              <div class="quickbox">
-                <div class="label">Initiative</div>
-                <div class="value"><%= sign(character.initiative) %></div>
-              </div>
+            <div class="quickbox">
+              <div class="label">Initiative</div>
+              <div class="value"><%= sign(character.initiative) %></div>
+            </div>
 
-              <div class="quickbox">
-                <div class="label">Bewegungsrate</div>
-                <div class="value"><%= character.speed %></div>
-              </div>
+            <div class="quickbox">
+              <div class="label">Bewegungsrate</div>
+              <div class="value"><%= character.speed %></div>
+            </div>
 
-              <div class="quickbox">
-                <div class="label">Größe</div>
-                <div class="value"><%= character.size %></div>
-              </div>
+            <div class="quickbox">
+              <div class="label">Größe</div>
+              <div class="value"><%= character.size %></div>
+            </div>
 
-              <div class="quickbox">
-                <div class="label">Passive Wahrnehmung</div>
-                <div class="value"><%= character.passivePerception %></div>
-              </div>
+            <div class="quickbox">
+              <div class="label">Passive Wahrnehmung</div>
+              <div class="value"><%= character.passivePerception %></div>
             </div>
           </div>
-
         </div>
 
         <div class="card">
@@ -829,8 +988,7 @@ Links / Rechts Spalten
           <table>
             <tr>
               <th>Name</th>
-              <th>Bonus</th>
-              <th>SG</th>
+              <th>Bonus/SG</th>
               <th>Schaden</th>
               <th>Art</th>
               <th>Notizen</th>
@@ -839,9 +997,9 @@ Links / Rechts Spalten
             <% character.weapons.forEach(w=>{ %>
             <tr>
               <td><%= w.name %></td>
-              <td>+<%= w.attackBonus %></td>
+              <td><%= sign(w.attackBonus) + "/" + sign(w.difficultyBonus) %></td>
               <td><%= w.damage %></td>
-              <td><%= w.type %></td>
+              <td><%= w.damageType %></td>
               <td><%= w.notes %></td>
             </tr>
             <% }) %>
@@ -849,9 +1007,9 @@ Links / Rechts Spalten
             <% character.damageCantrips.forEach(w=>{ %>
             <tr>
               <td><%= w.name %></td>
-              <td>+<%= w.attackBonus %></td>
+              <td><%= sign(w.attackBonus) + "/" + sign(w.difficultyBonus) %></td>
               <td><%= w.damage %></td>
-              <td><%= w.type %></td>
+              <td><%= w.damageType %></td>
               <td><%= w.notes %></td>
             </tr>
             <% }) %>
@@ -892,7 +1050,7 @@ Links / Rechts Spalten
       </div>
 
       <br />
-      <!-- RIGHT -->
+
       <div class="page">
 
         <div class="card">
