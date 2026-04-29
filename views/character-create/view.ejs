@@ -1,7 +1,4 @@
-<% /* Production-ready Character Creator (EJS) - Dark Sheet Aesthetic */ %>
-<%
-const serializedCharacter = typeof character !== 'undefined' ? JSON.stringify(character) : 'null';
-%>
+<% /* Character Creator - Server Rendered (No JS, TypeScript Backend Friendly) */ %>
 <!DOCTYPE html>
 <html lang="de">
 
@@ -17,7 +14,6 @@ const serializedCharacter = typeof character !== 'undefined' ? JSON.stringify(ch
       --line: #4b4f57;
       --text: #f5f5f5;
       --muted: #b8bcc5;
-      --green: #57d37c;
       --accent: #3b82f6;
     }
 
@@ -52,31 +48,19 @@ const serializedCharacter = typeof character !== 'undefined' ? JSON.stringify(ch
       margin: 0 0 12px 0
     }
 
-    .progress {
-      height: 8px;
-      background: var(--panel2);
-      border-radius: 999px;
-      overflow: hidden;
-      margin: 10px 0 16px;
-    }
-
-    .progress span {
-      display: block;
-      height: 100%;
-      background: var(--accent);
-    }
-
     .step {
+      display: block;
       padding: 10px;
       border-radius: 10px;
       border: 1px solid var(--line);
       margin-bottom: 8px;
-      font-size: 14px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel2);
     }
 
     .step.active {
-      background: var(--panel2);
-      border-color: var(--accent);
+      border-color: var(--accent)
     }
 
     input,
@@ -93,228 +77,152 @@ const serializedCharacter = typeof character !== 'undefined' ? JSON.stringify(ch
     }
 
     textarea {
-      min-height: 140px;
-      resize: vertical
+      min-height: 140px
     }
 
     button {
-      cursor: pointer;
       background: var(--accent);
       border: none;
-      font-weight: 600;
-    }
-
-    button.secondary {
-      background: transparent;
-      border: 1px solid var(--line);
-    }
-
-    .actions {
-      display: flex;
-      gap: 10px;
-      justify-content: space-between;
-      margin-top: 16px;
+      cursor: pointer;
     }
 
     .grid2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 10px
     }
 
     .choice {
+      display: block;
       padding: 10px;
       border: 1px solid var(--line);
       border-radius: 10px;
-      cursor: pointer;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: var(--text);
       background: var(--panel2);
-      text-align: center;
     }
 
     .choice.active {
-      border-color: var(--accent);
+      border-color: var(--accent)
+    }
+
+    .preview div {
+      margin-bottom: 6px
     }
 
     .muted {
       color: var(--muted);
-      font-size: 12px;
-    }
-
-    .preview div {
-      margin-bottom: 6px;
+      font-size: 12px
     }
   </style>
 </head>
 
 <body>
 
+  <%
+const step = Number(typeof startstep !== 'undefined' ? startstep : 0);
+const character = typeof characterDraft !== 'undefined' && characterDraft ? characterDraft : {
+  name:'',background:'',class:'Fighter',species:'Human',
+  strength:{value:10,modifier:0},dexterity:{value:10,modifier:0},constitution:{value:10,modifier:0},intelligence:{value:10,modifier:0},wisdom:{value:10,modifier:0},charisma:{value:10,modifier:0},
+  skills:[],equipment:[],alignment:'Neutral',backstory:''
+};
+const steps = ['Charakterdaten','Klasse & Volk','Attribute','Fertigkeiten','Ausrüstung','Hintergrund & Gesinnung'];
+%>
+
   <div class="layout">
 
     <aside class="card">
       <h2>Charakter erstellen</h2>
-      <div class="progress"><span id="progressBar"></span></div>
-      <div id="steps"></div>
+      <% steps.forEach((s,i)=>{ %>
+      <a class="step <%= i===step?'active':'' %>" href="?step=<%= i %>"><%= i+1 %>. <%= s %></a>
+      <% }) %>
     </aside>
 
     <main class="card">
-      <div id="content"></div>
-      <div class="actions">
-        <button class="secondary" id="prev">Zurück</button>
-        <button id="next">Weiter</button>
-      </div>
+
+      <form method="POST" action="/characters/create?step=<%= step %>">
+
+        <% if(step===0){ %>
+        <h3>Charakterdaten</h3>
+        <input name="name" value="<%= character
+    .name %>" placeholder="Name" />
+        <input name="background" value="<%= character
+    .background %>" placeholder="Hintergrund" />
+        <% } %>
+
+        <% if(step===1){ %>
+        <h3>Klasse & Volk</h3>
+        <input name="species" value="<%= character
+    .species %>" placeholder="Volk" />
+        <% ['Fighter','Wizard','Rogue','Cleric','Bard','Druid'].forEach(x=>{ %>
+        <label class="choice <%= character
+    .class===x?'active':'' %>">
+          <input type="radio" name="class" value="<%= x %>" <%= character
+        .class===x?'checked':'' %> /> <%= x %>
+        </label>
+        <% }) %>
+        <% } %>
+
+        <% if(step===2){ %>
+        <h3>Attribute</h3>
+        <% ['strength','dexterity','constitution','intelligence','wisdom','charisma'].forEach(a=>{ %>
+        <div>
+          <label><%= a %></label>
+          <input type="number" name="<%= a %>" value="<%= character
+        [a].value %>" />
+        </div>
+        <% }) %>
+        <% } %>
+
+        <% if(step===3){ %>
+        <h3>Fertigkeiten</h3>
+        <% ['athletics','stealth','arcana','perception','persuasion'].forEach(s=>{ %>
+        <label class="choice">
+          <input type="checkbox" name="skills" value="<%= s %>" <%= character[s].proficiency?'checked':'' %> /> <%= s %>
+        </label>
+        <% }) %>
+        <% } %>
+
+        <% if(step===4){ %>
+        <h3>Ausrüstung</h3>
+        <% ['Backpack','Rope','Rations','Sword','Shield'].forEach(s=>{ %>
+        <label class="choice">
+          <input type="checkbox" name="equipment" value="<%= s %>" <%= character
+        .equipment.includes(s)?'checked':'' %> /> <%= s %>
+        </label>
+        <% }) %>
+        <% } %>
+
+        <% if(step===5){ %>
+        <h3>Hintergrund & Gesinnung</h3>
+        <input name="alignment" value="<%= character
+    .alignment %>" placeholder="Gesinnung" />
+        <textarea name="backstory" placeholder="Hintergrundgeschichte"><%= character
+    .backstory %></textarea>
+        <% } %>
+
+        <button type="submit">Weiter</button>
+      </form>
+
     </main>
 
     <aside class="card preview">
-      <h3>Live Vorschau</h3>
-      <div id="preview"></div>
+      <h3>Charaktervorschau</h3>
+      <div><b><%= character
+    .name || 'Unbenannt' %></b></div>
+      <div><%= character
+    .species %> <%= character
+    .class %></div>
+      <div>Stärke <%= character
+    .strength.value %></div>
+      <div>Geschicklichkeit <%= character
+    .dexterity.value %></div>
+      <div>Konstitution <%= character
+    .constitution.value %></div>
     </aside>
 
   </div>
-
-  <script>
-    (() => {
-      'use strict';
-
-      const steps = ['Basis', 'Klasse', 'Attribute', 'Skills', 'Ausrüstung', 'Story'];
-
-      const state = {
-        index: 0,
-        character: <%- serializedCharacter %>
-      };
-
-      const el = id => document.getElementById(id);
-      const mod = v => Math.floor((v - 10) / 2);
-      const signed = v => v >= 0 ? `+${v}` : `${v}`;
-
-      function sync() {
-        const c = state.character;
-        for (const k of ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']) {
-          c[k].modifier = mod(c[k].value);
-        }
-        c.armorClass = 10 + c.dexterity.modifier;
-        c.maxHitpoints = 10 + c.constitution.modifier;
-        c.currentHitpoints = c.maxHitpoints;
-      }
-
-      function render() {
-        sync();
-        renderSteps();
-        renderContent();
-        renderPreview();
-      }
-
-      function renderSteps() {
-        el('steps').innerHTML = steps.map((s, i) =>
-          `<div class='step ${i===state.index?'active':''}'>${i+1}. ${s}</div>`
-        ).join('');
-        el('progressBar').style.width = ((state.index + 1) / steps.length * 100) + '%';
-      }
-
-      function renderContent() {
-        const c = state.character;
-        const root = el('content');
-
-        if (state.index === 0) {
-          root.innerHTML = `
-      <div class='grid2'>
-        <input placeholder='Name' value='${c.name}' oninput="state.character.name=this.value">
-        <select onchange="state.character.species=this.value">
-          <option ${c.species==='Human'?'selected':''}>Human</option>
-          <option>Elf</option><option>Dwarf</option><option>Halfling</option>
-        </select>
-      </div>
-      <input placeholder='Background' value='${c.background}' oninput="state.character.background=this.value">
-    `;
-        }
-
-        if (state.index === 1) {
-          root.innerHTML = ['Fighter', 'Wizard', 'Rogue', 'Cleric', 'Bard', 'Druid']
-            .map(v => `<div class='choice ${c.class===v?'active':''}' onclick="state.character.class='${v}';render()">${v}</div>`)
-            .join('');
-        }
-
-        if (state.index === 2) {
-          root.innerHTML = Object.keys(c)
-            .filter(k => typeof c[k] === 'object' && c[k].value !== undefined)
-            .map(k => `
-        <div>
-          <label>${k.toUpperCase()}</label>
-          <input type='number' value='${c[k].value}' oninput="state.character.${k}.value=+this.value;render()">
-          <div class='muted'>Mod ${signed(c[k].modifier)}</div>
-        </div>
-      `).join('');
-        }
-
-        if (state.index === 3) {
-          root.innerHTML = ['Athletics', 'Stealth', 'Arcana', 'Perception', 'Persuasion']
-            .map(s => `
-        <label class='choice'>
-          <input type='checkbox' ${c.skills.includes(s)?'checked':''}
-          onchange="toggle('skills','${s}')"> ${s}
-        </label>
-      `).join('');
-        }
-
-        if (state.index === 4) {
-          root.innerHTML = ['Backpack', 'Rope', 'Rations', 'Sword', 'Shield']
-            .map(s => `
-        <label class='choice'>
-          <input type='checkbox' ${c.equipment.includes(s)?'checked':''}
-          onchange="toggle('equipment','${s}')"> ${s}
-        </label>
-      `).join('');
-        }
-
-        if (state.index === 5) {
-          root.innerHTML = `
-      <input value='${c.alignment}' oninput="state.character.alignment=this.value">
-      <textarea oninput="state.character.backstory=this.value">${c.backstory}</textarea>
-    `;
-        }
-      }
-
-      function renderPreview() {
-        const c = state.character;
-        el('preview').innerHTML = `
-    <div><b>${c.name||'Unbenannt'}</b></div>
-    <div>${c.species} ${c.class}</div>
-    <div>HP ${c.currentHitpoints}</div>
-    <div>AC ${c.armorClass}</div>
-    <div>STR ${c.strength.value} (${signed(c.strength.modifier)})</div>
-    <div>DEX ${c.dexterity.value} (${signed(c.dexterity.modifier)})</div>
-  `;
-      }
-
-      function toggle(key, val) {
-        const arr = state.character[key];
-        const i = arr.indexOf(val);
-        i >= 0 ? arr.splice(i, 1) : arr.push(val);
-        render();
-      }
-
-      el('next').onclick = () => {
-        state.index < steps.length - 1 ? state.index++ : submit();
-        render();
-      };
-      el('prev').onclick = () => {
-        state.index > 0 && state.index--;
-        render();
-      };
-
-      function submit() {
-        fetch('/characters', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(state.character)
-          })
-          .then(() => window.location = '/characters');
-      }
-
-      render();
-    })();
-  </script>
 
 </body>
 

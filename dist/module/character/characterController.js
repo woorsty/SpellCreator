@@ -34,6 +34,8 @@ class CharacterController {
     }
     static async openNewCharacterSheet(req, res) {
         res.render("character-create/view", {
+            startstep: req.query.step,
+            characterDraft: new charactersheet_1.CharacterSheet(),
             character: new charactersheet_1.CharacterSheet(),
             renderMarkdown: util_1.Util.renderMarkdown,
         });

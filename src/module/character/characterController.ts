@@ -39,6 +39,8 @@ export class CharacterController {
 
   static async openNewCharacterSheet(req: Request, res: Response) {
     res.render("character-create/view", {
+      startstep: req.query.step,
+      characterDraft: new CharacterSheet(),
       character: new CharacterSheet(),
       renderMarkdown: Util.renderMarkdown,
     });
