@@ -1,55 +1,82 @@
+<% /* Production-ready Character Creator (EJS) - Dark Sheet Aesthetic */ %>
+<%
+const serializedCharacter = typeof character !== 'undefined' ? JSON.stringify(character) : 'null';
+%>
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Character Creator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charakter erstellen</title>
   <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel2: #33363c;
+      --line: #4b4f57;
+      --text: #f5f5f5;
+      --muted: #b8bcc5;
+      --green: #57d37c;
+      --accent: #3b82f6;
+    }
+
     * {
       box-sizing: border-box
     }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f1f5f9;
-      color: #111827
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 280px 1fr 320px;
-      gap: 24px;
-      padding: 24px;
-      min-height: 100vh
+      grid-template-columns: 260px 1fr 320px;
+      gap: 16px;
+      padding: 20px;
+      min-height: 100vh;
     }
 
     .card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .08)
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
     }
 
-    .steps .step {
-      padding: 12px;
-      border-radius: 12px;
+    h2,
+    h3 {
+      margin: 0 0 12px 0
+    }
+
+    .progress {
+      height: 8px;
+      background: var(--panel2);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 10px 0 16px;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .step {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
       margin-bottom: 8px;
-      background: #fff;
-      border: 1px solid #e5e7eb
+      font-size: 14px;
     }
 
-    .steps .active {
-      background: #111827;
-      color: #fff;
-      border-color: #111827
-    }
-
-    .grid2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px
+    .step.active {
+      background: var(--panel2);
+      border-color: var(--accent);
     }
 
     input,
@@ -57,91 +84,83 @@
     textarea,
     button {
       width: 100%;
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid #d1d5db;
-      font-size: 14px
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel2);
+      color: var(--text);
+      font: inherit;
     }
 
     textarea {
-      min-height: 160px;
+      min-height: 140px;
       resize: vertical
     }
 
     button {
       cursor: pointer;
-      background: #111827;
-      color: #fff;
-      border: none
+      background: var(--accent);
+      border: none;
+      font-weight: 600;
     }
 
     button.secondary {
-      background: #fff;
-      color: #111827;
-      border: 1px solid #d1d5db
+      background: transparent;
+      border: 1px solid var(--line);
     }
 
     .actions {
       display: flex;
+      gap: 10px;
       justify-content: space-between;
-      gap: 12px;
-      margin-top: 24px
+      margin-top: 16px;
     }
 
-    .option {
-      padding: 14px;
-      border: 1px solid #d1d5db;
-      border-radius: 14px;
-      cursor: pointer
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
 
-    .option.active {
-      border-color: #111827;
-      background: #eef2ff
+    .choice {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      cursor: pointer;
+      background: var(--panel2);
+      text-align: center;
+    }
+
+    .choice.active {
+      border-color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .preview div {
-      margin-bottom: 8px
-    }
-
-    .progress {
-      height: 10px;
-      background: #e5e7eb;
-      border-radius: 99px;
-      overflow: hidden;
-      margin: 12px 0 18px
-    }
-
-    .progress span {
-      display: block;
-      height: 100%;
-      background: #111827
-    }
-
-    label.check {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      padding: 10px;
-      border: 1px solid #d1d5db;
-      border-radius: 12px
+      margin-bottom: 6px;
     }
   </style>
 </head>
 
 <body>
+
   <div class="layout">
-    <aside class="card steps">
+
+    <aside class="card">
       <h2>Charakter erstellen</h2>
       <div class="progress"><span id="progressBar"></span></div>
-      <div id="stepList"></div>
+      <div id="steps"></div>
     </aside>
 
     <main class="card">
-      <div id="stepContent"></div>
+      <div id="content"></div>
       <div class="actions">
-        <button class="secondary" id="prevBtn">Zurück</button>
-        <button id="nextBtn">Weiter</button>
+        <button class="secondary" id="prev">Zurück</button>
+        <button id="next">Weiter</button>
       </div>
     </main>
 
@@ -149,89 +168,154 @@
       <h3>Live Vorschau</h3>
       <div id="preview"></div>
     </aside>
+
   </div>
 
   <script>
-    const steps = ['Basis', 'Klasse', 'Attribute', 'Skills', 'Ausrüstung', 'Zauber', 'Story'];
-    let step = 0;
-    const character = {
-      name: '',
-      species: 'Human',
-      class: 'Fighter',
-      level: 1,
-      background: '',
-      alignment: 'Neutral',
-      attributes: {
-        STR: 15,
-        DEX: 14,
-        CON: 13,
-        INT: 12,
-        WIS: 10,
-        CHA: 8
-      },
-      skills: [],
-      equipment: [],
-      spells: [],
-      backstory: ''
-    };
-    const mod = v => Math.floor((v - 10) / 2);
+    (() => {
+      'use strict';
 
-    function render() {
-      renderSteps();
-      renderContent();
-      renderPreview();
-    }
+      const steps = ['Basis', 'Klasse', 'Attribute', 'Skills', 'Ausrüstung', 'Story'];
 
-    function renderSteps() {
-      document.getElementById('stepList').innerHTML = steps.map((s, i) => `<div class="step ${i===step?'active':''}">${i+1}. ${s}</div>`).join('');
-      document.getElementById('progressBar').style.width = ((step + 1) / steps.length * 100) + '%';
-    }
+      const state = {
+        index: 0,
+        character: <%- serializedCharacter %>
+      };
 
-    function renderContent() {
-      const el = document.getElementById('stepContent');
-      if (step === 0) el.innerHTML = `<div class='grid2'><input id='name' placeholder='Name' value='${character.name}'><select id='species'><option>Human</option><option>Elf</option><option>Dwarf</option><option>Halfling</option></select><input id='background' placeholder='Background' value='${character.background}'></div>`;
-      if (step === 1) el.innerHTML = `<div class='grid2'>${['Fighter','Wizard','Rogue','Cleric','Bard','Druid'].map(c=>`<div class='option ${character.class===c?'active':''}' onclick="character.class='${c}';render()">${c}</div>`).join('')}</div>`;
-      if (step === 2) el.innerHTML = `<div class='grid2'>${Object.keys(character.attributes).map(a=>`<div><label>${a}</label><input type='number' value='${character.attributes[a]}' onchange="character.attributes.${a}=Number(this.value);render()"><small>Mod ${mod(character.attributes[a])>=0?'+':''}${mod(character.attributes[a])}</small></div>`).join('')}</div>`;
-      if (step === 3) el.innerHTML = `<div class='grid2'>${['Athletics','Stealth','Arcana','Perception','Persuasion','History'].map(s=>`<label class='check'><input type='checkbox' ${character.skills.includes(s)?'checked':''} onchange="toggle('skills','${s}')">${s}</label>`).join('')}</div>`;
-      if (step === 4) el.innerHTML = `<div class='grid2'>${['Backpack','Rope','Rations','Longsword','Shield','Spellbook'].map(s=>`<label class='check'><input type='checkbox' ${character.equipment.includes(s)?'checked':''} onchange="toggle('equipment','${s}')">${s}</label>`).join('')}</div>`;
-      if (step === 5) el.innerHTML = `<div class='grid2'>${['Fire Bolt','Mage Armor','Healing Word','Guidance','Sleep','Magic Missile'].map(s=>`<label class='check'><input type='checkbox' ${character.spells.includes(s)?'checked':''} onchange="toggle('spells','${s}')">${s}</label>`).join('')}</div>`;
-      if (step === 6) el.innerHTML = `<input id='alignment' placeholder='Alignment' value='${character.alignment}'><textarea id='backstory' placeholder='Backstory'>${character.backstory}</textarea>`;
-      setTimeout(bindInputs, 0);
-    }
+      const el = id => document.getElementById(id);
+      const mod = v => Math.floor((v - 10) / 2);
+      const signed = v => v >= 0 ? `+${v}` : `${v}`;
 
-    function bindInputs() {
-      if (document.getElementById('name')) document.getElementById('name').oninput = e => character.name = e.target.value;
-      if (document.getElementById('species')) document.getElementById('species').onchange = e => character.species = e.target.value;
-      if (document.getElementById('background')) document.getElementById('background').oninput = e => character.background = e.target.value;
-      if (document.getElementById('alignment')) document.getElementById('alignment').oninput = e => character.alignment = e.target.value;
-      if (document.getElementById('backstory')) document.getElementById('backstory').oninput = e => character.backstory = e.target.value;
-    }
+      function sync() {
+        const c = state.character;
+        for (const k of ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']) {
+          c[k].modifier = mod(c[k].value);
+        }
+        c.armorClass = 10 + c.dexterity.modifier;
+        c.maxHitpoints = 10 + c.constitution.modifier;
+        c.currentHitpoints = c.maxHitpoints;
+      }
 
-    function renderPreview() {
-      document.getElementById('preview').innerHTML = `<div><strong>${character.name||'Unbenannt'}</strong></div><div>${character.species} ${character.class}</div><div>Level ${character.level}</div><div>HP ${10+mod(character.attributes.CON)}</div><div>AC ${10+mod(character.attributes.DEX)}</div><div>Skills: ${character.skills.join(', ')||'-'}</div><div>Zauber: ${character.spells.join(', ')||'-'}</div>`;
-    }
+      function render() {
+        sync();
+        renderSteps();
+        renderContent();
+        renderPreview();
+      }
 
-    function toggle(key, val) {
-      const arr = character[key];
-      const i = arr.indexOf(val);
-      if (i >= 0) arr.splice(i, 1);
-      else arr.push(val);
-      render();
-    }
-    document.getElementById('nextBtn').onclick = () => {
-      if (step < steps.length - 1) {
-        step++;
-        render();
-      } else alert('Charakter fertig!');
-    };
-    document.getElementById('prevBtn').onclick = () => {
-      if (step > 0) {
-        step--;
+      function renderSteps() {
+        el('steps').innerHTML = steps.map((s, i) =>
+          `<div class='step ${i===state.index?'active':''}'>${i+1}. ${s}</div>`
+        ).join('');
+        el('progressBar').style.width = ((state.index + 1) / steps.length * 100) + '%';
+      }
+
+      function renderContent() {
+        const c = state.character;
+        const root = el('content');
+
+        if (state.index === 0) {
+          root.innerHTML = `
+      <div class='grid2'>
+        <input placeholder='Name' value='${c.name}' oninput="state.character.name=this.value">
+        <select onchange="state.character.species=this.value">
+          <option ${c.species==='Human'?'selected':''}>Human</option>
+          <option>Elf</option><option>Dwarf</option><option>Halfling</option>
+        </select>
+      </div>
+      <input placeholder='Background' value='${c.background}' oninput="state.character.background=this.value">
+    `;
+        }
+
+        if (state.index === 1) {
+          root.innerHTML = ['Fighter', 'Wizard', 'Rogue', 'Cleric', 'Bard', 'Druid']
+            .map(v => `<div class='choice ${c.class===v?'active':''}' onclick="state.character.class='${v}';render()">${v}</div>`)
+            .join('');
+        }
+
+        if (state.index === 2) {
+          root.innerHTML = Object.keys(c)
+            .filter(k => typeof c[k] === 'object' && c[k].value !== undefined)
+            .map(k => `
+        <div>
+          <label>${k.toUpperCase()}</label>
+          <input type='number' value='${c[k].value}' oninput="state.character.${k}.value=+this.value;render()">
+          <div class='muted'>Mod ${signed(c[k].modifier)}</div>
+        </div>
+      `).join('');
+        }
+
+        if (state.index === 3) {
+          root.innerHTML = ['Athletics', 'Stealth', 'Arcana', 'Perception', 'Persuasion']
+            .map(s => `
+        <label class='choice'>
+          <input type='checkbox' ${c.skills.includes(s)?'checked':''}
+          onchange="toggle('skills','${s}')"> ${s}
+        </label>
+      `).join('');
+        }
+
+        if (state.index === 4) {
+          root.innerHTML = ['Backpack', 'Rope', 'Rations', 'Sword', 'Shield']
+            .map(s => `
+        <label class='choice'>
+          <input type='checkbox' ${c.equipment.includes(s)?'checked':''}
+          onchange="toggle('equipment','${s}')"> ${s}
+        </label>
+      `).join('');
+        }
+
+        if (state.index === 5) {
+          root.innerHTML = `
+      <input value='${c.alignment}' oninput="state.character.alignment=this.value">
+      <textarea oninput="state.character.backstory=this.value">${c.backstory}</textarea>
+    `;
+        }
+      }
+
+      function renderPreview() {
+        const c = state.character;
+        el('preview').innerHTML = `
+    <div><b>${c.name||'Unbenannt'}</b></div>
+    <div>${c.species} ${c.class}</div>
+    <div>HP ${c.currentHitpoints}</div>
+    <div>AC ${c.armorClass}</div>
+    <div>STR ${c.strength.value} (${signed(c.strength.modifier)})</div>
+    <div>DEX ${c.dexterity.value} (${signed(c.dexterity.modifier)})</div>
+  `;
+      }
+
+      function toggle(key, val) {
+        const arr = state.character[key];
+        const i = arr.indexOf(val);
+        i >= 0 ? arr.splice(i, 1) : arr.push(val);
         render();
       }
-    };
-    render();
+
+      el('next').onclick = () => {
+        state.index < steps.length - 1 ? state.index++ : submit();
+        render();
+      };
+      el('prev').onclick = () => {
+        state.index > 0 && state.index--;
+        render();
+      };
+
+      function submit() {
+        fetch('/characters', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(state.character)
+          })
+          .then(() => window.location = '/characters');
+      }
+
+      render();
+    })();
   </script>
+
 </body>
 
 </html>
