@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonFilePath = exports.CharacterSheet = void 0;
+const spell_1 = require("./spell");
 const attribute_1 = require("./attribute");
 const skill_1 = require("./skill");
 const weapon_1 = require("./weapon");
@@ -96,12 +97,10 @@ class CharacterSheet {
         this.cantripsAndPreparedSpells = [];
         this.appearance = "";
         this.backstory = "";
-        this.alignment = null;
+        this.alignment = Alignment_1.Alignment.ChaoticEvil;
         this.languages = [];
         this.equipment = [];
-        this.magicItemAttunement1 = "";
-        this.magicItemAttunement2 = "";
-        this.magicItemAttunement3 = "";
+        this.attunedMagicItems = [];
         this.copper = 0;
         this.silver = 0;
         this.electrum = 0;
@@ -267,27 +266,27 @@ class CharacterSheet {
             speciesTraits: ["Human Resilience"],
             feats: ["Great Weapon Fighting"],
             spellcastingAbility: null,
-            spellSaveDC: 0,
-            spellAttackBonus: 0,
-            totalSpellSlots1: 0,
-            totalSpellSlots2: 0,
-            totalSpellSlots3: 0,
-            totalSpellSlots4: 0,
-            totalSpellSlots5: 0,
-            totalSpellSlots6: 0,
-            totalSpellSlots7: 0,
+            spellSaveDC: 1,
+            spellAttackBonus: 3,
+            totalSpellSlots1: 4,
+            totalSpellSlots2: 3,
+            totalSpellSlots3: 3,
+            totalSpellSlots4: 3,
+            totalSpellSlots5: 3,
+            totalSpellSlots6: 2,
+            totalSpellSlots7: 1,
             totalSpellSlots8: 0,
             totalSpellSlots9: 0,
-            usedSpellSlots1: 0,
+            usedSpellSlots1: 1,
             usedSpellSlots2: 0,
-            usedSpellSlots3: 0,
+            usedSpellSlots3: 2,
             usedSpellSlots4: 0,
             usedSpellSlots5: 0,
             usedSpellSlots6: 0,
             usedSpellSlots7: 0,
             usedSpellSlots8: 0,
             usedSpellSlots9: 0,
-            cantripsAndPreparedSpells: [],
+            cantripsAndPreparedSpells: [spell_1.Spell.getTestSpell()],
             appearance: "A tall, muscular human with short brown hair and green eyes.",
             backstory: "Born in a small village, this character grew up learning the ways of the sword. After their village was attacked by bandits, they set out on a quest for justice and adventure.",
             alignment: Alignment_1.Alignment.LawfulGood,
@@ -298,9 +297,11 @@ class CharacterSheet {
                 "Rations (1 day)",
                 "Waterskin",
             ],
-            magicItemAttunement1: "Amulet of Health",
-            magicItemAttunement2: "",
-            magicItemAttunement3: "",
+            attunedMagicItems: [
+                "Amulet of Health",
+                "Cloak of Protection",
+                "Ring of Protection",
+            ],
             copper: 10,
             silver: 5,
             electrum: 0,

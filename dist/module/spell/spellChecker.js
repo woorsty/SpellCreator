@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpellChecker = void 0;
-const util_1 = require("../../util");
 const spell_1 = require("../../model/spell");
+const util_1 = require("../../util");
 const requiredFields = [
     "Stufe",
     "Name",
@@ -63,7 +63,7 @@ const validSchools = [
 ];
 class SpellChecker {
     static async checkSpellData() {
-        const spellData = await util_1.Util.readJsonFile(spell_1.JsonFilePath);
+        const spellData = await util_1.Util.readJsonFile(spell_1.Spell.JsonFilePath);
         const errors = [];
         spellData.forEach((spell, index) => {
             requiredFields.forEach((field) => {

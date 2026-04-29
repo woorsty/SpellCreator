@@ -1,5 +1,5 @@
+import { Spell } from "../../model/spell";
 import { Util } from "../../util";
-import { JsonFilePath } from "../../model/spell";
 
 const requiredFields = [
   "Stufe",
@@ -64,7 +64,7 @@ const validSchools = [
 
 export class SpellChecker {
   static async checkSpellData(): Promise<string[]> {
-    const spellData = await Util.readJsonFile(JsonFilePath);
+    const spellData = await Util.readJsonFile(Spell.JsonFilePath);
     const errors: string[] = [];
 
     spellData.forEach((spell: any, index: number) => {

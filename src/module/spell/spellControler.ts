@@ -2,7 +2,7 @@ import { Util as Util } from "../../util";
 import { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
 import path from "path";
-import { JsonFilePath, Spell } from "../../model/spell";
+import { Spell } from "../../model/spell";
 import { render } from "ejs";
 
 export class SpellController {
@@ -13,7 +13,7 @@ export class SpellController {
     const filterSchule = req.query.schule as string | undefined;
     const sortierung = req.query.sortierung as string | undefined;
 
-    const spellData = await Util.readJsonFile<Spell>(JsonFilePath);
+    const spellData = await Util.readJsonFile<Spell>(Spell.JsonFilePath);
     let gefilterteZauber = [...spellData]; // Erstelle eine Kopie zum Filtern
 
     // Filterlogik für Stufe (Von-Bis Bereich)
@@ -95,7 +95,7 @@ export class SpellController {
   }
 
   static async getSpellByName(name: string): Promise<Spell | undefined> {
-    const spellData = await Util.readJsonFile<Spell>(JsonFilePath);
+    const spellData = await Util.readJsonFile<Spell>(Spell.JsonFilePath);
     const spell = spellData.find((s) => s.Name === name);
 
     if (!spell && name) {
@@ -127,9 +127,9 @@ export class SpellController {
       Gestik: Gestik === "on",
     };
 
-    const spellData = await Util.readJsonFile<Spell>(JsonFilePath);
+    const spellData = await Util.readJsonFile<Spell>(Spell.JsonFilePath);
     spellData.push(newSpell);
-    await Util.writeJsonFile(spellData, JsonFilePath);
+    await Util.writeJsonFile(spellData, Spell.JsonFilePath);
     res.statusCode = 303;
     res.setHeader("Location", "/spell/add");
     res.end();
@@ -149,12 +149,12 @@ export class SpellController {
       Gestik: req.body.Gestik === "on",
     };
 
-    const spellData = await Util.readJsonFile<Spell>(JsonFilePath);
+    const spellData = await Util.readJsonFile<Spell>(Spell.JsonFilePath);
     const index = spellData.findIndex((spell) => spell.Name === spellName);
 
     if (index !== -1) {
       spellData[index] = updatedSpell;
-      await Util.writeJsonFile(spellData, JsonFilePath);
+      await Util.writeJsonFile(spellData, Spell.JsonFilePath);
       res.redirect("/spell"); // Zurück zur Zauberliste
     } else {
       res.status(404).send("Zauber nicht gefunden");
@@ -163,7 +163,7 @@ export class SpellController {
 
   static async getEditForm(req: Request, res: Response) {
     const spellName = req.params.name;
-    const spellData = await Util.readJsonFile<Spell>(JsonFilePath);
+    const spellData = await Util.readJsonFile<Spell>(Spell.JsonFilePath);
     const spellToEdit = spellData.find((spell) => spell.Name === spellName);
 
     if (spellToEdit) {

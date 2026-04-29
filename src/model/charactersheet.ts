@@ -113,12 +113,10 @@ export class CharacterSheet {
 
   appearance = "";
   backstory = "";
-  alignment: Alignment | null = null;
+  alignment = Alignment.ChaoticEvil;
   languages: string[] = [];
   equipment: string[] = [];
-  magicItemAttunement1 = "";
-  magicItemAttunement2 = "";
-  magicItemAttunement3 = "";
+  attunedMagicItems: string[] = [];
 
   copper = 0;
   silver = 0;
@@ -288,27 +286,27 @@ export class CharacterSheet {
       speciesTraits: ["Human Resilience"],
       feats: ["Great Weapon Fighting"],
       spellcastingAbility: null,
-      spellSaveDC: 0,
-      spellAttackBonus: 0,
-      totalSpellSlots1: 0,
-      totalSpellSlots2: 0,
-      totalSpellSlots3: 0,
-      totalSpellSlots4: 0,
-      totalSpellSlots5: 0,
-      totalSpellSlots6: 0,
-      totalSpellSlots7: 0,
+      spellSaveDC: 1,
+      spellAttackBonus: 3,
+      totalSpellSlots1: 4,
+      totalSpellSlots2: 3,
+      totalSpellSlots3: 3,
+      totalSpellSlots4: 3,
+      totalSpellSlots5: 3,
+      totalSpellSlots6: 2,
+      totalSpellSlots7: 1,
       totalSpellSlots8: 0,
       totalSpellSlots9: 0,
-      usedSpellSlots1: 0,
+      usedSpellSlots1: 1,
       usedSpellSlots2: 0,
-      usedSpellSlots3: 0,
+      usedSpellSlots3: 2,
       usedSpellSlots4: 0,
       usedSpellSlots5: 0,
       usedSpellSlots6: 0,
       usedSpellSlots7: 0,
       usedSpellSlots8: 0,
       usedSpellSlots9: 0,
-      cantripsAndPreparedSpells: [],
+      cantripsAndPreparedSpells: [Spell.getTestSpell()],
       appearance:
         "A tall, muscular human with short brown hair and green eyes.",
       backstory:
@@ -321,9 +319,11 @@ export class CharacterSheet {
         "Rations (1 day)",
         "Waterskin",
       ],
-      magicItemAttunement1: "Amulet of Health",
-      magicItemAttunement2: "",
-      magicItemAttunement3: "",
+      attunedMagicItems: [
+        "Amulet of Health",
+        "Cloak of Protection",
+        "Ring of Protection",
+      ],
       copper: 10,
       silver: 5,
       electrum: 0,

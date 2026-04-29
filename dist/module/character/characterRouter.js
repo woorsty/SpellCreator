@@ -4,6 +4,7 @@ const characterController_1 = require("./characterController");
 const express = require("express");
 const router = express.Router();
 router.get("/", characterController_1.CharacterController.getAll);
-router.get("/:name", characterController_1.CharacterController.get);
+router.get("/new", characterController_1.CharacterController.openNewCharacterSheet);
+router.get("/detail/:name", characterController_1.CharacterController.get);
 exports.default = router;
 //# sourceMappingURL=characterRouter.js.map

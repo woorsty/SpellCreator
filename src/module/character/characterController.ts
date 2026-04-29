@@ -36,4 +36,11 @@ export class CharacterController {
     const characterData = await Util.readJsonFile<CharacterSheet>(JsonFilePath);
     return characterData;
   }
+
+  static async openNewCharacterSheet(req: Request, res: Response) {
+    res.render("character-create/view", {
+      character: new CharacterSheet(),
+      renderMarkdown: Util.renderMarkdown,
+    });
+  }
 }
