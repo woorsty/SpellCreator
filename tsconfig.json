@@ -5,5 +5,6 @@
     "paths": {
       "@domain/*": ["packages/domain/src/*"]
     }
-  }
+  },
+  "references": [{ "path": "./apps/server" }, { "path": "./apps/web" }]
 }
