@@ -4,10 +4,11 @@ import { DamageCantrip } from "./damageCantrip";
 import { Skill } from "./skill";
 import { Weapon } from "./weapon";
 import { Alignment } from "./Alignment";
-import path from "path";
 import { Species } from "./species";
+import path from "path";
 
 export class CharacterSheet {
+  public static readonly JsonFilePath = path.resolve("../../data/characters/");
   name = "";
   background = "";
   class = "";
@@ -332,5 +333,3 @@ export class CharacterSheet {
     });
   }
 }
-
-export const JsonFilePath = path.resolve("../../../data/characters.json");

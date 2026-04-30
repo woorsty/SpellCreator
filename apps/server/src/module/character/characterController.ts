@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 import { JsonService } from "@domain/service/jsonService";
 import { MarkdownService } from "@domain/service/markdownService";
-import { CharacterSheet, JsonFilePath } from "@domain/model/charactersheet";
+import { CharacterSheet } from "@domain/model/charactersheet";
 
 export class CharacterController {
   static getAll(req: Request, res: Response) {
@@ -34,7 +34,9 @@ export class CharacterController {
 
   private static async getAllCharacters(): Promise<CharacterSheet[]> {
     const characterData =
-      await JsonService.readJsonFile<CharacterSheet>(JsonFilePath);
+      await JsonService.readJsonFilesInDirectory<CharacterSheet>(
+        CharacterSheet.JsonFilePath,
+      );
     return characterData;
   }
 
