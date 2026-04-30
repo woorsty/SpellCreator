@@ -1,0 +1,224 @@
+<% /* Character Creator - Passive View (Fowler Pattern, Server Driven State Only) */ %>
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charakter erstellen</title>
+
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel2: #33363c;
+      --line: #4b4f57;
+      --text: #f5f5f5;
+      --muted: #b8bcc5;
+      --accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr 320px;
+      gap: 16px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    h2,
+    h3 {
+      margin: 0 0 12px 0
+    }
+
+    .step {
+      display: block;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel2);
+    }
+
+    .step.active {
+      border-color: var(--accent)
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel2);
+      color: var(--text);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 140px
+    }
+
+    button {
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+    }
+
+    .choice {
+      display: block;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel2);
+    }
+
+    .choice.active {
+      border-color: var(--accent)
+    }
+
+    .preview div {
+      margin-bottom: 6px
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 12px
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- NAVIGATION (STATE ONLY) -->
+    <aside class="card">
+      <h2>Charakter erstellen</h2>
+
+      <% steps.forEach((s,i)=>{ %>
+      <a class="step <%= i === step ? 'active' : '' %>" href="?step=<%= i %>">
+        <%= i+1 %>. <%= s %>
+      </a>
+      <% }) %>
+
+    </aside>
+
+    <!-- PASSIVE VIEW (NO LOGIC) -->
+    <main class="card">
+
+      <form method="POST" action="/characters/create?step=<%= step %>">
+
+        <% if(step === 0){ %>
+        <h3>Charakterdaten</h3>
+        <input name="name" value="<%= c.name %>" placeholder="Name" />
+        <input name="background" value="<%= c.background %>" placeholder="Hintergrund" />
+        <% } %>
+
+        <% if(step === 1){ %>
+        <h3>Klasse & Volk</h3>
+
+        <input name="species" value="<%= c.species %>" placeholder="Volk" />
+
+        <% classes.forEach(x=>{ %>
+        <label class="choice <%= c.class === x ? 'active' : '' %>">
+          <input type="radio" name="class" value="<%= x %>" <%= c.class === x ? 'checked' : '' %> />
+          <%= x %>
+        </label>
+        <% }) %>
+
+        <% } %>
+
+        <% if(step === 2){ %>
+        <h3>Attribute</h3>
+
+        <% attributes.forEach(a=>{ %>
+        <div>
+          <label><%= a.label %></label>
+          <input type="number" name="<%= a.key %>" value="<%= a.value %>" />
+        </div>
+        <% }) %>
+
+        <% } %>
+
+        <% if(step === 3){ %>
+        <h3>Fertigkeiten</h3>
+
+        <% skills.forEach(s=>{ %>
+        <label class="choice">
+          <input type="checkbox" name="skills" value="<%= s %>" <%= selectedSkills.includes(s) ? 'checked' : '' %> />
+          <%= s %>
+        </label>
+        <% }) %>
+
+        <% } %>
+
+        <% if(step === 4){ %>
+        <h3>Ausrüstung</h3>
+
+        <% equipmentOptions.forEach(e=>{ %>
+        <label class="choice">
+          <input type="checkbox" name="equipment" value="<%= e %>" <%= equipment.includes(e) ? 'checked' : '' %> />
+          <%= e %>
+        </label>
+        <% }) %>
+
+        <% } %>
+
+        <% if(step === 5){ %>
+        <h3>Hintergrund & Gesinnung</h3>
+
+        <input name="alignment" value="<%= c.alignment %>" placeholder="Gesinnung" />
+        <textarea name="backstory"><%= c.backstory %></textarea>
+
+        <% } %>
+
+        <button type="submit">Weiter</button>
+
+      </form>
+
+    </main>
+
+    <!-- PASSIVE PREVIEW (READ ONLY MODEL) -->
+    <aside class="card preview">
+      <h3>Charaktervorschau</h3>
+
+      <div><b><%= c.name || 'Unbenannt' %></b></div>
+      <div><%= c.species %> <%= c.class %></div>
+
+      <div>Stärke <%= c.strength.value %></div>
+      <div>Geschicklichkeit <%= c.dexterity.value %></div>
+      <div>Konstitution <%= c.constitution.value %></div>
+
+    </aside>
+
+  </div>
+
+</body>
+
+</html>

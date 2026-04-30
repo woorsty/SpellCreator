@@ -1,1 +1,0 @@
-{"version":3,"file":"Alignment.js","sourceRoot":"","sources":["../../src/model/Alignment.ts"],"names":[],"mappings":";;;AAAa,QAAA,SAAS,GAAG;IACvB,UAAU,EAAE,oBAAoB;IAChC,WAAW,EAAE,aAAa;IAC1B,WAAW,EAAE,eAAe;IAC5B,aAAa,EAAE,wBAAwB;IACvC,WAAW,EAAE,SAAS;IACtB,cAAc,EAAE,mBAAmB;IACnC,UAAU,EAAE,qBAAqB;IACjC,WAAW,EAAE,cAAc;IAC3B,WAAW,EAAE,gBAAgB;CAC9B,CAAC"}

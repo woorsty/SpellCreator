@@ -1,21 +1,15 @@
 {
-  "devDependencies": {
-    "@types/body-parser": "^1.19.5",
-    "@types/ejs": "^3.1.5",
-    "@types/express": "^5.0.1",
-    "@types/node": "^22.15.17",
-    "@types/pdfkit": "^0.14.0",
-    "cpx": "^1.5.0",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "jspdf": "^3.0.1"
-  },
+  "name": "spellcreator",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "start": "node dist/server.js",
-    "build": "tsc && npm run copy-assets && node dist/server.js",
-    "copy-assets": "cpx \"src/assets/**/*\" dist/assets"
+    "dev": "concurrently -n SERVER,WEB -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -ws"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc && npm run copy-assets",
+    "start": "node dist/server.js",
+    "copy-assets": "cpx \"src/assets/**/*\" dist/assets"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jspdf": "^3.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.19.17",
+    "@types/pdfkit": "^0.14.0",
+    "cpx": "^1.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.3"
+  }
+}
