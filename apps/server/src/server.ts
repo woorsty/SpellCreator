@@ -8,6 +8,7 @@ import spellCardRoutes from "./module/spellcard/spellcardRoute";
 import classRoutes from "./module/class/classRouter";
 import dataRoutes from "./module/data/dataRouter";
 import characterRouter from "./module/character/characterRouter";
+import apiRouter from "./module/api/apiRouter";
 
 const app = express();
 const port = 3000;
@@ -28,6 +29,7 @@ app.use("/spellcard", spellCardRoutes);
 app.use("/class", classRoutes);
 app.use("/data", dataRoutes);
 app.use("/character", characterRouter);
+app.use("/api", apiRouter);
 
 app.listen(port, "::", () => {
   console.log(`Server läuft auf http://0.0.0.0:${port}`);

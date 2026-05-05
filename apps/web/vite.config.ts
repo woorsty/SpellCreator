@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@domain": path.resolve(__dirname, "../../packages/domain/src"),
+      "@i18n": path.resolve(__dirname, "../../packages/i18n/src"),
     },
   },
 });

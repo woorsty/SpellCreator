@@ -1,5 +1,5 @@
-import { Spell } from "../../../../../packages/domain/src/model/spell";
-import { JsonService } from "../../../../../packages/domain/src/service/jsonService";
+import { Spell } from "@domain/model/spell";
+import { JsonService } from "@domain/service/jsonService";
 
 const requiredFields = [
   "Stufe",

@@ -5,10 +5,8 @@ import { Skill } from "./skill";
 import { Weapon } from "./weapon";
 import { Alignment } from "./Alignment";
 import { Species } from "./species";
-import path from "path";
 
 export class CharacterSheet {
-  public static readonly JsonFilePath = path.resolve("../../data/characters/");
   name = "";
   background = "";
   class = "";
@@ -34,35 +32,38 @@ export class CharacterSheet {
   failedDeathSaves = 0;
 
   proficiencyBonus = 2;
-  strength: Attribute = new Attribute();
-  athletics: Skill = new Skill();
 
-  dexterity: Attribute = new Attribute();
-  acrobatics: Skill = new Skill();
-  sleightOfHand: Skill = new Skill();
-  stealth: Skill = new Skill();
-
-  constitution: Attribute = new Attribute();
-
-  intelligence: Attribute = new Attribute();
-  arcana: Skill = new Skill();
-  history: Skill = new Skill();
-  investigation: Skill = new Skill();
-  nature: Skill = new Skill();
-  religion: Skill = new Skill();
-
-  wisdom: Attribute = new Attribute();
-  animalHandling: Skill = new Skill();
-  insight: Skill = new Skill();
-  medicine: Skill = new Skill();
-  perception: Skill = new Skill();
-  survival: Skill = new Skill();
-
-  charisma: Attribute = new Attribute();
-  deception: Skill = new Skill();
-  intimidation: Skill = new Skill();
-  performance: Skill = new Skill();
-  persuasion: Skill = new Skill();
+  attributes: Attribute[] = [
+    new Attribute("strength", false, 0, false, 0, 0, [
+      new Skill("athletics", false, 0, false),
+    ]),
+    new Attribute("dexterity", false, 0, false, 0, 0, [
+      new Skill("acrobatics", false, 0, false),
+      new Skill("sleight of hand", false, 0, false),
+      new Skill("stealth", false, 0, false),
+    ]),
+    new Attribute("constitution", false, 0, false, 0, 0, []),
+    new Attribute("intelligence", false, 0, false, 0, 0, [
+      new Skill("arcana", false, 0, false),
+      new Skill("history", false, 0, false),
+      new Skill("investigation", false, 0, false),
+      new Skill("nature", false, 0, false),
+      new Skill("religion", false, 0, false),
+    ]),
+    new Attribute("wisdom", false, 0, false, 0, 0, [
+      new Skill("animal handling", false, 0, false),
+      new Skill("insight", false, 0, false),
+      new Skill("medicine", false, 0, false),
+      new Skill("perception", false, 0, false),
+      new Skill("survival", false, 0, false),
+    ]),
+    new Attribute("charisma", false, 0, false, 0, 0, [
+      new Skill("deception", false, 0, false),
+      new Skill("intimidation", false, 0, false),
+      new Skill("performance", false, 0, false),
+      new Skill("persuasion", false, 0, false),
+    ]),
+  ];
 
   heroicInspiration = false;
 
@@ -146,112 +147,37 @@ export class CharacterSheet {
       successDeathSaves: 0,
       failedDeathSaves: 0,
       proficiencyBonus: 3,
-      strength: new Attribute({
-        value: 16,
-        savingThrow: 5,
-        proficiency: true,
-        modifier: 3,
-      }),
-      athletics: new Skill({
-        name: "Athletics",
-        proficiency: true,
-        modifier: 5,
-      }),
-      dexterity: new Attribute({
-        value: 12,
-        savingThrow: 1,
-        proficiency: false,
-        modifier: 1,
-      }),
-      acrobatics: new Skill({
-        name: "Acrobatics",
-        proficiency: false,
-        modifier: 1,
-      }),
-      sleightOfHand: new Skill({
-        name: "Sleight of Hand",
-        proficiency: false,
-        modifier: 1,
-      }),
-      stealth: new Skill({ name: "Stealth", proficiency: false, modifier: 1 }),
-      constitution: new Attribute({
-        value: 14,
-        savingThrow: 2,
-        proficiency: false,
-        modifier: 2,
-      }),
-      intelligence: new Attribute({
-        value: 10,
-        savingThrow: 0,
-        proficiency: false,
-        modifier: 0,
-      }),
-      arcana: new Skill({ name: "Arcana", proficiency: false, modifier: 0 }),
-      history: new Skill({ name: "History", proficiency: false, modifier: 0 }),
-      investigation: new Skill({
-        name: "Investigation",
-        proficiency: false,
-        modifier: 0,
-      }),
-      nature: new Skill({ name: "Nature", proficiency: false, modifier: 0 }),
-      religion: new Skill({
-        name: "Religion",
-        proficiency: false,
-        modifier: 0,
-      }),
-      wisdom: new Attribute({
-        value: 8,
-        savingThrow: -1,
-        proficiency: false,
-        modifier: -1,
-      }),
-      animalHandling: new Skill({
-        name: "Animal Handling",
-        proficiency: false,
-        modifier: -1,
-      }),
-      insight: new Skill({ name: "Insight", proficiency: false, modifier: -1 }),
-      medicine: new Skill({
-        name: "Medicine",
-        proficiency: false,
-        modifier: -1,
-      }),
-      perception: new Skill({
-        name: "Perception",
-        proficiency: false,
-        modifier: -1,
-      }),
-      survival: new Skill({
-        name: "Survival",
-        proficiency: false,
-        modifier: -1,
-      }),
-      charisma: new Attribute({
-        value: 10,
-        savingThrow: 0,
-        proficiency: false,
-        modifier: 0,
-      }),
-      deception: new Skill({
-        name: "Deception",
-        proficiency: false,
-        modifier: 0,
-      }),
-      intimidation: new Skill({
-        name: "Intimidation",
-        proficiency: false,
-        modifier: 0,
-      }),
-      performance: new Skill({
-        name: "Performance",
-        proficiency: false,
-        modifier: 0,
-      }),
-      persuasion: new Skill({
-        name: "Persuasion",
-        proficiency: false,
-        modifier: 0,
-      }),
+      attributes: [
+        new Attribute("strength", false, 0, false, 0, 0, [
+          new Skill("athletics", false, 0, false),
+        ]),
+        new Attribute("dexterity", false, 0, false, 0, 0, [
+          new Skill("acrobatics", false, 0, false),
+          new Skill("sleight of hand", false, 0, false),
+          new Skill("stealth", false, 0, false),
+        ]),
+        new Attribute("constitution", false, 0, false, 0, 0, []),
+        new Attribute("intelligence", false, 0, false, 0, 0, [
+          new Skill("arcana", false, 0, false),
+          new Skill("history", false, 0, false),
+          new Skill("investigation", false, 0, false),
+          new Skill("nature", false, 0, false),
+          new Skill("religion", false, 0, false),
+        ]),
+        new Attribute("wisdom", false, 0, false, 0, 0, [
+          new Skill("animal handling", false, 0, false),
+          new Skill("insight", false, 0, false),
+          new Skill("medicine", false, 0, false),
+          new Skill("perception", false, 0, false),
+          new Skill("survival", false, 0, false),
+        ]),
+        new Attribute("charisma", true, 5, false, 20, 7, [
+          new Skill("deception", false, -1, true),
+          new Skill("intimidation", false, 5, false),
+          new Skill("performance", true, 5, false),
+          new Skill("persuasion", false, 2, false),
+        ]),
+      ],
       heroicInspiration: false,
       lightArmorTraining: true,
       mediumArmorTraining: true,

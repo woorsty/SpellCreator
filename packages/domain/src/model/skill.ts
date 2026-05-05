@@ -4,7 +4,15 @@ export class Skill {
   modifier = 0;
   expertise = false;
 
-  public constructor(init?: Partial<Skill>) {
-    Object.assign(this, init);
+  public constructor(
+    name: string,
+    proficiency: boolean,
+    modifier: number,
+    expertise: boolean,
+  ) {
+    this.name = name;
+    this.proficiency = proficiency;
+    this.modifier = modifier;
+    this.expertise = expertise;
   }
 }

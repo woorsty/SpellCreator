@@ -1,8 +1,9 @@
 import type { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
-import { Spell } from "../../../../../packages/domain/src/model/spell";
-import { JsonService } from "../../../../../packages/domain/src/service/jsonService";
-import { MarkdownService } from "../../../../../packages/domain/src/service/markdownService";
+import { Spell } from "@domain/model/spell";
+import { JsonService } from "@domain/service/jsonService";
+import { MarkdownService } from "@domain/service/markdownService";
+import { SPELLS_PATH } from "../api/apiRouter";
 
 export class SpellController {
   static async getAll(req: Request, res: Response) {
@@ -12,7 +13,7 @@ export class SpellController {
     const filterSchule = req.query.schule as string | undefined;
     const sortierung = req.query.sortierung as string | undefined;
 
-    const spellData = await JsonService.readJsonFile<Spell>(Spell.JsonFilePath);
+    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
     let gefilterteZauber = [...spellData]; // Erstelle eine Kopie zum Filtern
 
     // Filterlogik für Stufe (Von-Bis Bereich)
@@ -94,7 +95,7 @@ export class SpellController {
   }
 
   static async getSpellByName(name: string): Promise<Spell | undefined> {
-    const spellData = await JsonService.readJsonFile<Spell>(Spell.JsonFilePath);
+    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
     const spell = spellData.find((s) => s.Name === name);
 
     if (!spell && name) {
@@ -126,9 +127,9 @@ export class SpellController {
       Gestik: Gestik === "on",
     };
 
-    const spellData = await JsonService.readJsonFile<Spell>(Spell.JsonFilePath);
+    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
     spellData.push(newSpell);
-    await JsonService.writeJsonFile(spellData, Spell.JsonFilePath);
+    await JsonService.writeJsonFile(spellData, SPELLS_PATH);
     res.statusCode = 303;
     res.setHeader("Location", "/spell/add");
     res.end();
@@ -148,12 +149,12 @@ export class SpellController {
       Gestik: req.body.Gestik === "on",
     };
 
-    const spellData = await JsonService.readJsonFile<Spell>(Spell.JsonFilePath);
+    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
     const index = spellData.findIndex((spell) => spell.Name === spellName);
 
     if (index !== -1) {
       spellData[index] = updatedSpell;
-      await JsonService.writeJsonFile(spellData, Spell.JsonFilePath);
+      await JsonService.writeJsonFile(spellData, SPELLS_PATH);
       res.redirect("/spell"); // Zurück zur Zauberliste
     } else {
       res.status(404).send("Zauber nicht gefunden");
@@ -162,7 +163,7 @@ export class SpellController {
 
   static async getEditForm(req: Request, res: Response) {
     const spellName = req.params.name as string;
-    const spellData = await JsonService.readJsonFile<Spell>(Spell.JsonFilePath);
+    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
     const spellToEdit = spellData.find((spell) => spell.Name === spellName);
 
     if (spellToEdit) {

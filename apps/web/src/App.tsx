@@ -1,28 +1,11 @@
 import React, { useReducer } from "react";
+import { CharacterSheet } from "@domain/model/charactersheet";
+import { Species } from "@domain/model/species";
+import { translate } from "@i18n";
+import { Skill } from "@domain/model/skill";
+import { Attribute } from "@domain/model/attribute";
 
-type Character = {
-  name: string;
-  background: string;
-  class: string;
-  species: string;
-  alignment: string;
-  backstory: string;
-  strength: number;
-  dexterity: number;
-  constitution: number;
-};
-
-const emptyCharacter: Character = {
-  name: "",
-  background: "",
-  class: "Fighter",
-  species: "Human",
-  alignment: "Neutral",
-  backstory: "",
-  strength: 10,
-  dexterity: 10,
-  constitution: 10,
-};
+const emptyCharacter: CharacterSheet = new CharacterSheet();
 
 // -----------------------------
 // State
@@ -30,7 +13,7 @@ const emptyCharacter: Character = {
 
 type State = {
   step: number;
-  character: Character;
+  character: CharacterSheet;
 };
 
 const initialState: State = {
@@ -39,12 +22,12 @@ const initialState: State = {
 };
 
 // -----------------------------
-// Actions (Java-like explicitness)
+// Actions
 // -----------------------------
 
 type Action =
   | { type: "SET_STEP"; step: number }
-  | { type: "UPDATE_FIELD"; field: keyof Character; value: any };
+  | { type: "UPDATE_FIELD"; field: keyof CharacterSheet; value: any };
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -65,6 +48,24 @@ function reducer(state: State, action: Action): State {
   }
 }
 
+function getAttributeByName(
+  character: CharacterSheet,
+  name: string,
+): Attribute | undefined {
+  return character.attributes.find((attr) => attr.name === name);
+}
+
+function getSkillByName(
+  character: CharacterSheet,
+  name: string,
+): Skill | undefined {
+  for (const attr of character.attributes) {
+    const skill = attr.skills.find((s) => s.name === name);
+    if (skill) return skill;
+  }
+  return undefined;
+}
+
 // -----------------------------
 // Component
 // -----------------------------
@@ -73,13 +74,19 @@ export default function CharacterCreator() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { step, character } = state;
 
-  const steps = ["Charakterdaten", "Klasse & Volk", "Attribute", "Hintergrund"];
+  const steps = [
+    "Charakterdaten",
+    "Klasse & Volk",
+    "Attribute",
+    "Hintergrund",
+    "Ausrüstung",
+  ];
 
   return (
     <div style={styles.layout}>
       {/* NAV */}
       <aside style={styles.card}>
-        <h2>Charakter erstellen</h2>
+        <h2>{translate("character:title")}</h2>
         {steps.map((s, i) => (
           <div
             key={i}
@@ -98,7 +105,7 @@ export default function CharacterCreator() {
       <main style={styles.card}>
         {step === 0 && (
           <>
-            <h3>Charakterdaten</h3>
+            <h3>{translate("characterCreator.steps.base")}</h3>
 
             <input
               value={character.name}
@@ -130,10 +137,10 @@ export default function CharacterCreator() {
 
         {step === 1 && (
           <>
-            <h3>Klasse & Volk</h3>
+            <h3>{translate("characterCreator.steps.class")}</h3>
 
             <input
-              value={character.species}
+              value={translate(`species.${character.species}`)}
               onChange={(e) =>
                 dispatch({
                   type: "UPDATE_FIELD",
@@ -144,18 +151,23 @@ export default function CharacterCreator() {
               style={styles.input}
             />
 
-            {"Fighter Wizard Rogue Cleric".split(" ").map((c) => (
+            {Object.values(Species).map((species) => (
               <div
-                key={c}
+                key={species}
                 onClick={() =>
-                  dispatch({ type: "UPDATE_FIELD", field: "class", value: c })
+                  dispatch({
+                    type: "UPDATE_FIELD",
+                    field: "species",
+                    value: species,
+                  })
                 }
                 style={{
                   ...styles.choice,
-                  borderColor: character.class === c ? "#3b82f6" : "#4b4f57",
+                  borderColor:
+                    character.species === species ? "#3b82f6" : "#4b4f57",
                 }}
               >
-                {c}
+                {translate(`species.${species}`)}
               </div>
             ))}
           </>
@@ -163,18 +175,18 @@ export default function CharacterCreator() {
 
         {step === 2 && (
           <>
-            <h3>Attribute</h3>
+            <h3>{translate("characterCreator.steps.attributes")}</h3>
 
-            {["strength", "dexterity", "constitution"].map((attr) => (
-              <div key={attr}>
-                <label>{attr}</label>
+            {character.attributes.forEach((attr) => (
+              <div key={attr.name}>
+                <label>{translate(`character.${attr.name}`)}</label>
                 <input
                   type="number"
-                  value={(character as any)[attr]}
+                  value={attr.value}
                   onChange={(e) =>
                     dispatch({
                       type: "UPDATE_FIELD",
-                      field: attr as keyof Character,
+                      field: attr.name as keyof CharacterSheet,
                       value: Number(e.target.value),
                     })
                   }
@@ -187,7 +199,7 @@ export default function CharacterCreator() {
 
         {step === 3 && (
           <>
-            <h3>Hintergrund</h3>
+            <h3>{translate("characterCreator.steps.background")}</h3>
 
             <input
               value={character.alignment}
@@ -219,16 +231,16 @@ export default function CharacterCreator() {
 
       {/* PREVIEW */}
       <aside style={styles.card}>
-        <h3>Charaktervorschau</h3>
+        <h3>{translate("character.preview")}</h3>
         <div>
           <b>{character.name || "Unbenannt"}</b>
         </div>
         <div>
           {character.species} {character.class}
         </div>
-        <div>STR {character.strength}</div>
-        <div>DEX {character.dexterity}</div>
-        <div>CON {character.constitution}</div>
+        <div>STR {getAttributeByName(character, "strength")?.value}</div>
+        <div>DEX {getAttributeByName(character, "dexterity")?.value}</div>
+        <div>CON {getAttributeByName(character, "constitution")?.value}</div>
       </aside>
     </div>
   );

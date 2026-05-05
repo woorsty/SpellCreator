@@ -1,8 +1,4 @@
-import path from "path";
-
 export class Spell {
-  public static readonly JsonFilePath = path.resolve("../../data/spells.json");
-
   Stufe: number;
   Name: string;
   Schule: string;

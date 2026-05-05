@@ -1,5 +1,5 @@
 {
-  "name": "domain",
+  "name": "i18n",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -14,7 +14,9 @@
     "build": "tsc -b"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "@types/node": "^22.19.17"
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "i18next": "^26.0.8"
   }
 }

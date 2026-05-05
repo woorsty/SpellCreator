@@ -4,7 +4,8 @@
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@domain/*": ["packages/domain/src/*"]
+      "@domain/*": ["packages/domain/src/*"],
+      "@i18n/*": ["packages/i18n/src/*"]
     }
   },
   "references": [{ "path": "./apps/server" }, { "path": "./apps/web" }]
