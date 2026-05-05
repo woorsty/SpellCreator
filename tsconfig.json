@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
-    "paths": {
-      "@domain/*": ["packages/domain/src/*"],
-      "@i18n/*": ["packages/i18n/src/*"]
-    }
+    "ignoreDeprecations": "6.0"
   },
   "references": [{ "path": "./apps/server" }, { "path": "./apps/web" }]
 }

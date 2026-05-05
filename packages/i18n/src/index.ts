@@ -14,7 +14,7 @@ export function setLocale(locale: Locale) {
   current = locale;
 }
 
-export function translate(key: TranslationKeys): string {
+export function translate(key: TranslationKeys | string): string {
   const dict = locales[current];
 
   if (!key) {

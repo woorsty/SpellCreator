@@ -7,7 +7,8 @@
     "module": "ESNext",
     "target": "ES2020",
     "moduleResolution": "Bundler",
-    "strict": true
+    "strict": true,
+    "composite": true
   },
   "include": ["src"]
 }

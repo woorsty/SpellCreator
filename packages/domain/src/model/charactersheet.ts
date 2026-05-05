@@ -115,7 +115,7 @@ export class CharacterSheet {
 
   appearance = "";
   backstory = "";
-  alignment = Alignment.ChaoticEvil;
+  alignment = Alignment.CHAOTIC_EVIL;
   languages: string[] = [];
   equipment: string[] = [];
   attunedMagicItems: string[] = [];
@@ -128,6 +128,18 @@ export class CharacterSheet {
 
   public constructor(init?: Partial<CharacterSheet>) {
     Object.assign(this, init);
+  }
+
+  public getAttributeByName(name: string): Attribute | undefined {
+    return this.attributes.find((attr) => attr.name === name);
+  }
+
+  public getSkillByName(name: string): Skill | undefined {
+    for (const attr of this.attributes) {
+      const skill = attr.skills.find((s) => s.name === name);
+      if (skill) return skill;
+    }
+    return undefined;
   }
 
   public static getTestCharacter(): CharacterSheet {
@@ -238,7 +250,7 @@ export class CharacterSheet {
         "A tall, muscular human with short brown hair and green eyes.",
       backstory:
         "Born in a small village, this character grew up learning the ways of the sword. After their village was attacked by bandits, they set out on a quest for justice and adventure.",
-      alignment: Alignment.LawfulGood,
+      alignment: Alignment.LAWFUL_GOOD,
       languages: ["Common", "Dwarvish"],
       equipment: [
         "Explorer's Pack",
