@@ -1,18 +1,35 @@
-export class Skill {
-  name = "";
-  proficiency = false;
-  modifier = 0;
-  expertise = false;
+export const ATTRIBUTE_SKILLS = {
+  strength: ["athletics"],
+  dexterity: ["acrobatics", "sleightOfHand", "stealth"],
+  constitution: [],
+  intelligence: ["arcana", "history", "investigation", "nature", "religion"],
+  wisdom: ["animalHandling", "insight", "medicine", "perception", "survival"],
+  charisma: ["deception", "intimidation", "performance", "persuasion"],
+} as const;
 
-  public constructor(
-    name: string,
-    proficiency: boolean,
-    modifier: number,
-    expertise: boolean,
-  ) {
-    this.name = name;
-    this.proficiency = proficiency;
-    this.modifier = modifier;
-    this.expertise = expertise;
-  }
-}
+export type Attribute = keyof typeof ATTRIBUTE_SKILLS;
+
+type SkillOf<A extends Attribute> = (typeof ATTRIBUTE_SKILLS)[A][number];
+
+export type AllSkills = (typeof ATTRIBUTE_SKILLS)[Attribute][number];
+
+type ProficiencyBlock = {
+  proficiency: boolean;
+  expertise: boolean;
+  modifier: number;
+};
+
+export type AttributeValues = ProficiencyBlock & {
+  value: number;
+  savingThrow: number;
+};
+
+export type CharacterAttributes = {
+  [A in Attribute]: AttributeValues;
+};
+
+export type CharacterSkills = {
+  [A in Attribute]: {
+    [S in SkillOf<A>]: ProficiencyBlock;
+  };
+};

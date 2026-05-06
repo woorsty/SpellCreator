@@ -6,13 +6,12 @@ import {
   generateCardPDF,
   generateCardPDFWithBackside,
 } from "./spellcardPdfGenerator";
-import { Spell } from "@domain/model/spell";
+import { Spell } from "@domain";
+import { SPELLS_PATH } from "../api/apiRouter";
 
 const createSpellcard = (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
-  const spells = JSON.parse(
-    fs.readFileSync(Spell.JsonFilePath, "utf8"),
-  ) as Spell[];
+  const spells = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf8")) as Spell[];
 
   const von = parseInt(stufeVon as string, 10);
   const bis = parseInt(stufeBis as string, 10);

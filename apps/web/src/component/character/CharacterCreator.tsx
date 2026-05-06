@@ -1,16 +1,14 @@
 import React, { useReducer } from "react";
-import { CharacterSheet } from "@domain/model/charactersheet";
+import { CharacterSheet } from "@domain";
 import { translate } from "@i18n";
 import { CharacterCreationStep } from "../../feature/character-creation/character-creator-stpes";
-import { BasicInfoTab } from "../../feature/character-creation/step/BasicInfoTab";
-import { AttributesTab } from "../../feature/character-creation/step/AttributesTab";
-import { CharacterClassTab } from "../../feature/character-creation/step/CharacterClassTab";
-import { stepRegistry } from "@web/feature/character-creation/step-registry";
-import { State } from "@web/feature/character-creation/characterCreator.types";
-import { characterCreationReducer } from "@web/feature/character-creation/characterCreator.reducer";
-import { CharacterPreview } from "@web/feature/character-creation/CharacterPreview";
+import { stepRegistry } from "../../feature/character-creation/step-registry";
+import { State } from "../../feature/character-creation/characterCreator.types";
+import { characterCreationReducer } from "../../feature/character-creation/characterCreator.reducer";
+import { CharacterPreview } from "../../feature/character-creation/CharacterPreview";
+import { CharacterService } from "@domain";
 
-const emptyCharacter: CharacterSheet = new CharacterSheet();
+const emptyCharacter: CharacterSheet = CharacterService.getEmptyCharacter();
 
 // -----------------------------
 // State

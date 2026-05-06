@@ -1,8 +1,7 @@
 import React from "react";
-import { StepProps } from "./characterCreator.types";
-import { Card } from "@web/component/ui/Card";
+import { Card } from "../../component/ui/Card";
 import { translate } from "@i18n";
-import { CharacterSheet } from "@domain/model/charactersheet";
+import { CharacterSheet } from "@domain";
 
 export type CharacterPreviewProps = {
   character: CharacterSheet;
@@ -19,9 +18,9 @@ export function CharacterPreview({ character }: CharacterPreviewProps) {
         <div>
           {character.species} {character.class}
         </div>
-        <div>STR {character.getAttributeByName("strength")?.value}</div>
-        <div>DEX {character.getAttributeByName("dexterity")?.value}</div>
-        <div>CON {character.getAttributeByName("constitution")?.value}</div>
+        <div>STR {character.attributes.strength.value}</div>
+        <div>DEX {character.attributes.dexterity.value}</div>
+        <div>CON {character.attributes.constitution.value}</div>
       </Card>
     </>
   );

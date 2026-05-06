@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
-import { Spell } from "@domain/model/spell";
-import { JsonService } from "@domain/service/jsonService";
-import { MarkdownService } from "@domain/service/markdownService";
+import { Spell } from "@domain";
+import { JsonService } from "@domain";
+import { MarkdownService } from "@domain";
 import { SPELLS_PATH } from "../api/apiRouter";
 
 export class SpellController {

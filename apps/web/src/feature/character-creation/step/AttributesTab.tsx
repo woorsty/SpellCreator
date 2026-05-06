@@ -1,7 +1,7 @@
 import React from "react";
 import { StepProps } from "../characterCreator.types";
 import { translate } from "@i18n";
-import { Input } from "@web/component/ui/Input";
+import { Input } from "../../../component/ui/Input";
 
 export function AttributesTab({ character, updateField }: StepProps) {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { StepProps } from "../characterCreator.types";
-import { Species } from "@domain/model/species";
+import { Species } from "@domain";
 import { translate } from "@i18n";
 
 export function CharacterClassTab({ character, updateField }: StepProps) {

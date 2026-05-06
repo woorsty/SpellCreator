@@ -1,0 +1,14 @@
+export enum CharacterClass {
+  ARTEFICER,
+  BABARIAN,
+  BARD,
+  CLERIC,
+  DRUID,
+  FIGHTER,
+  MONK,
+  PALADIN,
+  RANGER,
+  SORCERER,
+  WARLOCK,
+  WIZARD,
+}

@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react",
     "outDir": "dist",
-    "rootDir": "../../",
     "composite": true
   },
-  "include": ["src"]
+  "include": ["src/**/*", "../../packages/domain/src/model/class.ts"]
 }

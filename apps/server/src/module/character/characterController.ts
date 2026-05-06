@@ -1,8 +1,9 @@
 import type { Request, Response } from "express";
-import { JsonService } from "@domain/service/jsonService";
-import { MarkdownService } from "@domain/service/markdownService";
-import { CharacterSheet } from "@domain/model/charactersheet";
+import { JsonService } from "@domain";
+import { MarkdownService } from "@domain";
 import { CHARACTERS_PATH } from "../api/apiRouter";
+import { CharacterService } from "@domain";
+import { CharacterSheet } from "@domain";
 
 export class CharacterController {
   static getAll(req: Request, res: Response) {
@@ -27,7 +28,7 @@ export class CharacterController {
       });
     } else {
       res.render("character-detail", {
-        character: CharacterSheet.getTestCharacter(),
+        character: CharacterService,
         renderMarkdown: MarkdownService.renderMarkdown,
       });
     }
