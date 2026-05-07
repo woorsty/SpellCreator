@@ -11,13 +11,27 @@ export function characterCreationReducer(state: State, action: Action): State {
     case "UPDATE_FIELD":
       return {
         ...state,
-        character: {
-          ...state.character,
-          [action.field]: action.value,
-        },
+        character: setNestedValue(state.character, action.field, action.value),
       };
 
     default:
       return state;
   }
+}
+
+function setNestedValue(obj: any, path: string, value: any) {
+  const keys = path.split(".");
+  const lastKey = keys.pop()!;
+
+  const newObj = structuredClone(obj);
+
+  let current = newObj;
+
+  for (const key of keys) {
+    current = current[key];
+  }
+
+  current[lastKey] = value;
+
+  return newObj;
 }

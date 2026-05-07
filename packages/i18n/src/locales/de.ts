@@ -57,11 +57,24 @@ export const de = {
   characterCreator: {
     title: "Charakter Erstellung",
     steps: {
-      basic_info: "Charakterdaten",
-      character_class: "Klasse & Volk",
-      attributes: "Attribute",
-      background: "Hintergrund",
-      equipment: "Ausrüstung",
+      basic_info: {
+        title: "Charakterdaten",
+      },
+      character_class: {
+        title: "Klasse & Volk",
+      },
+      attributes: {
+        title: "Attribute",
+        value: "Wert",
+        proficiency: "Übung",
+        savingThrow: "Rettungswurf",
+      },
+      background: {
+        title: "Hintergrund",
+      },
+      equipment: {
+        title: "Ausrüstung",
+      },
     },
     preview: "Charaktervorschau",
   },

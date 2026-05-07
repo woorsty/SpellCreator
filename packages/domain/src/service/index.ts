@@ -1,3 +1,4 @@
+export * from "./attribute-service";
 export * from "./markdownService";
 export * from "./json-service";
 export * from "./character-service";

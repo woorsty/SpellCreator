@@ -60,8 +60,7 @@ export default function CharacterCreator() {
               }}
             >
               {translate(
-                "characterCreator.steps." +
-                  CharacterCreationStep[s].toLowerCase(),
+                `characterCreator.steps.${CharacterCreationStep[s].toLowerCase()}.title`,
               )}
             </div>
           ))}

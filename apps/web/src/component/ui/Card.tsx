@@ -1,6 +1,11 @@
-import React from "react";
-import "./card.css";
+import React, { PropsWithChildren } from "react";
 
-export function Card({ children }: { children: React.ReactNode }) {
-  return <div className="card">{children}</div>;
+type CardProps = PropsWithChildren;
+
+export function Card({ children }: CardProps) {
+  return (
+    <div className="rounded-xl border border-border bg-surface p-4 shadow-sm">
+      {children}
+    </div>
+  );
 }
