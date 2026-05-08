@@ -13,7 +13,7 @@ export function AttributesTab({ character, updateField }: StepProps) {
         <AttributeCard
           key={attr}
           attributeName={attr}
-          attribute={character.attributes[attr]}
+          character={character}
           updateField={updateField}
         />
       ))}

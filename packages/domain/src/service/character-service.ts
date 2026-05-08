@@ -1,10 +1,17 @@
 import { Alignment } from "../model/alignment";
 import { CharacterClass } from "../model/character-class";
 import type { CharacterSheet } from "../model/character-sheet";
-import { AllSkills, ATTRIBUTE_SKILLS, Attribute } from "../model/skill";
+import {
+  AllSkills,
+  ATTRIBUTE_SKILLS,
+  Attribute,
+  CharacterSkills,
+  SkillOf,
+} from "../model/skill";
 import { Species } from "../model/species";
 import { Spell } from "../model/spell";
 import { Weapon } from "../model/weapon";
+import { AttributeService } from "./attribute-service";
 
 export class CharacterService {
   public static findAttributeBySkill(skill: AllSkills): Attribute {
@@ -33,83 +40,64 @@ export class CharacterService {
       hitDiceValue: 0,
       successDeathSaves: 0,
       failedDeathSaves: 0,
-      proficiencyBonus: 0,
+      proficiencyBonus: 2,
       skills: {
         strength: {
           athletics: {
             expertise: false,
-            modifier: 0,
-            proficiency: true,
+            proficiency: false,
           },
         },
         charisma: {
-          deception: { expertise: false, modifier: 0, proficiency: true },
-          intimidation: { expertise: false, modifier: 0, proficiency: true },
-          performance: { expertise: false, modifier: 0, proficiency: true },
-          persuasion: { expertise: false, modifier: 0, proficiency: true },
+          deception: { expertise: false, proficiency: false },
+          intimidation: { expertise: false, proficiency: false },
+          performance: { expertise: false, proficiency: false },
+          persuasion: { expertise: false, proficiency: false },
         },
         constitution: {},
         dexterity: {
-          acrobatics: { expertise: false, modifier: 0, proficiency: true },
-          sleightOfHand: { expertise: false, modifier: 0, proficiency: true },
-          stealth: { expertise: false, modifier: 0, proficiency: true },
+          acrobatics: { expertise: false, proficiency: false },
+          sleightOfHand: { expertise: false, proficiency: false },
+          stealth: { expertise: false, proficiency: false },
         },
         intelligence: {
-          arcana: { expertise: false, modifier: 0, proficiency: true },
-          history: { expertise: false, modifier: 0, proficiency: true },
-          investigation: { expertise: false, modifier: 0, proficiency: true },
-          nature: { expertise: false, modifier: 0, proficiency: true },
-          religion: { expertise: false, modifier: 0, proficiency: true },
+          arcana: { expertise: false, proficiency: false },
+          history: { expertise: false, proficiency: false },
+          investigation: { expertise: false, proficiency: false },
+          nature: { expertise: false, proficiency: false },
+          religion: { expertise: false, proficiency: false },
         },
         wisdom: {
-          animalHandling: { expertise: false, modifier: 0, proficiency: true },
-          insight: { expertise: false, modifier: 0, proficiency: true },
-          medicine: { expertise: false, modifier: 0, proficiency: true },
-          perception: { expertise: false, modifier: 0, proficiency: true },
-          survival: { expertise: false, modifier: 0, proficiency: true },
+          animalHandling: { expertise: false, proficiency: false },
+          insight: { expertise: false, proficiency: false },
+          medicine: { expertise: false, proficiency: false },
+          perception: { expertise: false, proficiency: false },
+          survival: { expertise: false, proficiency: false },
         },
       },
       attributes: {
         charisma: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
         constitution: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
         dexterity: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
         intelligence: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
         strength: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
         wisdom: {
-          expertise: false,
-          modifier: 0,
           proficiency: false,
-          savingThrow: 0,
           value: 10,
         },
       },
@@ -188,78 +176,59 @@ export class CharacterService {
         strength: {
           athletics: {
             expertise: false,
-            modifier: 1,
             proficiency: true,
           },
         },
         charisma: {
-          deception: { expertise: false, modifier: 1, proficiency: true },
-          intimidation: { expertise: false, modifier: 1, proficiency: true },
-          performance: { expertise: false, modifier: 1, proficiency: true },
-          persuasion: { expertise: false, modifier: 1, proficiency: true },
+          deception: { expertise: false, proficiency: true },
+          intimidation: { expertise: false, proficiency: true },
+          performance: { expertise: false, proficiency: true },
+          persuasion: { expertise: false, proficiency: true },
         },
         constitution: {},
         dexterity: {
-          acrobatics: { expertise: false, modifier: 1, proficiency: true },
-          sleightOfHand: { expertise: false, modifier: 1, proficiency: true },
-          stealth: { expertise: false, modifier: 1, proficiency: true },
+          acrobatics: { expertise: false, proficiency: true },
+          sleightOfHand: { expertise: false, proficiency: true },
+          stealth: { expertise: false, proficiency: true },
         },
         intelligence: {
-          arcana: { expertise: false, modifier: 1, proficiency: true },
-          history: { expertise: false, modifier: 1, proficiency: true },
-          investigation: { expertise: false, modifier: 1, proficiency: true },
-          nature: { expertise: false, modifier: 1, proficiency: true },
-          religion: { expertise: false, modifier: 1, proficiency: true },
+          arcana: { expertise: false, proficiency: true },
+          history: { expertise: false, proficiency: true },
+          investigation: { expertise: false, proficiency: true },
+          nature: { expertise: false, proficiency: true },
+          religion: { expertise: false, proficiency: true },
         },
         wisdom: {
-          animalHandling: { expertise: false, modifier: 1, proficiency: true },
-          insight: { expertise: false, modifier: 1, proficiency: true },
-          medicine: { expertise: false, modifier: 1, proficiency: true },
-          perception: { expertise: false, modifier: 1, proficiency: true },
-          survival: { expertise: false, modifier: 1, proficiency: true },
+          animalHandling: { expertise: false, proficiency: true },
+          insight: { expertise: false, proficiency: true },
+          medicine: { expertise: false, proficiency: true },
+          perception: { expertise: false, proficiency: true },
+          survival: { expertise: false, proficiency: true },
         },
       },
       attributes: {
         charisma: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
         constitution: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
         dexterity: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
         intelligence: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
         strength: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
         wisdom: {
-          expertise: false,
-          modifier: 1,
           proficiency: false,
-          savingThrow: 4,
           value: 11,
         },
       },
@@ -342,5 +311,27 @@ export class CharacterService {
       gold: 20,
       platinum: 0,
     };
+  }
+
+  public static getSkillModifier<A extends Attribute>(
+    character: CharacterSheet,
+    attribute: A,
+    skill: SkillOf<A>,
+  ) {
+    const attr = character.attributes[attribute];
+    const skillData = character.skills[attribute][skill];
+
+    const modifier = AttributeService.calculateModifier(attr.value);
+
+    let bonus = 0;
+
+    if (skillData.proficiency) {
+      bonus += character.proficiencyBonus;
+    }
+    if (skillData.expertise) {
+      bonus += character.proficiencyBonus;
+    }
+
+    return modifier + bonus;
   }
 }

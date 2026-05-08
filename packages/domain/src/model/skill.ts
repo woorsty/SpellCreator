@@ -18,18 +18,18 @@ export const ATTRIBUTES = [
 
 export type Attribute = keyof typeof ATTRIBUTE_SKILLS;
 
-type SkillOf<A extends Attribute> = (typeof ATTRIBUTE_SKILLS)[A][number];
+export type SkillOf<A extends Attribute> = (typeof ATTRIBUTE_SKILLS)[A][number];
 
 export type AllSkills = (typeof ATTRIBUTE_SKILLS)[Attribute][number];
 
-type ProficiencyBlock = {
+export type AttributeValues = {
+  value: number;
   proficiency: boolean;
-  modifier: number;
 };
 
-export type AttributeValues = ProficiencyBlock & {
-  value: number;
-  savingThrow: number;
+export type SkillValues = {
+  expertise: boolean;
+  proficiency: boolean;
 };
 
 export type CharacterAttributes = {
@@ -38,8 +38,23 @@ export type CharacterAttributes = {
 
 export type CharacterSkills = {
   [A in Attribute]: {
-    [S in SkillOf<A>]: ProficiencyBlock & {
-      expertise: boolean;
-    };
+    [S in SkillOf<A>]: SkillValues;
   };
+};
+
+export type SkillViewModel<A extends Attribute> = {
+  name: SkillOf<A>;
+  attributeName: A;
+  value: number;
+  proficiency: boolean;
+  expertiese: boolean;
+  modifier: number;
+};
+
+export type AttributeViewModel = {
+  name: Attribute;
+  modifier: number;
+  savingThrow: number;
+  value: number;
+  proficiency: boolean;
 };

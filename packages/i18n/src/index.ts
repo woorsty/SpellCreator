@@ -22,7 +22,6 @@ export function translate(key: TranslationKeys | string): string {
   }
 
   const result = key.split(".").reduce<any>((obj, k) => obj?.[k], dict) ?? key;
-  console.log("key: ", key, "result", result);
   if (typeof result != "string") {
     return key + " returns " + typeof result;
   }
@@ -48,7 +47,6 @@ export class Translator {
 
     const result =
       key.split(".").reduce<any>((obj, k) => obj?.[k], dict) ?? key;
-    console.log("key: ", key, "result", result);
     if (typeof result != "string") {
       return key + " returns " + typeof result;
     }

@@ -3,7 +3,7 @@ import { CharacterCreationStep } from "./character-creator-stpes";
 
 export type StepProps = {
   character: CharacterSheet;
-  updateField: (field: keyof CharacterSheet, value: any) => void;
+  updateField: (field: keyof CharacterSheet | string, value: any) => void;
 };
 
 export type State = {
@@ -19,5 +19,5 @@ export type Action =
   | {
       type: "UPDATE_FIELD";
       field: keyof CharacterSheet;
-      value: CharacterSheet[keyof CharacterSheet];
+      value: CharacterSheet[keyof CharacterSheet] | string;
     };

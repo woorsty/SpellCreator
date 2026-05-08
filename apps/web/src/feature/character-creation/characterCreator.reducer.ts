@@ -21,17 +21,20 @@ export function characterCreationReducer(state: State, action: Action): State {
 
 function setNestedValue(obj: any, path: string, value: any) {
   const keys = path.split(".");
-  const lastKey = keys.pop()!;
 
-  const newObj = structuredClone(obj);
+  return keys.reduceRight((acc, key, index) => {
+    if (index === 0) {
+      return {
+        ...obj,
+        [key]: acc,
+      };
+    }
 
-  let current = newObj;
+    const parentPath = keys.slice(0, index).reduce((o, k) => o[k], obj);
 
-  for (const key of keys) {
-    current = current[key];
-  }
-
-  current[lastKey] = value;
-
-  return newObj;
+    return {
+      ...parentPath,
+      [key]: acc,
+    };
+  }, value);
 }

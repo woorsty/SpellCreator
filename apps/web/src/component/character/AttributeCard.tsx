@@ -1,31 +1,40 @@
 import React from "react";
 import { Translator } from "@i18n";
-import { AttributeService, CharacterSheet } from "@domain";
+import {
+  Attribute,
+  ATTRIBUTE_SKILLS,
+  AttributeService,
+  CharacterSheet,
+  SkillOf,
+} from "@domain";
 import { Checkbox } from "../../component/ui/Checkbox";
 import { Card } from "../../component/ui/Card";
 import { Label } from "../../component/ui/Label";
 import { NumberInput } from "../../component/ui/NumberInput";
+import { SkillRow } from "../../feature/character-creation/step/SkillRow";
 
-type AttributeCardProps = {
-  attributeName: string;
-  attribute: {
-    value: number;
-    proficiency: boolean;
-  };
-  updateField: (field: keyof CharacterSheet, value: any) => void;
+type AttributeCardProps<A extends Attribute> = {
+  attributeName: A;
+  character: CharacterSheet;
+  updateField: (field: keyof CharacterSheet | string, value: any) => void;
 };
 
-export function AttributeCard({
+export function AttributeCard<A extends Attribute>({
   attributeName,
-  attribute,
+  character,
   updateField,
-}: AttributeCardProps) {
+}: AttributeCardProps<A>) {
+  const attribute = character.attributes[attributeName];
   const translator = new Translator("characterCreator.steps.attributes");
   const modifier = AttributeService.calculateModifier(attribute.value);
+  const skillsForAttribute = ATTRIBUTE_SKILLS[
+    attributeName
+  ] as readonly SkillOf<A>[];
 
   const savingThrow = AttributeService.calculateSavingThrow(
     modifier,
     attribute.proficiency,
+    character.proficiencyBonus,
   );
 
   return (
@@ -35,10 +44,6 @@ export function AttributeCard({
         <h4 className="text-base font-semibold">
           {translator.translate(`character.attribute.${attributeName}`)}
         </h4>
-
-        <div className="text-2xl font-bold">
-          {AttributeService.formatModifier(modifier)}
-        </div>
       </div>
 
       {/* BODY GRID */}
@@ -48,15 +53,20 @@ export function AttributeCard({
           <div>
             <Label>{translator.translate(".value")}</Label>
 
-            <NumberInput
-              value={attribute.value}
-              onChange={(value) =>
-                updateField(
-                  `attributes.${attributeName}.value` as keyof CharacterSheet,
-                  value,
-                )
-              }
-            />
+            <div className="flex items-center gap-2">
+              <NumberInput
+                value={attribute.value}
+                onChange={(value) =>
+                  updateField(
+                    `attributes.${attributeName}.value` as keyof CharacterSheet,
+                    value,
+                  )
+                }
+              />
+              <div className="text-2xl font-bold">
+                {AttributeService.formatModifier(modifier)}
+              </div>
+            </div>
           </div>
 
           <div className="flex items-center gap-2">
@@ -70,13 +80,6 @@ export function AttributeCard({
               }
             />
 
-            <Label>{translator.translate(".proficiency")}</Label>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE: OUTPUTS */}
-        <div className="space-y-3 text-right">
-          <div>
             <Label>{translator.translate(".savingThrow")}</Label>
 
             <div className="text-lg font-bold">
@@ -85,6 +88,24 @@ export function AttributeCard({
           </div>
         </div>
       </div>
+
+      {/* SKILLS */}
+      {ATTRIBUTE_SKILLS[attributeName].length > 0 && (
+        <div className="mt-4 border-t border-border pt-3 space-y-2">
+          <div className="text-xs uppercase text-text/60">Skills</div>
+
+          {skillsForAttribute.map((skillName) => (
+            <SkillRow
+              skill={AttributeService.getSkillViewModel(
+                character,
+                attributeName,
+                skillName,
+              )}
+              updateField={updateField}
+            />
+          ))}
+        </div>
+      )}
     </Card>
   );
 }
