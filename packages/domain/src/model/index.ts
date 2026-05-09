@@ -7,3 +7,5 @@ export * from "./skill";
 export * from "./species";
 export * from "./spell";
 export * from "./weapon";
+export * from "./equipment";
+export * from "./language";

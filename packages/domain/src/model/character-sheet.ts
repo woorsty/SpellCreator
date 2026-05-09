@@ -5,6 +5,7 @@ import { Weapon } from "./weapon";
 import { Alignment } from "./alignment";
 import { Species } from "./species";
 import { CharacterClass } from "./character-class";
+import { EquipmentItem } from "./equipment";
 
 export type CharacterSheet = {
   name: string;
@@ -88,7 +89,7 @@ export type CharacterSheet = {
   backstory: string;
   alignment: Alignment;
   languages: string[];
-  equipment: string[];
+  equipment: EquipmentItem[];
   attunedMagicItems: string[];
 
   copper: number;

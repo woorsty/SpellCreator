@@ -7,7 +7,7 @@ export function Input({ className = "", ...props }: InputProps) {
     <input
       {...props}
       className={`
-        w-full
+        
         rounded-lg
         border
         border-border

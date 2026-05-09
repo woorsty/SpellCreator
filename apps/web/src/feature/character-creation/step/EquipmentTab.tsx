@@ -1,25 +1,36 @@
 import React from "react";
-import { translate } from "@i18n";
-import { Input } from "../../../component/ui/Input";
+import { Translator } from "@i18n";
 import { StepProps } from "../characterCreator.types";
+import { CoinsRow } from "../../../component/character/CoinsRow";
+import { EquipmentList } from "../../../component/character/EquipmentList";
 
 export function EquipmentTab({ character, updateField }: StepProps) {
+  const translator = new Translator("characterCreator.steps.equipment");
   return (
-    <>
-      <h3>{translate("characterCreator.steps.attributes")}</h3>
+    <div className="space-y-6">
+      <h3 className="text-2xl font-bold">{translator.translate(".title")}</h3>
 
-      {character.attributes.map((attr) => (
-        <div key={attr.name}>
-          <label>{translate(`character.${attr.name}`)}</label>
-          <Input
-            type="number"
-            value={attr.value}
-            onChange={(e) =>
-              updateField(attr.name as any, Number(e.target.value))
-            }
-          />
-        </div>
-      ))}
-    </>
+      {/* COINS */}
+      <CoinsRow
+        copper={character.copper}
+        silver={character.silver}
+        electrum={character.electrum}
+        gold={character.gold}
+        platinum={character.platinum}
+        updateField={updateField}
+      />
+
+      {/* EQUIPMENT */}
+      <div>
+        <h4 className="mb-2 font-semibold">
+          {translator.translate(".equipment")}
+        </h4>
+
+        <EquipmentList
+          equipment={character.equipment}
+          updateField={updateField}
+        />
+      </div>
+    </div>
   );
 }
