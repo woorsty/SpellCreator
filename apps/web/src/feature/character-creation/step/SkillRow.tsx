@@ -7,7 +7,7 @@ import {
   CharacterSheet,
   SkillViewModel,
 } from "@domain";
-import { translate, Translator } from "@i18n";
+import { translate } from "@i18n";
 
 type SkillRowProps<A extends Attribute> = {
   skill: SkillViewModel<A>;

@@ -16,7 +16,7 @@ export function CharacterPreview({ character }: CharacterPreviewProps) {
           <b>{character.name || "Unbenannt"}</b>
         </div>
         <div>
-          {character.species} {character.class}
+          {character.species} {character.characterClass}
         </div>
         <div>STR {character.attributes.strength.value}</div>
         <div>DEX {character.attributes.dexterity.value}</div>

@@ -9,7 +9,7 @@ import { CharacterClass } from "./character-class";
 export type CharacterSheet = {
   name: string;
   background: string;
-  class: CharacterClass;
+  characterClass: CharacterClass;
   species: Species;
   subclass: string | null;
 

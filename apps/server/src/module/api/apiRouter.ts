@@ -24,6 +24,16 @@ router.get("/classes", (req, res) => {
   res.json(data);
 });
 
+export const BACKGROUNDS_PATH = path.resolve(
+  process.cwd(),
+  "../../packages/data/backgrounds.json",
+);
+
+router.get("/backgrounds", (req, res) => {
+  const data = JSON.parse(fs.readFileSync(BACKGROUNDS_PATH, "utf-8"));
+  res.json(data);
+});
+
 export const CHARACTERS_PATH = path.resolve(
   process.cwd(),
   "../../packages/data/characters",

@@ -5,7 +5,6 @@ import {
   AllSkills,
   ATTRIBUTE_SKILLS,
   Attribute,
-  CharacterSkills,
   SkillOf,
 } from "../model/skill";
 import { Species } from "../model/species";
@@ -27,10 +26,10 @@ export class CharacterService {
     return {
       name: "",
       background: "",
-      class: CharacterClass.FIGHTER,
-      species: Species.Human,
+      characterClass: CharacterClass.FIGHTER,
+      species: Species.HUMAN,
       subclass: null,
-      level: 0,
+      level: 1,
       xp: 0,
       armorClass: 0,
       currentHitpoints: 0,
@@ -158,8 +157,8 @@ export class CharacterService {
     return {
       name: "Test Character",
       background: "A brave adventurer",
-      class: CharacterClass.FIGHTER,
-      species: Species.Human,
+      characterClass: CharacterClass.FIGHTER,
+      species: Species.HUMAN,
       subclass: "Champion",
       level: 5,
       xp: 6500,

@@ -92,10 +92,9 @@ export function AttributeCard<A extends Attribute>({
       {/* SKILLS */}
       {ATTRIBUTE_SKILLS[attributeName].length > 0 && (
         <div className="mt-4 border-t border-border pt-3 space-y-2">
-          <div className="text-xs uppercase text-text/60">Skills</div>
-
           {skillsForAttribute.map((skillName) => (
             <SkillRow
+              key={skillName}
               skill={AttributeService.getSkillViewModel(
                 character,
                 attributeName,

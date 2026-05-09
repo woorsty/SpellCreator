@@ -1,0 +1,130 @@
+[
+  {
+    "id": "noble",
+    "attributes": ["strength", "intelligence", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["history", "persuasion"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "akolyth",
+    "attributes": ["wisdom", "intelligence", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["insight", "relgion"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "farmer",
+    "attributes": ["strength", "constition", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["animal_handling", "nature"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "hermit",
+    "attributes": ["constition", "wisdom", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["medicine", "relgion"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "merchant",
+    "attributes": ["strength", "intelligence", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["animal_handling", "persuasion"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "artisan",
+    "attributes": ["strength", "dexternity", "intelligence"],
+    "talent": "",
+    "skillProficiencies": ["investigation", "persuasion"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "criminal",
+    "attributes": ["dexternity", "constition", "intelligence"],
+    "talent": "",
+    "skillProficiencies": ["sleight_of_hands", "stealth"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "guide",
+    "attributes": ["dexternity", "wisdom", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["insight", "stealth"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "charlatan",
+    "attributes": ["dexternity", "constition", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["sleight_of_hands", "deception"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "scribe",
+    "attributes": ["dexternity", "intelligence", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["investigation", "perception"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "sailor",
+    "attributes": ["strength", "dexternity", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["acrobatics", "perception"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "soldier",
+    "attributes": ["strength", "dexternity", "constition"],
+    "talent": "",
+    "skillProficiencies": ["athletics", "intimidation"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "entertainer",
+    "attributes": ["strength", "dexternity", "charisma"],
+    "talent": "",
+    "skillProficiencies": ["athletics", "performance"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "guard",
+    "attributes": ["strength", "intelligence", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["athletics", "perception"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "wayfarer",
+    "attributes": ["dexternity", "constition", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["stealth", "survival"],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  {
+    "id": "sage",
+    "attributes": ["constition", "intelligence", "wisdom"],
+    "talent": "",
+    "skillProficiencies": ["arcana", "history"],
+    "toolProficiencies": [],
+    "equipment": []
+  }
+]

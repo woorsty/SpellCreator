@@ -1,5 +1,7 @@
+import { CharacterClass } from "./character-class";
+
 export type Class = {
-  Name: string;
+  Name: CharacterClass;
   PrimaryAbility: string;
   HitDie: number;
   SavingThrows: string[];

@@ -1,6 +1,5 @@
 // stepRegistry.ts
 import { BasicInfoTab } from "./step/BasicInfoTab";
-import { CharacterClassTab } from "./step/CharacterClassTab";
 import { AttributesTab } from "./step/AttributesTab";
 import { BackgroundTab } from "./step/BackgroundTab";
 import { EquipmentTab } from "./step/EquipmentTab";
@@ -13,7 +12,6 @@ export const stepRegistry: Record<
   React.ComponentType<StepProps>
 > = {
   [CharacterCreationStep.BASIC_INFO]: BasicInfoTab,
-  [CharacterCreationStep.CHARACTER_CLASS]: CharacterClassTab,
   [CharacterCreationStep.ATTRIBUTES]: AttributesTab,
   [CharacterCreationStep.BACKGROUND]: BackgroundTab,
   [CharacterCreationStep.EQUIPMENT]: EquipmentTab,
