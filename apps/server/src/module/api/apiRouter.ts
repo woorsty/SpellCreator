@@ -1,6 +1,7 @@
 import { Router } from "express";
 import fs from "fs";
 import path from "path";
+import { mapGermanSpellJsonToSpell } from "./germanSpellsJsonToSpellsMapper";
 
 const router = Router();
 
@@ -10,8 +11,16 @@ export const SPELLS_PATH = path.resolve(
 );
 
 router.get("/spells", (req, res) => {
-  const data = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf-8"));
-  res.json(data);
+  const data = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf-8")) as any[];
+  const spells = data.map(mapGermanSpellJsonToSpell);
+  res.json(spells);
+});
+
+router.get("/spells/:name", (req, res) => {
+  const data = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf-8")) as any[];
+  const spells = data.map(mapGermanSpellJsonToSpell);
+  const spell = spells.find((spell) => spell.name === req.params.name);
+  res.json(spell);
 });
 
 export const CLASSES_PATH = path.resolve(

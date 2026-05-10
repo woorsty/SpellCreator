@@ -13,10 +13,10 @@ export type Spell = {
   components: {
     gestic: boolean;
     verbal: boolean;
-    material?: string | null;
+    material: string;
   };
   text: string;
   characterClasses: CharacterClass[];
-  higherLevel?: string | null;
-  notes?: string | null;
+  higherLevel: string;
+  notes: string;
 };

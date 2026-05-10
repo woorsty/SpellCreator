@@ -1,19 +1,20 @@
 import type { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
-import { Spell } from "@domain";
+import { CharacterClass } from "@domain";
 import { JsonService } from "@domain";
 import { MarkdownService } from "@domain";
 import { SPELLS_PATH } from "../api/apiRouter";
+import { RawSpell } from "../api/germanSpellsJsonToSpellsMapper";
 
 export class SpellController {
   static async getAll(req: Request, res: Response) {
     const filterStufeVon = req.query.stufeVon as string | undefined;
     const filterStufeBis = req.query.stufeBis as string | undefined;
-    const filterKlasse = req.query.klasse as string | undefined;
+    const filterKlasse = req.query.klasse as CharacterClass | undefined;
     const filterSchule = req.query.schule as string | undefined;
     const sortierung = req.query.sortierung as string | undefined;
 
-    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
+    const spellData = await JsonService.readJsonFile<RawSpell>(SPELLS_PATH);
     let gefilterteZauber = [...spellData]; // Erstelle eine Kopie zum Filtern
 
     // Filterlogik für Stufe (Von-Bis Bereich)
@@ -22,21 +23,21 @@ export class SpellController {
       if (filterStufeBis && filterStufeBis !== "") {
         const bis = parseInt(filterStufeBis, 10);
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.level >= von && spell.level <= bis,
+          (spell) => spell.Stufe >= von && spell.Stufe <= bis,
         );
       } else {
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.level === von,
+          (spell) => spell.Stufe === von,
         );
       }
     } else if (filterStufeBis && filterStufeBis !== "") {
       const bis = parseInt(filterStufeBis, 10);
-      gefilterteZauber = gefilterteZauber.filter((spell) => spell.level <= bis);
+      gefilterteZauber = gefilterteZauber.filter((spell) => spell.Stufe <= bis);
     }
 
     if (filterSchule) {
       gefilterteZauber = gefilterteZauber.filter(
-        (spell) => spell.school === filterSchule,
+        (spell) => spell.Schule === filterSchule,
       );
     }
     if (filterKlasse) {
@@ -49,22 +50,22 @@ export class SpellController {
     if (sortierung) {
       switch (sortierung) {
         case "name_asc":
-          gefilterteZauber.sort((a, b) => a.name.localeCompare(b.name));
+          gefilterteZauber.sort((a, b) => a.Name.localeCompare(b.Name));
           break;
         case "name_desc":
-          gefilterteZauber.sort((a, b) => b.name.localeCompare(a.name));
+          gefilterteZauber.sort((a, b) => b.Name.localeCompare(a.Name));
           break;
         case "stufe_asc":
-          gefilterteZauber.sort((a, b) => a.level - b.level);
+          gefilterteZauber.sort((a, b) => a.Stufe - b.Stufe);
           break;
         case "stufe_desc":
-          gefilterteZauber.sort((a, b) => b.level - a.level);
+          gefilterteZauber.sort((a, b) => b.Stufe - a.Stufe);
           break;
         case "schule_asc":
-          gefilterteZauber.sort((a, b) => a.school.localeCompare(b.school));
+          gefilterteZauber.sort((a, b) => a.Schule.localeCompare(b.Schule));
           break;
         case "schule_desc":
-          gefilterteZauber.sort((a, b) => b.school.localeCompare(a.school));
+          gefilterteZauber.sort((a, b) => b.Schule.localeCompare(a.Schule));
           break;
       }
     }
@@ -94,21 +95,13 @@ export class SpellController {
     }
   }
 
-  static async getSpellByName(name: string): Promise<Spell | undefined> {
-    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const spell = spellData.find((s) => s.name === name);
+  static async getSpellByName(name: string): Promise<RawSpell | undefined> {
+    const spellData = await JsonService.readJsonFile<RawSpell>(SPELLS_PATH);
+    const spell = spellData.find((s) => s.Name === name);
 
     if (!spell && name) {
-      return {
-        name: '"' + name + '" nicht gefunden',
-        level: 0,
-        school: "",
-        Zeitaufwand: "",
-        Reichweite: "",
-        Dauer: "",
-        Klasse: [],
-        Text: "",
-      };
+      console.error("Spell", name, "not found");
+      return undefined;
     }
 
     return spell;
@@ -118,7 +111,7 @@ export class SpellController {
     const { Klasse, Konzentration, Ritual, Verbal, Gestik, ...rest } =
       req.body as any;
 
-    const newSpell: Spell = {
+    const newSpell: RawSpell = {
       ...rest,
       Klasse: Klasse.split(",").map((k: string) => k.trim()),
       Konzentration: Konzentration === "on",
@@ -127,7 +120,7 @@ export class SpellController {
       Gestik: Gestik === "on",
     };
 
-    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
+    const spellData = await JsonService.readJsonFile<RawSpell>(SPELLS_PATH);
     spellData.push(newSpell);
     await JsonService.writeJsonFile(spellData, SPELLS_PATH);
     res.statusCode = 303;
@@ -139,7 +132,7 @@ export class SpellController {
     const spellName = req.params.name as string;
     const { Klasse, Konzentration, Ritual, Verbal, Gestik, ...rest } = req.body;
 
-    const updatedSpell: Spell = {
+    const updatedSpell: RawSpell = {
       ...rest,
       name: spellName, // Behalte den Namen bei (könnte aber auch geändert werden)
       Klasse: Klasse.split(",").map((k: string) => k.trim()),
@@ -149,8 +142,8 @@ export class SpellController {
       Gestik: req.body.Gestik === "on",
     };
 
-    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const index = spellData.findIndex((spell) => spell.name === spellName);
+    const spellData = await JsonService.readJsonFile<RawSpell>(SPELLS_PATH);
+    const index = spellData.findIndex((spell) => spell.Name === spellName);
 
     if (index !== -1) {
       spellData[index] = updatedSpell;
@@ -163,8 +156,8 @@ export class SpellController {
 
   static async getEditForm(req: Request, res: Response) {
     const spellName = req.params.name as string;
-    const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const spellToEdit = spellData.find((spell) => spell.name === spellName);
+    const spellData = await JsonService.readJsonFile<RawSpell>(SPELLS_PATH);
+    const spellToEdit = spellData.find((spell) => spell.Name === spellName);
 
     if (spellToEdit) {
       res.render("edit-spell", { spell: spellToEdit });
