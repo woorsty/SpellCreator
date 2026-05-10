@@ -17,7 +17,7 @@ const createSpellcard = (req: Request, res: Response) => {
   const bis = parseInt(stufeBis as string, 10);
 
   const filtered = spells.filter((spell) => {
-    const stufe = spell.Stufe;
+    const stufe = spell.level;
     const matchStufe =
       !isNaN(von) && !isNaN(bis) && stufe >= von && stufe <= bis;
     const matchKlasse = !klasse || spell.Klasse.includes(klasse as string);
@@ -26,10 +26,10 @@ const createSpellcard = (req: Request, res: Response) => {
 
   let sorted = filtered;
   if (sortiertNach === "name") {
-    sorted = filtered.sort((a, b) => a.Name.localeCompare(b.Name));
+    sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
   }
   if (sortiertNach === "stufe") {
-    sorted = filtered.sort((a, b) => a.Stufe - b.Stufe);
+    sorted = filtered.sort((a, b) => a.level - b.level);
   }
 
   let jsPdf;

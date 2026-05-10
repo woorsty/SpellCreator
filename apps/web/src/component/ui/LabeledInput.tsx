@@ -14,11 +14,7 @@ export function LabeledInput({ label, value, ...props }: LabeledInputProps) {
         <Label>{label}</Label>
       </div>
 
-      <Input
-        {...props}
-        value={value}
-        className="w-20 text-center font-semibold"
-      />
+      <Input {...props} value={value} className="text-center font-semibold" />
     </div>
   );
 }

@@ -3,9 +3,11 @@ import { BasicInfoTab } from "./step/BasicInfoTab";
 import { AttributesTab } from "./step/AttributesTab";
 import { BackgroundTab } from "./step/BackgroundTab";
 import { EquipmentTab } from "./step/EquipmentTab";
+import { AttacksTab } from "./step/AttacksTab";
 import { CharacterCreationStep } from "./character-creator-stpes";
 import React from "react";
 import { StepProps } from "./characterCreator.types";
+import { SpellsTab } from "./step/SpellsTab";
 
 export const stepRegistry: Record<
   CharacterCreationStep,
@@ -13,6 +15,8 @@ export const stepRegistry: Record<
 > = {
   [CharacterCreationStep.BASIC_INFO]: BasicInfoTab,
   [CharacterCreationStep.ATTRIBUTES]: AttributesTab,
-  [CharacterCreationStep.BACKGROUND]: BackgroundTab,
   [CharacterCreationStep.EQUIPMENT]: EquipmentTab,
+  [CharacterCreationStep.ATTACKS]: AttacksTab,
+  [CharacterCreationStep.SPELLS]: SpellsTab,
+  [CharacterCreationStep.BACKGROUND]: BackgroundTab,
 } as const;

@@ -9,8 +9,8 @@ import {
 } from "../model/skill";
 import { Species } from "../model/species";
 import { Spell } from "../model/spell";
-import { Weapon } from "../model/weapon";
 import { AttributeService } from "./attribute-service";
+import { SpellService } from "./spell-service";
 
 export class CharacterService {
   public static findAttributeBySkill(skill: AllSkills): Attribute {
@@ -101,19 +101,24 @@ export class CharacterService {
         },
       },
       heroicInspiration: false,
-      lightArmorTraining: false,
-      mediumArmorTraining: false,
-      heavyArmorTraining: false,
-      shieldTraining: false,
-      weaponTrainingSimple: false,
-      weaponTrainingMartial: false,
+      armorTraining: {
+        light: false,
+        heavy: false,
+        medium: false,
+        shield: false,
+      },
+      weaponTraining: {
+        finesse: false,
+        light: false,
+        martial: false,
+        simple: false,
+      },
       toolProficiencies: [],
       initiative: 0,
       speed: 9,
       size: "Medium",
       passivePerception: 0,
-      weapons: [],
-      damageCantrips: [],
+      attacks: [],
       classFeatures: [],
       speciesTraits: [],
       feats: [],
@@ -138,18 +143,20 @@ export class CharacterService {
       usedSpellSlots7: 0,
       usedSpellSlots8: 0,
       usedSpellSlots9: 0,
-      cantripsAndPreparedSpells: [],
+      preparedSpells: [],
       appearance: "",
       backstory: "",
       alignment: Alignment.TRUE_NEUTRAL,
       languages: ["Common"],
       equipment: [],
       attunedMagicItems: [],
-      copper: 0,
-      silver: 0,
-      electrum: 0,
-      gold: 0,
-      platinum: 0,
+      coins: {
+        copper: 0,
+        silver: 0,
+        electrum: 0,
+        gold: 0,
+        platinum: 0,
+      },
     };
   }
 
@@ -232,36 +239,26 @@ export class CharacterService {
         },
       },
       heroicInspiration: false,
-      lightArmorTraining: true,
-      mediumArmorTraining: true,
-      heavyArmorTraining: false,
-      shieldTraining: true,
-      weaponTrainingSimple: true,
-      weaponTrainingMartial: true,
-      toolProficiencies: ["Smith's Tools"],
+      armorTraining: {
+        heavy: false,
+        light: true,
+        medium: true,
+        shield: true,
+      },
+      weaponTraining: {
+        finesse: false,
+        light: false,
+        martial: true,
+        simple: true,
+      },
+      toolProficiencies: [
+        { name: "Smith's Tools", notes: "Zum Schmieden halt duh" },
+      ],
       initiative: 1,
       speed: 30,
       size: "Medium",
       passivePerception: 9,
-      weapons: [
-        new Weapon({
-          name: "Longsword",
-          attackBonus: 5,
-          difficultyBonus: 3,
-          damage: "1d8+3",
-          damageType: "Slashing",
-          notes: "Versatile (1d10)",
-        }),
-        new Weapon({
-          name: "Shortbow",
-          attackBonus: 5,
-          difficultyBonus: 3,
-          damage: "1d6+3",
-          damageType: "Piercing",
-          notes: "Range 80/320",
-        }),
-      ],
-      damageCantrips: [],
+      attacks: [],
       classFeatures: ["Second Wind", "Action Surge"],
       speciesTraits: ["Human Resilience"],
       feats: ["Great Weapon Fighting"],
@@ -286,7 +283,7 @@ export class CharacterService {
       usedSpellSlots7: 0,
       usedSpellSlots8: 0,
       usedSpellSlots9: 0,
-      cantripsAndPreparedSpells: [Spell.getTestSpell()],
+      preparedSpells: [SpellService.getTestSpell()],
       appearance:
         "A tall, muscular human with short brown hair and green eyes.",
       backstory:
@@ -294,21 +291,23 @@ export class CharacterService {
       alignment: Alignment.LAWFUL_GOOD,
       languages: ["Common", "Dwarvish"],
       equipment: [
-        "Explorer's Pack",
-        "Tinderbox",
-        "Rations (1 day)",
-        "Waterskin",
+        { name: "Explorer's Pack", notes: "" },
+        { name: "Tinderbox", notes: "" },
+        { name: "Rations", notes: "1 day" },
+        { name: "Waterskin", notes: "" },
       ],
       attunedMagicItems: [
         "Amulet of Health",
         "Cloak of Protection",
         "Ring of Protection",
       ],
-      copper: 10,
-      silver: 5,
-      electrum: 0,
-      gold: 20,
-      platinum: 0,
+      coins: {
+        copper: 10,
+        silver: 5,
+        electrum: 0,
+        gold: 20,
+        platinum: 0,
+      },
     };
   }
 

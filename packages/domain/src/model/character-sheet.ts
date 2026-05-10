@@ -1,11 +1,11 @@
 import { Spell } from "./spell";
-import { DamageCantrip } from "./damage-cantrip";
 import { AttributeValues, CharacterAttributes, CharacterSkills } from "./skill";
-import { Weapon } from "./weapon";
 import { Alignment } from "./alignment";
 import { Species } from "./species";
 import { CharacterClass } from "./character-class";
 import { EquipmentItem } from "./equipment";
+import { ToolItem } from "./tool";
+import { Attack } from "./attack";
 
 export type CharacterSheet = {
   name: string;
@@ -39,21 +39,27 @@ export type CharacterSheet = {
 
   heroicInspiration: boolean;
 
-  lightArmorTraining: boolean;
-  mediumArmorTraining: boolean;
-  heavyArmorTraining: boolean;
-  shieldTraining: boolean;
-  weaponTrainingSimple: boolean;
-  weaponTrainingMartial: boolean;
-  toolProficiencies: string[];
+  armorTraining: {
+    light: boolean;
+    medium: boolean;
+    heavy: boolean;
+    shield: boolean;
+  };
+  weaponTraining: {
+    simple: boolean;
+    martial: boolean;
+    light: boolean;
+    finesse: boolean;
+  };
+  toolProficiencies: ToolItem[];
 
   initiative: number;
   speed: number;
   size: string;
   passivePerception: number;
 
-  weapons: Weapon[];
-  damageCantrips: DamageCantrip[];
+  attacks: Attack[];
+  // damageCantrips: DamageCantrip[];
 
   classFeatures: string[];
   speciesTraits: string[];
@@ -83,7 +89,7 @@ export type CharacterSheet = {
   usedSpellSlots8: number;
   usedSpellSlots9: number;
 
-  cantripsAndPreparedSpells: Spell[];
+  preparedSpells: Spell[];
 
   appearance: string;
   backstory: string;
@@ -92,9 +98,11 @@ export type CharacterSheet = {
   equipment: EquipmentItem[];
   attunedMagicItems: string[];
 
-  copper: number;
-  silver: number;
-  electrum: number;
-  gold: number;
-  platinum: number;
+  coins: {
+    copper: number;
+    silver: number;
+    electrum: number;
+    gold: number;
+    platinum: number;
+  };
 };

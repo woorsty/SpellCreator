@@ -38,11 +38,14 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           value={character.name}
           onChange={(e) => updateField("name", e.target.value)}
           placeholder="Name"
+          className="w-40"
           label={translator.translate(".name")}
         />
         <LabeledNumberInput
           label={translator.translate(".level")}
           value={character.level}
+          min={1}
+          max={20}
           onChange={(value) => {
             updateField("level", value);
             if ((value as number) < 3) updateField("subclass", undefined);

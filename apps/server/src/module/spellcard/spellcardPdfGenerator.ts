@@ -61,10 +61,10 @@ function addCardLines(
       currentBody.trim()
     ) {
       cards.push({
-        title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
+        title: cards.length === 0 ? spell.name : `${spell.name} Teil ${part}`,
         index: part,
         body: currentBody.trim(),
-        stufe: spell.Stufe,
+        stufe: spell.level,
         komponenten: {
           verbal: spell.Verbal,
           gestik: spell.Gestik,
@@ -73,7 +73,7 @@ function addCardLines(
         klasse: spell.Klasse,
         konzentration: spell.Konzentration,
         ritual: spell.Ritual,
-        schule: spell.Schule,
+        schule: spell.school,
         zeitaufwand: spell.Zeitaufwand,
         reichweite: spell.Reichweite,
         dauer: spell.Dauer,
@@ -87,10 +87,10 @@ function addCardLines(
 
   if (currentBody.trim()) {
     cards.push({
-      title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
+      title: cards.length === 0 ? spell.name : `${spell.name} Teil ${part}`,
       index: part,
       body: currentBody.trim(),
-      stufe: spell.Stufe,
+      stufe: spell.level,
       komponenten: {
         verbal: spell.Verbal,
         gestik: spell.Gestik,
@@ -99,7 +99,7 @@ function addCardLines(
       klasse: spell.Klasse,
       konzentration: spell.Konzentration,
       ritual: spell.Ritual,
-      schule: spell.Schule,
+      schule: spell.school,
       zeitaufwand: spell.Zeitaufwand,
       reichweite: spell.Reichweite,
       dauer: spell.Dauer,

@@ -22,21 +22,21 @@ export class SpellController {
       if (filterStufeBis && filterStufeBis !== "") {
         const bis = parseInt(filterStufeBis, 10);
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.Stufe >= von && spell.Stufe <= bis,
+          (spell) => spell.level >= von && spell.level <= bis,
         );
       } else {
         gefilterteZauber = gefilterteZauber.filter(
-          (spell) => spell.Stufe === von,
+          (spell) => spell.level === von,
         );
       }
     } else if (filterStufeBis && filterStufeBis !== "") {
       const bis = parseInt(filterStufeBis, 10);
-      gefilterteZauber = gefilterteZauber.filter((spell) => spell.Stufe <= bis);
+      gefilterteZauber = gefilterteZauber.filter((spell) => spell.level <= bis);
     }
 
     if (filterSchule) {
       gefilterteZauber = gefilterteZauber.filter(
-        (spell) => spell.Schule === filterSchule,
+        (spell) => spell.school === filterSchule,
       );
     }
     if (filterKlasse) {
@@ -49,22 +49,22 @@ export class SpellController {
     if (sortierung) {
       switch (sortierung) {
         case "name_asc":
-          gefilterteZauber.sort((a, b) => a.Name.localeCompare(b.Name));
+          gefilterteZauber.sort((a, b) => a.name.localeCompare(b.name));
           break;
         case "name_desc":
-          gefilterteZauber.sort((a, b) => b.Name.localeCompare(a.Name));
+          gefilterteZauber.sort((a, b) => b.name.localeCompare(a.name));
           break;
         case "stufe_asc":
-          gefilterteZauber.sort((a, b) => a.Stufe - b.Stufe);
+          gefilterteZauber.sort((a, b) => a.level - b.level);
           break;
         case "stufe_desc":
-          gefilterteZauber.sort((a, b) => b.Stufe - a.Stufe);
+          gefilterteZauber.sort((a, b) => b.level - a.level);
           break;
         case "schule_asc":
-          gefilterteZauber.sort((a, b) => a.Schule.localeCompare(b.Schule));
+          gefilterteZauber.sort((a, b) => a.school.localeCompare(b.school));
           break;
         case "schule_desc":
-          gefilterteZauber.sort((a, b) => b.Schule.localeCompare(a.Schule));
+          gefilterteZauber.sort((a, b) => b.school.localeCompare(a.school));
           break;
       }
     }
@@ -96,13 +96,13 @@ export class SpellController {
 
   static async getSpellByName(name: string): Promise<Spell | undefined> {
     const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const spell = spellData.find((s) => s.Name === name);
+    const spell = spellData.find((s) => s.name === name);
 
     if (!spell && name) {
       return {
-        Name: '"' + name + '" nicht gefunden',
-        Stufe: 0,
-        Schule: "",
+        name: '"' + name + '" nicht gefunden',
+        level: 0,
+        school: "",
         Zeitaufwand: "",
         Reichweite: "",
         Dauer: "",
@@ -141,7 +141,7 @@ export class SpellController {
 
     const updatedSpell: Spell = {
       ...rest,
-      Name: spellName, // Behalte den Namen bei (könnte aber auch geändert werden)
+      name: spellName, // Behalte den Namen bei (könnte aber auch geändert werden)
       Klasse: Klasse.split(",").map((k: string) => k.trim()),
       Konzentration: req.body.Konzentration === "on",
       Ritual: req.body.Ritual === "on",
@@ -150,7 +150,7 @@ export class SpellController {
     };
 
     const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const index = spellData.findIndex((spell) => spell.Name === spellName);
+    const index = spellData.findIndex((spell) => spell.name === spellName);
 
     if (index !== -1) {
       spellData[index] = updatedSpell;
@@ -164,7 +164,7 @@ export class SpellController {
   static async getEditForm(req: Request, res: Response) {
     const spellName = req.params.name as string;
     const spellData = await JsonService.readJsonFile<Spell>(SPELLS_PATH);
-    const spellToEdit = spellData.find((spell) => spell.Name === spellName);
+    const spellToEdit = spellData.find((spell) => spell.name === spellName);
 
     if (spellToEdit) {
       res.render("edit-spell", { spell: spellToEdit });

@@ -5,6 +5,8 @@ import { NumberInput } from "./NumberInput";
 type LabeledNumberInputProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
   value: number;
+  min?: number;
+  max?: number;
   onChange: (value: number) => void;
 };
 
