@@ -6,6 +6,7 @@ import { StepProps } from "../characterCreator.types";
 import { Select } from "../../../component/ui/Select";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Input } from "../../../component/ui/Input";
+import { SearchableSelect } from "../../../component/ui/SearchableSelect";
 
 export function SpellsTab({ character, updateField }: StepProps) {
   const [spellsData, setSpellsData] = useState<Spell[]>([]);
@@ -21,8 +22,7 @@ export function SpellsTab({ character, updateField }: StepProps) {
       .finally(() => setLoading(false));
   }, []);
 
-  const addSpell = (spellName: string) => {
-    const spell = spellsData.find((spell) => spell.name === spellName);
+  const addSpell = (spell: Spell) => {
     const updated = [...character.preparedSpells, spell];
     updateField("preparedSpells", updated);
   };
@@ -113,14 +113,22 @@ export function SpellsTab({ character, updateField }: StepProps) {
         </tbody>
       </table>
 
-      <Select value="" onChange={(value) => addSpell(value.target.value)}>
+      <SearchableSelect<Spell>
+        onSelect={(value) => addSpell(value)}
+        options={spellsData.map((spell) => ({
+          label: spell.name,
+          value: spell,
+        }))}
+        placeholder={translator.translate(".spell_search")}
+      />
+      {/* <Select value="" onChange={(value) => addSpell(value.target.value)}>
         <option></option>
         {spellsData.map((spell) => (
           <option key={spell.name} value={spell.name}>
             {spell.name}
           </option>
         ))}
-      </Select>
+      </Select> */}
     </div>
   );
 }

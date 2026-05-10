@@ -9,11 +9,13 @@ export class SpellService {
   public static getNewSpell(): Spell {
     return {
       castingTime: "",
+      higherLevel: "",
+      notes: "",
       characterClasses: [],
       components: {
         gestic: false,
         verbal: false,
-        material: null,
+        material: "",
       },
       concentration: false,
       duration: "",
@@ -43,6 +45,8 @@ export class SpellService {
       ritual: true,
       school: SpellSchool.ABJURATION,
       text: "Geiler super Zauber macht zeugs",
+      higherLevel: "",
+      notes: "",
     };
   }
 }

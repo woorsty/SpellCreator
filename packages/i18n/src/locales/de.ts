@@ -252,6 +252,7 @@ export const de = {
       spells: {
         title: "Vorbereitete Zauber",
         add: "Zauber hinzufügen",
+        spell_search: "Zauber...",
         table: {
           name: "Name",
           level: "Grad",
