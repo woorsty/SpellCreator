@@ -3,14 +3,12 @@ import { Translator } from "@i18n";
 import { Spell, SpellService } from "@domain";
 import { Button } from "../../../component/ui/Button";
 import { StepProps } from "../characterCreator.types";
-import { Select } from "../../../component/ui/Select";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Input } from "../../../component/ui/Input";
 import { SearchableSelect } from "../../../component/ui/SearchableSelect";
 
 export function SpellsTab({ character, updateField }: StepProps) {
   const [spellsData, setSpellsData] = useState<Spell[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const translator = new Translator("characterCreator.steps.spells");
 
   useEffect(() => {
@@ -18,8 +16,7 @@ export function SpellsTab({ character, updateField }: StepProps) {
       .then((res) => res.json())
       .then((spellsData) => {
         setSpellsData(spellsData);
-      })
-      .finally(() => setLoading(false));
+      });
   }, []);
 
   const addSpell = (spell: Spell) => {
