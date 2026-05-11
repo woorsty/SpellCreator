@@ -1,4 +1,4 @@
-import { CharacterClass } from "./character-class";
+import { CharacterClassId } from "./character-class";
 import { SpellSchool } from "./spell-school";
 
 export type Spell = {
@@ -16,7 +16,7 @@ export type Spell = {
     material: string;
   };
   text: string;
-  characterClasses: CharacterClass[];
+  characterClasses: CharacterClassId[];
   higherLevel: string;
   notes: string;
 };

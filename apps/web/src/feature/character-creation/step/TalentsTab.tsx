@@ -2,44 +2,29 @@ import { Translator } from "@i18n";
 import { StepProps } from "../characterCreator.types";
 import React from "react";
 import { Card } from "../../../component/ui/Card";
-import { ItemList } from "apps/web/src/component/ui/ItemList";
-import { Talent } from "packages/domain/src/model/talent";
+import { ItemList } from "../../../component/ui/ItemList";
+import { Talent } from "@domain";
 
 export function TalentsTab({ character, updateField }: StepProps) {
-  const translator = new Translator("characterCreator.steps.equipment");
+  const translator = new Translator("characterCreator.steps.talents");
+
   return (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold">{translator.translate(".title")}</h3>
 
       <Card>
-        {/* EQUIPMENT */}
+        {/* Talents */}
         <div>
           <h4 className="mb-2 font-semibold">
-            {translator.translate(".equipment")}
+            {translator.translate(".talents")}
           </h4>
 
           <ItemList<Talent>
-            items={character.talents}
-            addItem={(newItem) => {
-              if (!newItem) return;
-
-              updateField("talents", [
-                ...character.talents,
-                { name: newItem, text: "" },
-              ]);
-            }}
-            removeItem={(index) => {
-              updateField(
-                "talents",
-                character.talents.filter((_, i) => i !== index),
-              );
-            }}
-            updateItem={(index, data) => {
-              const updated = character.talents.map((item, i) =>
-                i === index ? { ...item, ...data } : item,
-              );
-              updateField("talents", updated);
-            }}
+            data={character.talents}
+            labelProperty="name"
+            textProperty="text"
+            field="talents"
+            updateField={updateField}
           />
         </div>
       </Card>

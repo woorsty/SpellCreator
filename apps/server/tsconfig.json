@@ -5,5 +5,5 @@
     "outDir": "dist",
     "composite": true
   },
-  "include": ["src/**/*", "../../packages/domain/src/model/class.ts"]
+  "include": ["src/**/*"]
 }

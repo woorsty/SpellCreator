@@ -61,9 +61,7 @@ export type CharacterSheet = {
   passivePerception: number;
 
   attacks: Attack[];
-  // damageCantrips: DamageCantrip[];
 
-  classFeatures: string[];
   speciesTraits: string[];
   feats: string[];
 
@@ -71,25 +69,10 @@ export type CharacterSheet = {
   spellSaveDC: number;
   spellAttackBonus: number;
 
-  totalSpellSlots1: number;
-  totalSpellSlots2: number;
-  totalSpellSlots3: number;
-  totalSpellSlots4: number;
-  totalSpellSlots5: number;
-  totalSpellSlots6: number;
-  totalSpellSlots7: number;
-  totalSpellSlots8: number;
-  totalSpellSlots9: number;
-
-  usedSpellSlots1: number;
-  usedSpellSlots2: number;
-  usedSpellSlots3: number;
-  usedSpellSlots4: number;
-  usedSpellSlots5: number;
-  usedSpellSlots6: number;
-  usedSpellSlots7: number;
-  usedSpellSlots8: number;
-  usedSpellSlots9: number;
+  spellSlots: {
+    total: number[];
+    used: number[];
+  };
 
   preparedSpells: Spell[];
 

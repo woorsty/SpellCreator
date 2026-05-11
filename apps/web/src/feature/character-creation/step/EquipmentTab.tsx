@@ -7,6 +7,7 @@ import { ItemList } from "../../../component/ui/ItemList";
 import { ArmorTrainingSection } from "../../../component/character/ArmorTrainingSection";
 import { WeaponTrainingSection } from "../../../component/character/WeaponTrainingSection";
 import { Input } from "../../../component/ui/Input";
+import { EquipmentItem, ToolItem } from "@domain";
 
 export function EquipmentTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.equipment");
@@ -39,8 +40,10 @@ export function EquipmentTab({ character, updateField }: StepProps) {
           <br />
           <div>
             <h4 className="font-semibold mb-2">Tools</h4>
-            <ItemList
-              items={character.toolProficiencies}
+            <ItemList<ToolItem>
+              data={character.toolProficiencies}
+              labelProperty="name"
+              textProperty="notes"
               field="toolProficiencies"
               updateField={updateField}
             />
@@ -88,8 +91,10 @@ export function EquipmentTab({ character, updateField }: StepProps) {
             {translator.translate(".equipment")}
           </h4>
 
-          <ItemList
-            items={character.equipment}
+          <ItemList<EquipmentItem>
+            data={character.equipment}
+            labelProperty="name"
+            textProperty="notes"
             updateField={updateField}
             field={"equipment"}
           />

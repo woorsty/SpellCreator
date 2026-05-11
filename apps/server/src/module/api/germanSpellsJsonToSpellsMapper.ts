@@ -1,4 +1,4 @@
-import { SpellSchool, CharacterClass } from "@domain";
+import { SpellSchool, CharacterClassId } from "@domain";
 import { Spell } from "@domain";
 
 export type RawSpell = {
@@ -29,15 +29,15 @@ const schoolMap: Record<string, SpellSchool> = {
   Weissagung: SpellSchool.DIVINATION,
 };
 
-const classMap: Record<string, CharacterClass> = {
-  Magier: CharacterClass.WIZARD,
-  Hexenmeister: CharacterClass.WARLOCK,
-  Kleriker: CharacterClass.CLERIC,
-  Druide: CharacterClass.DRUID,
-  Barde: CharacterClass.BARD,
-  Paladin: CharacterClass.PALADIN,
-  Waldläufer: CharacterClass.RANGER,
-  Zauberer: CharacterClass.SORCERER,
+const classMap: Record<string, CharacterClassId> = {
+  Magier: CharacterClassId.WIZARD,
+  Hexenmeister: CharacterClassId.WARLOCK,
+  Kleriker: CharacterClassId.CLERIC,
+  Druide: CharacterClassId.DRUID,
+  Barde: CharacterClassId.BARD,
+  Paladin: CharacterClassId.PALADIN,
+  Waldläufer: CharacterClassId.RANGER,
+  Zauberer: CharacterClassId.SORCERER,
 };
 
 export function mapGermanSpellJsonToSpell(raw: RawSpell): Spell {

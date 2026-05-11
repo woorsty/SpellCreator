@@ -4,12 +4,12 @@ import { Translator } from "@i18n";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
 import { Button } from "../../../component/ui/Button";
-import { CharacterClass, Species } from "@domain";
+import { CharacterClass, CharacterClassId, Species } from "@domain";
 import { LabeledNumberInput } from "../../../component/ui/LabeledNumberInput";
 import { LabeledInput } from "../../../component/ui/LabeledInput";
 
 export function BasicInfoTab({ character, updateField }: StepProps) {
-  const [classes, setClasses] = useState<any[]>([]);
+  const [classes, setClasses] = useState<CharacterClass[]>([]);
   const [loading, setLoading] = useState(true);
   const [backgrounds, setBackgrounds] = useState<any[]>([]);
 
@@ -27,7 +27,7 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
 
   const translator = new Translator("characterCreator.steps.basic_info");
   const selectedClass = classes.find(
-    (cls) => cls.id == character.characterClass,
+    (cls) => cls.id == character.characterClass.id,
   );
 
   return (
@@ -88,7 +88,7 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
         ))}
       </Card>
       <Card>
-        <Label>{translator.translate(".species")}</Label>{" "}
+        <Label>{translator.translate(".background")}</Label>{" "}
         {backgrounds.map((background) => (
           <Button
             key={background.id}
@@ -103,20 +103,28 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
       </Card>
       <Card>
         <Label>{translator.translate(".character_class")}</Label>{" "}
-        {Object.values(CharacterClass).map((characterClass) => (
+        {Object.values(CharacterClassId).map((characterClassId) => (
           <Button
-            key={characterClass}
+            key={characterClassId}
             variant={
-              character.characterClass == characterClass
+              character.characterClass.id == characterClassId
                 ? "primary"
                 : "secondary"
             }
             onClick={() => {
-              updateField("characterClass", characterClass);
+              const newClass = classes.find(
+                (cls) => characterClassId === cls.id,
+              );
+              updateField("characterClass", newClass);
               updateField("subclass", undefined);
+              updateField(
+                "classFeatures",
+                classes.find((cls) => cls.id === characterClassId),
+              );
+              console.log(newClass);
             }}
           >
-            {translator.translate(`characterClass.${characterClass}`)}
+            {translator.translate(`characterClass.${characterClassId}.title`)}
           </Button>
         ))}
       </Card>
@@ -137,7 +145,9 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
                 variant={character.subclass == sub.id ? "primary" : "secondary"}
                 onClick={() => updateField("subclass", sub.id)}
               >
-                {translator.translate(`subclass.${sub.id}`)}
+                {translator.translate(
+                  `characterClass.${selectedClass.id}.subclasses.${sub.id}.title`,
+                )}
               </Button>
             ))}
         </Card>

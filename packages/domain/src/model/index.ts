@@ -1,7 +1,6 @@
 export * from "./alignment";
 export * from "./character-class";
 export * from "./character-sheet";
-export * from "./class";
 export * from "./attack";
 export * from "./damage-type";
 export * from "./tool";
@@ -13,3 +12,4 @@ export * from "./attack";
 export * from "./equipment";
 export * from "./language";
 export * from "./spell-school";
+export * from "./talent";

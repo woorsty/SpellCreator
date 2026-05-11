@@ -8,6 +8,7 @@ import { CharacterCreationStep } from "./character-creator-stpes";
 import React from "react";
 import { StepProps } from "./characterCreator.types";
 import { SpellsTab } from "./step/SpellsTab";
+import { TalentsTab } from "./step/TalentsTab";
 
 export const stepRegistry: Record<
   CharacterCreationStep,
@@ -19,4 +20,5 @@ export const stepRegistry: Record<
   [CharacterCreationStep.ATTACKS]: AttacksTab,
   [CharacterCreationStep.SPELLS]: SpellsTab,
   [CharacterCreationStep.BACKGROUND]: BackgroundTab,
+  [CharacterCreationStep.TALENTS]: TalentsTab,
 } as const;

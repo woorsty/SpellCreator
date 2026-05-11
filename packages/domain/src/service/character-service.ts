@@ -1,5 +1,5 @@
 import { Alignment } from "../model/alignment";
-import { CharacterClass } from "../model/character-class";
+import { CharacterClassId } from "../model/character-class";
 import type { CharacterSheet } from "../model/character-sheet";
 import {
   AllSkills,
@@ -8,7 +8,6 @@ import {
   SkillOf,
 } from "../model/skill";
 import { Species } from "../model/species";
-import { Spell } from "../model/spell";
 import { AttributeService } from "./attribute-service";
 import { SpellService } from "./spell-service";
 
@@ -24,9 +23,24 @@ export class CharacterService {
 
   public static getEmptyCharacter(): CharacterSheet {
     return {
+      talents: [],
       name: "",
       background: "",
-      characterClass: CharacterClass.FIGHTER,
+      characterClass: {
+        id: CharacterClassId.FIGHTER,
+        equipment: [],
+        features: [],
+        hitDie: 1,
+        primaryAbility: [],
+        proficiencies: {
+          Armor: [],
+          SkillNumber: 0,
+          Skills: [],
+          Weapons: [],
+        },
+        savingThrows: [],
+        subclasses: [],
+      },
       species: Species.HUMAN,
       subclass: null,
       level: 1,
@@ -119,30 +133,15 @@ export class CharacterService {
       size: "Medium",
       passivePerception: 0,
       attacks: [],
-      classFeatures: [],
       speciesTraits: [],
       feats: [],
       spellcastingAbility: null,
       spellSaveDC: 0,
       spellAttackBonus: 0,
-      totalSpellSlots1: 0,
-      totalSpellSlots2: 0,
-      totalSpellSlots3: 0,
-      totalSpellSlots4: 0,
-      totalSpellSlots5: 0,
-      totalSpellSlots6: 0,
-      totalSpellSlots7: 0,
-      totalSpellSlots8: 0,
-      totalSpellSlots9: 0,
-      usedSpellSlots1: 0,
-      usedSpellSlots2: 0,
-      usedSpellSlots3: 0,
-      usedSpellSlots4: 0,
-      usedSpellSlots5: 0,
-      usedSpellSlots6: 0,
-      usedSpellSlots7: 0,
-      usedSpellSlots8: 0,
-      usedSpellSlots9: 0,
+      spellSlots: {
+        total: [],
+        used: [],
+      },
       preparedSpells: [],
       appearance: "",
       story: "",
@@ -162,9 +161,24 @@ export class CharacterService {
 
   public static getTestCharacter(): CharacterSheet {
     return {
+      talents: [],
       name: "Test Character",
       background: "A brave adventurer",
-      characterClass: CharacterClass.FIGHTER,
+      characterClass: {
+        id: CharacterClassId.FIGHTER,
+        equipment: [],
+        features: [],
+        hitDie: 1,
+        primaryAbility: [],
+        proficiencies: {
+          Armor: [],
+          SkillNumber: 0,
+          Skills: [],
+          Weapons: [],
+        },
+        savingThrows: [],
+        subclasses: [],
+      },
       species: Species.HUMAN,
       subclass: "Champion",
       level: 5,
@@ -259,30 +273,15 @@ export class CharacterService {
       size: "Medium",
       passivePerception: 9,
       attacks: [],
-      classFeatures: ["Second Wind", "Action Surge"],
       speciesTraits: ["Human Resilience"],
       feats: ["Great Weapon Fighting"],
       spellcastingAbility: null,
       spellSaveDC: 1,
       spellAttackBonus: 3,
-      totalSpellSlots1: 4,
-      totalSpellSlots2: 3,
-      totalSpellSlots3: 3,
-      totalSpellSlots4: 3,
-      totalSpellSlots5: 3,
-      totalSpellSlots6: 2,
-      totalSpellSlots7: 1,
-      totalSpellSlots8: 0,
-      totalSpellSlots9: 0,
-      usedSpellSlots1: 1,
-      usedSpellSlots2: 0,
-      usedSpellSlots3: 2,
-      usedSpellSlots4: 0,
-      usedSpellSlots5: 0,
-      usedSpellSlots6: 0,
-      usedSpellSlots7: 0,
-      usedSpellSlots8: 0,
-      usedSpellSlots9: 0,
+      spellSlots: {
+        total: [],
+        used: [],
+      },
       preparedSpells: [SpellService.getTestSpell()],
       appearance:
         "A tall, muscular human with short brown hair and green eyes.",

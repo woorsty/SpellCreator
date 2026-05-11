@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
-import { CharacterClass } from "@domain";
+import { CharacterClassId } from "@domain";
 import { JsonService } from "@domain";
 import { MarkdownService } from "@domain";
 import { SPELLS_PATH } from "../api/apiRouter";
@@ -10,7 +10,7 @@ export class SpellController {
   static async getAll(req: Request, res: Response) {
     const filterStufeVon = req.query.stufeVon as string | undefined;
     const filterStufeBis = req.query.stufeBis as string | undefined;
-    const filterKlasse = req.query.klasse as CharacterClass | undefined;
+    const filterKlasse = req.query.klasse as CharacterClassId | undefined;
     const filterSchule = req.query.schule as string | undefined;
     const sortierung = req.query.sortierung as string | undefined;
 

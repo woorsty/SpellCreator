@@ -70,87 +70,124 @@ export const de = {
     fairy: "Fee",
   },
   characterClass: {
-    arteficer: "Magieschmied",
-    barbarian: "Barbar",
-    bard: "Barde",
-    cleric: "Kleriker",
-    druid: "Druide",
-    fighter: "Kämpfer",
-    monk: "Mönch",
-    paladin: "Paladin",
-    ranger: "Waldläufer",
-    rouge: "Schurke",
-    sorcerer: "Zauberer",
-    warlock: "Hexenmeister",
-    wizard: "Magier",
-  },
-  subclass: {
-    //arteficer
-    alchemist: "Alchemist",
-    armorer: "Rüstungsschmied",
-    atillerist: "Attilierist",
-    battle_smith: "Kampfschmied",
-    cartographer: "Kartograph",
-    //Barbar
-    berserker: "Pfad des Berserker",
-    zealot: "Pfad des Eiferers",
-    world_tree: "Pfad des Weltenbaums",
-    wild_heart: "Pfad des Wilden Herzens",
-    //Bard
-    dance: "Schule des Tanzes",
-    valor: "Schule des Wagemuts",
-    lore: "Schule des Wissens",
-    counterspell: "Schule des Zauberbanns",
-    //Cleric
-    war: "Domäne des Krieges",
-    life: "Domäne des Lebens",
-    light: "Domäne des Lichts",
-    trickery: "Domäne der List",
-    //Druid
-    land: "Zirkel des Landes",
-    sea: "Zirkel des Meeres",
-    moon: "Zirkel des Mondes",
-    stars: "Zirkel der Sterne",
-    //Fighter
-    champion: "Champion",
-    battle_master: "Kampfmeister",
-    eldrich_knight: "Mystischer Ritter",
-    psi_warrior: "Psi-Krieger",
-    //Monk
-    warrior_of_the_elements: "Krieger der Elemente",
-    warrior_of_mercy: "Krieger der Gnade",
-    warrior_of_the_open_hand: "Krieger der offenen Hand",
-    warrior_of_shadow: "Krieger der Schatten",
-    //Paladin
-    oath_of_the_ancients: "Schwur der Alten",
-    oath_of_vengeance: "Schwur der Rache",
-    oath_of_devotion: "Schwur der Hingabe",
-    oath_of_glory: "Schwur des Ruhms",
-    //Ranger
-    gloom_stalker: "Düsterpirscher",
-    fey_wanderer: "Feenwanderer",
-    beast_master: "Herr der Tiere",
-    hunter: "Jäger",
-    //Rouge
-    arcane_trickster: "Arkaner Betrüger",
-    assassin: "Assassine",
-    thief: "Dieb",
-    soulknife: "Seelenmesser",
-    //Sorcerer
-    aberrant_sorcery: "Aberrante Zauberei",
-    draconic_sorcery: "Drakonische Zauberei",
-    clockwork_sorcery: "Uhrwerk Zauberei",
-    wild_magic: "Wilde-Magie Zauberei",
-    //warlock
-    celestial: "Celestischer Schutzherr",
-    fey: "Erzfee-Schutzherr",
-    gereat_old_one: "Großer Alter Schutzherr",
-    fiend: "Unhold-Schutzherr",
-    //Wizard
-    abjurer: "Bannmagier",
-    evoker: "Hervorrufer",
-    illusionist: "Illusionist",
-    diviner: "Seher",
+    arteficer: {
+      title: "Magieschmied",
+      subclasses: {
+        alchemist: { title: "Alchemist" },
+        armorer: { title: "Rüstungsschmied" },
+        atillerist: { title: "Attilierist" },
+        battle_smith: { title: "Kampfschmied" },
+        cartographer: { title: "Kartograph" },
+      },
+    },
+    barbarian: {
+      title: "Barbar",
+      subclasses: {
+        berserker: { title: "Pfad des Berserker" },
+        zealot: { title: "Pfad des Eiferers" },
+        world_tree: { title: "Pfad des Weltenbaums" },
+        wild_heart: { title: "Pfad des Wilden Herzens" },
+      },
+    },
+    bard: {
+      title: "Barde",
+      subclasses: {
+        dance: { title: "Schule des Tanzes" },
+        valor: { title: "Schule des Wagemuts" },
+        lore: { title: "Schule des Wissens" },
+        counterspell: { title: "Schule des Zauberbanns" },
+      },
+    },
+    cleric: {
+      title: "Kleriker",
+      subclasses: {
+        war: { title: "Domäne des Krieges" },
+        life: { title: "Domäne des Lebens" },
+        light: { title: "Domäne des Lichts" },
+        trickery: { title: "Domäne der List" },
+      },
+    },
+    druid: {
+      title: "Druide",
+      subclasses: {
+        land: { title: "Zirkel des Landes" },
+        sea: { title: "Zirkel des Meeres" },
+        moon: { title: "Zirkel des Mondes" },
+        stars: { title: "Zirkel der Sterne" },
+      },
+    },
+    fighter: {
+      title: "Kämpfer",
+      subclasses: {
+        champion: { title: "Champion" },
+        battle_master: { title: "Kampfmeister" },
+        eldrich_knight: { title: "Mystischer Ritter" },
+        psi_warrior: { title: "Psi-Krieger" },
+      },
+    },
+    monk: {
+      title: "Mönch",
+      subclasses: {
+        warrior_of_the_elements: { title: "Krieger der Elemente" },
+        warrior_of_mercy: { title: "Krieger der Gnade" },
+        warrior_of_the_open_hand: { title: "Krieger der offenen Hand" },
+        warrior_of_shadow: { title: "Krieger der Schatten" },
+      },
+    },
+    paladin: {
+      title: "Paladin",
+      subclasses: {
+        oath_of_the_ancients: { title: "Schwur der Alten" },
+        oath_of_vengeance: { title: "Schwur der Rache" },
+        oath_of_devotion: { title: "Schwur der Hingabe" },
+        oath_of_glory: { title: "Schwur des Ruhms" },
+      },
+    },
+    ranger: {
+      title: "Waldläufer",
+      subclasses: {
+        gloom_stalker: { title: "Düsterpirscher" },
+        fey_wanderer: { title: "Feenwanderer" },
+        beast_master: { title: "Herr der Tiere" },
+        hunter: { title: "Jäger" },
+      },
+    },
+    rouge: {
+      title: "Schurke",
+      subclasses: {
+        arcane_trickster: { title: "Arkaner Betrüger" },
+        assassin: { title: "Assassine" },
+        thief: { title: "Dieb" },
+        soulknife: { title: "Seelenmesser" },
+      },
+    },
+    sorcerer: {
+      title: "Zauberer",
+      subclasses: {
+        aberrant_sorcery: { title: "Aberrante Zauberei" },
+        draconic_sorcery: { title: "Drakonische Zauberei" },
+        clockwork_sorcery: { title: "Uhrwerk Zauberei" },
+        wild_magic: { title: "Wilde-Magie Zauberei" },
+      },
+    },
+    warlock: {
+      title: "Hexenmeister",
+      subclasses: {
+        celestial: { title: "Celestischer Schutzherr" },
+        fey: { title: "Erzfee-Schutzherr" },
+        great_old_one: { title: "Großer Alter Schutzherr" },
+        fiend: { title: "Unhold-Schutzherr" },
+      },
+    },
+    wizard: {
+      title: "Magier",
+      subclasses: {
+        abjurer: { title: "Bannmagier" },
+        evoker: { title: "Hervorrufer" },
+        illusionist: { title: "Illusionist" },
+        diviner: { title: "Seher" },
+      },
+    },
   },
   background: {
     noble: "Adliger",
@@ -303,6 +340,11 @@ export const de = {
           checkboxes: "K, R & M",
           notes: "Notizen",
         },
+      },
+      talents: {
+        title: "Talente",
+        talents: "Talente",
+        features: "Klassenmerkmale",
       },
     },
     preview: { title: "Charaktervorschau", level: "Stufe" },

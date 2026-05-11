@@ -1,22 +1,24 @@
 import type { Request, Response } from "express";
 import path from "path";
-import type { Class, ClassFeature } from "@domain";
+import type { CharacterClass, ClassFeature } from "@domain";
 import { JsonService } from "@domain";
 import { MarkdownService } from "@domain";
 
 export class ClassController {
   private static jsonFilepath = path.resolve("../../data/classes.json");
 
-  private static async getCls(name: string): Promise<Class | undefined> {
-    const classData = await JsonService.readJsonFile<Class>(this.jsonFilepath);
-
-    return classData.find(
-      (cls) => cls.Name.toLowerCase() === name.toLowerCase(),
+  private static async getCls(
+    name: string,
+  ): Promise<CharacterClass | undefined> {
+    const classData = await JsonService.readJsonFile<CharacterClass>(
+      this.jsonFilepath,
     );
+
+    return classData.find((cls) => cls.id.toLowerCase() === name.toLowerCase());
   }
 
   static async getAll(req: Request, res: Response) {
-    const classData = await JsonService.readJsonFile<Class>(
+    const classData = await JsonService.readJsonFile<CharacterClass>(
       ClassController.jsonFilepath,
     );
     res.render("class-list", {
@@ -42,8 +44,8 @@ export class ClassController {
     const className = req.params.name as string;
     const subclassName = req.params.subclass as string;
     const currentClass = await ClassController.getCls(className);
-    const subclass = currentClass?.Subclasses.find(
-      (sub) => sub.Id.toLowerCase() === subclassName.toLowerCase(),
+    const subclass = currentClass?.subclasses.find(
+      (sub) => sub.id.toLowerCase() === subclassName.toLowerCase(),
     );
 
     if (currentClass && subclass) {
@@ -84,29 +86,26 @@ export class ClassController {
     const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body as any;
 
     const classFeature: ClassFeature = {
-      Name: Name,
-      Stufe: Stufe,
-      Description: Text,
-      HöhereStufe: HöhereStufe,
-      Reference: Referenz,
+      id: Name,
+      level: Stufe,
     };
 
     const name = req.params.name as string;
     const subclassName = req.params.subclass as string | undefined;
-    const classesData = await JsonService.readJsonFile<Class>(
+    const classesData = await JsonService.readJsonFile<CharacterClass>(
       ClassController.jsonFilepath,
     );
 
     classesData.forEach((cls) => {
-      if (cls.Name.toLowerCase() === name.toLowerCase()) {
+      if (cls.id.toLowerCase() === name.toLowerCase()) {
         if (subclass) {
-          cls.Subclasses.forEach((sub) => {
-            if (sub.Name.toLowerCase() === subclassName!.toLowerCase()) {
-              sub.Features.push(classFeature);
+          cls.subclasses.forEach((sub) => {
+            if (sub.id.toLowerCase() === subclassName!.toLowerCase()) {
+              sub.features.push(classFeature);
             }
           });
         } else {
-          cls.Features.push(classFeature);
+          cls.features.push(classFeature);
         }
       }
     });
@@ -129,11 +128,11 @@ export class ClassController {
     const featureName = req.params.feature as string;
 
     const cls = await ClassController.getCls(className);
-    const subclass = cls?.Subclasses.find(
-      (sub) => sub.Name.toLowerCase() === subclassName.toLowerCase(),
+    const subclass = cls?.subclasses.find(
+      (sub) => sub.id.toLowerCase() === subclassName.toLowerCase(),
     );
-    const feature = subclass?.Features.find(
-      (f) => f.Name.toLowerCase() === featureName.toLowerCase(),
+    const feature = subclass?.features.find(
+      (f) => f.id.toLowerCase() === featureName.toLowerCase(),
     );
 
     if (cls && subclass && feature) {
@@ -162,32 +161,29 @@ export class ClassController {
     const subclass = req.params.subclass as string | undefined;
     const { Stufe, HöhereStufe, Referenz, Text } = req.body as any;
 
-    const classesData = await JsonService.readJsonFile<Class>(
+    const classesData = await JsonService.readJsonFile<CharacterClass>(
       ClassController.jsonFilepath,
     );
 
     classesData.forEach((cls) => {
       let feature: ClassFeature | undefined;
-      if (cls.Name.toLowerCase() === className.toLowerCase()) {
+      if (cls.id.toLowerCase() === className.toLowerCase()) {
         if (subclassPresent) {
-          cls.Subclasses.forEach((sub) => {
-            if (sub.Id.toLowerCase() === subclass!.toLowerCase()) {
-              feature = sub.Features.find(
-                (f) => f.Name.toLowerCase() === featureName.toLowerCase(),
+          cls.subclasses.forEach((sub) => {
+            if (sub.id.toLowerCase() === subclass!.toLowerCase()) {
+              feature = sub.features.find(
+                (f) => f.id.toLowerCase() === featureName.toLowerCase(),
               );
             }
           });
         } else {
-          feature = cls.Features.find(
-            (f) => f.Name.toLowerCase() === featureName.toLowerCase(),
+          feature = cls.features.find(
+            (f) => f.id.toLowerCase() === featureName.toLowerCase(),
           );
         }
 
         if (feature) {
-          feature.Description = Text;
-          feature.Stufe = Stufe;
-          feature.HöhereStufe = HöhereStufe;
-          feature.Reference = Referenz;
+          feature.level = Stufe;
         }
       }
     });
@@ -202,8 +198,8 @@ export class ClassController {
     const className = req.params.name as string;
     const featureName = req.params.feature as string;
     const cls = await ClassController.getCls(className);
-    const feature = cls?.Features.find(
-      (f) => f.Name.toLowerCase() === featureName.toLowerCase(),
+    const feature = cls?.features.find(
+      (f) => f.id.toLowerCase() === featureName.toLowerCase(),
     );
     if (cls && feature) {
       res.render("edit-class", { feature: feature });
@@ -217,12 +213,12 @@ export class ClassController {
     const subclassName = req.params.subclass as string;
     const featureName = req.params.feature as string;
     const cls = await ClassController.getCls(className);
-    const subclass = cls?.Subclasses.find(
-      (sub) => sub.Id.toLowerCase() === subclassName.toLowerCase(),
+    const subclass = cls?.subclasses.find(
+      (sub) => sub.id.toLowerCase() === subclassName.toLowerCase(),
     );
 
-    const feature = subclass?.Features.find(
-      (f) => f.Name.toLowerCase() === featureName.toLowerCase(),
+    const feature = subclass?.features.find(
+      (f) => f.id.toLowerCase() === featureName.toLowerCase(),
     );
 
     if (cls && feature) {

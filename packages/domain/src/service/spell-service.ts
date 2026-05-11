@@ -1,4 +1,4 @@
-import { CharacterClass, Spell } from "../model";
+import { CharacterClassId, Spell } from "../model";
 import { SpellSchool } from "../model/spell-school";
 
 export class SpellService {
@@ -31,7 +31,7 @@ export class SpellService {
   public static getTestSpell(): Spell {
     return {
       castingTime: "Aktion",
-      characterClasses: [CharacterClass.SORCERER],
+      characterClasses: [CharacterClassId.SORCERER],
       components: {
         gestic: true,
         verbal: true,

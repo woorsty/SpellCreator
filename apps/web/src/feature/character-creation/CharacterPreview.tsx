@@ -24,7 +24,9 @@ export function CharacterPreview({ character }: Props) {
         <h1 className="text-2xl font-bold">{character.name}</h1>
         <div className="flex gap-4 text-gray-600">
           <span>
-            {translator.translate(`characterClass.${character.characterClass}`)}
+            {translator.translate(
+              `characterClass.${character.characterClass.id}.title`,
+            )}
           </span>
           <span>
             {translator.translate(".level")} {character.level}
@@ -128,8 +130,8 @@ export function CharacterPreview({ character }: Props) {
       <section className="border p-4 rounded-md">
         <h2 className="font-bold mb-2">Fähigkeiten</h2>
         <ul className="list-disc ml-4">
-          {character.classFeatures.map((f, i) => (
-            <li key={i}>{f}</li>
+          {character.characterClass.features.map((f, i) => (
+            <li key={i}>{translator.translate(`talent.${f.id}.title`)}</li>
           ))}
         </ul>
       </section>
