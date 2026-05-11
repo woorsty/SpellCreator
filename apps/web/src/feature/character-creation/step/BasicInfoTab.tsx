@@ -58,6 +58,21 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           placeholder="Hintergrund"
           label={translator.translate(".background")}
         />
+
+        <LabeledNumberInput
+          value={character.armorClass}
+          onChange={(e) => updateField("armorClass", e)}
+          label={translator.translate("character.armor_class")}
+        />
+
+        <LabeledNumberInput
+          value={character.maxHitpoints}
+          onChange={(e) => {
+            updateField("maxHitpoints", e);
+            updateField("currentHitpoints", e);
+          }}
+          label={translator.translate("character.hitpoints")}
+        />
       </Card>
 
       <Card>

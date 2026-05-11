@@ -1,5 +1,6 @@
-import { CharacterSheet } from "@domain";
+import { AttributeService, CharacterSheet } from "@domain";
 import React from "react";
+import { Translator } from "@i18n";
 
 type Props = {
   character: CharacterSheet;
@@ -15,27 +16,35 @@ function Stat({ label, value }: { label: string; value: number }) {
 }
 
 export function CharacterPreview({ character }: Props) {
+  const translator = new Translator("characterCreator.preview");
   return (
     <div className="p-6 space-y-6 text-sm">
       {/* HEADER */}
       <section className="border p-4 rounded-md">
         <h1 className="text-2xl font-bold">{character.name}</h1>
         <div className="flex gap-4 text-gray-600">
-          <span>{character.characterClass}</span>
-          <span>Level {character.level}</span>
-          <span>{character.species}</span>
+          <span>
+            {translator.translate(`characterClass.${character.characterClass}`)}
+          </span>
+          <span>
+            {translator.translate(".level")} {character.level}
+          </span>
+          <span>{translator.translate(`species.${character.species}`)}</span>
         </div>
       </section>
 
       {/* CORE STATS */}
-      <section className="grid grid-cols-6 gap-4">
+      <section className="grid grid-cols-6 gap-2">
         {Object.entries(character.attributes).map(([key, attr]) => (
-          <div key={key} className="border rounded-md p-2 text-center">
-            <div className="text-xs uppercase">{key}</div>
+          <div key={key} className="border rounded-md p-1 text-center">
+            <div className="text-xs uppercase">
+              {translator.translate(`character.attribute.${key}_short`)}
+            </div>
             <div className="text-lg font-bold">{attr.value}</div>
             <div className="text-gray-500">
-              {attr.value >= 0 ? "+" : ""}
-              {attr.value}
+              {AttributeService.formatModifier(
+                AttributeService.calculateModifier(attr.value),
+              )}
             </div>
           </div>
         ))}
@@ -43,10 +52,22 @@ export function CharacterPreview({ character }: Props) {
 
       {/* COMBAT */}
       <section className="grid grid-cols-4 gap-4">
-        <Stat label="AC" value={character.armorClass} />
-        <Stat label="Initiative" value={character.initiative} />
-        <Stat label="Speed" value={character.speed} />
-        <Stat label="Proficiency" value={character.proficiencyBonus} />
+        <Stat
+          label={translator.translate("character.armor_class_short")}
+          value={character.armorClass}
+        />
+        <Stat
+          label={translator.translate("character.initiative_short")}
+          value={character.initiative}
+        />
+        <Stat
+          label={translator.translate("character.speed_short")}
+          value={character.speed}
+        />
+        <Stat
+          label={translator.translate("character.proficiency_short")}
+          value={character.proficiencyBonus}
+        />
       </section>
 
       {/* HITPOINTS */}

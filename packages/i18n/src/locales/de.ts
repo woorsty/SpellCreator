@@ -2,11 +2,17 @@ export const de = {
   character: {
     attribute: {
       strength: "Stärke",
+      strength_short: "Stä",
       dexterity: "Geschicklichkeit",
+      dexterity_short: "Ges",
       constitution: "Konstitution",
+      constitution_short: "Kon",
       intelligence: "Intelligenz",
+      intelligence_short: "Int",
       wisdom: "Weisheit",
+      wisdom_short: "Wei",
       charisma: "Charisma",
+      charisma_short: "Cha",
     },
     skills: {
       athletics: "Athletik",
@@ -28,6 +34,15 @@ export const de = {
       performance: "Auftreten",
       persuasion: "Überredung",
     },
+    hitpoints: "Trefferpunkte",
+    armor_class: "Rüstungsklasse",
+    armor_class_short: "RK",
+    initiative: "Initiative",
+    initiative_short: "Init",
+    speed: "Geschwindigkeit",
+    speed_short: "Tempo",
+    proficiency: "Übungsbonus",
+    proficiency_short: "ÜB",
   },
   alignment: {
     lawful_good: "Rechtschaffen Gut",
@@ -290,6 +305,6 @@ export const de = {
         },
       },
     },
-    preview: "Charaktervorschau",
+    preview: { title: "Charaktervorschau", level: "Stufe" },
   },
 } as const;

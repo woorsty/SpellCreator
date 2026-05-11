@@ -6,6 +6,7 @@ import { CharacterClass } from "./character-class";
 import { EquipmentItem } from "./equipment";
 import { ToolItem } from "./tool";
 import { Attack } from "./attack";
+import { Talent } from "./talent";
 
 export type CharacterSheet = {
   name: string;
@@ -36,6 +37,7 @@ export type CharacterSheet = {
 
   skills: CharacterSkills;
   attributes: CharacterAttributes;
+  talents: Talent[];
 
   heroicInspiration: boolean;
 

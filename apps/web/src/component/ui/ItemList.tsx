@@ -5,37 +5,26 @@ import { TextArea } from "./TextArea";
 
 type Item = {
   name: string;
-  notes: string;
+  text: string;
 };
 
-type Props = {
-  items: Item[];
-  field: string;
-  updateField: (field: string, value: any) => void;
+type Props<T> = {
+  items: T[];
+  addItem: (newItem: T) => void;
+  removeItem: (index: number) => void;
+  updateItem: (index: number, data: T) => void;
 };
 
-export function ItemList({ items, field, updateField }: Props) {
+export function ItemList<T extends Item>({
+  items,
+  addItem,
+  removeItem,
+}: Props<T>) {
   const [newItem, setNewItem] = useState("");
-
-  function addItem() {
-    if (!newItem.trim()) return;
-
-    updateField(field, [...items, { name: newItem, notes: "" }]);
-    setNewItem("");
-  }
 
   function updateItem(index: number, data: Partial<Item>) {
     const updated = items.map((item, i) =>
       i === index ? { ...item, ...data } : item,
-    );
-
-    updateField(field, updated);
-  }
-
-  function removeItem(index: number) {
-    updateField(
-      field,
-      items.filter((_, i) => i !== index),
     );
   }
 
@@ -59,8 +48,8 @@ export function ItemList({ items, field, updateField }: Props) {
           </div>
 
           <TextArea
-            value={item.notes}
-            onChange={(e) => updateItem(i, { notes: e.target.value })}
+            value={item.text}
+            onChange={(e) => updateItem(i, { text: e.target.value })}
           />
         </div>
       ))}
