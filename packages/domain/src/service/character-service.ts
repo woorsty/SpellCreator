@@ -145,11 +145,11 @@ export class CharacterService {
       usedSpellSlots9: 0,
       preparedSpells: [],
       appearance: "",
-      backstory: "",
+      story: "",
       alignment: Alignment.TRUE_NEUTRAL,
       languages: ["Common"],
       equipment: [],
-      attunedMagicItems: [],
+      attunedMagicItems: ["", "", ""],
       coins: {
         copper: 0,
         silver: 0,
@@ -286,7 +286,7 @@ export class CharacterService {
       preparedSpells: [SpellService.getTestSpell()],
       appearance:
         "A tall, muscular human with short brown hair and green eyes.",
-      backstory:
+      story:
         "Born in a small village, this character grew up learning the ways of the sword. After their village was attacked by bandits, they set out on a quest for justice and adventure.",
       alignment: Alignment.LAWFUL_GOOD,
       languages: ["Common", "Dwarvish"],

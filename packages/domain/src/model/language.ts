@@ -1,3 +1,33 @@
 export enum Language {
+  DRACONIC = "draconic",
+  ELVISH = "elvish",
   COMMON = "common",
+  SIGN_LANGUAGE = "sign_language",
+  GNOMISH = "gnomish",
+  GOBLIN = "goblin",
+  HALFLING = "halfling",
+  ORC = "orc",
+  GIANT = "giant",
+  DWARVISH = "dwarvish",
+  ABYSSAL = "abyssal",
+  CELESTIAL = "celestial",
+  THIEF_LANGUAGE = "theif_language",
+  DRUID_LANGUAGE = "druid_language",
+  DEEP_SPEECH = "deep_speech",
+  INFERNAL = "infernal",
+  SYLVAN = "sylvan",
+  UNDERCOMMON = "undercommon",
+  PRIMORDIAL = "primordial",
+}
+
+export enum RareLanguage {
+  ABYSSAL = "abyssal",
+  CELESTIAL = "celestial",
+  THIEF_LANGUAGE = "theif_language",
+  DRUID_LANGUAGE = "druid_language",
+  DEEP_SPEECH = "deep_speech",
+  INFERNAL = "infernal",
+  SYLVAN = "sylvan",
+  UNDERCOMMON = "undercommon",
+  PRIMORDIAL = "primordial",
 }

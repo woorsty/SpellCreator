@@ -92,9 +92,10 @@ export type CharacterSheet = {
   preparedSpells: Spell[];
 
   appearance: string;
-  backstory: string;
+  story: string;
   alignment: Alignment;
   languages: string[];
+
   equipment: EquipmentItem[];
   attunedMagicItems: string[];
 

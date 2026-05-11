@@ -6,9 +6,17 @@ import { Card } from "../../../component/ui/Card";
 import { ItemList } from "../../../component/ui/ItemList";
 import { ArmorTrainingSection } from "../../../component/character/ArmorTrainingSection";
 import { WeaponTrainingSection } from "../../../component/character/WeaponTrainingSection";
+import { Input } from "../../../component/ui/Input";
 
 export function EquipmentTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.equipment");
+
+  const updateAttunedMagicItems = (magicItem: string, index: number) => {
+    const attunedItems = character.attunedMagicItems;
+    attunedItems[index] = magicItem;
+    updateField("attunedMagicItems", attunedItems);
+  };
+
   return (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold">{translator.translate(".title")}</h3>
@@ -38,6 +46,30 @@ export function EquipmentTab({ character, updateField }: StepProps) {
             />
           </div>
         </Card>
+      </Card>
+      <Card>
+        <h3>{translator.translate(".attuned_magic_items")}</h3>
+        <Input
+          value={character.attunedMagicItems[0]}
+          placeholder={translator.translate(".magic_item")}
+          onChange={(e) => {
+            updateAttunedMagicItems(e.target.value, 0);
+          }}
+        />
+        <Input
+          value={character.attunedMagicItems[1]}
+          placeholder={translator.translate(".magic_item")}
+          onChange={(e) => {
+            updateAttunedMagicItems(e.target.value, 1);
+          }}
+        />
+        <Input
+          value={character.attunedMagicItems[2]}
+          placeholder={translator.translate(".magic_item")}
+          onChange={(e) => {
+            updateAttunedMagicItems(e.target.value, 2);
+          }}
+        />
       </Card>
       <Card>
         {/* COINS */}
