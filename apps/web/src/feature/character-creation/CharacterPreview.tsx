@@ -130,7 +130,16 @@ export function CharacterPreview({ character }: Props) {
       <section className="border p-4 rounded-md">
         <h2 className="font-bold mb-2">Fähigkeiten</h2>
         <ul className="list-disc ml-4">
-          {character.characterClass.features.map((f, i) => (
+          {[
+            ...character.characterClass.features.filter(
+              (feat) => feat.level <= character.level,
+            ),
+            ...(character.subclass
+              ? character.subclass.features.filter(
+                  (feature) => feature.level <= character.level,
+                )
+              : []),
+          ].map((f, i) => (
             <li key={i}>{translator.translate(`talent.${f.id}.title`)}</li>
           ))}
         </ul>

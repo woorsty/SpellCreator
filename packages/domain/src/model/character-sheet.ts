@@ -2,18 +2,19 @@ import { Spell } from "./spell";
 import { AttributeValues, CharacterAttributes, CharacterSkills } from "./skill";
 import { Alignment } from "./alignment";
 import { Species } from "./species";
-import { CharacterClass } from "./character-class";
+import { CharacterClass, Subclass } from "./character-class";
 import { EquipmentItem } from "./equipment";
 import { ToolItem } from "./tool";
 import { Attack } from "./attack";
 import { Talent } from "./talent";
+import { Background } from "./background";
 
 export type CharacterSheet = {
   name: string;
-  background: string;
+  background: Background;
   characterClass: CharacterClass;
   species: Species;
-  subclass: string | null;
+  subclass: Subclass | null;
 
   level: number;
   xp: number;

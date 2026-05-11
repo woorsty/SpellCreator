@@ -4,14 +4,20 @@ import { Translator } from "@i18n";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
 import { Button } from "../../../component/ui/Button";
-import { CharacterClass, CharacterClassId, Species } from "@domain";
+import { Background, CharacterClass, CharacterClassId, Species } from "@domain";
 import { LabeledNumberInput } from "../../../component/ui/LabeledNumberInput";
 import { LabeledInput } from "../../../component/ui/LabeledInput";
 
 export function BasicInfoTab({ character, updateField }: StepProps) {
   const [classes, setClasses] = useState<CharacterClass[]>([]);
   const [loading, setLoading] = useState(true);
-  const [backgrounds, setBackgrounds] = useState<any[]>([]);
+  const [backgrounds, setBackgrounds] = useState<Background[]>([]);
+
+  function updateClass(classId: CharacterClassId) {
+    const newClass = classes.find((cls) => classId === cls.id);
+    updateField("characterClass", newClass);
+    updateField("subclass", undefined);
+  }
 
   useEffect(() => {
     Promise.all([
@@ -52,13 +58,6 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           }}
         />
 
-        <LabeledInput
-          value={character.background}
-          onChange={(e) => updateField("background", e.target.value)}
-          placeholder="Hintergrund"
-          label={translator.translate(".background")}
-        />
-
         <LabeledNumberInput
           value={character.armorClass}
           onChange={(e) => updateField("armorClass", e)}
@@ -93,9 +92,9 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           <Button
             key={background.id}
             variant={
-              character.background == background.id ? "primary" : "secondary"
+              character.background.id == background.id ? "primary" : "secondary"
             }
-            onClick={() => updateField("background", background.id)}
+            onClick={() => updateField("background", background)}
           >
             {translator.translate(`background.${background.id}`)}
           </Button>
@@ -111,18 +110,7 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
                 ? "primary"
                 : "secondary"
             }
-            onClick={() => {
-              const newClass = classes.find(
-                (cls) => characterClassId === cls.id,
-              );
-              updateField("characterClass", newClass);
-              updateField("subclass", undefined);
-              updateField(
-                "classFeatures",
-                classes.find((cls) => cls.id === characterClassId),
-              );
-              console.log(newClass);
-            }}
+            onClick={() => updateClass(characterClassId)}
           >
             {translator.translate(`characterClass.${characterClassId}.title`)}
           </Button>
@@ -139,11 +127,13 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           </Button>
           {loading && <div>Lade Subklassen...</div>}
           {!loading &&
-            selectedClass?.subclasses?.map((sub: any) => (
+            selectedClass?.subclasses?.map((sub) => (
               <Button
                 key={sub.id}
-                variant={character.subclass == sub.id ? "primary" : "secondary"}
-                onClick={() => updateField("subclass", sub.id)}
+                variant={
+                  character.subclass?.id == sub.id ? "primary" : "secondary"
+                }
+                onClick={() => updateField("subclass", sub)}
               >
                 {translator.translate(
                   `characterClass.${selectedClass.id}.subclasses.${sub.id}.title`,

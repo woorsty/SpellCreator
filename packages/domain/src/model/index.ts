@@ -13,3 +13,4 @@ export * from "./equipment";
 export * from "./language";
 export * from "./spell-school";
 export * from "./talent";
+export * from "./background";

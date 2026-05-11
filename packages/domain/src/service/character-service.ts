@@ -9,7 +9,6 @@ import {
 } from "../model/skill";
 import { Species } from "../model/species";
 import { AttributeService } from "./attribute-service";
-import { SpellService } from "./spell-service";
 
 export class CharacterService {
   public static findAttributeBySkill(skill: AllSkills): Attribute {
@@ -25,7 +24,14 @@ export class CharacterService {
     return {
       talents: [],
       name: "",
-      background: "",
+      background: {
+        attributes: [],
+        equipment: [],
+        id: "human",
+        skillProficiencies: [],
+        talent: "",
+        toolProficiencies: [],
+      },
       characterClass: {
         id: CharacterClassId.FIGHTER,
         equipment: [],
@@ -154,157 +160,6 @@ export class CharacterService {
         silver: 0,
         electrum: 0,
         gold: 0,
-        platinum: 0,
-      },
-    };
-  }
-
-  public static getTestCharacter(): CharacterSheet {
-    return {
-      talents: [],
-      name: "Test Character",
-      background: "A brave adventurer",
-      characterClass: {
-        id: CharacterClassId.FIGHTER,
-        equipment: [],
-        features: [],
-        hitDie: 1,
-        primaryAbility: [],
-        proficiencies: {
-          Armor: [],
-          SkillNumber: 0,
-          Skills: [],
-          Weapons: [],
-        },
-        savingThrows: [],
-        subclasses: [],
-      },
-      species: Species.HUMAN,
-      subclass: "Champion",
-      level: 5,
-      xp: 6500,
-      armorClass: 16,
-      currentHitpoints: 38,
-      temporaryHitpoints: 0,
-      spentHitDice: 0,
-      maxHitpoints: 38,
-      hitDiceValue: 10,
-      successDeathSaves: 0,
-      failedDeathSaves: 0,
-      proficiencyBonus: 3,
-      skills: {
-        strength: {
-          athletics: {
-            expertise: false,
-            proficiency: true,
-          },
-        },
-        charisma: {
-          deception: { expertise: false, proficiency: true },
-          intimidation: { expertise: false, proficiency: true },
-          performance: { expertise: false, proficiency: true },
-          persuasion: { expertise: false, proficiency: true },
-        },
-        constitution: {},
-        dexterity: {
-          acrobatics: { expertise: false, proficiency: true },
-          sleightOfHand: { expertise: false, proficiency: true },
-          stealth: { expertise: false, proficiency: true },
-        },
-        intelligence: {
-          arcana: { expertise: false, proficiency: true },
-          history: { expertise: false, proficiency: true },
-          investigation: { expertise: false, proficiency: true },
-          nature: { expertise: false, proficiency: true },
-          religion: { expertise: false, proficiency: true },
-        },
-        wisdom: {
-          animalHandling: { expertise: false, proficiency: true },
-          insight: { expertise: false, proficiency: true },
-          medicine: { expertise: false, proficiency: true },
-          perception: { expertise: false, proficiency: true },
-          survival: { expertise: false, proficiency: true },
-        },
-      },
-      attributes: {
-        charisma: {
-          proficiency: false,
-          value: 11,
-        },
-        constitution: {
-          proficiency: false,
-          value: 11,
-        },
-        dexterity: {
-          proficiency: false,
-          value: 11,
-        },
-        intelligence: {
-          proficiency: false,
-          value: 11,
-        },
-        strength: {
-          proficiency: false,
-          value: 11,
-        },
-        wisdom: {
-          proficiency: false,
-          value: 11,
-        },
-      },
-      heroicInspiration: false,
-      armorTraining: {
-        heavy: false,
-        light: true,
-        medium: true,
-        shield: true,
-      },
-      weaponTraining: {
-        finesse: false,
-        light: false,
-        martial: true,
-        simple: true,
-      },
-      toolProficiencies: [
-        { name: "Smith's Tools", notes: "Zum Schmieden halt duh" },
-      ],
-      initiative: 1,
-      speed: 30,
-      size: "Medium",
-      passivePerception: 9,
-      attacks: [],
-      speciesTraits: ["Human Resilience"],
-      feats: ["Great Weapon Fighting"],
-      spellcastingAbility: null,
-      spellSaveDC: 1,
-      spellAttackBonus: 3,
-      spellSlots: {
-        total: [],
-        used: [],
-      },
-      preparedSpells: [SpellService.getTestSpell()],
-      appearance:
-        "A tall, muscular human with short brown hair and green eyes.",
-      story:
-        "Born in a small village, this character grew up learning the ways of the sword. After their village was attacked by bandits, they set out on a quest for justice and adventure.",
-      alignment: Alignment.LAWFUL_GOOD,
-      languages: ["Common", "Dwarvish"],
-      equipment: [
-        { name: "Explorer's Pack", notes: "" },
-        { name: "Tinderbox", notes: "" },
-        { name: "Rations", notes: "1 day" },
-        { name: "Waterskin", notes: "" },
-      ],
-      attunedMagicItems: [
-        "Amulet of Health",
-        "Cloak of Protection",
-        "Ring of Protection",
-      ],
-      coins: {
-        copper: 10,
-        silver: 5,
-        electrum: 0,
-        gold: 20,
         platinum: 0,
       },
     };

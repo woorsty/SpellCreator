@@ -13,7 +13,7 @@ export function EquipmentTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.equipment");
 
   const updateAttunedMagicItems = (magicItem: string, index: number) => {
-    const attunedItems = character.attunedMagicItems;
+    const attunedItems = { ...character.attunedMagicItems };
     attunedItems[index] = magicItem;
     updateField("attunedMagicItems", attunedItems);
   };
