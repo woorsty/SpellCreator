@@ -117,7 +117,56 @@
       "entertainer_pack",
       "gold:19"
     ],
-    "features": [],
+    "features": [
+      {
+        "id": "bardic_inspiration",
+        "level": 1
+      },
+      {
+        "id:": "spellcasting",
+        "level": 1
+      },
+      {
+        "id:": "expertiese",
+        "level": 2
+      },
+      {
+        "id:": "jack_of_all_trades",
+        "level": 2
+      },
+      {
+        "id:": "bard_subclass",
+        "level": 3
+      },
+      {
+        "id:": "ability_score_imporvement",
+        "level": 4
+      },
+      {
+        "id:": "font_of_inspiration",
+        "level": 5
+      },
+      {
+        "id:": "countercharm",
+        "level": 7
+      },
+      {
+        "id:": "magical_secrets",
+        "level": 10
+      },
+      {
+        "id:": "superior_inspiration",
+        "level": 18
+      },
+      {
+        "id:": "epic_boon",
+        "level": 19
+      },
+      {
+        "id:": "words_of_creation",
+        "level": 20
+      }
+    ],
     "subclasses": [
       {
         "id": "dance",
@@ -187,12 +236,161 @@
       "herbalism_kit",
       "gold:9"
     ],
-    "features": [],
+    "features": [
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "druidic",
+        "level": 1
+      },
+      {
+        "id": "primal_order",
+        "level": 1
+      },
+      {
+        "id": "wild_shape",
+        "level": 2
+      },
+      {
+        "id": "wild_companion",
+        "level": 2
+      },
+      {
+        "id": "druid_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "wild_resurgence",
+        "level": 5
+      },
+      {
+        "id": "elemental_fury",
+        "level": 7
+      },
+      {
+        "id": "improved_elemental_fury",
+        "level": 15
+      },
+      {
+        "id": "beast_spells",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "archdruid",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "land", "features": [] },
-      { "id": "sea", "features": [] },
-      { "id": "moon", "features": [] },
-      { "id": "stars", "features": [] }
+      {
+        "id": "land",
+        "features": [
+          {
+            "id": "circle_of_land_spells",
+            "level": 3
+          },
+          {
+            "id": "lands_aid",
+            "level": 3
+          },
+          {
+            "id": "natural_recovery",
+            "level": 6
+          },
+          {
+            "id": "natures_ward",
+            "level": 10
+          },
+          {
+            "id": "natures_sanctuary",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "sea",
+        "features": [
+          {
+            "id": "circle_of_the_sea_spells",
+            "level": 3
+          },
+          {
+            "id": "wrath_of_the_sea",
+            "level": 3
+          },
+          {
+            "id": "aquatic_affinity",
+            "level": 6
+          },
+          {
+            "id": "stormborn",
+            "level": 10
+          },
+          {
+            "id": "oceanic_gift",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "moon",
+        "features": [
+          {
+            "id": "circle_forms",
+            "level": 3
+          },
+          {
+            "id": "circle_of_the_moon_spells",
+            "level": 3
+          },
+          {
+            "id": "imporved_circle_forms",
+            "level": 6
+          },
+          {
+            "id": "moonlight_step",
+            "level": 10
+          },
+          {
+            "id": "lunar_form",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "stars",
+        "features": [
+          {
+            "id": "star_map",
+            "level": 3
+          },
+          {
+            "id": "stary_form",
+            "level": 3
+          },
+          {
+            "id": "cosmic_omen",
+            "level": 6
+          },
+          {
+            "id": "twinkling_constellations",
+            "level": 10
+          },
+          {
+            "id": "full_of_stars",
+            "level": 14
+          }
+        ]
+      }
     ]
   },
 
@@ -225,12 +423,129 @@
       "scholar_pack",
       "gold:15"
     ],
-    "features": [],
+    "features": [
+      {
+        "id": "eldritch_invocations",
+        "level": 1
+      },
+      {
+        "id": "packt_magic",
+        "level": 1
+      },
+      {
+        "id": "magical_cunning",
+        "level": 2
+      },
+      {
+        "id": "warlock_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "contact_patron",
+        "level": 9
+      },
+      {
+        "id": "mystic_arcanum",
+        "level": 11
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "eldritch_master",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "celestial", "features": [] },
+      {
+        "id": "celestial",
+        "features": [
+          {
+            "id": "celestial_spells",
+            "level": 3
+          },
+          {
+            "id": "healing_light",
+            "level": 3
+          },
+          {
+            "id": "radiant_soul",
+            "level": 6
+          },
+          {
+            "id": "celestial_resilience",
+            "level": 10
+          },
+          {
+            "id": "searing_vengeance",
+            "level": 14
+          }
+        ]
+      },
       { "id": "fey", "features": [] },
-      { "id": "great_old_one", "features": [] },
-      { "id": "fiend", "features": [] }
+      {
+        "id": "great_old_one",
+        "features": [
+          {
+            "id": "awakened_mind",
+            "level": 3
+          },
+          {
+            "id": "great_old_one_spells",
+            "level": 3
+          },
+          {
+            "id": "psychic_spells",
+            "level": 3
+          },
+          {
+            "id": "clairvoyant_combat",
+            "level": 6
+          },
+          {
+            "id": "eldritch_hex",
+            "level": 10
+          },
+          {
+            "id": "thought_shield",
+            "level": 10
+          },
+          {
+            "id": "create_thrall",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "fiend",
+        "features": [
+          {
+            "id": "dark_ones_blessing",
+            "level": 3
+          },
+          {
+            "id": "fiend_spells",
+            "level": 3
+          },
+          {
+            "id": "dark_ones_own_luck",
+            "level": 6
+          },
+          {
+            "id": "fiendish_resilience",
+            "level": 10
+          },
+          {
+            "id": "hurl_through_hell",
+            "level": 14
+          }
+        ]
+      }
     ]
   },
 
@@ -263,12 +578,169 @@
       "explorer_pack",
       "gold:4"
     ],
-    "features": [],
+    "features": [
+      {
+        "id": "weapon_mastery",
+        "level": 1
+      },
+      {
+        "id": "action_surge",
+        "level": 2
+      },
+      {
+        "id": "tactical_mind",
+        "level": 2
+      },
+      {
+        "id": "fighter_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "extra_attack",
+        "level": 5
+      },
+      {
+        "id": "tactical_shift",
+        "level": 5
+      },
+      {
+        "id": "indomitable",
+        "level": 9
+      },
+      {
+        "id": "tactical_master",
+        "level": 9
+      },
+      {
+        "id": "two_extra_attacks",
+        "level": 11
+      },
+      {
+        "id": "studied_attacks",
+        "level": 13
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "three_extra_attacks",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "champion", "features": [] },
-      { "id": "battle_master", "features": [] },
-      { "id": "eldritch_knight", "features": [] },
-      { "id": "psi_warrior", "features": [] }
+      {
+        "id": "champion",
+        "features": [
+          {
+            "id": "improved_ciritcal",
+            "level": 3
+          },
+          {
+            "id": "remarkable_athlete",
+            "level": 3
+          },
+          {
+            "id": "additional_fighting_style",
+            "level": 7
+          },
+          {
+            "id": "heroic_warrior",
+            "level": 10
+          },
+          {
+            "id": "superior_critical",
+            "level": 15
+          },
+          {
+            "id": "survivor",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "battle_master",
+        "features": [
+          {
+            "id": "student_of_war",
+            "level": 3
+          },
+          {
+            "id": "know_your_enemy",
+            "level": 7
+          },
+          {
+            "id": "improved_combat_superiority",
+            "level": 10
+          },
+          {
+            "id": "relentless",
+            "level": 15
+          },
+          {
+            "id": "ultimate_combat_superiority",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "eldritch_knight",
+        "features": [
+          {
+            "id": "spellcasting",
+            "level": 3
+          },
+          {
+            "id": "war_bound",
+            "level": 3
+          },
+          {
+            "id": "war_magic",
+            "level": 7
+          },
+          {
+            "id": "eldritch_strike",
+            "level": 10
+          },
+          {
+            "id": "arcane_charge",
+            "level": 15
+          },
+          {
+            "id": "improved_war_magic",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "psi_warrior",
+        "features": [
+          {
+            "id": "psionic_power",
+            "level": 3
+          },
+          {
+            "id": "telekinetic_adept",
+            "level": 7
+          },
+          {
+            "id": "guarded_mind",
+            "level": 10
+          },
+          {
+            "id": "bulwark_of_force",
+            "level": 15
+          },
+          {
+            "id": "telekinetic_master",
+            "level": 18
+          }
+        ]
+      }
     ]
   },
 
@@ -291,12 +763,149 @@
       "priest_pack",
       "gold:7"
     ],
-    "features": [],
+    "features": [
+      {
+        "id:": "divine_order",
+        "level": 1
+      },
+      {
+        "id": "channel_divinity",
+        "level": 2
+      },
+      {
+        "id": "cleric_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "sear_undead",
+        "level": 5
+      },
+      {
+        "id": "blessed_strikes",
+        "level": 7
+      },
+      {
+        "id": "divine_intervention",
+        "level": 10
+      },
+      {
+        "id": "improved_blessed_strikes",
+        "level": 14
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "greater_divine_intervention",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "war", "features": [] },
-      { "id": "life", "features": [] },
-      { "id": "light", "features": [] },
-      { "id": "trickery", "features": [] }
+      {
+        "id": "war",
+        "features": [
+          {
+            "id": "guided_strike",
+            "level": 3
+          },
+          {
+            "id": "war_domain_spells",
+            "level": 3
+          },
+          {
+            "id": "war_priest",
+            "level": 3
+          },
+          {
+            "id": "war_gods_blessing",
+            "level": 6
+          },
+          {
+            "id": "avatar_of_battle",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "life",
+        "features": [
+          {
+            "id": "disciple_of_life",
+            "level": 3
+          },
+          {
+            "id": "life_domain_spells",
+            "level": 3
+          },
+          {
+            "id": "preserve_life",
+            "level": 3
+          },
+          {
+            "id": "blessed_healer",
+            "level": 6
+          },
+          {
+            "id": "supreme_healing",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "light",
+        "features": [
+          {
+            "id": "light_domain_spells",
+            "level": 3
+          },
+          {
+            "id": "radiance_of_the_dawn",
+            "level": 3
+          },
+          {
+            "id": "warding_flare",
+            "level": 3
+          },
+          {
+            "id": "improved_warding_flare",
+            "level": 6
+          },
+          {
+            "id": "corona_of_light",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "trickery",
+        "features": [
+          {
+            "id": "blessing_of_the_trickster",
+            "level": 3
+          },
+          {
+            "id": "invoke_duplicity",
+            "level": 3
+          },
+          {
+            "id": "trickery_domain_spells",
+            "level": 3
+          },
+          {
+            "id": "tricksters_transposition",
+            "level": 6
+          },
+          {
+            "id": "improved_duplicity",
+            "level": 17
+          }
+        ]
+      }
     ]
   },
 
@@ -320,12 +929,149 @@
       "weapons": ["simple_weapons"]
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "ritual_adept",
+        "level": 1
+      },
+      {
+        "id": "arcane_recovery",
+        "level": 1
+      },
+      {
+        "id": "scholar",
+        "level": 2
+      },
+      {
+        "id": "wizard_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "memorize_spell",
+        "level": 5
+      },
+      {
+        "id": "spell_mastery",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "signature_spells",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "abjurer", "features": [] },
-      { "id": "evoker", "features": [] },
-      { "id": "illusionist", "features": [] },
-      { "id": "diviner", "features": [] }
+      {
+        "id": "abjurer",
+        "features": [
+          {
+            "id": "abjuration_savant",
+            "level": 3
+          },
+          {
+            "id": "arcane_ward",
+            "level": 3
+          },
+          {
+            "id": "projected_ward",
+            "level": 6
+          },
+          {
+            "id": "spell_breaker",
+            "level": 10
+          },
+          {
+            "id": "spell_resistance",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "evoker",
+        "features": [
+          {
+            "id": "evocation_savant",
+            "level": 3
+          },
+          {
+            "id": "potent_cantrip",
+            "level": 3
+          },
+          {
+            "id": "sculpt_spells",
+            "level": 6
+          },
+          {
+            "id": "empowered_evocation",
+            "level": 10
+          },
+          {
+            "id": "overchannel",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "illusionist",
+        "features": [
+          {
+            "id": "illusion_savant",
+            "level": 3
+          },
+          {
+            "id": "improved_illusions",
+            "level": 3
+          },
+          {
+            "id": "phantasmal_creatures",
+            "level": 6
+          },
+          {
+            "id": "illusory_self",
+            "level": 10
+          },
+          {
+            "id": "illusory_reality",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "diviner",
+        "features": [
+          {
+            "id": "divination_savant",
+            "level": 3
+          },
+          {
+            "id": "portent",
+            "level": 3
+          },
+          {
+            "id": "expert_divination",
+            "level": 6
+          },
+          {
+            "id": "the_third_eye",
+            "level": 10
+          },
+          {
+            "id": "greater_portent",
+            "level": 14
+          }
+        ]
+      }
     ]
   },
   {
@@ -341,12 +1087,193 @@
       "equipment": ["oneof(tool,instrument)"]
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "material_arts",
+        "level": 1
+      },
+      {
+        "id": "unarmored_defense",
+        "level": 1
+      },
+      {
+        "id": "monks_focus",
+        "level": 2
+      },
+      {
+        "id": "unarmored_movement",
+        "level": 2
+      },
+      {
+        "id": "uncanny_metabolism",
+        "level": 2
+      },
+      {
+        "id": "deflect_attacks",
+        "level": 3
+      },
+      {
+        "id": "monk_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "slow_fall",
+        "level": 4
+      },
+      {
+        "id": "extra_attack",
+        "level": 5
+      },
+      {
+        "id": "stunning_strike",
+        "level": 5
+      },
+      {
+        "id": "empowered_strikes",
+        "level": 6
+      },
+      {
+        "id": "evasion",
+        "level": 7
+      },
+      {
+        "id": "acrobatic_movement",
+        "level": 9
+      },
+      {
+        "id": "heightened_focus",
+        "level": 10
+      },
+      {
+        "id": "self_restoration",
+        "level": 10
+      },
+      {
+        "id": "deflect_energy",
+        "level": 13
+      },
+      {
+        "id": "disciplined_survivor",
+        "level": 14
+      },
+      {
+        "id": "perfect_focus",
+        "level": 15
+      },
+      {
+        "id": "superior_defense",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "body_and_mind",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "warrior_of_the_elements", "features": [] },
-      { "id": "warrior_of_mercy", "features": [] },
-      { "id": "warrior_of_the_open_hand", "features": [] },
-      { "id": "warrior_of_shadow", "features": [] }
+      {
+        "id": "warrior_of_the_elements",
+        "features": [
+          {
+            "id": "elemental_attunement",
+            "level": 3
+          },
+          {
+            "id": "manipulate_elements",
+            "level": 3
+          },
+          {
+            "id": "elemental_burst",
+            "level": 6
+          },
+          {
+            "id": "stride_of_the_elements",
+            "level": 11
+          },
+          {
+            "id": "elemental_epitome",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "warrior_of_mercy",
+        "features": [
+          {
+            "id": "hand_of_harm",
+            "level": 3
+          },
+          {
+            "id": "hand_of_healing",
+            "level": 3
+          },
+          {
+            "id": "implements_of_mercy",
+            "level": 3
+          },
+          {
+            "id": "physicians_touch",
+            "level": 6
+          },
+          {
+            "id": "flurry_of_healing_and_harm",
+            "level": 11
+          },
+          {
+            "id": "hand_of_ultimate_mercy",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "warrior_of_the_open_hand",
+        "features": [
+          {
+            "id": "open_hand_technique",
+            "level": 3
+          },
+          {
+            "id": "wholeness_of_body",
+            "level": 6
+          },
+          {
+            "id": "fleet_step",
+            "level": 11
+          },
+          {
+            "id": "quivering_palm",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "warrior_of_shadow",
+        "features": [
+          {
+            "id": "shadow_arts",
+            "level": 3
+          },
+          {
+            "id": "shadow_step",
+            "level": 6
+          },
+          {
+            "id": "improved_shadow_step",
+            "level": 11
+          },
+          {
+            "id": "cloak_of_shadows",
+            "level": 17
+          }
+        ]
+      }
     ]
   },
 
@@ -370,12 +1297,177 @@
       "equipment": []
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "lay_on_hands",
+        "level": 1
+      },
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "weapon_mastery",
+        "level": 1
+      },
+      {
+        "id": "fighting_style",
+        "level": 2
+      },
+      {
+        "id": "paladins_smite",
+        "level": 2
+      },
+      {
+        "id": "channel_divinity",
+        "level": 3
+      },
+      {
+        "id": "paladin_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "extra_attack",
+        "level": 5
+      },
+      {
+        "id": "faithful_steed",
+        "level": 5
+      },
+      {
+        "id": "aura_of_protection",
+        "level": 6
+      },
+      {
+        "id": "abjure_foes",
+        "level": 9
+      },
+      {
+        "id": "aura_of_courage",
+        "level": 10
+      },
+      {
+        "id": "radiant_strikes",
+        "level": 11
+      },
+      {
+        "id": "restoring_touch",
+        "level": 14
+      },
+      {
+        "id": "aura_expansion",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 18
+      }
+    ],
     "subclasses": [
-      { "id": "oath_of_the_ancients", "features": [] },
-      { "id": "oath_of_vengeance", "features": [] },
-      { "id": "oath_of_devotion", "features": [] },
-      { "id": "oath_of_glory", "features": [] }
+      {
+        "id": "oath_of_the_ancients",
+        "features": [
+          {
+            "id": "natures_wrath",
+            "level": 3
+          },
+          {
+            "id": "oath_of_the_ancients_spells",
+            "level": 3
+          },
+          {
+            "id": "aura_of_warding",
+            "level": 7
+          },
+          {
+            "id": "undying_sentinel",
+            "level": 15
+          },
+          {
+            "id": "elder_champion",
+            "level": 20
+          }
+        ]
+      },
+      {
+        "id": "oath_of_vengeance",
+        "features": [
+          {
+            "id": "oath_of_vengeance_spells",
+            "level": 3
+          },
+          {
+            "id": "vow_of_enmity",
+            "level": 3
+          },
+          {
+            "id": "relentless_avanger",
+            "level": 7
+          },
+          {
+            "id": "sould_of_vengeance",
+            "level": 15
+          },
+          {
+            "id": "avenging_angel",
+            "level": 20
+          }
+        ]
+      },
+      {
+        "id": "oath_of_devotion",
+        "features": [
+          {
+            "id": "oath_of_devotion_spells",
+            "level": 3
+          },
+          {
+            "id": "aura_of_devotion",
+            "level": 7
+          },
+          {
+            "id": "smite_of_protection",
+            "level": 15
+          },
+          {
+            "id": "holy_nimubs",
+            "level": 20
+          }
+        ]
+      },
+      {
+        "id": "oath_of_glory",
+        "features": [
+          {
+            "id": "inspiring_smite",
+            "level": 3
+          },
+          {
+            "id": "oath_of_glory_spells",
+            "level": 3
+          },
+          {
+            "id": "peerless_athlete",
+            "level": 3
+          },
+          {
+            "id": "aura_of_alacrity",
+            "level": 7
+          },
+          {
+            "id": "glorious_defense",
+            "level": 15
+          },
+          {
+            "id": "living_legend",
+            "level": 20
+          }
+        ]
+      }
     ]
   },
   {
@@ -402,12 +1494,181 @@
       "equipment": ["theifs_tool"]
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "expertiese",
+        "level": 1
+      },
+      {
+        "id": "sneak_attack",
+        "level": 1
+      },
+      {
+        "id": "thieves_cant",
+        "level": 1
+      },
+      {
+        "id": "weapon_mastery",
+        "level": 1
+      },
+      {
+        "id": "cunning_action",
+        "level": 2
+      },
+      {
+        "id": "rouge_subclass",
+        "level": 3
+      },
+      {
+        "id": "steady_aim",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "cunning_strike",
+        "level": 5
+      },
+      {
+        "id": "uncanny_dodge",
+        "level": 5
+      },
+      {
+        "id": "evasion",
+        "level": 7
+      },
+      {
+        "id": "reliable_talent",
+        "level": 7
+      },
+      {
+        "id": "improved_cunning_strike",
+        "level": 11
+      },
+      {
+        "id": "devious_strikes",
+        "level": 14
+      },
+      {
+        "id": "slippery_mind",
+        "level": 15
+      },
+      {
+        "id": "elusive",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "stroke_of_luck",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "arcane_trickster", "features": [] },
-      { "id": "assassin", "features": [] },
-      { "id": "thief", "features": [] },
-      { "id": "soulknife", "features": [] }
+      {
+        "id": "arcane_trickster",
+        "features": [
+          {
+            "id": "spellcasting",
+            "level": 3
+          },
+          {
+            "id": "mage_hand_legerdemain",
+            "level": 3
+          },
+          {
+            "id": "magical_ambush",
+            "level": 9
+          },
+          {
+            "id": "versatile_trickster",
+            "level": 13
+          },
+          {
+            "id": "spell_theif",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "assassin",
+        "features": [
+          {
+            "id": "assassinate",
+            "level": 3
+          },
+          {
+            "id": "assassins_tools",
+            "level": 3
+          },
+          {
+            "id": "infiltration_expertiese",
+            "level": 9
+          },
+          {
+            "id": "envenom_weapons",
+            "level": 13
+          },
+          {
+            "id": "death_strike",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "thief",
+        "features": [
+          {
+            "id": "fast_hands",
+            "level": 3
+          },
+          {
+            "id": "second_story_work",
+            "level": 3
+          },
+          {
+            "id": "supreme_sneak",
+            "level": 9
+          },
+          {
+            "id": "use_magic_device",
+            "level": 13
+          },
+          {
+            "id": "thiefs_reflexes",
+            "level": 17
+          }
+        ]
+      },
+      {
+        "id": "soulknife",
+        "features": [
+          {
+            "id": "psionic_power",
+            "level": 3
+          },
+          {
+            "id": "psychic_blades",
+            "level": 3
+          },
+          {
+            "id": "sould_blades",
+            "level": 9
+          },
+          {
+            "id": "psychic_veil",
+            "level": 13
+          },
+          {
+            "id": "rend_mind",
+            "level": 17
+          }
+        ]
+      }
     ]
   },
 
@@ -433,12 +1694,181 @@
       "equipment": []
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "favored_enemy",
+        "level": 1
+      },
+      {
+        "id": "weapon_mastery",
+        "level": 1
+      },
+      {
+        "id": "deft_explorer",
+        "level": 2
+      },
+      {
+        "id": "fighting_style",
+        "level": 2
+      },
+      {
+        "id": "ranger_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "extra_attack",
+        "level": 5
+      },
+      {
+        "id": "roving",
+        "level": 6
+      },
+      {
+        "id": "expertiese",
+        "level": 9
+      },
+      {
+        "id": "tireless",
+        "level": 10
+      },
+      {
+        "id": "relentless_hunter",
+        "level": 13
+      },
+      {
+        "id": "natures_veil",
+        "level": 14
+      },
+      {
+        "id": "precise_hunter",
+        "level": 17
+      },
+      {
+        "id": "fearless_senses",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 18
+      },
+      {
+        "id": "foe_slayer",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "gloom_stalker", "features": [] },
-      { "id": "fey_wanderer", "features": [] },
-      { "id": "beast_master", "features": [] },
-      { "id": "hunter", "features": [] }
+      {
+        "id": "gloom_stalker",
+        "features": [
+          {
+            "id": "dread_ambusher",
+            "level": 3
+          },
+          {
+            "id": "gloom_stalker_spells",
+            "level": 3
+          },
+          {
+            "id": "umbral_sight",
+            "level": 3
+          },
+          {
+            "id": "iron_mind",
+            "level": 7
+          },
+          {
+            "id": "stalkers_flurry",
+            "level": 11
+          },
+          {
+            "id": "shadowy_dodge",
+            "level": 15
+          }
+        ]
+      },
+      {
+        "id": "fey_wanderer",
+        "features": [
+          {
+            "id": "dreadful_strikes",
+            "level": 3
+          },
+          {
+            "id": "fey_wanderer_spells",
+            "level": 3
+          },
+          {
+            "id": "otherworldly_glamour",
+            "level": 3
+          },
+          {
+            "id": "beguiling_twist",
+            "level": 7
+          },
+          {
+            "id": "fey_reinforcements",
+            "level": 11
+          },
+          {
+            "id": "misty_wanderer",
+            "level": 15
+          }
+        ]
+      },
+      {
+        "id": "beast_master",
+        "features": [
+          {
+            "id": "primal_companion",
+            "level": 3
+          },
+          {
+            "id": "exceptional_training",
+            "level": 7
+          },
+          {
+            "id": "beastial_fury",
+            "level": 11
+          },
+          {
+            "id": "share_spells",
+            "level": 15
+          }
+        ]
+      },
+      {
+        "id": "hunter",
+        "features": [
+          {
+            "id": "hunters_lore",
+            "level": 3
+          },
+          {
+            "id": "hunters_prey",
+            "level": 3
+          },
+          {
+            "id": "defensive_tactics",
+            "level": 7
+          },
+          {
+            "id": "superior_hunters_prey",
+            "level": 11
+          },
+          {
+            "id": "superior_hunters_defense",
+            "level": 15
+          }
+        ]
+      }
     ]
   },
 
@@ -462,12 +1892,153 @@
       "equipment": []
     },
     "equipment": [],
-    "features": [],
+    "features": [
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "innate_sorcery",
+        "level": 1
+      },
+      {
+        "id": "font_of_magic",
+        "level": 2
+      },
+      {
+        "id": "metamagic",
+        "level": 2
+      },
+      {
+        "id": "sorcerer_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "sorcerous_restoration",
+        "level": 5
+      },
+      {
+        "id": "sorcery_incarnate",
+        "level": 7
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "arcane_apotheosis",
+        "level": 20
+      }
+    ],
     "subclasses": [
-      { "id": "aberrant_sorcery", "features": [] },
-      { "id": "draconic_sorcery", "features": [] },
-      { "id": "clockwork_sorcery", "features": [] },
-      { "id": "wild_magic", "features": [] }
+      {
+        "id": "aberrant_sorcery",
+        "features": [
+          {
+            "id": "psionic_spells",
+            "level": 3
+          },
+          {
+            "id": "telepathic_speech",
+            "level": 3
+          },
+          {
+            "id": "psionic_sorcery",
+            "level": 6
+          },
+          {
+            "id": "psychic_defense",
+            "level": 6
+          },
+          {
+            "id": "revelation_in_flesh",
+            "level": 14
+          },
+          {
+            "id": "warping_implosion",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "draconic_sorcery",
+        "features": [
+          {
+            "id": "draconic_resilience",
+            "level": 3
+          },
+          {
+            "id": "draconic_spells",
+            "level": 3
+          },
+          {
+            "id": "elemental_affinity",
+            "level": 6
+          },
+          {
+            "id": "dragon_wings",
+            "level": 14
+          },
+          {
+            "id": "dragon_companion",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "clockwork_sorcery",
+        "features": [
+          {
+            "id": "clockwork_spells",
+            "level": 3
+          },
+          {
+            "id": "restore_balance",
+            "level": 3
+          },
+          {
+            "id": "bastion_of_law",
+            "level": 6
+          },
+          {
+            "id": "trance_of_order",
+            "level": 14
+          },
+          {
+            "id": "clockwork_cavalcade",
+            "level": 18
+          }
+        ]
+      },
+      {
+        "id": "wild_magic",
+        "features": [
+          {
+            "id": "wild_magic_surge",
+            "level": 3
+          },
+          {
+            "id": "tides_of_chaos",
+            "level": 3
+          },
+          {
+            "id": "bend_luck",
+            "level": 6
+          },
+          {
+            "id": "controlled_chaos",
+            "level": 14
+          },
+          {
+            "id": "tamed_surge",
+            "level": 18
+          }
+        ]
+      }
     ]
   },
 
