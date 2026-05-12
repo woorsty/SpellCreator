@@ -1,12 +1,12 @@
 import { Spell } from "./spell";
-import { AttributeValues, CharacterAttributes, CharacterSkills } from "./skill";
+import { Attribute, CharacterAttributes } from "./skill";
 import { Alignment } from "./alignment";
-import { Species } from "./species";
+import { Species, SpeciesFeature as SpeciesTrait } from "./species";
 import { CharacterClass, Subclass } from "./character-class";
 import { EquipmentItem } from "./equipment";
 import { ToolItem } from "./tool";
 import { Attack } from "./attack";
-import { Talent } from "./talent";
+import { Feat } from "./feat";
 import { Background } from "./background";
 
 export type CharacterSheet = {
@@ -36,9 +36,8 @@ export type CharacterSheet = {
 
   proficiencyBonus: number;
 
-  skills: CharacterSkills;
   attributes: CharacterAttributes;
-  talents: Talent[];
+  talents: Feat[];
 
   heroicInspiration: boolean;
 
@@ -57,16 +56,10 @@ export type CharacterSheet = {
   toolProficiencies: ToolItem[];
 
   initiative: number;
-  speed: number;
-  size: string;
   passivePerception: number;
 
   attacks: Attack[];
 
-  speciesTraits: string[];
-  feats: string[];
-
-  spellcastingAbility: AttributeValues | null;
   spellSaveDC: number;
   spellAttackBonus: number;
 

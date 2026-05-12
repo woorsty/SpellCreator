@@ -1,3 +1,4 @@
+import { OriginFeat } from "../model";
 import { Alignment } from "../model/alignment";
 import { CharacterClassId } from "../model/character-class";
 import type { CharacterSheet } from "../model/character-sheet";
@@ -7,10 +8,58 @@ import {
   Attribute,
   SkillOf,
 } from "../model/skill";
-import { Species } from "../model/species";
+import { AllSpecies, SPECIES } from "../model/species";
 import { AttributeService } from "./attribute-service";
 
 export class CharacterService {
+  public static async addNewCharacter(character: CharacterSheet) {
+    CharacterService.calculateParameters(character);
+    const response = await fetch("/api/characters/" + character.name, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(character),
+    });
+
+    if (!response.ok) {
+      throw new Error("Fehler beim Speichern");
+    }
+
+    return response.json();
+  }
+
+  private static calculateParameters(character: CharacterSheet) {
+    const perceptionModifier =
+      AttributeService.calculateSkillModifierFromCharacter(
+        character,
+        "wisdom",
+        "perception",
+      );
+    character.passivePerception = 10 + perceptionModifier;
+    character.initiative = AttributeService.calculateModifier(
+      character.attributes.dexterity.value,
+    );
+
+    const castingAttribute =
+      character.characterClass.castingAttribute ||
+      character.subclass?.castingAttribute;
+
+    if (castingAttribute) {
+      const castingModificator = AttributeService.calculateModifier(
+        character.attributes[castingAttribute].value,
+      );
+      character.spellAttackBonus = castingModificator;
+      character.spellSaveDC = castingModificator + character.proficiencyBonus;
+    }
+  }
+
+  public static async checkIfCharacterExists(character: CharacterSheet) {
+    const response = await fetch("/api/characters/" + character.name);
+    console.log(response);
+    return response.json();
+  }
+
   public static findAttributeBySkill(skill: AllSkills): Attribute {
     for (const attr in ATTRIBUTE_SKILLS) {
       if (ATTRIBUTE_SKILLS[attr as Attribute].includes(skill as never)) {
@@ -27,9 +76,9 @@ export class CharacterService {
       background: {
         attributes: [],
         equipment: [],
-        id: "human",
+        id: "noble",
         skillProficiencies: [],
-        talent: "",
+        feat: OriginFeat.SKILLED,
         toolProficiencies: [],
       },
       characterClass: {
@@ -39,15 +88,15 @@ export class CharacterService {
         hitDie: 1,
         primaryAbility: [],
         proficiencies: {
-          Armor: [],
-          SkillNumber: 0,
-          Skills: [],
-          Weapons: [],
+          armor: [],
+          skillNumber: 0,
+          skills: [],
+          weapons: [],
         },
         savingThrows: [],
         subclasses: [],
       },
-      species: Species.HUMAN,
+      species: SPECIES[AllSpecies.HUMAN],
       subclass: null,
       level: 1,
       xp: 0,
@@ -60,64 +109,62 @@ export class CharacterService {
       successDeathSaves: 0,
       failedDeathSaves: 0,
       proficiencyBonus: 2,
-      skills: {
-        strength: {
-          athletics: {
-            expertise: false,
-            proficiency: false,
-          },
-        },
-        charisma: {
-          deception: { expertise: false, proficiency: false },
-          intimidation: { expertise: false, proficiency: false },
-          performance: { expertise: false, proficiency: false },
-          persuasion: { expertise: false, proficiency: false },
-        },
-        constitution: {},
-        dexterity: {
-          acrobatics: { expertise: false, proficiency: false },
-          sleightOfHand: { expertise: false, proficiency: false },
-          stealth: { expertise: false, proficiency: false },
-        },
-        intelligence: {
-          arcana: { expertise: false, proficiency: false },
-          history: { expertise: false, proficiency: false },
-          investigation: { expertise: false, proficiency: false },
-          nature: { expertise: false, proficiency: false },
-          religion: { expertise: false, proficiency: false },
-        },
-        wisdom: {
-          animalHandling: { expertise: false, proficiency: false },
-          insight: { expertise: false, proficiency: false },
-          medicine: { expertise: false, proficiency: false },
-          perception: { expertise: false, proficiency: false },
-          survival: { expertise: false, proficiency: false },
-        },
-      },
       attributes: {
         charisma: {
           proficiency: false,
           value: 10,
+          skills: {
+            deception: { expertise: false, proficiency: false },
+            intimidation: { expertise: false, proficiency: false },
+            performance: { expertise: false, proficiency: false },
+            persuasion: { expertise: false, proficiency: false },
+          },
         },
         constitution: {
           proficiency: false,
           value: 10,
+          skills: {},
         },
         dexterity: {
           proficiency: false,
           value: 10,
+          skills: {
+            acrobatics: { expertise: false, proficiency: false },
+            sleightOfHand: { expertise: false, proficiency: false },
+            stealth: { expertise: false, proficiency: false },
+          },
         },
         intelligence: {
           proficiency: false,
           value: 10,
+          skills: {
+            arcana: { expertise: false, proficiency: false },
+            history: { expertise: false, proficiency: false },
+            investigation: { expertise: false, proficiency: false },
+            nature: { expertise: false, proficiency: false },
+            religion: { expertise: false, proficiency: false },
+          },
         },
         strength: {
           proficiency: false,
           value: 10,
+          skills: {
+            athletics: {
+              expertise: false,
+              proficiency: false,
+            },
+          },
         },
         wisdom: {
           proficiency: false,
           value: 10,
+          skills: {
+            animalHandling: { expertise: false, proficiency: false },
+            insight: { expertise: false, proficiency: false },
+            medicine: { expertise: false, proficiency: false },
+            perception: { expertise: false, proficiency: false },
+            survival: { expertise: false, proficiency: false },
+          },
         },
       },
       heroicInspiration: false,
@@ -135,8 +182,6 @@ export class CharacterService {
       },
       toolProficiencies: [],
       initiative: 0,
-      speed: 9,
-      size: "Medium",
       passivePerception: 0,
       attacks: [],
       speciesTraits: [],
@@ -171,7 +216,7 @@ export class CharacterService {
     skill: SkillOf<A>,
   ) {
     const attr = character.attributes[attribute];
-    const skillData = character.skills[attribute][skill];
+    const skillData = character.attributes[attribute].skills[skill];
 
     const modifier = AttributeService.calculateModifier(attr.value);
 

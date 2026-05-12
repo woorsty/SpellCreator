@@ -7,54 +7,25 @@ export const ATTRIBUTE_SKILLS = {
   charisma: ["deception", "intimidation", "performance", "persuasion"],
 } as const;
 
-export const ATTRIBUTES = [
-  "strength",
-  "dexterity",
-  "constitution",
-  "intelligence",
-  "wisdom",
-  "charisma",
-] as const;
-
 export type Attribute = keyof typeof ATTRIBUTE_SKILLS;
-
 export type SkillOf<A extends Attribute> = (typeof ATTRIBUTE_SKILLS)[A][number];
 
-export type AllSkills = (typeof ATTRIBUTE_SKILLS)[Attribute][number];
+export type SkillValues = {
+  proficiency: boolean;
+  expertise: boolean;
+};
 
-export type AttributeValues = {
+export type AttributeValues<A extends Attribute> = {
   value: number;
   proficiency: boolean;
-};
-
-export type SkillValues = {
-  expertise: boolean;
-  proficiency: boolean;
-};
-
-export type CharacterAttributes = {
-  [A in Attribute]: AttributeValues;
-};
-
-export type CharacterSkills = {
-  [A in Attribute]: {
+  skills: {
     [S in SkillOf<A>]: SkillValues;
   };
 };
 
-export type SkillViewModel<A extends Attribute> = {
-  name: SkillOf<A>;
-  attributeName: A;
-  value: number;
-  proficiency: boolean;
-  expertiese: boolean;
-  modifier: number;
+export type CharacterAttributes = {
+  [A in Attribute]: AttributeValues<A>;
 };
 
-export type AttributeViewModel = {
-  name: Attribute;
-  modifier: number;
-  savingThrow: number;
-  value: number;
-  proficiency: boolean;
-};
+export type AllSkills =
+  (typeof ATTRIBUTE_SKILLS)[keyof typeof ATTRIBUTE_SKILLS][number];

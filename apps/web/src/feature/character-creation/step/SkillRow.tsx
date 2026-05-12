@@ -1,23 +1,16 @@
 import React from "react";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Label } from "../../../component/ui/Label";
-import {
-  Attribute,
-  AttributeService,
-  CharacterSheet,
-  SkillViewModel,
-} from "@domain";
+import { AttributeService, CharacterSheet, SkillValues } from "@domain";
 import { translate } from "@i18n";
 
-type SkillRowProps<A extends Attribute> = {
-  skill: SkillViewModel<A>;
+type SkillRowProps = {
+  attributeName: string;
+  skill: SkillValues & { name: string; modifier: number };
   updateField: (field: keyof CharacterSheet | string, value: any) => void;
 };
 
-export function SkillRow<A extends Attribute>({
-  skill,
-  updateField,
-}: SkillRowProps<A>) {
+export function SkillRow({ attributeName, skill, updateField }: SkillRowProps) {
   return (
     <div className="flex items-center justify-between text-sm">
       {/* LEFT */}
@@ -26,12 +19,12 @@ export function SkillRow<A extends Attribute>({
           checked={skill.proficiency}
           onChange={(checked) => {
             updateField(
-              `skills.${skill.attributeName}.${skill.name}.proficiency`,
+              `attributes.${attributeName}.skills.${skill.name}.proficiency`,
               checked,
             );
             if (!checked) {
               updateField(
-                `skills.${skill.attributeName}.${skill.name}.expertise`,
+                `attributes.${attributeName}.skills.${skill.name}.expertise`,
                 false,
               );
             }
@@ -39,10 +32,10 @@ export function SkillRow<A extends Attribute>({
         />
         {skill.proficiency && (
           <Checkbox
-            checked={skill.expertiese}
+            checked={skill.expertise}
             onChange={(checked) =>
               updateField(
-                `skills.${skill.attributeName}.${skill.name}.expertise`,
+                `attributes.${attributeName}.skills.${skill.name}.expertise`,
                 checked && skill.proficiency,
               )
             }

@@ -18,16 +18,6 @@ function Stat({ label, value }: { label: string; value: number }) {
 export function CharacterPreview({ character }: Props) {
   const translator = new Translator("characterCreator.preview");
 
-  character.characterClass.features
-    .filter((feat) => feat.level <= character.level)
-    .map((f) => {
-      console.log(f);
-      console.log(
-        translator.translate(
-          `characterClass.${character.characterClass.id}.features.${f.id}.name`,
-        ),
-      );
-    });
   return (
     <div className="p-6 space-y-6 text-sm">
       {/* HEADER */}
@@ -42,7 +32,7 @@ export function CharacterPreview({ character }: Props) {
           <span>
             {translator.translate(".level")} {character.level}
           </span>
-          <span>{translator.translate(`species.${character.species}`)}</span>
+          <span>{translator.translate(`species.${character.species.id}`)}</span>
         </div>
       </section>
 
@@ -75,7 +65,7 @@ export function CharacterPreview({ character }: Props) {
         />
         <Stat
           label={translator.translate("character.speed_short")}
-          value={character.speed}
+          value={character.species.speed}
         />
         <Stat
           label={translator.translate("character.proficiency_short")}

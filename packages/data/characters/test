@@ -1,0 +1,214 @@
+{
+  "talents": [],
+  "name": "test",
+  "background": {
+    "attributes": [],
+    "equipment": [],
+    "id": "noble",
+    "skillProficiencies": [],
+    "feat": "skilled",
+    "toolProficiencies": []
+  },
+  "characterClass": {
+    "id": "fighter",
+    "equipment": [],
+    "features": [],
+    "hitDie": 1,
+    "primaryAbility": [],
+    "proficiencies": {
+      "armor": [],
+      "skillNumber": 0,
+      "skills": [],
+      "weapons": []
+    },
+    "savingThrows": [],
+    "subclasses": []
+  },
+  "species": {
+    "id": "human",
+    "creature_type": "humanoid",
+    "size": [
+      "medium",
+      "small"
+    ],
+    "speed": 9,
+    "feats": [
+      {
+        "id": "resourceful"
+      },
+      {
+        "id": "skillful"
+      },
+      {
+        "id": "versatile"
+      }
+    ]
+  },
+  "subclass": null,
+  "level": 1,
+  "xp": 0,
+  "armorClass": 0,
+  "currentHitpoints": 0,
+  "temporaryHitpoints": 0,
+  "spentHitDice": 0,
+  "maxHitpoints": 0,
+  "hitDiceValue": 0,
+  "successDeathSaves": 0,
+  "failedDeathSaves": 0,
+  "proficiencyBonus": 2,
+  "attributes": {
+    "charisma": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "deception": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "intimidation": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "performance": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "persuasion": {
+          "expertise": false,
+          "proficiency": false
+        }
+      }
+    },
+    "constitution": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {}
+    },
+    "dexterity": {
+      "proficiency": false,
+      "value": 18,
+      "skills": {
+        "acrobatics": {
+          "expertise": false,
+          "proficiency": true
+        },
+        "sleightOfHand": {
+          "expertise": false,
+          "proficiency": true
+        },
+        "stealth": {
+          "expertise": false,
+          "proficiency": true
+        }
+      }
+    },
+    "intelligence": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "arcana": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "history": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "investigation": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "nature": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "religion": {
+          "expertise": false,
+          "proficiency": false
+        }
+      }
+    },
+    "strength": {
+      "proficiency": false,
+      "value": 13,
+      "skills": {
+        "athletics": {
+          "expertise": true,
+          "proficiency": true
+        }
+      }
+    },
+    "wisdom": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "animalHandling": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "insight": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "medicine": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "perception": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "survival": {
+          "expertise": false,
+          "proficiency": false
+        }
+      }
+    }
+  },
+  "heroicInspiration": false,
+  "armorTraining": {
+    "light": false,
+    "heavy": false,
+    "medium": false,
+    "shield": false
+  },
+  "weaponTraining": {
+    "finesse": false,
+    "light": false,
+    "martial": false,
+    "simple": false
+  },
+  "toolProficiencies": [],
+  "initiative": 0,
+  "passivePerception": 0,
+  "attacks": [],
+  "speciesTraits": [],
+  "feats": [],
+  "spellcastingAbility": null,
+  "spellSaveDC": 0,
+  "spellAttackBonus": 0,
+  "spellSlots": {
+    "total": [],
+    "used": []
+  },
+  "preparedSpells": [],
+  "appearance": "",
+  "story": "",
+  "alignment": "true_neutral",
+  "languages": [
+    "Common"
+  ],
+  "equipment": [],
+  "attunedMagicItems": [
+    "",
+    "",
+    ""
+  ],
+  "coins": {
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  }
+}

@@ -1,9 +1,10 @@
+import { OriginFeat } from "./feat";
 import { AllSkills, Attribute } from "./skill";
 
 export type Background = {
   id: string;
   attributes: Attribute[];
-  talent: string;
+  feat: OriginFeat;
   skillProficiencies: AllSkills[];
   toolProficiencies: [];
   equipment: [];

@@ -100,6 +100,7 @@ export function AttributeCard<A extends Attribute>({
                 attributeName,
                 skillName,
               )}
+              attributeName={attributeName}
               updateField={updateField}
             />
           ))}

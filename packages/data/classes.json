@@ -203,6 +203,7 @@
     "id": "bard",
     "primaryAbility": "charisma",
     "hitDice": 8,
+    "castingAttribute": "charisma",
     "savingThrows": ["dexterity", "charisma"],
     "proficiencies": {
       "skillNumber": 3,
@@ -393,6 +394,7 @@
   {
     "id": "druid",
     "primaryAbility": "wisdom",
+    "castingAttribute": "wisdom",
     "hitDice": 8,
     "savingThrows": ["wisdom", "intelligence"],
     "proficiencies": {
@@ -579,6 +581,7 @@
   {
     "id": "warlock",
     "primaryAbility": "charisma",
+    "castingAttribute": "charisma",
     "hitDice": 8,
     "savingThrows": ["wisdom", "charisma"],
     "proficiencies": {
@@ -873,6 +876,7 @@
       },
       {
         "id": "eldritch_knight",
+        "castingAttribute": "intelligence",
         "features": [
           {
             "id": "spellcasting",
@@ -930,6 +934,7 @@
   {
     "id": "cleric",
     "primaryAbility": "wisdom",
+    "castingAttribute": "wisdom",
     "hitDice": 8,
     "savingThrows": ["wisdom", "charisma"],
     "proficiencies": {
@@ -1094,6 +1099,7 @@
   {
     "id": "wizard",
     "primaryAbility": "intelligence",
+    "castingAttribute": "intelligence",
     "hitDice": 6,
     "savingThrows": ["wisdom", "intelligence"],
     "proficiencies": {
@@ -1461,6 +1467,7 @@
   {
     "id": "paladin",
     "primaryAbility": ["strength", "charisma"],
+    "castingAttribute": "charisma",
     "hitDice": 10,
     "savingThrows": ["wisdom", "charisma"],
     "proficiencies": {
@@ -1752,6 +1759,7 @@
     "subclasses": [
       {
         "id": "arcane_trickster",
+        "castingAttribute": "intelligence",
         "features": [
           {
             "id": "spellcasting",
@@ -1855,6 +1863,7 @@
   {
     "id": "ranger",
     "primaryAbility": ["dexterity", "wisdom"],
+    "castingAttribute": "wisdom",
     "hitDice": 10,
     "savingThrows": ["strength", "dexterity"],
     "proficiencies": {
@@ -2054,6 +2063,7 @@
   {
     "id": "sorcerer",
     "primaryAbility": ["charisma"],
+    "castingAttribute": "charisma",
     "hitDice": 6,
     "savingThrows": ["constitution", "charisma"],
     "proficiencies": {
@@ -2223,6 +2233,7 @@
   {
     "id": "arteficer",
     "primaryAbility": ["intelligence"],
+    "castingAttribute": "intelligence",
     "hitDice": 8,
     "savingThrows": ["constitution", "intelligence"],
     "proficiencies": {

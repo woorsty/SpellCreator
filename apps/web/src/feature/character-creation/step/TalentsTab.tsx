@@ -3,7 +3,7 @@ import { StepProps } from "../characterCreator.types";
 import React from "react";
 import { Card } from "../../../component/ui/Card";
 import { ItemList } from "../../../component/ui/ItemList";
-import { Talent } from "@domain";
+import { Feat } from "@domain";
 
 export function TalentsTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.talents");
@@ -19,7 +19,7 @@ export function TalentsTab({ character, updateField }: StepProps) {
             {translator.translate(".talents")}
           </h4>
 
-          <ItemList<Talent>
+          <ItemList<Feat>
             data={character.talents}
             labelProperty="name"
             textProperty="text"

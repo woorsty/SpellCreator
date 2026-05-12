@@ -12,5 +12,7 @@ export * from "./attack";
 export * from "./equipment";
 export * from "./language";
 export * from "./spell-school";
-export * from "./talent";
+export * from "./feat";
 export * from "./background";
+export * from "./level";
+export * from "./spell-slots";

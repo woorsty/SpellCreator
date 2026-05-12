@@ -4,7 +4,17 @@ import { Translator } from "@i18n";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
 import { Button } from "../../../component/ui/Button";
-import { Background, CharacterClass, CharacterClassId, Species } from "@domain";
+import {
+  Background,
+  CharacterClass,
+  CharacterClassId,
+  LEVEL_XP,
+  SPECIES,
+  AllSpecies,
+  SUBCLASS_SPELLSLOTS,
+  Subclass,
+  CLASS_SPELLSLOTS,
+} from "@domain";
 import { LabeledNumberInput } from "../../../component/ui/LabeledNumberInput";
 import { LabeledInput } from "../../../component/ui/LabeledInput";
 
@@ -17,6 +27,23 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
     const newClass = classes.find((cls) => classId === cls.id);
     updateField("characterClass", newClass);
     updateField("subclass", undefined);
+    if (newClass) {
+      updateField("hitDiceValue", newClass.hitDie);
+      const spellSlots = CLASS_SPELLSLOTS[newClass?.id];
+      updateField("spellSlots.total", spellSlots);
+    }
+  }
+
+  function updateSubclass(subclass: Subclass) {
+    updateField("subclass", subclass);
+
+    const spellSlots = SUBCLASS_SPELLSLOTS[subclass.id];
+    updateField("spellSlots.total", spellSlots);
+  }
+
+  function updateSpecies(species: AllSpecies) {
+    const spec = SPECIES[species];
+    updateField("species", spec);
   }
 
   useEffect(() => {
@@ -53,7 +80,10 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           min={1}
           max={20}
           onChange={(value) => {
+            const levelValues = LEVEL_XP[(value as number) - 1];
             updateField("level", value);
+            updateField("xp", levelValues.xp);
+            updateField("proficiencyBonus", levelValues.proficiencyBonus);
             if ((value as number) < 3) updateField("subclass", undefined);
           }}
         />
@@ -76,11 +106,11 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
 
       <Card>
         <Label>{translator.translate(".species")}</Label>{" "}
-        {Object.values(Species).map((species) => (
+        {Object.values(AllSpecies).map((species) => (
           <Button
             key={species}
-            variant={character.species == species ? "primary" : "secondary"}
-            onClick={() => updateField("species", species)}
+            variant={character.species.id == species ? "primary" : "secondary"}
+            onClick={() => updateSpecies(species)}
           >
             {translator.translate(`species.${species}`)}
           </Button>
@@ -133,7 +163,7 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
                 variant={
                   character.subclass?.id == sub.id ? "primary" : "secondary"
                 }
-                onClick={() => updateField("subclass", sub)}
+                onClick={() => updateSubclass(sub)}
               >
                 {translator.translate(
                   `characterClass.${selectedClass.id}.subclasses.${sub.id}.title`,

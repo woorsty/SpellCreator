@@ -1,16 +1,31 @@
-import {
-  Attribute,
-  ATTRIBUTE_SKILLS,
-  AttributeViewModel,
-  CharacterAttributes,
-  CharacterSheet,
-  SkillOf,
-  SkillViewModel,
-} from "../model";
+import { Attribute, CharacterSheet, SkillOf, SkillValues } from "../model";
 
 export class AttributeService {
   public static calculateModifier(value: number): number {
     return Math.floor((value - 10) / 2);
+  }
+
+  public static calculateSkillModifierFromCharacter<
+    A extends Attribute,
+    S extends SkillOf<A>,
+  >(character: CharacterSheet, attribute: A, skill: S) {
+    const attr = character.attributes[attribute];
+    const skillData = attr.skills[skill];
+
+    return AttributeService.calculateSkillModifier(
+      attr.value,
+      skillData.proficiency,
+      skillData.expertise,
+      character.proficiencyBonus,
+    );
+  }
+
+  public static getSkillData<A extends Attribute, S extends SkillOf<A>>(
+    character: CharacterSheet,
+    attribute: A,
+    skill: S,
+  ) {
+    return character.attributes[attribute].skills[skill];
   }
 
   public static calculateSkillModifier(
@@ -44,33 +59,16 @@ export class AttributeService {
     return modifier >= 0 ? `+${modifier}` : `${modifier}`;
   }
 
-  public static getAttributeViewModel(
-    character: CharacterSheet,
-    attributeName: keyof CharacterAttributes,
-  ): AttributeViewModel {
-    const attribute = character.attributes[attributeName];
-
-    const modifier = AttributeService.calculateModifier(attribute.value);
-    const savingThrow = AttributeService.calculateSavingThrow(
-      modifier,
-      attribute.proficiency,
-      character.proficiencyBonus,
-    );
-
-    return {
-      name: attributeName,
-      ...attribute,
-      modifier,
-      savingThrow,
-    };
-  }
-
   public static getSkillViewModel<A extends Attribute>(
     character: CharacterSheet,
     attributeName: A,
     skillName: SkillOf<A>,
-  ): SkillViewModel<A> {
-    const skill = character.skills[attributeName][skillName];
+  ): SkillValues & {
+    name: string;
+    value: number;
+    modifier: number;
+  } {
+    const skill = character.attributes[attributeName].skills[skillName];
     const modifier = AttributeService.calculateSkillModifier(
       character.attributes[attributeName].value,
       skill.proficiency,
@@ -80,10 +78,9 @@ export class AttributeService {
 
     return {
       name: skillName,
-      attributeName,
       value: character.attributes[attributeName].value,
       proficiency: skill.proficiency,
-      expertiese: skill.expertise,
+      expertise: skill.expertise,
       modifier,
     };
   }

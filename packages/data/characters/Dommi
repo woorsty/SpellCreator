@@ -1,0 +1,688 @@
+{
+  "talents": [
+    {
+      "name": "Pupsen",
+      "text": "pup"
+    },
+    {
+      "name": "Rülpsen",
+      "text": "rülp"
+    },
+    {
+      "name": "Tasten",
+      "text": "touch"
+    }
+  ],
+  "name": "Dommi",
+  "background": {
+    "id": "hermit",
+    "attributes": [
+      "constition",
+      "wisdom",
+      "charisma"
+    ],
+    "feat": "healer",
+    "skillProficiencies": [
+      "medicine",
+      "relgion"
+    ],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  "characterClass": {
+    "id": "bard",
+    "primaryAbility": "charisma",
+    "hitDice": 8,
+    "castingAttribute": "charisma",
+    "savingThrows": [
+      "dexterity",
+      "charisma"
+    ],
+    "proficiencies": {
+      "skillNumber": 3,
+      "skills": [
+        "acrobatics",
+        "arcana",
+        "athletics",
+        "intimidation",
+        "sleight_of_hand",
+        "history",
+        "medicine",
+        "stealth",
+        "animal_handling",
+        "insight",
+        "investigation",
+        "nature",
+        "religion",
+        "deception",
+        "survival",
+        "persuasion",
+        "perception"
+      ],
+      "armor": [
+        "light_armor"
+      ],
+      "weapons": [
+        "simple_weapons"
+      ],
+      "equipment": [
+        "choose_3_instruments"
+      ]
+    },
+    "equipment": [
+      "leather_armor",
+      "dagger",
+      "dagger",
+      "choice_instrument",
+      "entertainer_pack",
+      "gold:19"
+    ],
+    "features": [
+      {
+        "id": "bardic_inspiration",
+        "level": 1
+      },
+      {
+        "id": "spellcasting",
+        "level": 1
+      },
+      {
+        "id": "expertise",
+        "level": 2
+      },
+      {
+        "id": "jack_of_all_trades",
+        "level": 2
+      },
+      {
+        "id": "bard_subclass",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "font_of_inspiration",
+        "level": 5
+      },
+      {
+        "id": "countercharm",
+        "level": 7
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 8
+      },
+      {
+        "id": "expertise",
+        "level": 9
+      },
+      {
+        "id": "magical_secrets",
+        "level": 10
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 12
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 16
+      },
+      {
+        "id": "superior_inspiration",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "words_of_creation",
+        "level": 20
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "dance",
+        "features": [
+          {
+            "id": "dazzling_footwork",
+            "level": 3
+          },
+          {
+            "id": "inspiring_movement",
+            "level": 6
+          },
+          {
+            "id": "tandem_footwork",
+            "level": 6
+          },
+          {
+            "id": "leading_evasion",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "valor",
+        "features": [
+          {
+            "id": "combat_inspiration",
+            "level": 3
+          },
+          {
+            "id": "martial_training",
+            "level": 3
+          },
+          {
+            "id": "extra_attack",
+            "level": 6
+          },
+          {
+            "id": "battle_magic",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "lore",
+        "features": [
+          {
+            "id": "bonus_proficiencies",
+            "level": 3
+          },
+          {
+            "id": "cutting_words",
+            "level": 3
+          },
+          {
+            "id": "magical_discoveries",
+            "level": 6
+          },
+          {
+            "id": "peerless_skill",
+            "level": 14
+          }
+        ]
+      },
+      {
+        "id": "glamour",
+        "features": [
+          {
+            "id": "beguiling_magic",
+            "level": 3
+          },
+          {
+            "id": "mantle_of_inspiration",
+            "level": 3
+          },
+          {
+            "id": "mantle_of_majesty",
+            "level": 6
+          },
+          {
+            "id": "unbreakable_majesty",
+            "level": 14
+          }
+        ]
+      }
+    ]
+  },
+  "species": {
+    "id": "halfling",
+    "creature_type": "humanoid",
+    "size": [
+      "small"
+    ],
+    "speed": 9,
+    "feats": [
+      {
+        "id": "brave"
+      },
+      {
+        "id": "halfling_nimbless"
+      },
+      {
+        "id": "luck"
+      },
+      {
+        "id": "naturally_stealthy"
+      }
+    ]
+  },
+  "level": 20,
+  "xp": 355000,
+  "armorClass": 15,
+  "currentHitpoints": 45,
+  "temporaryHitpoints": 0,
+  "spentHitDice": 0,
+  "maxHitpoints": 45,
+  "successDeathSaves": 0,
+  "failedDeathSaves": 0,
+  "proficiencyBonus": 6,
+  "attributes": {
+    "charisma": {
+      "proficiency": true,
+      "value": 23,
+      "skills": {
+        "deception": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "intimidation": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "performance": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "persuasion": {
+          "expertise": false,
+          "proficiency": true
+        }
+      }
+    },
+    "constitution": {
+      "proficiency": false,
+      "value": 6,
+      "skills": {}
+    },
+    "dexterity": {
+      "proficiency": true,
+      "value": 4,
+      "skills": {
+        "acrobatics": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "sleightOfHand": {
+          "expertise": true,
+          "proficiency": true
+        },
+        "stealth": {
+          "expertise": false,
+          "proficiency": false
+        }
+      }
+    },
+    "intelligence": {
+      "proficiency": false,
+      "value": 9,
+      "skills": {
+        "arcana": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "history": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "investigation": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "nature": {
+          "expertise": false,
+          "proficiency": true
+        },
+        "religion": {
+          "expertise": false,
+          "proficiency": true
+        }
+      }
+    },
+    "strength": {
+      "proficiency": true,
+      "value": 17,
+      "skills": {
+        "athletics": {
+          "expertise": false,
+          "proficiency": true
+        }
+      }
+    },
+    "wisdom": {
+      "proficiency": false,
+      "value": 18,
+      "skills": {
+        "animalHandling": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "insight": {
+          "expertise": false,
+          "proficiency": true
+        },
+        "medicine": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "perception": {
+          "expertise": false,
+          "proficiency": false
+        },
+        "survival": {
+          "expertise": true,
+          "proficiency": true
+        }
+      }
+    }
+  },
+  "heroicInspiration": false,
+  "armorTraining": {
+    "light": true,
+    "heavy": false,
+    "medium": true,
+    "shield": false
+  },
+  "weaponTraining": {
+    "finesse": true,
+    "light": false,
+    "martial": true,
+    "simple": false
+  },
+  "toolProficiencies": [
+    {
+      "name": "Tastatur",
+      "notes": "Kann tippen"
+    },
+    {
+      "name": "Maus",
+      "notes": "Kann klicken"
+    }
+  ],
+  "initiative": -3,
+  "passivePerception": 14,
+  "attacks": [
+    {
+      "id": "3905a0b6-496a-4a04-a1a2-39a7cb1c9504",
+      "name": "Feuerball",
+      "attackBonus": 4,
+      "sg": 18,
+      "damage": "6W6",
+      "damageType": "fire",
+      "notes": "Boom"
+    }
+  ],
+  "speciesTraits": [],
+  "feats": [],
+  "spellcastingAbility": null,
+  "spellSaveDC": 12,
+  "spellAttackBonus": 6,
+  "spellSlots": {
+    "total": [
+      {
+        "slot1": 2
+      },
+      {
+        "slot1": 3
+      },
+      {
+        "slot1": 4,
+        "slot2": 2
+      },
+      {
+        "slot1": 4,
+        "slot2": 3
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 2
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 2
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1,
+        "slot7": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1,
+        "slot7": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1,
+        "slot7": 1,
+        "slot8": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1,
+        "slot7": 1,
+        "slot8": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 2,
+        "slot6": 1,
+        "slot7": 1,
+        "slot8": 1,
+        "slot9": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 3,
+        "slot6": 2,
+        "slot7": 1,
+        "slot8": 1,
+        "slot9": 1
+      },
+      {
+        "slot1": 4,
+        "slot2": 3,
+        "slot3": 3,
+        "slot4": 3,
+        "slot5": 3,
+        "slot6": 2,
+        "slot7": 2,
+        "slot8": 1,
+        "slot9": 1
+      }
+    ],
+    "used": []
+  },
+  "preparedSpells": [
+    {
+      "level": "1",
+      "name": "Befehl",
+      "school": "enchantment",
+      "castingTime": "Aktion",
+      "range": "18 Meter",
+      "duration": "Unmittelbar",
+      "concentration": false,
+      "ritual": false,
+      "components": {
+        "gestic": false,
+        "verbal": true,
+        "material": ""
+      },
+      "text": "Du gibst einer Kreatur in Reichweite, die du sehen kannst, einen ein Wort langen Befehl. Das Ziel muss einen Weisheitsrettungswurf bestehen oder den Befehl im nächsten Zug ausführen. Wähle den Befehl aus diesen Optionen aus: \r\nAnhalten: Das Ziel bewegt sich in seinem Zug nicht und führt weder eine Aktion noch eine Bonusaktion aus, \r\nFliehen: Das Ziel nutzt seinen Zug, um sich so schnell wie möglich von dir wegzubewegen. \r\nHerkommen: Das Ziel bewegt sich auf dem kürzesten Weg in deine Richtung und beendet seinen Zug, sobald es sich auf höchstens 1,5 Meter genähert hat. \r\nHinlegen: Das Ziel legt sich nieder und beendet dann seinen Zug. \r\nLoslassen: Das Ziel lässt fallen, was es gerade hält, und beendet seinen Zug.",
+      "characterClasses": [
+        "bard",
+        "cleric",
+        "paladin"
+      ],
+      "higherLevel": "Für jeden Zauberplatzgrad über dem 1. kannst du eine weitere Kreatur beeinflussen.",
+      "notes": "Weil ich kann"
+    },
+    {
+      "level": "3",
+      "name": "Feuerball",
+      "school": "evocation",
+      "castingTime": "Aktion",
+      "range": "45 Meter",
+      "duration": "Unmittelbar",
+      "concentration": false,
+      "ritual": false,
+      "components": {
+        "gestic": true,
+        "verbal": true,
+        "material": "Eine Kugel aus Fledermaus-Guano und Schwefel"
+      },
+      "text": "Du verschießt einen hellen Lichtstrahl auf einen Punkt deiner Wahl in Reichweite, wo er unter dumpfem Grollen zu einer Flammenexplosion detoniert. Jede Kreatur in einer Kugel mit einem Radius von sechs Metern um diesen Punkt führt einen Geschicklichkeitsrettungswurf aus. Scheitert der Wurf, so erleidet sie 8W6 Feuerschaden, anderenfalls die Hälfte. \r\nBrennbare Gegenstände im Bereich, die nicht getragen oder gehalten werden, beginnen zu brennen. ",
+      "characterClasses": [
+        "wizard",
+        "sorcerer"
+      ],
+      "higherLevel": "Für jeden Zauberplatzgrad über dem 3. wird der Schaden um 1W6 erhöht. ",
+      "notes": "Weil eben nicht"
+    },
+    {
+      "level": "5",
+      "name": "Ablenkung",
+      "school": "illusion",
+      "castingTime": "Aktion",
+      "range": "Selbst",
+      "duration": "Bis zu 1 Stunde",
+      "concentration": true,
+      "ritual": false,
+      "components": {
+        "gestic": true,
+        "verbal": false,
+        "material": ""
+      },
+      "text": "Du wirst unsichtbar, und gleichzeitig erscheint in deinem Bereich ein illusionärer Doppelgänger von dir. Dieser bleibt für die Wirkungsdauer bestehen, doch deine Unsichtbarkeit endet, sobald du einen Angriffswurf ausführst, Schaden bewirkst oder einen Zauber wirkst. Als magische Aktion kannst du deinen illusionären Doppelgänger bis zu deiner doppelten Bewegungsrate bewegen und ihn gestikulieren, sprechen und auf eine beliebige Art handeln lassen. Er ist immateriell und unverwundbar. Du kannst durch seine Augen sehen und durch seine Ohren hören, als befändest du dich am selben Ort.",
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard"
+      ],
+      "higherLevel": "",
+      "notes": ""
+    },
+    {
+      "level": "1",
+      "name": "Alarm",
+      "castingTime": "1 Minute",
+      "range": "9 Meter",
+      "duration": "8 Stunden",
+      "concentration": false,
+      "ritual": true,
+      "components": {
+        "gestic": true,
+        "verbal": true,
+        "material": "Glocke oder Silberdraht"
+      },
+      "text": "Du erschaffst einen Alarm gegen Eindringen. Wähle eine Tür, ein Fenster oder einen Bereich in Reichweite aus, der nicht größer als ein Würfel mit sechs Metern Kantenlänge sein darf. Für die Wirkungsdauer warnt dich ein Alarm, wann immer eine Kreatur den geschützten Bereich berührt oder in ihm eindringt. Wenn du den Zauber wirkst, kannst du Kreaturen bestimmen, die den Alarm nicht auslösen. Außerdem wählst du aus, ob der Alarm akustisch oder mental erfolgt.\r\nAkustischer Alarm: Der Alarm erzeugt im Abstand von bis zu 18 Metern vom geschützten Bereich zehn Sekunden lang das Geräusch einer Handglocke.\r\nMentaler Alarm: Du wirst von einem mentalen Ping gewarnt, wenn du dich im Abstand von bis zu 1,6 Kilometern vom geschützten Bereich befindest. Dieser Ping weckt dich, wenn du schläfst",
+      "characterClasses": [
+        "wizard",
+        "ranger",
+        null
+      ],
+      "higherLevel": "",
+      "notes": ""
+    }
+  ],
+  "appearance": "Stylisch",
+  "story": "Viel viel viel",
+  "alignment": "neutral_good",
+  "languages": [
+    "Common",
+    "draconic",
+    "sign_language",
+    "gnomish",
+    "orc",
+    "deep_speech"
+  ],
+  "equipment": [
+    {
+      "name": "Schuhe",
+      "notes": "2x"
+    },
+    {
+      "name": "Bananen",
+      "notes": "3x"
+    }
+  ],
+  "attunedMagicItems": {
+    "0": "Magic Banana",
+    "1": "Magische Mütze",
+    "2": ""
+  },
+  "coins": {
+    "copper": 100,
+    "silver": 50,
+    "electrum": 22,
+    "gold": 18,
+    "platinum": 9
+  }
+}

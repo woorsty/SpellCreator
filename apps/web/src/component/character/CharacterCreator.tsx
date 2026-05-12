@@ -1,12 +1,13 @@
 import React, { useReducer } from "react";
 import { CharacterSheet } from "@domain";
-import { translate } from "@i18n";
+import { Translator } from "@i18n";
 import { CharacterCreationStep } from "../../feature/character-creation/character-creator-stpes";
 import { stepRegistry } from "../../feature/character-creation/step-registry";
 import { State } from "../../feature/character-creation/characterCreator.types";
 import { characterCreationReducer } from "../../feature/character-creation/characterCreator.reducer";
 import { CharacterPreview } from "../../feature/character-creation/CharacterPreview";
 import { CharacterService } from "@domain";
+import { Button } from "../ui/Button";
 
 const emptyCharacter: CharacterSheet = CharacterService.getEmptyCharacter();
 
@@ -24,6 +25,22 @@ const initialState: State = {
 // -----------------------------
 
 export default function CharacterCreator() {
+  function submitCharacter() {
+    CharacterService.checkIfCharacterExists(character).then((res) => {
+      if (res.exists) {
+        const shouldOverwrite = window.confirm(
+          translator.translate(".overwrite_character"),
+        );
+        if (shouldOverwrite) {
+          CharacterService.addNewCharacter(character);
+        }
+      } else {
+        CharacterService.addNewCharacter(character);
+      }
+    });
+  }
+
+  const translator = new Translator("characterCreator");
   const [state, dispatch] = useReducer(characterCreationReducer, initialState);
   const { step, character } = state;
 
@@ -40,14 +57,21 @@ export default function CharacterCreator() {
     if (!StepComponent) {
       return <div>Tab nicht gefunden</div>;
     }
-    return <StepComponent character={character} updateField={updateField} />;
+    return (
+      <StepComponent
+        character={character}
+        updateField={(field: string, value: any) =>
+          updateField(field as keyof CharacterSheet, value)
+        }
+      />
+    );
   }
 
   return (
     <div style={styles.layout}>
       {/* NAV */}
       <aside style={styles.card}>
-        <h2>{translate("characterCreator.title")}</h2>
+        <h2>{translator.translate(".title")}</h2>
         {Object.values(CharacterCreationStep)
           .filter((v): v is CharacterCreationStep => typeof v === "number")
           .map((s, i) => (
@@ -59,11 +83,14 @@ export default function CharacterCreator() {
                 borderColor: step === s ? "#3b82f6" : "#4b4f57",
               }}
             >
-              {translate(
-                `characterCreator.steps.${CharacterCreationStep[s].toLowerCase()}.title`,
+              {translator.translate(
+                `.steps.${CharacterCreationStep[s].toLowerCase()}.title`,
               )}
             </div>
           ))}
+        <Button variant="primary" onClick={() => submitCharacter()}>
+          {translator.translate(".submit")}
+        </Button>
       </aside>
 
       {/* MAIN */}

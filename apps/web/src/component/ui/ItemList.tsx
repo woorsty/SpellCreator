@@ -59,7 +59,15 @@ export function ItemList<T>({
     <div className="space-y-3">
       {/* Add */}
       <div className="flex gap-2">
-        <Input value={newItem} onChange={(e) => setNewItem(e.target.value)} />
+        <Input
+          value={newItem}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              addItem();
+            }
+          }}
+          onChange={(e) => setNewItem(e.target.value)}
+        />
         <Button onClick={addItem}>+</Button>
       </div>
 

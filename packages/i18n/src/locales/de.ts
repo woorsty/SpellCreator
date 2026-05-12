@@ -343,7 +343,7 @@ export const de = {
       subclasses: {
         champion: { title: "Champion" },
         battle_master: { title: "Kampfmeister" },
-        eldrich_knight: { title: "Mystischer Ritter" },
+        eldritch_knight: { title: "Mystischer Ritter" },
         psi_warrior: { title: "Psi-Krieger" },
       },
     },
@@ -413,7 +413,7 @@ export const de = {
   },
   background: {
     noble: "Adliger",
-    akolyth: "Akolyth",
+    acolyte: "Akolyth",
     farmer: "Bauer",
     hermit: "Einsiedler",
     merchant: "Händler",
@@ -490,6 +490,8 @@ export const de = {
   },
   characterCreator: {
     title: "Charakter Erstellung",
+    submit: "Fertig",
+    overwrite_character: "Überschreiben?",
     steps: {
       basic_info: {
         title: "Charakterdaten",

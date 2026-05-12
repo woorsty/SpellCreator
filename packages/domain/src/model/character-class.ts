@@ -25,21 +25,24 @@ export type CharacterClass = {
   equipment: string[];
   features: ClassFeature[];
   subclasses: Subclass[];
+  castingAttribute?: Attribute | null;
 };
 
 export type Proficience = {
-  Skills: string[];
-  Armor: string[];
-  Weapons: string[];
-  SkillNumber: number;
+  skills: string[];
+  armor: string[];
+  weapons: string[];
+  skillNumber: number;
 };
 
 export type ClassFeature = {
   id: string;
   level: number;
+  notes?: string;
 };
 
 export type Subclass = {
   id: string;
   features: ClassFeature[];
+  castingAttribute?: Attribute | null;
 };

@@ -62,6 +62,19 @@ router.get("/characters", (req, res) => {
   res.json(characters);
 });
 
+router.get("/characters/:name", (req, res) => {
+  const exists = fs.existsSync(CHARACTERS_PATH + "/" + req.params.name);
+  console.log(exists);
+  res.json({ exists: exists });
+});
+
+router.post("/characters/:name", (req, res) => {
+  const character = JSON.stringify(req.body, null, 2);
+  fs.writeFileSync(CHARACTERS_PATH + "/" + req.params.name, character);
+
+  res.json({ ok: true });
+});
+
 router.get("/characters/:id", (req, res) => {
   const { id } = req.params;
 
