@@ -168,6 +168,13 @@
             "Stufe": "3",
             "HöhereStufe": "",
             "Reference": ""
+          },
+          {
+            "Name": "Geistloser Kampfrausch",
+            "Description": "Während du im Kampfrausch bist, bist du gegen die Zustände Bezaubert und Verängstigt immun. Wenn du zu Beginn deines Kampfrauschs bezaubert oder verängstigt bist, endet der Zustand",
+            "Stufe": 6,
+            "HöhereStufe": "",
+            "Reference": ""
           }
         ]
       },

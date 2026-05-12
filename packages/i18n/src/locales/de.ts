@@ -72,6 +72,10 @@ export const de = {
   characterClass: {
     arteficer: {
       title: "Magieschmied",
+      feats: {
+        name: "",
+        description: "",
+      },
       subclasses: {
         alchemist: { title: "Alchemist" },
         armorer: { title: "Rüstungsschmied" },

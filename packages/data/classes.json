@@ -40,11 +40,42 @@
     "subclasses": [
       {
         "id": "berserker",
-        "features": [{ "id": "frenzy", "level": 3 }]
+        "features": [
+          { "id": "frenzy", "level": 3 },
+          { "id": "mindless_rage", "level": 6 },
+          { "id": "intimidating_presence", "level": 10 },
+          { "id": "retaliation", "level": 14 }
+        ]
       },
-      { "id": "zealot", "features": [] },
-      { "id": "world_tree", "features": [] },
-      { "id": "wild_heart", "features": [] }
+      {
+        "id": "zealot",
+        "features": [
+          { "id": "devine_fury", "level": 3 },
+          { "id": "warrior_of_the_gods", "level": 3 },
+          { "id": "fanatical_focus", "level": 6 },
+          { "id": "zealous_presence", "level": 10 },
+          { "id": "divine_fury", "level": 14 }
+        ]
+      },
+      {
+        "id": "world_tree",
+        "features": [
+          { "id": "vitality_of_the_tree", "level": 3 },
+          { "id": "branches_of_the_tree", "level": 6 },
+          { "id": "battering_roots", "level": 10 },
+          { "id": "travel_along_the_tree", "level": 14 }
+        ]
+      },
+      {
+        "id": "wild_heart",
+        "features": [
+          { "id": "animal_speaker", "level": 3 },
+          { "id": "rage_of_the_wilds", "level": 3 },
+          { "id": "aspect_of_the_wilds", "level": 6 },
+          { "id": "commune_with_nature", "level": 10 },
+          { "id": "power_of_the_wilds", "level": 14 }
+        ]
+      }
     ]
   },
 
@@ -88,10 +119,42 @@
     ],
     "features": [],
     "subclasses": [
-      { "id": "dance", "features": [] },
-      { "id": "valor", "features": [] },
-      { "id": "lore", "features": [] },
-      { "id": "counterspell", "features": [] }
+      {
+        "id": "dance",
+        "features": [
+          { "id": "dazzling_footwork", "level": 3 },
+          { "id": "inspiring_movement", "level": 6 },
+          { "id": "tandem_footwork", "level": 6 },
+          { "id": "leading_evasion", "level": 14 }
+        ]
+      },
+      {
+        "id": "valor",
+        "features": [
+          { "id": "combat_inspiration", "level": 3 },
+          { "id": "martial_training", "level": 3 },
+          { "id": "extra_attack", "level": 6 },
+          { "id": "battle_magic", "level": 14 }
+        ]
+      },
+      {
+        "id": "lore",
+        "features": [
+          { "id": "bonus_proficiencies", "level": 3 },
+          { "id": "cutting_words", "level": 3 },
+          { "id": "magical_discoveries", "level": 6 },
+          { "id": "peerless_skill", "level": 14 }
+        ]
+      },
+      {
+        "id": "glamour",
+        "features": [
+          { "id": "beguiling_magic", "level": 3 },
+          { "id": "mantle_of_inspiration", "level": 3 },
+          { "id": "mantle_of_majesty", "level": 6 },
+          { "id": "unbreakable_majesty", "level": 14 }
+        ]
+      }
     ]
   },
 

@@ -83,7 +83,7 @@ export class ClassController {
     res: Response,
     subclass: boolean = false,
   ) {
-    const { Stufe, Name, Text, HöhereStufe, Referenz } = req.body as any;
+    const { Stufe, Name } = req.body as any;
 
     const classFeature: ClassFeature = {
       id: Name,
@@ -159,7 +159,7 @@ export class ClassController {
     const className = req.params.name as string;
     const featureName = req.params.feature as string;
     const subclass = req.params.subclass as string | undefined;
-    const { Stufe, HöhereStufe, Referenz, Text } = req.body as any;
+    const { Stufe } = req.body as any;
 
     const classesData = await JsonService.readJsonFile<CharacterClass>(
       ClassController.jsonFilepath,
