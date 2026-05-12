@@ -4,19 +4,23 @@ import { MarkdownService } from "@domain";
 import { CHARACTERS_PATH } from "../api/apiRouter";
 import { CharacterService } from "@domain";
 import { CharacterSheet } from "@domain";
+import { Services } from "../../services";
 
 export class CharacterController {
-  static getAll(req: Request, res: Response) {
-    const allCharacters = CharacterController.getAllCharacters();
+  constructor(private services: Services) {}
+
+  getAll = async (req: Request, res: Response) => {
+    const allCharacters = await this.getAllCharacters();
+    console.log(allCharacters);
     res.render("character-list", {
       characters: allCharacters,
       renderMarkdown: MarkdownService.renderMarkdown,
     });
-  }
+  };
 
-  static async get(req: Request, res: Response) {
+  get = async (req: Request, res: Response) => {
     const characterName = req.params.name as string;
-    const allCharacters = await CharacterController.getAllCharacters();
+    const allCharacters = await this.getAllCharacters();
     const currentCharacter = allCharacters.find(
       (character) =>
         character.name.toLowerCase() === characterName.toLowerCase(),
@@ -32,17 +36,17 @@ export class CharacterController {
         renderMarkdown: MarkdownService.renderMarkdown,
       });
     }
-  }
+  };
 
-  private static async getAllCharacters(): Promise<CharacterSheet[]> {
+  private getAllCharacters = async (): Promise<CharacterSheet[]> => {
     const characterData =
       await JsonService.readJsonFilesInDirectory<CharacterSheet>(
         CHARACTERS_PATH,
       );
     return characterData;
-  }
+  };
 
-  static async openNewCharacterSheet(req: Request, res: Response) {
+  openNewCharacterSheet = async (req: Request, res: Response) => {
     res.redirect("/creator?step=0");
-  }
+  };
 }

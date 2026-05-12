@@ -56,6 +56,7 @@ export function AttributeCard<A extends Attribute>({
             <div className="flex items-center gap-2">
               <NumberInput
                 value={attribute.value}
+                min={0}
                 onChange={(value) =>
                   updateField(
                     `attributes.${attributeName}.value` as keyof CharacterSheet,

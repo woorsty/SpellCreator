@@ -37,7 +37,7 @@ export type CharacterSheet = {
   proficiencyBonus: number;
 
   attributes: CharacterAttributes;
-  talents: Feat[];
+  feats: Feat[];
 
   heroicInspiration: boolean;
 
@@ -76,7 +76,7 @@ export type CharacterSheet = {
   languages: string[];
 
   equipment: EquipmentItem[];
-  attunedMagicItems: string[];
+  attunedMagicItems: { 0: string; 1: string; 2: string };
 
   coins: {
     copper: number;

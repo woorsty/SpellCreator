@@ -7,11 +7,13 @@ import invocationRoutes from "./module/anrufung/invocationRoute";
 import spellCardRoutes from "./module/spellcard/spellcardRoute";
 import classRoutes from "./module/class/classRouter";
 import dataRoutes from "./module/data/dataRouter";
-import characterRouter from "./module/character/characterRouter";
+import { createCharacterRouter } from "./module/character/characterRouter";
 import apiRouter from "./module/api/apiRouter";
+import { services } from "./services";
 
 const app = express();
 const port = 3000;
+app.locals.services = services;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,7 +30,7 @@ app.use("/invocation", invocationRoutes);
 app.use("/spellcard", spellCardRoutes);
 app.use("/class", classRoutes);
 app.use("/data", dataRoutes);
-app.use("/character", characterRouter);
+app.use("/character", createCharacterRouter(services));
 app.use("/api", apiRouter);
 
 app.listen(port, "::", () => {

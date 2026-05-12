@@ -588,6 +588,14 @@
    return n >= 0 ? "+" + n : n;
 } %>
 
+  <% function getAttribute(attribute){
+  return character.attributes[attribute];
+} %>
+
+  <% function getSkill(skill, attribute){
+  return character.attributes[attribute].skills[skill];
+} %>
+
   <div class="sheet">
 
     <!-- TOP -->
@@ -752,28 +760,28 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.strength.value %>
+                      <%= getAttribute("strength").value %>
                     </div>
                   </div>
 
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.strength.modifier) %>
+                      <%= sign(getAttribute("strength").modifier) %>
                     </div>
                   </div>
 
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.strength.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.strength.savingThrow) %></div>
+                  <div class="skill-check"><%= getAttribute("strength").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getAttribute("strength").savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.athletics.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.athletics.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("athletics", "strength").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("athletics", "strength").modifier) %></div>
                   <div class="skill-name">Athletik</div>
                 </div>
               </div>
@@ -784,38 +792,38 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.dexterity.value %>
+                      <%= getAttribute("dexterity").value %>
                     </div>
                   </div>
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.dexterity.modifier) %>
+                      <%= sign(getAttribute("dexterity").modifier) %>
                     </div>
                   </div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.dexterity.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.dexterity.savingThrow) %></div>
+                  <div class="skill-check"><%= getAttribute("dexterity").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getAttribute("dexterity").savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.acrobatics.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.acrobatics.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("acrobatics", "dexterity").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("acrobatics","dexterity").modifier) %></div>
                   <div class="skill-name">Akrobatik</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.sleightOfHand.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.sleightOfHand.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("sleightOfHand", "dexterity").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("sleightOfHand", "dexterity").modifier) %></div>
                   <div class="skill-name">Fingerfertigkeit</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.stealth.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.stealth.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("sleightOfHand", "dexterity").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill( "stealth", "dexterity").modifier) %></div>
                   <div class="skill-name">Heimlichkeit</div>
                 </div>
               </div>
@@ -826,20 +834,20 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.constitution.value %>
+                      <%= getAttribute("constitution").value %>
                     </div>
                   </div>
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.constitution.modifier) %>
+                      <%= sign(getAttribute("constitution").modifier) %>
                     </div>
                   </div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.constitution.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.constitution.modifier) %></div>
+                  <div class="skill-check"><%= getAttribute("constitution").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getAttribute("constitution").modifier) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
               </div>
@@ -857,44 +865,44 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.intelligence.value %>
+                      <%= getAttribute("intelligence").value %>
                     </div>
                   </div>
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.intelligence.modifier) %>
+                      <%= sign(getAttribute("intelligence").modifier) %>
                     </div>
                   </div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.arcana.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.arcana.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("arcana", "intelligence").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("arcana", "intelligence").modifier) %></div>
                   <div class="skill-name">Arkane Kunde</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.history.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.history.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("history", "intelligence").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("history", "intelligence").modifier) %></div>
                   <div class="skill-name">Geschichte</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.investigation.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.investigation.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("investigation", "intelligence").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("investigation", "intelligence").modifier) %></div>
                   <div class="skill-name">Nachforschung</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.nature.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.nature.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("nature", "intelligence").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("nature", "intelligence").modifier) %></div>
                   <div class="skill-name">Naturkunde</div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.religion.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.religion.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("religion", "intelligence").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("religion", "intelligence").modifier) %></div>
                   <div class="skill-name">Religion</div>
                 </div>
               </div>
@@ -905,45 +913,45 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.wisdom.value %>
+                      <%= getAttribute("wisdom").value %>
                     </div>
                   </div>
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.wisdom.modifier) %>
+                      <%= sign( getAttribute("wisdom").modifier) %>
                     </div>
                   </div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.wisdom.savingThrow ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.wisdom.savingThrow) %></div>
+                  <div class="skill-check"><%=  getAttribute("wisdom").savingThrow ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign( getAttribute("wisdom").savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.medicine.proficiency ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.medicine.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("medicine", "wisdom").proficiency ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign( getSkill("medicine", "wisdom").modifier) %></div>
                   <div class="skill-name">Heilkunde</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.animalHandling.proficiency ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.animalHandling.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("animalHandling", "wisdom").proficiency ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("animalHandling", "wisdom").modifier) %></div>
                   <div class="skill-name">Mit Tieren umgehen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.insight.proficiency ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.insight.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("insight", "wisdom").proficiency ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("insight", "wisdom").modifier) %></div>
                   <div class="skill-name">Motiv erkennen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.survival.proficiency ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.survival.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("survival", "wisdom").proficiency ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("survival", "wisdom").modifier) %></div>
                   <div class="skill-name">Überlebenskunst</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.perception.proficiency ? ' filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.perception.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("medicine", "wisdom").proficiency ? ' filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("medicine", "wisdom").modifier) %></div>
                   <div class="skill-name">Wahrnehmung</div>
                 </div>
               </div>
@@ -954,40 +962,40 @@
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Wert</div>
                     <div class="ability-stat-value">
-                      <%= character.charisma.value %>
+                      <%= getAttribute("charisma").value %>
                     </div>
                   </div>
                   <div class="ability-statbox">
                     <div class="ability-stat-label">Mod</div>
                     <div class="ability-stat-mod">
-                      <%= sign(character.charisma.modifier) %>
+                      <%= sign(getAttribute("charisma").modifier) %>
                     </div>
                   </div>
                 </div>
 
                 <div class="skill-row">
-                  <div class="skill-check<%= character.charisma.savingThrow ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.charisma.savingThrow) %></div>
+                  <div class="skill-check"><%=getAttribute("charisma").savingThrow ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getAttribute("charisma").savingThrow) %></div>
                   <div class="skill-name">Rettungswurf</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.performance.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.performance.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("performance", "charisma").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("performance", "charisma").modifier) %></div>
                   <div class="skill-name">Auftreten</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.intimidation.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.intimidation.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("intimidation", "charisma").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("intimidation", "charisma").modifier) %></div>
                   <div class="skill-name">Einschüchtern</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.deception.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.deception.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("deception", "charisma").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("deception", "charisma").modifier) %></div>
                   <div class="skill-name">Täuschen</div>
                 </div>
                 <div class="skill-row">
-                  <div class="skill-check<%= character.persuasion.proficiency ? 'filled' : '' %>"></div>
-                  <div class="skill-mod"><%= sign(character.persuasion.modifier) %></div>
+                  <div class="skill-check"><%= getSkill("persuasion", "charisma").proficiency ? 'filled' : '' %>"></div>
+                  <div class="skill-mod"><%= sign(getSkill("persuasion", "charisma").modifier) %></div>
                   <div class="skill-name">Überzeugen</div>
                 </div>
 
@@ -1110,17 +1118,7 @@
               <th>Notizen</th>
             </tr>
 
-            <% character.weapons.forEach(w=>{ %>
-            <tr>
-              <td><%= w.name %></td>
-              <td><%= sign(w.attackBonus) + "/" + sign(w.difficultyBonus) %></td>
-              <td><%= w.damage %></td>
-              <td><%= w.damageType %></td>
-              <td><%= w.notes %></td>
-            </tr>
-            <% }) %>
-
-            <% character.damageCantrips.forEach(w=>{ %>
+            <% character.attacks.forEach(w=>{ %>
             <tr>
               <td><%= w.name %></td>
               <td><%= sign(w.attackBonus) + "/" + sign(w.difficultyBonus) %></td>
@@ -1138,7 +1136,7 @@
           <div class="card">
             <h2 class="section-title">Klassenmerkmale</h2>
             <ul class="list">
-              <% character.classFeatures.forEach(x=>{ %>
+              <% character.characterClass.features.forEach(x=>{ %>
               <li><%= x %></li>
               <% }) %>
             </ul>
@@ -1147,7 +1145,7 @@
           <div class="card">
             <h2 class="section-title">Volksmerkmale</h2>
             <ul class="list">
-              <% character.speciesTraits.forEach(x=>{ %>
+              <% character.species.feats.forEach(x=>{ %>
               <li><%= x %></li>
               <% }) %>
             </ul>
@@ -1263,7 +1261,7 @@
               <th>Notizen</th>
             </tr>
 
-            <% character.cantripsAndPreparedSpells.forEach(spell=>{ %>
+            <% character.preparedSpells.forEach(spell=>{ %>
             <tr>
               <td><%= spell.Stufe %></td>
               <td><a href="/spell/<%= spell.Name %>" target="_blank"><%= spell.Name %></a></td>
@@ -1320,7 +1318,7 @@
         <div class="card">
           <h2 class="section-title">Eingestimmte magische Gegenstände</h2>
           <ul class="list">
-            <% character.attunedMagicItems.forEach(x=>{ %>
+            <% Object.values(character.attunedMagicItems).forEach(x=>{ %>
             <li><%= x %></li>
             <% }) %>
           </ul>

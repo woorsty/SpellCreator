@@ -20,7 +20,7 @@ export function TalentsTab({ character, updateField }: StepProps) {
           </h4>
 
           <ItemList<Feat>
-            data={character.talents}
+            data={character.feats}
             labelProperty="name"
             textProperty="text"
             field="talents"

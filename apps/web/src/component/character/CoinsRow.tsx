@@ -1,6 +1,5 @@
 import React from "react";
 import { NumberInput } from "../../component/ui/NumberInput";
-import { Label } from "../../component/ui/Label";
 import { Translator } from "@i18n";
 
 type CoinsRowProps = {

@@ -70,7 +70,10 @@ router.get("/characters/:name", (req, res) => {
 
 router.post("/characters/:name", (req, res) => {
   const character = JSON.stringify(req.body, null, 2);
-  fs.writeFileSync(CHARACTERS_PATH + "/" + req.params.name, character);
+  fs.writeFileSync(
+    CHARACTERS_PATH + "/" + req.params.name + ".json",
+    character,
+  );
 
   res.json({ ok: true });
 });

@@ -13,7 +13,7 @@
       "text": "touch"
     }
   ],
-  "name": "Dommi",
+  "name": "Dommi2",
   "background": {
     "id": "hermit",
     "attributes": [
@@ -269,26 +269,32 @@
       "skills": {
         "deception": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 6
         },
         "intimidation": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 6
         },
         "performance": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 6
         },
         "persuasion": {
           "expertise": false,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 12
         }
-      }
+      },
+      "modifier": 6
     },
     "constitution": {
       "proficiency": false,
       "value": 6,
-      "skills": {}
+      "skills": {},
+      "modifier": -2
     },
     "dexterity": {
       "proficiency": true,
@@ -296,17 +302,21 @@
       "skills": {
         "acrobatics": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": -3
         },
         "sleightOfHand": {
           "expertise": true,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 9
         },
         "stealth": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": -3
         }
-      }
+      },
+      "modifier": -3
     },
     "intelligence": {
       "proficiency": false,
@@ -314,25 +324,31 @@
       "skills": {
         "arcana": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": -1
         },
         "history": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": -1
         },
         "investigation": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": -1
         },
         "nature": {
           "expertise": false,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 5
         },
         "religion": {
           "expertise": false,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 5
         }
-      }
+      },
+      "modifier": -1
     },
     "strength": {
       "proficiency": true,
@@ -340,9 +356,11 @@
       "skills": {
         "athletics": {
           "expertise": false,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 9
         }
-      }
+      },
+      "modifier": 3
     },
     "wisdom": {
       "proficiency": false,
@@ -350,25 +368,31 @@
       "skills": {
         "animalHandling": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 4
         },
         "insight": {
           "expertise": false,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 10
         },
         "medicine": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 4
         },
         "perception": {
           "expertise": false,
-          "proficiency": false
+          "proficiency": false,
+          "modifier": 4
         },
         "survival": {
           "expertise": true,
-          "proficiency": true
+          "proficiency": true,
+          "modifier": 16
         }
-      }
+      },
+      "modifier": 4
     }
   },
   "heroicInspiration": false,

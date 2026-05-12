@@ -13,11 +13,14 @@ export type SkillOf<A extends Attribute> = (typeof ATTRIBUTE_SKILLS)[A][number];
 export type SkillValues = {
   proficiency: boolean;
   expertise: boolean;
+  modifier?: number;
 };
 
 export type AttributeValues<A extends Attribute> = {
   value: number;
   proficiency: boolean;
+  modifier?: number;
+  savingThrow?: number;
   skills: {
     [S in SkillOf<A>]: SkillValues;
   };

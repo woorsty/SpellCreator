@@ -52,6 +52,34 @@ export class CharacterService {
       character.spellAttackBonus = castingModificator;
       character.spellSaveDC = castingModificator + character.proficiencyBonus;
     }
+
+    for (const attribute of Object.keys(character.attributes) as Attribute[]) {
+      const attr = character.attributes[attribute];
+
+      const modifier = AttributeService.calculateModifier(attr.value);
+      const savingThrow = AttributeService.calculateSavingThrow(
+        attr.value,
+        attr.proficiency,
+        character.proficiencyBonus,
+      );
+      attr.modifier = modifier;
+      attr.savingThrow = savingThrow;
+
+      for (const skill of ATTRIBUTE_SKILLS[attribute]) {
+        const skillValue = AttributeService.getSkillData(
+          character,
+          attribute,
+          skill,
+        );
+
+        skillValue.modifier =
+          AttributeService.calculateSkillModifierFromCharacter(
+            character,
+            attribute,
+            skill,
+          );
+      }
+    }
   }
 
   public static async checkIfCharacterExists(character: CharacterSheet) {
@@ -71,7 +99,7 @@ export class CharacterService {
 
   public static getEmptyCharacter(): CharacterSheet {
     return {
-      talents: [],
+      feats: [],
       name: "",
       background: {
         attributes: [],
@@ -184,9 +212,6 @@ export class CharacterService {
       initiative: 0,
       passivePerception: 0,
       attacks: [],
-      speciesTraits: [],
-      feats: [],
-      spellcastingAbility: null,
       spellSaveDC: 0,
       spellAttackBonus: 0,
       spellSlots: {
