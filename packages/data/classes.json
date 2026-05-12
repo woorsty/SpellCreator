@@ -19,66 +19,186 @@
     },
     "equipment": ["greataxe", "handaxe", "shield", "explorer_pack", "gold:15"],
     "features": [
-      { "id": "rage", "level": 1 },
-      { "id": "unarmored_defense", "level": 1 },
-      { "id": "danger_sense", "level": 2 },
-      { "id": "reckless_attack", "level": 2 },
-      { "id": "primal_knowledge", "level": 3 },
-      { "id": "ability_score_improvement", "level": 4 },
-      { "id": "fast_movement", "level": 5 },
-      { "id": "extra_attack", "level": 5 },
-      { "id": "feral_instinct", "level": 7 },
-      { "id": "brutal_critical", "level": 9 },
-      { "id": "relentless_rage", "level": 11 },
-      { "id": "improved_brutal_critical", "level": 13 },
-      { "id": "persistent_rage", "level": 15 },
-      { "id": "persistent_brutal_critical", "level": 17 },
-      { "id": "indomitable_might", "level": 18 },
-      { "id": "epic_boon", "level": 19 },
-      { "id": "primal_champion", "level": 20 }
+      {
+        "id": "rage",
+        "level": 1
+      },
+      {
+        "id": "unarmored_defense",
+        "level": 1
+      },
+      {
+        "id": "danger_sense",
+        "level": 2
+      },
+      {
+        "id": "reckless_attack",
+        "level": 2
+      },
+      {
+        "id": "primal_knowledge",
+        "level": 3
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 4
+      },
+      {
+        "id": "fast_movement",
+        "level": 5
+      },
+      {
+        "id": "extra_attack",
+        "level": 5
+      },
+      {
+        "id": "instinctive_pounce",
+        "level": 7
+      },
+      {
+        "id": "feral_instinct",
+        "level": 7
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 8
+      },
+      {
+        "id": "brutal_critical",
+        "level": 9
+      },
+      {
+        "id": "relentless_rage",
+        "level": 11
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 12
+      },
+      {
+        "id": "improved_brutal_critical",
+        "level": 13
+      },
+      {
+        "id": "persistent_rage",
+        "level": 15
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 16
+      },
+      {
+        "id": "persistent_brutal_critical",
+        "level": 17
+      },
+      {
+        "id": "indomitable_might",
+        "level": 18
+      },
+      {
+        "id": "epic_boon",
+        "level": 19
+      },
+      {
+        "id": "primal_champion",
+        "level": 20
+      }
     ],
     "subclasses": [
       {
         "id": "berserker",
         "features": [
-          { "id": "frenzy", "level": 3 },
-          { "id": "mindless_rage", "level": 6 },
-          { "id": "intimidating_presence", "level": 10 },
-          { "id": "retaliation", "level": 14 }
+          {
+            "id": "frenzy",
+            "level": 3
+          },
+          {
+            "id": "mindless_rage",
+            "level": 6
+          },
+          {
+            "id": "intimidating_presence",
+            "level": 10
+          },
+          {
+            "id": "retaliation",
+            "level": 14
+          }
         ]
       },
       {
         "id": "zealot",
         "features": [
-          { "id": "devine_fury", "level": 3 },
-          { "id": "warrior_of_the_gods", "level": 3 },
-          { "id": "fanatical_focus", "level": 6 },
-          { "id": "zealous_presence", "level": 10 },
-          { "id": "divine_fury", "level": 14 }
+          {
+            "id": "devine_fury",
+            "level": 3
+          },
+          {
+            "id": "warrior_of_the_gods",
+            "level": 3
+          },
+          {
+            "id": "fanatical_focus",
+            "level": 6
+          },
+          {
+            "id": "zealous_presence",
+            "level": 10
+          },
+          {
+            "id": "divine_fury",
+            "level": 14
+          }
         ]
       },
       {
         "id": "world_tree",
         "features": [
-          { "id": "vitality_of_the_tree", "level": 3 },
-          { "id": "branches_of_the_tree", "level": 6 },
-          { "id": "battering_roots", "level": 10 },
-          { "id": "travel_along_the_tree", "level": 14 }
+          {
+            "id": "vitality_of_the_tree",
+            "level": 3
+          },
+          {
+            "id": "branches_of_the_tree",
+            "level": 6
+          },
+          {
+            "id": "battering_roots",
+            "level": 10
+          },
+          {
+            "id": "travel_along_the_tree",
+            "level": 14
+          }
         ]
       },
       {
         "id": "wild_heart",
         "features": [
-          { "id": "animal_speaker", "level": 3 },
-          { "id": "rage_of_the_wilds", "level": 3 },
-          { "id": "aspect_of_the_wilds", "level": 6 },
-          { "id": "commune_with_nature", "level": 10 },
-          { "id": "power_of_the_wilds", "level": 14 }
+          {
+            "id": "animal_speaker",
+            "level": 3
+          },
+          {
+            "id": "rage_of_the_wilds",
+            "level": 3
+          },
+          {
+            "id": "aspect_of_the_wilds",
+            "level": 6
+          },
+          {
+            "id": "commune_with_nature",
+            "level": 10
+          },
+          {
+            "id": "power_of_the_wilds",
+            "level": 14
+          }
         ]
       }
     ]
   },
-
   {
     "id": "bard",
     "primaryAbility": "charisma",
@@ -123,47 +243,63 @@
         "level": 1
       },
       {
-        "id:": "spellcasting",
+        "id": "spellcasting",
         "level": 1
       },
       {
-        "id:": "expertiese",
+        "id": "expertise",
         "level": 2
       },
       {
-        "id:": "jack_of_all_trades",
+        "id": "jack_of_all_trades",
         "level": 2
       },
       {
-        "id:": "bard_subclass",
+        "id": "bard_subclass",
         "level": 3
       },
       {
-        "id:": "ability_score_imporvement",
+        "id": "ability_score_improvement",
         "level": 4
       },
       {
-        "id:": "font_of_inspiration",
+        "id": "font_of_inspiration",
         "level": 5
       },
       {
-        "id:": "countercharm",
+        "id": "countercharm",
         "level": 7
       },
       {
-        "id:": "magical_secrets",
+        "id": "ability_score_improvement",
+        "level": 8
+      },
+      {
+        "id": "expertise",
+        "level": 9
+      },
+      {
+        "id": "magical_secrets",
         "level": 10
       },
       {
-        "id:": "superior_inspiration",
+        "id": "ability_score_improvement",
+        "level": 12
+      },
+      {
+        "id": "ability_score_improvement",
+        "level": 16
+      },
+      {
+        "id": "superior_inspiration",
         "level": 18
       },
       {
-        "id:": "epic_boon",
+        "id": "epic_boon",
         "level": 19
       },
       {
-        "id:": "words_of_creation",
+        "id": "words_of_creation",
         "level": 20
       }
     ],
@@ -171,42 +307,89 @@
       {
         "id": "dance",
         "features": [
-          { "id": "dazzling_footwork", "level": 3 },
-          { "id": "inspiring_movement", "level": 6 },
-          { "id": "tandem_footwork", "level": 6 },
-          { "id": "leading_evasion", "level": 14 }
+          {
+            "id": "dazzling_footwork",
+            "level": 3
+          },
+          {
+            "id": "inspiring_movement",
+            "level": 6
+          },
+          {
+            "id": "tandem_footwork",
+            "level": 6
+          },
+          {
+            "id": "leading_evasion",
+            "level": 14
+          }
         ]
       },
       {
         "id": "valor",
         "features": [
-          { "id": "combat_inspiration", "level": 3 },
-          { "id": "martial_training", "level": 3 },
-          { "id": "extra_attack", "level": 6 },
-          { "id": "battle_magic", "level": 14 }
+          {
+            "id": "combat_inspiration",
+            "level": 3
+          },
+          {
+            "id": "martial_training",
+            "level": 3
+          },
+          {
+            "id": "extra_attack",
+            "level": 6
+          },
+          {
+            "id": "battle_magic",
+            "level": 14
+          }
         ]
       },
       {
         "id": "lore",
         "features": [
-          { "id": "bonus_proficiencies", "level": 3 },
-          { "id": "cutting_words", "level": 3 },
-          { "id": "magical_discoveries", "level": 6 },
-          { "id": "peerless_skill", "level": 14 }
+          {
+            "id": "bonus_proficiencies",
+            "level": 3
+          },
+          {
+            "id": "cutting_words",
+            "level": 3
+          },
+          {
+            "id": "magical_discoveries",
+            "level": 6
+          },
+          {
+            "id": "peerless_skill",
+            "level": 14
+          }
         ]
       },
       {
         "id": "glamour",
         "features": [
-          { "id": "beguiling_magic", "level": 3 },
-          { "id": "mantle_of_inspiration", "level": 3 },
-          { "id": "mantle_of_majesty", "level": 6 },
-          { "id": "unbreakable_majesty", "level": 14 }
+          {
+            "id": "beguiling_magic",
+            "level": 3
+          },
+          {
+            "id": "mantle_of_inspiration",
+            "level": 3
+          },
+          {
+            "id": "mantle_of_majesty",
+            "level": 6
+          },
+          {
+            "id": "unbreakable_majesty",
+            "level": 14
+          }
         ]
       }
     ]
   },
-
   {
     "id": "druid",
     "primaryAbility": "wisdom",
@@ -393,7 +576,6 @@
       }
     ]
   },
-
   {
     "id": "warlock",
     "primaryAbility": "charisma",
@@ -487,7 +669,10 @@
           }
         ]
       },
-      { "id": "fey", "features": [] },
+      {
+        "id": "fey",
+        "features": []
+      },
       {
         "id": "great_old_one",
         "features": [
@@ -548,7 +733,6 @@
       }
     ]
   },
-
   {
     "id": "fighter",
     "primaryAbility": "strength",
@@ -743,7 +927,6 @@
       }
     ]
   },
-
   {
     "id": "cleric",
     "primaryAbility": "wisdom",
@@ -765,7 +948,7 @@
     ],
     "features": [
       {
-        "id:": "divine_order",
+        "id": "divine_order",
         "level": 1
       },
       {
@@ -908,7 +1091,6 @@
       }
     ]
   },
-
   {
     "id": "wizard",
     "primaryAbility": "intelligence",
@@ -1276,7 +1458,6 @@
       }
     ]
   },
-
   {
     "id": "paladin",
     "primaryAbility": ["strength", "charisma"],
@@ -1671,7 +1852,6 @@
       }
     ]
   },
-
   {
     "id": "ranger",
     "primaryAbility": ["dexterity", "wisdom"],
@@ -1871,7 +2051,6 @@
       }
     ]
   },
-
   {
     "id": "sorcerer",
     "primaryAbility": ["charisma"],
@@ -2041,7 +2220,6 @@
       }
     ]
   },
-
   {
     "id": "arteficer",
     "primaryAbility": ["intelligence"],
@@ -2065,11 +2243,26 @@
     "equipment": [],
     "features": [],
     "subclasses": [
-      { "id": "alchemist", "features": [] },
-      { "id": "armorer", "features": [] },
-      { "id": "atillerist", "features": [] },
-      { "id": "battle_smith", "features": [] },
-      { "id": "cartographer", "features": [] }
+      {
+        "id": "alchemist",
+        "features": []
+      },
+      {
+        "id": "armorer",
+        "features": []
+      },
+      {
+        "id": "atillerist",
+        "features": []
+      },
+      {
+        "id": "battle_smith",
+        "features": []
+      },
+      {
+        "id": "cartographer",
+        "features": []
+      }
     ]
   }
 ]

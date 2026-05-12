@@ -17,6 +17,17 @@ function Stat({ label, value }: { label: string; value: number }) {
 
 export function CharacterPreview({ character }: Props) {
   const translator = new Translator("characterCreator.preview");
+
+  character.characterClass.features
+    .filter((feat) => feat.level <= character.level)
+    .map((f) => {
+      console.log(f);
+      console.log(
+        translator.translate(
+          `characterClass.${character.characterClass.id}.features.${f.id}.name`,
+        ),
+      );
+    });
   return (
     <div className="p-6 space-y-6 text-sm">
       {/* HEADER */}
@@ -130,18 +141,26 @@ export function CharacterPreview({ character }: Props) {
       <section className="border p-4 rounded-md">
         <h2 className="font-bold mb-2">Fähigkeiten</h2>
         <ul className="list-disc ml-4">
-          {[
-            ...character.characterClass.features.filter(
-              (feat) => feat.level <= character.level,
-            ),
-            ...(character.subclass
-              ? character.subclass.features.filter(
-                  (feature) => feature.level <= character.level,
-                )
-              : []),
-          ].map((f, i) => (
-            <li key={i}>{translator.translate(`talent.${f.id}.title`)}</li>
-          ))}
+          {...character.characterClass.features
+            .filter((feat) => feat.level <= character.level)
+            .map((f, i) => (
+              <li key={i}>
+                {translator.translate(
+                  `characterClass.${character.characterClass.id}.features.${f.id}.name`,
+                )}
+              </li>
+            ))}
+          {character.subclass
+            ? character.subclass.features
+                .filter((feature) => feature.level <= character.level)
+                .map((f, i) => (
+                  <li key={"s" + i}>
+                    {translator.translate(
+                      `characterClass.${character.characterClass.id}.subclasses.${character.subclass?.id}.features.${f.id}.name`,
+                    )}
+                  </li>
+                ))
+            : undefined}
         </ul>
       </section>
 
