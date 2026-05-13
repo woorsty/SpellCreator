@@ -1,14 +1,11 @@
-import {
-  AttributeService,
-  CharacterAttributes,
-  CharacterService,
-} from "@domain";
+import { Attribute, AttributeService, SkillOf } from "@domain";
 import { CharacterViewProps } from "./CharacterViewProps";
 import React, { useState } from "react";
 import { Translator } from "@i18n";
 import { Card } from "../../../component/ui/Card";
 import { Button } from "../../../component/ui/Button";
 import { NumberInput } from "../../../component/ui/NumberInput";
+import { Checkbox } from "../../ui/Checkbox";
 
 const translator = new Translator("characterShow.card.attributes");
 const sign = (n: number) => (n >= 0 ? `+${n}` : n);
@@ -20,9 +17,9 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
   const [editMode, setEditMode] = useState<boolean>(false);
   console.log("Character.attr", character.attributes);
 
-  const renderAbility = (
-    attrKey: keyof CharacterAttributes,
-    skills: string[] = [],
+  const renderAbility = <A extends Attribute>(
+    attrKey: A,
+    skills: SkillOf<A>[] = [],
   ) => {
     const attr = character.attributes[attrKey];
     return (
@@ -55,8 +52,34 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
           </div>
         </div>
         <div className="skill-row">
-          <div className={`skill-check ${attr.proficiency ? "filled" : ""}`} />
-          <div className="skill-mod">{sign(attr.savingThrow!)}</div>
+          {editMode ? (
+            <Checkbox
+              checked={attr.proficiency}
+              onChange={(e) => {
+                updateCharacter("attributes." + attrKey + ".proficiency", e);
+                updateCharacter(
+                  "attributes." + attrKey + ".savingThrow",
+                  e
+                    ? attr.modifier! + character.proficiencyBonus
+                    : attr.modifier,
+                );
+              }}
+            />
+          ) : (
+            <div
+              className={`skill-check ${attr.proficiency ? "filled" : ""}`}
+            />
+          )}
+          {editMode ? (
+            <NumberInput
+              value={attr.savingThrow!}
+              onChange={(e) =>
+                updateCharacter("attributes." + attrKey + ".savingThrow", e)
+              }
+            />
+          ) : (
+            <div className="skill-mod">{sign(attr.savingThrow!)}</div>
+          )}
           <div className="skill-name">
             {translator.translate(".saving_throw")}
           </div>
@@ -68,7 +91,19 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
               <div
                 className={`skill-check ${skillData.proficiency ? "filled" : ""}`}
               />
-              <div className="skill-mod">{sign(skillData.modifier)}</div>
+              {editMode ? (
+                <NumberInput
+                  value={attr.skills[s].modifier!}
+                  onChange={(e) =>
+                    updateCharacter(
+                      "attributes." + attrKey + ".skills." + s + ".modifier",
+                      e,
+                    )
+                  }
+                />
+              ) : (
+                <div className="skill-mod">{sign(skillData.modifier)}</div>
+              )}
               <div className="skill-name">
                 {translator.translate(`character.skills.${s}`)}
               </div>
