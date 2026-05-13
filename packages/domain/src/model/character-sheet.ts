@@ -8,6 +8,7 @@ import { ToolItem } from "./tool";
 import { Attack } from "./attack";
 import { Feat } from "./feat";
 import { Background } from "./background";
+import { Spellslots } from "./spell-slots";
 
 export type CharacterSheet = {
   name: string;
@@ -65,7 +66,7 @@ export type CharacterSheet = {
   spellAttackBonus: number;
 
   spellSlots: {
-    total: number[];
+    total: Spellslots[];
     used: number[];
   };
 

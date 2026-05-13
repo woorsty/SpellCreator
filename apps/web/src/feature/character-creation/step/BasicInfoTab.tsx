@@ -29,7 +29,7 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
     updateField("subclass", undefined);
     console.log("newClass:", newClass);
     if (newClass) {
-      updateField("hitDiceValue", newClass.hitDie);
+      updateField("hitDieValue", newClass.hitDie);
       const spellSlots = CLASS_SPELLSLOTS[newClass?.id];
       updateField("spellSlots.total", spellSlots);
       console.log(spellSlots);

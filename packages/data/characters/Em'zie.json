@@ -21,7 +21,7 @@
   "characterClass": {
     "id": "bard",
     "primaryAbility": "charisma",
-    "hitDice": 8,
+    "hitDie": 8,
     "castingAttribute": "charisma",
     "savingThrows": ["dexterity", "charisma"],
     "proficiencies": {

@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import { Translator } from "@i18n"; // Angenommen, es gibt einen Hook oder Provider
-import { CharacterSheet } from "@domain";
+import { CharacterSheet, Spellslots } from "@domain";
 import "./CharacterSheetView.css";
 
-interface CharacterSheetProps {
-  character: CharacterSheet;
-}
+export const CharacterSheetView: React.FC = () => {
+  const [characterData, setCharacterData] = useState<CharacterSheet[]>([]);
+  const params = useParams();
 
-export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
-  const [character, setCharacterData] = useState<CharacterSheet>();
   useEffect(() => {
     fetch("/api/characters")
       .then((res) => res.json())
       .then((characterData) => {
-        setCharacterData(characterData[3]);
+        setCharacterData(characterData);
       });
   }, []);
+
+  const character = characterData.find((char) => char.name === params.name);
 
   console.log(character);
 
@@ -142,7 +143,7 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
                 </div>
                 <div>
                   <div className="label">Max</div>
-                  <div className="value">{`${character.level}W${character.characterClass.hitDice}`}</div>
+                  <div className="value">{`${character.level}W${character.characterClass.hitDie}`}</div>
                 </div>
               </div>
             </div>
@@ -261,18 +262,21 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
             <div className="label">Rüstung</div>
             <div className="training-grid-4">
               <TrainingRow
-                checked={character.lightArmorTraining}
+                checked={character.armorTraining.light}
                 label="Leichte"
               />
               <TrainingRow
-                checked={character.mediumArmorTraining}
+                checked={character.armorTraining.medium}
                 label="Mittlere"
               />
               <TrainingRow
-                checked={character.heavyArmorTraining}
+                checked={character.armorTraining.heavy}
                 label="Schwere"
               />
-              <TrainingRow checked={character.shieldTraining} label="Schilde" />
+              <TrainingRow
+                checked={character.armorTraining.shield}
+                label="Schilde"
+              />
             </div>
 
             <div className="label" style={{ marginTop: "12px" }}>
@@ -280,12 +284,20 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
             </div>
             <div className="training-grid-2">
               <TrainingRow
-                checked={character.weaponTrainingSimple}
+                checked={character.weaponTraining.simple}
                 label="Einfache"
               />
               <TrainingRow
-                checked={character.weaponTrainingMartial}
+                checked={character.weaponTraining.martial}
                 label="Kriegswaffen"
+              />
+              <TrainingRow
+                checked={character.weaponTraining.light}
+                label="Leichte Kriegswaffen"
+              />
+              <TrainingRow
+                checked={character.weaponTraining.finesse}
+                label="Finessewaffen"
               />
             </div>
 
@@ -360,18 +372,28 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
             <ListCard
               title="Klassenmerkmale"
               items={character.characterClass.features
-                .map((f) =>
-                  t(
-                    `characterClass.${character.characterClass.id}.features.${f.id}.name`,
-                  ),
-                )
-                .concat(
-                  character.subclass?.features.map((f) =>
-                    t(
-                      `characterClass.${character.characterClass.id}.subclasses.${character.subclass.id}.features.${f.id}.name`,
+                .map((f) => {
+                  return {
+                    name: t(
+                      `characterClass.${character.characterClass.id}.features.${f.id}.name`,
                     ),
-                  ),
-                )}
+                    level: f.level,
+                  };
+                })
+                .concat(
+                  character.subclass
+                    ? character.subclass.features.map((f) => {
+                        return {
+                          name: t(
+                            `characterClass.${character.characterClass.id}.subclasses.${character.subclass!.id}.features.${f.id}.name`,
+                          ),
+                          level: f.level,
+                        };
+                      })
+                    : [],
+                )
+                .sort((a, b) => a.level - b.level)
+                .map((f) => f.name)}
             />
             <ListCard
               title="Volksmerkmale"
@@ -402,7 +424,7 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
                 <QuickStat
                   label="Attribut"
                   value={t(
-                    `character.attribute.${character.characterClass.castingAttribute || character.subclass.castingAttribute || "none"}`,
+                    `character.attribute.${character.characterClass.castingAttribute || character.subclass?.castingAttribute || "none"}`,
                   )}
                 />
                 <QuickStat
@@ -425,10 +447,9 @@ export const CharacterSheetView: React.FC<CharacterSheetProps> = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => {
                   const total =
                     character.spellSlots.total[character.level - 1][
-                      `slot${level}` as keyof any
+                      `slot${level}` as keyof Spellslots
                     ] || 0;
-                  const used =
-                    character.spellSlots.used[`slot${level}` as keyof any] || 0;
+                  const used = character.spellSlots.used[level] || 0;
                   if (total === 0) return null;
 
                   return (
@@ -547,7 +568,7 @@ const renderAbility = (
   sign: any,
   attrKey: string,
   label: string,
-  character: Character,
+  character: CharacterSheet,
   skills: { id: string; label: string }[] = [],
 ) => {
   const attr =

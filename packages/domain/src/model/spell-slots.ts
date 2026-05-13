@@ -1,6 +1,6 @@
 import { CharacterClassId } from "./character-class";
 
-type Spellslots = {
+export type Spellslots = {
   slot1?: number;
   slot2?: number;
   slot3?: number;
