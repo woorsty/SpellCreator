@@ -1,11 +1,11 @@
 import type { Request, Response } from "express";
-import { JsonService } from "@domain";
-import { MarkdownService } from "@domain";
+import { JsonService } from "@repo/domain";
+import { MarkdownService } from "@repo/domain";
 import { CHARACTERS_PATH } from "../api/apiRouter";
-import { CharacterService } from "@domain";
-import { CharacterSheet } from "@domain";
+import { CharacterService } from "@repo/domain";
+import { CharacterSheet } from "@repo/domain";
 import { Services } from "../../services";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 export class CharacterController {
   private translator: Translator;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CharacterViewProps } from "./CharacterViewProps";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 import { ListCard } from "../../ui/ListCard";
 
 export const ClassFeatsCard: React.FC<CharacterViewProps> = ({ character }) => {

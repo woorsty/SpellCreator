@@ -1,4 +1,4 @@
-import { CharacterSheet } from "@domain";
+import { CharacterSheet } from "@repo/domain";
 
 export type CharacterViewProps = {
   character: CharacterSheet;

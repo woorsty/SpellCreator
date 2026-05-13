@@ -1,4 +1,4 @@
-import { CharacterSheet } from "@domain";
+import { CharacterSheet } from "@repo/domain";
 import React, { useEffect, useState } from "react";
 import { Card } from "../../component/ui/Card";
 import { A } from "../../component/ui/A";

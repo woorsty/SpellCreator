@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Translator } from "@i18n";
-import { Spell, SpellService } from "@domain";
+import { Translator } from "@repo/i18n";
+import { Spell, SpellService } from "@repo/domain";
 import { Button } from "../../../component/ui/Button";
-import { StepProps } from "../characterCreator.types";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Input } from "../../../component/ui/Input";
 import { SearchableSelect } from "../../../component/ui/SearchableSelect";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 
 export function SpellsTab({ character, updateField }: StepProps) {
   const [spellsData, setSpellsData] = useState<Spell[]>([]);

@@ -2,7 +2,7 @@ import React from "react";
 import { CharacterViewProps } from "./CharacterViewProps";
 import { Card } from "../../../component/ui/Card";
 import { Button } from "../../../component/ui/Button";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 export const DeathSavesCard: React.FC<CharacterViewProps> = ({
   character,

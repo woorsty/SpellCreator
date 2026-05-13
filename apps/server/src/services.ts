@@ -1,4 +1,4 @@
-import { AttributeService } from "@domain";
+import { AttributeService } from "@repo/domain";
 
 export type Services = {
   attributeService: typeof AttributeService;

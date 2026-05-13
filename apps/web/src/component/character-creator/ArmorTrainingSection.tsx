@@ -1,8 +1,8 @@
-import { CharacterSheet } from "@domain";
+import { CharacterSheet } from "@repo/domain";
 import { Checkbox } from "../../component/ui/Checkbox";
 import { Label } from "../../component/ui/Label";
 import React from "react";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 type Props = {
   training: CharacterSheet["armorTraining"];

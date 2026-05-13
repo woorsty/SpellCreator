@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
 import fs from "fs";
 import path from "path";
-import type { Spell } from "@domain";
+import type { Spell } from "@repo/domain";
 
 export type Spellcard = {
   title: string;

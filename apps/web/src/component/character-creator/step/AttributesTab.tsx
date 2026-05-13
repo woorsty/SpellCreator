@@ -1,6 +1,6 @@
 import React from "react";
-import { translate } from "@i18n";
-import { Attribute, ATTRIBUTE_SKILLS } from "@domain";
+import { translate } from "@repo/i18n";
+import { Attribute, ATTRIBUTE_SKILLS } from "@repo/domain";
 import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 import { AttributeCard } from "../AttributeCard";
 

@@ -1,8 +1,16 @@
 {
-  "name": "web",
+  "name": "@repo/web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,7 +23,9 @@
     "react-dom": "^19.2.5",
     "react-i18next": "^17.0.6",
     "react-router-dom": "^7.14.2",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "@repo/domain": "workspace:*",
+    "@repo/i18n": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

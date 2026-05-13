@@ -1,5 +1,5 @@
 import path from "path";
-import type { Spell } from "@domain";
+import type { Spell } from "@repo/domain";
 
 export interface Invocation {
   Stufe: number;

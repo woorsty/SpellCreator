@@ -1,5 +1,5 @@
 {
-  "name": "domain",
+  "name": "@repo/domain",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -11,7 +11,8 @@
     }
   },
   "scripts": {
-    "build": "tsc -b"
+    "build": "tsc -b",
+    "clean": "tsc -b --clean"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

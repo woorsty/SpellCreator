@@ -1,4 +1,4 @@
-import { CharacterSheet } from "@domain";
+import { CharacterSheet } from "@repo/domain";
 import { CharacterCreationStep } from "./character-creator-steps";
 
 export type StepProps = {

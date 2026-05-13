@@ -3,8 +3,7 @@ import { JsonFilePath } from "./invocationModel";
 import type { Invocation } from "./invocationModel";
 import path from "path";
 import { SpellController } from "../spell/spellControler";
-import { JsonService } from "@domain";
-import { MarkdownService } from "@domain";
+import { JsonService, MarkdownService } from "@rep/domain";
 
 export class InvocationController {
   static getEditForm(req: Request, res: Response) {

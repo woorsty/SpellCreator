@@ -1,9 +1,9 @@
 import React from "react";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 import { Card } from "../../../component/ui/Card";
 import { ItemList } from "../../../component/ui/ItemList";
 import { Input } from "../../../component/ui/Input";
-import { EquipmentItem, ToolItem } from "@domain";
+import { EquipmentItem, ToolItem } from "@repo/domain";
 import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 import { ArmorTrainingSection } from "../ArmorTrainingSection";
 import { WeaponTrainingSection } from "../WeaponTrainingSection";

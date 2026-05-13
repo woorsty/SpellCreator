@@ -6,7 +6,7 @@ import {
   generateCardPDF,
   generateCardPDFWithBackside,
 } from "./spellcardPdfGenerator";
-import { Spell } from "@domain";
+import { Spell } from "@repo/domain";
 import { SPELLS_PATH } from "../api/apiRouter";
 
 const createSpellcard = (req: Request, res: Response) => {

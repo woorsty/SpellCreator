@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
 import path from "path";
-import type { CharacterClass, ClassFeature } from "@domain";
-import { JsonService } from "@domain";
-import { MarkdownService } from "@domain";
+import type { CharacterClass, ClassFeature } from "@repo/domain";
+import { JsonService } from "@repo/domain";
+import { MarkdownService } from "@repo/domain";
 
 export class ClassController {
   private static jsonFilepath = path.resolve("../../data/classes.json");

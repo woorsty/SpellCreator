@@ -1,4 +1,4 @@
-import { CharacterSheet } from "@domain";
+import { CharacterSheet } from "@repo/domain";
 
 type Action =
   | {

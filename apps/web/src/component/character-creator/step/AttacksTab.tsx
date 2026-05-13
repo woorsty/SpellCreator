@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { translate, Translator } from "@i18n";
-import { Attack } from "@domain";
-import { DamageType } from "@domain";
+import { translate, Translator } from "@repo/i18n";
+import { Attack, DamageType } from "@repo/domain";
 import { Button } from "../../../component/ui/Button";
-import { StepProps } from "../characterCreator.types";
 import { Select } from "../../../component/ui/Select";
 import { Input } from "../../../component/ui/Input";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 
 export function AttacksTab({ character, updateField }: StepProps) {
   const [newAttack, setNewAttack] = useState<Partial<Attack>>({

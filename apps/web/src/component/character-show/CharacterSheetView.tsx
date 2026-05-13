@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
-import { Translator } from "@i18n";
-import { CharacterSheet, Spellslots } from "@domain";
+import { Translator } from "@repo/i18n";
+import { CharacterSheet, Spellslots } from "@repo/domain";
 import "./CharacterSheetView.css";
 import { BasicInfoCard } from "./card/BasicInfoCard";
 import { LevelCard } from "./card/LevelCard";

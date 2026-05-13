@@ -1,8 +1,8 @@
 import React from "react";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Label } from "../../../component/ui/Label";
-import { AttributeService, CharacterSheet, SkillValues } from "@domain";
-import { translate } from "@i18n";
+import { AttributeService, CharacterSheet, SkillValues } from "@repo/domain";
+import { translate } from "@repo/i18n";
 
 type SkillRowProps = {
   attributeName: string;

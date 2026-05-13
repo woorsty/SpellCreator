@@ -1,6 +1,6 @@
-import { AttributeService, CharacterSheet } from "@domain";
+import { AttributeService, CharacterSheet } from "@repo/domain";
 import React from "react";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 type Props = {
   character: CharacterSheet;

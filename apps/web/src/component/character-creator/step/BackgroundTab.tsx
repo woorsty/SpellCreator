@@ -1,9 +1,9 @@
 import React from "react";
-import { Translator } from "@i18n";
-import { StepProps } from "../characterCreator.types";
+import { Translator } from "@repo/i18n";
 import { Checkbox } from "../../../component/ui/Checkbox";
-import { Alignment, Language } from "@domain";
+import { Alignment, Language } from "@repo/domain";
 import { Select } from "../../../component/ui/Select";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 
 export function BackgroundTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.background");

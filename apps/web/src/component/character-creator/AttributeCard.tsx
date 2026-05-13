@@ -1,12 +1,12 @@
 import React from "react";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 import {
   Attribute,
   ATTRIBUTE_SKILLS,
   AttributeService,
   CharacterSheet,
   SkillOf,
-} from "@domain";
+} from "@repo/domain";
 import { Checkbox } from "../../component/ui/Checkbox";
 import { Card } from "../../component/ui/Card";
 import { Label } from "../../component/ui/Label";

@@ -6,8 +6,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "concurrently -n SERVER,WEB -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
-    "build": "npm run build -ws"
+    "dev": "concurrently -n SERVER,WEB -c blue,green \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
+    "build": "pnpm -r exec tsc -b",
+    "clean": "pnpm -r exec tsc -b --clean",
+    "deploy": "npm run build && npm run deploy:upload && npm run deploy:restart",
+    "deploy:upload": "rsync -avz --delete dist/ worsty@zeropi:/home/worsty/app/",
+    "deploy:restart": "ssh worsty@zeropi 'pkill serve || true && serve -s /home/worsty/app -l 3000 &'"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

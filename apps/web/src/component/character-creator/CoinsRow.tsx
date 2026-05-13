@@ -1,6 +1,6 @@
 import React from "react";
 import { NumberInput } from "../../component/ui/NumberInput";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 type CoinsRowProps = {
   copper: number;

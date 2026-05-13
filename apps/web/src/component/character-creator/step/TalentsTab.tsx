@@ -1,9 +1,9 @@
-import { Translator } from "@i18n";
-import { StepProps } from "../characterCreator.types";
+import { Translator } from "@repo/i18n";
 import React from "react";
 import { Card } from "../../../component/ui/Card";
 import { ItemList } from "../../../component/ui/ItemList";
-import { Feat } from "@domain";
+import { Feat } from "@repo/domain";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 
 export function TalentsTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.talents");

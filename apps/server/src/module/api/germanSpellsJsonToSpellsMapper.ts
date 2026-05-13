@@ -1,5 +1,4 @@
-import { SpellSchool, CharacterClassId } from "@domain";
-import { Spell } from "@domain";
+import { SpellSchool, Spell, CharacterClassId } from "@repo/domain";
 
 export type RawSpell = {
   Stufe: number;

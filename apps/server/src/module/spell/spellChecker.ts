@@ -1,4 +1,4 @@
-import { JsonService } from "@domain";
+import { JsonService } from "@repo/domain";
 import { SPELLS_PATH } from "../api/apiRouter";
 
 const requiredFields = [

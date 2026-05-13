@@ -1,8 +1,6 @@
 import type { Request, Response } from "express";
 import { SpellChecker } from "./spellChecker";
-import { CharacterClassId } from "@domain";
-import { JsonService } from "@domain";
-import { MarkdownService } from "@domain";
+import { CharacterClassId, JsonService, MarkdownService } from "@repo/domain";
 import { SPELLS_PATH } from "../api/apiRouter";
 import { RawSpell } from "../api/germanSpellsJsonToSpellsMapper";
 

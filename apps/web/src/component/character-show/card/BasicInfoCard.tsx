@@ -1,6 +1,6 @@
 import React from "react";
 import { CharacterViewProps } from "./CharacterViewProps";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 
 export const BasicInfoCard: React.FC<CharacterViewProps> = ({ character }) => {
   const translator = new Translator();

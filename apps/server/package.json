@@ -1,7 +1,15 @@
 {
-  "name": "server",
+  "name": "@repo/server",
   "version": "1.0.0",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc && npm run copy-assets",
@@ -11,7 +19,9 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "jspdf": "^3.0.1"
+    "jspdf": "^3.0.1",
+    "@repo/domain": "workspace:*",
+    "@repo/i18n": "workspace:*"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",

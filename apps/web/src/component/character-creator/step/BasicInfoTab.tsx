@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StepProps } from "../characterCreator.types";
-import { Translator } from "@i18n";
+import { Translator } from "@repo/i18n";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
 import { Button } from "../../../component/ui/Button";
@@ -14,7 +14,7 @@ import {
   SUBCLASS_SPELLSLOTS,
   Subclass,
   CLASS_SPELLSLOTS,
-} from "@domain";
+} from "@repo/domain";
 import { LabeledNumberInput } from "../../../component/ui/LabeledNumberInput";
 import { LabeledInput } from "../../../component/ui/LabeledInput";
 
