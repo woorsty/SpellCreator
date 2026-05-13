@@ -105,7 +105,13 @@ export const HitPoints: React.FC<HitPointProps> = ({
           >
             <div>
               <div className="label">Verbraucht</div>
-              <div className="value">{character.spentHitDice}</div>
+              <NumberInput
+                min={0}
+                max={character.level}
+                onChange={(e) => updateCharacter("spentHitDice", e as number)}
+                className="value"
+                value={character.spentHitDice}
+              />
             </div>
             <div>
               <div className="label">Max</div>

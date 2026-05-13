@@ -268,7 +268,7 @@
   "armorClass": 12,
   "currentHitpoints": 12,
   "temporaryHitpoints": 0,
-  "spentHitDice": 0,
+  "spentHitDice": 5,
   "maxHitpoints": 42,
   "successDeathSaves": 0,
   "failedDeathSaves": 0,
