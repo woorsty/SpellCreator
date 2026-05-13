@@ -13,6 +13,7 @@ export const de = {
       wisdom_short: "Wei",
       charisma: "Charisma",
       charisma_short: "Cha",
+      none: "Keins",
     },
     skills: {
       athletics: "Athletik",
@@ -44,6 +45,10 @@ export const de = {
     proficiency: "Übungsbonus",
     proficiency_short: "ÜB",
   },
+  size: {
+    small: "Klein",
+    medium: "Mittelgroß",
+  },
   alignment: {
     lawful_good: "Rechtschaffen Gut",
     neutral_good: "Neutral Gut",
@@ -56,18 +61,191 @@ export const de = {
     chaotic_evil: "Chaotisch Böse",
   },
   species: {
-    human: "Mensch",
-    elf: "Elf",
-    dwarf: "Zwerg",
-    halfling: "Halbling",
-    gnome: "Gnom",
-    tiefling: "Tiefling",
-    dragonborn: "Drachengeborener",
-    goliath: "Goliath",
-    orc: "Ork",
-    aasimar: "Aasimar",
-    harengon: "Harengon",
-    fairy: "Fee",
+    human: {
+      name: "Mensch",
+      feats: {
+        resourceful: {
+          name: "Einfallsreich",
+          description: "",
+        },
+        skillFull: {
+          name: "Vielseitig",
+          description: "",
+        },
+        versatile: {
+          name: "Vielseitig",
+          description: "",
+        },
+      },
+    },
+    elf: {
+      name: "Elf",
+      feats: {
+        darkvision: {
+          name: "Dunkelsicht",
+          description: "",
+        },
+        elven_lineage: {
+          name: "Elfische Abstammung",
+          description: "",
+        },
+        fey_ancestry: {
+          name: "Feenblut",
+          description: "",
+        },
+        keen_senses: {
+          name: "Scharfe Sinne",
+          description: "",
+        },
+        trance: {
+          name: "Trance",
+          description: "",
+        },
+      },
+    },
+    dwarf: {
+      name: "Zwerg",
+      feats: {
+        darkvision: {
+          name: "Dunkelsicht",
+          description: "",
+        },
+        dwarven_resilience: {
+          name: "Zwergische Unverwüstlichkeit",
+          description: "",
+        },
+        dwarven_toughness: {
+          name: "Zwergen Zähigkeit",
+          description: "",
+        },
+        stonecunning: {
+          name: "Steingespür",
+          description: "",
+        },
+      },
+    },
+    halfling: {
+      name: "Halbling",
+      feats: {
+        brave: {
+          name: "Tapferkeit",
+          description: "",
+        },
+        halfling_nimbless: {
+          name: "Halblingsgewandheit",
+          description: "",
+        },
+        luck: {
+          name: "Halblingsglück",
+          description: "",
+        },
+        naturally_stealthy: {
+          name: "Angeborene Verstohlenheit",
+          description: "",
+        },
+      },
+    },
+    gnome: {
+      name: "Gnom",
+      feats: {
+        forest_gnome: { name: "Waldgnom", description: "" },
+        rock_gnome: { name: "Felsengnom", description: "" },
+      },
+    },
+    tiefling: {
+      name: "Tiefling",
+      feats: {
+        darkvision: {
+          name: "Dunkelsicht",
+          description: "",
+        },
+        flendish_legacy: {
+          name: "Unholdisches Erbe",
+          description: "",
+        },
+        otherworldly_presence: {
+          name: "Außerweltliche Präsenz",
+          description: "",
+        },
+      },
+    },
+    dragonborn: {
+      name: "Drachengeborener",
+      feats: {
+        breath_weapon: {
+          name: "Odemwaffe",
+          description: "",
+        },
+        damage_resistance: {
+          name: "Schadenresistenz",
+          description: "",
+        },
+        darkvision: {
+          name: "Dunkelsicht",
+          description: "",
+        },
+        draconic_flight: {
+          name: "Drakonischer Flug",
+          description: "",
+        },
+      },
+    },
+    goliath: {
+      name: "Goliath",
+      feats: {
+        giant_ancestry: {
+          name: "Riesische Abstammung",
+          description: "",
+        },
+        large_form: {
+          name: "Große Gestalt",
+          description: "",
+        },
+        powerful_build: {
+          name: "Kräftiger Körperbau",
+          description: "",
+        },
+      },
+    },
+    orc: {
+      name: "Ork",
+      feats: {
+        adrenaline_rush: {
+          name: "Adrenalinrausch",
+          description: "",
+        },
+        relentless_endurance: {
+          name: "Durchhaltevermögen",
+          description: "",
+        },
+        darkvision: {
+          name: "Dunkelsicht",
+          description: "",
+        },
+      },
+    },
+    aasimar: {
+      name: "Aasimar",
+      feats: {
+        celestial_resistance: {
+          name: "Celestische Resistenz",
+          description: "",
+        },
+        darkvision: { name: "Dunkelsicht", description: "" },
+        healing_hands: { name: "Heilende Hände", description: "" },
+        light_bearer: { name: "Lichtträger", description: "" },
+        celestial_revelation: {
+          name: "Celestische Offenbarung",
+          description: "",
+        },
+      },
+    },
+    harengon: {
+      name: "Harengon",
+    },
+    fairy: {
+      name: "Fee",
+    },
   },
   characterClass: {
     arteficer: {
@@ -317,7 +495,7 @@ export const de = {
             },
           },
         },
-        counterspell: { title: "Schule des Zauberbanns" },
+        glamour: { title: "Schule des Zauberbanns" },
       },
     },
     cleric: {
@@ -495,6 +673,7 @@ export const de = {
     steps: {
       basic_info: {
         title: "Charakterdaten",
+        size: "Größe",
         name: "Name",
         species: "Spezies",
         level: "Stufe",

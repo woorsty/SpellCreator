@@ -8,7 +8,7 @@ import {
   Attribute,
   SkillOf,
 } from "../model/skill";
-import { AllSpecies, SPECIES } from "../model/species";
+import { AllSpecies, CreatureSize, SPECIES } from "../model/species";
 import { AttributeService } from "./attribute-service";
 
 export class CharacterService {
@@ -58,7 +58,7 @@ export class CharacterService {
 
       const modifier = AttributeService.calculateModifier(attr.value);
       const savingThrow = AttributeService.calculateSavingThrow(
-        attr.value,
+        modifier,
         attr.proficiency,
         character.proficiencyBonus,
       );
@@ -109,6 +109,7 @@ export class CharacterService {
         feat: OriginFeat.SKILLED,
         toolProficiencies: [],
       },
+      size: CreatureSize.MEDIUM,
       characterClass: {
         id: CharacterClassId.FIGHTER,
         equipment: [],
@@ -222,7 +223,7 @@ export class CharacterService {
       appearance: "",
       story: "",
       alignment: Alignment.TRUE_NEUTRAL,
-      languages: ["Common"],
+      languages: ["common"],
       equipment: [],
       attunedMagicItems: ["", "", ""],
       coins: {

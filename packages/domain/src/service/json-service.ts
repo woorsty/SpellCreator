@@ -33,7 +33,6 @@ export class JsonService {
       const files = await fs.readdir(directoryPath);
       const jsonFiles = files.filter((file: string) => file.endsWith(".json"));
       const allData: TYPE[] = [];
-      console.log("All Json", jsonFiles, "in directory", directoryPath, files);
 
       for (const jsonFile of jsonFiles) {
         const filePath = `${directoryPath}/${jsonFile}`;

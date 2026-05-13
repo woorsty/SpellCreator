@@ -47,9 +47,6 @@ export const SPECIES: { [S in AllSpecies]: Species } = {
       { id: "healing_hands" },
       { id: "light_bearer" },
       { id: "celestial_revelation" },
-      { id: "heavenly_wings" },
-      { id: "inner_radiance" },
-      { id: "necrotic_shroud" },
     ],
   },
   dragonborn: {
@@ -70,6 +67,7 @@ export const SPECIES: { [S in AllSpecies]: Species } = {
     size: [CreatureSize.MEDIUM],
     speed: 9,
     feats: [
+      { id: "darkvision" },
       { id: "dwarven_resilience" },
       { id: "dwarven_toughness" },
       { id: "stonecunning" },
@@ -108,11 +106,7 @@ export const SPECIES: { [S in AllSpecies]: Species } = {
     size: [CreatureSize.MEDIUM],
     speed: 9,
     feats: [
-      { id: "fires_burn" },
-      { id: "frosts_chill" },
-      { id: "hills_tumble" },
-      { id: "stones_endurance" },
-      { id: "stroms_thunder" },
+      { id: "giant_ancestry" },
       { id: "large_form" },
       { id: "powerful_build" },
     ],
@@ -148,7 +142,11 @@ export const SPECIES: { [S in AllSpecies]: Species } = {
     creature_type: CreatureType.HUMANOID,
     size: [CreatureSize.MEDIUM],
     speed: 9,
-    feats: [{ id: "adrenaline_rush" }, { id: "relentless_endurance" }],
+    feats: [
+      { id: "adrenaline_rush" },
+      { id: "darkvision" },
+      { id: "relentless_endurance" },
+    ],
   },
   tiefling: {
     id: AllSpecies.TIEFLING,

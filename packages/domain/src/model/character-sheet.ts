@@ -1,7 +1,7 @@
 import { Spell } from "./spell";
-import { Attribute, CharacterAttributes } from "./skill";
+import { CharacterAttributes } from "./skill";
 import { Alignment } from "./alignment";
-import { Species, SpeciesFeature as SpeciesTrait } from "./species";
+import { CreatureSize, Species } from "./species";
 import { CharacterClass, Subclass } from "./character-class";
 import { EquipmentItem } from "./equipment";
 import { ToolItem } from "./tool";
@@ -15,6 +15,7 @@ export type CharacterSheet = {
   characterClass: CharacterClass;
   species: Species;
   subclass: Subclass | null;
+  size: CreatureSize;
 
   level: number;
   xp: number;

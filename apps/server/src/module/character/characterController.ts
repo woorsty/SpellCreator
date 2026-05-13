@@ -5,13 +5,18 @@ import { CHARACTERS_PATH } from "../api/apiRouter";
 import { CharacterService } from "@domain";
 import { CharacterSheet } from "@domain";
 import { Services } from "../../services";
+import { Translator } from "@i18n";
 
 export class CharacterController {
-  constructor(private services: Services) {}
+  private translator: Translator;
+
+  constructor(private services: Services) {
+    this.translator = new Translator("characterViewer");
+    console.log(this.translator.translate("test"));
+  }
 
   getAll = async (req: Request, res: Response) => {
     const allCharacters = await this.getAllCharacters();
-    console.log(allCharacters);
     res.render("character-list", {
       characters: allCharacters,
       renderMarkdown: MarkdownService.renderMarkdown,
@@ -29,6 +34,7 @@ export class CharacterController {
       res.render("character-detail", {
         character: currentCharacter,
         renderMarkdown: MarkdownService.renderMarkdown,
+        translator: this.translator,
       });
     } else {
       res.render("character-detail", {

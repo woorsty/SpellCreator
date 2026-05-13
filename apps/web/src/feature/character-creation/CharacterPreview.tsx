@@ -32,7 +32,9 @@ export function CharacterPreview({ character }: Props) {
           <span>
             {translator.translate(".level")} {character.level}
           </span>
-          <span>{translator.translate(`species.${character.species.id}`)}</span>
+          <span>
+            {translator.translate(`species.${character.species.id}.name`)}
+          </span>
         </div>
       </section>
 

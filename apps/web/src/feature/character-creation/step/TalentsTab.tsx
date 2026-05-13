@@ -23,7 +23,7 @@ export function TalentsTab({ character, updateField }: StepProps) {
             data={character.feats}
             labelProperty="name"
             textProperty="text"
-            field="talents"
+            field="feats"
             updateField={updateField}
           />
         </div>

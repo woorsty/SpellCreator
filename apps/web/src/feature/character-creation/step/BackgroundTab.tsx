@@ -2,7 +2,7 @@ import React from "react";
 import { Translator } from "@i18n";
 import { StepProps } from "../characterCreator.types";
 import { Checkbox } from "../../../component/ui/Checkbox";
-import { Alignment, Language, RareLanguage } from "@domain";
+import { Alignment, Language } from "@domain";
 import { Select } from "../../../component/ui/Select";
 
 export function BackgroundTab({ character, updateField }: StepProps) {

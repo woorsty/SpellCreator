@@ -27,10 +27,13 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
     const newClass = classes.find((cls) => classId === cls.id);
     updateField("characterClass", newClass);
     updateField("subclass", undefined);
+    console.log("newClass:", newClass);
     if (newClass) {
       updateField("hitDiceValue", newClass.hitDie);
       const spellSlots = CLASS_SPELLSLOTS[newClass?.id];
       updateField("spellSlots.total", spellSlots);
+      console.log(spellSlots);
+      console.log(character);
     }
   }
 
@@ -38,12 +41,15 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
     updateField("subclass", subclass);
 
     const spellSlots = SUBCLASS_SPELLSLOTS[subclass.id];
-    updateField("spellSlots.total", spellSlots);
+    if (spellSlots) {
+      updateField("spellSlots.total", spellSlots);
+    }
   }
 
   function updateSpecies(species: AllSpecies) {
     const spec = SPECIES[species];
     updateField("species", spec);
+    updateField("size", spec.size[0]);
   }
 
   useEffect(() => {
@@ -112,7 +118,18 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
             variant={character.species.id == species ? "primary" : "secondary"}
             onClick={() => updateSpecies(species)}
           >
-            {translator.translate(`species.${species}`)}
+            {translator.translate(`species.${species}.name`)}
+          </Button>
+        ))}
+        <br />
+        <Label>{translator.translate(".size")}</Label>{" "}
+        {Object.values(character.species.size).map((size) => (
+          <Button
+            key={size}
+            variant={character.size === size ? "primary" : "secondary"}
+            onClick={() => updateField("size", size)}
+          >
+            {translator.translate(`size.${size}`)}
           </Button>
         ))}
       </Card>
