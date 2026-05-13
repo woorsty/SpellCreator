@@ -1,5 +1,5 @@
 import { CharacterSheet } from "@domain";
-import { CharacterCreationStep } from "./character-creator-stpes";
+import { CharacterCreationStep } from "./character-creator-steps";
 
 export type StepProps = {
   character: CharacterSheet;

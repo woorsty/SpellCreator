@@ -4,7 +4,7 @@ import { AttributesTab } from "./step/AttributesTab";
 import { BackgroundTab } from "./step/BackgroundTab";
 import { EquipmentTab } from "./step/EquipmentTab";
 import { AttacksTab } from "./step/AttacksTab";
-import { CharacterCreationStep } from "./character-creator-stpes";
+import { CharacterCreationStep } from "./character-creator-steps";
 import React from "react";
 import { StepProps } from "./characterCreator.types";
 import { SpellsTab } from "./step/SpellsTab";

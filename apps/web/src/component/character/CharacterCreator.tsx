@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { CharacterSheet } from "@domain";
 import { Translator } from "@i18n";
-import { CharacterCreationStep } from "../../feature/character-creation/character-creator-stpes";
+import { CharacterCreationStep } from "../../feature/character-creation/character-creator-steps";
 import { stepRegistry } from "../../feature/character-creation/step-registry";
 import { State } from "../../feature/character-creation/characterCreator.types";
 import { characterCreationReducer } from "../../feature/character-creation/characterCreator.reducer";
@@ -32,10 +32,10 @@ export default function CharacterCreator() {
           translator.translate(".overwrite_character"),
         );
         if (shouldOverwrite) {
-          CharacterService.addNewCharacter(character);
+          CharacterService.saveCharacter(character);
         }
       } else {
-        CharacterService.addNewCharacter(character);
+        CharacterService.saveCharacter(character);
       }
     });
   }

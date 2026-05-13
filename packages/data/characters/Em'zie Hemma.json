@@ -12,9 +12,16 @@
   "name": "Em'zie Hemma",
   "background": {
     "id": "guide",
-    "attributes": ["dexternity", "wisdom", "charisma"],
+    "attributes": [
+      "dexternity",
+      "wisdom",
+      "charisma"
+    ],
     "feat": "magic_initiate",
-    "skillProficiencies": ["insight", "stealth"],
+    "skillProficiencies": [
+      "insight",
+      "stealth"
+    ],
     "toolProficiencies": [],
     "equipment": []
   },
@@ -23,7 +30,10 @@
     "primaryAbility": "charisma",
     "hitDie": 8,
     "castingAttribute": "charisma",
-    "savingThrows": ["dexterity", "charisma"],
+    "savingThrows": [
+      "dexterity",
+      "charisma"
+    ],
     "proficiencies": {
       "skillNumber": 3,
       "skills": [
@@ -45,9 +55,15 @@
         "persuasion",
         "perception"
       ],
-      "armor": ["light_armor"],
-      "weapons": ["simple_weapons"],
-      "equipment": ["choose_3_instruments"]
+      "armor": [
+        "light_armor"
+      ],
+      "weapons": [
+        "simple_weapons"
+      ],
+      "equipment": [
+        "choose_3_instruments"
+      ]
     },
     "equipment": [
       "leather_armor",
@@ -213,7 +229,9 @@
   "species": {
     "id": "gnome",
     "creature_type": "humanoid",
-    "size": ["small"],
+    "size": [
+      "small"
+    ],
     "speed": 9,
     "feats": [
       {
@@ -248,7 +266,7 @@
   "level": 5,
   "xp": 6500,
   "armorClass": 12,
-  "currentHitpoints": 42,
+  "currentHitpoints": 12,
   "temporaryHitpoints": 0,
   "spentHitDice": 0,
   "maxHitpoints": 42,
@@ -613,7 +631,12 @@
         "material": "Ein Stück Vlies"
       },
       "text": "Du erschaffst für die Wirkungsdauer ein Geräusch oder das Abbild eines Gegenstands in Reichweite. Die jeweiligen Effekte sind unten beschrieben. Die Illusion endet, wenn du diesen Zauber erneut wirkst. \r\nEine Kreatur, die das Geräusch oder Abbild mit der Studieren-Aktion untersucht, kann die Illusion mit einem erfolgreichen Intelligenzwurf (Nachforschungen) gegen deines Zauberrettungswurf-SG als solche erkennen. \r\nIn diesem Fall wird die Illusion für sie weniger deutlich wahrnehmbar \r\nGeräusche Die Lautstärke des Geräuschs kann so leise wie ein Flüstern oder so laut wie ein Schrei sein. Dies kann deine Stimme oder die einer anderen Person sein, aber auch Löwengebrüll, Trommeln oder ein anderes Beliebiges Geräusch. Für die Wirkungsdauer kannst du einen durchgehenden Laut oder unterschiedliche kurze Laute erzeugen \r\nBild: Das Abbild eines Gegenstands-beispielsweise ein Stuhl, schlammige Fußabdrücke oder eine Truhe - darf nicht größer als ein Würfel mit 1,5 Metern Kantenlänge sein Es kann weder Geräusche noch Gerüche, Licht oder andere sensorische Effekte erzeugen. Physische Interaktionen mit dem Abbild enttarnen es als Illusion, da Dinge es einfach durchdringen können. ",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer"],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer"
+      ],
       "higherLevel": "",
       "notes": "Waldgnom"
     },
@@ -631,7 +654,12 @@
         "material": ""
       },
       "text": "Für die Wirkungsdauer kannst du Tiere verstehen und verbal mit ihnen kommunizieren, und du kannst beliebige Fertigkeitsoptionen der Beeinflussen-Aktion auf sie anwenden. \r\nDie meisten Tiere haben zu Themen abseits von Überleben oder Gefährtenschaft nicht viel zu sagen. Sie sind jedoch zumindest in der Lage, Informationen über nahe Orte und Monster sowie über Ereignisse mitzuteilen, die sie innerhalb des letzten Tages erlebt haben. ",
-      "characterClasses": ["bard", "druid", "warlock", "ranger"],
+      "characterClasses": [
+        "bard",
+        "druid",
+        "warlock",
+        "ranger"
+      ],
       "higherLevel": "",
       "notes": "Waldgnom, 2x ohne Zauberplatz"
     },
@@ -650,7 +678,13 @@
         "material": ""
       },
       "text": "An einem Punkt deiner Wahl in Reichweite erscheint eine geisterhafte schwebende Hand. Sie bleibt für die Wirkungsdauer bestehen. Die Hand verschwindet, wenn sie weiter als neun Meter von dir entfernt ist oder du den Zauber erneut wirkst \r\nWenn du den Zauber wirkst, kannst du mithilfe der Hand mit Gegenständen interagieren, unverschlossene Türen oder Behälter öffnen, Gegenstände in einem Behälter verstauen oder duraus hervorholen oder den Inhalt einer Phiole ausgießen. \r\nIn deinen folgenden Zügen kannst du die Hand als magische Aktion erneut auf diese Art kontrollieren. Als Teil dieser Aktion kannst du die Hand bis zu neun Meter weit bewegen. \r\nDie Hand kann nicht angreifen, keine magischen Gegenstände aktivieren und nicht mehr als fünf Kilogramm Gewicht tragen. ",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer", null],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer",
+        null
+      ],
       "higherLevel": "",
       "notes": ""
     },
@@ -668,7 +702,13 @@
         "material": "Eine Waffe, mit der du Übung hast, im Wert von mindestens 1 KM"
       },
       "text": "Von einem Blitz magischer Einsicht geleitet führst du einen Angriff mit der Waffe aus, die du zum Wirken des Zaubers verwendet hast. Der Zauber nutzt dein Attribut zum Zauberwirken für den Angriff und Schadenswürfe statt Stärke oder Geschicklichkeit. Wenn der Angriff Schaden bewirkt, kann dies gleißender Schaden oder die normale Schadensart der Waffe sein (nach deiner Wahl)",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer", null],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer",
+        null
+      ],
       "higherLevel": "Unabhängig davon, ob du gleißenden Schaden oder die normale Schadensart der Waffe bewirkst, bewirkt der Angriff zusätzlich gleißenden Schaden, wenn du die 5. (1W6), die 11. (2W6) und die 17. (3W6) Stufe erreichst.",
       "notes": ""
     },
@@ -687,7 +727,9 @@
         "material": ""
       },
       "text": "Du entfesselst eine Reihe von Beleidigungen mit subtilen Verzauberungen auf eine Kreatur in Reichweite, die du hören oder sehen kannst. Das Ziel muss einen Weisheitsrettungswurf bestehen, oder es erleidet 1W6 psychischen Schaden und ist beim nächsten Angriffswurf vor dem Ende seines nächsten Zugs im Nachteil. ",
-      "characterClasses": ["bard"],
+      "characterClasses": [
+        "bard"
+      ],
       "higherLevel": "Der Schaden wird um jeweils 1W6 erhöht, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
       "notes": ""
     },
@@ -706,7 +748,12 @@
         "material": ""
       },
       "text": "Du veränderst dein Aussehen einschließlich Kleidung. Rüstung, Waffen und anderer Habseligkeiten, bis der Zauber endet oder du ihn mit einer Aktion beendest. Du kannst 30 Zentimeter größer oder kleiner sowie schwerer oder leichter erscheinen. Allerdings musst du eine Gestalt atit der gleichen Grundanordnung von Gliedmaßen annehmm Abgesehen davon sind die Einzelheiten der Illusion dir überlassen. \r\nEiner genauen körperlichen Untersuchung halten die Veränderungen dieser Illusion nicht stand. Wenn du diesen Zauber beispielsweise nutzt, um dir einen Hut aufzusetzen, durchdringen Gegenstände diesen einfach Will jemand den Hut berühren, so fühlt er dort nichts. \r\nUm deine Verkleidung als solche zu erkennen, muss eine Kreatur die Studieren Aktion ausführen, um dein Aussehen zu untersuchen, und einen Intelligenzwurf (Nachforschungen) gegen deinen Zauberrettungswurf SG bestehen. ",
-      "characterClasses": ["bard", "wizard", "sorcerer", null],
+      "characterClasses": [
+        "bard",
+        "wizard",
+        "sorcerer",
+        null
+      ],
       "higherLevel": "",
       "notes": ""
     },
@@ -725,7 +772,9 @@
         "material": ""
       },
       "text": "Eine Kreatur deiner Wahl in Reichweite, die du sehen kannst, hört im Geiste eine misstönende Melodie. Das Ziel führt einen Weisheitsrettungswurf aus. Scheitert der Wurf, so erleidet das Ziel 3W6 psychischen Schaden und muss sofort seine Reaktion verwenden, sofern verfügbar, um sich so weit wie möglich von dir zu entfernen. Dabei nimmt es die sicherste Route. Bei einem erfolgreichen Rettungswurf erleidet das Ziel nur halb so viel Schaden. ",
-      "characterClasses": ["bard"],
+      "characterClasses": [
+        "bard"
+      ],
       "higherLevel": "Für jeden Zauberplatzgrad über dem 1. wird der Schaden um 1W6 erhöht. ",
       "notes": ""
     },
@@ -744,7 +793,12 @@
         "material": "Ein Tropfen Honig"
       },
       "text": "Du schlägst einer Kreatur in Reichweite, die du sehen kannat und die dich hören und verstehen kann, mit höclistens 25 Worten eine Vorgehensweise vor. Der Vorschlag muns realistisch klingen und darf nichts enthalten, was dem Ziel oder seinen Verbündeten Schaden zufügen würde. Du könntest beispielsweise sagen: Holt den Schlüssel zur Schatzkammer des Kults und gebt ihn mir\" Oder du könntest sagen: „Hört auf zu kämpfen, verlasst diese Bibliothek friedlich und kehrt nicht zurück.\" \r\nDas Ziel muss einen Weisheitsrettungswurf bestehen. oder es ist für die Wirkungsdauer-oder bis du oder deine Verbündeten ihm Schaden zufügen bezaubert. Das bezauberte Ziel führt den Vorschlag nach besten Kräften aus. Die vorgeschlagene Aktivität kann während der gesamten Wirkungsdauer fortgesetzt werden. Wenn sie jedoch in kürzerer Zeit abgeschlossen werden kann, endet der Zauber beim Ziel, sobald es die Aktivität ausgeführt hat. ",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer"],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer"
+      ],
       "higherLevel": "",
       "notes": ""
     },
@@ -763,7 +817,11 @@
         "material": "Ein Glimmersplitter"
       },
       "text": "Von einem Punkt deiner Wahl in Reichweite geht ein lautes Geräusch aus. Jede Kreatur in einer Kugel mit einem Radius von drei Metern um den Punkt führt einen Konstitutionsrettungswurf aus. Scheitert der Wurf. so erleidet sie 3W8 Schallschaden, anderenfalls die Hälfte Konstrukte sind beim Rettungswurf im Nachteil. Nichtmagische Gegenstände im Bereich, die nicht getragen oder gehalten werden, erleiden den gleichen Schaden.",
-      "characterClasses": ["bard", "wizard", "sorcerer"],
+      "characterClasses": [
+        "bard",
+        "wizard",
+        "sorcerer"
+      ],
       "higherLevel": "Für jeden Zauberplatzgrad über dem 2. wird der Schaden um 1W8 erhöht. ",
       "notes": ""
     },
@@ -782,7 +840,12 @@
         "material": ""
       },
       "text": "Eine Kreatur in Reichweite, die du sehen kannst, muss einen Weisheitsrettungswurf bestehen, oder sie ist für die Wirkungsdauer bezaubert. Wenn die Kreatur kein Humanoide ist, besteht sie den Rettungswurf automatisch \r\nAuf dem Kopf des hezauberten Ziels erscheint eine geisterhafte Krone. Das Ziel muss seine Aktion in jedem seiner Züge vor seiner Bewegung verwenden, um einen Nahkampfangriff gegen eine Kreatur außer sich selbst auszuführen, die du mental bestimmst. Das Ziel kam in seinem Zug normal handeln, wenn du keine Kreatur auswählst oder sich keine Kreatur in seiner Reichweite befindet. Das Ziel wiederholt den Rettungswurf am Ende \r\njedes seiner Züge. Bei einem Erfolg endet der Zauber. In deinen folgenden Zügen musst du die magische Aktion ausführen, um die Kontrolle über das Ziel zu behalten. oder der Zauber endet. ",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer"],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer"
+      ],
       "higherLevel": "",
       "notes": ""
     },
@@ -801,7 +864,11 @@
         "material": ""
       },
       "text": "Für die Wirkungsdauer kann in einer Kugel mit einem Radius von sechs Metern kein Geräusch erzeugt werden, und kein Geräusch kann in die Kugel dringen. Die Kugel wird an einem Ort deiner Wahl in Reichweite erzeugt. Alle Kreaturen und Gegenstände, die sich vollständig in der Kugel befinden, sind taub und gegen Schallschaden immun. In der Kugel können keine Zauber mit Verbalkomponenten gewirkt werden. ",
-      "characterClasses": ["bard", "cleric", "ranger"],
+      "characterClasses": [
+        "bard",
+        "cleric",
+        "ranger"
+      ],
       "higherLevel": "",
       "notes": ""
     },
@@ -848,7 +915,11 @@
         "material": ""
       },
       "text": "Du berührst eine Kreatur. Diese muss einen Weisheitsrettungswurf bestehen, oder sie ist für die Wirkungsdauer verflucht. Bis der Fluch endet, erleidet das Ziel einen der folgenden Effekte deiner Wahl\r\n- Wähle ein Attribut aus. Das Ziel ist bei allen Attributs und Rettungswürfen mit diesem Attribut im Nachteil.\r\n- Das Ziel ist bei Angriffswürfen gegen dich im Nachteil. \r\n- Im Kampf muss das Ziel zu Beginn jedes seiner Züge einen Weisheitsrettungswurf bestehen, oder es ist gezwungen, die Ausweichaktion auszuführen. \r\n- Wenn du dem Ziel mit einem Angriffswurf oder einem Zauber Schaden zufügst, erleidet es zusätzlich 1W8 nekrotischen Schaden. ",
-      "characterClasses": ["bard", "cleric", "wizard"],
+      "characterClasses": [
+        "bard",
+        "cleric",
+        "wizard"
+      ],
       "higherLevel": "Bei einem Zauberplatz des 4. Grades kannst du deine Konzentration auf diesen Zauber bis zu zehn Minuten lang aufrechterhalten. Bei einem Zauberplatz ab dem 5. Grad erfordert der Zauber keine Konzentration, und die Wirkungsdauer beträgt acht Stunden (Zauberplatzgrad 5-6) oder 24 Stunden (Zauberplatzgrad 7-8). Bei einem Zauber platz des 9. Grades hält der Zauber an, bis er gebannt wird. ",
       "notes": ""
     },
@@ -867,7 +938,12 @@
         "material": "Eine weiße Feder"
       },
       "text": "Jede Kreatur in einem Kegel von neun Metern muss einen Weisheitsrettungswurf bestehen, oder sie lässt fallen, was auch immer sie hält, und ist für die Wirkungsdauer verängstigt \r\nFine verängstigte Kreatur führt in jedem ihrer Züge die Spurt Aktion aus und entfernt sich auf dem sichersten Weg von dir, sofern möglich. Beendet eine Kreatur ihren Zug in einem Bereich, in dem du nicht in ihrer Sichtlinie bist, führt sie einen Weisheitsrettungswurf aus. Bei einem erfolgreichen Rettungswurf endet der Zauber bei der Kreatur ",
-      "characterClasses": ["bard", "warlock", "wizard", "sorcerer"],
+      "characterClasses": [
+        "bard",
+        "warlock",
+        "wizard",
+        "sorcerer"
+      ],
       "higherLevel": "",
       "notes": ""
     }
@@ -875,7 +951,11 @@
   "appearance": "Mitte 20, kleidet sich eher schlicht mit, gerade für einen Gnom, zu großen Oberteilen und weite Hosen (als gäb's bei Snipes gerade Geschenkgutscheine)",
   "story": "Er wuchs als Sohn einer Wirtshausfamilie auf. Dort wurden regelmäßig Schmähgedicht-Duelle geführt. Aber nur im Keller unter ausschluss der Öffentlichkeit, da die Bevölkerung der Stadt, in der er aufwuchs sehr empfindlich auf raue gossen Sprache (auch oft Orkisch) reagiert. Er begann als Jugendlicher selbst mit dem Reimen und war ein Naturtalent. Als einestages seine Eltern verhaftet wurden, als die Wache von den Events erfuhr, konnte er entkommen und reist seit dem von Stadt zu Stadt, um an Turnieren teilzunehmen, in der Hoffnung irgendwann genug Geld zu verdienen, um seine Eltern frei zu kaufen.",
   "alignment": "chaotic_neutral",
-  "languages": ["common", "orc", "gnomish"],
+  "languages": [
+    "common",
+    "orc",
+    "gnomish"
+  ],
   "equipment": [
     {
       "name": "Lederrüstung",
@@ -970,7 +1050,11 @@
       "notes": ""
     }
   ],
-  "attunedMagicItems": ["", "", ""],
+  "attunedMagicItems": [
+    "",
+    "",
+    ""
+  ],
   "coins": {
     "copper": 0,
     "silver": 0,

@@ -1,29 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Translator } from "@i18n"; // Angenommen, es gibt einen Hook oder Provider
-import { CharacterSheet, Spellslots } from "@domain";
+import { Translator } from "@i18n";
+import { CharacterService, CharacterSheet, Spellslots } from "@domain";
 import "./CharacterSheetView.css";
+import { HitPoints } from "./component/HitPoints";
 
 export const CharacterSheetView: React.FC = () => {
-  const [characterData, setCharacterData] = useState<CharacterSheet[]>([]);
+  const [character, setCharacter] = useState<CharacterSheet>();
   const params = useParams();
 
+  const updateCharacter = (key: keyof CharacterSheet, value: any) => {
+    setCharacter((prev) => {
+      if (!prev) return prev;
+
+      const updated = {
+        ...prev!,
+        [key]: value,
+      };
+
+      CharacterService.saveCharacter(updated);
+      return updated;
+    });
+  };
+
   useEffect(() => {
-    fetch("/api/characters")
+    fetch(`/api/characters/${params.name}`)
       .then((res) => res.json())
       .then((characterData) => {
-        setCharacterData(characterData);
+        setCharacter(characterData);
       });
-  }, []);
-
-  const character = characterData.find((char) => char.name === params.name);
-
-  console.log(character);
+  }, [params.name]);
 
   const translator = new Translator("");
   const t = translator.translate;
 
-  // Hilfsfunktion für Vorzeichen (entspricht Source [99])
   const sign = (n: number) => (n >= 0 ? `+${n}` : n);
 
   if (!character) {
@@ -32,7 +42,6 @@ export const CharacterSheetView: React.FC = () => {
 
   return (
     <div className="sheet">
-      {/* TOP BEREICH (Source [102-121]) */}
       <div className="top">
         <div className="grid-2">
           <div className="character-info">
@@ -89,66 +98,7 @@ export const CharacterSheetView: React.FC = () => {
           </div>
         </div>
 
-        <div className="quickbox">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "2fr 1fr",
-              gap: "10px",
-            }}
-          >
-            <div className="card">
-              <div className="label">Trefferpunkte</div>
-              <div
-                style={{ display: "flex", gap: "10px", alignItems: "stretch" }}
-              >
-                <div style={{ flex: 1, textAlign: "center" }}>
-                  <div className="label">Aktuell</div>
-                  <div className="value">{character.currentHitpoints}</div>
-                </div>
-                <div
-                  style={{
-                    flex: 1,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "6px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div>
-                    <div className="label">Max</div>
-                    <div className="value">{character.maxHitpoints}</div>
-                  </div>
-                  <div>
-                    <div className="label">Temp</div>
-                    <div className="value">{character.temporaryHitpoints}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="card" style={{ textAlign: "center" }}>
-              <div className="label">Trefferwürfel</div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "8px",
-                  marginTop: "6px",
-                }}
-              >
-                <div>
-                  <div className="label">Verbraucht</div>
-                  <div className="value">{character.spentHitDice}</div>
-                </div>
-                <div>
-                  <div className="label">Max</div>
-                  <div className="value">{`${character.level}W${character.characterClass.hitDie}`}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HitPoints character={character} updateCharacter={updateCharacter} />
 
         <div className="quickbox">
           <h2 className="section-title">Todesrettungswürfe</h2>
@@ -181,7 +131,6 @@ export const CharacterSheetView: React.FC = () => {
         </div>
       </div>
 
-      {/* PAGE 1 (Source [122-192]) */}
       <div className="firstpage">
         <div className="left">
           <div className="card">
@@ -414,7 +363,6 @@ export const CharacterSheetView: React.FC = () => {
         </div>
       </div>
 
-      {/* PAGE 2 (Source [193-216]) */}
       <div className="page-two">
         <div className="page-two-left">
           <div className="page-two-top">
@@ -560,8 +508,6 @@ export const CharacterSheetView: React.FC = () => {
     </div>
   );
 };
-
-/* --- Hilfskomponenten für saubereren Code --- */
 
 const renderAbility = (
   t: any,

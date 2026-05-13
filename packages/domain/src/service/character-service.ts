@@ -12,7 +12,7 @@ import { AllSpecies, CreatureSize, SPECIES } from "../model/species";
 import { AttributeService } from "./attribute-service";
 
 export class CharacterService {
-  public static async addNewCharacter(character: CharacterSheet) {
+  public static async saveCharacter(character: CharacterSheet) {
     CharacterService.calculateParameters(character);
     const response = await fetch("/api/characters/" + character.name, {
       method: "POST",
@@ -83,7 +83,9 @@ export class CharacterService {
   }
 
   public static async checkIfCharacterExists(character: CharacterSheet) {
-    const response = await fetch("/api/characters/" + character.name);
+    const response = await fetch("/api/characters/" + character.name, {
+      method: "HEAD",
+    });
     console.log(response);
     return response.json();
   }

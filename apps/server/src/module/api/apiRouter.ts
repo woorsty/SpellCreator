@@ -62,10 +62,18 @@ router.get("/characters", (req, res) => {
   res.json(characters);
 });
 
-router.get("/characters/:name", (req, res) => {
+router.head("/characters/:name", (req, res) => {
   const exists = fs.existsSync(CHARACTERS_PATH + "/" + req.params.name);
   console.log(exists);
   res.json({ exists: exists });
+});
+
+router.get("/characters/:name", (req, res) => {
+  const characterData = fs.readFileSync(
+    CHARACTERS_PATH + "/" + req.params.name + ".json",
+    "utf-8",
+  );
+  res.json(JSON.parse(characterData));
 });
 
 router.post("/characters/:name", (req, res) => {
