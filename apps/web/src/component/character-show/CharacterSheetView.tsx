@@ -9,6 +9,8 @@ import { HitPointCard } from "./card/HitPointCard";
 import { DeathSavesCard } from "./card/DeathSavesCard";
 import { AttributesCard } from "./card/AttributesCard";
 import { characterReducer } from "./CharacterShow.reducer";
+import { ClassFeatsCard } from "./card/ClassFeatsCard";
+import { ListCard } from "../ui/ListCard";
 
 const initialState = {
   character: undefined,
@@ -196,40 +198,10 @@ export const CharacterSheetView: React.FC = () => {
             </table>
           </div>
 
-          <div className="grid-2">
-            <ListCard
-              title="Klassenmerkmale"
-              items={character.characterClass.features
-                .map((f) => {
-                  return {
-                    name: t(
-                      `characterClass.${character.characterClass.id}.features.${f.id}.name`,
-                    ),
-                    level: f.level,
-                  };
-                })
-                .concat(
-                  character.subclass
-                    ? character.subclass.features.map((f) => {
-                        return {
-                          name: t(
-                            `characterClass.${character.characterClass.id}.subclasses.${character.subclass!.id}.features.${f.id}.name`,
-                          ),
-                          level: f.level,
-                        };
-                      })
-                    : [],
-                )
-                .sort((a, b) => a.level - b.level)
-                .map((f) => f.name)}
-            />
-            <ListCard
-              title="Volksmerkmale"
-              items={character.species.feats.map((f) =>
-                t(`species.${character.species.id}.feats.${f.id}.name`),
-              )}
-            />
-          </div>
+          <ClassFeatsCard
+            character={character}
+            updateCharacter={updateCharacter}
+          />
 
           <div className="card">
             <h2 className="section-title">Talente</h2>
@@ -411,17 +383,6 @@ const TrainingRow = ({
   <div className="skill-row">
     <div className={`skill-check ${checked ? "filled" : ""}`} />
     <div className="skill-name">{label}</div>
-  </div>
-);
-
-const ListCard = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="card">
-    <h2 className="section-title">{title}</h2>
-    <ul className="list">
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
   </div>
 );
 
