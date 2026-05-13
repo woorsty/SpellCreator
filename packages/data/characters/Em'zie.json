@@ -872,8 +872,8 @@
       "notes": ""
     }
   ],
-  "appearance": "TODO",
-  "story": "TODO",
+  "appearance": "Mitte 20, kleidet sich eher schlicht mit, gerade für einen Gnom, zu großen Oberteilen und weite Hosen (als gäb's bei Snipes gerade Geschenkgutscheine)",
+  "story": "Er wuchs als Sohn einer Wirtshausfamilie auf. Dort wurden regelmäßig Schmähgedicht-Duelle geführt. Aber nur im Keller unter ausschluss der Öffentlichkeit, da die Bevölkerung der Stadt, in der er aufwuchs sehr empfindlich auf raue gossen Sprache (auch oft Orkisch) reagiert. Er begann als Jugendlicher selbst mit dem Reimen und war ein Naturtalent. Als einestages seine Eltern verhaftet wurden, als die Wache von den Events erfuhr, konnte er entkommen und reist seit dem von Stadt zu Stadt, um an Turnieren teilzunehmen, in der Hoffnung irgendwann genug Geld zu verdienen, um seine Eltern frei zu kaufen.",
   "alignment": "chaotic_neutral",
   "languages": ["common", "orc", "gnomish"],
   "equipment": [
