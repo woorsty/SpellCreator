@@ -1,28 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
 import { Translator } from "@i18n";
-import { CharacterService, CharacterSheet, Spellslots } from "@domain";
+import { CharacterSheet, Spellslots } from "@domain";
 import "./CharacterSheetView.css";
-import { HitPointCard } from "./component/HitPointCard";
-import { LevelCard } from "./component/LevelCard";
-import { BasicInfoCard } from "./component/BasicInfoCard";
-import { DeathSavesCard } from "./component/DeathSavesCard";
+import { BasicInfoCard } from "./card/BasicInfoCard";
+import { LevelCard } from "./card/LevelCard";
+import { HitPointCard } from "./card/HitPointCard";
+import { DeathSavesCard } from "./card/DeathSavesCard";
+import { AttributesCard } from "./card/AttributesCard";
+import { characterReducer } from "./CharacterShow.reducer";
+
+const initialState = {
+  character: undefined,
+};
 
 export const CharacterSheetView: React.FC = () => {
-  const [character, setCharacter] = useState<CharacterSheet>();
+  const [state, dispatch] = useReducer(characterReducer, initialState);
   const params = useParams();
 
-  const updateCharacter = (key: keyof CharacterSheet, value: any) => {
-    setCharacter((prev) => {
-      if (!prev) return prev;
+  const character = state.character;
 
-      const updated = {
-        ...prev!,
-        [key]: value,
-      };
-
-      CharacterService.saveCharacter(updated);
-      return updated;
+  const updateCharacter = (
+    field: keyof CharacterSheet | string,
+    value: any,
+  ) => {
+    dispatch({
+      type: "UPDATE_FIELD",
+      field: field as keyof CharacterSheet,
+      value,
     });
   };
 
@@ -30,7 +35,10 @@ export const CharacterSheetView: React.FC = () => {
     fetch(`/api/characters/${params.name}`)
       .then((res) => res.json())
       .then((characterData) => {
-        setCharacter(characterData);
+        dispatch({
+          type: "INIT_CHARACTER",
+          character: characterData,
+        });
       });
   }, [params.name]);
 
@@ -72,78 +80,10 @@ export const CharacterSheetView: React.FC = () => {
 
       <div className="firstpage">
         <div className="left">
-          <div className="card">
-            <h2 className="section-title">Attribute</h2>
-            <div className="abilities">
-              <div className="abilities-left">
-                <div className="mini-stat">
-                  <div className="label">Übungsbonus</div>
-                  <div className="value">+{character.proficiencyBonus}</div>
-                </div>
-
-                {/* Stat-Block Template Funktion für DRY Code */}
-                {renderAbility(t, sign, "strength", "Stärke", character, [
-                  { id: "athletics", label: "Athletik" },
-                ])}
-                {renderAbility(
-                  t,
-                  sign,
-                  "dexterity",
-                  "Geschicklichkeit",
-                  character,
-                  [
-                    { id: "acrobatics", label: "Akrobatik" },
-                    { id: "sleightOfHand", label: "Fingerfertigkeit" },
-                    { id: "stealth", label: "Heimlichkeit" },
-                  ],
-                )}
-                {renderAbility(
-                  t,
-                  sign,
-                  "constitution",
-                  "Konstitution",
-                  character,
-                )}
-
-                <div className="mini-stat">
-                  <div className="label">Heroische Inspiration</div>
-                  <div
-                    className={`heroic-circle ${character.heroicInspiration ? "filled" : ""}`}
-                  />
-                </div>
-              </div>
-
-              <div className="abilities-right">
-                {renderAbility(
-                  t,
-                  sign,
-                  "intelligence",
-                  "Intelligenz",
-                  character,
-                  [
-                    { id: "arcana", label: "Arkane Kunde" },
-                    { id: "history", label: "Geschichte" },
-                    { id: "investigation", label: "Nachforschung" },
-                    { id: "nature", label: "Naturkunde" },
-                    { id: "religion", label: "Religion" },
-                  ],
-                )}
-                {renderAbility(t, sign, "wisdom", "Weisheit", character, [
-                  { id: "medicine", label: "Heilkunde" },
-                  { id: "animalHandling", label: "Mit Tieren umgehen" },
-                  { id: "insight", label: "Motiv erkennen" },
-                  { id: "survival", label: "Überlebenskunst" },
-                  { id: "perception", label: "Wahrnehmung" },
-                ])}
-                {renderAbility(t, sign, "charisma", "Charisma", character, [
-                  { id: "performance", label: "Auftreten" },
-                  { id: "intimidation", label: "Einschüchtern" },
-                  { id: "deception", label: "Täuschen" },
-                  { id: "persuasion", label: "Überzeugen" },
-                ])}
-              </div>
-            </div>
-          </div>
+          <AttributesCard
+            character={character}
+            updateCharacter={updateCharacter}
+          />
 
           <div className="card">
             <div className="section-title">Übung & Kompetenzen</div>
@@ -444,50 +384,6 @@ export const CharacterSheetView: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-const renderAbility = (
-  t: any,
-  sign: any,
-  attrKey: string,
-  label: string,
-  character: CharacterSheet,
-  skills: { id: string; label: string }[] = [],
-) => {
-  const attr =
-    character.attributes[attrKey as keyof typeof character.attributes];
-  return (
-    <div className="ability">
-      <div className="ability-name">{label}</div>
-      <div className="ability-header">
-        <div className="ability-statbox">
-          <div className="ability-stat-label">Wert</div>
-          <div className="ability-stat-value">{attr.value}</div>
-        </div>
-        <div className="ability-statbox">
-          <div className="ability-stat-label">Mod</div>
-          <div className="ability-stat-mod">{sign(attr.modifier)}</div>
-        </div>
-      </div>
-      <div className="skill-row">
-        <div className={`skill-check ${attr.proficiency ? "filled" : ""}`} />
-        <div className="skill-mod">{sign(attr.savingThrow)}</div>
-        <div className="skill-name">Rettungswurf</div>
-      </div>
-      {skills.map((s) => {
-        const skillData = (attr as any).skills[s.id];
-        return (
-          <div key={s.id} className="skill-row">
-            <div
-              className={`skill-check ${skillData.proficiency ? "filled" : ""}`}
-            />
-            <div className="skill-mod">{sign(skillData.modifier)}</div>
-            <div className="skill-name">{s.label}</div>
-          </div>
-        );
-      })}
     </div>
   );
 };

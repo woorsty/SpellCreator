@@ -11,7 +11,7 @@ import { Checkbox } from "../../component/ui/Checkbox";
 import { Card } from "../../component/ui/Card";
 import { Label } from "../../component/ui/Label";
 import { NumberInput } from "../../component/ui/NumberInput";
-import { SkillRow } from "../../feature/character-creation/step/SkillRow";
+import { SkillRow } from "./step/SkillRow";
 
 type AttributeCardProps<A extends Attribute> = {
   attributeName: A;

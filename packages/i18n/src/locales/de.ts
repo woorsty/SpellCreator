@@ -754,6 +754,10 @@ export const de = {
   },
   characterShow: {
     card: {
+      attributes: {
+        title: "Attribute",
+        saving_throw: "Rettungswurf",
+      },
       death_saves: {
         title: "Todesrettungswürfe",
         fail: "Fehlschlag",

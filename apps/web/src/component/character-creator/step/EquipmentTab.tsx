@@ -1,13 +1,13 @@
 import React from "react";
 import { Translator } from "@i18n";
-import { StepProps } from "../characterCreator.types";
-import { CoinsRow } from "../../../component/character/CoinsRow";
 import { Card } from "../../../component/ui/Card";
 import { ItemList } from "../../../component/ui/ItemList";
-import { ArmorTrainingSection } from "../../../component/character/ArmorTrainingSection";
-import { WeaponTrainingSection } from "../../../component/character/WeaponTrainingSection";
 import { Input } from "../../../component/ui/Input";
 import { EquipmentItem, ToolItem } from "@domain";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
+import { ArmorTrainingSection } from "../ArmorTrainingSection";
+import { WeaponTrainingSection } from "../WeaponTrainingSection";
+import { CoinsRow } from "../CoinsRow";
 
 export function EquipmentTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.equipment");

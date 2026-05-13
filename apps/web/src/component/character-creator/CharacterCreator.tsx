@@ -5,9 +5,9 @@ import { CharacterCreationStep } from "../../feature/character-creation/characte
 import { stepRegistry } from "../../feature/character-creation/step-registry";
 import { State } from "../../feature/character-creation/characterCreator.types";
 import { characterCreationReducer } from "../../feature/character-creation/characterCreator.reducer";
-import { CharacterPreview } from "../../feature/character-creation/CharacterPreview";
 import { CharacterService } from "@domain";
 import { Button } from "../ui/Button";
+import { CharacterPreview } from "./CharacterPreview";
 
 const emptyCharacter: CharacterSheet = CharacterService.getEmptyCharacter();
 
