@@ -3,7 +3,10 @@ import { useParams } from "react-router";
 import { Translator } from "@i18n";
 import { CharacterService, CharacterSheet, Spellslots } from "@domain";
 import "./CharacterSheetView.css";
-import { HitPoints } from "./component/HitPoints";
+import { HitPointCard } from "./component/HitPointCard";
+import { LevelCard } from "./component/LevelCard";
+import { BasicInfoCard } from "./component/BasicInfoCard";
+import { DeathSavesCard } from "./component/DeathSavesCard";
 
 export const CharacterSheetView: React.FC = () => {
   const [character, setCharacter] = useState<CharacterSheet>();
@@ -44,51 +47,12 @@ export const CharacterSheetView: React.FC = () => {
     <div className="sheet">
       <div className="top">
         <div className="grid-2">
-          <div className="character-info">
-            <div className="card">
-              <div className="label">Charaktername</div>
-              <div className="value">{character.name}</div>
-            </div>
-            <div className="grid-2-small">
-              <div className="card">
-                <div className="label">Hintergrund</div>
-                <div className="value">
-                  {t(`background.${character.background.id}`)}
-                </div>
-              </div>
-              <div className="card">
-                <div className="label">Klasse</div>
-                <div className="value">
-                  {t(`characterClass.${character.characterClass.id}.title`)}
-                </div>
-              </div>
-              <div className="card">
-                <div className="label">Volk</div>
-                <div className="value">
-                  {t(`species.${character.species.id}.name`)}
-                </div>
-              </div>
-              <div className="card">
-                <div className="label">Unterklasse</div>
-                <div className="value">
-                  {t(
-                    `characterClass.${character.characterClass.id}.subclasses.${character.subclass?.id}.title`,
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+          <BasicInfoCard
+            character={character}
+            updateCharacter={updateCharacter}
+          />
 
-          <div className="quickbox">
-            <div className="card">
-              <div className="label">Stufe</div>
-              <div className="value">{character.level}</div>
-            </div>
-            <div className="card">
-              <div className="label">EP</div>
-              <div className="value">{character.xp}</div>
-            </div>
-          </div>
+          <LevelCard character={character} updateCharacter={updateCharacter} />
         </div>
 
         <div className="quickbox">
@@ -98,37 +62,12 @@ export const CharacterSheetView: React.FC = () => {
           </div>
         </div>
 
-        <HitPoints character={character} updateCharacter={updateCharacter} />
+        <HitPointCard character={character} updateCharacter={updateCharacter} />
 
-        <div className="quickbox">
-          <h2 className="section-title">Todesrettungswürfe</h2>
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "12px" }}
-          >
-            <div className="death-column">
-              <div className="death-label">Erfolge</div>
-              <div className="death-row">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={`success-${i}`}
-                    className={`skill-check ${character.successDeathSaves >= i ? "filled" : ""}`}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="death-column">
-              <div className="death-label">Fehlschläge</div>
-              <div className="death-row">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={`fail-${i}`}
-                    className={`skill-check ${character.failedDeathSaves >= i ? "filled" : ""}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <DeathSavesCard
+          character={character}
+          updateCharacter={updateCharacter}
+        />
       </div>
 
       <div className="firstpage">

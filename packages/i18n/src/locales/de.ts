@@ -752,4 +752,14 @@ export const de = {
     },
     preview: { title: "Charaktervorschau", level: "Stufe" },
   },
+  characterShow: {
+    card: {
+      death_saves: {
+        title: "Todesrettungswürfe",
+        fail: "Fehlschlag",
+        success: "Erfolg",
+        reset: "Zurücksetzen",
+      },
+    },
+  },
 } as const;

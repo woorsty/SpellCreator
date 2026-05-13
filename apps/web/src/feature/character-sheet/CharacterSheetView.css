@@ -192,6 +192,7 @@ a {
   display: block;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
 }
 
 .quickbox {
@@ -199,6 +200,9 @@ a {
   border-radius: 12px;
   padding: 12px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 table {
@@ -488,7 +492,9 @@ textarea.fake {
   background: var(--panel2);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 8px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-right: 4px;
   text-align: center;
 }
 
@@ -496,7 +502,6 @@ textarea.fake {
   font-size: 12px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 4px;
 }
 
 .death-row {

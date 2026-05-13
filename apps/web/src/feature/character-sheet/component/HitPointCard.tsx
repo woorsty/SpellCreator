@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "../../../component/ui/Button";
 import { NumberInput } from "../../../component/ui/NumberInput";
-import { CharacterSheet } from "@domain";
+import { CharacterViewProps } from "./CharacterViewProps";
+import { Card } from "../../../component/ui/Card";
 
-export type HitPointProps = {
-  character: CharacterSheet;
-  updateCharacter: (key: keyof CharacterSheet, value: any) => void;
-};
-
-export const HitPoints: React.FC<HitPointProps> = ({
+export const HitPointCard: React.FC<CharacterViewProps> = ({
   character,
   updateCharacter,
 }) => {
@@ -44,7 +40,7 @@ export const HitPoints: React.FC<HitPointProps> = ({
           gap: "10px",
         }}
       >
-        <div className="card">
+        <Card>
           <div className="label">Trefferpunkte</div>
           <div style={{ display: "flex", gap: "10px", alignItems: "stretch" }}>
             <div style={{ flex: 1, textAlign: "center" }}>
@@ -92,8 +88,8 @@ export const HitPoints: React.FC<HitPointProps> = ({
               </div>
             </div>
           </div>
-        </div>
-        <div className="card" style={{ textAlign: "center" }}>
+        </Card>
+        <Card>
           <div className="label">Trefferwürfel</div>
           <div
             style={{
@@ -118,7 +114,7 @@ export const HitPoints: React.FC<HitPointProps> = ({
               <div className="value">{`${character.level}W${character.characterClass.hitDie}`}</div>
             </div>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   );
