@@ -7,12 +7,17 @@ type NumberInputProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export function NumberInput({ value, onChange, ...props }: NumberInputProps) {
+  const className =
+    "appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none " +
+    props.className;
+
   return (
     <Input
       {...props}
       type="number"
       value={value}
-      className="w-[6ch] appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+      style={{ textAlign: "center" }}
+      className={className}
       onChange={(e) => onChange(Number(e.target.value))}
     />
   );

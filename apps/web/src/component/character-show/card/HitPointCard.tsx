@@ -47,25 +47,38 @@ export const HitPointCard: React.FC<CharacterViewProps> = ({
               <div className="label">Aktuell</div>
               <div className="value">{character.currentHitpoints}</div>
 
+              <NumberInput
+                value={damage}
+                min={0}
+                className="w-16"
+                onChange={(e) => setDamge(e as number)}
+              ></NumberInput>
               <div style={{ display: "flex", gap: "6px", marginTop: "6px" }}>
-                <NumberInput
-                  value={damage}
-                  className="w-16"
-                  min={0}
-                  onChange={(e) => setDamge(e as number)}
-                ></NumberInput>
                 <Button
-                  onClick={() => updateHitpoints(false)}
-                  className="hp-btn damage"
-                >
-                  −
-                </Button>
-
-                <Button
+                  variant="secondary"
                   onClick={() => updateHitpoints(true)}
                   className="hp-btn heal"
                 >
-                  +
+                  🩹
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() =>
+                    updateCharacter(
+                      "temporaryHitpoints",
+                      character.temporaryHitpoints + damage,
+                    )
+                  }
+                  className="hp-btn damage"
+                >
+                  🛡️
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => updateHitpoints(false)}
+                  className="hp-btn damage"
+                >
+                  ⚔️
                 </Button>
               </div>
             </div>
@@ -105,7 +118,7 @@ export const HitPointCard: React.FC<CharacterViewProps> = ({
                 min={0}
                 max={character.level}
                 onChange={(e) => updateCharacter("spentHitDice", e as number)}
-                className="value"
+                className="w-16"
                 value={character.spentHitDice}
               />
             </div>

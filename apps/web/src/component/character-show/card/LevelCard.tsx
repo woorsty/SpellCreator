@@ -1,7 +1,6 @@
 import { CharacterViewProps } from "./CharacterViewProps";
 import React from "react";
 import { NumberInput } from "../../../component/ui/NumberInput";
-import "../CharacterSheetView.css";
 import { Card } from "../../../component/ui/Card";
 
 export const LevelCard: React.FC<CharacterViewProps> = ({
@@ -14,7 +13,6 @@ export const LevelCard: React.FC<CharacterViewProps> = ({
         <div className="label">Stufe</div>
         <NumberInput
           onChange={(e) => updateCharacter("level", e)}
-          className="value"
           value={character.level}
         />
       </Card>
@@ -23,7 +21,6 @@ export const LevelCard: React.FC<CharacterViewProps> = ({
         <NumberInput
           value={character.xp}
           onChange={(e) => updateCharacter("xp", e)}
-          className="value"
         />
       </Card>
     </div>
