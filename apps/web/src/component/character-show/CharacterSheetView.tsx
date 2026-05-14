@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
 import { Translator } from "@repo/i18n";
-import { CharacterSheet, fetchUrl, serverUrl, Spellslots } from "@repo/domain";
+import { CharacterService, CharacterSheet, fetchUrl } from "@repo/domain";
 import "./CharacterSheetView.css";
 import { BasicInfoCard } from "./card/BasicInfoCard";
 import { LevelCard } from "./card/LevelCard";
@@ -13,10 +13,11 @@ import { ListCard } from "../ui/ListCard";
 import { TrainingCard } from "./card/TrainingCard";
 import { BaseStatsCard } from "./card/BaseStatsCard";
 import { SpellSlotsCard } from "./card/SpellSlotsCard";
-import { A } from "../ui/A";
-import { NumberInput } from "../ui/NumberInput";
 import { CoinsCard } from "./card/CoinsCard";
 import { SpellsCard } from "./card/SpellsCard";
+import { TextArea } from "../ui/TextArea";
+import { EquipmentCard } from "./card/EquipmentCard";
+import { FeatureList } from "./ui/FeatureList";
 
 const initialState = {
   character: undefined,
@@ -27,6 +28,15 @@ export const CharacterSheetView: React.FC = () => {
   const params = useParams();
 
   const character = state.character;
+  useEffect(() => {
+    if (!character) return;
+
+    const timeout = setTimeout(() => {
+      CharacterService.saveCharacter(character);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [character]);
 
   const updateCharacter = (
     field: keyof CharacterSheet | string,
@@ -145,20 +155,42 @@ export const CharacterSheetView: React.FC = () => {
           </div>
           <ListCard
             title="Sprachen"
-            items={character.languages.map((l) => t(`language.${l}`))}
+            items={character.languages.map((l) => {
+              return { name: t(`language.${l}`) };
+            })}
           />
-          <ListCard
-            title="Ausrüstung"
-            items={character.equipment.map((e) => e.name)}
+          <FeatureList
+            updateCharacter={updateCharacter}
+            character={character}
+            items={character.equipment.map((equipment, i) => {
+              return {
+                ...equipment,
+                index: i,
+                editPath: `equipment`,
+              };
+            })}
+            title={translator.translate(".card.equipment.title")}
+            editable={true}
           />
           <ListCard
             title="Eingestimmte magische Gegenstände"
-            items={Object.values(character.attunedMagicItems)}
+            items={Object.values(character.attunedMagicItems).map(
+              (magicItem) => {
+                return { name: magicItem };
+              },
+            )}
           />
 
           <CoinsCard character={character} updateCharacter={updateCharacter} />
         </div>
       </div>
+      <h3>{translator.translate(".notes")}</h3>
+      <TextArea
+        className="w-full"
+        onChange={(e) => updateCharacter("notes", e.target.value)}
+      >
+        {character.notes}
+      </TextArea>
     </div>
   );
 };

@@ -220,7 +220,7 @@ export class CharacterService {
       spellAttackBonus: 0,
       spellSlots: {
         total: [],
-        used: [],
+        used: {},
       },
       preparedSpells: [],
       appearance: "",
@@ -236,6 +236,7 @@ export class CharacterService {
         gold: 0,
         platinum: 0,
       },
+      notes: "",
     };
   }
 

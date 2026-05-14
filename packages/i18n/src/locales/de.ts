@@ -148,8 +148,16 @@ export const de = {
     gnome: {
       name: "Gnom",
       feats: {
-        forest_gnome: { name: "Waldgnom", description: "" },
-        rock_gnome: { name: "Felsengnom", description: "" },
+        forest_gnome: {
+          name: "Waldgnom",
+          description:
+            "Du kennst den Zauber Einfache Illusion. Außerdem hast du den Zauber Mit Tieren sprechen stets vorbereitet. Die Anzahl der Male, die du den Zauber ohne Zauberplatz wirken kannst, entspricht deinem Übungsbonus. Du erhälst alle verbraucthen Anwendungen nach einer langen Rast zurück.\nDu kannst den Zauber auch mit einem verfügbaren Zauberplatz wirken.",
+        },
+        rock_gnome: {
+          name: "Felsengnom",
+          description:
+            "Du kennst die Zaubertricks Ausbessern und Taschenspielerei. Außerdem kannst du zehn Minuten verwenden und den Zaubertrick Taschenspielerei wirken, um ein winziges Uhrwerkgerät (RK 5, 1 TP) zu bauen, beispielsweise ein Spielzeug, einen Anzünder oder eine Spieluhr. Bestimme die Funktion des Geräts, indem du einen Effekt von Taschenspielerei auswählst. Das Gerät erzeugt den Effekt, wann immer du - oder eine andere Kreatur - eine Bonusaktion ausführst, um es mit einer Berührung zu aktivieren. Wenn der ausgewählte Effekt Optionen aufweist, entscheidest du dich für eine dieser Optionen, wenn du das Gerät baust. Du kannst bis zu drei dieser Geräte gleichzeitig verfügbar haben. Jedes Gerät fällt entweder acht Stunden nach seiner Erschaffung oder dann auseinander, wenn du es mit einer Berührung (eine Verwenden-Aktion) zerlegst.",
+        },
       },
     },
     tiefling: {
@@ -375,12 +383,12 @@ export const de = {
         bardic_inspiration: {
           name: "Bardische Inspiration",
           description:
-            "Du kannst andere durch Worte, Musik oder Tänze übernatürlich stark inspirieren. Diese Inspiration wird durch einen Bardische-Inspiration-Würfel (W6) repräsentiert.\nBardische Inspiration verwenden: Du kannst als Bonusaktion eine Kreatur im Abstand von bis zu 18 MEtern von dir inspirieren, die dich hören oder sehen kann. Diese Kreatur erhält einen deiner Bardische-Inspiration-Würfel. eine Kreatur darf immer nur über einen Bardischen-Inspiration-Würfel verfügen.\nEinmal innerhalb der nächsten Stunde gilt: Wenn die Kreatur bei einer W20-Prüfung scheitert, kann sie mit dem Bardische-Inspiration-Würfel würfeln, das Ergebnis der Prüfung hinzufügen und so aus dem Misserfolg möglicherweise einen Erfolg machen. Ein Bardische-Inspiration-Würfel wird verbraucth, wenn mit ihm gewürfelt wird.\nAnzahl der Anwendungen: Die Anzahl der möglichen Anwendungen deines Bardische-Inspiration-Würfels entspricht deinem Charismamodifikator (min 1x). Du erhälst alle verbraucthen Anwendungen nach einer langen Rast zurück.\nAuf höheren Graden: Dein Bardische-Inspiration-Würfel verändert sich, wenn du bestimmte Bardenstufen erreichst Der Würfel wird auf der 5. Stufe zu W8, auf der 10. azu W10, auf der 15. zu W12",
+            "Du kannst andere durch Worte, Musik oder Tänze übernatürlich stark inspirieren. Diese Inspiration wird durch einen Bardische-Inspiration-Würfel (W6) repräsentiert.\nBardische Inspiration verwenden: Du kannst als Bonusaktion eine Kreatur im Abstand von bis zu 18 Metern von dir inspirieren, die dich hören oder sehen kann. Diese Kreatur erhält einen deiner Bardische-Inspiration-Würfel. eine Kreatur darf immer nur über einen Bardischen-Inspiration-Würfel verfügen.\nEinmal innerhalb der nächsten Stunde gilt: Wenn die Kreatur bei einer W20-Prüfung scheitert, kann sie mit dem Bardische-Inspiration-Würfel würfeln, das Ergebnis der Prüfung hinzufügen und so aus dem Misserfolg möglicherweise einen Erfolg machen. Ein Bardische-Inspiration-Würfel wird verbraucth, wenn mit ihm gewürfelt wird.\nAnzahl der Anwendungen: Die Anzahl der möglichen Anwendungen deines Bardische-Inspiration-Würfels entspricht deinem Charismamodifikator (min 1x). Du erhälst alle verbraucthen Anwendungen nach einer langen Rast zurück.\nAuf höheren Graden: Dein Bardische-Inspiration-Würfel verändert sich, wenn du bestimmte Bardenstufen erreichst Der Würfel wird auf der 5. Stufe zu W8, auf der 10. azu W10, auf der 15. zu W12",
         },
         spellcasting: {
           name: "Zauberwirken",
           description:
-            "Zaubertricks: Du beherrscht zwei Zaubertricks diener Wahl aus der Zauberliste des Barden. Wann immer du eine Bardenstufe erhälst, kannst du einen deiner Zaubertricks mit einem anderen Zaubertrick deiner Wahl aus der Zauberliste des Barden ersetzen.\nZauberplätze:  Du erhältst alle verbrauchten Zauberplätze nach einer langen Rast zurück\nDeine vorbereiteten Zauber ändern: Wann immer du aeine Bardenstufe erreichst, kannst du einen der Zauber auf deiner Liste mit einem anderen Bardenzauber ersetzen, für den du Zauberpätze hast.\nAttribut zum Zauberwirken: Charisma\nZauberfokus: Du kannst ein Musikinstrument als Zauberfokus für deine Bardenzauber verwenden.",
+            "Zaubertricks: Du beherrscht zwei Zaubertricks diener Wahl aus der Zauberliste des Barden. Wann immer du eine Bardenstufe erhälst, kannst du einen deiner Zaubertricks mit einem anderen Zaubertrick deiner Wahl aus der Zauberliste des Barden ersetzen.\nZauberplätze: Du erhältst alle verbrauchten Zauberplätze nach einer langen Rast zurück\nDeine vorbereiteten Zauber ändern: Wann immer du aeine Bardenstufe erreichst, kannst du einen der Zauber auf deiner Liste mit einem anderen Bardenzauber ersetzen, für den du Zauberpätze hast.\nAttribut zum Zauberwirken: Charisma\nZauberfokus: Du kannst ein Musikinstrument als Zauberfokus für deine Bardenzauber verwenden.",
         },
         expertise: {
           name: "Expertise",
@@ -753,6 +761,7 @@ export const de = {
     preview: { title: "Charaktervorschau", level: "Stufe" },
   },
   characterShow: {
+    notes: "Notizen",
     card: {
       attributes: {
         title: "Attribute",
@@ -775,6 +784,9 @@ export const de = {
         gold_short: "Go",
         electrum_short: "EL",
         platinum_short: "PL",
+      },
+      equipment: {
+        title: "Equipment",
       },
     },
   },

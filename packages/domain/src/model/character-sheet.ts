@@ -87,4 +87,6 @@ export type CharacterSheet = {
     gold: number;
     platinum: number;
   };
+
+  notes: string;
 };
