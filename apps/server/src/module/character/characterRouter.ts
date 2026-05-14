@@ -1,9 +1,9 @@
 import { Services } from "../../services";
 import { CharacterController } from "./characterController";
+import { Router } from "express";
 
-import express from "express";
 export const createCharacterRouter = (services: Services) => {
-  const router = express.Router();
+  const router: Router = Router();
 
   const controller = new CharacterController(services);
 

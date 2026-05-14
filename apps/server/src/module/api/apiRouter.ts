@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { mapGermanSpellJsonToSpell } from "./germanSpellsJsonToSpellsMapper";
 
-const router = Router();
+const router: Router = Router();
 
 export const SPELLS_PATH = path.resolve(
   process.cwd(),

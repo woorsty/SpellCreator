@@ -3,7 +3,7 @@ import { JsonFilePath } from "./invocationModel";
 import type { Invocation } from "./invocationModel";
 import path from "path";
 import { SpellController } from "../spell/spellControler";
-import { JsonService, MarkdownService } from "@rep/domain";
+import { JsonService, MarkdownService } from "@repo/domain";
 
 export class InvocationController {
   static getEditForm(req: Request, res: Response) {
@@ -34,11 +34,11 @@ export class InvocationController {
     const invocationData =
       await JsonService.readJsonFile<Invocation>(JsonFilePath);
 
-    for (const invocation of invocationData) {
-      invocation.Zauber = await SpellController.getSpellByName(
-        invocation.Zauber as string,
-      );
-    }
+    // for (const invocation of invocationData) {
+    //   invocation.Zauber = await SpellController.getSpellByName(
+    //     invocation.Zauber as string,
+    //   );
+    // }
 
     let filteredInvocation = [...invocationData];
 

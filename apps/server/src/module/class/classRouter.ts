@@ -1,7 +1,7 @@
 import { ClassController } from "./classController";
 
-import express from "express";
-const router = express.Router();
+import { Router } from "express";
+const router: Router = Router();
 
 router.get("/", ClassController.getAll);
 router.get("/:name", ClassController.get);

@@ -17,11 +17,12 @@
     "copy-assets": "cpx \"src/assets/**/*\" dist/assets"
   },
   "dependencies": {
+    "@repo/domain": "workspace:*",
+    "@repo/i18n": "workspace:*",
+    "body-parser": "^2.2.2",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "jspdf": "^3.0.1",
-    "@repo/domain": "workspace:*",
-    "@repo/i18n": "workspace:*"
+    "jspdf": "^3.0.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",

@@ -1,6 +1,6 @@
 import { SpellController } from "./spellControler";
-import express from "express";
-const router = express.Router();
+import { Router } from "express";
+const router: Router = Router();
 
 router.get("/", SpellController.getAll);
 router.get("/add", SpellController.getAddForm);

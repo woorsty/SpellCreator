@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { StepProps } from "../characterCreator.types";
 import { Translator } from "@repo/i18n";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
@@ -17,6 +16,7 @@ import {
 } from "@repo/domain";
 import { LabeledNumberInput } from "../../../component/ui/LabeledNumberInput";
 import { LabeledInput } from "../../../component/ui/LabeledInput";
+import { StepProps } from "../../../feature/character-creation/characterCreator.types";
 
 export function BasicInfoTab({ character, updateField }: StepProps) {
   const [classes, setClasses] = useState<CharacterClass[]>([]);

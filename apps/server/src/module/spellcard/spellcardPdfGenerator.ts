@@ -31,9 +31,9 @@ const ICON_PATH = "src/assets/icons/";
 
 export function splitSpellIntoCards(spell: Spell): Spellcard[] {
   const fullText =
-    spell.Text +
-    (spell.HöhereLevel
-      ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
+    spell.text +
+    (spell.higherLevel
+      ? "\r\nAuf höheren Stufen: " + (spell.higherLevel || "")
       : "");
   const lines = fullText.split(/(?<=\n)/);
 
@@ -66,17 +66,17 @@ function addCardLines(
         body: currentBody.trim(),
         stufe: spell.level,
         komponenten: {
-          verbal: spell.Verbal,
-          gestik: spell.Gestik,
-          material: spell.Material || "",
+          verbal: spell.components.verbal,
+          gestik: spell.components.gestic,
+          material: spell.components.material || "",
         },
-        klasse: spell.Klasse,
-        konzentration: spell.Konzentration,
-        ritual: spell.Ritual,
+        klasse: spell.characterClasses,
+        konzentration: spell.concentration,
+        ritual: spell.ritual,
         schule: spell.school,
-        zeitaufwand: spell.Zeitaufwand,
-        reichweite: spell.Reichweite,
-        dauer: spell.Dauer,
+        zeitaufwand: spell.castingTime,
+        reichweite: spell.range,
+        dauer: spell.duration,
       });
       part++;
       currentBody = "";
@@ -92,17 +92,17 @@ function addCardLines(
       body: currentBody.trim(),
       stufe: spell.level,
       komponenten: {
-        verbal: spell.Verbal,
-        gestik: spell.Gestik,
-        material: spell.Material || "",
+        verbal: spell.components.verbal,
+        gestik: spell.components.gestic,
+        material: spell.components.material || "",
       },
-      klasse: spell.Klasse,
-      konzentration: spell.Konzentration,
-      ritual: spell.Ritual,
+      klasse: spell.characterClasses,
+      konzentration: spell.concentration,
+      ritual: spell.ritual,
       schule: spell.school,
-      zeitaufwand: spell.Zeitaufwand,
-      reichweite: spell.Reichweite,
-      dauer: spell.Dauer,
+      zeitaufwand: spell.castingTime,
+      reichweite: spell.range,
+      dauer: spell.duration,
     });
   }
 }

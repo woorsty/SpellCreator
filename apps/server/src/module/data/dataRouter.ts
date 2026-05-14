@@ -1,6 +1,6 @@
-import express from "express";
 import { DataController } from "./dataControler";
-const router = express.Router();
+import { Router } from "express";
+const router: Router = Router();
 
 router.get("/monster", DataController.getMonsters);
 

@@ -1,12 +1,12 @@
-import express from "express";
 import type { Request, Response } from "express";
-const router = express.Router();
+import { Router } from "express";
+const router: Router = Router();
 import fs from "fs";
 import {
   generateCardPDF,
   generateCardPDFWithBackside,
 } from "./spellcardPdfGenerator";
-import { Spell } from "@repo/domain";
+import { CharacterClassId, Spell } from "@repo/domain";
 import { SPELLS_PATH } from "../api/apiRouter";
 
 const createSpellcard = (req: Request, res: Response) => {
@@ -20,7 +20,8 @@ const createSpellcard = (req: Request, res: Response) => {
     const stufe = spell.level;
     const matchStufe =
       !isNaN(von) && !isNaN(bis) && stufe >= von && stufe <= bis;
-    const matchKlasse = !klasse || spell.Klasse.includes(klasse as string);
+    const matchKlasse =
+      !klasse || spell.characterClasses.includes(klasse as CharacterClassId);
     return matchStufe && matchKlasse;
   });
 

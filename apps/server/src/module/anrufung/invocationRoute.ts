@@ -1,7 +1,7 @@
+import { Router } from "express";
 import { InvocationController } from "./invocationController";
 
-import express from "express";
-const router = express.Router();
+const router: Router = Router();
 
 router.get("/", InvocationController.getAll);
 router.get("/add", InvocationController.getAddForm);

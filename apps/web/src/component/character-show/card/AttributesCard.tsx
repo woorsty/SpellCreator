@@ -1,7 +1,7 @@
 import { Attribute, AttributeService, SkillOf } from "@repo/domain";
 import { CharacterViewProps } from "./CharacterViewProps";
 import React, { useState } from "react";
-import { Translator } from "@repo/domain";
+import { Translator } from "@repo/i18n";
 import { Card } from "../../../component/ui/Card";
 import { Button } from "../../../component/ui/Button";
 import { NumberInput } from "../../../component/ui/NumberInput";

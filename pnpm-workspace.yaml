@@ -1,0 +1,12 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+allowBuilds:
+  core-js: true
+  esbuild: true
+pnpm:
+  neverBuiltDependencies: [] # Optional: Falls du Dinge explizit verbieten willst
+  onlyBuiltDependencies:
+    - core-js
+    - esbuild
+    - "@rolldown/binding-win32-x64-msvc"

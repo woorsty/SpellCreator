@@ -14,7 +14,7 @@ export function EquipmentTab({ character, updateField }: StepProps) {
 
   const updateAttunedMagicItems = (magicItem: string, index: number) => {
     const attunedItems = { ...character.attunedMagicItems };
-    attunedItems[index] = magicItem;
+    attunedItems[index as keyof typeof attunedItems] = magicItem;
     updateField("attunedMagicItems", attunedItems);
   };
 
