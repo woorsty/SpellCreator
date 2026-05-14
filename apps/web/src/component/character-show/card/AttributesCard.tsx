@@ -187,6 +187,12 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
           <div className="mini-stat">
             <div className="label">Heroische Inspiration</div>
             <div
+              onClick={() =>
+                updateCharacter(
+                  "heroicInspiration",
+                  !character.heroicInspiration,
+                )
+              }
               className={`heroic-circle ${character.heroicInspiration ? "filled" : ""}`}
             />
           </div>

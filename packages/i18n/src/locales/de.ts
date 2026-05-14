@@ -764,6 +764,18 @@ export const de = {
         success: "Erfolg",
         reset: "Zurücksetzen",
       },
+      spell_slots: {
+        title: "Zauberplätze",
+        grade: "Grad",
+      },
+      coins: {
+        title: "Münzen",
+        copper_short: "Ku",
+        silver_short: "Si",
+        gold_short: "Go",
+        electrum_short: "EL",
+        platinum_short: "PL",
+      },
     },
   },
 } as const;

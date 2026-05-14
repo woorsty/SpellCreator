@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
 import { Translator } from "@repo/i18n";
-import { CharacterSheet, fetchUrl, Spellslots } from "@repo/domain";
+import { CharacterSheet, fetchUrl, serverUrl, Spellslots } from "@repo/domain";
 import "./CharacterSheetView.css";
 import { BasicInfoCard } from "./card/BasicInfoCard";
 import { LevelCard } from "./card/LevelCard";
@@ -9,8 +9,14 @@ import { HitPointCard } from "./card/HitPointCard";
 import { DeathSavesCard } from "./card/DeathSavesCard";
 import { AttributesCard } from "./card/AttributesCard";
 import { characterReducer } from "./CharacterShow.reducer";
-import { ClassFeatsCard } from "./card/ClassFeatsCard";
 import { ListCard } from "../ui/ListCard";
+import { TrainingCard } from "./card/TrainingCard";
+import { BaseStatsCard } from "./card/BaseStatsCard";
+import { SpellSlotsCard } from "./card/SpellSlotsCard";
+import { A } from "../ui/A";
+import { NumberInput } from "../ui/NumberInput";
+import { CoinsCard } from "./card/CoinsCard";
+import { SpellsCard } from "./card/SpellsCard";
 
 const initialState = {
   character: undefined,
@@ -44,7 +50,7 @@ export const CharacterSheetView: React.FC = () => {
       });
   }, [params.name]);
 
-  const translator = new Translator("");
+  const translator = new Translator("characterShow");
   const t = translator.translate;
 
   const sign = (n: number) => (n >= 0 ? `+${n}` : n);
@@ -86,132 +92,15 @@ export const CharacterSheetView: React.FC = () => {
             character={character}
             updateCharacter={updateCharacter}
           />
-
-          <div className="card">
-            <div className="section-title">Übung & Kompetenzen</div>
-            <div className="label">Rüstung</div>
-            <div className="training-grid-4">
-              <TrainingRow
-                checked={character.armorTraining.light}
-                label="Leichte"
-              />
-              <TrainingRow
-                checked={character.armorTraining.medium}
-                label="Mittlere"
-              />
-              <TrainingRow
-                checked={character.armorTraining.heavy}
-                label="Schwere"
-              />
-              <TrainingRow
-                checked={character.armorTraining.shield}
-                label="Schilde"
-              />
-            </div>
-
-            <div className="label" style={{ marginTop: "12px" }}>
-              Waffen
-            </div>
-            <div className="training-grid-2">
-              <TrainingRow
-                checked={character.weaponTraining.simple}
-                label="Einfache"
-              />
-              <TrainingRow
-                checked={character.weaponTraining.martial}
-                label="Kriegswaffen"
-              />
-              <TrainingRow
-                checked={character.weaponTraining.light}
-                label="Leichte Kriegswaffen"
-              />
-              <TrainingRow
-                checked={character.weaponTraining.finesse}
-                label="Finessewaffen"
-              />
-            </div>
-
-            <div style={{ marginTop: "12px" }}>
-              <div className="label">Werkzeuge</div>
-              <div className="tool-list">
-                {character.toolProficiencies?.length > 0 ? (
-                  <div>
-                    {character.toolProficiencies.map((p) => p.name).join(", ")}
-                  </div>
-                ) : (
-                  <div className="skill-row">
-                    <div
-                      className="skill-name"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      Keine
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="center">
-          <div className="card">
-            <div className="quickstats">
-              <QuickStat
-                label="Initiative"
-                value={sign(character.initiative)}
-              />
-              <QuickStat
-                label="Bewegungsrate"
-                value={character.species.speed}
-              />
-              <QuickStat label="Größe" value={t(`size.${character.size}`)} />
-              <QuickStat
-                label="Passive Wahrnehmung"
-                value={character.passivePerception}
-              />
-            </div>
-          </div>
-
-          <div className="card">
-            <h2 className="section-title">Waffen & Angriffszauber</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Bonus/SG</th>
-                  <th>Schaden</th>
-                  <th>Art</th>
-                  <th>Notizen</th>
-                </tr>
-              </thead>
-              <tbody>
-                {character.attacks.map((w, i) => (
-                  <tr key={i}>
-                    <td>{w.name}</td>
-                    <td>{`${sign(w.attackBonus)}/${sign(w.sg)}`}</td>
-                    <td>{w.damage}</td>
-                    <td>{t(`damage_type.${w.damageType}`)}</td>
-                    <td>{w.notes}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <ClassFeatsCard
+          <TrainingCard
             character={character}
             updateCharacter={updateCharacter}
           />
-
-          <div className="card">
-            <h2 className="section-title">Talente</h2>
-            <ul className="list">
-              {character.feats.map((f, i) => (
-                <li key={i}>{f.name}</li>
-              ))}
-            </ul>
-          </div>
         </div>
+        <BaseStatsCard
+          character={character}
+          updateCharacter={updateCharacter}
+        />
       </div>
 
       <div className="page-two">
@@ -239,89 +128,12 @@ export const CharacterSheetView: React.FC = () => {
                 />
               </div>
             </div>
-
-            <div className="card">
-              <h2 className="section-title">Zauberplätze</h2>
-              <div className="spellslots-grid">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => {
-                  const total =
-                    character.spellSlots.total[character.level - 1][
-                      `slot${level}` as keyof Spellslots
-                    ] || 0;
-                  const used = character.spellSlots.used[level] || 0;
-                  if (total === 0) return null;
-
-                  return (
-                    <div key={level} className="slot-card">
-                      <div className="slot-top">
-                        <span className="slot-grade">Grad {level}</span>
-                        <div className="slot-right">
-                          <div className="slot-gems">
-                            {[1, 2, 3, 4].map((j) => (
-                              <div
-                                key={j}
-                                className={`gem ${j <= total ? (j <= used ? "used" : "free") : "hidden"}`}
-                              />
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <SpellSlotsCard
+              character={character}
+              updateCharacter={updateCharacter}
+            />
           </div>
-
-          <div className="card">
-            <h2 className="section-title">
-              Zaubertricks & Vorbereitete Zauber
-            </h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Grad</th>
-                  <th>Name</th>
-                  <th>Aufwand</th>
-                  <th>Reichweite</th>
-                  <th>Konz.</th>
-                  <th>Ritual</th>
-                  <th>Material</th>
-                  <th>Notizen</th>
-                </tr>
-              </thead>
-              <tbody>
-                {character.preparedSpells.map((s, i) => (
-                  <tr key={i}>
-                    <td>{s.level}</td>
-                    <td>
-                      <a
-                        href={`/spell/${s.name}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {s.name}
-                      </a>
-                    </td>
-                    <td>{s.castingTime}</td>
-                    <td>{s.range}</td>
-                    <td>
-                      <input
-                        type="checkbox"
-                        readOnly
-                        checked={s.concentration}
-                      />
-                    </td>
-                    <td>
-                      <input type="checkbox" readOnly checked={s.ritual} />
-                    </td>
-                    <td>{s.components.material}</td>
-                    <td>{s.notes}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <SpellsCard character={character} updateCharacter={updateCharacter} />
         </div>
 
         <div className="page-two-right">
@@ -344,16 +156,7 @@ export const CharacterSheetView: React.FC = () => {
             items={Object.values(character.attunedMagicItems)}
           />
 
-          <div className="card">
-            <h2 className="section-title">Münzen</h2>
-            <div className="money">
-              <QuickStat label="KM" value={character.coins.copper} />
-              <QuickStat label="SM" value={character.coins.silver} />
-              <QuickStat label="EM" value={character.coins.electrum} />
-              <QuickStat label="GM" value={character.coins.gold} />
-              <QuickStat label="PM" value={character.coins.platinum} />
-            </div>
-          </div>
+          <CoinsCard character={character} updateCharacter={updateCharacter} />
         </div>
       </div>
     </div>
@@ -372,20 +175,6 @@ const QuickStat = ({
     <div className="value">{value}</div>
   </div>
 );
-
-const TrainingRow = ({
-  checked,
-  label,
-}: {
-  checked: boolean;
-  label: string;
-}) => (
-  <div className="skill-row">
-    <div className={`skill-check ${checked ? "filled" : ""}`} />
-    <div className="skill-name">{label}</div>
-  </div>
-);
-
 const TextCard = ({ title, text }: { title: string; text: string }) => (
   <div className="card">
     <h2 className="section-title">{title}</h2>

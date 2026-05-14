@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "concurrently -n SERVER,WEB -c blue,green \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
+    "dev": "concurrently -n TYPES,SERVER,WEB -c yellow,blue,green \"pnpm -r exec tsc -b --watch\" \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
+    "dev:old": "concurrently -n TYPES,SERVER,WEB -c blue,green \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
     "build": "pnpm -r run build",
     "clean": "pnpm -r run clean",
     "deploy": "pnpm run build && pnpm run deploy:pib",

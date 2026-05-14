@@ -67,7 +67,7 @@ export type CharacterSheet = {
 
   spellSlots: {
     total: Spellslots[];
-    used: number[];
+    used: Spellslots;
   };
 
   preparedSpells: Spell[];
