@@ -5,10 +5,7 @@ import { mapGermanSpellJsonToSpell } from "./germanSpellsJsonToSpellsMapper";
 
 const router: Router = Router();
 
-export const SPELLS_PATH = path.resolve(
-  process.cwd(),
-  "../../packages/data/spells.json",
-);
+export const SPELLS_PATH = path.resolve(process.cwd(), "data/spells.json");
 
 router.get("/spells", (req, res) => {
   const data = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf-8")) as any[];
@@ -23,10 +20,7 @@ router.get("/spells/:name", (req, res) => {
   res.json(spell);
 });
 
-export const CLASSES_PATH = path.resolve(
-  process.cwd(),
-  "../../packages/data/classes.json",
-);
+export const CLASSES_PATH = path.resolve(process.cwd(), "data/classes.json");
 
 router.get("/classes", (req, res) => {
   const data = JSON.parse(fs.readFileSync(CLASSES_PATH, "utf-8"));
@@ -35,7 +29,7 @@ router.get("/classes", (req, res) => {
 
 export const BACKGROUNDS_PATH = path.resolve(
   process.cwd(),
-  "../../packages/data/backgrounds.json",
+  "data/backgrounds.json",
 );
 
 router.get("/backgrounds", (req, res) => {
@@ -43,10 +37,7 @@ router.get("/backgrounds", (req, res) => {
   res.json(data);
 });
 
-export const CHARACTERS_PATH = path.resolve(
-  process.cwd(),
-  "../../packages/data/characters",
-);
+export const CHARACTERS_PATH = path.resolve(process.cwd(), "data/characters");
 
 router.get("/characters", (req, res) => {
   const characterFiles = fs
@@ -104,7 +95,7 @@ router.get("/characters/:id", (req, res) => {
 
 export const INVOCATIONS_PATH = path.resolve(
   process.cwd(),
-  "../../packages/data/invocation.json",
+  "data/invocation.json",
 );
 
 router.get("/invocations", (req, res) => {

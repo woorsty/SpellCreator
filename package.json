@@ -7,11 +7,14 @@
   ],
   "scripts": {
     "dev": "concurrently -n SERVER,WEB -c blue,green \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
-    "build": "pnpm -r exec tsc -b",
-    "clean": "pnpm -r exec tsc -b --clean",
-    "deploy": "npm run build && npm run deploy:upload && npm run deploy:restart",
-    "deploy:upload": "rsync -avz --delete dist/ worsty@zeropi:/home/worsty/app/",
-    "deploy:restart": "ssh worsty@zeropi 'pkill serve || true && serve -s /home/worsty/app -l 3000 &'"
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean",
+    "deploy": "pnpm run build && pnpm run deploy:all",
+    "deploy:all": "pnpm run deploy:web && pnpm run deploy:server",
+    "deploy:web": "scp -r apps/web/dist/* worsty@zeropi:/home/worsty/app/web/",
+    "deploy:server": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/src/assets worsty@zeropi:/home/worsty/app/server/",
+    "deploy:server-old": "scp -r apps/server/dist/* worsty@zeropi:/home/worsty/app/server/",
+    "deploy:restart": "ssh worsty@zeropi 'pkill node || true; pkill serve || true; nohup node /home/worsty/app/server/dist/server.js > server.log 2>&1 & nohup serve -s /home/worsty/app/web -l 3000 > web.log 2>&1 &'"
   },
   "devDependencies": {
     "@types/node": "^25.7.0",

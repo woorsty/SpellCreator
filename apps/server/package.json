@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc && npm run copy-assets",
+    "build-tsc": "tsc && npm run copy-assets",
+    "build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/server.js",
     "start": "node dist/server.js",
     "copy-assets": "cpx \"src/assets/**/*\" dist/assets"
   },
@@ -31,6 +32,7 @@
     "@types/node": "^22.19.17",
     "@types/pdfkit": "^0.14.0",
     "cpx": "^1.5.0",
+    "esbuild": "^0.28.0",
     "tsx": "^4.19.0",
     "typescript": "^5.8.3"
   }

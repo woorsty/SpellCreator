@@ -18,7 +18,7 @@ app.locals.services = services;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-app.set("views", path.resolve("views")); // Pfad zum 'views'-Ordner
+app.set("views", path.resolve("views"));
 
 app.get("/", (req: Request, res: Response) => {
   res.render("index");
