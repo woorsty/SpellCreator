@@ -9,12 +9,14 @@
     "dev": "concurrently -n SERVER,WEB -c blue,green \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
     "build": "pnpm -r run build",
     "clean": "pnpm -r run clean",
-    "deploy": "pnpm run build && pnpm run deploy:all",
-    "deploy:all": "pnpm run deploy:web && pnpm run deploy:server",
+    "deploy": "pnpm run build && pnpm run deploy:pib",
+    "deploy:pib": "pnpm run build && pnpm run deploy:server:pib && pnpm run deploy:web:pib",
+    "deploy:all": "pnpm run deploy:web:pib && pnpm run deploy:server:pib && pnpm run deploy:restart",
     "deploy:web": "scp -r apps/web/dist/* worsty@zeropi:/home/worsty/app/web/",
-    "deploy:server": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/src/assets worsty@zeropi:/home/worsty/app/server/",
-    "deploy:server-old": "scp -r apps/server/dist/* worsty@zeropi:/home/worsty/app/server/",
-    "deploy:restart": "ssh worsty@zeropi 'pkill node || true; pkill serve || true; nohup node /home/worsty/app/server/dist/server.js > server.log 2>&1 & nohup serve -s /home/worsty/app/web -l 3000 > web.log 2>&1 &'"
+    "deploy:server": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/assets worsty@zeropi:/home/worsty/app/server/",
+    "deploy:server:pib": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/assets dennis@pib:/home/dennis/app/server/",
+    "deploy:web:pib": "scp -r apps/web/dist/* dennis@pib:/home/dennis/app/web/",
+    "deploy:restart": "ssh dennis@pib \"sudo systemctl restart spell-server && sudo systemctl restart spell-web\""
   },
   "devDependencies": {
     "@types/node": "^25.7.0",

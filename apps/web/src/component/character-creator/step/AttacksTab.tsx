@@ -5,10 +5,11 @@ import { Button } from "../../../component/ui/Button";
 import { Select } from "../../../component/ui/Select";
 import { Input } from "../../../component/ui/Input";
 import { StepProps } from "../../../feature/character-creation/characterCreator.types";
+import { v4 } from "uuid";
 
 export function AttacksTab({ character, updateField }: StepProps) {
   const [newAttack, setNewAttack] = useState<Partial<Attack>>({
-    id: crypto.randomUUID(),
+    id: v4(),
   });
   const translator = new Translator("characterCreator.steps.attacks");
 
@@ -17,7 +18,7 @@ export function AttacksTab({ character, updateField }: StepProps) {
       return;
     }
     const attack: Attack = {
-      id: crypto.randomUUID(),
+      id: v4(),
       name: newAttack.name ?? "",
       attackBonus: newAttack.attackBonus ?? 0,
       sg: newAttack.sg ?? 0,

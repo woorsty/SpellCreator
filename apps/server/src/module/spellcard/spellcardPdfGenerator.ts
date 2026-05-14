@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
 import fs from "fs";
 import path from "path";
-import type { Spell } from "@repo/domain";
+import { RawSpell } from "../api/germanSpellsJsonToSpellsMapper";
 
 export type Spellcard = {
   title: string;
@@ -27,13 +27,13 @@ const GAP_Y = 0;
 
 const MAX_LINES_PER_CARD = 19;
 const MAX_LINES_PER_CARD_WITHOUT_HEADER = 24;
-const ICON_PATH = "src/assets/icons/";
+export const ICON_PATH = "assets/icons/";
 
-export function splitSpellIntoCards(spell: Spell): Spellcard[] {
+export function splitSpellIntoCards(spell: RawSpell): Spellcard[] {
   const fullText =
-    spell.text +
-    (spell.higherLevel
-      ? "\r\nAuf höheren Stufen: " + (spell.higherLevel || "")
+    spell.Text +
+    (spell.HöhereLevel
+      ? "\r\nAuf höheren Stufen: " + (spell.HöhereLevel || "")
       : "");
   const lines = fullText.split(/(?<=\n)/);
 
@@ -47,7 +47,7 @@ export function splitSpellIntoCards(spell: Spell): Spellcard[] {
 function addCardLines(
   cards: Spellcard[],
   paragraphs: string[],
-  spell: Spell,
+  spell: RawSpell,
 ): void {
   let currentBody = "";
   let part = 1;
@@ -61,22 +61,22 @@ function addCardLines(
       currentBody.trim()
     ) {
       cards.push({
-        title: cards.length === 0 ? spell.name : `${spell.name} Teil ${part}`,
+        title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
         index: part,
         body: currentBody.trim(),
-        stufe: spell.level,
+        stufe: spell.Stufe,
         komponenten: {
-          verbal: spell.components.verbal,
-          gestik: spell.components.gestic,
-          material: spell.components.material || "",
+          verbal: spell.Verbal,
+          gestik: spell.Gestik,
+          material: spell.Material || "",
         },
-        klasse: spell.characterClasses,
-        konzentration: spell.concentration,
-        ritual: spell.ritual,
-        schule: spell.school,
-        zeitaufwand: spell.castingTime,
-        reichweite: spell.range,
-        dauer: spell.duration,
+        klasse: spell.Klasse,
+        konzentration: spell.Konzentration,
+        ritual: spell.Ritual,
+        schule: spell.Schule,
+        zeitaufwand: spell.Zeitaufwand,
+        reichweite: spell.Reichweite,
+        dauer: spell.Dauer,
       });
       part++;
       currentBody = "";
@@ -87,22 +87,22 @@ function addCardLines(
 
   if (currentBody.trim()) {
     cards.push({
-      title: cards.length === 0 ? spell.name : `${spell.name} Teil ${part}`,
+      title: cards.length === 0 ? spell.Name : `${spell.Name} Teil ${part}`,
       index: part,
       body: currentBody.trim(),
-      stufe: spell.level,
+      stufe: spell.Stufe,
       komponenten: {
-        verbal: spell.components.verbal,
-        gestik: spell.components.gestic,
-        material: spell.components.material || "",
+        verbal: spell.Verbal,
+        gestik: spell.Gestik,
+        material: spell.Material || "",
       },
-      klasse: spell.characterClasses,
-      konzentration: spell.concentration,
-      ritual: spell.ritual,
-      schule: spell.school,
-      zeitaufwand: spell.castingTime,
-      reichweite: spell.range,
-      dauer: spell.duration,
+      klasse: spell.Klasse,
+      konzentration: spell.Konzentration,
+      ritual: spell.Ritual,
+      schule: spell.Schule,
+      zeitaufwand: spell.Zeitaufwand,
+      reichweite: spell.Reichweite,
+      dauer: spell.Dauer,
     });
   }
 }
@@ -134,7 +134,7 @@ function estimateRenderedLineCount(
 }
 
 export function generateCardPDFWithBackside(
-  spells: Spell[],
+  spells: RawSpell[],
   backImage: string | Buffer,
 ): jsPDF {
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -224,7 +224,7 @@ function drawBackPage(
   }
 }
 
-export function generateCardPDF(spells: Spell[]): jsPDF {
+export function generateCardPDF(spells: RawSpell[]): jsPDF {
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
 
   const allCards: Spellcard[] = [];
@@ -235,7 +235,6 @@ export function generateCardPDF(spells: Spell[]): jsPDF {
 
   allCards.forEach((card, i) => {
     const posInPage = i % 9;
-    const pageIndex = Math.floor(i / 9);
     const row = Math.floor(posInPage / 3);
     const col = posInPage % 3;
 

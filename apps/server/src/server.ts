@@ -10,11 +10,13 @@ import dataRoutes from "./module/data/dataRouter";
 import { createCharacterRouter } from "./module/character/characterRouter";
 import apiRouter from "./module/api/apiRouter";
 import { services } from "./services";
+import cors from "cors";
 
 const app = express();
 const port = 3000;
 app.locals.services = services;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");

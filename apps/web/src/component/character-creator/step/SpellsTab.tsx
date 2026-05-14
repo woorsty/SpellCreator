@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Translator } from "@repo/i18n";
-import { Spell, SpellService } from "@repo/domain";
+import { fetchUrl, Spell, SpellService } from "@repo/domain";
 import { Button } from "../../../component/ui/Button";
 import { Checkbox } from "../../../component/ui/Checkbox";
 import { Input } from "../../../component/ui/Input";
@@ -12,7 +12,7 @@ export function SpellsTab({ character, updateField }: StepProps) {
   const translator = new Translator("characterCreator.steps.spells");
 
   useEffect(() => {
-    fetch("/api/spells")
+    fetchUrl("/api/spells")
       .then((res) => res.json())
       .then((spellsData) => {
         setSpellsData(spellsData);

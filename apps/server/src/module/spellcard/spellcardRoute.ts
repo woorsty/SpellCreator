@@ -5,38 +5,40 @@ import fs from "fs";
 import {
   generateCardPDF,
   generateCardPDFWithBackside,
+  ICON_PATH,
 } from "./spellcardPdfGenerator";
-import { CharacterClassId, Spell } from "@repo/domain";
+import { CharacterClassId } from "@repo/domain";
 import { SPELLS_PATH } from "../api/apiRouter";
+import { RawSpell } from "../api/germanSpellsJsonToSpellsMapper";
 
 const createSpellcard = (req: Request, res: Response) => {
   const { klasse, stufeVon, stufeBis, sortiertNach } = req.query;
-  const spells = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf8")) as Spell[];
+  const spells = JSON.parse(fs.readFileSync(SPELLS_PATH, "utf8")) as RawSpell[];
 
   const von = parseInt(stufeVon as string, 10);
   const bis = parseInt(stufeBis as string, 10);
 
   const filtered = spells.filter((spell) => {
-    const stufe = spell.level;
+    const stufe = spell.Stufe;
     const matchStufe =
       !isNaN(von) && !isNaN(bis) && stufe >= von && stufe <= bis;
     const matchKlasse =
-      !klasse || spell.characterClasses.includes(klasse as CharacterClassId);
+      !klasse || spell.Klasse.includes(klasse as CharacterClassId);
     return matchStufe && matchKlasse;
   });
 
   let sorted = filtered;
   if (sortiertNach === "name") {
-    sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    sorted = filtered.sort((a, b) => a.Name.localeCompare(b.Name));
   }
   if (sortiertNach === "stufe") {
-    sorted = filtered.sort((a, b) => a.level - b.level);
+    sorted = filtered.sort((a, b) => a.Stufe - b.Stufe);
   }
 
   let jsPdf;
   if (req.query.withBackimage) {
     const backImage = fs.readFileSync(
-      "src/assets/icons/classes/" + klasse + "_Icon.png",
+      ICON_PATH + "/classes/" + klasse + "_Icon.png",
     );
     jsPdf = generateCardPDFWithBackside(sorted, backImage);
   } else {

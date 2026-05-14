@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
 import { Translator } from "@repo/i18n";
-import { CharacterSheet, Spellslots } from "@repo/domain";
+import { CharacterSheet, fetchUrl, Spellslots } from "@repo/domain";
 import "./CharacterSheetView.css";
 import { BasicInfoCard } from "./card/BasicInfoCard";
 import { LevelCard } from "./card/LevelCard";
@@ -34,7 +34,7 @@ export const CharacterSheetView: React.FC = () => {
   };
 
   useEffect(() => {
-    fetch(`/api/characters/${params.name}`)
+    fetchUrl(`/api/characters/${params.name}`)
       .then((res) => res.json())
       .then((characterData) => {
         dispatch({

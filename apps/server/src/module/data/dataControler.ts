@@ -1,3 +1,4 @@
+import { fetchUrl } from "@repo/domain";
 import type { Request, Response } from "express";
 
 export class DataController {
@@ -21,7 +22,7 @@ export class DataController {
 
   private static async fetchData(url: string) {
     try {
-      const response = await fetch(url);
+      const response = await fetchUrl(url);
       if (!response.ok) {
         throw new Error("HTTP Fehler " + response.status);
       }

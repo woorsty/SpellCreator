@@ -1,4 +1,4 @@
-import { CharacterSheet } from "@repo/domain";
+import { CharacterSheet, fetchUrl } from "@repo/domain";
 import React, { useEffect, useState } from "react";
 import { Card } from "../../component/ui/Card";
 import { A } from "../../component/ui/A";
@@ -7,7 +7,7 @@ export function CharacterSheetList() {
   const [characterData, setCharacterData] = useState<CharacterSheet[]>([]);
 
   useEffect(() => {
-    fetch("/api/characters")
+    fetchUrl("/api/characters")
       .then((res) => res.json())
       .then((characterData) => {
         setCharacterData(characterData);
