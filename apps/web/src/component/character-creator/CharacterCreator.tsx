@@ -26,20 +26,20 @@ const initialState: State = {
 
 export default function CharacterCreator() {
   function submitCharacter() {
-    CharacterService.checkIfCharacterExists(character).then((res) => {
-      if (res.exists) {
-        const shouldOverwrite = window.confirm(
-          translator.translate(".overwrite_character"),
-        );
-        if (shouldOverwrite) {
-          CharacterService.calculateParameters(character);
-          CharacterService.saveCharacter(character);
-        }
-      } else {
-        CharacterService.calculateParameters(character);
-        CharacterService.saveCharacter(character);
-      }
-    });
+    //CharacterService.checkIfCharacterExists(character).then((res) => {
+    //if (res.exists) {
+    const shouldOverwrite = window.confirm(
+      translator.translate(".overwrite_character"),
+    );
+    if (shouldOverwrite) {
+      CharacterService.calculateParameters(character);
+      CharacterService.saveCharacter(character);
+    }
+    // } else {
+    //   CharacterService.calculateParameters(character);
+    //   CharacterService.saveCharacter(character);
+    // }
+    // });
   }
 
   const translator = new Translator("characterCreator");

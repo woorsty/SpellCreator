@@ -762,6 +762,7 @@ export const de = {
   },
   characterShow: {
     notes: "Notizen",
+    languages: "Sprachen",
     card: {
       attributes: {
         title: "Attribute",

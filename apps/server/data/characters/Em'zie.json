@@ -9,7 +9,7 @@
       "text": "+2 Charisma"
     }
   ],
-  "name": "Em'zie Hemma",
+  "name": "Em'zie",
   "background": {
     "id": "guide",
     "attributes": ["dexternity", "wisdom", "charisma"],
@@ -21,7 +21,7 @@
   "characterClass": {
     "id": "bard",
     "primaryAbility": "charisma",
-    "hitDie": 8,
+    "hitDice": 8,
     "castingAttribute": "charisma",
     "savingThrows": ["dexterity", "charisma"],
     "proficiencies": {

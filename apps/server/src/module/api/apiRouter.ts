@@ -54,11 +54,25 @@ router.get("/characters", (req, res) => {
 });
 
 router.head("/characters/:name", (req, res) => {
-  const exists = fs.existsSync(CHARACTERS_PATH + "/" + req.params.name);
-  console.log(exists);
-  res.json({ exists: exists });
-});
+  try {
+    const filePath = path.join(CHARACTERS_PATH, `${req.params.name}.json`);
 
+    const exists = fs.existsSync(filePath);
+
+    return res
+      .status(200)
+      .set("Content-Type", "application/json")
+      .send(JSON.stringify({ exists }));
+  } catch (err) {
+    console.error(err);
+
+    // WICHTIG: trotzdem gültiges JSON zurückgeben
+    return res
+      .status(200)
+      .set("Content-Type", "application/json")
+      .send(JSON.stringify({ exists: false }));
+  }
+});
 router.get("/characters/:name", (req, res) => {
   const characterData = fs.readFileSync(
     CHARACTERS_PATH + "/" + req.params.name + ".json",

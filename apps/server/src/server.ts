@@ -15,7 +15,6 @@ import cors from "cors";
 const app = express();
 const port = 3000;
 app.locals.services = services;
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

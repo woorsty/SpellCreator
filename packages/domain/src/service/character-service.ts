@@ -49,8 +49,10 @@ export class CharacterService {
       const castingModificator = AttributeService.calculateModifier(
         character.attributes[castingAttribute].value,
       );
-      character.spellAttackBonus = castingModificator;
-      character.spellSaveDC = castingModificator + character.proficiencyBonus;
+      character.spellAttackBonus =
+        castingModificator + character.proficiencyBonus;
+      character.spellSaveDC =
+        8 + castingModificator + character.proficiencyBonus;
     }
 
     for (const attribute of Object.keys(character.attributes) as Attribute[]) {
@@ -84,7 +86,7 @@ export class CharacterService {
 
   public static async checkIfCharacterExists(character: CharacterSheet) {
     const response = await fetchUrl("/api/characters/" + character.name, {
-      method: "HEAD",
+      method: "head",
     });
     console.log(response);
     return response.json();
@@ -116,7 +118,7 @@ export class CharacterService {
         id: CharacterClassId.FIGHTER,
         equipment: [],
         features: [],
-        hitDie: 1,
+        hitDice: 1,
         primaryAbility: [],
         proficiencies: {
           armor: [],

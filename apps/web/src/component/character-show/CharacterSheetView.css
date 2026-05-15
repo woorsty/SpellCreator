@@ -534,10 +534,23 @@ textarea.fake {
   grid-template-columns: 2fr 1fr;
   gap: 14px;
   align-items: start;
+  grid-template-areas: "full full" "left right";
 }
 
-.page-two-left,
+.page-two-full {
+  grid-area: full;
+}
+
+.page-two-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
 .page-two-right {
+  grid-area: right;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -564,6 +577,16 @@ textarea.fake {
 
 .page-two .spellslots .value {
   font-size: 18px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 /* Responsive */

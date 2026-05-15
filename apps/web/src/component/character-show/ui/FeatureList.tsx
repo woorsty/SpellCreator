@@ -23,7 +23,7 @@ export const FeatureList = ({
 }) => (
   <Card>
     <h2 className="section-title">{title}</h2>
-    <ul className="list">
+    <ul className="list feature-grid">
       {items.map((item, i) => (
         <li key={i}>
           <FeatureCard

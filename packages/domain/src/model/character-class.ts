@@ -19,7 +19,7 @@ export enum CharacterClassId {
 export type CharacterClass = {
   id: CharacterClassId;
   primaryAbility: Attribute[];
-  hitDie: number;
+  hitDice: number;
   savingThrows: string[];
   proficiencies: Proficience;
   equipment: string[];

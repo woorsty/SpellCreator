@@ -18,6 +18,7 @@ import { SpellsCard } from "./card/SpellsCard";
 import { TextArea } from "../ui/TextArea";
 import { EquipmentCard } from "./card/EquipmentCard";
 import { FeatureList } from "./ui/FeatureList";
+import { Card } from "../ui/Card";
 
 const initialState = {
   character: undefined,
@@ -114,7 +115,7 @@ export const CharacterSheetView: React.FC = () => {
       </div>
 
       <div className="page-two">
-        <div className="page-two-left">
+        <div className="page-two-full">
           <div className="page-two-top">
             <div className="card">
               <h2 className="section-title">Zauberwirken</h2>
@@ -127,9 +128,7 @@ export const CharacterSheetView: React.FC = () => {
                 />
                 <QuickStat
                   label="Mod"
-                  value={sign(
-                    character.spellAttackBonus - character.proficiencyBonus,
-                  )}
+                  value={sign(character.spellAttackBonus)}
                 />
                 <QuickStat label="SG" value={character.spellSaveDC} />
                 <QuickStat
@@ -143,22 +142,10 @@ export const CharacterSheetView: React.FC = () => {
               updateCharacter={updateCharacter}
             />
           </div>
-          <SpellsCard character={character} updateCharacter={updateCharacter} />
         </div>
+        <div className="page-two-left">
+          <SpellsCard character={character} updateCharacter={updateCharacter} />
 
-        <div className="page-two-right">
-          <TextCard title="Aussehen" text={character.appearance} />
-          <TextCard title="Hintergrundgeschichte" text={character.story} />
-          <div className="card">
-            <h2 className="section-title">Gesinnung</h2>
-            <div>{t(`alignment.${character.alignment}`)}</div>
-          </div>
-          <ListCard
-            title="Sprachen"
-            items={character.languages.map((l) => {
-              return { name: t(`language.${l}`) };
-            })}
-          />
           <FeatureList
             updateCharacter={updateCharacter}
             character={character}
@@ -172,6 +159,23 @@ export const CharacterSheetView: React.FC = () => {
             title={translator.translate(".card.equipment.title")}
             editable={true}
           />
+        </div>
+
+        <div className="page-two-right">
+          <TextCard title="Aussehen" text={character.appearance} />
+          <TextCard title="Hintergrundgeschichte" text={character.story} />
+          <div className="card">
+            <h2 className="section-title">Gesinnung</h2>
+            <div>{t(`alignment.${character.alignment}`)}</div>
+          </div>
+          <Card>
+            <h2 className="section-title">
+              {translator.translate(".languages")}
+            </h2>
+            <p>
+              {character.languages.map((l) => t(`language.${l}`)).join(", ")}
+            </p>
+          </Card>
           <ListCard
             title="Eingestimmte magische Gegenstände"
             items={Object.values(character.attunedMagicItems).map(
@@ -184,13 +188,15 @@ export const CharacterSheetView: React.FC = () => {
           <CoinsCard character={character} updateCharacter={updateCharacter} />
         </div>
       </div>
-      <h3>{translator.translate(".notes")}</h3>
-      <TextArea
-        className="w-full"
-        onChange={(e) => updateCharacter("notes", e.target.value)}
-      >
-        {character.notes}
-      </TextArea>
+      <Card>
+        <h3>{translator.translate(".notes")}</h3>
+        <TextArea
+          className="w-full h-100"
+          onChange={(e) => updateCharacter("notes", e.target.value)}
+        >
+          {character.notes}
+        </TextArea>
+      </Card>
     </div>
   );
 };

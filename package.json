@@ -11,7 +11,7 @@
     "build": "pnpm -r run build",
     "clean": "pnpm -r run clean",
     "deploy": "pnpm run build && pnpm run deploy:pib",
-    "deploy:pib": "pnpm run build && pnpm run deploy:server:pib && pnpm run deploy:web:pib",
+    "deploy:pib": "pnpm run build && pnpm run deploy:server:pib && pnpm run deploy:web:pib && pnpm run deploy:restart",
     "deploy:all": "pnpm run deploy:web:pib && pnpm run deploy:server:pib && pnpm run deploy:restart",
     "deploy:web": "scp -r apps/web/dist/* worsty@zeropi:/home/worsty/app/web/",
     "deploy:server": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/assets worsty@zeropi:/home/worsty/app/server/",

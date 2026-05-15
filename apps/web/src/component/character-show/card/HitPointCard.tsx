@@ -124,7 +124,7 @@ export const HitPointCard: React.FC<CharacterViewProps> = ({
             </div>
             <div>
               <div className="label">Max</div>
-              <div className="value">{`${character.level}W${character.characterClass.hitDie}`}</div>
+              <div className="value">{`${character.level}W${character.characterClass.hitDice}`}</div>
             </div>
           </div>
         </Card>
