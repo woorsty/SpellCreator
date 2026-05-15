@@ -32,9 +32,11 @@ export default function CharacterCreator() {
           translator.translate(".overwrite_character"),
         );
         if (shouldOverwrite) {
+          CharacterService.calculateParameters(character);
           CharacterService.saveCharacter(character);
         }
       } else {
+        CharacterService.calculateParameters(character);
         CharacterService.saveCharacter(character);
       }
     });

@@ -40,17 +40,15 @@ export const FeatureCard: React.FC<Props> = ({
 
   return (
     <div
-      className="rounded-xl border border-border bg-surface p-4 shadow-sm"
+      className="rounded-xl border border-border bg-surface p-2 shadow-sm"
       onClick={() => setOpen(!open)}
     >
-      <div className="title">{feature.name}</div>
+      <div>{feature.name}</div>
 
       {open &&
         (editable && feature.editPath ? (
           <TextArea
             onChange={(e) => {
-              console.log("Update Card", feature.editPath, e.target.value);
-              // updateCharacter(feature.editPath! + ".notes", e.target.value);
               updateEquipmentNote(e.target.value);
             }}
             onClick={(e) => e.stopPropagation()}
@@ -58,9 +56,9 @@ export const FeatureCard: React.FC<Props> = ({
           />
         ) : (
           feature.notes && (
-            <div className="border rounded-xl border-border p-2 shadow-sm">
-              {feature.notes.split("\n").map((line) => (
-                <p>{line}</p>
+            <div className="border rounded-xl border-border p-2 mt-1 shadow-sm">
+              {feature.notes.split("\n").map((line, i) => (
+                <p key={i}>{line}</p>
               ))}{" "}
             </div>
           )

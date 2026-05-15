@@ -14,7 +14,6 @@ import { fetchUrl } from "./fetch-service";
 
 export class CharacterService {
   public static async saveCharacter(character: CharacterSheet) {
-    CharacterService.calculateParameters(character);
     const response = await fetchUrl("/api/characters/" + character.name, {
       method: "POST",
       headers: {
@@ -30,7 +29,7 @@ export class CharacterService {
     return response.json();
   }
 
-  private static calculateParameters(character: CharacterSheet) {
+  public static calculateParameters(character: CharacterSheet) {
     const perceptionModifier =
       AttributeService.calculateSkillModifierFromCharacter(
         character,

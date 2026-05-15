@@ -788,6 +788,9 @@ export const de = {
       equipment: {
         title: "Equipment",
       },
+      base_stats: {
+        talents: "Talente",
+      },
     },
   },
 } as const;

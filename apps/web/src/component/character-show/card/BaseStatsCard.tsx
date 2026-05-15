@@ -2,6 +2,7 @@ import React from "react";
 import { CharacterViewProps } from "./CharacterViewProps";
 import { ClassFeatsCard } from "./ClassFeatsCard";
 import { Translator } from "@repo/i18n";
+import { FeatureList } from "../ui/FeatureList";
 
 export const BaseStatsCard: React.FC<CharacterViewProps> = ({
   character,
@@ -9,7 +10,7 @@ export const BaseStatsCard: React.FC<CharacterViewProps> = ({
 }) => {
   const sign = (n: number) => (n >= 0 ? `+${n}` : n);
 
-  const translator = new Translator("");
+  const translator = new Translator("characterShow.card.base_stats");
   const t = translator.translate;
 
   return (
@@ -54,14 +55,15 @@ export const BaseStatsCard: React.FC<CharacterViewProps> = ({
 
       <ClassFeatsCard character={character} updateCharacter={updateCharacter} />
 
-      <div className="card">
-        <h2 className="section-title">Talente</h2>
-        <ul className="list">
-          {character.feats.map((f, i) => (
-            <li key={i}>{f.name}</li>
-          ))}
-        </ul>
-      </div>
+      <FeatureList
+        character={character}
+        editable={false}
+        title={translator.translate(".talents")}
+        updateCharacter={updateCharacter}
+        items={character.feats.map((feat, i) => {
+          return { index: i, name: feat.name, notes: feat.text };
+        })}
+      />
     </div>
   );
 };

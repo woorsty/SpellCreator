@@ -16,6 +16,7 @@ export const ClassFeatsCard: React.FC<CharacterViewProps> = ({
         editable={false}
         title="Klassenmerkmale"
         items={character.characterClass.features
+          .filter((feat) => feat.level <= character.level)
           .map((f) => {
             return {
               name: translator.translate(
@@ -29,17 +30,19 @@ export const ClassFeatsCard: React.FC<CharacterViewProps> = ({
           })
           .concat(
             character.subclass
-              ? character.subclass.features.map((f) => {
-                  return {
-                    name: translator.translate(
-                      `characterClass.${character.characterClass.id}.subclasses.${character.subclass!.id}.features.${f.id}.name`,
-                    ),
-                    level: f.level,
-                    notes: translator.translate(
-                      `characterClass.${character.characterClass.id}.subclasses.${character.subclass?.id}.features.${f.id}.description`,
-                    ),
-                  };
-                })
+              ? character.subclass.features
+                  .filter((f) => f.level <= character.level)
+                  .map((f) => {
+                    return {
+                      name: translator.translate(
+                        `characterClass.${character.characterClass.id}.subclasses.${character.subclass!.id}.features.${f.id}.name`,
+                      ),
+                      level: f.level,
+                      notes: translator.translate(
+                        `characterClass.${character.characterClass.id}.subclasses.${character.subclass?.id}.features.${f.id}.description`,
+                      ),
+                    };
+                  })
               : [],
           )
           .sort((a, b) => a.level - b.level)

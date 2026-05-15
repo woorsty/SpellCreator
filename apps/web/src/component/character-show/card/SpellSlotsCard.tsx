@@ -30,6 +30,7 @@ export const SpellSlotsCard: React.FC<CharacterViewProps> = ({
                   {translator.translate(".grade")} {level}
                 </span>
                 <Button
+                  variant="secondary"
                   onClick={() =>
                     updateCharacter(
                       `spellSlots.used.slot${level}`,
@@ -50,6 +51,7 @@ export const SpellSlotsCard: React.FC<CharacterViewProps> = ({
                   </div>
                 </div>
                 <Button
+                  variant="secondary"
                   onClick={() =>
                     updateCharacter(
                       `spellSlots.used.slot${level}`,

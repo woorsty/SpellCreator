@@ -15,7 +15,6 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
   updateCharacter,
 }) => {
   const [editMode, setEditMode] = useState<boolean>(false);
-  console.log("Character.attr", character.attributes);
 
   const renderAbility = <A extends Attribute>(
     attrKey: A,
@@ -93,22 +92,19 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
                   <Checkbox
                     checked={skillData.proficiency}
                     onChange={(e) => {
-                      updateCharacter(
-                        "attributes." +
-                          attrKey +
-                          ".skills." +
-                          s +
-                          ".proficiency",
-                        e,
-                      );
-                      updateCharacter(
-                        "attributes." + attrKey + ".skills." + s + ".modifier",
-                        AttributeService.calculateSkillModifier(
+                      const updated = {
+                        ...character.attributes[attrKey].skills[s],
+                        proficiency: e,
+                        modifier: AttributeService.calculateSkillModifier(
                           attr.value,
                           e as boolean,
                           skillData.expertise,
                           character.proficiencyBonus,
                         ),
+                      };
+                      updateCharacter(
+                        "attributes." + attrKey + ".skills." + s,
+                        updated,
                       );
                     }}
                   />
@@ -116,18 +112,19 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
                   <Checkbox
                     checked={skillData.expertise}
                     onChange={(e) => {
-                      updateCharacter(
-                        "attributes." + attrKey + ".skills." + s + ".expertise",
-                        e,
-                      );
-                      updateCharacter(
-                        "attributes." + attrKey + ".skills." + s + ".modifier",
-                        AttributeService.calculateSkillModifier(
+                      const updated = {
+                        ...character.attributes[attrKey].skills[s],
+                        expertise: e,
+                        modifier: AttributeService.calculateSkillModifier(
                           attr.value,
-                          skillData.proficiency,
                           e as boolean,
+                          skillData.expertise,
                           character.proficiencyBonus,
                         ),
+                      };
+                      updateCharacter(
+                        "attributes." + attrKey + ".skills." + s,
+                        updated,
                       );
                     }}
                   />
@@ -140,12 +137,12 @@ export const AttributesCard: React.FC<CharacterViewProps> = ({
               {editMode ? (
                 <NumberInput
                   value={attr.skills[s].modifier!}
-                  onChange={(e) =>
+                  onChange={(e) => {
                     updateCharacter(
                       "attributes." + attrKey + ".skills." + s + ".modifier",
                       e,
-                    )
-                  }
+                    );
+                  }}
                 />
               ) : (
                 <div className="skill-mod">{sign(skillData.modifier!)}</div>

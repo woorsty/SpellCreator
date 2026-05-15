@@ -16,21 +16,25 @@ export type State = {
 };
 
 export const characterReducer = (state: State, action: Action): State => {
+  let newState;
   switch (action.type) {
     case "UPDATE_FIELD":
-      console.log(action);
-      return {
+      newState = {
         ...state,
         character: setNestedValue(state.character, action.field, action.value),
       };
+      break;
     case "INIT_CHARACTER":
-      return {
+      newState = {
         ...state,
         character: action.character,
       };
+      break;
     default:
-      return state;
+      newState = state;
+      break;
   }
+  return newState;
 };
 function setNestedValue(obj: any, path: string, value: any) {
   const keys = path.split(".");
