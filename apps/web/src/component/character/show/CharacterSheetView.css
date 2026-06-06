@@ -1,0 +1,628 @@
+/* web/src/components/CharacterSheet/CharacterSheet.css */
+
+:root {
+  --bg: #1e1f22;
+  --panel: #2b2d31;
+  --panel2: #33363c;
+  --line: #4b4f57;
+  --text: #f5f5f5;
+  --muted: #b8bcc5;
+  --green: #57d37c;
+}
+
+* {
+  box-sizing: border-box;
+}
+.sheet-container {
+  --bg: #1e1f22;
+  --panel: #2b2d31;
+  --panel2: #33363c;
+  --line: #4b4f57;
+  --text: #f5f5f5;
+  --muted: #b8bcc5;
+  --green: #57d37c;
+
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Übernimm hier alle weiteren Styles aus dem <style> Block der EJS Datei */
+/* Ersetze dabei .sheet durch .sheet-main um Namenskonflikte zu vermeiden */
+.sheet-main {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* ... restlicher CSS Code aus Source [8] bis [98] ... */
+
+body {
+  margin: 0;
+  /* padding: 24px; */
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--text);
+}
+
+.sheet {
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.section-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.4fr 1.2fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.top .label {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.top .value {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top .card {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.top .quickbox {
+  padding: 10px;
+}
+
+.sheet {
+  max-width: 100%;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 440px minmax(520px, 1fr) 360px;
+  gap: 14px;
+  align-items: start;
+}
+
+.firstpage {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: start;
+}
+
+.abilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ability {
+  overflow: hidden;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.ability-name {
+  font-size: 14px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.ability-score {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.ability-mod {
+  font-size: 18px;
+  color: var(--green);
+}
+
+.ability-proficiency {
+  font-size: 18px;
+}
+
+.quickstats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.quickbox .label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.quickbox .value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.quickbox {
+  background: var(--panel2);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.grid-2-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.money {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.money .quickbox {
+  padding: 10px;
+}
+
+.spellslots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.slot-card {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.slot-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-count {
+  font-size: 22px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: right;
+}
+
+.slot-gems {
+  display: grid;
+  grid-template-columns: repeat(4, 14px);
+  gap: 6px;
+}
+
+.slot-grade {
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.gem {
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform: rotate(45deg);
+  border-radius: 3px;
+}
+
+/* verfügbar = leer */
+.gem.free {
+  border: 2px solid #ddd;
+  background: transparent;
+}
+
+/* genutzt = ausgefüllt */
+.gem.used {
+  border: 2px solid #f5f5f5;
+  background: #f5f5f5;
+}
+
+/* nicht vorhandene Slots unsichtbar */
+.gem.hidden {
+  visibility: hidden;
+}
+
+textarea.fake {
+  width: 100%;
+  min-height: 180px;
+  resize: none;
+  border: none;
+  background: var(--panel2);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.ability {
+  text-align: left;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 22px 60px 1fr;
+  gap: 8px;
+  min-width: 0;
+  align-items: center;
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d9d9d9;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.skill-check.filled::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+
+.skill-mod {
+  font-weight: 700;
+  color: var(--green);
+  text-align: center;
+}
+
+.skill-name {
+  font-size: 14px;
+  min-width: 0;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.abilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.abilities-left,
+.abilities-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Übungsbonus + Heroic Inspiration */
+.mini-stat {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.heroic-circle {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin: 8px auto 0;
+}
+
+.heroic-circle.filled::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 3px auto;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ability-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.ability-statbox {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+}
+
+.ability-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.ability-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ability-stat-mod {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+
+.character-info .label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.character-info .value {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.character-info {
+  background: var(--panel2);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.death-saves {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.death-column {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  text-align: center;
+}
+
+.death-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.death-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.training-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.training-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.tool-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* PAGE 2 */
+.page-two {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  align-items: start;
+  grid-template-areas: "full full" "left right";
+}
+
+.page-two-full {
+  grid-area: full;
+}
+
+.page-two-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.page-two-right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.page-two-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+/* Zauberplätze kompakter */
+.page-two .spellslots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.page-two .spellslots .quickbox {
+  padding: 8px;
+}
+
+.page-two .spellslots .value {
+  font-size: 18px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+  .page-two {
+    grid-template-columns: 1fr;
+  }
+
+  .page-two-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1300px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .abilities {
+    grid-template-columns: 1fr;
+  }
+
+  .quickstats,
+  .grid-2,
+  .money,
+  .spellslots {
+    grid-template-columns: 1fr;
+  }
+}

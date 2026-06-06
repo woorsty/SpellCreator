@@ -1,13 +1,14 @@
 import React from "react";
 import { A } from "./component/ui/A";
 import { Card } from "./component/ui/Card";
+import { Link } from "react-router";
 
 export const StartPage: React.FC = () => {
   return (
     <Card>
-      <A href="creator">Erstellen</A>
+      <Link to="creator">Erstellen</Link>
       <br />
-      <A href="show">Zeigen</A>
+      <Link to="show">Zeigen</Link>
     </Card>
   );
 };

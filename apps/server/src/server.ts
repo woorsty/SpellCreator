@@ -31,8 +31,10 @@ app.use("/invocation", invocationRoutes);
 app.use("/spellcard", spellCardRoutes);
 app.use("/class", classRoutes);
 app.use("/data", dataRoutes);
-app.use("/character", createCharacterRouter(services));
 app.use("/api", apiRouter);
+app.get("/character", (req: Request, res: Response) => {
+  res.redirect(`http://${req.hostname}:5173/character`);
+});
 
 app.listen(port, "::", () => {
   console.log(`Server läuft auf http://0.0.0.0:${port}`);
