@@ -4,18 +4,13 @@ import { useEffect } from "react";
 
 export function useMapEditor() {
   const map = useMap();
-
   const mode = useEditorStore((s) => s.mode);
-  const addPoint = useEditorStore((s) => s.addPoint);
+  const setDraftPoint = useEditorStore((s) => s.setDraftPoint);
 
   useEffect(() => {
     const handler = (e: any) => {
-      if (
-        mode === "create-point" ||
-        mode === "create-line" ||
-        mode === "create-polygon"
-      ) {
-        addPoint({
+      if (mode === "create-point") {
+        setDraftPoint({
           x: e.latlng.lat,
           y: e.latlng.lng,
         });
@@ -25,9 +20,9 @@ export function useMapEditor() {
     map.on("click", handler);
 
     return () => {
-      map.off("click", handler); // 👈 WICHTIG
+      map.off("click", handler);
     };
-  }, [map, mode, addPoint]);
+  }, [map, mode, setDraftPoint]);
 
   return null;
 }

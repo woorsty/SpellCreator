@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Neuer Ort",
+    "description": "",
+    "type": "city",
+    "position": {
+      "x": -31.9375,
+      "y": 78.3125
+    }
+  }
+]

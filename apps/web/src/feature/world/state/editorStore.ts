@@ -12,23 +12,55 @@ export type MapPoint = {
   y: number;
 };
 
-type EditorState = {
-  mode: EditorMode;
-  draftPoints: MapPoint[];
+/**
+ * Draft für einen neuen Punkt
+ */
+export type DraftPoint = MapPoint | null;
 
-  activeEntity: any | null;
+type EditorState = {
+  // =====================
+  // MODE
+  // =====================
+  mode: EditorMode;
 
   setMode: (mode: EditorMode) => void;
+
+  // =====================
+  // POINT DRAWING
+  // =====================
+  draftPoints: MapPoint[];
+
   addPoint: (p: MapPoint) => void;
+
   resetDraft: () => void;
+
+  // =====================
+  // SIMPLE POINT EDITING (NEU)
+  // =====================
+  draftPoint: DraftPoint;
+
+  setDraftPoint: (p: MapPoint | null) => void;
+
+  // =====================
+  // SELECTION / EDIT MODE
+  // =====================
+  activeEntity: any | null;
+
+  setActiveEntity: (entity: any | null) => void;
 };
 
 export const useEditorStore = create<EditorState>((set) => ({
+  // =====================
+  // MODE
+  // =====================
   mode: "idle",
-  draftPoints: [],
-  activeEntity: null,
 
   setMode: (mode) => set({ mode }),
+
+  // =====================
+  // LINE / POLYGON SUPPORT
+  // =====================
+  draftPoints: [],
 
   addPoint: (p) =>
     set((state) => ({
@@ -38,5 +70,26 @@ export const useEditorStore = create<EditorState>((set) => ({
   resetDraft: () =>
     set({
       draftPoints: [],
+      draftPoint: null,
+    }),
+
+  // =====================
+  // POINT DRAFT (SINGLE POINT)
+  // =====================
+  draftPoint: null,
+
+  setDraftPoint: (p) =>
+    set({
+      draftPoint: p,
+    }),
+
+  // =====================
+  // ACTIVE ENTITY (EDIT MODE)
+  // =====================
+  activeEntity: null,
+
+  setActiveEntity: (entity) =>
+    set({
+      activeEntity: entity,
     }),
 }));
