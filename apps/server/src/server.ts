@@ -22,7 +22,11 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("views"));
 
 app.get("/", (req: Request, res: Response) => {
-  res.render("index");
+  const isDev = process.env.NODE_ENV !== "production";
+
+  const baseUrl = isDev ? "http://localhost" : "http://rieke.duckdns.org";
+
+  res.render("index", { baseUrl });
 });
 
 app.use(express.json());
@@ -35,6 +39,11 @@ app.use("/api", apiRouter);
 app.get("/character", (req: Request, res: Response) => {
   res.redirect(`http://${req.hostname}:5173/character`);
 });
+
+app.use(
+  "/map-tiles",
+  express.static(path.join(process.cwd(), "assets/toril_tiles")),
+);
 
 app.listen(port, "::", () => {
   console.log(`Server läuft auf http://0.0.0.0:${port}`);

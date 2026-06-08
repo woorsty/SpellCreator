@@ -794,4 +794,10 @@ export const de = {
       },
     },
   },
+  map: {
+    search: "Suche...",
+    back: "Zurück",
+    edit_mode: "Bearbeitungsmodus",
+    show_mode: "Bearbeiten beenden",
+  },
 } as const;
