@@ -1,0 +1,22 @@
+.editPanel {
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+
+  padding: 12px;
+  border-radius: 10px;
+
+  width: 220px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.editPanel button {
+  width: 100%;
+  margin-top: 8px;
+
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}

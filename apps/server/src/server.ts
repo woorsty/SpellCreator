@@ -7,7 +7,7 @@ import invocationRoutes from "./module/anrufung/invocationRoute";
 import spellCardRoutes from "./module/spellcard/spellcardRoute";
 import classRoutes from "./module/class/classRouter";
 import dataRoutes from "./module/data/dataRouter";
-import { createCharacterRouter } from "./module/character/characterRouter";
+import mapRoutes from "./module/map/mapRouter";
 import apiRouter from "./module/api/apiRouter";
 import { services } from "./services";
 import cors from "cors";
@@ -44,6 +44,8 @@ app.use(
   "/map-tiles",
   express.static(path.join(process.cwd(), "assets/toril_tiles")),
 );
+
+app.use("/map", mapRoutes);
 
 app.listen(port, "::", () => {
   console.log(`Server läuft auf http://0.0.0.0:${port}`);

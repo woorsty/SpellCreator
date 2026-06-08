@@ -2,15 +2,17 @@ import React from "react";
 import styles from "../styles/worldMap.module.css";
 import { Map } from "leaflet";
 import { Translator } from "@repo/i18n";
+import { useEditorStore } from "../state/editorStore";
 
 type Props = {
-  mode: "show" | "edit";
-  setMode: (m: "show" | "edit") => void;
-  map?: Map;
+  map: Map | null;
 };
 
-export function TopBar({ mode, setMode, map }: Props) {
+export function TopBar({ map }: Props) {
   const translator = new Translator("map");
+
+  const mode = useEditorStore((s) => s.mode);
+  const setMode = useEditorStore((s) => s.setMode);
 
   return (
     <div className={styles.topBar}>
@@ -35,9 +37,9 @@ export function TopBar({ mode, setMode, map }: Props) {
 
       <button
         className={styles.button}
-        onClick={() => setMode(mode === "show" ? "edit" : "show")}
+        onClick={() => setMode(mode === "idle" ? "edit" : "idle")}
       >
-        {mode === "show"
+        {mode === "idle"
           ? translator.translate(".edit_mode")
           : translator.translate(".show_mode")}
       </button>

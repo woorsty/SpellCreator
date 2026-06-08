@@ -16,3 +16,4 @@ export * from "./feat";
 export * from "./background";
 export * from "./level";
 export * from "./spell-slots";
+export * from "./map";
