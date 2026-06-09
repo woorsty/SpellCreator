@@ -1,5 +1,4 @@
-export type WorldEntity = {
-  entityType: "point" | "line" | "polygon";
+export type WorldEntityBase = {
   id: string;
   name: string;
   description: string;

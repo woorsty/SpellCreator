@@ -1,8 +1,8 @@
-import { MapPoint, WorldEntity } from "./world-entity";
+import { MapPoint, WorldEntityBase } from "./world-entity";
 
 export type PointType = "city" | "village" | "dungeon" | "poi";
 
-export type PointEntity = WorldEntity & {
+export type PointEntity = WorldEntityBase & {
   type: PointType;
   position: MapPoint;
   entityType: "point";

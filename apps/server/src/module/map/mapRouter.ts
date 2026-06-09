@@ -3,6 +3,7 @@ import { MapController } from "./mapController";
 
 const router: Router = Router();
 
+router.get("/", MapController.getAll);
 router.get("/point", (req, res) => MapController.get(req, res, "point"));
 router.get("/line", (req, res) => MapController.get(req, res, "line"));
 router.get("/polygon", (req, res) => MapController.get(req, res, "polygon"));

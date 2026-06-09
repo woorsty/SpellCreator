@@ -1,11 +1,29 @@
 import path from "path";
 import type { Request, Response } from "express";
 import fs from "fs";
+import { randomUUID } from "crypto";
 
 type MapEntityType = "point" | "line" | "polygon";
 export class MapController {
   private static getPath(type: MapEntityType) {
     return path.resolve(process.cwd(), "data", "map", `${type}s.json`);
+  }
+
+  public static async getAll(req: Request, res: Response) {
+    const points = JSON.parse(
+      fs.readFileSync(MapController.getPath("point"), "utf-8"),
+    );
+    const lines = JSON.parse(
+      fs.readFileSync(MapController.getPath("line"), "utf-8"),
+    );
+    const polygons = JSON.parse(
+      fs.readFileSync(MapController.getPath("polygon"), "utf-8"),
+    );
+    res.json({
+      points,
+      lines,
+      polygons,
+    });
   }
 
   public static async get(req: Request, res: Response, type: MapEntityType) {
@@ -16,16 +34,18 @@ export class MapController {
   }
 
   public static async add(req: Request, res: Response, type: MapEntityType) {
-    const newPoint = req.body;
+    const newEntity = req.body;
     const data = JSON.parse(
       fs.readFileSync(MapController.getPath(type), "utf-8"),
     );
-    data.push(newPoint);
+    data.push(newEntity);
+    newEntity.id = randomUUID();
+
     fs.writeFileSync(
       MapController.getPath(type),
       JSON.stringify(data, null, 2),
     );
-    res.status(201).json(newPoint);
+    res.status(201).json(newEntity);
   }
 
   public static async remove(req: Request, res: Response, type: MapEntityType) {

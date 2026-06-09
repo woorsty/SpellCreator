@@ -1,6 +1,6 @@
 import { useMapMode } from "../hook/useMapMode";
 import styles from "../styles/worldMap.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { EditPanel } from "./editor/EditPanel";
 import { SearchPanel } from "./SearchPanel";
 import { TopBar } from "./TopBar";
@@ -12,8 +12,10 @@ import { LinesLayer } from "./layer/LinesLayer";
 import { PolygonsLayer } from "./layer/PolygonsLayer";
 import { DraftLayer } from "./layer/DraftLayer";
 import { useEditorStore } from "../state/editorStore";
+import { useMapStore } from "../state/mapStore";
 
 export function WorldMap() {
+  const loadAll = useMapStore((s) => s.loadAll);
   const mode = useEditorStore((s) => s.mode);
   const setMode = useEditorStore((s) => s.setMode);
   const [map, setMap] = useState<Map | null>(null);
@@ -31,6 +33,10 @@ export function WorldMap() {
     [0, maxX],
   ];
   const center: L.LatLngExpression = [-maxTilesY / 2, (minX + maxX) / 2];
+
+  useEffect(() => {
+    loadAll();
+  }, [loadAll]);
 
   return (
     <div className={styles.container}>

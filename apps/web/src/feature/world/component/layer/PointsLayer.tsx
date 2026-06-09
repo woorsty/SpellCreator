@@ -1,25 +1,27 @@
 import { Marker, Popup } from "react-leaflet";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import React from "react";
+import { useMapStore } from "../../state/mapStore";
+import { Button } from "../../../../component/ui/Button";
+import { EditorService } from "../editor/editorService";
+import { PointEntity } from "@repo/domain";
 
 export const PointsLayer = () => {
-  const [points, setPoints] = useState<any[]>([]);
-
-  useEffect(() => {
-    axios.get("/map/point").then((res) => {
-      setPoints(res.data);
-    });
-  }, []);
+  const deletePoint = (point: PointEntity) => {
+    EditorService.removePoint(point);
+    useMapStore.getState().loadAll();
+  };
 
   return (
     <>
-      {points.map((p) => (
+      {useMapStore().points.map((p) => (
         <Marker key={p.id} position={[p.position.x, p.position.y]}>
-          <Popup>
+          <Popup key={p.id}>
             <b>{p.name}</b>
             <br />
             {p.description}
+            <Button variant={"secondary"} onClick={() => deletePoint(p)}>
+              X
+            </Button>
           </Popup>
         </Marker>
       ))}

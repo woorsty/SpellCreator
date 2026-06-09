@@ -1,8 +1,8 @@
-import { MapPoint, WorldEntity } from "./world-entity";
+import { MapPoint, WorldEntityBase } from "./world-entity";
 
 export type LineType = "road" | "river" | "path";
 
-export type LineEntity = WorldEntity & {
+export type LineEntity = WorldEntityBase & {
   entityType: "line";
   type: LineType;
   points: MapPoint[];

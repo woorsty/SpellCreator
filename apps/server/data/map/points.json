@@ -8,5 +8,15 @@
       "x": -31.9375,
       "y": 78.3125
     }
+  },
+  {
+    "id": "2",
+    "name": "Neuer Ort",
+    "description": "",
+    "type": "city",
+    "position": {
+      "x": -34.9375,
+      "y": 71.3125
+    }
   }
 ]
