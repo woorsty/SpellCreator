@@ -1,22 +1,17 @@
 [
   {
-    "id": "1",
-    "name": "Neuer Ort",
+    "name": "test",
+    "activeFrom": -1,
+    "activeTo": -1,
+    "articleUrl": "",
     "description": "",
-    "type": "city",
+    "imageUrl": "",
+    "tags": [],
+    "entityType": "point",
     "position": {
-      "x": -31.9375,
-      "y": 78.3125
-    }
-  },
-  {
-    "id": "2",
-    "name": "Neuer Ort",
-    "description": "",
-    "type": "city",
-    "position": {
-      "x": -34.9375,
-      "y": 71.3125
-    }
+      "x": -30.625,
+      "y": 75.875
+    },
+    "id": "6025e47e-9289-4743-9243-d8f7ca43d723"
   }
 ]

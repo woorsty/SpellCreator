@@ -6,6 +6,8 @@ import { Link } from "react-router";
 export const CharacterStartPage: React.FC = () => {
   return (
     <Card>
+      <Link to="..">Zurück</Link>
+      <br />
       <Link to="creator">Erstellen</Link>
       <br />
       <Link to="show">Zeigen</Link>

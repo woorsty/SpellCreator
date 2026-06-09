@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { useEditorStore } from "../../state/editorStore";
 import styles from "./EditPanel.module.css";
-import { EditorService } from "./editorService";
+import { WorldEntityService } from "./editorService";
 import { EditForm } from "./EditForm";
-import { PointEntity, WorldEntityBase } from "@repo/domain";
+import {
+  LineEntity,
+  PointEntity,
+  PolygonEntity,
+  WorldEntity,
+  WorldEntityBase,
+} from "@repo/domain";
 import { Card } from "../../../../component/ui/Card";
 import { Button } from "../../../../component/ui/Button";
 import { useMapStore } from "../../state/mapStore";
@@ -13,6 +19,7 @@ export const EditPanel = () => {
   const setMode = useEditorStore((s) => s.setMode);
   const resetDraft = useEditorStore((s) => s.resetDraft);
   const draftPoint = useEditorStore((s) => s.draftPoint);
+  const draftPoints = useEditorStore((s) => s.draftPoints);
   const [worldEntityBase, setWorldEntityBase] = useState<
     Partial<WorldEntityBase>
   >({
@@ -25,19 +32,33 @@ export const EditPanel = () => {
     tags: [],
   });
 
-  const [currentPoint, setPointEntity] = useState<Partial<PointEntity>>({
-    entityType: "point",
-  });
+  const [currentEntity, setCurrentEntity] = useState<Partial<WorldEntity>>({});
 
   const handleSave = async () => {
-    if (!draftPoint) return;
-    const entity: PointEntity = {
+    const entity: WorldEntity = {
       ...worldEntityBase,
-      ...currentPoint,
-      position: draftPoint,
-    } as PointEntity;
+      ...currentEntity,
+    } as WorldEntity;
 
-    await EditorService.createPoint(entity);
+    switch (mode) {
+      case "create-point":
+        if (!draftPoint) return;
+        entity.entityType = "point";
+        (entity as PointEntity).position = draftPoint;
+        break;
+      case "create-line":
+        if (!draftPoints) return;
+        entity.entityType = "line";
+        (entity as LineEntity).points = draftPoints;
+        break;
+      case "create-polygon":
+        if (!draftPoints) return;
+        entity.entityType = "polygon";
+        (entity as PolygonEntity).points = draftPoints;
+        break;
+    }
+
+    await WorldEntityService.create(entity);
 
     await useMapStore.getState().loadAll();
 
@@ -51,17 +72,37 @@ export const EditPanel = () => {
         <div className={styles.title}>Editor</div>
 
         {mode === "edit" && (
-          <button
-            onClick={() => {
-              resetDraft();
-              setMode("create-point");
-            }}
-          >
-            Neuer Ort
-          </button>
+          <>
+            <Button
+              onClick={() => {
+                resetDraft();
+                setMode("create-point");
+              }}
+            >
+              Neuer Ort
+            </Button>
+            <Button
+              onClick={() => {
+                resetDraft();
+                setMode("create-line");
+              }}
+            >
+              Neue Linie
+            </Button>
+            <Button
+              onClick={() => {
+                resetDraft();
+                setMode("create-polygon");
+              }}
+            >
+              Neues Gebiet
+            </Button>
+          </>
         )}
 
-        {mode === "create-point" && (
+        {(mode === "create-point" ||
+          mode === "create-line" ||
+          mode === "create-polygon") && (
           <>
             <EditForm
               entity={worldEntityBase}
@@ -69,7 +110,7 @@ export const EditPanel = () => {
                 setWorldEntityBase((prev) => ({ ...prev, ...changes }))
               }
             />
-            <Button disabled={!draftPoint} onClick={handleSave}>
+            <Button disabled={!draftPoint && !draftPoints} onClick={handleSave}>
               Speichern
             </Button>
           </>

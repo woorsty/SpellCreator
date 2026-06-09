@@ -39,7 +39,7 @@ type EditorState = {
   // =====================
   draftPoint: DraftPoint;
 
-  setDraftPoint: (p: MapPoint | null) => void;
+  setSingleDraftPoint: (p: MapPoint | null) => void;
 
   // =====================
   // SELECTION / EDIT MODE
@@ -78,7 +78,7 @@ export const useEditorStore = create<EditorState>((set) => ({
   // =====================
   draftPoint: null,
 
-  setDraftPoint: (p) =>
+  setSingleDraftPoint: (p) =>
     set({
       draftPoint: p,
     }),
