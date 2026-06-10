@@ -4,6 +4,9 @@ import { Checkbox } from "../../../../../component/ui/Checkbox";
 import { TextArea } from "../../../../../component/ui/TextArea";
 import { Input } from "../../../../../component/ui/Input";
 import { NumberInput } from "../../../../../component/ui/NumberInput";
+import { Button } from "../../../../../component/ui/Button";
+import { Card } from "../../../../../component/ui/Card";
+import { Translator } from "@repo/i18n";
 
 type Props = {
   entity: Partial<WorldEntityBase>;
@@ -11,6 +14,7 @@ type Props = {
 };
 
 export const EditForm: React.FC<Props> = ({ entity, onChange }) => {
+  const translator = new Translator("map.entity");
   const [tagInput, setTagInput] = useState("");
   const [validYearsVisible, setValidYearsVisible] = useState(
     entity.activeFrom !== undefined || entity.activeTo !== undefined,
@@ -40,47 +44,68 @@ export const EditForm: React.FC<Props> = ({ entity, onChange }) => {
   return (
     <>
       <Input
-        placeholder="Name"
+        placeholder={translator.translate(".name")}
         value={entity.name}
+        className="w-full m-0.5"
         onChange={(e) => updateEntity({ name: e.target.value })}
       />
       <TextArea
-        placeholder="Beschreibung"
+        placeholder={translator.translate(".description")}
+        className="m-0.5"
         value={entity.description}
         onChange={(e) => updateEntity({ description: e.target.value })}
       />
-      <Checkbox
-        checked={validYearsVisible}
-        onChange={(value) => setValidYearsVisible(value as boolean)}
-      />
-      {validYearsVisible && (
-        <>
-          <NumberInput
-            placeholder="Von"
-            value={entity.activeFrom || 0}
-            onChange={(e) => updateEntity({ activeFrom: e as number })}
-          />
-          <NumberInput
-            type="number"
-            placeholder="Bis"
-            value={entity.activeTo || 0}
-            onChange={(e) => updateEntity({ activeTo: e as number })}
-          />
-        </>
-      )}
-      <Input
-        placeholder="Tag hinzufügen..."
-        value={tagInput}
-        onChange={(e) => setTagInput(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            addTag();
-          }
-        }}
-      />
+      <Card>
+        <Checkbox
+          checked={validYearsVisible}
+          onChange={(value) => {
+            setValidYearsVisible(value as boolean);
+            updateEntity({ activeFrom: undefined, activeTo: undefined });
+          }}
+        />{" "}
+        {translator.translate(".timespan")}
+        {validYearsVisible && (
+          <>
+            <div className="flex">
+              <p>{translator.translate(".timespan_from")}</p>
+              <NumberInput
+                className="w-full m-0.5"
+                placeholder={translator.translate(".timespan_from_max")}
+                value={entity.activeFrom}
+                onChange={(e) => updateEntity({ activeFrom: e as number })}
+              />
+            </div>
+            <div className="flex">
+              <p>{translator.translate(".timespan_to")}</p>
+              <NumberInput
+                type="number"
+                className="w-full m-0.5"
+                placeholder={translator.translate(".timespan_to_max")}
+                value={entity.activeTo}
+                onChange={(e) => updateEntity({ activeTo: e as number })}
+              />
+            </div>
+          </>
+        )}
+      </Card>
+      <div className="w-full flex">
+        <Input
+          placeholder={translator.translate(".add_tag")}
+          value={tagInput}
+          className="m-0.5"
+          onChange={(e) => setTagInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              addTag();
+            }
+          }}
+        />
 
-      <button onClick={addTag}>Hinzufügen</button>
+        <Button className="m-0.5" variant="secondary" onClick={addTag}>
+          +
+        </Button>
+      </div>
       <div>
         {entity.tags?.map((tag) => (
           <span

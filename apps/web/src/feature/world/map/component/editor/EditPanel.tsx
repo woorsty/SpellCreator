@@ -13,6 +13,8 @@ import {
 import { Card } from "../../../../../component/ui/Card";
 import { Button } from "../../../../../component/ui/Button";
 import { useMapStore } from "../../state/mapStore";
+import { EntityForm } from "./EntityForm";
+import { Translator } from "@repo/i18n";
 
 export const EditPanel = () => {
   const mode = useEditorStore((s) => s.mode);
@@ -24,8 +26,6 @@ export const EditPanel = () => {
     Partial<WorldEntityBase>
   >({
     name: "",
-    activeFrom: -1,
-    activeTo: -1,
     articleUrl: "",
     description: "",
     imageUrl: "",
@@ -33,6 +33,8 @@ export const EditPanel = () => {
   });
 
   const [currentEntity, setCurrentEntity] = useState<Partial<WorldEntity>>({});
+
+  const translator = new Translator("map");
 
   const handleSave = async () => {
     const entity: WorldEntity = {
@@ -69,33 +71,40 @@ export const EditPanel = () => {
   return (
     <div className={styles.editPanel}>
       <Card>
-        <div className={styles.title}>Editor</div>
-
+        <Button
+          variant="secondary"
+          onClick={() => setMode(mode === "edit" ? "idle" : "edit")}
+        >
+          {translator.translate(".abort")}
+        </Button>
         {mode === "edit" && (
           <>
             <Button
               onClick={() => {
                 resetDraft();
+                setCurrentEntity({ entityType: "point" });
                 setMode("create-point");
               }}
             >
-              Neuer Ort
+              {translator.translate(".new_point")}
             </Button>
             <Button
               onClick={() => {
                 resetDraft();
+                setCurrentEntity({ entityType: "line" });
                 setMode("create-line");
               }}
             >
-              Neue Linie
+              {translator.translate(".new_line")}
             </Button>
             <Button
               onClick={() => {
                 resetDraft();
+                setCurrentEntity({ entityType: "polygon" });
                 setMode("create-polygon");
               }}
             >
-              Neues Gebiet
+              {translator.translate(".new_polygon")}
             </Button>
           </>
         )}
@@ -111,16 +120,23 @@ export const EditPanel = () => {
               }
             />
             <Button disabled={!draftPoint && !draftPoints} onClick={handleSave}>
-              Speichern
+              {translator.translate(".save")}
             </Button>
           </>
         )}
-
-        <br />
-        <br />
-        <br />
-        <div>Mode: {mode}</div>
       </Card>
+      {(mode === "create-line" ||
+        mode === "create-point" ||
+        mode === "create-polygon") && (
+        <Card>
+          <EntityForm
+            entity={currentEntity}
+            onChange={(changes) =>
+              setCurrentEntity((prev) => ({ ...prev, ...changes }))
+            }
+          />
+        </Card>
+      )}
     </div>
   );
 };

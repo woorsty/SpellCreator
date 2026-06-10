@@ -1,6 +1,8 @@
 import { MapPoint, WorldEntityBase } from "./world-entity";
 
-export type PointType = "city" | "village" | "dungeon" | "poi";
+export const POINT_TYPES = ["city", "village", "dungeon", "poi", "event"];
+
+export type PointType = (typeof POINT_TYPES)[number];
 
 export type PointEntity = WorldEntityBase & {
   type: PointType;

@@ -17,7 +17,8 @@
     "deploy:all": "pnpm run deploy:web:pib && pnpm run deploy:server:pib && pnpm run deploy:restart",
     "deploy:web": "scp -r apps/web/dist/* worsty@zeropi:/home/worsty/app/web/",
     "deploy:server": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/assets worsty@zeropi:/home/worsty/app/server/",
-    "deploy:server:pib": "scp -r apps/server/dist/server.js apps/server/data apps/server/views dennis@pib:/home/dennis/app/server/",
+    "deploy:server:pib": "scp -r apps/server/dist/server.js  apps/server/views dennis@pib:/home/dennis/app/server/",
+    "deploy:server:pib:data": "scp -r apps/server/dist/server.js apps/server/data apps/server/views dennis@pib:/home/dennis/app/server/",
     "deploy:server:pib-full": "scp -r apps/server/dist/server.js apps/server/data apps/server/views apps/server/assets dennis@pib:/home/dennis/app/server/",
     "deploy:web:pib": "scp -r apps/web/dist/* dennis@pib:/home/dennis/app/web/",
     "deploy:restart": "ssh dennis@pib \"sudo systemctl restart spell-server && sudo systemctl restart spell-web\""

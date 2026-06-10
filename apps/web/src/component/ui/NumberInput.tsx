@@ -2,8 +2,8 @@ import React, { InputHTMLAttributes } from "react";
 import { Input } from "./Input";
 
 type NumberInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  value: number;
-  onChange: (value: number) => void;
+  value?: number;
+  onChange: (value?: number) => void;
 };
 
 export function NumberInput({ value, onChange, ...props }: NumberInputProps) {
@@ -15,10 +15,14 @@ export function NumberInput({ value, onChange, ...props }: NumberInputProps) {
     <Input
       {...props}
       type="number"
-      value={value}
+      value={value ?? ""}
       style={{ textAlign: "center" }}
       className={className}
-      onChange={(e) => onChange(Number(e.target.value))}
+      onChange={(e) => {
+        const value = e.target.value;
+
+        onChange(value === "" ? undefined : Number(value));
+      }}
     />
   );
 }
