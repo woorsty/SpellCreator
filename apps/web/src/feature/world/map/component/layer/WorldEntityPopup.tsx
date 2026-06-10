@@ -1,8 +1,8 @@
-import { Button } from "../../../../component/ui/Button";
+import { Button } from "../../../../../component/ui/Button";
 import React from "react";
 import { useEditorStore } from "../../state/editorStore";
 import { WorldEntity } from "@repo/domain";
-import { WorldEntityService } from "../editor/editorService";
+import { WorldEntityService } from "../service/editorService";
 import { useMapStore } from "../../state/mapStore";
 import { Popup } from "react-leaflet";
 

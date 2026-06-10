@@ -1,4 +1,3 @@
-import { useMapMode } from "../hook/useMapMode";
 import styles from "../styles/worldMap.module.css";
 import React, { useEffect, useState } from "react";
 import { EditPanel } from "./editor/EditPanel";
@@ -17,7 +16,6 @@ import { useMapStore } from "../state/mapStore";
 export function WorldMap() {
   const loadAll = useMapStore((s) => s.loadAll);
   const mode = useEditorStore((s) => s.mode);
-  const setMode = useEditorStore((s) => s.setMode);
   const [map, setMap] = useState<Map | null>(null);
 
   const maxTilesX = 200;
@@ -47,7 +45,6 @@ export function WorldMap() {
       <div className={styles.main}>
         <div className={styles.map}>
           <MapContainer
-            crs={L.CRS.Simple}
             center={center}
             zoom={4}
             minZoom={1}
@@ -56,9 +53,10 @@ export function WorldMap() {
             maxBoundsViscosity={1.0}
             zoomControl={false}
             style={{ height: "100%", width: "100%" }}
+            crs={L.CRS.Simple}
           >
             <TileLayer
-              url={`/map-tiles/{z}/{x}/{y}.png`}
+              url={`${import.meta.env.VITE_API_BASE}/map-tiles/{z}/{x}/{y}.png`}
               noWrap={true}
               bounds={bounds}
               tileSize={256}

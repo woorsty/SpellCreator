@@ -1,9 +1,9 @@
 import { MapEntity, WorldEntityBase } from "@repo/domain";
 import React, { useState } from "react";
-import { Checkbox } from "../../../../component/ui/Checkbox";
-import { TextArea } from "../../../../component/ui/TextArea";
-import { Input } from "../../../../component/ui/Input";
-import { NumberInput } from "../../../../component/ui/NumberInput";
+import { Checkbox } from "../../../../../component/ui/Checkbox";
+import { TextArea } from "../../../../../component/ui/TextArea";
+import { Input } from "../../../../../component/ui/Input";
+import { NumberInput } from "../../../../../component/ui/NumberInput";
 
 type Props = {
   entity: Partial<WorldEntityBase>;

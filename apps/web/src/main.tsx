@@ -8,7 +8,7 @@ import { CharacterSheetView } from "./component/character/show/CharacterSheetVie
 import React from "react";
 import { CharacterStartPage } from "./feature/character/StartPage";
 import CharacterLayout from "./feature/character/CharacterLayout";
-import { WorldMap } from "./feature/world/component/MapView";
+import { WorldMap } from "./feature/world/map/component/MapView";
 import { StartPage } from "./StartPage";
 
 createRoot(document.getElementById("root")!).render(

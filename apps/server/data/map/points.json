@@ -1,17 +1,1 @@
-[
-  {
-    "name": "test",
-    "activeFrom": -1,
-    "activeTo": -1,
-    "articleUrl": "",
-    "description": "",
-    "imageUrl": "",
-    "tags": [],
-    "entityType": "point",
-    "position": {
-      "x": -30.625,
-      "y": 75.875
-    },
-    "id": "6025e47e-9289-4743-9243-d8f7ca43d723"
-  }
-]
+[]

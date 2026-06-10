@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEditorStore } from "../../state/editorStore";
 import styles from "./EditPanel.module.css";
-import { WorldEntityService } from "./editorService";
+import { WorldEntityService } from "../service/editorService";
 import { EditForm } from "./EditForm";
 import {
   LineEntity,
@@ -10,8 +10,8 @@ import {
   WorldEntity,
   WorldEntityBase,
 } from "@repo/domain";
-import { Card } from "../../../../component/ui/Card";
-import { Button } from "../../../../component/ui/Button";
+import { Card } from "../../../../../component/ui/Card";
+import { Button } from "../../../../../component/ui/Button";
 import { useMapStore } from "../../state/mapStore";
 
 export const EditPanel = () => {

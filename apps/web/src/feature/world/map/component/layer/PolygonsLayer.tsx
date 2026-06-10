@@ -3,8 +3,8 @@ import React from "react";
 import { useMapStore } from "../../state/mapStore";
 import { useEditorStore } from "../../state/editorStore";
 import { WorldEntity } from "@repo/domain";
-import { WorldEntityService } from "../editor/editorService";
-import { Button } from "../../../../component/ui/Button";
+import { WorldEntityService } from "../service/editorService";
+import { Button } from "../../../../../component/ui/Button";
 
 export const PolygonsLayer = () => {
   const mode = useEditorStore((s) => s.mode);

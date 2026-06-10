@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { PointEntity, LineEntity, PolygonEntity } from "@repo/domain";
+import { MapApi } from "../../../../api/map-api";
 
 type MapState = {
   points: PointEntity[];
@@ -15,8 +16,7 @@ export const useMapStore = create<MapState>((set) => ({
   polygons: [],
 
   loadAll: async () => {
-    const res = await fetch("/map");
-    const data = await res.json();
+    const data = await MapApi.getAll();
 
     set({
       points: data.points,

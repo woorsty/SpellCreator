@@ -1,9 +1,21 @@
-import { LineEntity, MapPoint, PointEntity, WorldEntity } from "@repo/domain";
+import { WorldEntity } from "@repo/domain";
+import { API_BASE } from "./base";
 
-export const WorldEntityService = {
+export const MapApi = {
+  async getAll() {
+    const res = await fetch(`${API_BASE}/map`);
+    const data = await res.json();
+
+    return {
+      points: data.points,
+      lines: data.lines,
+      polygons: data.polygons,
+    };
+  },
+
   async create(entity: WorldEntity) {
     console.log("create:", entity);
-    const res = await fetch(`/map/${entity.entityType}`, {
+    const res = await fetch(`${API_BASE}/map/${entity.entityType}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,9 +32,12 @@ export const WorldEntityService = {
   },
 
   async remove(entity: WorldEntity) {
-    const res = await fetch(`/map/${entity.entityType}/${entity.id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `${API_BASE}/map/${entity.entityType}/${entity.id}`,
+      {
+        method: "DELETE",
+      },
+    );
 
     if (!res.ok) {
       throw new Error("Failed to remove entity");
@@ -30,7 +45,7 @@ export const WorldEntityService = {
   },
 
   async edit(entity: WorldEntity) {
-    const res = await fetch(`/map/${entity.entityType}`, {
+    const res = await fetch(`${API_BASE}/map/${entity.entityType}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
