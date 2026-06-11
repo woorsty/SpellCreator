@@ -11,6 +11,7 @@ import mapRoutes from "./module/map/mapRouter";
 import apiRouter from "./module/api/apiRouter";
 import { services } from "./services";
 import cors from "cors";
+import articleRouter from "./module/article/articleRouter";
 
 const app = express();
 const port = 3000;
@@ -36,6 +37,7 @@ app.use("/spellcard", spellCardRoutes);
 app.use("/class", classRoutes);
 app.use("/data", dataRoutes);
 app.use("/api", apiRouter);
+app.use("/article", articleRouter);
 app.get("/character", (req: Request, res: Response) => {
   res.redirect(`http://${req.hostname}:5173/character`);
 });
