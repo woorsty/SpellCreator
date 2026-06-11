@@ -1,6 +1,6 @@
 import { MapPoint, WorldEntityBase } from "./world-entity";
 
-export const LINE_TYPES = ["road", "river", "path"];
+export const LINE_TYPES = ["road", "river", "path", "backtrack"];
 
 export type LineType = (typeof LINE_TYPES)[number];
 

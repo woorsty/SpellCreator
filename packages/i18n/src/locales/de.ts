@@ -826,6 +826,7 @@ export const de = {
         kingdom: "Königreich",
         forest: "Wald",
         region: "Region",
+        backtrack: "Reiseroute",
       },
     },
   },
