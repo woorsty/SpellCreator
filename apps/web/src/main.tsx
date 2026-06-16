@@ -11,7 +11,7 @@ import { CharacterStartPage } from "./feature/character/StartPage";
 import CharacterLayout from "./feature/character/CharacterLayout";
 import { WorldMap } from "./feature/world/map/component/MapView";
 import { StartPage } from "./StartPage";
-import { ShowArticle } from "./feature/world/article/component/ShowArticle";
+import { ShowArticle } from "./feature/world/article/pages/ShowArticle";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
