@@ -18,48 +18,30 @@ export type MapPoint = {
 export type DraftPoint = MapPoint | null;
 
 type EditorState = {
-  // =====================
-  // MODE
-  // =====================
   mode: EditorMode;
 
   setMode: (mode: EditorMode) => void;
 
-  // =====================
-  // POINT DRAWING
-  // =====================
   draftPoints: MapPoint[];
 
   addPoint: (p: MapPoint) => void;
 
   resetDraft: () => void;
 
-  // =====================
-  // SIMPLE POINT EDITING (NEU)
-  // =====================
   draftPoint: DraftPoint;
 
   setSingleDraftPoint: (p: MapPoint | null) => void;
 
-  // =====================
-  // SELECTION / EDIT MODE
-  // =====================
   activeEntity: any | null;
 
   setActiveEntity: (entity: any | null) => void;
 };
 
 export const useEditorStore = create<EditorState>((set) => ({
-  // =====================
-  // MODE
-  // =====================
   mode: "idle",
 
   setMode: (mode) => set({ mode }),
 
-  // =====================
-  // LINE / POLYGON SUPPORT
-  // =====================
   draftPoints: [],
 
   addPoint: (p) =>
@@ -73,9 +55,6 @@ export const useEditorStore = create<EditorState>((set) => ({
       draftPoint: null,
     }),
 
-  // =====================
-  // POINT DRAFT (SINGLE POINT)
-  // =====================
   draftPoint: null,
 
   setSingleDraftPoint: (p) =>
@@ -83,9 +62,6 @@ export const useEditorStore = create<EditorState>((set) => ({
       draftPoint: p,
     }),
 
-  // =====================
-  // ACTIVE ENTITY (EDIT MODE)
-  // =====================
   activeEntity: null,
 
   setActiveEntity: (entity) =>

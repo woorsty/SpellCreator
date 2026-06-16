@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,6 +11,7 @@ import { CharacterStartPage } from "./feature/character/StartPage";
 import CharacterLayout from "./feature/character/CharacterLayout";
 import { WorldMap } from "./feature/world/map/component/MapView";
 import { StartPage } from "./StartPage";
+import { ShowArticle } from "./feature/world/article/component/ShowArticle";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="show" element={<CharacterSheetList />} />
           <Route path="show/:name" element={<CharacterSheetView />} />
         </Route>
+        <Route path="article/:vaultId/*" element={<ShowArticle />} />
         <Route path="world" element={<WorldMap />} />
       </Routes>
     </BrowserRouter>

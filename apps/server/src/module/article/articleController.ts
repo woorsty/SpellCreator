@@ -2,20 +2,9 @@ import path from "path";
 import fs from "fs";
 import type { Request, Response } from "express";
 import matter from "gray-matter";
+import { TreeNode } from "@repo/domain";
 
 const ARTICLES_PATH = "data/articles";
-
-type TreeNode =
-  | {
-      name: string;
-      type: "folder";
-      children: TreeNode[];
-    }
-  | {
-      name: string;
-      type: "file";
-      path: string;
-    };
 
 export class ArticleController {
   private getVaultNames = () => {
@@ -36,7 +25,6 @@ export class ArticleController {
   public getVaultTree = async (req: Request, res: Response) => {
     const vaultId = req.params.vaultId as string;
 
-    console.log(vaultId);
     const root = this.getVaultPath(vaultId);
 
     if (!root) {
@@ -62,7 +50,7 @@ export class ArticleController {
         return {
           name: entry.name,
           type: "file",
-          path: entry.name,
+          path: fullPath.split(path.sep).slice(2).join(path.sep),
         };
       }),
     );
@@ -70,6 +58,7 @@ export class ArticleController {
     return {
       name: path.basename(dir),
       type: "folder",
+      path: path.join(dir).split(path.sep).slice(2).join(path.sep),
       children,
     };
   };
@@ -91,7 +80,7 @@ export class ArticleController {
         return {
           name: entry.name,
           type: "file",
-          path: entry.name,
+          path: fullPath.split(path.sep).slice(2).join(path.sep),
         };
       }),
     );
@@ -99,13 +88,16 @@ export class ArticleController {
     return {
       name,
       type: "folder",
+      path: dir.split(path.sep).slice(2).join(path.sep),
       children,
     };
   };
 
   public getArticle = async (req: Request, res: Response) => {
     const vaultId = req.params.vaultId as string;
-    const relativePath = req.query.path as string;
+    const relativePath = Array.isArray(req.params.path)
+      ? req.params.path.join("/")
+      : req.params.path;
 
     const vaultRoot = this.getVaultPath(vaultId);
     if (!vaultRoot) {

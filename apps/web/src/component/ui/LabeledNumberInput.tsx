@@ -7,7 +7,7 @@ type LabeledNumberInputProps = InputHTMLAttributes<HTMLInputElement> & {
   value: number;
   min?: number;
   max?: number;
-  onChange: (value: number) => void;
+  onChange: (value?: number) => void;
 };
 
 export function LabeledNumberInput({

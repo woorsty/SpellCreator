@@ -9,7 +9,8 @@
     "declarationMap": true,
     "emitDeclarationOnly": false,
     "noEmit": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["ES2021.String"]
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules", "src/**/*.spec.ts"]

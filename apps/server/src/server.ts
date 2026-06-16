@@ -25,7 +25,7 @@ app.set("views", path.resolve("views"));
 app.get("/", (req: Request, res: Response) => {
   const isDev = process.env.NODE_ENV !== "production";
 
-  const baseUrl = isDev ? "http://localhost" : "http://rieke.duckdns.org";
+  const baseUrl = isDev ? "http://localhost" : "http://api-rieke.duckdns.org";
 
   res.render("index", { baseUrl });
 });
