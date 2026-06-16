@@ -7,15 +7,19 @@ export const ArticleApi = {
     return (await result.json()) as string[];
   },
 
-  async getTree(vault: string) {
-    const res = await fetch(`${API_BASE}/article/${vault}/tree`);
+  async getTree(vaultId: string) {
+    const res = await fetch(`${API_BASE}/article/${vaultId}/tree`);
     const data = (await res.json()) as DirectoryNode;
 
     return data;
   },
 
-  async getArticle(vault: string, path: string) {
-    const res = await fetch(`${API_BASE}/article/${vault}/${path}`);
+  async getArticle(vaultId: string, path: string) {
+    const res = await fetch(`${API_BASE}/article/${vaultId}/${path}`);
     return (await res.json()) as Article;
+  },
+
+  getAssetUrl(path: string) {
+    return `${API_BASE}/article/${path}`;
   },
 };

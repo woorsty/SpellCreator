@@ -110,6 +110,13 @@ export class ArticleController {
       return res.status(403).json({ error: "Forbidden" });
     }
 
+    const ext = path.extname(resolved).toLowerCase();
+    const imageExtensions = [".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"];
+
+    if (imageExtensions.includes(ext)) {
+      return res.sendFile(resolved);
+    }
+
     const raw = fs.readFileSync(resolved, "utf-8");
 
     const parsed = matter(raw);

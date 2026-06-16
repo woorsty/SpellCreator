@@ -4,6 +4,7 @@ import { useArticleStore } from "../state/articleStore";
 import { useLocation, useNavigate, useParams } from "react-router";
 import styles from "../styles/article.module.css";
 import { ArticleContent } from "../component/ArticleContent";
+import { ArticleApi } from "../../../../api/article-api";
 
 type Props = {};
 
@@ -17,43 +18,47 @@ export const ShowArticle: React.FC<Props> = () => {
   }
   const articlePath = location.pathname.split(`${vaultId}/`)[1];
 
-  const loadArticles = useArticleStore((s) => s.loadArticles);
-  const loadArticle = useArticleStore((s) => s.loadArticle);
-  const currentArticle = useArticleStore((s) => s.currentArticle);
-
-  useEffect(() => {
-    loadArticles(vaultId);
-  }, [loadArticles, vaultId]);
-
-  useEffect(() => {
-    if (vaultId) {
-      loadArticle(vaultId, articlePath);
-    }
-  }, [loadArticle, vaultId, articlePath]);
-
   const navigate = useNavigate();
   const openArticle = (path: string) => {
     navigate(`/article/${path}`);
   };
 
-  return (
-    <>
-      <div className={styles.layout}>
-        <aside className={styles.sidebar}>
-          <ArticleSideBar />
-        </aside>
+  const loadArticles = useArticleStore((s) => s.loadArticles);
 
-        <main className={styles.content}>
-          {currentArticle?.content ? (
-            <ArticleContent
-              content={currentArticle.content}
-              onOpen={(path) => openArticle(path)}
-            />
-          ) : (
-            <div>Loading article...</div>
-          )}
-        </main>
-      </div>
-    </>
+  useEffect(() => {
+    loadArticles(vaultId);
+  }, [loadArticles, vaultId]);
+
+  const loadArticle = useArticleStore((s) => s.loadArticle);
+  const currentArticle = useArticleStore((s) => s.currentArticle);
+
+  useEffect(() => {
+    if (vaultId && articlePath.endsWith(".md")) {
+      loadArticle(vaultId, articlePath);
+    }
+  }, [loadArticle, vaultId, articlePath]);
+
+  const linkIndex = useArticleStore((s) => s.linkIndex);
+
+  console.log(articlePath);
+  return (
+    <div className={styles.layout}>
+      <aside className={styles.sidebar}>
+        <ArticleSideBar />
+      </aside>
+
+      <main className={styles.content}>
+        {currentArticle?.content ? (
+          <ArticleContent
+            content={currentArticle.content}
+            onOpen={(path) => openArticle(path)}
+          />
+        ) : !articlePath.endsWith(".md") ? (
+          <img src={ArticleApi.getAssetUrl(`${vaultId}/${articlePath}`)} />
+        ) : (
+          <div>Loading article...</div>
+        )}
+      </main>
+    </div>
   );
 };
