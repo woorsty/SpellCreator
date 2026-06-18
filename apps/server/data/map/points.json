@@ -1,10 +1,12 @@
 [
   {
-    "name": "test",
+    "name": "test235",
     "articleUrl": "Hexenlicht/02_NSCs/Vetteln/Bavlorna%20Blattenstroh.md",
     "description": "Blub",
     "imageUrl": "",
-    "tags": ["test", "test2", "test4", "test6", "test3"],
+    "tags": [
+      "test"
+    ],
     "entityType": "point",
     "position": {
       "x": -38.125,

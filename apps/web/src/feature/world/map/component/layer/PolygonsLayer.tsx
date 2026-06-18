@@ -8,6 +8,7 @@ import { Button } from "../../../../../component/ui/Button";
 
 export const PolygonsLayer = () => {
   const mode = useEditorStore((s) => s.mode);
+  const setSelectedEntity = useEditorStore((s) => s.setSelectedEntity);
 
   const deleteEntity = (entity: WorldEntity) => {
     WorldEntityService.remove(entity);
@@ -24,6 +25,11 @@ export const PolygonsLayer = () => {
             color: polygon.style?.color || "blue",
             fillColor: polygon.style?.fillColor || "blue",
             fillOpacity: polygon.style?.fillOpacity ?? 0.3,
+          }}
+          eventHandlers={{
+            click: (e) => {
+              setSelectedEntity(point);
+            },
           }}
         >
           <Popup key={polygon.id}>

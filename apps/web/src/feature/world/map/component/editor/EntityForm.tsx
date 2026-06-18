@@ -32,8 +32,6 @@ export const EntityForm: React.FC<Props> = ({ entity, onChange }) => {
       break;
   }
 
-  console.log(entity, entityTypes);
-
   return (
     <Card>
       {translator.translate(".type.title")}

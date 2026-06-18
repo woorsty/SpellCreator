@@ -6,7 +6,6 @@ export type WorldEntityBase = {
   id: string;
   name: string;
   description: string;
-  imageUrl?: string;
   articleUrl?: string;
   activeFrom?: number;
   activeTo?: number;

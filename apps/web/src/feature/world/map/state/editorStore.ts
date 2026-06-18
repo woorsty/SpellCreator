@@ -1,3 +1,4 @@
+import { WorldEntity } from "@repo/domain";
 import { create } from "zustand";
 
 export type EditorMode =
@@ -5,7 +6,8 @@ export type EditorMode =
   | "create-point"
   | "create-line"
   | "create-polygon"
-  | "edit";
+  | "edit"
+  | "edit-entity";
 
 export type MapPoint = {
   x: number;
@@ -19,22 +21,21 @@ export type DraftPoint = MapPoint | null;
 
 type EditorState = {
   mode: EditorMode;
-
   setMode: (mode: EditorMode) => void;
 
   draftPoints: MapPoint[];
-
   addPoint: (p: MapPoint) => void;
-
   resetDraft: () => void;
 
   draftPoint: DraftPoint;
-
   setSingleDraftPoint: (p: MapPoint | null) => void;
 
   activeEntity: any | null;
-
   setActiveEntity: (entity: any | null) => void;
+
+  selectedEntity: WorldEntity | null;
+  setSelectedEntity: (entity: WorldEntity | null) => void;
+  setSelectedEntityData: (entity: WorldEntity) => void;
 };
 
 export const useEditorStore = create<EditorState>((set) => ({
@@ -68,4 +69,15 @@ export const useEditorStore = create<EditorState>((set) => ({
     set({
       activeEntity: entity,
     }),
+
+  selectedEntity: null,
+
+  setSelectedEntity: (entity) =>
+    set({
+      selectedEntity: entity,
+    }),
+
+  setSelectedEntityData: (entity) => {
+    set({ selectedEntity: entity });
+  },
 }));

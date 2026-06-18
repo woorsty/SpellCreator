@@ -45,13 +45,17 @@ export const MapApi = {
   },
 
   async edit(entity: WorldEntity) {
-    const res = await fetch(`${API_BASE}/map/${entity.entityType}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
+    console.log("PUT", entity);
+    const res = await fetch(
+      `${API_BASE}/map/${entity.entityType}/${entity.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(entity),
       },
-      body: JSON.stringify(entity),
-    });
+    );
 
     if (!res.ok) {
       throw new Error("Failed to create entity");

@@ -7,6 +7,7 @@ export function useMapEditor() {
   const mode = useEditorStore((s) => s.mode);
   const setSingleDraftPoint = useEditorStore((s) => s.setSingleDraftPoint);
   const addPoint = useEditorStore((s) => s.addPoint);
+  const setSelectedEntity = useEditorStore((s) => s.setSelectedEntity);
 
   useEffect(() => {
     const handler = (e: any) => {
@@ -21,6 +22,9 @@ export function useMapEditor() {
           x: e.latlng.lat,
           y: e.latlng.lng,
         });
+      }
+      if (mode === "edit") {
+        setSelectedEntity(null);
       }
     };
 

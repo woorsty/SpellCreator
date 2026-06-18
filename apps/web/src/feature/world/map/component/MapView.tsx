@@ -72,11 +72,10 @@ export function WorldMap() {
 
         {mode !== "idle" && (
           <div className={styles.sidebar}>
-            {" "}
             <EditPanel />
           </div>
         )}
-        <SearchPanel />
+        {mode === "idle" && <SearchPanel />}
       </div>
     </div>
   );
