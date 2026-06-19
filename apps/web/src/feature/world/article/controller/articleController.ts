@@ -1,3 +1,4 @@
+import { ArticleApi } from "../../../../api/article-api";
 import { useArticleStore } from "../state/articleStore";
 
 export const extractFirstImage = (content: string): string | undefined => {
@@ -26,4 +27,9 @@ export const resolveArticleFromMap = (
   }
 
   return null;
+};
+
+export const loadArticle = async (vaultId: string, path: string) => {
+  const data = await ArticleApi.getArticle(vaultId, path);
+  return data;
 };

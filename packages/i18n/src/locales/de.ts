@@ -829,5 +829,8 @@ export const de = {
         backtrack: "Reiseroute",
       },
     },
+    popup: {
+      create_article: "Artikel erstellen",
+    },
   },
 } as const;

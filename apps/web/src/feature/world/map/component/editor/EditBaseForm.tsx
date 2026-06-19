@@ -7,18 +7,20 @@ import { NumberInput } from "../../../../../component/ui/NumberInput";
 import { Button } from "../../../../../component/ui/Button";
 import { Card } from "../../../../../component/ui/Card";
 import { Translator } from "@repo/i18n";
+import { useArticleStore } from "../../../article/state/articleStore";
 
 type Props = {
   entity: Partial<WorldEntityBase>;
   onChange: (changes: Partial<WorldEntityBase>) => void;
 };
 
-export const EditForm: React.FC<Props> = ({ entity, onChange }) => {
+export const EditBaseForm: React.FC<Props> = ({ entity, onChange }) => {
   const translator = new Translator("map.entity");
   const [tagInput, setTagInput] = useState("");
   const [validYearsVisible, setValidYearsVisible] = useState(
     entity.activeFrom !== undefined || entity.activeTo !== undefined,
   );
+  const places = useArticleStore((s) => s.places);
 
   const updateEntity = (changes: Partial<WorldEntityBase>) => {
     onChange(changes);
@@ -44,17 +46,22 @@ export const EditForm: React.FC<Props> = ({ entity, onChange }) => {
   return (
     <>
       <Input
+        list="article-suggestions"
         placeholder={translator.translate(".name")}
         value={entity.name}
         className="w-full m-0.5"
-        onChange={(e) => updateEntity({ name: e.target.value })}
+        onChange={(e) =>
+          updateEntity({
+            name: e.target.value,
+          })
+        }
       />
-      <TextArea
-        placeholder={translator.translate(".description")}
-        className="m-0.5"
-        value={entity.description}
-        onChange={(e) => updateEntity({ description: e.target.value })}
-      />
+
+      <datalist id="article-suggestions">
+        {places.map((place) => (
+          <option key={place.name.split(".")[0]} value={place.name} />
+        ))}
+      </datalist>
       <Card>
         <Checkbox
           checked={validYearsVisible}

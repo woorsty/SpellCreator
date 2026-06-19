@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "../../../../../component/ui/Card";
 import { Select } from "../../../../../component/ui/Select";
 import {
@@ -8,16 +8,22 @@ import {
   WorldEntity,
 } from "@repo/domain";
 import { Translator } from "@repo/i18n";
+import { useArticleStore } from "../../../article/state/articleStore";
 
 type Props = {
   entity: Partial<WorldEntity>;
   onChange: (changes: Partial<WorldEntity>) => void;
 };
 
-export const EntityForm: React.FC<Props> = ({ entity, onChange }) => {
+export const EditEntityForm: React.FC<Props> = ({ entity, onChange }) => {
   if (!entity.entityType) return <></>;
 
   const translator = new Translator("map.entity");
+
+  const loadPlaces = useArticleStore((s) => s.loadPlaces);
+  useEffect(() => {
+    loadPlaces();
+  }, [loadPlaces]);
 
   let entityTypes;
   switch (entity.entityType) {

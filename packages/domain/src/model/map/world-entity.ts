@@ -5,8 +5,6 @@ import { PolygonEntity } from "./polygon-entity";
 export type WorldEntityBase = {
   id: string;
   name: string;
-  description: string;
-  articleUrl?: string;
   activeFrom?: number;
   activeTo?: number;
   tags?: string[];

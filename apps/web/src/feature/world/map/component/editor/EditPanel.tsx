@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import { useEditorStore } from "../../state/editorStore";
 import styles from "./EditPanel.module.css";
 import { WorldEntityService } from "../service/editorService";
-import { EditForm } from "./EditForm";
+import { EditBaseForm } from "./EditBaseForm";
 import {
   LineEntity,
   PointEntity,
@@ -13,7 +13,7 @@ import {
 import { Card } from "../../../../../component/ui/Card";
 import { Button } from "../../../../../component/ui/Button";
 import { useMapStore } from "../../state/mapStore";
-import { EntityForm } from "./EntityForm";
+import { EditEntityForm } from "./EditEntityForm";
 import { Translator } from "@repo/i18n";
 
 export const EditPanel: React.FC = () => {
@@ -29,8 +29,6 @@ export const EditPanel: React.FC = () => {
     Partial<WorldEntityBase>
   >({
     name: "",
-    articleUrl: "",
-    description: "",
     tags: [],
   });
 
@@ -132,7 +130,7 @@ export const EditPanel: React.FC = () => {
           mode === "create-polygon" ||
           selectedEntity) && (
           <>
-            <EditForm
+            <EditBaseForm
               entity={selectedEntity || worldEntityBase}
               onChange={(changes) => {
                 if (selectedEntity) {
@@ -156,7 +154,7 @@ export const EditPanel: React.FC = () => {
         mode === "create-polygon" ||
         selectedEntity) && (
         <Card>
-          <EntityForm
+          <EditEntityForm
             entity={selectedEntity || newEntity}
             onChange={(changes) => {
               if (selectedEntity) {

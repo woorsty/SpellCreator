@@ -12,6 +12,7 @@ import { PolygonsLayer } from "./layer/PolygonsLayer";
 import { DraftLayer } from "./layer/DraftLayer";
 import { useEditorStore } from "../state/editorStore";
 import { useMapStore } from "../state/mapStore";
+import { useArticleStore } from "../../article/state/articleStore";
 
 export function WorldMap() {
   const loadAll = useMapStore((s) => s.loadAll);
@@ -32,9 +33,12 @@ export function WorldMap() {
   ];
   const center: L.LatLngExpression = [-maxTilesY / 2, (minX + maxX) / 2];
 
+  const loadArticles = useArticleStore((s) => s.loadArticles);
+
   useEffect(() => {
     loadAll();
-  }, [loadAll]);
+    loadArticles();
+  }, [loadAll, loadArticles]);
 
   return (
     <div className={styles.container}>

@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import type { Request, Response } from "express";
 import matter from "gray-matter";
-import { TreeNode } from "@repo/domain";
+import { Article, TreeNode } from "@repo/domain";
 
 const ARTICLES_PATH = "data/articles";
 
@@ -36,6 +36,11 @@ export class ArticleController {
     res.json(tree);
   };
 
+  public getFullTree = async (req: Request, res: Response) => {
+    const tree = await this.buildTree(ARTICLES_PATH);
+    res.json(tree);
+  };
+
   private buildTree = async (dir: string): Promise<TreeNode> => {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -48,7 +53,7 @@ export class ArticleController {
         }
 
         return {
-          name: entry.name,
+          name: entry.name.split(".")[0],
           type: "file",
           path: fullPath.split(path.sep).slice(2).join(path.sep),
         };
@@ -104,7 +109,11 @@ export class ArticleController {
       return res.status(404).json({ error: "Vault not found" });
     }
 
-    const resolved = path.resolve(vaultRoot, relativePath);
+    let resolved = path.resolve(vaultRoot, relativePath);
+
+    if (!resolved.includes(".")) {
+      resolved += ".md";
+    }
 
     if (!resolved.startsWith(path.resolve(vaultRoot))) {
       return res.status(403).json({ error: "Forbidden" });
@@ -115,6 +124,11 @@ export class ArticleController {
 
     if (imageExtensions.includes(ext)) {
       return res.sendFile(resolved);
+    }
+
+    if (!fs.existsSync(resolved)) {
+      res.status(404);
+      return;
     }
 
     const raw = fs.readFileSync(resolved, "utf-8");
@@ -166,6 +180,43 @@ export class ArticleController {
     }
 
     res.json(results);
+  };
+
+  public write = (req: Request, res: Response) => {
+    const article = req.body as Article;
+
+    const data = this.createArticleFromJson(article);
+    fs.writeFileSync(ARTICLES_PATH + "/" + article.path, data);
+
+    res.json({ ok: true });
+  };
+
+  private createArticleFromJson = (article: Article) => {
+    let data = "";
+    if (article.frontmatter) {
+      data += `---\n${this.createFrontmatter(article.frontmatter)}---\n\n`;
+    }
+    data += article.content;
+
+    return data;
+  };
+
+  private createFrontmatter = (frontmatter: any): string => {
+    let result = "";
+
+    Object.keys(frontmatter).forEach((key) => {
+      result += key + ":";
+      if (Array.isArray(frontmatter[key])) {
+        result += "\n";
+        frontmatter[key].forEach((value) => {
+          result += `  - ${value}\n`;
+        });
+      } else {
+        result += frontmatter[key] + "\n";
+      }
+    });
+
+    return result;
   };
 
   private collectFiles = async (dir: string): Promise<string[]> => {

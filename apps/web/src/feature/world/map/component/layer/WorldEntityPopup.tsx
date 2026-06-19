@@ -1,12 +1,13 @@
 import { Button } from "../../../../../component/ui/Button";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useEditorStore } from "../../state/editorStore";
-import { WorldEntity } from "@repo/domain";
+import { Article, WorldEntity } from "@repo/domain";
 import { WorldEntityService } from "../service/editorService";
 import { useMapStore } from "../../state/mapStore";
 import { Popup } from "react-leaflet";
 import { ArticlePreview } from "../../../article/component/ArticlePreview";
-import { useNavigate } from "react-router";
+import { Translator } from "@repo/i18n";
+import { loadArticle } from "../../../article/controller/articleController";
 
 type Props = {
   entity: WorldEntity;
@@ -14,19 +15,30 @@ type Props = {
 
 export const WorldEntityPopup: React.FC<Props> = ({ entity }) => {
   const mode = useEditorStore((s) => s.mode);
+  const translator = new Translator("map.popup");
 
   const deleteEntity = (entity: WorldEntity) => {
     WorldEntityService.remove(entity);
     useMapStore.getState().loadAll();
   };
-  const navigate = useNavigate();
 
-  if (entity.articleUrl) {
+  const [article, setArticle] = useState<Article | null>(null);
+
+  useEffect(() => {
+    loadArticle("places", entity.name + ".md").then((value) => {
+      console.log("artikel loaded:", value);
+      setArticle(value);
+    });
+  }, [loadArticle]);
+
+  console.log(entity.name, article);
+
+  if (article) {
     return (
       <Popup key={entity.id}>
         <ArticlePreview
-          articlePath={entity.articleUrl}
-          onOpen={() => window.open(`/article/${entity.articleUrl}`, "_blank")}
+          article={article}
+          onOpen={() => window.open(`/article/places/${entity.name}`, "_blank")}
         />
         {mode === "edit" && (
           <Button variant={"secondary"} onClick={() => deleteEntity(entity)}>
@@ -41,7 +53,11 @@ export const WorldEntityPopup: React.FC<Props> = ({ entity }) => {
     <Popup key={entity.id}>
       <b>{entity.name}</b>
       <br />
-      {entity.description}
+      <Button
+        onClick={() => window.open(`/article/places/${entity.name}`, "_blank")}
+      >
+        {translator.translate(".create_article")}
+      </Button>
       {mode === "edit" && (
         <Button variant={"secondary"} onClick={() => deleteEntity(entity)}>
           🚮

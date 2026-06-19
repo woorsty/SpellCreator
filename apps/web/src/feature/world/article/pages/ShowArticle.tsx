@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ArticleSideBar } from "../component/ArticleSideBar";
 import { useArticleStore } from "../state/articleStore";
 import { useLocation, useNavigate, useParams } from "react-router";
 import styles from "../styles/article.module.css";
 import { ArticleContent } from "../component/ArticleContent";
 import { ArticleApi } from "../../../../api/article-api";
+import { loadArticle } from "../controller/articleController";
+import { Article } from "@repo/domain";
 
 type Props = {};
 
@@ -29,16 +31,13 @@ export const ShowArticle: React.FC<Props> = () => {
     loadArticles(vaultId);
   }, [loadArticles, vaultId]);
 
-  const loadArticle = useArticleStore((s) => s.loadArticle);
-  const currentArticle = useArticleStore((s) => s.currentArticle);
+  const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
 
   useEffect(() => {
     if (vaultId && articlePath.endsWith(".md")) {
-      loadArticle(vaultId, articlePath);
+      loadArticle(vaultId, articlePath).then(setCurrentArticle);
     }
   }, [loadArticle, vaultId, articlePath]);
-
-  const linkIndex = useArticleStore((s) => s.linkIndex);
 
   console.log(articlePath);
   return (

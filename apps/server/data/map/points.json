@@ -26,5 +26,52 @@
       "y": 100.6328125
     },
     "id": "630c8285-c5d5-4ea1-b74c-aea4d30018eb"
+  },
+  {
+    "name": "Test.md",
+    "articleUrl": "",
+    "description": "",
+    "tags": [],
+    "entityType": "point",
+    "position": {
+      "x": -42.6875,
+      "y": 113.1875
+    },
+    "id": "841a4db8-4484-4e0a-bbd2-c0e34f1bce4e"
+  },
+  {
+    "name": "Test2",
+    "articleUrl": "",
+    "description": "",
+    "tags": [],
+    "entityType": "point",
+    "position": {
+      "x": -28.4375,
+      "y": 107.125
+    },
+    "id": "0c4eaae4-30b2-4647-8d5b-f3540368fd44"
+  },
+  {
+    "name": "test2324252",
+    "articleUrl": "",
+    "description": "",
+    "tags": [],
+    "entityType": "point",
+    "type": "village",
+    "position": {
+      "x": -34.125,
+      "y": 90.0625
+    },
+    "id": "9079d07e-edd6-4a59-95cc-2d99afc603eb"
+  },
+  {
+    "name": "Test",
+    "tags": [],
+    "entityType": "point",
+    "position": {
+      "x": -29.5,
+      "y": 126.25
+    },
+    "id": "1669c4e7-f8ff-42b4-9c29-582a97abb454"
   }
 ]

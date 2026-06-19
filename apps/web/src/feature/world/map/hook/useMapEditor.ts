@@ -23,7 +23,7 @@ export function useMapEditor() {
           y: e.latlng.lng,
         });
       }
-      if (mode === "edit") {
+      if (mode === "edit" || mode === "idle") {
         setSelectedEntity(null);
       }
     };
