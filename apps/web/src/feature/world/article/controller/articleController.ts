@@ -1,5 +1,4 @@
 import { ArticleApi } from "../../../../api/article-api";
-import { useArticleStore } from "../state/articleStore";
 
 export const extractFirstImage = (content: string): string | undefined => {
   const match = content.match(/!\[\[([^|\]]+)(?:\|\d+)?\]\]/);
@@ -29,7 +28,7 @@ export const resolveArticleFromMap = (
   return null;
 };
 
-export const loadArticle = async (vaultId: string, path: string) => {
-  const data = await ArticleApi.getArticle(vaultId, path);
+export const loadArticle = async (path: string) => {
+  const data = await ArticleApi.getArticle(path);
   return data;
 };

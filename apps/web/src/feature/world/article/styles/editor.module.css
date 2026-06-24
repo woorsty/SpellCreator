@@ -1,0 +1,30 @@
+.milkdown {
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.milkdown .ProseMirror {
+  min-height: 70vh;
+  outline: none;
+}
+
+.milkdown .ProseMirror h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.milkdown .ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.milkdown .ProseMirror table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.milkdown .ProseMirror th,
+.milkdown .ProseMirror td {
+  border: 1px solid var(--fallback-bc, #666);
+  padding: 0.5rem;
+}

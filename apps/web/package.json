@@ -17,6 +17,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@milkdown/core": "^7.21.2",
+    "@milkdown/crepe": "^7.21.2",
+    "@milkdown/kit": "^7.21.2",
+    "@milkdown/react": "^7.21.2",
     "@repo/domain": "workspace:*",
     "@repo/i18n": "workspace:*",
     "@tailwindcss/vite": "^4.2.4",

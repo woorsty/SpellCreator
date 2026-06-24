@@ -833,4 +833,8 @@ export const de = {
       create_article: "Artikel erstellen",
     },
   },
+  article: {
+    name: "Name",
+    content: "Inhalt",
+  },
 } as const;

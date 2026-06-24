@@ -17,15 +17,33 @@ export const ArticleApi = {
     return data;
   },
 
-  async getArticle(vaultId: string, path: string) {
-    const res = await fetch(`${API_BASE}/article/${vaultId}/${path}`);
+  async getArticle(path: string) {
+    const res = await fetch(`${API_BASE}${path}`);
     if (res.status === 404) {
+      console.log("Article not found", `${API_BASE}${path}`);
       return null;
     }
     return (await res.json()) as Article;
   },
 
   getAssetUrl(path: string) {
-    return `${API_BASE}/article/${path}`;
+    return `${API_BASE}${path}`;
+  },
+
+  async saveArticle(article: Article) {
+    const res = await fetch(`${API_BASE}/article`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(article),
+    });
+
+    console.log("Put:", article);
+    if (!res.ok) {
+      throw new Error("Failed to create article");
+    }
+
+    return res.json();
   },
 };

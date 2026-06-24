@@ -25,13 +25,10 @@ export const WorldEntityPopup: React.FC<Props> = ({ entity }) => {
   const [article, setArticle] = useState<Article | null>(null);
 
   useEffect(() => {
-    loadArticle("places", entity.name + ".md").then((value) => {
-      console.log("artikel loaded:", value);
+    loadArticle("/article/places/" + entity.name).then((value) => {
       setArticle(value);
     });
   }, [loadArticle]);
-
-  console.log(entity.name, article);
 
   if (article) {
     return (

@@ -7,6 +7,7 @@ import {
 import styles from "../styles/article.module.css";
 import { useArticleStore } from "../state/articleStore";
 import { ArticleApi } from "../../../../api/article-api";
+import { getNameOfArticle } from "../utls/getNameOfArticle";
 
 type ArticlePreviewProps = {
   article: Article;
@@ -24,10 +25,11 @@ export const ArticlePreview: React.FC<ArticlePreviewProps> = ({
   }
 
   const imagePath = extractFirstImage(article.content);
+  const name = getNameOfArticle(article);
 
   return (
     <div className={styles.preview}>
-      <h3>{article.path.split(".md")[0]}</h3>
+      <h3>{name}</h3>
 
       {imagePath && (
         <img

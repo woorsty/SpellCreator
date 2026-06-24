@@ -4,7 +4,8 @@ import type { Request, Response } from "express";
 import matter from "gray-matter";
 import { Article, TreeNode } from "@repo/domain";
 
-const ARTICLES_PATH = "data/articles";
+const ARTICLES_PATH = "data/article";
+const DATA_PATH = "data";
 
 export class ArticleController {
   private getVaultNames = () => {
@@ -83,7 +84,9 @@ export class ArticleController {
         }
 
         return {
-          name: entry.name,
+          name: entry.name.endsWith(".md")
+            ? entry.name.split(".")[0]
+            : entry.name,
           type: "file",
           path: fullPath.split(path.sep).slice(2).join(path.sep),
         };
@@ -99,24 +102,13 @@ export class ArticleController {
   };
 
   public getArticle = async (req: Request, res: Response) => {
-    const vaultId = req.params.vaultId as string;
     const relativePath = Array.isArray(req.params.path)
       ? req.params.path.join("/")
       : req.params.path;
 
-    const vaultRoot = this.getVaultPath(vaultId);
-    if (!vaultRoot) {
-      return res.status(404).json({ error: "Vault not found" });
-    }
-
-    let resolved = path.resolve(vaultRoot, relativePath);
-
-    if (!resolved.includes(".")) {
+    let resolved = `${ARTICLES_PATH}/${relativePath}`;
+    if (!relativePath.includes(".")) {
       resolved += ".md";
-    }
-
-    if (!resolved.startsWith(path.resolve(vaultRoot))) {
-      return res.status(403).json({ error: "Forbidden" });
     }
 
     const ext = path.extname(resolved).toLowerCase();
@@ -127,12 +119,12 @@ export class ArticleController {
     }
 
     if (!fs.existsSync(resolved)) {
-      res.status(404);
+      console.log(`${resolved} not found`);
+      res.status(404).json({ error: `file ${resolved} found` });
       return;
     }
 
     const raw = fs.readFileSync(resolved, "utf-8");
-
     const parsed = matter(raw);
 
     res.json({
@@ -186,7 +178,8 @@ export class ArticleController {
     const article = req.body as Article;
 
     const data = this.createArticleFromJson(article);
-    fs.writeFileSync(ARTICLES_PATH + "/" + article.path, data);
+    console.log("art", article);
+    fs.writeFileSync(DATA_PATH + "/" + article.path + ".md", data);
 
     res.json({ ok: true });
   };
