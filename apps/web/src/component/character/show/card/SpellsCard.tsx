@@ -1,8 +1,8 @@
 import React from "react";
 import { CharacterViewProps } from "./CharacterViewProps";
 import { A } from "../../../ui/A";
-import { serverUrl } from "@repo/domain";
 import { Card } from "../../../ui/Card";
+import { API_BASE } from "../../../../api/base";
 
 export const SpellsCard: React.FC<CharacterViewProps> = ({
   character,
@@ -30,7 +30,7 @@ export const SpellsCard: React.FC<CharacterViewProps> = ({
               <td>{s.level}</td>
               <td>
                 <A
-                  href={serverUrl + `spell/${s.name}`}
+                  href={`${API_BASE}/spell/${s.name}`}
                   target="_blank"
                   rel="noreferrer"
                 >

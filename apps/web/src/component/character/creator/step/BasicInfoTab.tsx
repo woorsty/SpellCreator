@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Translator } from "@repo/i18n";
-import { fetchUrl } from "@repo/domain";
 import { Card } from "../../../ui/Card";
 import { Label } from "../../../ui/Label";
 import { Button } from "../../../ui/Button";
@@ -18,6 +17,7 @@ import {
 import { LabeledNumberInput } from "../../../ui/LabeledNumberInput";
 import { LabeledInput } from "../../../ui/LabeledInput";
 import { StepProps } from "../../../../feature/character/characterCreator.types";
+import { API_BASE } from "../../../../api/base";
 
 export function BasicInfoTab({ character, updateField }: StepProps) {
   const [classes, setClasses] = useState<CharacterClass[]>([]);
@@ -55,8 +55,8 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
 
   useEffect(() => {
     Promise.all([
-      fetchUrl("/api/classes").then((res) => res.json()),
-      fetchUrl("/api/backgrounds").then((res) => res.json()),
+      fetch(`${API_BASE}/api/classes`).then((res) => res.json()),
+      fetch(`${API_BASE}/api/backgrounds`).then((res) => res.json()),
     ])
       .then(([classesData, backgroundsData]) => {
         setClasses(classesData);

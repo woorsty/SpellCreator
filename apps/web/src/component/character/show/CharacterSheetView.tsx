@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router";
 import { Translator } from "@repo/i18n";
-import { CharacterService, CharacterSheet, fetchUrl } from "@repo/domain";
+import { CharacterService, CharacterSheet } from "@repo/domain";
 import "./CharacterSheetView.css";
 import { BasicInfoCard } from "./card/BasicInfoCard";
 import { LevelCard } from "./card/LevelCard";
@@ -16,9 +16,9 @@ import { SpellSlotsCard } from "./card/SpellSlotsCard";
 import { CoinsCard } from "./card/CoinsCard";
 import { SpellsCard } from "./card/SpellsCard";
 import { TextArea } from "../../ui/TextArea";
-import { EquipmentCard } from "./card/EquipmentCard";
 import { FeatureList } from "./ui/FeatureList";
 import { Card } from "../../ui/Card";
+import { API_BASE } from "../../../api/base";
 
 const initialState = {
   character: undefined,
@@ -51,7 +51,7 @@ export const CharacterSheetView: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchUrl(`/api/characters/${params.name}`)
+    fetch(`${API_BASE}/api/characters/${params.name}`)
       .then((res) => res.json())
       .then((characterData) => {
         dispatch({

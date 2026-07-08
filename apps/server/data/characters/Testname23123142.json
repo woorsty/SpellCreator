@@ -1,0 +1,311 @@
+{
+  "feats": [
+    {
+      "name": "test",
+      "text": ""
+    }
+  ],
+  "name": "Testname23123142",
+  "background": {
+    "id": "wayfarer",
+    "attributes": [
+      "dexternity",
+      "constition",
+      "wisdom"
+    ],
+    "feat": "lucky",
+    "skillProficiencies": [
+      "stealth",
+      "survival"
+    ],
+    "toolProficiencies": [],
+    "equipment": []
+  },
+  "size": "medium",
+  "characterClass": {
+    "id": "fighter",
+    "equipment": [],
+    "features": [],
+    "hitDice": 1,
+    "primaryAbility": [],
+    "proficiencies": {
+      "armor": [],
+      "skillNumber": 0,
+      "skills": [],
+      "weapons": []
+    },
+    "savingThrows": [],
+    "subclasses": []
+  },
+  "species": {
+    "id": "dragonborn",
+    "creature_type": "humanoid",
+    "size": [
+      "medium"
+    ],
+    "speed": 9,
+    "feats": [
+      {
+        "id": "breath_weapon"
+      },
+      {
+        "id": "damage_resistance"
+      },
+      {
+        "id": "darkvision"
+      },
+      {
+        "id": "draconic_flight"
+      }
+    ]
+  },
+  "subclass": null,
+  "level": 1,
+  "xp": 0,
+  "armorClass": 0,
+  "currentHitpoints": 0,
+  "temporaryHitpoints": 0,
+  "spentHitDice": 0,
+  "maxHitpoints": 0,
+  "hitDiceValue": 0,
+  "successDeathSaves": 0,
+  "failedDeathSaves": 0,
+  "proficiencyBonus": 2,
+  "attributes": {
+    "charisma": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "deception": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "intimidation": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "performance": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "persuasion": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        }
+      },
+      "modifier": 0,
+      "savingThrow": 0
+    },
+    "constitution": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {},
+      "modifier": 0,
+      "savingThrow": 0
+    },
+    "dexterity": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "acrobatics": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "sleightOfHand": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "stealth": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        }
+      },
+      "modifier": 0,
+      "savingThrow": 0
+    },
+    "intelligence": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "arcana": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "history": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "investigation": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "nature": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "religion": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        }
+      },
+      "modifier": 0,
+      "savingThrow": 0
+    },
+    "strength": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "athletics": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        }
+      },
+      "modifier": 0,
+      "savingThrow": 0
+    },
+    "wisdom": {
+      "proficiency": false,
+      "value": 10,
+      "skills": {
+        "animalHandling": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "insight": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "medicine": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "perception": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        },
+        "survival": {
+          "expertise": false,
+          "proficiency": false,
+          "modifier": 0
+        }
+      },
+      "modifier": 0,
+      "savingThrow": 0
+    }
+  },
+  "heroicInspiration": false,
+  "armorTraining": {
+    "light": false,
+    "heavy": true,
+    "medium": true,
+    "shield": false
+  },
+  "weaponTraining": {
+    "finesse": false,
+    "light": false,
+    "martial": false,
+    "simple": false
+  },
+  "toolProficiencies": [],
+  "initiative": 0,
+  "passivePerception": 10,
+  "attacks": [
+    {
+      "id": "77450b8d-9a5c-49b7-bd5e-fd06d7d2efbf",
+      "name": "test",
+      "attackBonus": 0,
+      "sg": 0,
+      "damage": "",
+      "damageType": "bludgeoning",
+      "notes": ""
+    }
+  ],
+  "spellSaveDC": 0,
+  "spellAttackBonus": 0,
+  "spellSlots": {
+    "total": [],
+    "used": {}
+  },
+  "preparedSpells": [
+    {
+      "level": "5",
+      "name": "Ansteckung",
+      "school": "necromancy",
+      "castingTime": "Aktion",
+      "range": "Berührung",
+      "duration": "7 Tage",
+      "concentration": false,
+      "ritual": false,
+      "components": {
+        "gestic": true,
+        "verbal": true,
+        "material": ""
+      },
+      "text": "Deine Berührung verursacht eine magische Ansteckung. Das Ziel muss einen Konstitutionsrettungswurf bestehen, oder es erleidet 11W8 nekrotischen Schaden und ist vergiftet. Wähle außerdem ein Attribut aus, wenn du den Zauber wirkst. Das vergiftete Ziel ist bei Rettungswürfen mit dem ausgewählten Attribut im Nachteil. Das Ziel muss den Rettungswurf am Ende jedes seiner Züge wiederholen, bis es insgesamt drei Erfolge oder drei Misserfolge hatte. Bei drei Erfolgen endet der Zauber bei dem Ziel. Bei drei Misserfolgen wirkt der Zauber sieben Tage lang auf das Ziel. Wann immer das vergiftete Ziel einen Effekt erhält, der den Zustand Vergiftet beenden würde, muss es einen Konstitutionsrettungswurf bestehen, oder der Zustand Vergiftet endet nicht.",
+      "characterClasses": [
+        "druid",
+        "cleric"
+      ],
+      "higherLevel": "",
+      "notes": ""
+    },
+    {
+      "level": "0",
+      "name": "Gehässiger Spott",
+      "school": "enchantment",
+      "castingTime": "Aktion",
+      "range": "18 Meter",
+      "duration": "Unmittelbar",
+      "concentration": false,
+      "ritual": false,
+      "components": {
+        "gestic": false,
+        "verbal": true,
+        "material": ""
+      },
+      "text": "Du entfesselst eine Reihe von Beleidigungen mit subtilen Verzauberungen auf eine Kreatur in Reichweite, die du hören oder sehen kannst. Das Ziel muss einen Weisheitsrettungswurf bestehen, oder es erleidet 1W6 psychischen Schaden und ist beim nächsten Angriffswurf vor dem Ende seines nächsten Zugs im Nachteil. ",
+      "characterClasses": [
+        "bard"
+      ],
+      "higherLevel": "Der Schaden wird um jeweils 1W6 erhöht, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
+      "notes": ""
+    }
+  ],
+  "appearance": "",
+  "story": "",
+  "alignment": "true_neutral",
+  "languages": [
+    "common"
+  ],
+  "equipment": [],
+  "attunedMagicItems": [
+    "",
+    "",
+    ""
+  ],
+  "coins": {
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "notes": ""
+}

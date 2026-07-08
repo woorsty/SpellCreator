@@ -4,7 +4,6 @@ import "@milkdown/crepe/theme/common/style.css";
 import "@milkdown/crepe/theme/frame-dark.css";
 
 import React from "react";
-import { Article } from "@repo/domain";
 
 type Props = {
   content: string;

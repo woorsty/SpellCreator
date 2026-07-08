@@ -33,8 +33,8 @@ export const renderToken = (
   if (token.startsWith("@@IMG:")) {
     const value = token.replace("@@IMG:", "").replace(/@@/g, "");
     const [src, size] = value.split("|");
-    const resolvedLink = `${linkIndex[src]}`;
-    console.log(src, resolvedLink, linkIndex);
+    const resolvedLink = `${linkIndex[src].replaceAll(" ", "%20")}`;
+    console.log("image resolved", src, resolvedLink, linkIndex);
 
     return (
       <img

@@ -2,7 +2,6 @@ import type { Request, Response } from "express";
 import { JsonFilePath } from "./invocationModel";
 import type { Invocation } from "./invocationModel";
 import path from "path";
-import { SpellController } from "../spell/spellControler";
 import { JsonService, MarkdownService } from "@repo/domain";
 
 export class InvocationController {

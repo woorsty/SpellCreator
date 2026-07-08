@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Translator } from "@repo/i18n";
-import { fetchUrl, Spell, SpellService } from "@repo/domain";
+import { Spell, SpellService } from "@repo/domain";
 import { Button } from "../../../ui/Button";
 import { Checkbox } from "../../../ui/Checkbox";
 import { Input } from "../../../ui/Input";
 import { SearchableSelect } from "../../../ui/SearchableSelect";
 import { StepProps } from "../../../../feature/character/characterCreator.types";
+import { API_BASE } from "../../../../api/base";
 
 export function SpellsTab({ character, updateField }: StepProps) {
   const [spellsData, setSpellsData] = useState<Spell[]>([]);
   const translator = new Translator("characterCreator.steps.spells");
 
   useEffect(() => {
-    fetchUrl("/api/spells")
+    fetch(`${API_BASE}/api/spells`)
       .then((res) => res.json())
       .then((spellsData) => {
         setSpellsData(spellsData);

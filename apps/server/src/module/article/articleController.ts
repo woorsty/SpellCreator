@@ -115,7 +115,7 @@ export class ArticleController {
     const imageExtensions = [".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"];
 
     if (imageExtensions.includes(ext)) {
-      return res.sendFile(resolved);
+      return res.sendFile(path.resolve(resolved));
     }
 
     if (!fs.existsSync(resolved)) {

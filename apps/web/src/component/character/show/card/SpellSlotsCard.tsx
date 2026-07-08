@@ -15,12 +15,17 @@ export const SpellSlotsCard: React.FC<CharacterViewProps> = ({
       <h2 className="section-title">{translator.translate(".title")}</h2>
       <div className="spellslots-grid">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => {
+          const totalSlots = character.spellSlots.total;
+          const usedSlots = character.spellSlots.used;
+
           const total =
-            character.spellSlots.total[character.level - 1][
-              `slot${level}` as keyof Spellslots
-            ] || 0;
-          const used =
-            character.spellSlots.used[`slot${level}` as keyof Spellslots] || 0;
+            (totalSlots &&
+              totalSlots.length > 0 &&
+              totalSlots[character.level - 1][
+                `slot${level}` as keyof Spellslots
+              ]) ||
+            0;
+          const used = usedSlots[`slot${level}` as keyof Spellslots] || 0;
           if (total === 0) return null;
 
           return (

@@ -27,7 +27,7 @@ export const ArticleApi = {
   },
 
   getAssetUrl(path: string) {
-    return `${API_BASE}${path}`;
+    return `${API_BASE}/article/${path}`;
   },
 
   async saveArticle(article: Article) {

@@ -1,10 +1,10 @@
-import { Polygon, Popup } from "react-leaflet";
+import { Polygon } from "react-leaflet";
 import React from "react";
 import { useMapStore } from "../../state/mapStore";
 import { useEditorStore } from "../../state/editorStore";
 import { WorldEntity } from "@repo/domain";
 import { WorldEntityService } from "../service/editorService";
-import { Button } from "../../../../../component/ui/Button";
+import { WorldEntityPopup } from "./WorldEntityPopup";
 
 export const PolygonsLayer = () => {
   const mode = useEditorStore((s) => s.mode);
@@ -28,23 +28,11 @@ export const PolygonsLayer = () => {
           }}
           eventHandlers={{
             click: (e) => {
-              setSelectedEntity(point);
+              setSelectedEntity(polygon);
             },
           }}
         >
-          <Popup key={polygon.id}>
-            <b>{polygon.name}</b>
-            <br />
-            {polygon.description}
-            {mode === "edit" && (
-              <Button
-                variant={"secondary"}
-                onClick={() => deleteEntity(polygon)}
-              >
-                🚮
-              </Button>
-            )}
-          </Popup>
+          <WorldEntityPopup entity={polygon} />
         </Polygon>
       ))}
     </>
