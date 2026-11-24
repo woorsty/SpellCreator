@@ -1,0 +1,79 @@
+{
+  "id": "9462e9a0-451f-45f3-90f3-d88c46bf4601",
+  "name": "Green Hag",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 82,
+  "maxHp": 82,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 14,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 3
+    },
+    {
+      "name": "deception",
+      "bonus": 4
+    },
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic",
+    "Sylvan"
+  ],
+  "challengeRating": "3",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
+    },
+    {
+      "name": "Illusory Appearance",
+      "description": "The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised."
+    },
+    {
+      "name": "Invisible Passage",
+      "description": "The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

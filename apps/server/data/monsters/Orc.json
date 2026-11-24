@@ -1,0 +1,62 @@
+{
+  "id": "b2e92c23-7b56-43c6-9ac8-314417a5faf5",
+  "name": "Orc",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 15,
+  "maxHp": 15,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 7,
+  "wisdom": 11,
+  "charisma": 10,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "intimidation",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Orc"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Greataxe",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage."
+    },
+    {
+      "name": "Javelin",
+      "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

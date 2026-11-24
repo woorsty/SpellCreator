@@ -1,0 +1,23 @@
+{
+  "id": "enc-1",
+  "name": "Test-Begegnung",
+  "combatants": [
+    {
+      "id": "enc-c-1",
+      "name": "Orc",
+      "type": "monster",
+      "initiative": 15,
+      "initiativeBonus": 2,
+      "hp": 20,
+      "maxHp": 20,
+      "tempHp": 0,
+      "armorClass": 13,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "senses": []
+    }
+  ],
+  "createdAt": "2026-11-24T01:21:38.293Z",
+  "updatedAt": "2026-11-24T01:21:38.293Z"
+}

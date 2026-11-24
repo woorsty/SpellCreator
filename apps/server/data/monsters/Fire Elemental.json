@@ -1,0 +1,72 @@
+{
+  "id": "d282868f-4d34-4cfc-8032-72a6be19823c",
+  "name": "Fire Elemental",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 102,
+  "maxHp": 102,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 17,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "languages": [
+    "Ignan"
+  ],
+  "challengeRating": "5",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The elemental makes two touch attacks."
+    },
+    {
+      "name": "Touch",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -10,7 +10,8 @@
     "emitDeclarationOnly": false,
     "noEmit": false,
     "skipLibCheck": true,
-    "lib": ["ES2021.String"]
+    "lib": ["ES2021.String"],
+    "resolveJsonModule": true
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules", "src/**/*.spec.ts"]

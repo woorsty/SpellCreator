@@ -1,0 +1,74 @@
+{
+  "id": "0e6b1721-33cc-4f6e-8b46-5cb9a35b5088",
+  "name": "Drider",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 123,
+  "maxHp": 123,
+  "tempHp": 0,
+  "armorClass": 19,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 12,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 5
+    },
+    {
+      "name": "stealth",
+      "bonus": 9
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Elvish",
+    "Undercommon"
+  ],
+  "challengeRating": "6",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The drider makes three attacks, either with its longsword or its longbow. It can replace one of those attacks with a bite attack."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage plus 9 (2d8) poison damage."
+    },
+    {
+      "name": "Longsword",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands."
+    },
+    {
+      "name": "Longbow",
+      "description": "Ranged Weapon Attack: +6 to hit, range 150/600 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) poison damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

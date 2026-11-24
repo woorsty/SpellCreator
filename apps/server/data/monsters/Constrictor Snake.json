@@ -1,0 +1,54 @@
+{
+  "id": "7b100fd1-940b-4365-b7f3-b5f4c2e84935",
+  "name": "Constrictor Snake",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Constrict",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 6 (1d8 + 2) bludgeoning damage, and the target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

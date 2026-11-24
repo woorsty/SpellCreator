@@ -1,0 +1,68 @@
+{
+  "id": "7abc0b09-61f5-4fae-9751-b43d86368960",
+  "name": "Brass Dragon Wyrmling",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 16,
+  "maxHp": 16,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 13,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Draconic"
+  ],
+  "challengeRating": "1",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage."
+    },
+    {
+      "name": "Breath Weapons (Recharge 5-6)",
+      "description": "The dragon uses one of the following breath weapons.\n**Fire Breath.** The dragon exhales fire in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.\n**Sleep Breath.** The dragon exhales sleep gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw or fall unconscious for 1 minute. This effect ends for a creature if the creature takes damage or someone uses an action to wake it."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

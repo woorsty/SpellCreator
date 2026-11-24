@@ -1,0 +1,63 @@
+{
+  "id": "9063032e-b503-4ef1-b4c5-a44a6918b409",
+  "name": "Giant Elk",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 42,
+  "maxHp": 42,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 7,
+  "wisdom": 14,
+  "charisma": 10,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant Elk",
+    "understands Common",
+    "Elvish",
+    "and Sylvan but can't speak"
+  ],
+  "challengeRating": "2",
+  "movementRate": 60,
+  "actions": [
+    {
+      "name": "Ram",
+      "description": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+    },
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one prone creature. Hit: 22 (4d8 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

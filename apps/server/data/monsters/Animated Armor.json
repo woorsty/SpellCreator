@@ -1,0 +1,66 @@
+{
+  "id": "b2faf590-04b6-4216-97e2-2904fbbf6daf",
+  "name": "Animated Armor",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 33,
+  "maxHp": 33,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 14,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -4,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 6"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison",
+    "psychic"
+  ],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [],
+  "challengeRating": "1",
+  "movementRate": 25,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The armor makes two melee attacks."
+    },
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

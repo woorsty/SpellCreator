@@ -1,0 +1,68 @@
+{
+  "id": "5a9e3a7f-5b37-44a0-8d04-a62ac3e10671",
+  "name": "Cult Fanatic",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 14,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 4
+    },
+    {
+      "name": "persuasion",
+      "bonus": 4
+    },
+    {
+      "name": "religion",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The fanatic makes two melee attacks."
+    },
+    {
+      "name": "Dagger",
+      "description": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 4 (1d4 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

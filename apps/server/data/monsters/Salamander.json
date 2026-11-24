@@ -1,0 +1,68 @@
+{
+  "id": "2ca362cb-66ff-4a2b-a454-ad2c56d76397",
+  "name": "Salamander",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 90,
+  "maxHp": 90,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 12,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [
+    "cold"
+  ],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Ignan"
+  ],
+  "challengeRating": "5",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The salamander makes two attacks: one with its spear and one with its tail."
+    },
+    {
+      "name": "Spear",
+      "description": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage plus 7 (2d6) fire damage, and the target is grappled (escape DC 14). Until this grapple ends, the target is restrained, the salamander can automatically hit the target with its tail, and the salamander can't make tail attacks against other targets."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "a9ead864-4c7f-4c0c-aa34-8337953e6ea9",
+  "name": "Wererat",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 33,
+  "maxHp": 33,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 8,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common (can't speak in rat form)"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack (Humanoid or Hybrid Form Only)",
+      "description": "The wererat makes two attacks, only one of which can be a bite."
+    },
+    {
+      "name": "Bite (Rat or Hybrid Form Only).",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy."
+    },
+    {
+      "name": "Shortsword (Humanoid or Hybrid Form Only)",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+      "description": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

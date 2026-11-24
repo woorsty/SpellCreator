@@ -1,0 +1,66 @@
+{
+  "id": "8e1508fe-6d8a-48b6-b8be-cd075d4022ca",
+  "name": "Pseudodragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 7,
+  "maxHp": 7,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 10,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "understands Common and Draconic but can't speak"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 15,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+    },
+    {
+      "name": "Sting",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the target falls unconscious for the same duration, or until it takes damage or another creature uses an action to shake it awake."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

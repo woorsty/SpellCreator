@@ -1,0 +1,63 @@
+{
+  "id": "0692b166-3ef4-40ca-81c8-f03a0a57f366",
+  "name": "Swarm of Rats",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 24,
+  "maxHp": 24,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 9,
+  "dexterity": 11,
+  "constitution": 9,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "savingThrowStrength": -1,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bites",
+      "description": "Melee Weapon Attack: +2 to hit, reach 0 ft., one target in the swarm's space. Hit: 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

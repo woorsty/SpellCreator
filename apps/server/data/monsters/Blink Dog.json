@@ -1,0 +1,65 @@
+{
+  "id": "ec252177-959c-49e0-898c-0509423beaaa",
+  "name": "Blink Dog",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 12,
+  "dexterity": 17,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Blink Dog",
+    "understands Sylvan but can't speak it"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage."
+    },
+    {
+      "name": "Teleport (Recharge 4-6)",
+      "description": "The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 ft. to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

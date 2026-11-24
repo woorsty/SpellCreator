@@ -1,0 +1,62 @@
+{
+  "id": "2f20b98c-667d-4853-90cd-fadab8fb6bd7",
+  "name": "Guardian Naga",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 4,
+  "hp": 127,
+  "maxHp": 127,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 19,
+  "charisma": 18,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 4,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 4,
+  "savingThrowCharisma": 4,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "languages": [
+    "Celestial",
+    "Common"
+  ],
+  "challengeRating": "10",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one."
+    },
+    {
+      "name": "Spit Poison",
+      "description": "Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

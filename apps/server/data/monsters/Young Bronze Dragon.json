@@ -1,0 +1,81 @@
+{
+  "id": "c0146ce8-c600-49c9-a5de-a33b54536ccc",
+  "name": "Young Bronze Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 142,
+  "maxHp": 142,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 19,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "insight",
+      "bonus": 4
+    },
+    {
+      "name": "perception",
+      "bonus": 7
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 17"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "lightning"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "8",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage."
+    },
+    {
+      "name": "Breath Weapons (Recharge 5-6)",
+      "description": "The dragon uses one of the following breath weapons.\n**Lightning Breath.** The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.\n**Repulsion Breath.** The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 15 Strength saving throw. On a failed save, the creature is pushed 40 feet away from the dragon."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

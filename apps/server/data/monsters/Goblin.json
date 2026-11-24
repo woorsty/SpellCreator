@@ -1,0 +1,62 @@
+{
+  "id": "0cd23f67-e78d-4625-b3a8-1ba02dd45d33",
+  "name": "Goblin",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 7,
+  "maxHp": 7,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 8,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 8,
+  "charisma": 8,
+  "savingThrowStrength": -1,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Goblin"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Scimitar",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
+    },
+    {
+      "name": "Shortbow",
+      "description": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

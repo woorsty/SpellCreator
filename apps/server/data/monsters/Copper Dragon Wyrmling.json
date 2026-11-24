@@ -1,0 +1,68 @@
+{
+  "id": "4726a851-c550-4909-976b-d54f02c8b259",
+  "name": "Copper Dragon Wyrmling",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 13,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "acid"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Draconic"
+  ],
+  "challengeRating": "1",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage."
+    },
+    {
+      "name": "Breath Weapons (Recharge 5-6)",
+      "description": "The dragon uses one of the following breath weapons.\n**Acid Breath.** The dragon exhales acid in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a successful one.\n**Slowing Breath.** The dragon exhales gas in a 1 5-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

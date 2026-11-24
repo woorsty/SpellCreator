@@ -1,0 +1,64 @@
+{
+  "id": "3758b361-c809-41c8-bd88-f522b3c351c2",
+  "name": "Giant Owl",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 19,
+  "maxHp": 19,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 8,
+  "wisdom": 13,
+  "charisma": 10,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 5
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant Owl",
+    "understands Common",
+    "Elvish",
+    "and Sylvan but can't speak"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 5,
+  "actions": [
+    {
+      "name": "Talons",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 8 (2d6 + 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "8c051c1e-ec01-499c-911f-8161c5798dc9",
+  "name": "Spider",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 1,
+  "maxHp": 1,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 2,
+  "dexterity": 14,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 2,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

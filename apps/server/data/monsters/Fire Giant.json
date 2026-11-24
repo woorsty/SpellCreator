@@ -1,0 +1,70 @@
+{
+  "id": "34404c44-2c43-4698-bd74-f42e618e0ffd",
+  "name": "Fire Giant",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 162,
+  "maxHp": 162,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 25,
+  "dexterity": 9,
+  "constitution": 23,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "savingThrowStrength": 7,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 6,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 11
+    },
+    {
+      "name": "perception",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 16"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant"
+  ],
+  "challengeRating": "9",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The giant makes two greatsword attacks."
+    },
+    {
+      "name": "Greatsword",
+      "description": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 28 (6d6 + 7) slashing damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +11 to hit, range 60/240 ft., one target. Hit: 29 (4d10 + 7) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

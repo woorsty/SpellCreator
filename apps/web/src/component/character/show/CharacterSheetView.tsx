@@ -15,7 +15,7 @@ import { BaseStatsCard } from "./card/BaseStatsCard";
 import { SpellSlotsCard } from "./card/SpellSlotsCard";
 import { CoinsCard } from "./card/CoinsCard";
 import { SpellsCard } from "./card/SpellsCard";
-import { TextArea } from "../../ui/TextArea";
+import { Textarea } from "../../ui/Textarea";
 import { FeatureList } from "./ui/FeatureList";
 import { Card } from "../../ui/Card";
 import { API_BASE } from "../../../api/base";
@@ -190,9 +190,9 @@ export const CharacterSheetView: React.FC = () => {
       </div>
       <Card>
         <h3>{translator.translate(".notes")}</h3>
-        <TextArea
+        <Textarea
           className="w-full h-100"
-          onChange={(e) => updateCharacter("notes", e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => updateCharacter("notes", e.target.value)}
           value={character.notes}
         />
       </Card>

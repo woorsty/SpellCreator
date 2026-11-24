@@ -1,0 +1,58 @@
+{
+  "id": "dbe26a87-8b22-4a9f-8236-4418f0b7fbd0",
+  "name": "Remorhaz",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 195,
+  "maxHp": 195,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 24,
+  "dexterity": 13,
+  "constitution": 21,
+  "intelligence": 4,
+  "wisdom": 10,
+  "charisma": 5,
+  "savingThrowStrength": 7,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -3,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Bebenserfassung 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold",
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "11",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 40 (6d10 + 7) piercing damage plus 10 (3d6) fire damage. If the target is a creature, it is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the remorhaz can't bite another target."
+    },
+    {
+      "name": "Swallow",
+      "description": "The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 (6d6) acid damage at the start of each of the remorhaz's turns.\nIf the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

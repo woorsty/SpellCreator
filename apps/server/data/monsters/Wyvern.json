@@ -1,0 +1,67 @@
+{
+  "id": "e3deb179-be7f-4da4-b060-077fd1852266",
+  "name": "Wyvern",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 110,
+  "maxHp": 110,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 16,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 6,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -3,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "6",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The wyvern makes two attacks: one with its bite and one with its stinger. While flying, it can use its claws in place of one other attack."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 11 (2d6 + 4) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
+    },
+    {
+      "name": "Stinger",
+      "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 11 (2d6 + 4) piercing damage. The target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

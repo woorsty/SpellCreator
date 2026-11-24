@@ -1,0 +1,54 @@
+{
+  "id": "feb46cc2-f674-47d3-981d-c6e93cf79996",
+  "name": "Vulture",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 5,
+  "maxHp": 5,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 7,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Beak",
+      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

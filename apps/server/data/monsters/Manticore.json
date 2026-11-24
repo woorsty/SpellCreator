@@ -1,0 +1,62 @@
+{
+  "id": "480377ed-80c3-4985-9a41-0200bc9df265",
+  "name": "Manticore",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 68,
+  "maxHp": 68,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 17,
+  "dexterity": 16,
+  "constitution": 17,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 8,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "3",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The manticore makes three attacks: one with its bite and two with its claws or three with its tail spikes."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+    },
+    {
+      "name": "Tail Spike",
+      "description": "Ranged Weapon Attack: +5 to hit, range 100/200 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

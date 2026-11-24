@@ -1,0 +1,69 @@
+{
+  "id": "fa815edc-f491-4e3d-84ec-972bfa62e343",
+  "name": "Sahuagin",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 12,
+  "wisdom": 13,
+  "charisma": 9,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Sahuagin"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The sahuagin makes two melee attacks: one with its bite and one with its claws or spear."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) slashing damage."
+    },
+    {
+      "name": "Spear",
+      "description": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

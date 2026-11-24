@@ -1,0 +1,63 @@
+{
+  "id": "28b8f738-7def-49ff-bd62-fc0662db07fa",
+  "name": "Swarm of Quippers",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 28,
+  "maxHp": 28,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 16,
+  "constitution": 9,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 2,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "languages": [],
+  "challengeRating": "1",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bites",
+      "description": "Melee Weapon Attack: +5 to hit, reach 0 ft., one creature in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

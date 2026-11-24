@@ -1,0 +1,73 @@
+{
+  "id": "f371d154-5f57-4077-9da9-0cff66de3e29",
+  "name": "Specter",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 1,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "savingThrowStrength": -5,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "necrotic",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "languages": [
+    "understands all languages it knew in life but can't speak"
+  ],
+  "challengeRating": "1",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Life Drain",
+      "description": "Melee Spell Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) necrotic damage. The target must succeed on a DC 10 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

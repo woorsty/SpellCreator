@@ -1,0 +1,54 @@
+{
+  "id": "fcde7fec-f89e-4007-8ecf-b3be90232fd8",
+  "name": "Shrieker",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -5,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 5,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 1,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "savingThrowStrength": -5,
+  "savingThrowDexterity": -5,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -4,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 6"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "blinded",
+    "deafened",
+    "frightened"
+  ],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 0,
+  "actions": [
+    {
+      "name": "Shriek",
+      "description": "When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward"
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

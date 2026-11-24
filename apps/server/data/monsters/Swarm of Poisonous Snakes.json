@@ -1,0 +1,63 @@
+{
+  "id": "c9928456-7f1b-4dc1-b8db-714b49a63e2c",
+  "name": "Swarm of Poisonous Snakes",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 4,
+  "hp": 36,
+  "maxHp": 36,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 8,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "savingThrowStrength": -1,
+  "savingThrowDexterity": 4,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "languages": [],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bites",
+      "description": "Melee Weapon Attack: +6 to hit, reach 0 ft., one creature in the swarm's space. Hit: 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer. The target must make a DC 10 Constitution saving throw, taking 14 (4d6) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

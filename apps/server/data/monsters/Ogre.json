@@ -1,0 +1,57 @@
+{
+  "id": "51bb6cc3-c4fa-4027-acb2-617147326eb5",
+  "name": "Ogre",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 59,
+  "maxHp": 59,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 8,
+  "constitution": 16,
+  "intelligence": 5,
+  "wisdom": 7,
+  "charisma": 7,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -3,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Giant"
+  ],
+  "challengeRating": "2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Greatclub",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage."
+    },
+    {
+      "name": "Javelin",
+      "description": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "e2847368-9caf-438b-9a38-03c73c47fcc1",
+  "name": "Testkampf",
+  "status": "preparing",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [
+    {
+      "id": "c-Target-1795481736207",
+      "name": "Target",
+      "type": "npc",
+      "initiative": 10,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "senses": [],
+      "turnOrder": 1
+    }
+  ],
+  "createdAt": "2026-11-24T00:55:36.206Z",
+  "updatedAt": "2026-11-24T00:55:36.207Z"
+}

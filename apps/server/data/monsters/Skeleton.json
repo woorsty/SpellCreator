@@ -1,0 +1,63 @@
+{
+  "id": "c6f9ec39-7106-4bc9-917a-964db8719fc6",
+  "name": "Skeleton",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 8,
+  "charisma": 5,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [
+    "bludgeoning"
+  ],
+  "damageResistances": [
+    "poison"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages it knew in life but can't speak"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Shortbow",
+      "description": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

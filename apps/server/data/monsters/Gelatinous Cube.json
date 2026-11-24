@@ -1,0 +1,61 @@
+{
+  "id": "e908bb4c-94ed-4a1d-8385-25ce0903861d",
+  "name": "Gelatinous Cube",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -4,
+  "hp": 84,
+  "maxHp": 84,
+  "tempHp": 0,
+  "armorClass": 6,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 14,
+  "dexterity": 3,
+  "constitution": 20,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": -4,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "prone"
+  ],
+  "languages": [],
+  "challengeRating": "2",
+  "movementRate": 15,
+  "actions": [
+    {
+      "name": "Pseudopod",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) acid damage."
+    },
+    {
+      "name": "Engulf",
+      "description": "The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.\nOn a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.\nOn a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.\nAn engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,58 @@
+{
+  "id": "474cdba9-4d35-4e1b-aa21-91a6213b2243",
+  "name": "Giant Badger",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The badger makes two attacks: one with its bite and one with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

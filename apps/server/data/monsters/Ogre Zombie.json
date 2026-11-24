@@ -1,0 +1,56 @@
+{
+  "id": "34332e9d-5ecb-44bb-ae60-72c95775ffe2",
+  "name": "Ogre Zombie",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -2,
+  "hp": 85,
+  "maxHp": 85,
+  "tempHp": 0,
+  "armorClass": 8,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 6,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "understands Common and Giant but can't speak"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Morningstar",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

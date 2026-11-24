@@ -1,0 +1,63 @@
+{
+  "id": "86e373c0-b588-4f50-a88a-18a402a847e6",
+  "name": "Minotaur Skeleton",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 67,
+  "maxHp": 67,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 11,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 8,
+  "charisma": 5,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [
+    "bludgeoning"
+  ],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "languages": [
+    "understands Abyssal but can't speak"
+  ],
+  "challengeRating": "2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Greataxe",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage."
+    },
+    {
+      "name": "Gore",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

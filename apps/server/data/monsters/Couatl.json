@@ -1,0 +1,67 @@
+{
+  "id": "d3a284f3-b4f5-4581-8a7a-ff6c7b6e5378",
+  "name": "Couatl",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 5,
+  "hp": 97,
+  "maxHp": 97,
+  "tempHp": 0,
+  "armorClass": 19,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 20,
+  "constitution": 17,
+  "intelligence": 18,
+  "wisdom": 20,
+  "charisma": 18,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 5,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 5,
+  "savingThrowCharisma": 4,
+  "skills": [],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "radiant"
+  ],
+  "damageImmunities": [
+    "psychic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "all",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one creature. Hit: 8 (1d6 + 5) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 24 hours. Until this poison ends, the target is unconscious. Another creature can use an action to shake the target awake."
+    },
+    {
+      "name": "Constrict",
+      "description": "Melee Weapon Attack: +6 to hit, reach 10 ft., one Medium or smaller creature. Hit: 10 (2d6 + 3) bludgeoning damage, and the target is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the couatl can't constrict another target."
+    },
+    {
+      "name": "Change Shape",
+      "description": "The couatl magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the couatl's choice).\nIn a new form, the couatl retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and other actions are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks. If the new form has a bite attack, the couatl can use its bite in that form."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

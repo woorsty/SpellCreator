@@ -1,0 +1,12 @@
+{
+  "id": "2d6d35d8-bdd7-49cb-a35c-9d89b0b04528",
+  "name": "Testkampf",
+  "status": "ended",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [],
+  "createdAt": "2026-11-23T22:43:22.058Z",
+  "updatedAt": "2026-11-23T22:43:22.059Z",
+  "startedAt": "2026-11-23T22:43:22.058Z",
+  "endedAt": "2026-11-23T22:43:22.059Z"
+}

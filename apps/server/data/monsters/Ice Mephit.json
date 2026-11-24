@@ -1,0 +1,78 @@
+{
+  "id": "cf40fa1a-0d83-4afa-90f2-473ec1c86563",
+  "name": "Ice Mephit",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 21,
+  "maxHp": 21,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 7,
+  "dexterity": 13,
+  "constitution": 10,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 12,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [
+    "bludgeoning",
+    "fire"
+  ],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Aquan",
+    "Auran"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) cold damage."
+    },
+    {
+      "name": "Frost Breath (Recharge 6)",
+      "description": "The mephit exhales a 15-foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one."
+    },
+    {
+      "name": "Variant: Summon Mephits (1/Day)",
+      "description": "The mephit has a 25 percent chance of summoning 1d4 mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

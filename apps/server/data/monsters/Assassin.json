@@ -1,0 +1,78 @@
+{
+  "id": "b9d46acc-44ff-41c2-a2c8-aea748665a60",
+  "name": "Assassin",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 78,
+  "maxHp": 78,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 13,
+  "wisdom": 11,
+  "charisma": 10,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "acrobatics",
+      "bonus": 6
+    },
+    {
+      "name": "deception",
+      "bonus": 3
+    },
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 9
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "poison"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Thieves' cant plus any two languages"
+  ],
+  "challengeRating": "8",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The assassin makes two shortsword attacks."
+    },
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+    },
+    {
+      "name": "Light Crossbow",
+      "description": "Ranged Weapon Attack: +6 to hit, range 80/320 ft., one target. Hit: 7 (1d8 + 3) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

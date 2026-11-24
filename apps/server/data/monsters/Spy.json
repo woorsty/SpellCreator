@@ -1,0 +1,84 @@
+{
+  "id": "cbe1039c-bce0-4655-8fb2-18a32f5a96d5",
+  "name": "Spy",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 27,
+  "maxHp": 27,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 16,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 5
+    },
+    {
+      "name": "insight",
+      "bonus": 4
+    },
+    {
+      "name": "investigation",
+      "bonus": 5
+    },
+    {
+      "name": "perception",
+      "bonus": 6
+    },
+    {
+      "name": "persuasion",
+      "bonus": 5
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 16"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any two languages"
+  ],
+  "challengeRating": "1",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The spy makes two melee attacks."
+    },
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Hand Crossbow",
+      "description": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

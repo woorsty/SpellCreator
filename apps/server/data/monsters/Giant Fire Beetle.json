@@ -1,0 +1,50 @@
+{
+  "id": "256d7239-29b2-4baa-aa9c-ccd47077142a",
+  "name": "Giant Fire Beetle",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 4,
+  "maxHp": 4,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 8,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 3,
+  "savingThrowStrength": -1,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

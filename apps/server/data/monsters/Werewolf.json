@@ -1,0 +1,72 @@
+{
+  "id": "265d2318-6fe5-4fb2-8054-17be624956d2",
+  "name": "Werewolf",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 58,
+  "maxHp": 58,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common (can't speak in wolf form)"
+  ],
+  "challengeRating": "3",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack (Humanoid or Hybrid Form Only)",
+      "description": "The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form)."
+    },
+    {
+      "name": "Bite (Wolf or Hybrid Form Only)",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with werewolf lycanthropy."
+    },
+    {
+      "name": "Claws (Hybrid Form Only)",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (2d4 + 2) slashing damage."
+    },
+    {
+      "name": "Spear (Humanoid Form Only)",
+      "description": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "654d517a-b745-41f4-b601-cf8e865d929a",
+  "name": "Archmage",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 99,
+  "maxHp": 99,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 20,
+  "wisdom": 15,
+  "charisma": 16,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 5,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 13
+    },
+    {
+      "name": "history",
+      "bonus": 13
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "damage from spells; non magical bludgeoning",
+    "piercing",
+    "and slashing (from stoneskin)"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any six languages"
+  ],
+  "challengeRating": "12",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Dagger",
+      "description": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

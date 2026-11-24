@@ -176,10 +176,16 @@ export class ArticleController {
 
   public write = (req: Request, res: Response) => {
     const article = req.body as Article;
+    console.log("Create Article", article);
 
     const data = this.createArticleFromJson(article);
-    console.log("art", article);
-    fs.writeFileSync(DATA_PATH + "/" + article.path + ".md", data);
+    const articlePath = path.join(DATA_PATH, article.path + ".md");
+
+    if (!fs.existsSync(articlePath)) {
+      fs.mkdirSync(path.dirname(articlePath), { recursive: true });
+    }
+
+    fs.writeFileSync(articlePath, data);
 
     res.json({ ok: true });
   };

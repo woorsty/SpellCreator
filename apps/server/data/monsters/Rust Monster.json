@@ -1,0 +1,54 @@
+{
+  "id": "f07f2bfa-9404-4d26-b295-9142aacfa525",
+  "name": "Rust Monster",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 27,
+  "maxHp": 27,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 6,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) piercing damage."
+    },
+    {
+      "name": "Antennae",
+      "description": "The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a DC 11 Dexterity saving throw to avoid the rust monster's touch.\nIf the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

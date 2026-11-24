@@ -1,0 +1,55 @@
+{
+  "id": "065d7a83-7e9b-41be-aced-378dbac5ba00",
+  "name": "Phase Spider",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 32,
+  "maxHp": 32,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 6,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "3",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 18 (4d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

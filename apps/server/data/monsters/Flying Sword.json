@@ -1,0 +1,61 @@
+{
+  "id": "b77f04ff-5bd4-4295-9ca9-0178333c70cb",
+  "name": "Flying Sword",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 17,
+  "maxHp": 17,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 12,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 5,
+  "charisma": 1,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -3,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 7"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison",
+    "psychic"
+  ],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Longsword",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

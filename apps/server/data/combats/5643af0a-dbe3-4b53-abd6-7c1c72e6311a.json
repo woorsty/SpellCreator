@@ -1,0 +1,10 @@
+{
+  "id": "5643af0a-dbe3-4b53-abd6-7c1c72e6311a",
+  "name": "Testkampf",
+  "status": "preparing",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [],
+  "createdAt": "2026-11-23T01:24:21.634Z",
+  "updatedAt": "2026-11-23T01:24:21.634Z"
+}

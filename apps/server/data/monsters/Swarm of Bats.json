@@ -1,0 +1,63 @@
+{
+  "id": "9c102ae7-eac6-46dd-8107-367ce9b177c1",
+  "name": "Swarm of Bats",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 5,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "savingThrowStrength": -3,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bites",
+      "description": "Melee Weapon Attack: +4 to hit, reach 0 ft., one creature in the swarm's space. Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

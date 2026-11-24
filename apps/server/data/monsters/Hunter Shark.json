@@ -1,0 +1,55 @@
+{
+  "id": "225f0e04-d919-4d2d-999d-a8252eb99a54",
+  "name": "Hunter Shark",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 45,
+  "maxHp": 45,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 4,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

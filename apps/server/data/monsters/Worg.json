@@ -1,0 +1,58 @@
+{
+  "id": "2c8e9f6f-2c2b-4a4e-8801-ea6ca99b1c87",
+  "name": "Worg",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 26,
+  "maxHp": 26,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 7,
+  "wisdom": 11,
+  "charisma": 8,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Goblin",
+    "Worg"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

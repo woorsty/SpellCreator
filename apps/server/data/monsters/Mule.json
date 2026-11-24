@@ -1,0 +1,49 @@
+{
+  "id": "d94ac654-9bde-4466-ac3f-461444ea705f",
+  "name": "Mule",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 11,
+  "maxHp": 11,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 14,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/8",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

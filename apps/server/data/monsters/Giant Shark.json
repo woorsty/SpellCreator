@@ -1,0 +1,55 @@
+{
+  "id": "6629bcec-73a0-48db-bfc0-485e430e9be1",
+  "name": "Giant Shark",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 126,
+  "maxHp": 126,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 11,
+  "constitution": 21,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 5,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "5",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 22 (3d10 + 6) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

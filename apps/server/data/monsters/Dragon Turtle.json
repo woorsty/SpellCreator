@@ -1,0 +1,71 @@
+{
+  "id": "b8e44a1f-1e65-4000-80e9-973329e8781e",
+  "name": "Dragon Turtle",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 341,
+  "maxHp": 341,
+  "tempHp": 0,
+  "armorClass": 20,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 25,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 12,
+  "savingThrowStrength": 7,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "fire"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Aquan",
+    "Draconic"
+  ],
+  "challengeRating": "17",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon turtle makes three attacks: one with its bite and two with its claws. It can make one tail attack in place of its two claw attacks."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 26 (3d12 + 7) piercing damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 16 (2d8 + 7) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 26 (3d12 + 7) bludgeoning damage. If the target is a creature, it must succeed on a DC 20 Strength saving throw or be pushed up to 10 feet away from the dragon turtle and knocked prone."
+    },
+    {
+      "name": "Steam Breath (Recharge 5-6)",
+      "description": "The dragon turtle exhales scalding steam in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 52 (15d6) fire damage on a failed save, or half as much damage on a successful one. Being underwater doesn't grant resistance against this damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

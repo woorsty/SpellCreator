@@ -1,0 +1,63 @@
+{
+  "id": "ac79aa49-e9dd-4d68-9270-37a30e7aaeeb",
+  "name": "Giant Octopus",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 52,
+  "maxHp": 52,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 17,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 4,
+  "wisdom": 10,
+  "charisma": 4,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -3,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Tentacles",
+      "description": "Melee Weapon Attack: +5 to hit, reach 15 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage. If the target is a creature, it is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the octopus can't use its tentacles on another target."
+    },
+    {
+      "name": "Ink Cloud (Recharges after a Short or Long Rest)",
+      "description": "A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

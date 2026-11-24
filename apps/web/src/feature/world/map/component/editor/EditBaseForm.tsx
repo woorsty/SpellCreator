@@ -1,7 +1,7 @@
 import { MapEntity, WorldEntityBase } from "@repo/domain";
 import React, { useState } from "react";
 import { Checkbox } from "../../../../../component/ui/Checkbox";
-import { TextArea } from "../../../../../component/ui/TextArea";
+import { Textarea } from "../../../../../component/ui/Textarea";
 import { Input } from "../../../../../component/ui/Input";
 import { NumberInput } from "../../../../../component/ui/NumberInput";
 import { Button } from "../../../../../component/ui/Button";

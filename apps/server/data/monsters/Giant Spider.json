@@ -1,0 +1,60 @@
+{
+  "id": "27e4cd7b-0406-45fa-acd8-2c2882a1111d",
+  "name": "Giant Spider",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 26,
+  "maxHp": 26,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 14,
+  "dexterity": 16,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 4,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 7
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
+    },
+    {
+      "name": "Web (Recharge 5-6)",
+      "description": "Ranged Weapon Attack: +5 to hit, range 30/60 ft., one creature. Hit: The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

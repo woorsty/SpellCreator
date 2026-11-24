@@ -1,0 +1,78 @@
+{
+  "id": "126eadb5-1469-448d-8584-1e81d93fe77d",
+  "name": "Oni",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 110,
+  "maxHp": 110,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 14,
+  "wisdom": 12,
+  "charisma": 15,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 5
+    },
+    {
+      "name": "deception",
+      "bonus": 8
+    },
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Giant"
+  ],
+  "challengeRating": "7",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The oni makes two attacks, either with its claws or its glaive."
+    },
+    {
+      "name": "Claw (Oni Form Only)",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage."
+    },
+    {
+      "name": "Glaive",
+      "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) slashing damage, or 9 (1d10 + 4) slashing damage in Small or Medium form."
+    },
+    {
+      "name": "Change Shape",
+      "description": "The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

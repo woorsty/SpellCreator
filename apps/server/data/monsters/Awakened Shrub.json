@@ -1,0 +1,55 @@
+{
+  "id": "de57a762-afc9-47bb-a165-1d0212b04590",
+  "name": "Awakened Shrub",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 10,
+  "maxHp": 10,
+  "tempHp": 0,
+  "armorClass": 9,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 3,
+  "dexterity": 8,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 6,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [
+    "fire"
+  ],
+  "damageResistances": [
+    "piercing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "one language known by its creator"
+  ],
+  "challengeRating": "0",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Rake",
+      "description": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

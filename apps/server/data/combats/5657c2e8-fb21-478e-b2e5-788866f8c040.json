@@ -1,0 +1,41 @@
+{
+  "id": "5657c2e8-fb21-478e-b2e5-788866f8c040",
+  "name": "Testkampf",
+  "status": "preparing",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [
+    {
+      "id": "c-Orc-1795473802049",
+      "name": "Orc",
+      "type": "monster",
+      "initiative": 20,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "turnOrder": 2
+    },
+    {
+      "id": "c-Gandalf-1795473802048",
+      "name": "Gandalf",
+      "type": "player",
+      "initiative": 15,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "turnOrder": 1
+    }
+  ],
+  "createdAt": "2026-11-23T22:43:22.047Z",
+  "updatedAt": "2026-11-23T22:43:22.049Z"
+}

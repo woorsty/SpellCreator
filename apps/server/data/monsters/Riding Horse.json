@@ -1,0 +1,49 @@
+{
+  "id": "ffa25105-e47b-4fc0-a470-a6e702a50d10",
+  "name": "Riding Horse",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 7,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 60,
+  "actions": [
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (2d4 + 3) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

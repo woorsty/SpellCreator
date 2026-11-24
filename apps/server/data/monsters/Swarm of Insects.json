@@ -1,0 +1,63 @@
+{
+  "id": "53084f23-dbad-42bf-8459-ed4c155059dc",
+  "name": "Swarm of Insects",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 3,
+  "dexterity": 13,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 1,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "languages": [],
+  "challengeRating": "1/2",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Bites",
+      "description": "Melee Weapon Attack: +3 to hit, reach 0 ft., one target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

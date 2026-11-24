@@ -18,3 +18,4 @@ export * from "./level";
 export * from "./spell-slots";
 export * from "./map";
 export * from "./article";
+export * from "./combat";

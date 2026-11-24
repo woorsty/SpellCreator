@@ -1,0 +1,55 @@
+{
+  "id": "ad3bdf05-1358-4e4f-ba01-47a305e52e7c",
+  "name": "Reef Shark",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 14,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 4,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

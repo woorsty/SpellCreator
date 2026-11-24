@@ -1,0 +1,49 @@
+{
+  "id": "ca1021e5-9919-4b7f-8e8a-22ddebe374fd",
+  "name": "Boar",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 11,
+  "maxHp": 11,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 9,
+  "charisma": 5,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Tusk",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "a8808006-c59e-48c3-8d53-44313486b107",
+  "name": "Zombie",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -2,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 8,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages it knew in life but can't speak"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

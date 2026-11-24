@@ -1,0 +1,67 @@
+{
+  "id": "62d6c94a-42e5-4f5b-9d29-7eb051098eca",
+  "name": "Grimlock",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 11,
+  "maxHp": 11,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 9,
+  "wisdom": 8,
+  "charisma": 6,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 5
+    },
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "blinded"
+  ],
+  "languages": [
+    "Undercommon"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Spiked Bone Club",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) bludgeoning damage plus 2 (1d4) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

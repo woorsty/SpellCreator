@@ -1,0 +1,74 @@
+{
+  "id": "65883452-417f-493c-a70e-5c1e38cb2771",
+  "name": "Aboleth",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 135,
+  "maxHp": 135,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 21,
+  "dexterity": 9,
+  "constitution": 15,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 4,
+  "skills": [
+    {
+      "name": "history",
+      "bonus": 12
+    },
+    {
+      "name": "perception",
+      "bonus": 10
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 20"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Deep Speech",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "10",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The aboleth makes three tentacle attacks."
+    },
+    {
+      "name": "Tentacle",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 15 (3d6 + 5) bludgeoning damage."
+    },
+    {
+      "name": "Enslave (3/day)",
+      "description": "The aboleth targets one creature it can see within 30 ft. of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.\nWhenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

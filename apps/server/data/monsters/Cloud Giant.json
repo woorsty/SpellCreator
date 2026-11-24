@@ -1,0 +1,69 @@
+{
+  "id": "95a8ab2e-7900-4547-9b53-7f564d0cac26",
+  "name": "Cloud Giant",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 200,
+  "maxHp": 200,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 27,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 16,
+  "savingThrowStrength": 8,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 6,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "insight",
+      "bonus": 7
+    },
+    {
+      "name": "perception",
+      "bonus": 7
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 17"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Giant"
+  ],
+  "challengeRating": "9",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The giant makes two morningstar attacks."
+    },
+    {
+      "name": "Morningstar",
+      "description": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

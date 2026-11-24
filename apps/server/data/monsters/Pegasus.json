@@ -1,0 +1,59 @@
+{
+  "id": "756dafdd-7436-4b56-8adf-0e197a54bd98",
+  "name": "Pegasus",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 59,
+  "maxHp": 59,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 15,
+  "charisma": 13,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 16"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "understands Celestial",
+    "Common",
+    "Elvish",
+    "and Sylvan but can't speak"
+  ],
+  "challengeRating": "2",
+  "movementRate": 60,
+  "actions": [
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

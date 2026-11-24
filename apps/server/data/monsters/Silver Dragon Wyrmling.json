@@ -1,0 +1,68 @@
+{
+  "id": "a3a76321-770e-42f0-be63-a122824d128d",
+  "name": "Silver Dragon Wyrmling",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 45,
+  "maxHp": 45,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Draconic"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) piercing damage."
+    },
+    {
+      "name": "Breath Weapons (Recharge 5-6)",
+      "description": "The dragon uses one of the following breath weapons.\n**Cold Breath.** The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.\n**Paralyzing Breath.** The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

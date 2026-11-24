@@ -1,0 +1,68 @@
+{
+  "id": "a2792e10-4f18-4fa3-98ad-af3a1f538168",
+  "name": "Gladiator",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 112,
+  "maxHp": 112,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 15,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 10
+    },
+    {
+      "name": "intimidation",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "5",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The gladiator makes three melee attacks or two ranged attacks."
+    },
+    {
+      "name": "Spear",
+      "description": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack."
+    },
+    {
+      "name": "Shield Bash",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

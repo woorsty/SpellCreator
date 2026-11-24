@@ -1,0 +1,70 @@
+{
+  "id": "95030769-13a9-4bf8-a6bd-966278f168dd",
+  "name": "Frost Giant",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 138,
+  "maxHp": 138,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 9,
+  "constitution": 21,
+  "intelligence": 9,
+  "wisdom": 10,
+  "charisma": 12,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 9
+    },
+    {
+      "name": "perception",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant"
+  ],
+  "challengeRating": "8",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The giant makes two greataxe attacks."
+    },
+    {
+      "name": "Greataxe",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 25 (3d12 + 6) slashing damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

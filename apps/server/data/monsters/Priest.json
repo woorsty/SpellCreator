@@ -1,0 +1,64 @@
+{
+  "id": "6d2bde33-f15d-4d46-b68b-7d82d6116271",
+  "name": "Priest",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 27,
+  "maxHp": 27,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 13,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "medicine",
+      "bonus": 7
+    },
+    {
+      "name": "persuasion",
+      "bonus": 3
+    },
+    {
+      "name": "religion",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any two languages"
+  ],
+  "challengeRating": "2",
+  "movementRate": 25,
+  "actions": [
+    {
+      "name": "Mace",
+      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

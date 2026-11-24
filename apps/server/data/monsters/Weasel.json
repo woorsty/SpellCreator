@@ -1,0 +1,58 @@
+{
+  "id": "8019daa9-855b-4956-a07a-f5045a4a4afc",
+  "name": "Weasel",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 1,
+  "maxHp": 1,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 3,
+  "dexterity": 16,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 3,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -4,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 1 piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

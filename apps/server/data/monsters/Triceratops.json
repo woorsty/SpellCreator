@@ -1,0 +1,53 @@
+{
+  "id": "29cdcbe6-e13c-458e-aa80-ae762fc146f8",
+  "name": "Triceratops",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 95,
+  "maxHp": 95,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 5,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "5",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Gore",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 24 (4d8 + 6) piercing damage."
+    },
+    {
+      "name": "Stomp",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one prone creature. Hit: 22 (3d10 + 6) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

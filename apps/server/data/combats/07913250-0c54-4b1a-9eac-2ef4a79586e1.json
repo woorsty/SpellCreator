@@ -1,0 +1,41 @@
+{
+  "id": "07913250-0c54-4b1a-9eac-2ef4a79586e1",
+  "name": "Testkampf",
+  "status": "preparing",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [
+    {
+      "id": "c-Low-1795473802057",
+      "name": "Low",
+      "type": "player",
+      "initiative": 25,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "turnOrder": 1
+    },
+    {
+      "id": "c-High-1795473802057",
+      "name": "High",
+      "type": "monster",
+      "initiative": 20,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "turnOrder": 2
+    }
+  ],
+  "createdAt": "2026-11-23T22:43:22.056Z",
+  "updatedAt": "2026-11-23T22:43:22.057Z"
+}

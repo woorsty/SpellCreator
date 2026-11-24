@@ -1,0 +1,66 @@
+{
+  "id": "7c3cb317-940b-472e-81ff-e65ff5862fab",
+  "name": "Gray Ooze",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -2,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 8,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 12,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 2,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -4,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "acid",
+    "cold",
+    "fire"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "prone"
+  ],
+  "languages": [],
+  "challengeRating": "1/2",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Pseudopod",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,68 @@
+{
+  "id": "d39c7c98-42ac-4407-9cbe-adbd0ca38c12",
+  "name": "Winter Wolf",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 75,
+  "maxHp": 75,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 8,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 5
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Giant",
+    "Winter Wolf"
+  ],
+  "challengeRating": "3",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone."
+    },
+    {
+      "name": "Cold Breath (Recharge 5-6)",
+      "description": "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

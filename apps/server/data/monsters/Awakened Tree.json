@@ -1,0 +1,56 @@
+{
+  "id": "a1b4a268-1a61-492f-a152-67a0f4920006",
+  "name": "Awakened Tree",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -2,
+  "hp": 59,
+  "maxHp": 59,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 6,
+  "constitution": 15,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 7,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [
+    "fire"
+  ],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "one language known by its creator"
+  ],
+  "challengeRating": "2",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

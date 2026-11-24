@@ -1,0 +1,77 @@
+{
+  "id": "45280b6f-72f1-4370-8942-bdc2c554256f",
+  "name": "Iron Golem",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 210,
+  "maxHp": 210,
+  "tempHp": 0,
+  "armorClass": 20,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 24,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "savingThrowStrength": 7,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire",
+    "poison",
+    "psychic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with adamantine weapons"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages of its creator but can't speak"
+  ],
+  "challengeRating": "16",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The golem makes two melee attacks."
+    },
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 20 (3d8 + 7) bludgeoning damage."
+    },
+    {
+      "name": "Sword",
+      "description": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 23 (3d10 + 7) slashing damage."
+    },
+    {
+      "name": "Poison Breath (Recharge 5-6)",
+      "description": "The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

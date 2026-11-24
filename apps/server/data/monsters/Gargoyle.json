@@ -1,0 +1,70 @@
+{
+  "id": "a25f3cbe-bede-42a3-8975-08f36c690525",
+  "name": "Gargoyle",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 52,
+  "maxHp": 52,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 11,
+  "charisma": 7,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with adamantine weapons"
+  ],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "exhaustion",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [
+    "Terran"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The gargoyle makes two attacks: one with its bite and one with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

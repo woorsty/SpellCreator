@@ -53,6 +53,99 @@ router.get("/characters", (req, res) => {
   res.json(characters);
 });
 
+export const MONSTERS_PATH = path.resolve(process.cwd(), "data/monsters");
+
+router.get("/monsters", (req, res) => {
+  try {
+    if (!fs.existsSync(MONSTERS_PATH)) {
+      fs.mkdirSync(MONSTERS_PATH, { recursive: true });
+    }
+    const monsterFiles = fs
+      .readdirSync(MONSTERS_PATH)
+      .filter((file) => file.endsWith(".json"));
+
+    const monsters = monsterFiles.map((file) => {
+      const filePath = path.join(MONSTERS_PATH, file);
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      return JSON.parse(fileContent);
+    });
+
+    res.json(monsters);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Fehler beim Laden der Monster" });
+  }
+});
+
+router.post("/monsters", (req, res) => {
+  try {
+    if (!fs.existsSync(MONSTERS_PATH)) {
+      fs.mkdirSync(MONSTERS_PATH, { recursive: true });
+    }
+    const monster = req.body;
+    if (!monster || !monster.name) {
+      res.status(400).json({ error: "Name ist erforderlich" });
+      return;
+    }
+    const fileName = `${monster.name}.json`;
+    const filePath = path.join(MONSTERS_PATH, fileName);
+    fs.writeFileSync(filePath, JSON.stringify(monster, null, 2));
+    res.status(201).json({ ok: true, id: monster.name });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Fehler beim Speichern des Monsters" });
+  }
+});
+
+router.get("/monsters/:name", (req, res) => {
+  try {
+    const filePath = path.join(MONSTERS_PATH, `${req.params.name}.json`);
+    if (!fs.existsSync(filePath)) {
+      res.status(404).json({ error: "Monster nicht gefunden" });
+      return;
+    }
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    res.json(JSON.parse(fileContent));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Fehler beim Laden des Monsters" });
+  }
+});
+
+router.put("/monsters/:name", (req, res) => {
+  try {
+    if (!fs.existsSync(MONSTERS_PATH)) {
+      fs.mkdirSync(MONSTERS_PATH, { recursive: true });
+    }
+    const monster = req.body;
+    if (!monster || !monster.name) {
+      res.status(400).json({ error: "Name ist erforderlich" });
+      return;
+    }
+    const filePath = path.join(MONSTERS_PATH, `${req.params.name}.json`);
+    fs.writeFileSync(filePath, JSON.stringify(monster, null, 2));
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Fehler beim Aktualisieren des Monsters" });
+  }
+});
+
+router.delete("/monsters/:name", (req, res) => {
+  try {
+    const filePath = path.join(MONSTERS_PATH, `${req.params.name}.json`);
+    if (!fs.existsSync(filePath)) {
+      res.status(404).json({ error: "Monster nicht gefunden" });
+      return;
+    }
+    fs.unlinkSync(filePath);
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Fehler beim Löschen des Monsters" });
+  }
+});
+
 router.head("/characters/:name", (req, res) => {
   try {
     const filePath = path.join(CHARACTERS_PATH, `${req.params.name}.json`);

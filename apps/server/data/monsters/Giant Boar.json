@@ -1,0 +1,49 @@
+{
+  "id": "0b80b5fe-e443-485b-aa95-7f3ef558f19e",
+  "name": "Giant Boar",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 42,
+  "maxHp": 42,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 16,
+  "intelligence": 2,
+  "wisdom": 7,
+  "charisma": 5,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Tusk",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

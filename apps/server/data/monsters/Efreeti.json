@@ -1,0 +1,62 @@
+{
+  "id": "dd6e65d7-b2b4-4460-9ba2-6c4e92236f28",
+  "name": "Efreeti",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 200,
+  "maxHp": 200,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 22,
+  "dexterity": 12,
+  "constitution": 24,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 7,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Ignan"
+  ],
+  "challengeRating": "11",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The efreeti makes two scimitar attacks or uses its Hurl Flame twice."
+    },
+    {
+      "name": "Scimitar",
+      "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage."
+    },
+    {
+      "name": "Hurl Flame",
+      "description": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 17 (5d6) fire damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,81 @@
+{
+  "id": "853d285c-abcd-4cf1-9478-55209cb10da8",
+  "name": "Medusa",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 127,
+  "maxHp": 127,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 12,
+  "wisdom": 13,
+  "charisma": 15,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 5
+    },
+    {
+      "name": "insight",
+      "bonus": 4
+    },
+    {
+      "name": "perception",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common"
+  ],
+  "challengeRating": "6",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The medusa makes either three melee attacks - one with its snake hair and two with its shortsword - or two ranged attacks with its longbow."
+    },
+    {
+      "name": "Snake Hair",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage plus 14 (4d6) poison damage."
+    },
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Longbow",
+      "description": "Ranged Weapon Attack: +5 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage plus 7 (2d6) poison damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,81 @@
+{
+  "id": "3fcbfa28-d02c-4abb-86d6-1e68567a8947",
+  "name": "Vampire",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 4,
+  "hp": 144,
+  "maxHp": 144,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 15,
+  "charisma": 18,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 4,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 4,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 7
+    },
+    {
+      "name": "stealth",
+      "bonus": 9
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 17"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "necrotic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "the languages it knew in life"
+  ],
+  "challengeRating": "13",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack (Vampire Form Only)",
+      "description": "The vampire makes two attacks, only one of which can be a bite attack."
+    },
+    {
+      "name": "Unarmed Strike (Vampire Form Only)",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one creature. Hit: 8 (1d8 + 4) bludgeoning damage. Instead of dealing damage, the vampire can grapple the target (escape DC 18)."
+    },
+    {
+      "name": "Bite (Bat or Vampire Form Only)",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
+    },
+    {
+      "name": "Charm",
+      "description": "The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.\nEach time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
+    },
+    {
+      "name": "Children of the Night (1/Day)",
+      "description": "The vampire magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,70 @@
+{
+  "id": "695546f6-9404-4727-b5ec-9429890bd22c",
+  "name": "Bearded Devil",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 52,
+  "maxHp": 52,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 15,
+  "constitution": 15,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 11,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Infernal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "3",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The devil makes two attacks: one with its beard and one with its glaive."
+    },
+    {
+      "name": "Beard",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 6 (1d8 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. While poisoned in this way, the target can't regain hit points. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    },
+    {
+      "name": "Glaive",
+      "description": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 8 (1d10 + 3) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a DC 12 Constitution saving throw or lose 5 (1d10) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 5 (1d10). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

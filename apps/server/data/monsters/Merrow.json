@@ -1,0 +1,65 @@
+{
+  "id": "a5d2cf37-2484-4b40-b9f8-73eaa0a00915",
+  "name": "Merrow",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 45,
+  "maxHp": 45,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 8,
+  "wisdom": 10,
+  "charisma": 9,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Abyssal",
+    "Aquan"
+  ],
+  "challengeRating": "2",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The merrow makes two attacks: one with its bite and one with its claws or harpoon."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (2d4 + 4) slashing damage."
+    },
+    {
+      "name": "Harpoon",
+      "description": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a Huge or smaller creature, it must succeed on a Strength contest against the merrow or be pulled up to 20 feet toward the merrow."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

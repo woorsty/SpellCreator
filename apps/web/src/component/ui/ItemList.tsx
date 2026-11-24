@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "./Input";
 import { Button } from "./Button";
-import { TextArea } from "./TextArea";
+import { Textarea } from "./Textarea";
 
 type Props<T> = {
   data: T[];
@@ -82,9 +82,9 @@ export function ItemList<T>({
             <Button onClick={() => removeItem(i)}>✕</Button>
           </div>
 
-          <TextArea
+          <Textarea
             value={item[textProperty] as string}
-            onChange={(e) => updateItem(i, { [textProperty]: e.target.value })}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => updateItem(i, { [textProperty]: e.target.value })}
           />
         </div>
       ))}

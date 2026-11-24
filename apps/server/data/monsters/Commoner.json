@@ -1,0 +1,51 @@
+{
+  "id": "8d4bda53-47c8-4b9d-90c9-ee5854c9513b",
+  "name": "Commoner",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 4,
+  "maxHp": 4,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "0",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Club",
+      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

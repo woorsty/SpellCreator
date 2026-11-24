@@ -1,0 +1,61 @@
+{
+  "id": "f391455e-94b8-4c37-bb77-630b7d26f690",
+  "name": "Lemure",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -3,
+  "hp": 13,
+  "maxHp": 13,
+  "tempHp": 0,
+  "armorClass": 7,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 5,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 11,
+  "charisma": 3,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": -3,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "languages": [
+    "understands infernal but can't speak"
+  ],
+  "challengeRating": "0",
+  "movementRate": 15,
+  "actions": [
+    {
+      "name": "Fist",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

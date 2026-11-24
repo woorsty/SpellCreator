@@ -1,0 +1,85 @@
+{
+  "id": "36b9e0c5-d23d-4aa5-b23b-d9139faeb52f",
+  "name": "Adult Black Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 195,
+  "maxHp": 195,
+  "tempHp": 0,
+  "armorClass": 19,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 11
+    },
+    {
+      "name": "stealth",
+      "bonus": 7
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 21"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "acid"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "14",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 4 (1d8) acid damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Frightful Presence",
+      "description": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+    },
+    {
+      "name": "Acid Breath (Recharge 5-6)",
+      "description": "The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

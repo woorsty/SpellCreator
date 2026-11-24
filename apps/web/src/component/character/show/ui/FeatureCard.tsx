@@ -1,7 +1,7 @@
 import { CharacterSheet } from "@repo/domain";
 import React from "react";
 import { useState } from "react";
-import { TextArea } from "../../../ui/TextArea";
+import { Textarea } from "../../../ui/Textarea";
 
 type Props = {
   character: CharacterSheet;
@@ -47,11 +47,11 @@ export const FeatureCard: React.FC<Props> = ({
 
       {open &&
         (editable && feature.editPath ? (
-          <TextArea
-            onChange={(e) => {
+          <Textarea
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
               updateEquipmentNote(e.target.value);
             }}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e: React.MouseEvent<HTMLTextAreaElement>) => e.stopPropagation()}
             value={feature.notes}
           />
         ) : (

@@ -1,0 +1,83 @@
+{
+  "id": "8bfd5168-dc7c-4f20-adbd-3dbcbd4265a5",
+  "name": "Gynosphinx",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 136,
+  "maxHp": 136,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 18,
+  "wisdom": 18,
+  "charisma": 18,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 4,
+  "savingThrowCharisma": 4,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 12
+    },
+    {
+      "name": "history",
+      "bonus": 12
+    },
+    {
+      "name": "perception",
+      "bonus": 8
+    },
+    {
+      "name": "religion",
+      "bonus": 8
+    }
+  ],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 18"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "psychic"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "frightened"
+  ],
+  "languages": [
+    "Common",
+    "Sphinx"
+  ],
+  "challengeRating": "11",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The sphinx makes two claw attacks."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

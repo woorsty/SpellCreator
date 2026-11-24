@@ -1,0 +1,57 @@
+{
+  "id": "df910ffd-9fb8-4fc8-9cb4-9c365d3e0a7e",
+  "name": "Kobold",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 5,
+  "maxHp": 5,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 9,
+  "intelligence": 8,
+  "wisdom": 7,
+  "charisma": 8,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "1/8",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Dagger",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+    },
+    {
+      "name": "Sling",
+      "description": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

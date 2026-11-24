@@ -1,0 +1,73 @@
+{
+  "id": "d544813c-2cd9-41e9-b2a5-c13a0ffebbb5",
+  "name": "Clay Golem",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 133,
+  "maxHp": 133,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 20,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 8,
+  "charisma": 1,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "acid",
+    "poison",
+    "psychic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with adamantine weapons"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages of its creator but can't speak"
+  ],
+  "challengeRating": "9",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The golem makes two slam attacks."
+    },
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw or have its hit point maximum reduced by an amount equal to the damage taken. The target dies if this attack reduces its hit point maximum to 0. The reduction lasts until removed by the greater restoration spell or other magic."
+    },
+    {
+      "name": "Haste (Recharge 5-6)",
+      "description": "Until the end of its next turn, the golem magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

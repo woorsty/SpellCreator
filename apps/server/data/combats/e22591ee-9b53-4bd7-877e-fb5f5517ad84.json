@@ -1,0 +1,44 @@
+{
+  "id": "e22591ee-9b53-4bd7-877e-fb5f5517ad84",
+  "name": "Testkampf",
+  "status": "active",
+  "round": 2,
+  "currentTurnIndex": 0,
+  "combatants": [
+    {
+      "id": "c-A-1795482049247",
+      "name": "A",
+      "type": "player",
+      "initiative": 10,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "senses": [],
+      "turnOrder": 1
+    },
+    {
+      "id": "c-B-1795482049247",
+      "name": "B",
+      "type": "monster",
+      "initiative": 5,
+      "initiativeBonus": 0,
+      "hp": 10,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "senses": [],
+      "turnOrder": 2
+    }
+  ],
+  "createdAt": "2026-11-24T01:00:49.247Z",
+  "updatedAt": "2026-11-24T01:00:49.248Z",
+  "startedAt": "2026-11-24T01:00:49.247Z"
+}

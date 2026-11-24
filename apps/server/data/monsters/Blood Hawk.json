@@ -1,0 +1,54 @@
+{
+  "id": "644c6545-ab5b-4c5e-b3d4-2bc9dc9a7864",
+  "name": "Blood Hawk",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 7,
+  "maxHp": 7,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 5,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": -3,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/8",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Beak",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

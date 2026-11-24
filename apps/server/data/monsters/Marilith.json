@@ -1,0 +1,79 @@
+{
+  "id": "152f3b5e-2707-46e2-abf9-d0a1f1f7b1ca",
+  "name": "Marilith",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 5,
+  "hp": 189,
+  "maxHp": 189,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 20,
+  "constitution": 20,
+  "intelligence": 18,
+  "wisdom": 16,
+  "charisma": 20,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 5,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 5,
+  "skills": [],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold",
+    "fire",
+    "lightning; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Abyssal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "16",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The marilith can make seven attacks: six with its longswords and one with its tail."
+    },
+    {
+      "name": "Longsword",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one creature. Hit: 15 (2d10 + 4) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 19). Until this grapple ends, the target is restrained, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets."
+    },
+    {
+      "name": "Teleport",
+      "description": "The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see."
+    },
+    {
+      "name": "Variant: Summon Demon (1/Day)",
+      "description": "The demon chooses what to summon and attempts a magical summoning.\nA marilith has a 50 percent chance of summoning 1d6 vrocks, 1d4 hezrous, 1d3 glabrezus, 1d2 nalfeshnees, or one marilith.\nA summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

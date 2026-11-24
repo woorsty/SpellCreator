@@ -1,0 +1,62 @@
+{
+  "id": "4a82b0f3-e104-4971-929f-7c7ad316cb47",
+  "name": "Giant Crocodile",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 85,
+  "maxHp": 85,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 21,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 7,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "5",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The crocodile makes two attacks: one with its bite and one with its tail."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 21 (3d10 + 5) piercing damage, and the target is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the crocodile can't bite another target."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target not grappled by the crocodile. Hit: 14 (2d8 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

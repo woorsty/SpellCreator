@@ -1,0 +1,54 @@
+{
+  "id": "e7357440-6c94-4185-9116-414384fa6217",
+  "name": "Frog",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 1,
+  "maxHp": 1,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 1,
+  "dexterity": 13,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 3,
+  "savingThrowStrength": -5,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -4,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 1
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 20,
+  "actions": [],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

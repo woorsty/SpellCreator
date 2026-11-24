@@ -1,0 +1,76 @@
+{
+  "id": "82dcdea4-f4cb-4d4e-9d1b-76b9b537856f",
+  "name": "Wraith",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 67,
+  "maxHp": 67,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 6,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 15,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 2,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "damageImmunities": [
+    "necrotic",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained"
+  ],
+  "languages": [
+    "the languages it knew in life"
+  ],
+  "challengeRating": "5",
+  "movementRate": 60,
+  "actions": [
+    {
+      "name": "Life Drain",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 21 (4d8 + 3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+    },
+    {
+      "name": "Create Specter",
+      "description": "The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at one time."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

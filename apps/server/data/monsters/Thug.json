@@ -1,0 +1,64 @@
+{
+  "id": "f92753eb-96c4-4e9a-9d1f-3efba4cfdd03",
+  "name": "Thug",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 32,
+  "maxHp": 32,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "intimidation",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The thug makes two melee attacks."
+    },
+    {
+      "name": "Mace",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) bludgeoning damage."
+    },
+    {
+      "name": "Heavy Crossbow",
+      "description": "Ranged Weapon Attack: +2 to hit, range 100/400 ft., one target. Hit: 5 (1d10) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

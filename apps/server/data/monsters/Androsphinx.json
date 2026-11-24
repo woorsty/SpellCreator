@@ -1,0 +1,81 @@
+{
+  "id": "a16c3edc-fad4-4de4-a6cb-efd3e20890e3",
+  "name": "Androsphinx",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 199,
+  "maxHp": 199,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 22,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 18,
+  "charisma": 23,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 4,
+  "savingThrowCharisma": 6,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 9
+    },
+    {
+      "name": "perception",
+      "bonus": 10
+    },
+    {
+      "name": "religion",
+      "bonus": 15
+    }
+  ],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 20"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "psychic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "frightened"
+  ],
+  "languages": [
+    "Common",
+    "Sphinx"
+  ],
+  "challengeRating": "17",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The sphinx makes two claw attacks."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 17 (2d10 + 6) slashing damage."
+    },
+    {
+      "name": "Roar (3/Day)",
+      "description": "The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.\n**First Roar.** Each creature that fails a DC 18 Wisdom saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n**Second Roar.** Each creature that fails a DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n**Third Roar.** Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

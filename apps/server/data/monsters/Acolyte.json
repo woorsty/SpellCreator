@@ -1,0 +1,60 @@
+{
+  "id": "43c5b902-7a9f-47b8-a451-981ef93c2e4c",
+  "name": "Acolyte",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 9,
+  "maxHp": 9,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 11,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "medicine",
+      "bonus": 4
+    },
+    {
+      "name": "religion",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "1/4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Club",
+      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

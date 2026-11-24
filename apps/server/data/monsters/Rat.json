@@ -1,0 +1,50 @@
+{
+  "id": "5cf1e956-89eb-4812-a1a5-fc2d2dce1b9d",
+  "name": "Rat",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 1,
+  "maxHp": 1,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 9,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 4,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 30 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

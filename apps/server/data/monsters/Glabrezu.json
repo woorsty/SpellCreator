@@ -1,0 +1,75 @@
+{
+  "id": "54b0b90c-ced7-4a08-9ead-a18749e91691",
+  "name": "Glabrezu",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 157,
+  "maxHp": 157,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 20,
+  "dexterity": 15,
+  "constitution": 21,
+  "intelligence": 19,
+  "wisdom": 17,
+  "charisma": 16,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 3,
+  "skills": [],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold",
+    "fire",
+    "lightning; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Abyssal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "9",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The glabrezu makes four attacks: two with its pincers and two with its fists. Alternatively, it makes two attacks with its pincers and casts one spell."
+    },
+    {
+      "name": "Pincer",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage. If the target is a Medium or smaller creature, it is grappled (escape DC 15). The glabrezu has two pincers, each of which can grapple only one target."
+    },
+    {
+      "name": "Fist",
+      "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) bludgeoning damage."
+    },
+    {
+      "name": "Variant: Summon Demon (1/Day)",
+      "description": "The demon chooses what to summon and attempts a magical summoning.\nA glabrezu has a 30 percent chance of summoning 1d3 vrocks, 1d2 hezrous, or one glabrezu.\nA summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "c56f64cc-81b5-488c-984d-ed3d0d581c12",
+  "name": "Noble",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 9,
+  "maxHp": 9,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 16,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 5
+    },
+    {
+      "name": "insight",
+      "bonus": 4
+    },
+    {
+      "name": "persuasion",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any two languages"
+  ],
+  "challengeRating": "1/8",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Rapier",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

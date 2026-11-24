@@ -1,0 +1,62 @@
+{
+  "id": "bf056e3e-03a4-4ccf-8b43-7514e01547ca",
+  "name": "Ochre Jelly",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -2,
+  "hp": 45,
+  "maxHp": 45,
+  "tempHp": 0,
+  "armorClass": 8,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 15,
+  "dexterity": 6,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 6,
+  "charisma": 1,
+  "savingThrowStrength": 2,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "acid"
+  ],
+  "damageImmunities": [
+    "lightning",
+    "slashing"
+  ],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "prone"
+  ],
+  "languages": [],
+  "challengeRating": "2",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Pseudopod",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

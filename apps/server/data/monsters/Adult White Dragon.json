@@ -1,0 +1,85 @@
+{
+  "id": "665fbaca-d648-4815-b769-4227982ed90f",
+  "name": "Adult White Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 200,
+  "maxHp": 200,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 22,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 8,
+  "wisdom": 12,
+  "charisma": 12,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 6,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 11
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 21"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "cold"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "13",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 4 (1d8) cold damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Frightful Presence",
+      "description": "Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 14 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+    },
+    {
+      "name": "Cold Breath (Recharge 5-6)",
+      "description": "The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

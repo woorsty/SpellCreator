@@ -1,0 +1,83 @@
+{
+  "id": "d379e604-0f5e-4606-ae2c-9fe925044204",
+  "name": "Imp",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 10,
+  "maxHp": 10,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 6,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "savingThrowStrength": -2,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 4
+    },
+    {
+      "name": "insight",
+      "bonus": 3
+    },
+    {
+      "name": "persuasion",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical/nonsilver weapons"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Infernal",
+    "Common"
+  ],
+  "challengeRating": "1",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Sting (Bite in Beast Form)",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."
+    },
+    {
+      "name": "Invisibility",
+      "description": "The imp magically turns invisible until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

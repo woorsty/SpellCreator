@@ -1,0 +1,72 @@
+{
+  "id": "f3a3fcfc-8d5e-43f1-9bf8-c6d62a787aa4",
+  "name": "Stone Golem",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 178,
+  "maxHp": 178,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison",
+    "psychic; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with adamantine weapons"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages of its creator but can't speak"
+  ],
+  "challengeRating": "10",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The golem makes two slam attacks."
+    },
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Slow (Recharge 5-6)",
+      "description": "The golem targets one or more creatures it can see within 10 ft. of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

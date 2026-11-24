@@ -1,0 +1,85 @@
+{
+  "id": "3045e345-3106-45b6-9a47-4d44bb93a469",
+  "name": "Ancient Blue Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 481,
+  "maxHp": 481,
+  "tempHp": 0,
+  "armorClass": 22,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 29,
+  "dexterity": 10,
+  "constitution": 27,
+  "intelligence": 18,
+  "wisdom": 17,
+  "charisma": 21,
+  "savingThrowStrength": 9,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 8,
+  "savingThrowIntelligence": 4,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 5,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 17
+    },
+    {
+      "name": "stealth",
+      "bonus": 7
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 27"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "lightning"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "23",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10 + 9) piercing damage plus 11 (2d10) lightning damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 16 (2d6 + 9) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 18 (2d8 + 9) bludgeoning damage."
+    },
+    {
+      "name": "Frightful Presence",
+      "description": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+    },
+    {
+      "name": "Lightning Breath (Recharge 5-6)",
+      "description": "The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

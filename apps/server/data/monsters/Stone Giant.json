@@ -1,0 +1,69 @@
+{
+  "id": "7c226936-2926-4dbd-8d3d-c3e0d528f0bb",
+  "name": "Stone Giant",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 126,
+  "maxHp": 126,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 15,
+  "constitution": 20,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 9,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 12
+    },
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant"
+  ],
+  "challengeRating": "7",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The giant makes two greatclub attacks."
+    },
+    {
+      "name": "Greatclub",
+      "description": "Melee Weapon Attack: +9 to hit, reach 15 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

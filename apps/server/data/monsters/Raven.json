@@ -1,0 +1,54 @@
+{
+  "id": "80c2a889-190d-44f4-a911-7864387bbdea",
+  "name": "Raven",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 1,
+  "maxHp": 1,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 2,
+  "dexterity": 14,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 6,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": -1,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Beak",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

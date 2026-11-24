@@ -1,0 +1,63 @@
+{
+  "id": "cd358bd6-4e16-44bd-b121-40fce55f9a51",
+  "name": "Hell Hound",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 45,
+  "maxHp": 45,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 14,
+  "intelligence": 6,
+  "wisdom": 13,
+  "charisma": 6,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "understands Infernal but can't speak it"
+  ],
+  "challengeRating": "3",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage."
+    },
+    {
+      "name": "Fire Breath (Recharge 5-6)",
+      "description": "The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

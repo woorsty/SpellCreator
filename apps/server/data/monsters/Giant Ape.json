@@ -1,0 +1,66 @@
+{
+  "id": "20cb490e-d798-4c52-8bda-c5d752cc76d3",
+  "name": "Giant Ape",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 157,
+  "maxHp": 157,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 7,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "athletics",
+      "bonus": 9
+    },
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "7",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The ape makes two fist attacks."
+    },
+    {
+      "name": "Fist",
+      "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +9 to hit, range 50/100 ft., one target. Hit: 30 (7d6 + 6) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

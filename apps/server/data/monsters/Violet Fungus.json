@@ -1,0 +1,58 @@
+{
+  "id": "a31efee2-667f-4417-8080-ea340282cc1a",
+  "name": "Violet Fungus",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -5,
+  "hp": 18,
+  "maxHp": 18,
+  "tempHp": 0,
+  "armorClass": 5,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 3,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": -5,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -4,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 6"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "blinded",
+    "deafened",
+    "frightened"
+  ],
+  "languages": [],
+  "challengeRating": "1/4",
+  "movementRate": 5,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The fungus makes 1d4 Rotting Touch attacks."
+    },
+    {
+      "name": "Rotting Touch",
+      "description": "Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

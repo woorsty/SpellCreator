@@ -1,0 +1,78 @@
+{
+  "id": "08e98d8c-2230-44c4-98b6-2c6c9428e725",
+  "name": "Satyr",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 31,
+  "maxHp": 31,
+  "tempHp": 0,
+  "armorClass": 14,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 12,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 12,
+  "wisdom": 10,
+  "charisma": 14,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    },
+    {
+      "name": "performance",
+      "bonus": 6
+    },
+    {
+      "name": "stealth",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Elvish",
+    "Sylvan"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Ram",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) bludgeoning damage."
+    },
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+    },
+    {
+      "name": "Shortbow",
+      "description": "Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+    },
+    {
+      "name": "Variant: Panpipes",
+      "description": "Gentle Lullaby. The creature falls asleep and is unconscious for 1 minute. The effect ends if the creature takes damage or if someone takes an action to shake the creature awake."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

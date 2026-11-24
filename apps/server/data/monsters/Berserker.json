@@ -1,0 +1,51 @@
+{
+  "id": "55deeb02-e7a5-4f0a-930e-10ae0376aa01",
+  "name": "Berserker",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 67,
+  "maxHp": 67,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 17,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 9,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Greataxe",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

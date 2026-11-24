@@ -1,0 +1,66 @@
+{
+  "id": "d6368668-a780-4d12-a2ad-9b8df222bc9e",
+  "name": "Ettin",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 85,
+  "maxHp": 85,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "savingThrowStrength": 5,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant",
+    "Orc"
+  ],
+  "challengeRating": "4",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The ettin makes two attacks: one with its battleaxe and one with its morningstar."
+    },
+    {
+      "name": "Battleaxe",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
+    },
+    {
+      "name": "Morningstar",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

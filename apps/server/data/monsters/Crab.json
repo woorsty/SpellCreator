@@ -1,0 +1,55 @@
+{
+  "id": "12875a36-f1c8-4921-9af6-dae3cb74adb6",
+  "name": "Crab",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 2,
+  "maxHp": 2,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 2,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -4,
+  "skills": [
+    {
+      "name": "stealth",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

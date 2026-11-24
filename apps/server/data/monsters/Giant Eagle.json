@@ -1,0 +1,65 @@
+{
+  "id": "28b66f12-c2ee-4cb6-ad48-e8377dab7429",
+  "name": "Giant Eagle",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 26,
+  "maxHp": 26,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 8,
+  "wisdom": 14,
+  "charisma": 10,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": -1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 14"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant Eagle",
+    "understands Common and Auran but can't speak"
+  ],
+  "challengeRating": "1",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The eagle makes two attacks: one with its beak and one with its talons."
+    },
+    {
+      "name": "Beak",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+    },
+    {
+      "name": "Talons",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

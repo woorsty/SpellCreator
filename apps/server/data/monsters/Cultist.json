@@ -1,0 +1,60 @@
+{
+  "id": "d0d4a590-909c-4cc0-89fe-05e5945f8b85",
+  "name": "Cultist",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 9,
+  "maxHp": 9,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 2
+    },
+    {
+      "name": "religion",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "1/8",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Scimitar",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "b7e07b3e-bf82-4fff-a1fe-e141651eba6e",
+  "name": "Testkampf",
+  "status": "preparing",
+  "round": 1,
+  "currentTurnIndex": 0,
+  "combatants": [
+    {
+      "id": "c-Goblin-1795482049258",
+      "name": "Goblin",
+      "type": "monster",
+      "initiative": 12,
+      "initiativeBonus": 0,
+      "hp": 6,
+      "maxHp": 10,
+      "tempHp": 0,
+      "armorClass": 10,
+      "conditions": [],
+      "isDead": false,
+      "isConcentrating": false,
+      "senses": [],
+      "turnOrder": 1
+    }
+  ],
+  "createdAt": "2026-11-24T01:00:49.258Z",
+  "updatedAt": "2026-11-24T01:00:49.258Z"
+}

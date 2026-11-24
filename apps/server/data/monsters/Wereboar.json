@@ -1,0 +1,68 @@
+{
+  "id": "ac80b607-3a35-4de1-a3a8-c60d88acdb0f",
+  "name": "Wereboar",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 78,
+  "maxHp": 78,
+  "tempHp": 0,
+  "armorClass": 10,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 8,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common (can't speak in boar form)"
+  ],
+  "challengeRating": "4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack (Humanoid or Hybrid Form Only)",
+      "description": "The wereboar makes two attacks, only one of which can be with its tusks."
+    },
+    {
+      "name": "Maul (Humanoid or Hybrid Form Only)",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage."
+    },
+    {
+      "name": "Tusks (Boar or Hybrid Form Only)",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with wereboar lycanthropy."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,58 @@
+{
+  "id": "499d625e-cf68-403e-8470-9a7b4050e376",
+  "name": "Spirit Naga",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 75,
+  "maxHp": 75,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 17,
+  "constitution": 14,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "languages": [
+    "Abyssal",
+    "Common"
+  ],
+  "challengeRating": "8",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 7 (1d6 + 4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

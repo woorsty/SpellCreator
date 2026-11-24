@@ -1,0 +1,57 @@
+{
+  "id": "ab1a6fb1-c00a-4594-8edd-da6bbc85d897",
+  "name": "Warhorse Skeleton",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [
+    "bludgeoning"
+  ],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "languages": [],
+  "challengeRating": "1/2",
+  "movementRate": 60,
+  "actions": [
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

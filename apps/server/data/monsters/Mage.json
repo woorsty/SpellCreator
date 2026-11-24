@@ -1,0 +1,60 @@
+{
+  "id": "d95c34bf-51bf-467d-90c0-8e04604a5929",
+  "name": "Mage",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 40,
+  "maxHp": 40,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 9,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 11,
+  "savingThrowStrength": -1,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": 3,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 6
+    },
+    {
+      "name": "history",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any four languages"
+  ],
+  "challengeRating": "6",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Dagger",
+      "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

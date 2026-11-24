@@ -1,0 +1,79 @@
+{
+  "id": "f13a9d0c-c55e-42e8-98f2-c5cec10467ff",
+  "name": "Bone Devil",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 142,
+  "maxHp": 142,
+  "tempHp": 0,
+  "armorClass": 19,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 16,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 7
+    },
+    {
+      "name": "insight",
+      "bonus": 6
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Infernal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "9",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The devil makes three attacks: two with its claws and one with its sting."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 8 (1d8 + 4) slashing damage."
+    },
+    {
+      "name": "Sting",
+      "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 13 (2d8 + 4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

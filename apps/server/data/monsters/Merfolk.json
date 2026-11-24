@@ -1,0 +1,57 @@
+{
+  "id": "bb27e917-509d-4c20-9f5b-26218743cd02",
+  "name": "Merfolk",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 11,
+  "maxHp": 11,
+  "tempHp": 0,
+  "armorClass": 11,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 12,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 1,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Aquan",
+    "Common"
+  ],
+  "challengeRating": "1/8",
+  "movementRate": 10,
+  "actions": [
+    {
+      "name": "Spear",
+      "description": "Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "48fc6466-8d98-4bca-b06a-f2ce2e3df65f",
+  "name": "Troll",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 84,
+  "maxHp": 84,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 13,
+  "constitution": 20,
+  "intelligence": 7,
+  "wisdom": 9,
+  "charisma": 7,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 2
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Giant"
+  ],
+  "challengeRating": "5",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The troll makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

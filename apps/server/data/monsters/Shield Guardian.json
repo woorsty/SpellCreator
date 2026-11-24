@@ -1,0 +1,65 @@
+{
+  "id": "ae2ba9f1-7472-42ac-ba34-a1fac6db4cae",
+  "name": "Shield Guardian",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 142,
+  "maxHp": 142,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 8,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 3,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": -2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": -4,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Blindsicht 10 ft.",
+    "Passive Wahrnehmung 10"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "languages": [
+    "understands commands given in any language but can't speak"
+  ],
+  "challengeRating": "7",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The guardian makes two fist attacks."
+    },
+    {
+      "name": "Fist",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

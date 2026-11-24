@@ -1,0 +1,75 @@
+{
+  "id": "edb7c200-8c87-4357-987b-b80ad7042189",
+  "name": "Hezrou",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 136,
+  "maxHp": 136,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 19,
+  "dexterity": 17,
+  "constitution": 20,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 13,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": -3,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 1,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 11"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold",
+    "fire",
+    "lightning; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Abyssal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "8",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The hezrou makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) piercing damage."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage."
+    },
+    {
+      "name": "Variant: Summon Demon (1/Day)",
+      "description": "The demon chooses what to summon and attempts a magical summoning.\nA hezrou has a 30 percent chance of summoning 2d6 dretches or one hezrou.\nA summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "aebab461-9cba-4c33-b112-cb8c72971f85",
+  "name": "Unicorn",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 67,
+  "maxHp": 67,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 11,
+  "wisdom": 17,
+  "charisma": 16,
+  "savingThrowStrength": 4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "paralyzed",
+    "poisoned"
+  ],
+  "languages": [
+    "Celestial",
+    "Elvish",
+    "Sylvan",
+    "telepathy 60 ft."
+  ],
+  "challengeRating": "5",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The unicorn makes two attacks: one with its hooves and one with its horn."
+    },
+    {
+      "name": "Hooves",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+    },
+    {
+      "name": "Horn",
+      "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage."
+    },
+    {
+      "name": "Healing Touch (3/Day)",
+      "description": "The unicorn touches another creature with its horn. The target magically regains 11 (2d8 + 2) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."
+    },
+    {
+      "name": "Teleport (1/Day)",
+      "description": "The unicorn magically teleports itself and up to three willing creatures it can see within 5 ft. of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

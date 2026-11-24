@@ -1,0 +1,83 @@
+{
+  "id": "b3e9ebc2-029c-4ee2-9cf9-8213066231b1",
+  "name": "Lich",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 135,
+  "maxHp": 135,
+  "tempHp": 0,
+  "armorClass": 17,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 20,
+  "wisdom": 14,
+  "charisma": 16,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": 5,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "arcana",
+      "bonus": 19
+    },
+    {
+      "name": "history",
+      "bonus": 12
+    },
+    {
+      "name": "insight",
+      "bonus": 9
+    },
+    {
+      "name": "perception",
+      "bonus": 9
+    }
+  ],
+  "senses": [
+    "Wahres Sehen 120 ft.",
+    "Passive Wahrnehmung 19"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold",
+    "lightning",
+    "necrotic"
+  ],
+  "damageImmunities": [
+    "poison; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks"
+  ],
+  "conditionImmunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "languages": [
+    "Common plus up to five other languages"
+  ],
+  "challengeRating": "21",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Paralyzing Touch",
+      "description": "Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

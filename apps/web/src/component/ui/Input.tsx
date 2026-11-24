@@ -1,26 +1,30 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
 
-export function Input({ className = "", ...props }: InputProps) {
+export function Input({
+  label,
+  error,
+  className = "",
+  ...props
+}: InputProps) {
   return (
-    <input
-      {...props}
-      className={`
-        rounded-lg
-        border
-        border-border
-        bg-surface-2
-        px-3
-        py-2
-        text-text
-        outline-none
-        transition-colors
-        focus:border-primary
-        disabled:cursor-not-allowed
-        disabled:opacity-50
-        ${className}
-      `}
-    />
+    <div className="space-y-1">
+      {label && (
+        <label className="block text-xs font-medium text-text-muted uppercase tracking-wider">
+          {label}
+        </label>
+      )}
+      <input
+        className={`w-full px-3 py-2.5 rounded bg-surface border border-border text-text placeholder:text-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors ${error ? "border-danger focus:ring-danger" : ""} ${className}`}
+        {...props}
+      />
+      {error && (
+        <span className="text-xs text-danger">{error}</span>
+      )}
+    </div>
   );
 }

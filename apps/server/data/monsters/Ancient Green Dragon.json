@@ -1,0 +1,99 @@
+{
+  "id": "cfe40e61-c4cd-4b0e-a782-3537bf1271c3",
+  "name": "Ancient Green Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 385,
+  "maxHp": 385,
+  "tempHp": 0,
+  "armorClass": 21,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 27,
+  "dexterity": 12,
+  "constitution": 25,
+  "intelligence": 20,
+  "wisdom": 17,
+  "charisma": 19,
+  "savingThrowStrength": 8,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 7,
+  "savingThrowIntelligence": 5,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 4,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 11
+    },
+    {
+      "name": "insight",
+      "bonus": 10
+    },
+    {
+      "name": "perception",
+      "bonus": 17
+    },
+    {
+      "name": "persuasion",
+      "bonus": 11
+    },
+    {
+      "name": "stealth",
+      "bonus": 8
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 27"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "22",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +15 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 10 (3d6) poison damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 22 (4d6 + 8) slashing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage."
+    },
+    {
+      "name": "Frightful Presence",
+      "description": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+    },
+    {
+      "name": "Poison Breath (Recharge 5-6)",
+      "description": "The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

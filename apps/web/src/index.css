@@ -1,10 +1,92 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #1e1f22;
-  --color-surface: #2b2d31;
-  --color-surface-2: #33363c;
-  --color-border: #4b4f57;
-  --color-text: #f5f5f5;
-  --color-primary: #3b82f6;
+  /* D&D Dark Theme - tiefes Pergament, Metall, Magie */
+  --color-bg: #0f0e13;
+  --color-bg-panel: #17151c;
+  --color-bg-panel-hover: #1f1d26;
+  --color-surface: #1f1d26;
+  --color-surface-2: #272430;
+  --color-border: #3d3952;
+  --color-border-focus: #7c3aed;
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-primary: #8b5cf6;      /* Violett - Magie */
+  --color-primary-hover: #7c3aed;
+  --color-accent: #d97706;      /* Bernstein - Abenteuer */
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* Typografie */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Breakpoints & Shadows */
+  --shadow-dnd: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-dnd-glow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+/* Basis-Styles */
+html, body, #root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Fokus-Ringe */
+*:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Text-Selektion */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Utility-Klassen für D&D-Stil */
+.dnd-border {
+  border: 1px solid var(--color-border);
+}
+
+.dnd-panel {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+}
+
+.dnd-gradient-text {
+  background: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.5); }
+}
+
+.animate-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }

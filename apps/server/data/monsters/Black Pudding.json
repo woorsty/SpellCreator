@@ -1,0 +1,62 @@
+{
+  "id": "158d89fd-c6f4-463e-b557-3e652ce3fd13",
+  "name": "Black Pudding",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -3,
+  "hp": 85,
+  "maxHp": 85,
+  "tempHp": 0,
+  "armorClass": 7,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 5,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": -3,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -5,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -5,
+  "skills": [],
+  "senses": [
+    "Blindsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "acid",
+    "cold",
+    "lightning",
+    "slashing"
+  ],
+  "conditionImmunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "prone"
+  ],
+  "languages": [],
+  "challengeRating": "4",
+  "movementRate": 20,
+  "actions": [
+    {
+      "name": "Pseudopod",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage plus 18 (4d8) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

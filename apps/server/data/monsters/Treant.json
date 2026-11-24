@@ -1,0 +1,71 @@
+{
+  "id": "0ecac6c2-c9e2-41d6-bac2-c8563c15640c",
+  "name": "Treant",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 138,
+  "maxHp": 138,
+  "tempHp": 0,
+  "armorClass": 16,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 8,
+  "constitution": 21,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 12,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 3,
+  "savingThrowCharisma": 1,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [
+    "fire"
+  ],
+  "damageResistances": [
+    "bludgeoning",
+    "piercing"
+  ],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Druidic",
+    "Elvish",
+    "Sylvan"
+  ],
+  "challengeRating": "9",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The treant makes two slam attacks."
+    },
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 16 (3d6 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Rock",
+      "description": "Ranged Weapon Attack: +10 to hit, range 60/180 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage."
+    },
+    {
+      "name": "Animate Trees (1/Day)",
+      "description": "The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

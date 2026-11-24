@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Translator } from "@repo/i18n";
-import { Spell, SpellService } from "@repo/domain";
+import { Spell } from "@repo/domain";
 import { Button } from "../../../ui/Button";
 import { Checkbox } from "../../../ui/Checkbox";
 import { Input } from "../../../ui/Input";
@@ -31,6 +31,10 @@ export function SpellsTab({ character, updateField }: StepProps) {
       "preparedSpells",
       character.preparedSpells.filter((_, i) => i !== index),
     );
+  };
+
+  const getLinkToSpell = (spell: Spell) => {
+    return `http://localhost:3000/spell/${spell.name}`;
   };
 
   return (
@@ -66,10 +70,7 @@ export function SpellsTab({ character, updateField }: StepProps) {
             <tr key={i} className="border-b">
               <td>{spell.level}</td>
               <td>
-                <a
-                  className="underline"
-                  href={SpellService.getLinkToSpell(spell)}
-                >
+                <a className="underline" href={getLinkToSpell(spell)}>
                   {spell.name}
                 </a>
               </td>

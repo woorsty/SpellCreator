@@ -1,0 +1,87 @@
+{
+  "id": "645b76eb-77fb-40c1-8bef-ac29d95dc525",
+  "name": "Barbed Devil",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 3,
+  "hp": 110,
+  "maxHp": 110,
+  "tempHp": 0,
+  "armorClass": 15,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 14,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 3,
+  "savingThrowConstitution": 4,
+  "savingThrowIntelligence": 1,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 2,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 5
+    },
+    {
+      "name": "insight",
+      "bonus": 5
+    },
+    {
+      "name": "perception",
+      "bonus": 8
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Passive Wahrnehmung 18"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [
+    "cold; bludgeoning",
+    "piercing",
+    "and slashing from nonmagical attacks not made with silvered weapons"
+  ],
+  "damageImmunities": [
+    "fire",
+    "poison"
+  ],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "Infernal",
+    "telepathy 120 ft."
+  ],
+  "challengeRating": "5",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The devil makes three melee attacks: one with its tail and two with its claws. Alternatively, it can use Hurl Flame twice."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+    },
+    {
+      "name": "Tail",
+      "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage."
+    },
+    {
+      "name": "Hurl Flame",
+      "description": "Ranged Spell Attack: +5 to hit, range 150 ft., one target. Hit: 10 (3d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

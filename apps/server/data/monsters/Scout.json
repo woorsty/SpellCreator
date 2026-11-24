@@ -1,0 +1,76 @@
+{
+  "id": "29fe3d8f-1bc0-4924-a956-09490aeea953",
+  "name": "Scout",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 16,
+  "maxHp": 16,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 13,
+  "charisma": 11,
+  "savingThrowStrength": 0,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 1,
+  "savingThrowIntelligence": 0,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": 0,
+  "skills": [
+    {
+      "name": "nature",
+      "bonus": 4
+    },
+    {
+      "name": "perception",
+      "bonus": 5
+    },
+    {
+      "name": "stealth",
+      "bonus": 6
+    },
+    {
+      "name": "survival",
+      "bonus": 5
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 15"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "any one language (usually Common)"
+  ],
+  "challengeRating": "1/2",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The scout makes two melee attacks or two ranged attacks."
+    },
+    {
+      "name": "Shortsword",
+      "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+    },
+    {
+      "name": "Longbow",
+      "description": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

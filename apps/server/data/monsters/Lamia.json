@@ -1,0 +1,78 @@
+{
+  "id": "3d455f45-5f9a-476e-8ef6-47a4efa1829b",
+  "name": "Lamia",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 1,
+  "hp": 97,
+  "maxHp": 97,
+  "tempHp": 0,
+  "armorClass": 13,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 14,
+  "wisdom": 15,
+  "charisma": 16,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": 1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 2,
+  "savingThrowCharisma": 3,
+  "skills": [
+    {
+      "name": "deception",
+      "bonus": 7
+    },
+    {
+      "name": "insight",
+      "bonus": 4
+    },
+    {
+      "name": "stealth",
+      "bonus": 3
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 12"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [
+    "Abyssal",
+    "Common"
+  ],
+  "challengeRating": "4",
+  "movementRate": 30,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch."
+    },
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) slashing damage."
+    },
+    {
+      "name": "Dagger",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
+    },
+    {
+      "name": "Intoxicating Touch",
+      "description": "Melee Spell Attack: +5 to hit, reach 5 ft., one creature. Hit: The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

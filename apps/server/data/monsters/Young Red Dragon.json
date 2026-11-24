@@ -1,0 +1,77 @@
+{
+  "id": "8749336b-619e-4146-81fb-84f4f213c453",
+  "name": "Young Red Dragon",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 0,
+  "hp": 178,
+  "maxHp": 178,
+  "tempHp": 0,
+  "armorClass": 18,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 19,
+  "savingThrowStrength": 6,
+  "savingThrowDexterity": 0,
+  "savingThrowConstitution": 5,
+  "savingThrowIntelligence": 2,
+  "savingThrowWisdom": 0,
+  "savingThrowCharisma": 4,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 8
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Dunkelsicht 120 ft.",
+    "Blindsicht 30 ft.",
+    "Passive Wahrnehmung 18"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [
+    "fire"
+  ],
+  "conditionImmunities": [],
+  "languages": [
+    "Common",
+    "Draconic"
+  ],
+  "challengeRating": "10",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Multiattack",
+      "description": "The dragon makes three attacks: one with its bite and two with its claws."
+    },
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 3 (1d6) fire damage."
+    },
+    {
+      "name": "Claw",
+      "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage."
+    },
+    {
+      "name": "Fire Breath (Recharge 5-6)",
+      "description": "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

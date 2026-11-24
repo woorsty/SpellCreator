@@ -1,0 +1,58 @@
+{
+  "id": "02b4473e-c669-44e8-939b-4b2dfe16685a",
+  "name": "Cat",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": 2,
+  "hp": 2,
+  "maxHp": 2,
+  "tempHp": 0,
+  "armorClass": 12,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 3,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "savingThrowStrength": -4,
+  "savingThrowDexterity": 2,
+  "savingThrowConstitution": 0,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": 1,
+  "savingThrowCharisma": -2,
+  "skills": [
+    {
+      "name": "perception",
+      "bonus": 3
+    },
+    {
+      "name": "stealth",
+      "bonus": 4
+    }
+  ],
+  "senses": [
+    "Passive Wahrnehmung 13"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "0",
+  "movementRate": 40,
+  "actions": [
+    {
+      "name": "Claws",
+      "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 slashing damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

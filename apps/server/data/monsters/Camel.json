@@ -1,0 +1,49 @@
+{
+  "id": "33479f6f-a4f1-4484-8a72-771bcddea2fa",
+  "name": "Camel",
+  "type": "npc",
+  "initiative": null,
+  "initiativeBonus": -1,
+  "hp": 15,
+  "maxHp": 15,
+  "tempHp": 0,
+  "armorClass": 9,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "source": "SRD 5.2.1 (adkinn/srd-5.2.1)",
+  "description": "",
+  "imported": true,
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "savingThrowStrength": 3,
+  "savingThrowDexterity": -1,
+  "savingThrowConstitution": 2,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -1,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Passive Wahrnehmung 9"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [],
+  "languages": [],
+  "challengeRating": "1/8",
+  "movementRate": 50,
+  "actions": [
+    {
+      "name": "Bite",
+      "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}
