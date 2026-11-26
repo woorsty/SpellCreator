@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
+import React, { forwardRef, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary" | "ghost" | "danger" | "success";
@@ -7,15 +7,10 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   href?: string;
 };
 
-export function Button({
-  children,
-  className = "",
-  variant = "primary",
-  size = "md",
-  asChild = false,
-  href,
-  ...props
-}: ButtonProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps & AnchorHTMLAttributes<HTMLAnchorElement>>(function Button(
+  { children, className = "", variant = "primary", size = "md", asChild = false, href, ...props },
+  ref,
+) {
   const base = "inline-flex items-center justify-center rounded font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
 
   const variants = {
@@ -44,10 +39,11 @@ export function Button({
 
   return (
     <button
+      ref={ref}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {children}
     </button>
   );
-}
+});

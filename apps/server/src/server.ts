@@ -105,6 +105,11 @@ app.use(
   express.static(path.join(process.cwd(), "assets/toril_tiles")),
 );
 
+app.use(
+  "/monster-images",
+  express.static(path.join(process.cwd(), "data/monsters/images")),
+);
+
 app.use("/map", mapRoutes);
 
 app.listen(port, "::", () => {

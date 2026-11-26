@@ -20,7 +20,7 @@ export function characterSheetToCombatant(
   }
 
   return {
-    id: crypto.randomUUID?.() ?? `c-${Date.now()}`,
+    id: crypto?.randomUUID?.() ?? `c-${Date.now()}`,
     name: sheet.name,
     type: "npc",
     initiative: sheet.initiative,
@@ -32,7 +32,7 @@ export function characterSheetToCombatant(
     conditions: [],
     isDead: false,
     isConcentrating: false,
-    source: "Charakterbogen",
+    source: "custom",
     description: sheet.story || sheet.appearance || undefined,
     strength: sheet.attributes.strength.value,
     dexterity: sheet.attributes.dexterity.value,

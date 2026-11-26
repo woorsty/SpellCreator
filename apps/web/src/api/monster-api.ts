@@ -50,4 +50,25 @@ export const MonsterApi = {
       }),
     );
   },
+
+  async uploadMonsterImage(
+    name: string,
+    file: File,
+  ): Promise<{ ok: boolean; url: string }> {
+    const formData = new FormData();
+    formData.append("image", file);
+    const res = await fetch(`${MONSTERS_BASE}/${encodeURIComponent(name)}/image`, {
+      method: "POST",
+      body: formData,
+    });
+    return json<{ ok: boolean; url: string }>(res);
+  },
+
+  async deleteMonsterImage(name: string): Promise<{ ok: boolean }> {
+    return json<{ ok: boolean }>(
+      await fetch(`${MONSTERS_BASE}/${encodeURIComponent(name)}/image`, {
+        method: "DELETE",
+      }),
+    );
+  },
 };

@@ -180,8 +180,19 @@ export class CombatService {
     combatant: Omit<Combatant, "turnOrder">,
   ): Promise<CombatState> {
     const combat = await this.requireCombat(combatId);
+    
+    // Ensure unique ID for each combatant instance
+    const existingIds = new Set(combat.combatants.map((c) => c.id));
+    let newId = combatant.id;
+    if (!newId || existingIds.has(newId)) {
+      newId = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    }
+    while (existingIds.has(newId)) {
+      newId = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    }
+    
     const turnOrder = combat.combatants.length + 1;
-    const newCombatant: Combatant = { ...combatant, turnOrder };
+    const newCombatant: Combatant = { ...combatant, id: newId, turnOrder, conditions: combatant.conditions ?? [] };
     combat.combatants.push(newCombatant);
     combat.combatants = sortCombatants(combat.combatants);
     combat.updatedAt = now();
@@ -653,7 +664,7 @@ export class CombatService {
     const combat = await this.requireCombat(combatId);
     for (const combatant of combat.combatants) {
       const toExpire: Condition[] = [];
-      for (const condition of combatant.conditions) {
+      for (const condition of combatant.conditions ?? []) {
         let expired = false;
         if (condition.rounds !== undefined) {
           const expiresAt = condition.expiresAtRound ?? currentRound + condition.rounds;

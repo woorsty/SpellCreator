@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import type { Combatant, Condition } from "@repo/domain";
 import { useCombatStore } from "../combatStore";
 import { ConditionBadge } from "./ConditionBadge";
 import { HPBar } from "./HPBar";
 import { Badge } from "../../../component/ui/Badge";
 import { Button } from "../../../component/ui/Button";
+import { ApplyConditionDialog } from "./ApplyConditionDialog";
 
 type CombatantCardProps = {
   combatant: Combatant;
@@ -12,11 +13,24 @@ type CombatantCardProps = {
   isDead: boolean;
 };
 
-const typeColors: Record<string, { bg: string; text: string; border: string }> = {
-  player: { bg: "bg-blue-500/10", text: "text-blue-300", border: "border-blue-500/30" },
-  npc: { bg: "bg-purple-500/10", text: "text-purple-300", border: "border-purple-500/30" },
-  monster: { bg: "bg-red-500/10", text: "text-red-300", border: "border-red-500/30" },
-};
+const typeColors: Record<string, { bg: string; text: string; border: string }> =
+  {
+    player: {
+      bg: "bg-blue-500/10",
+      text: "text-blue-300",
+      border: "border-blue-500/30",
+    },
+    npc: {
+      bg: "bg-purple-500/10",
+      text: "text-purple-300",
+      border: "border-purple-500/30",
+    },
+    monster: {
+      bg: "bg-red-500/10",
+      text: "text-red-300",
+      border: "border-red-500/30",
+    },
+  };
 
 export function CombatantCard({
   combatant,
@@ -27,10 +41,11 @@ export function CombatantCard({
     changeHp,
     setTempHp,
     setInitiative,
-    applyCondition,
     removeCondition,
     removeCombatant,
   } = useCombatStore();
+
+  const [showConditionDialog, setShowConditionDialog] = useState(false);
 
   const typeStyle = typeColors[combatant.type] || typeColors.npc;
   const hpPct =
@@ -45,16 +60,26 @@ export function CombatantCard({
         isActive
           ? "bg-surface-2 border-primary ring-1 ring-primary shadow-[0_0_20px_rgba(139,92,246,0.25)] animate-glow"
           : "bg-surface border-border hover:border-border-focus/50 hover:shadow-dnd"
-      } ${isDead ? "opacity-50 grayscale" : ""}`}
+      } ${isDead ? "border-danger/50" : ""}`}
     >
       {/* Initiative Number Badge */}
       <div
         className={`w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-xl border ${
-          isActive ? "bg-primary text-white border-primary" : "bg-surface-2 text-text-muted border-border"
+          isActive
+            ? "bg-primary text-white border-primary"
+            : "bg-surface-2 text-text-muted border-border"
         }`}
       >
-        {combatant.turnOrder}
+        {combatant.initiative}
       </div>
+
+      {(combatant.portraitUrl || combatant.imageUrl) && (
+        <img
+          src={combatant.portraitUrl || combatant.imageUrl}
+          alt={combatant.name}
+          className="w-10 h-10 rounded-lg object-cover shrink-0 border border-border"
+        />
+      )}
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2 mb-1">
@@ -65,8 +90,20 @@ export function CombatantCard({
           >
             {combatant.name}
           </h3>
-          <Badge variant={combatant.type === "player" ? "primary" : combatant.type === "monster" ? "danger" : "default"}>
-            {combatant.type === "player" ? "Spieler" : combatant.type === "monster" ? "Monster" : "NSC"}
+          <Badge
+            variant={
+              combatant.type === "player"
+                ? "primary"
+                : combatant.type === "monster"
+                  ? "danger"
+                  : "default"
+            }
+          >
+            {combatant.type === "player"
+              ? "Spieler"
+              : combatant.type === "monster"
+                ? "Monster"
+                : "NSC"}
           </Badge>
         </div>
 
@@ -74,12 +111,10 @@ export function CombatantCard({
           <span className="flex items-center gap-1">
             <span className="text-[10px]">🛡️</span> AC {combatant.armorClass}
           </span>
-          <span className="flex items-center gap-1">
-            <span className="text-[10px]">🎲</span> INI {combatant.initiative}
-          </span>
           {combatant.initiativeRoll !== undefined && (
             <span className="flex items-center gap-1">
-              <span className="text-[10px]">🎯</span> W20 {combatant.initiativeRoll}
+              <span className="text-[10px]">🎯</span> W20{" "}
+              {combatant.initiativeRoll}
             </span>
           )}
         </div>
@@ -93,16 +128,16 @@ export function CombatantCard({
           <span className="text-sm font-mono text-text">{combatant.hp}</span>
           <span className="text-xs text-text-muted">/ {combatant.maxHp}</span>
           {combatant.tempHp > 0 && (
-            <span className="text-xs text-primary ml-1">+{combatant.tempHp} TH</span>
+            <span className="text-xs text-primary ml-1">
+              +{combatant.tempHp} TH
+            </span>
           )}
-          {isDead && (
-            <span className="ml-2 text-xs text-danger">💀 TOT</span>
-          )}
+          {isDead && <span className="ml-2 text-xs text-danger">💀 TOT</span>}
         </div>
 
         {/* Zustände */}
         <div className="flex flex-wrap gap-1.5 mt-2.5">
-          {combatant.conditions.map((c) => (
+          {(combatant.conditions ?? []).map((c) => (
             <ConditionBadge
               key={c.id}
               condition={c}
@@ -152,6 +187,21 @@ export function CombatantCard({
           </div>
         </div>
 
+        <button
+          onClick={() => setShowConditionDialog(true)}
+          className="p-1.5 rounded text-text-muted hover:text-primary hover:bg-primary/10 transition-colors"
+          title="Zustand hinzufügen"
+          aria-label="Zustand hinzufügen"
+        >
+          ⚡
+        </button>
+        {showConditionDialog && (
+          <ApplyConditionDialog
+            open={showConditionDialog}
+            onClose={() => setShowConditionDialog(false)}
+            combatantId={combatant.id}
+          />
+        )}
         <button
           onClick={() => removeCombatant(combatant.id)}
           className="p-1.5 rounded text-text-muted hover:text-red-400 hover:bg-red-500/10 transition-colors"

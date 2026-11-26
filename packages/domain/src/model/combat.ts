@@ -31,13 +31,12 @@ export interface Combatant {
   concentrationSpell?: string;
   imageUrl?: string; // Portrait URL
   portraitUrl?: string;
-  source?: string; // Quelle
+  source?: "imported" | "custom"; // Herkunft: importiert (SRD) oder benutzerdefiniert
   notes?: string;
   description?: string; // Beschreibung
   owner?: string; // player name for multiplayer
   initiativeRoll?: number; // raw d20 roll
   turnOrder: number;
-  imported?: boolean; // true für importierte Monster (SRD), false für benutzererstellte
   // Attribute
   strength?: number;
   dexterity?: number;

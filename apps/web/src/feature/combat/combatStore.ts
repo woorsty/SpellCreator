@@ -56,6 +56,9 @@ type CombatStore = {
   applyCondition: (combatantId: string, condition: Condition) => Promise<void>;
   removeCondition: (combatantId: string, conditionId: string) => Promise<void>;
 
+  /** conditionId -> combat round at application time (client-side countdown only) */
+  conditionAppliedAt: Record<string, number>;
+
   fetchMonsters: () => Promise<void>;
   saveMonster: (monster: Omit<Combatant, "turnOrder">) => Promise<void>;
   updateMonster: (
@@ -80,6 +83,8 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
   monsters: [],
   monstersLoading: false,
   monstersError: null,
+
+  conditionAppliedAt: {},
 
   setCombats: (combats) => set({ combats }),
 
@@ -377,8 +382,15 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
     const id = get().currentCombat?.id;
     if (!id) return;
     try {
+      const currentRound = get().currentCombat?.round ?? 1;
       const combat = await CombatApi.applyCondition(id, combatantId, condition);
-      set({ currentCombat: combat });
+      set((state) => ({
+        currentCombat: combat,
+        conditionAppliedAt: {
+          ...state.conditionAppliedAt,
+          [condition.id]: currentRound,
+        },
+      }));
     } catch (err) {
       set({ error: (err as Error).message });
     }

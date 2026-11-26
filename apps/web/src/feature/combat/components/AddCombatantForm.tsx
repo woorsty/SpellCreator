@@ -11,6 +11,7 @@ import { Select } from "../../../component/ui/Select";
 import { Button } from "../../../component/ui/Button";
 import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
+import { MonsterApi } from "../../../api/monster-api";
 
 type AddCombatantFormProps = {
   onAdd: (combatant: Omit<Combatant, "turnOrder">) => void;
@@ -23,6 +24,7 @@ type AddCombatantFormProps = {
 const initialValues: Record<string, unknown> = {
   name: "",
   portraitUrl: "",
+  imageUrl: "",
   source: "",
   type: "npc",
   initiative: 0,
@@ -203,6 +205,9 @@ const StringListField = memo(function StringListField({
 }) {
   const [draft, setDraft] = useState("");
   const [list, setList] = useState<string[]>(items);
+  const inputRefs = useRef<HTMLInputElement[]>([]);
+  const addButtonRef = useRef<HTMLButtonElement>(null);
+  const draftInputRef = useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {
     setList(items);
@@ -213,29 +218,32 @@ const StringListField = memo(function StringListField({
     if (!trimmed || list.includes(trimmed)) return;
     setList([...list, trimmed]);
     setDraft("");
+    setTimeout(() => draftInputRef.current?.focus(), 0);
   }, [draft, list]);
 
-  const update = useCallback(
-    (index: number, value: string) => {
-      setList((prev) => {
-        const next = [...prev];
-        next[index] = value.trim();
-        return next;
-      });
-    },
-    [],
-  );
+  const update = useCallback((index: number, value: string) => {
+    setList((prev) => {
+      const next = [...prev];
+      next[index] = value;
+      return next;
+    });
+  }, []);
 
-  const remove = useCallback(
-    (index: number) => {
-      setList((prev) => {
-        const next = [...prev];
-        next.splice(index, 1);
-        return next;
-      });
-    },
-    [],
-  );
+  const remove = useCallback((index: number) => {
+    setList((prev) => {
+      const next = [...prev];
+      next.splice(index, 1);
+      return next;
+    });
+  }, []);
+
+  const addEmptyRow = useCallback(() => {
+    setList((prev) => {
+      const next = [...prev, ""];
+      setTimeout(() => inputRefs.current[next.length - 1]?.focus(), 0);
+      return next;
+    });
+  }, []);
 
   React.useEffect(() => {
     onChange(list);
@@ -249,24 +257,32 @@ const StringListField = memo(function StringListField({
           onChange={(e) => setDraft(e.target.value)}
           placeholder={placeholder}
           className="flex-1"
+          ref={draftInputRef}
         />
-        <Button size="sm" onClick={add}>
+        <Button size="sm" onClick={add} ref={addButtonRef} type="button">
           {addLabel}
         </Button>
       </div>
       <div className="space-y-1">
         {list.map((item, i) => (
-          <div
-            key={i}
-            className="bg-surface border border-border rounded p-2"
-          >
+          <div key={i} className="bg-surface border border-border rounded p-2">
             <div className="flex gap-2 mb-1">
               <Input
                 value={item}
                 onChange={(e) => update(i, e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    addEmptyRow();
+                  }
+                }}
+                ref={(el) => {
+                  if (el)
+                    inputRefs.current[i] = el as unknown as HTMLInputElement;
+                }}
                 className="flex-1 text-sm"
               />
-              <button
+              <button type="button"
                 onClick={() => remove(i)}
                 className="p-1 text-text-muted hover:text-red-400"
               >
@@ -326,49 +342,37 @@ const EntryListField = memo(function EntryListField({
     setDraftBonus("0");
   }, [draftName, draftDesc, draftBonus, isSkill]);
 
-  const updateName = useCallback(
-    (index: number, value: string) => {
-      setList((prev) => {
-        const next = [...prev];
-        next[index] = { ...next[index], name: value };
-        return next;
-      });
-    },
-    [],
-  );
+  const updateName = useCallback((index: number, value: string) => {
+    setList((prev) => {
+      const next = [...prev];
+      next[index] = { ...next[index], name: value };
+      return next;
+    });
+  }, []);
 
-  const updateDesc = useCallback(
-    (index: number, value: string) => {
-      setList((prev) => {
-        const next = [...prev];
-        next[index] = { ...next[index], description: value };
-        return next;
-      });
-    },
-    [],
-  );
+  const updateDesc = useCallback((index: number, value: string) => {
+    setList((prev) => {
+      const next = [...prev];
+      next[index] = { ...next[index], description: value };
+      return next;
+    });
+  }, []);
 
-  const updateBonus = useCallback(
-    (index: number, value: number) => {
-      setList((prev) => {
-        const next = [...prev];
-        next[index] = { ...next[index], bonus: value };
-        return next;
-      });
-    },
-    [],
-  );
+  const updateBonus = useCallback((index: number, value: number) => {
+    setList((prev) => {
+      const next = [...prev];
+      next[index] = { ...next[index], bonus: value };
+      return next;
+    });
+  }, []);
 
-  const remove = useCallback(
-    (index: number) => {
-      setList((prev) => {
-        const next = [...prev];
-        next.splice(index, 1);
-        return next;
-      });
-    },
-    [],
-  );
+  const remove = useCallback((index: number) => {
+    setList((prev) => {
+      const next = [...prev];
+      next.splice(index, 1);
+      return next;
+    });
+  }, []);
 
   React.useEffect(() => {
     onChange(list);
@@ -403,16 +407,13 @@ const EntryListField = memo(function EntryListField({
             className="flex-1 min-h-[40px]"
           />
         )}
-        <Button size="sm" onClick={add}>
+        <Button size="sm" onClick={add} type="button">
           {addLabel}
         </Button>
       </div>
       <div className="space-y-1">
         {list.map((item, i) => (
-          <div
-            key={i}
-            className="bg-surface border border-border rounded p-2"
-          >
+          <div key={i} className="bg-surface border border-border rounded p-2">
             <div className="flex gap-2 mb-1">
               <Input
                 value={item.name}
@@ -425,7 +426,9 @@ const EntryListField = memo(function EntryListField({
                   <input
                     type="number"
                     value={item.bonus ?? 0}
-                    onChange={(e) => updateBonus(i, Number(e.target.value) || 0)}
+                    onChange={(e) =>
+                      updateBonus(i, Number(e.target.value) || 0)
+                    }
                     className="w-full px-2 py-1 rounded bg-surface border border-border text-text text-center"
                   />
                 </div>
@@ -439,7 +442,7 @@ const EntryListField = memo(function EntryListField({
                   className="flex-1 text-sm min-h-[40px]"
                 />
               )}
-              <button
+              <button type="button"
                 onClick={() => remove(i)}
                 className="p-1 text-text-muted hover:text-red-400"
               >
@@ -496,7 +499,13 @@ export function AddCombatantForm({
   onSave,
 }: AddCombatantFormProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [form, setForm] = useState<Record<string, unknown>>({ ...initialValues });
+  const [form, setForm] = useState<Record<string, unknown>>({
+    ...initialValues,
+  });
+
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [uploading, setUploading] = useState(false);
 
   // Stable per-field handler references so React.memo fields don't re-render
   // when the parent re-renders. No .bind() calls – those create new functions.
@@ -506,7 +515,8 @@ export function AddCombatantForm({
   const getFieldHandler = useCallback((name: string) => {
     let handler = fieldHandlers.current.get(name);
     if (!handler) {
-      handler = (value: unknown) => setForm((prev) => ({ ...prev, [name]: value }));
+      handler = (value: unknown) =>
+        setForm((prev) => ({ ...prev, [name]: value }));
       fieldHandlers.current.set(name, handler);
     }
     return handler;
@@ -518,6 +528,7 @@ export function AddCombatantForm({
       setForm({
         name: monster.name,
         portraitUrl: monster.portraitUrl ?? "",
+        imageUrl: monster.imageUrl ?? "",
         source: monster.source ?? "",
         type: "npc",
         initiative: monster.initiative,
@@ -555,55 +566,102 @@ export function AddCombatantForm({
         mythicActions: monster.mythicActions ?? [],
         description: monster.description ?? "",
       });
+      setImagePreview(monster.imageUrl ?? null);
+      setSelectedImage(null);
       setErrors({});
     } else {
       setForm({ ...initialValues });
+      setImagePreview(null);
+      setSelectedImage(null);
       setErrors({});
     }
   }, [open, monster]);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    setSelectedImage(file);
+    if (file) {
+      setImagePreview(URL.createObjectURL(file));
+    } else {
+      setImagePreview(null);
+    }
+  };
+
+  const handleUploadImage = async () => {
+    if (!selectedImage) return;
+    const name = String(form.name ?? "").trim();
+    if (!name) return;
+    setUploading(true);
+    try {
+      const { url } = await MonsterApi.uploadMonsterImage(name, selectedImage);
+      setForm((prev) => ({ ...prev, imageUrl: url }));
+      setImagePreview(url);
+      setSelectedImage(null);
+    } catch (err) {
+      setErrors({
+        ...errors,
+        image: (err as Error).message || "Bild konnte nicht hochgeladen werden",
+      });
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setForm((prev) => ({ ...prev, imageUrl: undefined }));
+    setImagePreview(null);
+    setSelectedImage(null);
+    if (imagePreview?.startsWith("blob:")) {
+      URL.revokeObjectURL(imagePreview);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const v = form;
     const next: Record<string, string> = {};
-    if (!String(v.name ?? "").trim()) next.name = "Name ist erforderlich";
-    if (typeof v.initiative !== "number") next.initiative = "Initiative ist erforderlich";
-    if (typeof v.hp !== "number") next.hp = "Trefferpunkte sind erforderlich";
-    if (typeof v.maxHp !== "number") next.maxHp = "Max. TP sind erforderlich";
-    if (typeof v.armorClass !== "number") next.armorClass = "Rüstungsklasse ist erforderlich";
+    const name = String(v.name ?? "").trim();
+    if (!name) next.name = "Name ist erforderlich";
+
+    const toNumber = (value: unknown): number => {
+      const n = Number(value ?? 0);
+      return Number.isFinite(n) ? n : 0;
+    };
+
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
     const payload: Omit<Combatant, "turnOrder"> = {
-      id: crypto.randomUUID?.() ?? `c-${Date.now()}`,
-      name: String(v.name ?? "").trim(),
+      id: monster ? monster.id : (crypto?.randomUUID?.() ?? `c-${Date.now()}`),
+      name,
       type: "npc",
-      initiative: v.initiative as number,
-      initiativeBonus: v.initiativeBonus as number,
-      initiativeModifier: v.initiativeModifier as number,
-      hp: v.hp as number,
-      maxHp: v.maxHp as number,
-      tempHp: v.tempHp as number,
-      armorClass: v.armorClass as number,
-      movementRate: v.movementRate as number,
+      initiative: toNumber(v.initiative),
+      initiativeBonus: toNumber(v.initiativeBonus),
+      initiativeModifier: toNumber(v.initiativeModifier),
+      hp: toNumber(v.hp),
+      maxHp: toNumber(v.maxHp),
+      tempHp: toNumber(v.tempHp),
+      armorClass: toNumber(v.armorClass),
+      movementRate: toNumber(v.movementRate),
       conditions: [],
       isDead: false,
       isConcentrating: false,
       portraitUrl: v.portraitUrl ? String(v.portraitUrl) : undefined,
-      source: v.source ? String(v.source) : undefined,
+      imageUrl: v.imageUrl ? String(v.imageUrl) : undefined,
+      source: monster ? (monster.source as "imported" | "custom") : "custom",
       description: v.description ? String(v.description) : undefined,
-      strength: v.strength as number,
-      dexterity: v.dexterity as number,
-      constitution: v.constitution as number,
-      intelligence: v.intelligence as number,
-      wisdom: v.wisdom as number,
-      charisma: v.charisma as number,
-      savingThrowStrength: v.savingThrowStrength as number,
-      savingThrowDexterity: v.savingThrowDexterity as number,
-      savingThrowConstitution: v.savingThrowConstitution as number,
-      savingThrowIntelligence: v.savingThrowIntelligence as number,
-      savingThrowWisdom: v.savingThrowWisdom as number,
-      savingThrowCharisma: v.savingThrowCharisma as number,
+      strength: toNumber(v.strength),
+      dexterity: toNumber(v.dexterity),
+      constitution: toNumber(v.constitution),
+      intelligence: toNumber(v.intelligence),
+      wisdom: toNumber(v.wisdom),
+      charisma: toNumber(v.charisma),
+      savingThrowStrength: toNumber(v.savingThrowStrength),
+      savingThrowDexterity: toNumber(v.savingThrowDexterity),
+      savingThrowConstitution: toNumber(v.savingThrowConstitution),
+      savingThrowIntelligence: toNumber(v.savingThrowIntelligence),
+      savingThrowWisdom: toNumber(v.savingThrowWisdom),
+      savingThrowCharisma: toNumber(v.savingThrowCharisma),
       skills: v.skills as Skill[],
       senses: v.senses as string[],
       damageVulnerabilities: v.damageVulnerabilities as string[],
@@ -634,8 +692,7 @@ export function AddCombatantForm({
           <h3 className="text-lg font-serif font-bold text-text">
             Kreatur hinzufügen
           </h3>
-          <button
-            type="button"
+          <button type="button"
             onClick={onClose}
             className="rounded p-1.5 text-text-muted hover:text-text hover:bg-surface-2 transition-colors"
             aria-label="Schließen"
@@ -707,23 +764,18 @@ export function AddCombatantForm({
             </div>
             <div className="space-y-1">
               <NumberField
-                label="TP"
-                value={form.hp as number}
-                onChange={getFieldHandler("hp")}
-                min={0}
-              />
-            </div>
-            <div className="space-y-1">
-              <NumberField
                 label="Max. TP"
                 value={form.maxHp as number}
-                onChange={getFieldHandler("maxHp")}
+                onChange={(v) => {
+                  getFieldHandler("maxHp")(v);
+                  getFieldHandler("hp")(v);
+                }}
                 min={0}
               />
             </div>
             <div className="space-y-1">
               <NumberField
-                label="TH"
+                label="Temporäre TP"
                 value={form.tempHp as number}
                 onChange={getFieldHandler("tempHp")}
                 min={0}
@@ -739,13 +791,72 @@ export function AddCombatantForm({
             </div>
             <div className="space-y-1">
               <TextField
-                label="Schwierigkeitsgrad (KR)"
+                label="Herausforderungsgrad"
                 value={String(form.challengeRating ?? "")}
                 onChange={getFieldHandler("challengeRating")}
                 placeholder="z. B. 1/4, 1, 5"
               />
             </div>
           </Grid>
+        </FieldCard>
+
+        <FieldCard title="Bild / Portrait">
+          <div className="space-y-3">
+            <div className="flex items-center gap-4">
+              <div className="w-32 h-32 shrink-0 rounded-lg border border-border bg-surface overflow-hidden flex items-center justify-center">
+                {imagePreview ? (
+                  <img
+                    src={imagePreview}
+                    alt={String(form.name ?? "")}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-text-muted text-sm">Kein Bild</div>
+                )}
+              </div>
+              <div className="flex-1 space-y-2">
+                <div className="space-y-1">
+                  <label className="block text-sm font-medium text-text">
+                    Bilddatei
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    className="block w-full text-sm text-text-muted
+                    file:mr-4 file:py-2 file:px-4 file:rounded file:border-0
+                    file:text-sm file:font-semibold file:bg-primary file:text-primary
+                    hover:file:bg-primary/90"
+                  />
+                </div>
+                {selectedImage && !uploading ? (
+                  <Button
+                    size="sm"
+                    onClick={handleUploadImage}
+                    disabled={!String(form.name ?? "").trim()}
+                  >
+                    Bild hochladen
+                  </Button>
+                ) : uploading ? (
+                  <Button size="sm" disabled>
+                    Wird hochgeladen…
+                  </Button>
+                ) : null}
+                {imagePreview && !selectedImage ? (
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    onClick={handleRemoveImage}
+                  >
+                    Bild entfernen
+                  </Button>
+                ) : null}
+              </div>
+            </div>
+            {errors.image && (
+              <p className="text-sm text-danger">{errors.image}</p>
+            )}
+          </div>
         </FieldCard>
 
         <FieldCard title="Attribute">

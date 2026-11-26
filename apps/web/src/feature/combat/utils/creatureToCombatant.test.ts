@@ -105,7 +105,7 @@ describe("characterSheetToCombatant", () => {
     expect(combatant.armorClass).toBe(13);
     expect(combatant.isDead).toBe(false);
     expect(combatant.conditions).toEqual([]);
-    expect(combatant.source).toBe("Charakterbogen");
+    expect(combatant.source).toBe("custom");
   });
 
   it("maps attributes", () => {

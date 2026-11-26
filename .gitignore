@@ -27,3 +27,5 @@ dist-ssr
 
 **/toril_tiles/*
 apps/server/data/article/*
+apps/server/data/combats/*
+apps/server/data/characters/*

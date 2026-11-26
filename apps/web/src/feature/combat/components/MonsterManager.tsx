@@ -19,7 +19,7 @@ function getApiName(monster: Combatant): string {
 }
 
 function isImported(monster: Combatant): boolean {
-  return monster.imported === true;
+  return monster.source === "imported";
 }
 
 type MonsterManagerProps = {
@@ -76,16 +76,20 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
     setEditingMonster(undefined);
   };
 
-  const handleAddToCombat = (monster: Combatant) => {
-    addMonsterToCombat(monster);
+  const handleAddToCombat = async (monster: Combatant) => {
+    const combatant: Omit<Combatant, "turnOrder"> = {
+      ...monster,
+      id: crypto?.randomUUID?.() ?? `c-${Date.now()}`,
+    };
+    await addMonsterToCombat(combatant);
   };
 
   const handleCopyMonster = (monster: Combatant) => {
-    // Create a copy without the imported flag and with a new ID
+    // Create a copy with a new ID and custom source
     const copy: Omit<Combatant, "turnOrder"> = {
       ...monster,
-      id: crypto.randomUUID?.() ?? `c-${Date.now()}`,
-      imported: false,
+      id: crypto?.randomUUID?.() ?? `c-${Date.now()}`,
+      source: "custom",
       name: `${monster.name} (Kopie)`,
     };
     saveMonster(copy);
@@ -104,34 +108,29 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-serif font-bold text-text">
-            Kreaturen verwalten
-          </h2>
-          <p className="text-text-muted text-sm">
-            Gespeicherte Kreaturen dauerhaft verwalten und zum Kampf hinzufügen.
-          </p>
+          <h2 className="text-xl font-serif font-bold text-text">Kreaturen</h2>
         </div>
-        <Button onClick={handleAddMonster} variant="primary">
-          + Neue Kreatur
-        </Button>
       </div>
 
       {showForm && (
-        <AddCombatantForm
-          open={true}
-          monster={editingMonster}
-          onClose={() => setShowForm(false)}
-          onAdd={(combatant) => {
-            // Also save to monster list when creating new
-            if (!editingMonster) {
-              saveMonster(combatant);
-            }
-            addMonsterToCombat(combatant);
-            setShowForm(false);
-            setEditingMonster(undefined);
-          }}
-          onSave={handleSaveMonster}
-        />
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-surface p-4 rounded max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <AddCombatantForm
+              open={true}
+              monster={editingMonster}
+              onClose={() => setShowForm(false)}
+              onAdd={(combatant) => {
+                if (!editingMonster) {
+                  saveMonster(combatant);
+                  addMonsterToCombat(combatant);
+                }
+                setShowForm(false);
+                setEditingMonster(undefined);
+              }}
+              onSave={handleSaveMonster}
+            />
+          </div>
+        </div>
       )}
 
       <div className="space-y-2">
@@ -154,87 +153,72 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
         </div>
       ) : (
         <Card variant="elevated" className="overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-surface-2 border-b border-border">
-                  <th className="p-3 text-text font-medium">Name</th>
-                  <th className="p-3 text-text font-medium">TP</th>
-                  <th className="p-3 text-text font-medium">AC</th>
-                  <th className="p-3 text-text font-medium">INI</th>
-                  <th className="p-3 text-text font-medium">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredMonsters.map((monster) => {
-                  const displayName = getMonsterName(monster);
-                  const imported = isImported(monster);
-                  return (
-                    <tr
-                      key={monster.id}
-                      className="border-b border-border hover:bg-surface-2 transition-colors group"
-                    >
-                      <td className="p-3 font-medium text-text">
-                        {displayName}
-                        {getMonsterName(monster) !== monster.name && (
-                          <span className="text-text-muted text-xs ml-1">
-                            ({monster.name})
-                          </span>
-                        )}
-                        {imported && (
-                          <span className="text-text-muted text-xs ml-1">
-                            (importiert)
-                          </span>
-                        )}
-                      </td>
-                      <td className="p-3 text-text-muted">
-                        {monster.hp} / {monster.maxHp}
-                      </td>
-                      <td className="p-3 text-text-muted">{monster.armorClass}</td>
-                      <td className="p-3 text-text-muted">
-                        {monster.initiative}
-                      </td>
-                      <td className="p-3 flex gap-2">
+          <table className="w-full text-left border-collapse">
+            <tbody>
+              {filteredMonsters.map((monster) => {
+                const displayName = getMonsterName(monster);
+                const imported = isImported(monster);
+                return (
+                  <tr
+                    key={monster.id}
+                    className="border-b border-border hover:bg-surface-2 transition-colors group"
+                  >
+                    <td className="p-3 font-medium text-text">
+                      {monster.imageUrl && (
+                        <img
+                          src={monster.imageUrl}
+                          alt={displayName}
+                          className="w-10 h-10 rounded-lg object-cover border border-border"
+                        />
+                      )}
+                      {displayName}
+                      {getMonsterName(monster) !== monster.name && (
+                        <span className="text-text-muted text-xs ml-1">
+                          ({monster.name})
+                        </span>
+                      )}
+                    </td>
+                    <td className="p-3 flex flex-col gap-2 w-12">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        onClick={() => handleAddToCombat(monster)}
+                      >
+                        +
+                      </Button>
+                      {imported ? (
                         <Button
                           size="sm"
                           variant="secondary"
-                          onClick={() => handleAddToCombat(monster)}
+                          onClick={() => handleCopyMonster(monster)}
                         >
-                          Zum Kampf
+                          🐑
                         </Button>
-                        {imported ? (
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            onClick={() => handleCopyMonster(monster)}
-                          >
-                            Kopieren
-                          </Button>
-                        ) : (
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            onClick={() => handleEditMonster(monster)}
-                          >
-                            Bearbeiten
-                          </Button>
-                        )}
-                        {!imported && (
-                          <button
-                            onClick={() => handleDeleteMonster(monster)}
-                            className="p-1.5 text-text-muted hover:text-red-400"
-                            aria-label={`Kreatur ${displayName} löschen`}
-                          >
-                            🗑️
-                          </button>
-                        )}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+                      ) : (
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          onClick={() => handleEditMonster(monster)}
+                        >
+                          ✏️
+                        </Button>
+                      )}
+                      {!imported && (
+                        <Button
+                          onClick={() => handleDeleteMonster(monster)}
+                          className="p-1.5 text-text-muted hover:text-red-400"
+                          aria-label={`Kreatur ${displayName} löschen`}
+                          variant="secondary"
+                        >
+                          🗑️
+                        </Button>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </Card>
       )}
     </div>
