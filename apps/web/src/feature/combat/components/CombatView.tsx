@@ -73,9 +73,9 @@ export function CombatView({ combat }: { combat: CombatState }) {
     setShowInitDialog(false);
     await startCombat();
   };
-  const [leftTab, setLeftTab] = useState<"creatures" | "players" | "encounters">(
-    "creatures",
-  );
+  const [leftTab, setLeftTab] = useState<
+    "creatures" | "players" | "encounters"
+  >("creatures");
   const [encounters, setEncounters] = useState<any[]>([]);
   const [showCreaturesList, setShowCreaturesList] = useState(false);
   const [showConditionDialog, setShowConditionDialog] = useState<{
@@ -96,7 +96,9 @@ export function CombatView({ combat }: { combat: CombatState }) {
   React.useEffect(() => {
     fetchCreatures();
     fetchMonsters();
-    CombatApi.listEncounters().then(setEncounters).catch(() => {});
+    CombatApi.listEncounters()
+      .then(setEncounters)
+      .catch(() => {});
   }, [fetchCreatures, fetchMonsters]);
 
   const handleApplyCondition = (combatantId: string) => {
@@ -167,18 +169,26 @@ export function CombatView({ combat }: { combat: CombatState }) {
                 onClick={() => setLeftTab(t)}
                 className={`flex-1 text-xs py-2 ${leftTab === t ? "border-b-2 border-primary text-primary" : "text-text-muted"}`}
               >
-                {t === "creatures" ? "Kreaturen" : t === "players" ? "Spieler" : "Encounters"}
+                {t === "creatures"
+                  ? "Kreaturen"
+                  : t === "players"
+                    ? "Spieler"
+                    : "Encounters"}
               </button>
             ))}
           </div>
           <div className="flex-1 overflow-y-auto p-3 space-y-2">
-            {leftTab === "creatures" && <MonsterManager open onClose={() => {}} />}
+            {leftTab === "creatures" && (
+              <MonsterManager open onClose={() => {}} />
+            )}
             {leftTab === "players" && (
               <div className="space-y-2">
                 {creatures.map((c, i) => (
                   <button
                     key={i}
-                    onClick={() => addCombatant(characterSheetToCombatant(c))}
+                    onClick={() =>
+                      addCombatant(characterSheetToCombatant(c, true))
+                    }
                     className="w-full text-left p-2 rounded bg-surface-2 text-sm"
                   >
                     {c.name}
@@ -219,7 +229,11 @@ export function CombatView({ combat }: { combat: CombatState }) {
             )}
           </div>
           <div className="shrink-0 p-3 border-t border-border">
-            <Button size="sm" className="w-full" onClick={() => setShowAddForm(true)}>
+            <Button
+              size="sm"
+              className="w-full"
+              onClick={() => setShowAddForm(true)}
+            >
               + Kreatur
             </Button>
           </div>

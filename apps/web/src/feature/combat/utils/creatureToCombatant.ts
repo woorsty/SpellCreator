@@ -2,6 +2,7 @@ import type { CharacterSheet, Combatant, Skill } from "@repo/domain";
 
 export function characterSheetToCombatant(
   sheet: CharacterSheet,
+  isPlayer = false,
 ): Omit<Combatant, "turnOrder"> {
   const skills: Skill[] = [];
   for (const attribute of Object.keys(
@@ -22,7 +23,7 @@ export function characterSheetToCombatant(
   return {
     id: crypto?.randomUUID?.() ?? `c-${Date.now()}`,
     name: sheet.name,
-    type: "npc",
+    type: isPlayer ? "player" : "npc",
     initiative: sheet.initiative,
     initiativeBonus: 0,
     hp: sheet.currentHitpoints,
