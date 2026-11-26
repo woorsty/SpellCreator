@@ -1,0 +1,53 @@
+{
+  "id": "38f1c1d7-9afd-4310-9efe-9659adaed0c7",
+  "name": "Zombie (Kopie)2",
+  "type": "npc",
+  "initiative": 0,
+  "initiativeBonus": -2,
+  "initiativeModifier": 0,
+  "hp": 22,
+  "maxHp": 22,
+  "tempHp": 0,
+  "armorClass": 8,
+  "movementRate": 20,
+  "conditions": [],
+  "isDead": false,
+  "isConcentrating": false,
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "savingThrowStrength": 1,
+  "savingThrowDexterity": -2,
+  "savingThrowConstitution": 3,
+  "savingThrowIntelligence": -4,
+  "savingThrowWisdom": -2,
+  "savingThrowCharisma": -3,
+  "skills": [],
+  "senses": [
+    "Dunkelsicht 60 ft.",
+    "Passive Wahrnehmung 8"
+  ],
+  "damageVulnerabilities": [],
+  "damageResistances": [],
+  "damageImmunities": [],
+  "conditionImmunities": [
+    "poisoned"
+  ],
+  "languages": [
+    "understands the languages it knew in life but can't speak"
+  ],
+  "challengeRating": "1/4",
+  "traits": [],
+  "actions": [
+    {
+      "name": "Slam",
+      "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage."
+    }
+  ],
+  "bonusActions": [],
+  "legendaryActions": [],
+  "mythicActions": []
+}

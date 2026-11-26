@@ -43,9 +43,12 @@ export function CombatantCard({
     setInitiative,
     removeCondition,
     removeCombatant,
+    updateCombatant,
   } = useCombatStore();
 
   const [showConditionDialog, setShowConditionDialog] = useState(false);
+  const [editingName, setEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState(combatant.name);
 
   const typeStyle = typeColors[combatant.type] || typeColors.npc;
   const hpPct =
@@ -83,13 +86,43 @@ export function CombatantCard({
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2 mb-1">
-          <h3
-            className={`text-base font-serif font-semibold truncate ${
-              isActive ? "text-primary" : "text-text"
-            }`}
-          >
-            {combatant.name}
-          </h3>
+          {editingName ? (
+            <input
+              autoFocus
+              value={nameDraft}
+              onChange={(e) => setNameDraft(e.target.value)}
+              onBlur={() => {
+                const trimmed = nameDraft.trim();
+                if (trimmed && trimmed !== combatant.name) {
+                  updateCombatant(combatant.id, { name: trimmed } as any);
+                } else {
+                  setNameDraft(combatant.name);
+                }
+                setEditingName(false);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") (e.target as HTMLInputElement).blur();
+                if (e.key === "Escape") {
+                  setNameDraft(combatant.name);
+                  setEditingName(false);
+                }
+              }}
+              className="text-base font-serif font-semibold bg-surface-2 border border-border rounded px-1 w-full"
+            />
+          ) : (
+            <h3
+              onClick={(e) => {
+                e.stopPropagation();
+                setNameDraft(combatant.name);
+                setEditingName(true);
+              }}
+              className={`text-base font-serif font-semibold truncate ${
+                isActive ? "text-primary" : "text-text"
+              } ${"cursor-pointer hover:underline"}`}
+            >
+              {combatant.name}
+            </h3>
+          )}
           <Badge
             variant={
               combatant.type === "player"
@@ -202,6 +235,17 @@ export function CombatantCard({
             combatantId={combatant.id}
           />
         )}
+        <button
+          onClick={() => {
+            setNameDraft(combatant.name);
+            setEditingName(true);
+          }}
+            className="p-1.5 rounded text-text-muted hover:text-primary hover:bg-primary/10 transition-colors"
+            title="Umbenennen"
+            aria-label="Kreatur umbenennen"
+          >
+            ✏️
+          </button>
         <button
           onClick={() => removeCombatant(combatant.id)}
           className="p-1.5 rounded text-text-muted hover:text-red-400 hover:bg-red-500/10 transition-colors"
