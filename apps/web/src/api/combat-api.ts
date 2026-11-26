@@ -35,10 +35,6 @@ export const CombatApi = {
     return json<CombatState>(await fetch(`${COMBAT_BASE}/${id}`));
   },
 
-  async deleteCombat(id: string): Promise<void> {
-    await fetch(`${COMBAT_BASE}/${id}`, { method: "DELETE" });
-  },
-
   async startCombat(id: string): Promise<CombatState> {
     return json<CombatState>(await fetch(`${COMBAT_BASE}/${id}/start`, { method: "POST" }));
   },

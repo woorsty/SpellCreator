@@ -34,7 +34,6 @@ createRoot(document.getElementById("root")!).render(
         <Route path="combat/automations/new" element={<AutomationEditor />} />
         <Route path="combat/automations/:id" element={<AutomationEditor />} />
         <Route path="combat" element={<CombatManager />} />
-        <Route path="combat/:id" element={<CombatManager />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

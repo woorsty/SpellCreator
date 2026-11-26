@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import type { CombatState, Combatant, Condition } from "@repo/domain";
 import { useCombatStore } from "../combatStore";
+import { CombatApi } from "../../../api/combat-api";
 import { CombatantCard } from "./CombatantCard";
 import { AddCombatantForm } from "./AddCombatantForm";
 import { AddCreaturesFromList } from "./AddCreaturesFromList";
@@ -8,6 +9,7 @@ import { ApplyConditionDialog } from "./ApplyConditionDialog";
 
 import { Button } from "../../../component/ui/Button";
 import { MonsterManager } from "./MonsterManager";
+import { characterSheetToCombatant } from "../utils/creatureToCombatant";
 import { Card } from "../../../component/ui/Card";
 import { Badge } from "../../../component/ui/Badge";
 import { Input } from "../../../component/ui/Input";
@@ -71,6 +73,10 @@ export function CombatView({ combat }: { combat: CombatState }) {
     setShowInitDialog(false);
     await startCombat();
   };
+  const [leftTab, setLeftTab] = useState<"creatures" | "players" | "encounters">(
+    "creatures",
+  );
+  const [encounters, setEncounters] = useState<any[]>([]);
   const [showCreaturesList, setShowCreaturesList] = useState(false);
   const [showConditionDialog, setShowConditionDialog] = useState<{
     open: boolean;
@@ -90,6 +96,7 @@ export function CombatView({ combat }: { combat: CombatState }) {
   React.useEffect(() => {
     fetchCreatures();
     fetchMonsters();
+    CombatApi.listEncounters().then(setEncounters).catch(() => {});
   }, [fetchCreatures, fetchMonsters]);
 
   const handleApplyCondition = (combatantId: string) => {
@@ -151,17 +158,68 @@ export function CombatView({ combat }: { combat: CombatState }) {
       </Card>
 
       <div className="flex flex-1 min-h-0">
-        {/* Left: Monster list */}
+        {/* Left: tabs */}
         <div className="w-96 shrink-0 border-r border-border flex flex-col">
+          <div className="flex border-b border-border">
+            {(["creatures", "players", "encounters"] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setLeftTab(t)}
+                className={`flex-1 text-xs py-2 ${leftTab === t ? "border-b-2 border-primary text-primary" : "text-text-muted"}`}
+              >
+                {t === "creatures" ? "Kreaturen" : t === "players" ? "Spieler" : "Encounters"}
+              </button>
+            ))}
+          </div>
           <div className="flex-1 overflow-y-auto p-3 space-y-2">
-            <MonsterManager open onClose={() => {}} />
+            {leftTab === "creatures" && <MonsterManager open onClose={() => {}} />}
+            {leftTab === "players" && (
+              <div className="space-y-2">
+                {creatures.map((c, i) => (
+                  <button
+                    key={i}
+                    onClick={() => addCombatant(characterSheetToCombatant(c))}
+                    className="w-full text-left p-2 rounded bg-surface-2 text-sm"
+                  >
+                    {c.name}
+                  </button>
+                ))}
+              </div>
+            )}
+            {leftTab === "encounters" && (
+              <div className="space-y-2">
+                <Button
+                  size="sm"
+                  className="w-full"
+                  onClick={async () => {
+                    const enc = await CombatApi.saveEncounter({
+                      id: crypto.randomUUID(),
+                      name: combat.name,
+                      combatants: combat.combatants,
+                      updatedAt: new Date().toISOString(),
+                    } as any);
+                    setEncounters((prev) => [enc, ...prev]);
+                  }}
+                >
+                  Aktuellen Kampf speichern
+                </Button>
+                {encounters.map((e) => (
+                  <button
+                    key={e.id}
+                    onClick={async () => {
+                      const enc = await CombatApi.loadEncounter(e.id);
+                      await addCombatants(enc.combatants);
+                    }}
+                    className="w-full text-left p-2 rounded bg-surface-2 text-sm"
+                  >
+                    {e.name}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div className="shrink-0 p-3 border-t border-border">
-            <Button
-              size="sm"
-              className="w-full"
-              onClick={() => setShowAddForm(true)}
-            >
+            <Button size="sm" className="w-full" onClick={() => setShowAddForm(true)}>
               + Kreatur
             </Button>
           </div>

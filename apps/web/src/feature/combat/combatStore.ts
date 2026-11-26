@@ -11,7 +11,6 @@ import type {
 import { characterSheetToCombatant } from "./utils/creatureToCombatant";
 
 type CombatStore = {
-  combats: CombatState[];
   currentCombat: CombatState | null;
   loading: boolean;
   error: string | null;
@@ -24,13 +23,8 @@ type CombatStore = {
   monstersLoading: boolean;
   monstersError: string | null;
 
-  fetchCombats: () => Promise<void>;
   fetchCreatures: () => Promise<void>;
-  setCombats: (combats: CombatState[]) => void;
-  createCombat: (name: string) => Promise<void>;
-  selectCombat: (id: string) => Promise<void>;
-  closeCombat: () => void;
-  deleteCombat: (id: string) => Promise<void>;
+  initCombat: () => Promise<void>;
 
   startCombat: () => Promise<void>;
   pauseCombat: () => Promise<void>;
@@ -71,7 +65,6 @@ type CombatStore = {
 };
 
 export const useCombatStore = create<CombatStore>((set, get) => ({
-  combats: [],
   currentCombat: null,
   loading: false,
   error: null,
@@ -85,18 +78,6 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
   monstersError: null,
 
   conditionAppliedAt: {},
-
-  setCombats: (combats) => set({ combats }),
-
-  fetchCombats: async () => {
-    set({ loading: true, error: null });
-    try {
-      const combats = await CombatApi.listCombats();
-      set({ combats, loading: false });
-    } catch (err) {
-      set({ error: (err as Error).message, loading: false });
-    }
-  },
 
   fetchCreatures: async () => {
     set({ creaturesLoading: true, creaturesError: null });
@@ -174,42 +155,14 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
     }
   },
 
-  createCombat: async (name) => {
+  initCombat: async () => {
+    if (get().currentCombat) return;
     set({ loading: true, error: null });
     try {
-      const combat = await CombatApi.createCombat(name);
-      set((state) => ({
-        combats: [combat, ...state.combats],
-        currentCombat: combat,
-        loading: false,
-      }));
-    } catch (err) {
-      set({ error: (err as Error).message, loading: false });
-    }
-  },
-
-  selectCombat: async (id) => {
-    set({ loading: true, error: null });
-    try {
-      const combat = await CombatApi.getCombat(id);
+      const combat = await CombatApi.createCombat("Aktueller Kampf");
       set({ currentCombat: combat, loading: false });
     } catch (err) {
       set({ error: (err as Error).message, loading: false });
-    }
-  },
-
-  closeCombat: () => set({ currentCombat: null }),
-
-  deleteCombat: async (id) => {
-    try {
-      await CombatApi.deleteCombat(id);
-      set((state) => ({
-        combats: state.combats.filter((c) => c.id !== id),
-        currentCombat:
-          state.currentCombat?.id === id ? null : state.currentCombat,
-      }));
-    } catch (err) {
-      set({ error: (err as Error).message });
     }
   },
 
