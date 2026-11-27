@@ -89,4 +89,6 @@ export type CharacterSheet = {
   };
 
   notes: string;
+
+  folder?: string;
 };

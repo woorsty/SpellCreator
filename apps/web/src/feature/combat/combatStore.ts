@@ -1,14 +1,18 @@
 import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { CombatApi } from "../../api/combat-api";
 import { CreatureApi } from "../../api/creature-api";
 import { MonsterApi } from "../../api/monster-api";
+import { CharacterService } from "@repo/domain";
 import type {
   CombatState,
   Combatant,
   CharacterSheet,
   Condition,
+  Encounter,
 } from "@repo/domain";
 import { characterSheetToCombatant } from "./utils/creatureToCombatant";
+import type { ImprovedInitiativeImport } from "./utils/improvedInitiativeImport";
 
 type CombatStore = {
   currentCombat: CombatState | null;
@@ -22,6 +26,10 @@ type CombatStore = {
   monsters: Combatant[];
   monstersLoading: boolean;
   monstersError: string | null;
+
+  encounters: Encounter[];
+  encountersLoading: boolean;
+  encountersError: string | null;
 
   fetchCreatures: () => Promise<void>;
   initCombat: () => Promise<void>;
@@ -61,10 +69,18 @@ type CombatStore = {
   ) => Promise<void>;
   deleteMonster: (name: string) => Promise<void>;
 
+  fetchEncounters: () => Promise<void>;
+  saveEncounter: (encounter: Encounter) => Promise<void>;
+  deleteEncounter: (id: string) => Promise<void>;
+
+  importBundle: (bundle: ImprovedInitiativeImport) => Promise<void>;
+
   updateCurrentCombat: (combat: CombatState) => void;
 };
 
-export const useCombatStore = create<CombatStore>((set, get) => ({
+export const useCombatStore = create<CombatStore>()(
+  persist(
+    (set, get) => ({
   currentCombat: null,
   loading: false,
   error: null,
@@ -76,6 +92,10 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
   monsters: [],
   monstersLoading: false,
   monstersError: null,
+
+  encounters: [],
+  encountersLoading: false,
+  encountersError: null,
 
   conditionAppliedAt: {},
 
@@ -144,6 +164,73 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
     }
   },
 
+  fetchEncounters: async () => {
+    set({ encountersLoading: true, encountersError: null });
+    try {
+      const encounters = await CombatApi.listEncounters();
+      set((state) => {
+        // Merge server encounters with locally persisted ones (local wins on id match).
+        const byId = new Map<string, Encounter>();
+        for (const e of encounters) byId.set(e.id, e);
+        for (const e of state.encounters) byId.set(e.id, e);
+        return {
+          encounters: [...byId.values()].sort((a, b) =>
+            b.updatedAt.localeCompare(a.updatedAt),
+          ),
+          encountersLoading: false,
+        };
+      });
+    } catch (err) {
+      set({
+        encountersError: (err as Error).message,
+        encountersLoading: false,
+      });
+    }
+  },
+
+  saveEncounter: async (encounter) => {
+    try {
+      const saved = await CombatApi.saveEncounter(encounter);
+      set((state) => ({
+        encounters: [saved, ...state.encounters.filter((e) => e.id !== saved.id)],
+      }));
+    } catch (err) {
+      // Persist locally even if the server is unreachable.
+      set((state) => ({
+        encounters: [encounter, ...state.encounters.filter((e) => e.id !== encounter.id)],
+        error: (err as Error).message,
+      }));
+    }
+  },
+
+  deleteEncounter: async (id) => {
+    set((state) => ({
+      encounters: state.encounters.filter((e) => e.id !== id),
+    }));
+  },
+
+  importBundle: async (bundle) => {
+    set({ loading: true, error: null });
+    try {
+      for (const monster of bundle.monsters) {
+        await MonsterApi.createMonster(monster);
+      }
+      for (const player of bundle.players) {
+        await CharacterService.saveCharacter(player);
+      }
+      for (const encounter of bundle.encounters) {
+        await CombatApi.saveEncounter(encounter);
+      }
+      await get().fetchMonsters();
+      await get().fetchCreatures();
+      await get().fetchEncounters();
+      set({ loading: false });
+    } catch (err) {
+      set({ error: (err as Error).message, loading: false });
+      throw err;
+    }
+  },
+
   addMonsterToCombat: async (monster) => {
     const id = get().currentCombat?.id;
     if (!id) return;
@@ -156,7 +243,38 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
   },
 
   initCombat: async () => {
-    if (get().currentCombat) return;
+    const existing = get().currentCombat;
+    if (existing) {
+      // The combat is persisted in the browser, but the server may no longer
+      // have it (e.g. server data cleared or restored on another machine).
+      // Verify and recreate it from the persisted combatants when missing.
+      try {
+        await CombatApi.getCombat(existing.id);
+        return;
+      } catch (err) {
+        if (!(err as Error).message.includes("not found")) {
+          set({ error: (err as Error).message });
+          return;
+        }
+      }
+      set({ loading: true, error: null });
+      try {
+        let combat = await CombatApi.createCombat(existing.name);
+        for (const combatant of existing.combatants) {
+          combat = await CombatApi.addCombatant(combat.id, combatant);
+        }
+        if (existing.status === "active" || existing.status === "paused") {
+          combat = await CombatApi.startCombat(combat.id);
+          if (existing.status === "paused") {
+            combat = await CombatApi.pauseCombat(combat.id);
+          }
+        }
+        set({ currentCombat: combat, loading: false });
+      } catch (err) {
+        set({ error: (err as Error).message, loading: false });
+      }
+      return;
+    }
     set({ loading: true, error: null });
     try {
       const combat = await CombatApi.createCombat("Aktueller Kampf");
@@ -361,4 +479,16 @@ export const useCombatStore = create<CombatStore>((set, get) => ({
   },
 
   updateCurrentCombat: (combat) => set({ currentCombat: combat }),
-}));
+    }),
+    {
+      name: "spellcreator-combat",
+      storage: createJSONStorage(() => localStorage),
+      version: 1,
+      partialize: (state) => ({
+        currentCombat: state.currentCombat,
+        encounters: state.encounters,
+        conditionAppliedAt: state.conditionAppliedAt,
+      }),
+    },
+  ),
+);

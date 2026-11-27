@@ -683,6 +683,7 @@ export const de = {
         title: "Charakterdaten",
         size: "Größe",
         name: "Name",
+        folder: "Ordner",
         species: "Spezies",
         level: "Stufe",
         character_class: "Klasse",

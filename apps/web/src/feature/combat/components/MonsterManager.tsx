@@ -7,6 +7,8 @@ import { Card } from "../../../component/ui/Card";
 import { Label } from "../../../component/ui/Label";
 import { Input } from "../../../component/ui/Input";
 import { monsterTranslations } from "../../../locales/de/monsters";
+import { exportMonster, exportMonsters } from "../utils/export";
+import { FolderGroups } from "./FolderGroups";
 
 const monsterTranslationsMap: Record<string, string> = monsterTranslations;
 
@@ -20,6 +22,14 @@ function getApiName(monster: Combatant): string {
 
 function isImported(monster: Combatant): boolean {
   return monster.source === "imported";
+}
+
+const IMPORTED_FOLDER = "Importiert";
+const DEFAULT_CUSTOM_FOLDER = "Eigene";
+
+function getMonsterFolder(monster: Combatant): string {
+  if (isImported(monster)) return IMPORTED_FOLDER;
+  return monster.folder || DEFAULT_CUSTOM_FOLDER;
 }
 
 type MonsterManagerProps = {
@@ -90,6 +100,7 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
       ...monster,
       id: crypto?.randomUUID?.() ?? `c-${Date.now()}`,
       source: "custom",
+      folder: DEFAULT_CUSTOM_FOLDER,
       name: `${monster.name} (Kopie)`,
     };
     saveMonster(copy);
@@ -143,6 +154,16 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
         />
       </div>
 
+      {monsters.some((m) => !isImported(m)) && (
+        <Button
+          size="sm"
+          variant="secondary"
+          onClick={() => exportMonsters(monsters.filter((m) => !isImported(m)))}
+        >
+          Eigene Monster exportieren
+        </Button>
+      )}
+
       {monstersLoading ? (
         <div className="py-8 text-center text-text-muted">
           Kreaturen werden geladen…
@@ -153,32 +174,38 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
         </div>
       ) : (
         <Card variant="elevated" className="overflow-hidden">
-          <table className="w-full text-left border-collapse">
-            <tbody>
-              {filteredMonsters.map((monster) => {
+          <div className="p-2 space-y-2">
+            <FolderGroups
+              items={filteredMonsters}
+              getFolder={getMonsterFolder}
+              getId={(m) => m.id}
+              renderItem={(monster) => {
                 const displayName = getMonsterName(monster);
                 const imported = isImported(monster);
                 return (
-                  <tr
-                    key={monster.id}
-                    className="border-b border-border hover:bg-surface-2 transition-colors group"
-                  >
-                    <td className="p-3 font-medium text-text">
-                      {monster.imageUrl && (
-                        <img
-                          src={monster.imageUrl}
-                          alt={displayName}
-                          className="w-10 h-10 rounded-lg object-cover border border-border"
-                        />
-                      )}
-                      {displayName}
-                      {getMonsterName(monster) !== monster.name && (
-                        <span className="text-text-muted text-xs ml-1">
-                          ({monster.name})
-                        </span>
-                      )}
-                    </td>
-                    <td className="p-3 flex flex-col gap-2 w-12">
+                  <div className="flex items-center gap-2 p-2 rounded hover:bg-surface-2 transition-colors">
+                    {monster.imageUrl && (
+                      <img
+                        src={monster.imageUrl}
+                        alt={displayName}
+                        className="w-10 h-10 shrink-0 rounded-lg object-cover border border-border"
+                      />
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium text-text truncate">
+                        {displayName}
+                        {getMonsterName(monster) !== monster.name && (
+                          <span className="text-text-muted text-xs ml-1">
+                            ({monster.name})
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-text-muted truncate">
+                        HG {monster.challengeRating ?? "–"} · AC{" "}
+                        {monster.armorClass} · TP {monster.maxHp}
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-1 shrink-0">
                       <Button
                         size="sm"
                         variant="secondary"
@@ -213,12 +240,22 @@ export function MonsterManager({ open, onClose }: MonsterManagerProps) {
                           🗑️
                         </Button>
                       )}
-                    </td>
-                  </tr>
+                      {!imported && (
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          onClick={() => exportMonster(monster)}
+                          aria-label={`Kreatur ${displayName} exportieren`}
+                        >
+                          ⬇️
+                        </Button>
+                      )}
+                    </div>
+                  </div>
                 );
-              })}
-            </tbody>
-          </table>
+              }}
+            />
+          </div>
         </Card>
       )}
     </div>

@@ -32,6 +32,7 @@ export interface Combatant {
   imageUrl?: string; // Portrait URL
   portraitUrl?: string;
   source?: "imported" | "custom"; // Herkunft: importiert (SRD) oder benutzerdefiniert
+  folder?: string; // Ordner für die Gruppierung (z. B. "Eigene")
   notes?: string;
   description?: string; // Beschreibung
   owner?: string; // player name for multiplayer
@@ -131,6 +132,7 @@ export interface CombatState {
 export interface Encounter {
   id: string;
   name: string;
+  folder?: string;
   description?: string;
   combatants: Omit<Combatant, "turnOrder">[];
   createdAt: string;

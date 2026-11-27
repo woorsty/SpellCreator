@@ -1,0 +1,5473 @@
+{
+  "ImprovedInitiative.Spells": "[]",
+  "ImprovedInitiative.User.SkipIntro": "true",
+  "ImprovedInitiative.User.Settings": "{\"Commands\":[{\"Name\":\"toggle-menu\",\"KeyBinding\":\"alt+m\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"start-encounter\",\"KeyBinding\":\"alt+r\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"reroll-initiative\",\"KeyBinding\":\"alt+shift+i\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"end-encounter\",\"KeyBinding\":\"shift+alt+r\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"clear-encounter\",\"KeyBinding\":\"alt+shift+del\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"clean-encounter\",\"KeyBinding\":\"alt+del\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"open-library\",\"KeyBinding\":\"alt+a\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"open-library-manager\",\"KeyBinding\":\"alt+shift+a\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"roll-dice\",\"KeyBinding\":\"d\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"quick-add\",\"KeyBinding\":\"alt+q\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"restore-all-player-character-hp\",\"KeyBinding\":\"alt+shift+t\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"player-window\",\"KeyBinding\":\"alt+w\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"toggle-full-screen\",\"KeyBinding\":\"f11\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"next-turn\",\"KeyBinding\":\"n\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"previous-turn\",\"KeyBinding\":\"alt+n\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"save-encounter\",\"KeyBinding\":\"alt+s\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"settings\",\"KeyBinding\":\"?\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"apply-damage\",\"KeyBinding\":\"t\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"apply-healing\",\"KeyBinding\":\"l\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"apply-temporary-hp\",\"KeyBinding\":\"alt+t\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"add-tag\",\"KeyBinding\":\"g\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":true},{\"Name\":\"update-notes\",\"KeyBinding\":\"y\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"remove\",\"KeyBinding\":\"del\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"set-alias\",\"KeyBinding\":\"f2\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"toggle-reaction\",\"KeyBinding\":\"r\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"toggle-hidden\",\"KeyBinding\":\"h\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":true},{\"Name\":\"toggle-reveal-ac\",\"KeyBinding\":\"alt+h\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"edit-statblock\",\"KeyBinding\":\"shift+e\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"quick-edit-statblock\",\"KeyBinding\":\"e\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"set-initiative\",\"KeyBinding\":\"alt+i\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"link-initiative\",\"KeyBinding\":\"alt+l\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"move-down\",\"KeyBinding\":\"alt+j\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"move-up\",\"KeyBinding\":\"alt+k\",\"ShowOnActionBar\":true,\"ShowInCombatantRow\":false},{\"Name\":\"select-next\",\"KeyBinding\":\"j\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"select-previous\",\"KeyBinding\":\"k\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false},{\"Name\":\"duplicate-combatant\",\"KeyBinding\":\"alt+d\",\"ShowOnActionBar\":false,\"ShowInCombatantRow\":false}],\"Rules\":{\"RollMonsterHp\":false,\"EnableBossAndMinionHP\":false,\"AllowNegativeHP\":false,\"AutoCheckConcentration\":true,\"AutoGroupInitiative\":\"None\",\"AutoRerollInitiative\":\"No\"},\"TrackerView\":{\"DarkMode\":false,\"DisplayPortraits\":true,\"DisplayRoundCounter\":false,\"DisplayTurnTimer\":false,\"DisplayDifficulty\":true,\"DisplayHPBar\":false,\"DisplayCombatantColor\":false,\"DisplayReactionTracker\":false,\"PostCombatStats\":\"None\",\"DisplayRestoreCombatants\":true},\"PlayerView\":{\"ActiveCombatantOnTop\":false,\"AllowPlayerSuggestions\":false,\"AllowTagSuggestions\":false,\"MonsterHPVerbosity\":\"Colored Label\",\"PlayerHPVerbosity\":\"Actual HP\",\"HideMonstersOutsideEncounter\":true,\"DarkMode\":false,\"DisplayRoundCounter\":false,\"DisplayTurnTimer\":true,\"DisplayPortraits\":false,\"DisplayCombatantColor\":false,\"DisplayReactionTracker\":false,\"SplashPortraits\":false,\"CustomCSS\":\"\",\"CustomStyles\":{\"combatantBackground\":\"\",\"combatantText\":\"\",\"activeCombatantIndicator\":\"\",\"font\":\"\",\"headerBackground\":\"\",\"headerText\":\"\",\"mainBackground\":\"\",\"backgroundUrl\":\"\"},\"CustomEncounterId\":\"\"},\"StatBlock\":{\"CustomFields\":[]},\"PreloadedStatBlockSources\":{\"wotc-srd\":false,\"srd-2024\":true},\"PreloadedSpellSources\":{\"wotc-srd\":true},\"RecentItemIds\":[\"qug8h48c\",\"j99ky60p\",\"open5e-srd-2024_goblin-minion\",\"kecyhdqe\",\"open5e-srd-2024_dryad\",\"open5e-awakened-shrub\",\"open5e-dryad\",\"akbq6zhp\",\"open5e-owlbear\",\"open5e-animated-armor\",\"open5e-swarm-of-bats\",\"open5e-will-o-wisp\",\"open5e-vulture\",\"u4xjfp2i\",\"open5e-swarm-of-insects\",\"open5e-swarm-of-wasps\",\"open5e-gelatinous-cube\",\"open5e-wolf\",\"open5e-goblin\",\"open5e-grick\",\"open5e-bugbear\",\"open5e-cultist\",\"open5e-young-green-dragon\",\"open5e-giant-spider\",\"open5e-zombie\",\"5v7r56gg\",\"grna7gr1\",\"open5e-dust-mephit\",\"32qz34k6\",\"qug8h48a\",\"qgr2p1qs\",\"pggjcmz7\",\"open5e-awakened-tree\",\"open5e-giant-constrictor-snake\",\"2bnu283x\"],\"Version\":\"3.13.2\"}",
+  "ImprovedInitiative.User": "[\"Settings\",\"SkipIntro\",\"AllowTracking\"]",
+  "ImprovedInitiative.AutoSavedEncounters": "[\"default\"]",
+  "ImprovedInitiative.PersistentCharacters": "[]",
+  "ImprovedInitiative.User.AllowTracking": "true",
+  "ImprovedInitiative.SavedEncounters": "[]",
+  "_gcl_ls": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":1,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1780708766352},\"expires\":1788484766352}}",
+  "ImprovedInitiative.PlayerCharacters": "[]",
+  "ImprovedInitiative.Creatures": "[]",
+  "ImprovedInitiative.AutoSavedEncounters.default": "{\"ActiveCombatantId\":null,\"RoundCounter\":1,\"Combatants\":[{\"Id\":\"4epdi595\",\"PersistentCharacterId\":\"har2t3rq\",\"StatBlock\":{\"Id\":\"har2t3rq\",\"Name\":\"Drogan \\\"Keule\\\" Steinkeil\",\"Path\":\"Apfelritter\",\"Source\":\"\",\"Type\":\"\",\"HP\":{\"Value\":19,\"Notes\":\"(2d8+0)\"},\"AC\":{\"Value\":11,\"Notes\":\"\"},\"InitiativeModifier\":2,\"InitiativeAdvantage\":false,\"Speed\":[],\"Abilities\":{\"Str\":19,\"Dex\":15,\"Con\":18,\"Int\":5,\"Wis\":8,\"Cha\":9},\"DamageVulnerabilities\":[],\"DamageResistances\":[],\"DamageImmunities\":[],\"ConditionImmunities\":[],\"Saves\":[],\"Skills\":[],\"Senses\":[],\"Languages\":[\"Gemein\",\"Zwergisch\",\"Gnomisch\"],\"Challenge\":\"2\",\"Traits\":[],\"Actions\":[],\"BonusActions\":[],\"Reactions\":[],\"LegendaryActions\":[],\"MythicActions\":[],\"Description\":\"Maik\",\"Player\":\"player\",\"Version\":\"3.13.2\",\"ImageURL\":\"https://s1.directupload.eu/images/250922/8zszj5hk.png\"},\"CurrentHP\":19,\"CurrentNotes\":\"\",\"TemporaryHP\":0,\"Initiative\":0,\"InitiativeGroup\":null,\"Alias\":\"\",\"IndexLabel\":1,\"Tags\":[{\"Text\":\"Betäubt\",\"Hidden\":false,\"DurationRemaining\":-1,\"DurationTiming\":\"StartOfTurn\",\"DurationCombatantId\":\"\"}],\"Hidden\":false,\"RevealedAC\":false,\"Color\":\"\",\"ReactionsSpent\":0,\"RoundCounter\":0,\"InterfaceVersion\":\"3.17.3\",\"ElapsedSeconds\":0},{\"Id\":\"s5uh6net\",\"PersistentCharacterId\":\"ujsi3aef\",\"StatBlock\":{\"Id\":\"ujsi3aef\",\"Name\":\"Fizzwick \\\"Pfiffi\\\" Kupferpfiff\",\"Path\":\"Apfelritter\",\"Source\":\"\",\"Type\":\"\",\"HP\":{\"Value\":15,\"Notes\":\"(2d8+0)\"},\"AC\":{\"Value\":13,\"Notes\":\"\"},\"InitiativeModifier\":2,\"InitiativeAdvantage\":false,\"Speed\":[],\"Abilities\":{\"Str\":7,\"Dex\":15,\"Con\":11,\"Int\":11,\"Wis\":11,\"Cha\":13},\"DamageVulnerabilities\":[],\"DamageResistances\":[],\"DamageImmunities\":[],\"ConditionImmunities\":[],\"Saves\":[],\"Skills\":[],\"Senses\":[],\"Languages\":[\"Gemein\",\"Elfisch\",\"Gnomisch\",\"Goblinisch\",\"Diebessprache\"],\"Challenge\":\"2\",\"Traits\":[],\"Actions\":[],\"BonusActions\":[],\"Reactions\":[],\"LegendaryActions\":[],\"MythicActions\":[],\"Description\":\"Daniel\",\"Player\":\"player\",\"Version\":\"3.13.2\",\"ImageURL\":\"https://s1.directupload.eu/images/250922/cd6ilizw.png\"},\"CurrentHP\":15,\"CurrentNotes\":\"\",\"TemporaryHP\":0,\"Initiative\":0,\"InitiativeGroup\":null,\"Alias\":\"\",\"IndexLabel\":1,\"Tags\":[],\"Hidden\":false,\"RevealedAC\":false,\"Color\":\"\",\"ReactionsSpent\":0,\"RoundCounter\":0,\"InterfaceVersion\":\"3.17.3\",\"ElapsedSeconds\":0},{\"Id\":\"2yaqg3n8\",\"PersistentCharacterId\":\"m7eb6xb0\",\"StatBlock\":{\"Id\":\"m7eb6xb0\",\"Name\":\"Xyrrathyn Xyra Vaelcorra\",\"Path\":\"Apfelritter\",\"Source\":\"\",\"Type\":\"\",\"HP\":{\"Value\":10,\"Notes\":\"(2d8+0)\"},\"AC\":{\"Value\":17,\"Notes\":\"\"},\"InitiativeModifier\":4,\"InitiativeAdvantage\":false,\"Speed\":[],\"Abilities\":{\"Str\":14,\"Dex\":18,\"Con\":13,\"Int\":7,\"Wis\":18,\"Cha\":18},\"DamageVulnerabilities\":[],\"DamageResistances\":[],\"DamageImmunities\":[],\"ConditionImmunities\":[],\"Saves\":[],\"Skills\":[],\"Senses\":[],\"Languages\":[],\"Challenge\":\"2\",\"Traits\":[],\"Actions\":[],\"BonusActions\":[],\"Reactions\":[],\"LegendaryActions\":[],\"MythicActions\":[],\"Description\":\"Laura\",\"Player\":\"player\",\"Version\":\"3.13.2\",\"ImageURL\":\"\"},\"CurrentHP\":10,\"CurrentNotes\":\"\",\"TemporaryHP\":0,\"Initiative\":0,\"InitiativeGroup\":null,\"Alias\":\"\",\"IndexLabel\":1,\"Tags\":[],\"Hidden\":false,\"RevealedAC\":false,\"Color\":\"\",\"ReactionsSpent\":0,\"RoundCounter\":0,\"InterfaceVersion\":\"3.17.3\",\"ElapsedSeconds\":0},{\"Id\":\"nqcnrx9c\",\"StatBlock\":{\"Id\":\"open5e-srd-2024_goblin-minion\",\"Name\":\"Goblin Minion\",\"Path\":\"\",\"Source\":\"5e 2024 Rules\",\"Type\":\"Small Fey, chaotic neutral\",\"HP\":{\"Value\":7,\"Notes\":\"(2d6)\"},\"AC\":{\"Value\":12,\"Notes\":\"(natural armor)\"},\"InitiativeModifier\":0,\"InitiativeAdvantage\":false,\"Speed\":[\"walk 30 feet\"],\"Abilities\":{\"Str\":8,\"Dex\":15,\"Con\":10,\"Int\":10,\"Wis\":8,\"Cha\":8},\"DamageVulnerabilities\":[],\"DamageResistances\":[],\"DamageImmunities\":[],\"ConditionImmunities\":[],\"Saves\":[{\"Name\":\"Strength\",\"Modifier\":-1},{\"Name\":\"Dexterity\",\"Modifier\":2},{\"Name\":\"Constitution\",\"Modifier\":0},{\"Name\":\"Intelligence\",\"Modifier\":0},{\"Name\":\"Wisdom\",\"Modifier\":-1},{\"Name\":\"Charisma\",\"Modifier\":-1}],\"Skills\":[{\"Name\":\"Stealth\",\"Modifier\":6}],\"Senses\":[\"darkvision 60 ft.\"],\"Languages\":[\"Common\",\"Goblin\"],\"Challenge\":\"1/8\",\"Traits\":[],\"Actions\":[{\"Name\":\"Dagger\",\"Content\":\"Melee or Ranged Attack Roll: +4, reach 5 ft. or range 20/60 ft. 4 (1d4 + 2) Piercing damage.\"}],\"BonusActions\":[],\"Reactions\":[],\"LegendaryActions\":[],\"MythicActions\":[],\"Description\":\"\",\"Player\":\"\",\"Version\":\"3.15.2\",\"ImageURL\":\"\"},\"CurrentHP\":7,\"CurrentNotes\":\"\",\"TemporaryHP\":0,\"Initiative\":0,\"InitiativeGroup\":null,\"Alias\":\"Gappel\",\"IndexLabel\":1,\"Tags\":[],\"Hidden\":false,\"RevealedAC\":false,\"Color\":\"\",\"ReactionsSpent\":0,\"RoundCounter\":0,\"InterfaceVersion\":\"3.17.3\",\"ElapsedSeconds\":0},{\"Id\":\"f8i7zux0\",\"StatBlock\":{\"Id\":\"qug8h48c\",\"Name\":\"Testvieh\",\"Path\":\"Hexenlicht\",\"Source\":\"\",\"Type\":\"\",\"HP\":{\"Value\":11,\"Notes\":\"(1d1+0)\"},\"AC\":{\"Value\":15,\"Notes\":\"\"},\"InitiativeModifier\":0,\"InitiativeAdvantage\":false,\"Speed\":[],\"Abilities\":{\"Str\":12,\"Dex\":12,\"Con\":13,\"Int\":7,\"Wis\":10,\"Cha\":7},\"DamageVulnerabilities\":[],\"DamageResistances\":[],\"DamageImmunities\":[],\"ConditionImmunities\":[],\"Saves\":[],\"Skills\":[],\"Senses\":[],\"Languages\":[],\"Challenge\":\"\",\"Traits\":[{\"Name\":\"Amphibie\",\"Content\":\"Kann Wasser und Luft atmen\",\"Usage\":\"\"},{\"Name\":\"Mit Fröschen reden\",\"Content\":\"Kann simple Kommunikation mit Fröschen und Kröten reden\",\"Usage\":\"\"},{\"Name\":\"Sumpf Camouflage\",\"Content\":\"Vorteil bei Heimlichkeit in Sumpfigen Terrain\",\"Usage\":\"\"},{\"Name\":\"Sprung aus dem Stand\",\"Content\":\"Kann mit oder ohne Anlauf 6m weit und 3m hoch springen\",\"Usage\":\"\"}],\"Actions\":[{\"Name\":\"Mehrfachangriff\",\"Content\":\"Kann 2 Nahkampfangriffe: je Biss und Speer\",\"Usage\":\"\"},{\"Name\":\"Biss\",\"Content\":\"Nahkampf\\n+3 Treffen\\n1 Ziel\\n1W4+1 Stich\",\"Usage\":\"\"},{\"Name\":\"Speer\",\"Content\":\"Nah- oder Fernkampf (6/18)\\n+3 Treffer\\n1 Ziel\\n1W6+1 Stich Einhändig/Geworfen\\n1W8+1 Stich Zweihändig\",\"Usage\":\"\"}],\"BonusActions\":[],\"Reactions\":[],\"LegendaryActions\":[],\"MythicActions\":[],\"Description\":\"\",\"Player\":\"\",\"Version\":\"3.13.2\",\"ImageURL\":\"https://s1.directupload.eu/images/250923/o9977yof.png\",\"LastUpdateMs\":1775051813089},\"CurrentHP\":11,\"CurrentNotes\":\"\",\"TemporaryHP\":0,\"Initiative\":0,\"InitiativeGroup\":null,\"Alias\":\"\",\"IndexLabel\":1,\"Tags\":[],\"Hidden\":false,\"RevealedAC\":false,\"Color\":\"\",\"ReactionsSpent\":0,\"RoundCounter\":0,\"InterfaceVersion\":\"3.17.3\",\"ElapsedSeconds\":0}],\"BackgroundImageUrl\":null,\"SaveEncounterDefaults\":null,\"ElapsedSeconds\":0}",
+  "Creatures.1ze5ynd8": {
+    "Id": "1ze5ynd8",
+    "Name": "Erweckter Pilz",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 1,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 7,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 10,
+      "Dex": 10,
+      "Con": 10,
+      "Int": 10,
+      "Wis": 10,
+      "Cha": 10
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [],
+    "Languages": [],
+    "Challenge": "",
+    "Traits": [],
+    "Actions": [
+      {
+        "Name": "\"Angriff\"",
+        "Content": "Kein Plan bro, mach einfach 1 Schaden",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.15.2",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813088
+  },
+  "Creatures.2bnu283x": {
+    "Id": "2bnu283x",
+    "Name": "Riesenschnecke",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 22,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 11,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "3m"
+    ],
+    "Abilities": {
+      "Str": 10,
+      "Dex": 10,
+      "Con": 10,
+      "Int": 10,
+      "Wis": 10,
+      "Cha": 10
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [
+      "Dunkelsicht",
+      "Passive Wahrnehmung 10"
+    ],
+    "Languages": [],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Salzosmose",
+        "Content": "Wann immer die Schnecke ihren Zug in Kontakt\nmit mindestens 0,5 Kilogramm Salz beginnt, erleidet sie 1W4 nekrotischen Schaden. Wird eine Aktion verwendet, um die Schnecke mit der entsprechenden Menge Salz zu bestreuen, bewirkt dies sofort 1W4 nekrotischen Schaden und weitere 1W4 nekrotischen Schaden zu Beginn ihrer nächsten Runde (dann löst sich das Salz), sofern die Schnecke sich nicht in ihr Haus zurückgezogen hat.",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Hieb",
+        "Content": "Nahkampf\n+4 Treffen\nEin Ziel\n1W6+2 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Panzerverteidigung",
+        "Content": "Die Schnecke zieht sich in ihr Haus zurück und hat einen Bonus von +4 auf ihre RK, bis sie wieder hervorkommt. Sie kann als Bonusaktion in ihrem Zug aus dem Haus hervorkommen.",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://s1.directupload.eu/images/250922/szhtwak6.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.2ttcb71f": {
+    "Id": "2ttcb71f",
+    "Name": "Bavlorna Blattenstroh",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 110,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m",
+      "9m Schwimmend"
+    ],
+    "Abilities": {
+      "Str": 22,
+      "Dex": 11,
+      "Con": 18,
+      "Int": 16,
+      "Wis": 12,
+      "Cha": 15
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [
+      {
+        "Name": "Konstitution",
+        "Modifier": 7
+      },
+      {
+        "Name": "Intelligenz",
+        "Modifier": 6
+      },
+      {
+        "Name": "Weisheit",
+        "Modifier": 4
+      },
+      {
+        "Name": "Charisma",
+        "Modifier": 5
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Arkane Kunde",
+        "Modifier": 9
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 3
+      },
+      {
+        "Name": "Täuschen",
+        "Modifier": 5
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 4
+      }
+    ],
+    "Senses": [
+      "Passive Wahrnehmung 14",
+      "Wahrer Blick 18m"
+    ],
+    "Languages": [
+      "Elfisch",
+      "Gemeinsprache",
+      "Sylvanisch"
+    ],
+    "Challenge": "7",
+    "Traits": [
+      {
+        "Name": "Allergie auf Gegenuhrzeigersinn",
+        "Content": "Wenn Kreatur innerhalb von 3m mindestens 3m Bewegungsrate verbraucht, um gegen Uhrzeigersinn in Kreis zu laufen, bekommt sie einen Niesanfall und kann bis zum Ende ihres nächsten Zugs keine Zauber wirken. Außerdem speit sie jede KReatur aus, die sie verschluckt hat. Ausgespienen Kraturen landen liegend an einer freien Stelle innerhalb von 1,5m von ihr",
+        "Usage": ""
+      },
+      {
+        "Name": "Amphibisch",
+        "Content": "Kann Luft und Wasser atmen",
+        "Usage": ""
+      },
+      {
+        "Name": "Gabe der Unsterblichkeit",
+        "Content": "Immun gegen alle Effekte, die sie altern lassen und kann nicht an Altersschwäche sterben",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Führt Bissangriff und Dörrstrahl aus",
+        "Usage": ""
+      },
+      {
+        "Name": "Biss",
+        "Content": "+9 Treffer\n1,5m Reichweite\n1 Ziel\n2W6+6 Stich\nZiel wird gepackt (SG-16 Rettungswurf), wenn das Ziel max. mittelgroß ist.\nBis das Ziel sich befreit hat, ist es festgesetzt und Bavlorna kann ihren Bissangriff bei keinem anderen Ziel ausführen",
+        "Usage": ""
+      },
+      {
+        "Name": "Dörrstrahl",
+        "Content": "+6 Treffer\n18m Reichweite\n1 Ziel\n4W6+3 nekrotisch",
+        "Usage": ""
+      },
+      {
+        "Name": "Lorlinge erzeugen (5-6 Aufladungen)",
+        "Content": "Erzeugt max. 2 30cm große Lorlinge. Jeder erscheint innerhalb von 1,5m und ist unmittelbar nach ihr dran\nBleiben 1h bestehen, oder bis Bavlorna stirbt oder sie entlässt\nMaximal 8 Lorlinge",
+        "Usage": ""
+      },
+      {
+        "Name": "Zauberwirken",
+        "Content": "Kann folgende Zauber ohne Materialien und nutzt Intelligenz (Zauber Rettungswurf-SG 14):\n\nBeliebig oft: Magie entdecken\n2x täglich: Fluch brechen, Nahrung und Wasser erschaffen, Verwandlung\n1x täglich: Ebenenwechsel (nur auf sich selbst)\n",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [
+      {
+        "Name": "Verschlucken",
+        "Content": "Verschlingt höchstens kleine Kreatur, die sie gepackt hält und dadurch nicht mehr gepackt ist, sondern blind, festgesetzt, hat vollständige Deckung gegen Angriffe von außen und erleidet bei Zugbeginn 3W6 Säureschaden\nWenn Kreatur ein Lorling ist, erhält Bavlorna sämtliche Erinnerungen beim tot\n\nMaximal 1 Kreatur verschlingen\nWenn tot, kann sich befreien",
+        "Usage": ""
+      }
+    ],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.32qz34k6": {
+    "Id": "32qz34k6",
+    "Name": "Seeoger",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 45,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 13,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "3m",
+      "12m (Schwimmen)"
+    ],
+    "Abilities": {
+      "Str": 10,
+      "Dex": 10,
+      "Con": 10,
+      "Int": 10,
+      "Wis": 10,
+      "Cha": 10
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 10"
+    ],
+    "Languages": [
+      "Abyssal",
+      "Aqual"
+    ],
+    "Challenge": "2",
+    "Traits": [],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Zwei Angriffe, einen mit Biss und einem mit Klauen oder Harpune",
+        "Usage": ""
+      },
+      {
+        "Name": "Biss",
+        "Content": "Nahkampf\n+6 Treffen\nEin Ziel\n1W8+4 Stich",
+        "Usage": ""
+      },
+      {
+        "Name": "Klauen",
+        "Content": "Nahkampf\n+6 Treffen\n1 Ziel\n2W4+4 Hieb",
+        "Usage": ""
+      },
+      {
+        "Name": "Harpune",
+        "Content": "Nah- und Fernkampf (6/18)\n+6 Treffer\n1 Ziel\n2W6+4 Stich\nWenn das Ziel ein riesiges oder kleineres Wesen ist, muss es einen Stärke-Test gegen den Seeoger bestehen oder wird bis zu 6 Meter in Richtung des Seeogers gezogen.",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.3jiz226v": {
+    "Id": "3jiz226v",
+    "Name": "Beobachter",
+    "Path": "Phandalin",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 39,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "0m",
+      "Fliegend: 9m"
+    ],
+    "Abilities": {
+      "Str": 8,
+      "Dex": 14,
+      "Con": 14,
+      "Int": 13,
+      "Wis": 14,
+      "Cha": 11
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [
+      "Liegend"
+    ],
+    "Saves": [
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 6
+      }
+    ],
+    "Skills": [],
+    "Senses": [
+      "Dunkelsicht 36m",
+      "Passive Wahrnehmung 16"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Tiefe Sprache"
+    ],
+    "Challenge": "3",
+    "Traits": [
+      {
+        "Name": "Schweben",
+        "Content": "Der Beobachter schwebt, solange er lebt",
+        "Usage": ""
+      },
+      {
+        "Name": "Telepathie",
+        "Content": "Der Beobachter kann telepathisch mit jeder Kreatur innerhalb von 36m um sich herum kommunizieren, die eine Sprache verstehen kann.",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Augenstrahl",
+        "Content": "Der Beobachter nutzt pro Runde zwei der folgenden Augenstrahlen, dabei kann er jeden Augenstrahl nur einmal pro Zug verwenden. Jeder Augenstrahl kann eine oder zwei Kreaturen, die der Beobachter innerhalb von 27 um sich herum sehen kann, treffen.\n1. Verwirrungsstrahl. Das Ziel muss einen Weisheitsrettungswurf gegen SG 13 schaffen, sonst kann es bis zum Ende seines nächsten Zugs keine Reaktionen verwenden. In seinem Zug kann sich das Ziel nicht bewegen und verwendet seine Aktion, um einen Nahkampf- oder Fernkampfangriff gegen eine zufällige Kreatur in Reichweite auszuführen. Wenn das Ziel nicht angreifen kann, tut es in seinem Zug nichts.\n2. Lähmender Strahl, Die Zielkreatur muss einen Konstitutionsret-tungswurf gegen SG 13 ablegen, um nicht für 1 Minute gelähmt zu werden. Die Kreatur kann den Rettungswurf am Ende eines jeden ihrer Züge wiederholen und den Effekt bei einem Erfolg beenden.\n3. Furchtstrahl. Die Zielkreatur muss einen Weisheitsrettungswurf gegen SG 13 ablegen, um nicht für 1 Minute verängstigt zu werden. Das Ziel kann den Rettungswurf am Ende eines jeden seiner Züge wiederholen und den Effekt bei einem Erfolg beenden. Dabei erleidet es einen Nachteil, wenn der Beobachter für das Ziel noch sichtbar ist.\n4. Verwundender Strahl. Das Ziel muss einen Konstitutionsrettungs-wurf gegen SG 13 ablegen. Bei einem misslungenen Rettungswurf erleidet es 16 (3W10) nekrotischen Schaden, halb so viel Schaden bei einem erfolgreichen Rettungswurf.",
+        "Usage": ""
+      },
+      {
+        "Name": "Bis",
+        "Content": "Nahkampf\n+1 Treffer\n1 Ziel\n1W6-1 Stich",
+        "Usage": ""
+      },
+      {
+        "Name": "Nahrung und Wasser erschaffen",
+        "Content": "Erschafft magisch Nahrung und Wasser um sich selbst für 24h zu ernähren",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [
+      {
+        "Name": "Zauberspiegelung",
+        "Content": "Wenn er einen erfolgreichen Rettungswurf gegen Zauber macht, oder er verfehlt wird, kann er eine Kreatur in 9m auswählen, die er sehen kann. Der Zauber trifft sie dann",
+        "Usage": ""
+      }
+    ],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "Ein Beobachter ist ein kugelförmiges Monster, das man beauftragen kann, einen Schatz für einen Zeitraum zu beschützen, der 101 Jahre nicht übersteigen darf. Wenn der Schatz gestohlen oder zerstört wird, ehe die Zeit des Dienstes für den Beobachter endet, kehrt die Kreatur auf ihre Heimatebene zurück. Ansonsten verlässt sie niemals ihren Posten.",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.406s6v4v": {
+    "Id": "406s6v4v",
+    "Name": "Baumhirte",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 138,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 16,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 23,
+      "Dex": 8,
+      "Con": 21,
+      "Int": 12,
+      "Wis": 16,
+      "Cha": 12
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [
+      "Passive Wahrnehmung 13"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Druidisch",
+      "Elfisch",
+      "Sylvanisch"
+    ],
+    "Challenge": "9",
+    "Traits": [
+      {
+        "Name": "Falsches Erscheinungsbild",
+        "Content": "Solange unbewegt: Wirkt wie ein Baum",
+        "Usage": ""
+      },
+      {
+        "Name": "Belagerungsmonster",
+        "Content": "Verursacht doppelten Schaden an Gegenstände und Struckturen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "2 Schläge",
+        "Usage": ""
+      },
+      {
+        "Name": "Schlag",
+        "Content": "+10 Treffen\n1,5m Reichweite\n1 Ziel\n3W6+6 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Felsen",
+        "Content": "+10 Treffen\n18m/54m\n1 Ziel\n4W10+6 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Bäume beleben (1/Tag)",
+        "Content": "Belebt 1-2 Bäume im Umkreis von 18m\nHaben gleiche Werte wie er (Außer Int und Cha = 1 und können nicht sprechen und haben nur Schlag)\nBleibt 1 Tag oder wenn mehr als 36m weg von Baumhirte\nSchlägt dann wieder wurzeln",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.15.2",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.4ba35crs": {
+    "Id": "4ba35crs",
+    "Name": "Mormesk der Todesalb",
+    "Path": "Phandalin",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 45,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 13,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "0m",
+      "Fliegend: 18m"
+    ],
+    "Abilities": {
+      "Str": 6,
+      "Dex": 16,
+      "Con": 16,
+      "Int": 12,
+      "Wis": 14,
+      "Cha": 15
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [
+      "Blitz",
+      "Feuer",
+      "Kälte",
+      "Schall",
+      "Wucht, Stich und Hieb durch nicht versilberte Waffen"
+    ],
+    "DamageImmunities": [
+      "Gift",
+      "Nekrotisch"
+    ],
+    "ConditionImmunities": [
+      "Bezaubert",
+      "Festgehalten",
+      "Gelähmt",
+      "Gepackt",
+      "Liegend",
+      "Vergiftet",
+      "Versteinert"
+    ],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 12"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Diabolisch"
+    ],
+    "Challenge": "3",
+    "Traits": [
+      {
+        "Name": "Empfindlichkeit gegenüber Sonnenlicht",
+        "Content": "Solange er sich im hellen Licht befindet, hat er Nachteil bei Angriffswürfen und Wahrnehmungswürfen, die Sicht verwenden",
+        "Usage": ""
+      },
+      {
+        "Name": "Körperlose Bewegung",
+        "Content": "Kann sich durch andere Kreaturen und Gegenstände hindurch bewegen, als seien sie schwieriges Gelände\n1W10 Energie, wenn er seinen Zug in einem Gegenstand beendet",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Lebensentzug",
+        "Content": "Nahkampf\n+5 Treffer\n1 Ziel\n3W8+3 Nekrotisch\nZiel muss Konst. Rett. SG-13 schaffen, sonst werden Max-TP um den Schaden verringert\nWenn dadurch die Max-TP auf 0 sinken, stirbt das Ziel\nDie Verringerung hält bis LR",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "Ein Todesalb ist das körperlose Überbleibsel einer besonders hasserfüllten Seele. Die meisten Todesalben können die, die sie töten, in gespenstische untote Diener verwandeln. Mormesk zieht es vor, dies nicht zu tun, da er die Toten lieber tot lassen möchte.",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.5v7r56gg": {
+    "Id": "5v7r56gg",
+    "Name": "Zweigplage",
+    "Path": "Phandalin",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 4,
+      "Notes": "(1d6+1)"
+    },
+    "AC": {
+      "Value": 13,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "6m"
+    ],
+    "Abilities": {
+      "Str": 6,
+      "Dex": 13,
+      "Con": 12,
+      "Int": 4,
+      "Wis": 8,
+      "Cha": 3
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [
+      "Blind",
+      "Taub"
+    ],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 3
+      }
+    ],
+    "Senses": [
+      "Blindsicht 18m, darüber hinaus blind",
+      "Passive Wahrnehmung 9"
+    ],
+    "Languages": [
+      "Versteht Gemeinsprache"
+    ],
+    "Challenge": "1/8",
+    "Traits": [
+      {
+        "Name": "Falsches Erscheinungsbild",
+        "Content": "Solange die Plage bewegungslos bleibt, kann man ihn nicht von einem toten Gebüsch unterscheiden",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Klauen",
+        "Content": "Nahkampf\n+3 Treffer\n1 Ziel\n1W4+1 Stich",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://www.dndbeyond.com/avatars/thumbnails/16/464/1000/1000/636376286997771487.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.akbq6zhp": {
+    "Id": "akbq6zhp",
+    "Name": "Rotkappe",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 45,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "7,5m"
+    ],
+    "Abilities": {
+      "Str": 18,
+      "Dex": 13,
+      "Con": 18,
+      "Int": 10,
+      "Wis": 12,
+      "Cha": 9
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Athletik",
+        "Modifier": 6
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 3
+      }
+    ],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 13"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Sylvanisch"
+    ],
+    "Challenge": "3",
+    "Traits": [
+      {
+        "Name": "Eisenstiefel",
+        "Content": "Ist bei Geschicklichkeitswürfen im Nachteil",
+        "Usage": ""
+      },
+      {
+        "Name": "Große Stärke",
+        "Content": "Gillt beim Zupacken als mittelgroß\nAußerdem bei Angriffswürfen nicht im Nachteil, wenn schwere Waffe geführt",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "3 Böse Sichel Angriffe",
+        "Usage": ""
+      },
+      {
+        "Name": "Böse Sichel",
+        "Content": "+6 Treffer\n1,5m\n1 Ziel\n2W4+4 Hieb",
+        "Usage": ""
+      },
+      {
+        "Name": "Eiserne Verfolgung",
+        "Content": "Bewegt sich bis zur Bewegungsrate auf Kreatur zu, die sie sehen kann und tritt sie mit den Eisenstiefeln.\nDas Ziel muss SG-14-Geschicklichkeitsrettungswurf bestehen sonst 3W10+4 Wucht und umgestoßen",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.grna7gr1": {
+    "Id": "grna7gr1",
+    "Name": "Schlamm-Mephite",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 27,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 11,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 8,
+      "Dex": 12,
+      "Con": 12,
+      "Int": 9,
+      "Wis": 11,
+      "Cha": 7
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [
+      "Gift"
+    ],
+    "ConditionImmunities": [
+      "Gift"
+    ],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [],
+    "Languages": [],
+    "Challenge": "1/4",
+    "Traits": [
+      {
+        "Name": "Todesplatzer",
+        "Content": "Wenn er Stirbt, explodiert er in einer Schlammwolke\nJede Mittelgroße oder kleine Kreatur innerhalb von 1,5m muss einen SG-11 Geschicklichkeitsrettungswurf bestehen oder es ist bis zum Ende seines nächsten Zuges festgesetzt",
+        "Usage": ""
+      },
+      {
+        "Name": "Falsches Erscheinungsbild",
+        "Content": "Wenn der Mephite regungslos ist, ist er nicht erkennbar",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Fäuste",
+        "Content": "Nahkampf\n+3 Treffer\n1 Ziel\n1W6+1 Hieb",
+        "Usage": ""
+      },
+      {
+        "Name": "Schlammatem (6x)",
+        "Content": "Atmet Schlamm auf Kreatur innerhalb von 1,5m\nWenn Mittelgroß oder kleiner muss das Ziel einen SG-11 Geschicklichkeitsrettungswurf bestehen oder es ist für 1min festgesetzt\nNach jeden Zug wird der Wurf wiederholt",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://s1.directupload.eu/images/250923/7jmcmpxx.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.j99ky60p": {
+    "Id": "j99ky60p",
+    "Name": "Baumplage",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 138,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 23,
+      "Dex": 10,
+      "Con": 20,
+      "Int": 6,
+      "Wis": 10,
+      "Cha": 3
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [
+      "Blind",
+      "Taub"
+    ],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [],
+    "Languages": [
+      "Versteht Druidisch und Gemein, kann nicht sprehcne"
+    ],
+    "Challenge": "7",
+    "Traits": [
+      {
+        "Name": "Balegerungsmonster",
+        "Content": "Fügt Objekten und Bauwerken doppelten Schaden zu",
+        "Usage": ""
+      },
+      {
+        "Name": "Falsches Erscheinungsbild",
+        "Content": "Wenn am Anfang des Kampfes bewegungslos: Bei Initiativewurf im Vorteil\nWer nicht gesehen hat, dass Plage sich bewegt, muss SG-18 Nachforschen bestehen, um zu erkennen, dass die Plage belebt ist",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Plage führt Ast-Angriff und Umschlingende-Wurzeln-Angriff durhc",
+        "Usage": ""
+      },
+      {
+        "Name": "Ast",
+        "Content": "Nahkampf (4,5m)\n1 Ziel\n+9 Treffer\n3W6+6 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Umschlingende Wurzeln",
+        "Content": "Nahkampf (4,5m)\n+9 Treffer\nZiel: Kreatur, die noch nicht gepackt wurde\nWird Ziel gepackt (SG-15 Rettungswurf): Zu Beginn jedes Zuges 1W6+6 Wucht\nWurzel hat RK 15 und kann durchtrennt werden, indem sie 6 oder mehr Schaden mit einem Angriff erleidet\nDas verletzt die Plage nicht",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [
+      {
+        "Name": "Biss",
+        "Content": "Nahkampf\n+9 Treffer\n1 Ziel\n3W8+6 Stich",
+        "Usage": ""
+      }
+    ],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.kecyhdqe": {
+    "Id": "kecyhdqe",
+    "Name": "Zarak",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 37,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m"
+    ],
+    "Abilities": {
+      "Str": 13,
+      "Dex": 16,
+      "Con": 16,
+      "Int": 11,
+      "Wis": 15,
+      "Cha": 6
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [
+      {
+        "Name": "Geschicklichkeit",
+        "Modifier": 5
+      },
+      {
+        "Name": "Intelligenz",
+        "Modifier": 2
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Akrobatik",
+        "Modifier": 7
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 7
+      },
+      {
+        "Name": "Motiv erkennen",
+        "Modifier": 6
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 6
+      }
+    ],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 16"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Orkisch"
+    ],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Besondere Ausrüstung",
+        "Content": "Trank der Unsichtbarkeit",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Führt 2 Dolchangriffe aus",
+        "Usage": ""
+      },
+      {
+        "Name": "Dolch",
+        "Content": "+5 Treffer\n1,5m oder 6/18m\n1 Ziel\n1W4+3 Stich + 2W4 Stich, wenn Ziel Kreatur ist und Zarak min 18 TP hat",
+        "Usage": ""
+      },
+      {
+        "Name": "Garotte",
+        "Content": "+5 Treffer\n1,5m \n1 Humanoide\n2W4+3 Hieb \nUnd Ziel gepackt (SG-11)\nGepacktes Ziel erleidet jedes Mal zum Zugbeginn 2W4+3 Hieb\nZarak kann nur ein Ziel packen und kein Assassinenmarotte wirken",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [
+      {
+        "Name": "Assassinenmarotte",
+        "Content": "Spurt, Rückzug oder Verstecken",
+        "Usage": ""
+      }
+    ],
+    "Reactions": [
+      {
+        "Name": "Unglaubliches Ausweichen",
+        "Content": "Halbiert Schaden durch Angriffe, wenn er Angreifer sehen kann",
+        "Usage": ""
+      }
+    ],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.madkx3ci": {
+    "Id": "madkx3ci",
+    "Name": "Düsterling-Ältester",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 27,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m"
+    ],
+    "Abilities": {
+      "Str": 13,
+      "Dex": 17,
+      "Con": 12,
+      "Int": 10,
+      "Wis": 14,
+      "Cha": 13
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Akrobatik",
+        "Modifier": 5
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 7
+      },
+      {
+        "Name": "Täuschen",
+        "Modifier": 3
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 6
+      }
+    ],
+    "Senses": [
+      "Blindsicht 9m",
+      "Dunkelsicht 36m",
+      "Passive Wahrnehmung 16"
+    ],
+    "Languages": [
+      "Elfisch",
+      "Sylvanisch"
+    ],
+    "Challenge": "2",
+    "Traits": [
+      {
+        "Name": "Todesbrand",
+        "Content": "Wenn Ältester stirbt, strahlt magisches Licht im Radius von 3m aus Leiche, die ebenso wie alle Gegenstände im Bereich, die nicht magisch oder metallen sind, zu Asche verbrennt\nJede Kreatur im Bereich muss SG-11-Konst Rettungswurf ausführen, sonst 2W6 gleißenden Schaden und ist bis zum Anfang des nächsten Zugs blind. Sonst halber Schaden und nicht blind",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "2 Krummsäbelangriffe",
+        "Usage": ""
+      },
+      {
+        "Name": "Krumssäbel",
+        "Content": "+5 Treffer\n1,5 Reichweite\n1 Ziel\n1W6+3 Hieb + 2W6 Nekrotisch",
+        "Usage": ""
+      },
+      {
+        "Name": "Dunkelheit (wird nach Rast aufgeladen)",
+        "Content": "Wirkt Zauber Dunkelheit ohne Materialien und verwendet Weisheit zum Zaubern",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.n7vsi01u": {
+    "Id": "n7vsi01u",
+    "Name": "Pixie",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 1,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "10m",
+      "30m fliegend"
+    ],
+    "Abilities": {
+      "Str": 2,
+      "Dex": 20,
+      "Con": 8,
+      "Int": 10,
+      "Wis": 14,
+      "Cha": 15
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 7
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 4
+      }
+    ],
+    "Senses": [
+      "Passive Wahrnehmung 14"
+    ],
+    "Languages": [
+      "Sylvanisch"
+    ],
+    "Challenge": "1/4",
+    "Traits": [
+      {
+        "Name": "Magie Resistent",
+        "Content": "Vorteil bei Rettungswürfen gegen Magie",
+        "Usage": ""
+      },
+      {
+        "Name": "Angeborener Zauberer",
+        "Content": "Zauberattribut ist Charisma (SG: 12)\nBenötigt nur Pixiestaub als Material\nImmer: Druidenkunst\n1x Täglich: \"confusion\", Tanzende Lichter, Gutes und Böses entdecken, Gedankenlesen, Magie bannen, Verstricken, Fliegen, \"phantasmal force\" Polymorph, Schlaf",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Super Unsichtbarkeit",
+        "Content": "Der Pixie wird unsichtbar, bis seine Konzentration endet, Kleidung und Ausrüstung wird auch unsichtbar",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.pggjcmz7": {
+    "Id": "pggjcmz7",
+    "Name": "Harengon-Scharfschütze",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 9,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m"
+    ],
+    "Abilities": {
+      "Str": 10,
+      "Dex": 17,
+      "Con": 11,
+      "Int": 10,
+      "Wis": 13,
+      "Cha": 10
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [
+      {
+        "Name": "Geschicklichkeit",
+        "Modifier": 5
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Athletik",
+        "Modifier": 2
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 5
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 5
+      }
+    ],
+    "Senses": [
+      "Passive Wahrnehmung 15"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Sylvanisch"
+    ],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Sprung aus dem Stand",
+        "Content": "Der Harengon kann mit oder ohne Anlauf bis zu 6m weit und 3m hoch springen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Knüppel",
+        "Content": "Nahkampf\n+2 Treffen\nEin Ziel\n1W4 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Leichte Armbrust",
+        "Content": "Fernkampf (96m)\nEin Ziel\n+5 Treffen (Nur vollständige Deckung hilft)\n1W8+3 Stich\n\nDirekt nach Angriff kann er sich verstecken",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.pv68gcjx": {
+    "Id": "pv68gcjx",
+    "Name": "Boggel",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 18,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m",
+      "9m Klettern"
+    ],
+    "Abilities": {
+      "Str": 8,
+      "Dex": 18,
+      "Con": 13,
+      "Int": 6,
+      "Wis": 12,
+      "Cha": 7
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [
+      "Feuer"
+    ],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Fingerfertigkeit",
+        "Modifier": 6
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 6
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 5
+      }
+    ],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 15"
+    ],
+    "Languages": [
+      "Sylvanisch"
+    ],
+    "Challenge": "1/8",
+    "Traits": [],
+    "Actions": [
+      {
+        "Name": "Prügeln",
+        "Content": "Nahkampf\n+1 Treffer\n1 Ziel\n1W6-1 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Ölfläche",
+        "Content": "Boggel erzeugt Lache aus nicht entflammbaren Öl. \nEinige Zentimeter tief, bedeckt den Bereich des Boggels\nFür alle Kreaturen außer Boggel schwieriges Gelände\nBleibt 1h\nÖl hat zusatzeffekt (nach Wahl des Boggel):",
+        "Usage": ""
+      },
+      {
+        "Name": "Klebriges Öl",
+        "Content": "Alle Kreaturen außer Boggel, die in Lache geraten oder Zug darin beginnen, müssen SG-11 Stärkerettungswurf bestehen oder sie bleiben kleben und sind festgesetzt. Sie können dann Aktion verwenden, um sich zu befreien und sich an die nächste freie Stelle zu begeben",
+        "Usage": ""
+      },
+      {
+        "Name": "Schlüpfriges Öl",
+        "Content": "Alle Kreaturen außer Boggel, die in die Lache geraten oder Zug darin beginnen, müssen SG-11 Geschicklichkeitsrettungswurf bestehen oder sie rutschen aus und sind liegend",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [
+      {
+        "Name": "Boggel-Öl",
+        "Content": "Dem Boggel läuft nicht entflammbares Öl aus den Poren und verleiht ihm einen Vorteil, bis er die Bonusaktion erneut nutzt:\n\nKlebriges Öl:\nBoggel ist im Vorteil bei Athletikwürfen zum Packen eines Gegners und Attributswürfen um eine Kreatur, Oberfläche oder Gegenstand im Griff zu halten\nAußerdem ohne Attributswürfen schwierige Oberflächen erklimmen und sich kopfüber an Decken bewegen\n\nSchlüpfriges Öl:\nBoggel ist bei Akrobatikwürfen zum Entkommen aus Fesseln und Griffen im Vorteil und kann sich durch Öffnungen bewegen, die für winzige Kreaturen groß genug sind, ohne sich quetschen zu müssen",
+        "Usage": ""
+      },
+      {
+        "Name": "Dimmensionsspalt",
+        "Content": "Boggel erzeugt einen unsichtbaren und unbeweglichen Spalt in einer Öffnung innerhalb von 1,5m von ihm, die er sehen kann, sofern der Bereich höchsten 3m pro Seite misst.\nDer Dimensionsspalt überbrückt diesen Bereich und einen Punkt innerhalb von 9m vom Boggel, den er sehen kann oder definieren kann (Bsp. \"9m vor mir\").\nWenn der Boggel sich neben dem Spalt befindet, kann er hindurchblicken und gilt als dem Zielpunkt benachbart. Gegenstände oder Körperteile, die er durch den Spalt steckt, erscheinen am Zielpunkt. Nur der Boggel kann den Spalt verwenden. Der Spalt bleibt bis zum Ende des nächsten Zugs des Boggel bestehen.",
+        "Usage": ""
+      }
+    ],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.15.2",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.qgr2p1qs": {
+    "Id": "qgr2p1qs",
+    "Name": "Harengon-Brigant",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 9,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 14,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9M"
+    ],
+    "Abilities": {
+      "Str": 10,
+      "Dex": 10,
+      "Con": 10,
+      "Int": 10,
+      "Wis": 10,
+      "Cha": 10
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [
+      {
+        "Name": "Geschicklichkeit",
+        "Modifier": 5
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Akrobatik",
+        "Modifier": 5
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 4
+      }
+    ],
+    "Senses": [
+      "Passive Wahrnehmung 14"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Sylvanisch"
+    ],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Rudeltaktik",
+        "Content": "Der Harengon ist bei Angriffswürfen gegen eine Kreatur im Vorteil, wenn sich mindestens einer seiner Verbündeten, der nicht kampfunfähig ist, innerhalb von 1,5m von der Kreatur befindet",
+        "Usage": ""
+      },
+      {
+        "Name": "Sprung aus dem Stand",
+        "Content": "Der Harengon kann mit oder ohne Anlauf bis zu 6m weit und bis zu 3m hoch springen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Knüppel",
+        "Content": "Nahkampf: \n+4 Treffer\nEin Ziel\n1W4+2 Wucht",
+        "Usage": ""
+      },
+      {
+        "Name": "Schleuder",
+        "Content": "Fernkampf (9/36)\n+5 Treffer\nEin Ziel\n1W4+3 Wucht",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.qug8h48a": {
+    "Id": "qug8h48a",
+    "Name": "Bullywug",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 11,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 12,
+      "Dex": 12,
+      "Con": 13,
+      "Int": 7,
+      "Wis": 10,
+      "Cha": 7
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [],
+    "Languages": [],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Amphibie",
+        "Content": "Kann Wasser und Luft atmen",
+        "Usage": ""
+      },
+      {
+        "Name": "Mit Fröschen reden",
+        "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+        "Usage": ""
+      },
+      {
+        "Name": "Sumpf Camouflage",
+        "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+        "Usage": ""
+      },
+      {
+        "Name": "Sprung aus dem Stand",
+        "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+        "Usage": ""
+      },
+      {
+        "Name": "Biss",
+        "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+        "Usage": ""
+      },
+      {
+        "Name": "Speer",
+        "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.qug8h48c": {
+    "Id": "qug8h48c",
+    "Name": "Testvieh",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 11,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 15,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 12,
+      "Dex": 12,
+      "Con": 13,
+      "Int": 7,
+      "Wis": 10,
+      "Cha": 7
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [],
+    "Senses": [],
+    "Languages": [],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Amphibie",
+        "Content": "Kann Wasser und Luft atmen",
+        "Usage": ""
+      },
+      {
+        "Name": "Mit Fröschen reden",
+        "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+        "Usage": ""
+      },
+      {
+        "Name": "Sumpf Camouflage",
+        "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+        "Usage": ""
+      },
+      {
+        "Name": "Sprung aus dem Stand",
+        "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+        "Usage": ""
+      },
+      {
+        "Name": "Biss",
+        "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+        "Usage": ""
+      },
+      {
+        "Name": "Speer",
+        "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.u4xjfp2i": {
+    "Id": "u4xjfp2i",
+    "Name": "Flinkling",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 10,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 16,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "36m"
+    ],
+    "Abilities": {
+      "Str": 4,
+      "Dex": 23,
+      "Con": 13,
+      "Int": 10,
+      "Wis": 12,
+      "Cha": 7
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Akrobatik",
+        "Modifier": 8
+      },
+      {
+        "Name": "Fingerfertigkeit",
+        "Modifier": 8
+      },
+      {
+        "Name": "Heimlichkeit",
+        "Modifier": 8
+      },
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 5
+      }
+    ],
+    "Senses": [
+      "Dunkelsicht 18m",
+      "Passive Wahrnehmung 15"
+    ],
+    "Languages": [
+      "Gemeinsprache",
+      "Sylvanisch"
+    ],
+    "Challenge": "1",
+    "Traits": [
+      {
+        "Name": "Entrinnen",
+        "Content": "Wenn Geschicklichkeitsrettungswurf gefordert wird, um den Schaden zu halbieren, bekommt er keinen Schaden bei Erfolg und halben bei Misserfolg",
+        "Usage": ""
+      },
+      {
+        "Name": "Verschwommene Bewegung",
+        "Content": "Angriffe gegen ihn sind im Nachteil, solange nicht kampfunfähig oder Bewegung aufgebraucht ist",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "3 Dolchangriffe",
+        "Usage": ""
+      },
+      {
+        "Name": "Dolch",
+        "Content": "+8 Treffer\n1,5m Reichweite oder (6/18)\nEin Ziel\n1W4+6 Stich",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.14.0",
+    "ImageURL": "",
+    "CustomFields": [],
+    "InitiativeSpecialRoll": "",
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.uhg8uu6d": {
+    "Id": "uhg8uu6d",
+    "Name": "Campestri",
+    "Path": "Hexenlicht",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 2,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 12,
+      "Notes": ""
+    },
+    "InitiativeModifier": -2,
+    "InitiativeAdvantage": false,
+    "Speed": [],
+    "Abilities": {
+      "Str": 1,
+      "Dex": 7,
+      "Con": 10,
+      "Int": 4,
+      "Wis": 10,
+      "Cha": 8
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [],
+    "Skills": [
+      {
+        "Name": "Wahrnehmung",
+        "Modifier": 4
+      }
+    ],
+    "Senses": [
+      "Erschütterungssinn 9m",
+      "Passive Wahrnehmung 14"
+    ],
+    "Languages": [
+      "Versteht Gemeinsprache, spricht aber nur durch nachmachen"
+    ],
+    "Challenge": "0",
+    "Traits": [],
+    "Actions": [
+      {
+        "Name": "Kopfstoß",
+        "Content": "+0 Treffer\n1,5m\n1 Ziel\n1 Wuchtschaden",
+        "Usage": ""
+      },
+      {
+        "Name": "Sporen (1x täglich)",
+        "Content": "Setzt Sporen in 1,5m Radius frei.\nKeine Wirkung auf Elementare, Konstrukte, Pflanzen und Untote\nAlle anderen SG-10 Weisheitsrettungswurf, sonst 1min Kampfunfähig und Bewegung halbiert\nAm Ende eines Zuges kann Rettungswurf wiederholt werden",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.15.2",
+    "ImageURL": "",
+    "CustomFields": [],
+    "LastUpdateMs": 1775051813089
+  },
+  "Creatures.ur092b02": {
+    "Id": "ur092b02",
+    "Name": "Bullywug-Ritter",
+    "Path": "",
+    "Source": "",
+    "Type": "",
+    "HP": {
+      "Value": 66,
+      "Notes": "(1d1+0)"
+    },
+    "AC": {
+      "Value": 18,
+      "Notes": ""
+    },
+    "InitiativeModifier": 0,
+    "InitiativeAdvantage": false,
+    "Speed": [
+      "9m"
+    ],
+    "Abilities": {
+      "Str": 16,
+      "Dex": 12,
+      "Con": 13,
+      "Int": 9,
+      "Wis": 11,
+      "Cha": 14
+    },
+    "DamageVulnerabilities": [],
+    "DamageResistances": [],
+    "DamageImmunities": [],
+    "ConditionImmunities": [],
+    "Saves": [
+      {
+        "Name": "Konstitution",
+        "Modifier": 3
+      },
+      {
+        "Name": "Weisheit",
+        "Modifier": 2
+      }
+    ],
+    "Skills": [],
+    "Senses": [
+      "Passive Wahrnehmung 10"
+    ],
+    "Languages": [
+      "Bullyuwg",
+      "Gemeinsprache"
+    ],
+    "Challenge": "",
+    "Traits": [
+      {
+        "Name": "Amphibie",
+        "Content": "Kann Luft und Wasser atmen",
+        "Usage": ""
+      },
+      {
+        "Name": "Mit Fröschen reden",
+        "Content": "Kann mit Fröschen und Kröten einfach kommunizieren",
+        "Usage": ""
+      },
+      {
+        "Name": "Sprung aus dem Stand",
+        "Content": "Kann ohne Anlauf 6m weit und 3m hoch springen",
+        "Usage": ""
+      }
+    ],
+    "Actions": [
+      {
+        "Name": "Mehrfachangriff",
+        "Content": "Führt zwei Angriffe mit Glefe aus",
+        "Usage": ""
+      },
+      {
+        "Name": "Glefe",
+        "Content": "Nahkampf (3m)\n+5 Treffer\nEin Ziel\n1W10+3 Hieb",
+        "Usage": ""
+      }
+    ],
+    "BonusActions": [
+      {
+        "Name": "Quaken der Bezauberung",
+        "Content": "Quakt laut und zielt auf Kreatur in 9m Reichweite, die er sehen kann\nDas Ziel muss SG-12 Weisheitsrettungswurf bestehen oder es ist bis zum Ende seines nächsten Zugs bezaubert",
+        "Usage": ""
+      }
+    ],
+    "Reactions": [],
+    "LegendaryActions": [],
+    "MythicActions": [],
+    "Description": "",
+    "Player": "",
+    "Version": "3.13.2",
+    "ImageURL": "https://s1.directupload.eu/images/250923/ce6y3vz5.png",
+    "LastUpdateMs": 1775051813089
+  },
+  "PersistentCharacters.172nhd6p": {
+    "Id": "172nhd6p",
+    "Version": "3.13.2",
+    "Name": "Kael Schattenhand",
+    "Path": "Brudis",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 18,
+    "StatBlock": {
+      "Id": "172nhd6p",
+      "Name": "Kael Schattenhand",
+      "Path": "Brudis",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 18,
+        "Notes": "(3d8+0)"
+      },
+      "AC": {
+        "Value": 15,
+        "Notes": ""
+      },
+      "InitiativeModifier": 6,
+      "InitiativeAdvantage": false,
+      "Speed": [
+        "9m"
+      ],
+      "Abilities": {
+        "Str": 8,
+        "Dex": 18,
+        "Con": 13,
+        "Int": 13,
+        "Wis": 13,
+        "Cha": 14
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [
+        "Passive Wahrnehmung 13"
+      ],
+      "Languages": [
+        "Gemeinsprache",
+        "Diebessprache",
+        "Gebärdensprache",
+        "Zwergisch"
+      ],
+      "Challenge": "3",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Florian",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": ""
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.95991e82": {
+    "Id": "95991e82",
+    "Version": "3.13.2",
+    "Name": "Thorrak Steinfaust",
+    "Path": "Apfelritter",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 23,
+    "StatBlock": {
+      "Id": "95991e82",
+      "Name": "Thorrak Steinfaust",
+      "Path": "Apfelritter",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 23,
+        "Notes": "(2d12+0)"
+      },
+      "AC": {
+        "Value": 13,
+        "Notes": ""
+      },
+      "InitiativeModifier": 0,
+      "InitiativeAdvantage": false,
+      "Speed": [],
+      "Abilities": {
+        "Str": 18,
+        "Dex": 11,
+        "Con": 17,
+        "Int": 11,
+        "Wis": 13,
+        "Cha": 7
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [],
+      "Languages": [
+        "Gemein",
+        "Zwergisch",
+        "Riesisch"
+      ],
+      "Challenge": "2",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Ohlmann",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": "https://s1.directupload.eu/images/250922/7q2mnanu.png"
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.ftijh8y8": {
+    "Id": "ftijh8y8",
+    "Version": "3.13.2",
+    "Name": "Nezznar die schwarze Spinne",
+    "Path": "Phandalin",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 27,
+    "StatBlock": {
+      "Id": "ftijh8y8",
+      "Name": "Nezznar die schwarze Spinne",
+      "Path": "Phandalin",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 27,
+        "Notes": "(1d1+0)"
+      },
+      "AC": {
+        "Value": 11,
+        "Notes": ""
+      },
+      "InitiativeModifier": 0,
+      "InitiativeAdvantage": false,
+      "Speed": [
+        "9m"
+      ],
+      "Abilities": {
+        "Str": 9,
+        "Dex": 13,
+        "Con": 10,
+        "Int": 16,
+        "Wis": 14,
+        "Cha": 13
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [
+        {
+          "Name": "Int",
+          "Modifier": 5
+        },
+        {
+          "Name": "Wei",
+          "Modifier": 4
+        }
+      ],
+      "Skills": [
+        {
+          "Name": "Arkane Kunde",
+          "Modifier": 5
+        },
+        {
+          "Name": "Heimlichkeit",
+          "Modifier": 3
+        },
+        {
+          "Name": "Wahrnehmung",
+          "Modifier": 4
+        }
+      ],
+      "Senses": [
+        "Dunkelsicht 36m",
+        "Passive Wahrnehmung 14"
+      ],
+      "Languages": [
+        "Gemeinsprache",
+        "Elfisch"
+      ],
+      "Challenge": "",
+      "Traits": [
+        {
+          "Name": "Angeborenes Zauberwirken",
+          "Content": "Nezznar kann die folgenden Zauber angeboren wirken, wobei keine Materialkomponenten erforderlich sind:\n- Beliebig: Tanzende Lichter\n- Je 1/Tag: Dunkelheit, Feenfeuer (Rett.-SG-12)",
+          "Usage": ""
+        },
+        {
+          "Name": "Besonderer Ausrüstung",
+          "Content": "Besitzt Spinnenstecken",
+          "Usage": ""
+        },
+        {
+          "Name": "Empfindlich gegenüber Sonnenlicht",
+          "Content": "Nezznar hat Nachteil bei Angriffswürfen, wenn er oder das Ziel im Sonnenlicht ist",
+          "Usage": ""
+        },
+        {
+          "Name": "Feenblut",
+          "Content": "Nezznar hat einen Vorteil bei Rettungswürfen, wenn er bezaubert werden soll, und Magie kann ihn nicht einschläfern",
+          "Usage": ""
+        },
+        {
+          "Name": "Zauberwirken",
+          "Content": "Nezznar ist Zauberwirker der 4. Stufe, der Intelligenz als Attribut verwendet \nRett.-SG 13\n+5 Treffer\n\nTricks: Froststrahl, Magierhand, Schockgriff\n1. Grad (4 Plätze): Magisches Geschoss, Magierrüstung, Schild\n2. Grad (3 Plätze): Einflüsterung, Unsichtbarkeit",
+          "Usage": ""
+        }
+      ],
+      "Actions": [
+        {
+          "Name": "Spinnenstecken",
+          "Content": "Nahkampf\n+1 Treffer\n1 Ziel\n1W6-1 Wucht + 1W6 Gift",
+          "Usage": ""
+        }
+      ],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": ""
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.har2t3rq": {
+    "Id": "har2t3rq",
+    "Version": "3.13.2",
+    "Name": "Drogan \"Keule\" Steinkeil",
+    "Path": "Apfelritter",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 19,
+    "StatBlock": {
+      "Id": "har2t3rq",
+      "Name": "Drogan \"Keule\" Steinkeil",
+      "Path": "Apfelritter",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 19,
+        "Notes": "(2d8+0)"
+      },
+      "AC": {
+        "Value": 11,
+        "Notes": ""
+      },
+      "InitiativeModifier": 2,
+      "InitiativeAdvantage": false,
+      "Speed": [],
+      "Abilities": {
+        "Str": 19,
+        "Dex": 15,
+        "Con": 18,
+        "Int": 5,
+        "Wis": 8,
+        "Cha": 9
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [],
+      "Languages": [
+        "Gemein",
+        "Zwergisch",
+        "Gnomisch"
+      ],
+      "Challenge": "2",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Maik",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": "https://s1.directupload.eu/images/250922/8zszj5hk.png"
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.m7eb6xb0": {
+    "Id": "m7eb6xb0",
+    "Version": "3.13.2",
+    "Name": "Xyrrathyn Xyra Vaelcorra",
+    "Path": "Apfelritter",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 10,
+    "StatBlock": {
+      "Id": "m7eb6xb0",
+      "Name": "Xyrrathyn Xyra Vaelcorra",
+      "Path": "Apfelritter",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 10,
+        "Notes": "(2d8+0)"
+      },
+      "AC": {
+        "Value": 17,
+        "Notes": ""
+      },
+      "InitiativeModifier": 4,
+      "InitiativeAdvantage": false,
+      "Speed": [],
+      "Abilities": {
+        "Str": 14,
+        "Dex": 18,
+        "Con": 13,
+        "Int": 7,
+        "Wis": 18,
+        "Cha": 18
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [],
+      "Languages": [],
+      "Challenge": "2",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Laura",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": ""
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.rs35rrgk": {
+    "Id": "rs35rrgk",
+    "Version": "3.13.2",
+    "Name": "Agdon Langschal",
+    "Path": "Hexenlicht",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 36,
+    "StatBlock": {
+      "Id": "rs35rrgk",
+      "Name": "Agdon Langschal",
+      "Path": "Hexenlicht",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 36,
+        "Notes": "(1d1+0)"
+      },
+      "AC": {
+        "Value": 19,
+        "Notes": ""
+      },
+      "InitiativeModifier": 0,
+      "InitiativeAdvantage": false,
+      "Speed": [
+        "10,5m oder 21m, wenn er Schal trägt"
+      ],
+      "Abilities": {
+        "Str": 11,
+        "Dex": 20,
+        "Con": 11,
+        "Int": 11,
+        "Wis": 14,
+        "Cha": 16
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [
+        {
+          "Name": "Geschicklichkeit",
+          "Modifier": 7
+        },
+        {
+          "Name": "Weisheit",
+          "Modifier": 4
+        }
+      ],
+      "Skills": [
+        {
+          "Name": "Akrobatik",
+          "Modifier": 7
+        },
+        {
+          "Name": "Fingerfertigkeit",
+          "Modifier": 7
+        },
+        {
+          "Name": "Heimlichkeit",
+          "Modifier": 7
+        },
+        {
+          "Name": "Wahrnehmung",
+          "Modifier": 6
+        }
+      ],
+      "Senses": [
+        "Passive Wahrnehmung 16"
+      ],
+      "Languages": [
+        "Gemeinsprache",
+        "Sylvanisch"
+      ],
+      "Challenge": "",
+      "Traits": [
+        {
+          "Name": "Entrinnen",
+          "Content": "Kann Agdon bei einem Effekt einen Geschicklichkeitsrettungswurf ausführen, um nur den halben Schaden zu erleiden, so erleidet er stattdessen bei einem Erfolg gar keinen Schaden und bei einem Fehlschlag nur den halben, sofern er nicht kampfunfähig ist.",
+          "Usage": ""
+        },
+        {
+          "Name": "Sprung aus dem Stand",
+          "Content": "Agdon kann mit oder ohne Anlauf bis zu 6 M weit und bis zu 3 M hoch springen.",
+          "Usage": ""
+        }
+      ],
+      "Actions": [
+        {
+          "Name": "Mehrfachangriff",
+          "Content": "Agdon führt zwei Brandeisen- oder Dolch-Angriffe aus.",
+          "Usage": ""
+        },
+        {
+          "Name": "Brandeisen",
+          "Content": "Nahkampfiwaffenangriff\n+7 auf Treffer\nein Ziel\n3W6 Feuerschaden und das Ziel wird magisch gebrandmarkt\nAgdon ist für Kreaturen unsichtbar, die auf diese Weise gebrandmarkt sind. Das Brandmal verschwinde nach 24 Stunden. Alternativ kann es durch einen beliebigen Zauber einer Kreatur oder eines Gegenstands entfernt werden, der Flüche bannen kann.",
+          "Usage": ""
+        },
+        {
+          "Name": "Dolch",
+          "Content": "Nah und Fern (6/18)\n+7 Auf Treffer\nEin Ziel\n1W4+5 Stich",
+          "Usage": ""
+        }
+      ],
+      "BonusActions": [
+        {
+          "Name": "Flinkfinger",
+          "Content": "Agdon zielt auf eine Kreatur innerhalb von 1,5 Metern um ihn herum, die er sehen kann, und führt einen Geschicklichkeitswurf (Fingerfertigkeit) mit einem SG von 1 + die passive Weisheit (Wahrnehmung) des Ziels durch. Bei einem erfolgreichen Wurf stiehlt Agdon einen Gegenstand mit einem Gewicht von höchstens 500 Gramm, den das Ziel in seinem Besitz hat, aber gerade nicht festhält, ohne dass das Ziel den Diebstahl bemerkt.",
+          "Usage": ""
+        }
+      ],
+      "Reactions": [
+        {
+          "Name": "Unglaubliches Ausweichen",
+          "Content": "Agdon halbiert den Schaden, den er durch einen Treffer erleidet. Er muss den Angreifer sehen können.",
+          "Usage": ""
+        }
+      ],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "",
+      "Player": "",
+      "Version": "3.13.2",
+      "ImageURL": "https://s1.directupload.eu/images/250923/2fs2l8l6.png"
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.u4y9803v": {
+    "Id": "u4y9803v",
+    "Version": "3.13.2",
+    "Name": "Aelin Ashryver Whitethorn Galathynius",
+    "Path": "Brudis",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 19,
+    "StatBlock": {
+      "Id": "u4y9803v",
+      "Name": "Aelin Ashryver Whitethorn Galathynius",
+      "Path": "Brudis",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 19,
+        "Notes": "(3d10+0)"
+      },
+      "AC": {
+        "Value": 10,
+        "Notes": "14"
+      },
+      "InitiativeModifier": 2,
+      "InitiativeAdvantage": false,
+      "Speed": [
+        "10m"
+      ],
+      "Abilities": {
+        "Str": 14,
+        "Dex": 15,
+        "Con": 12,
+        "Int": 17,
+        "Wis": 12,
+        "Cha": 10
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [
+        "Passive Wahrnehmung 13"
+      ],
+      "Languages": [
+        "Gemeinsprache",
+        "Drakonisch",
+        "Gebärdensprache",
+        "Gnomisch",
+        "Elfisch"
+      ],
+      "Challenge": "3",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Laura",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": ""
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.ujsi3aef": {
+    "Id": "ujsi3aef",
+    "Version": "3.13.2",
+    "Name": "Fizzwick \"Pfiffi\" Kupferpfiff",
+    "Path": "Apfelritter",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 15,
+    "StatBlock": {
+      "Id": "ujsi3aef",
+      "Name": "Fizzwick \"Pfiffi\" Kupferpfiff",
+      "Path": "Apfelritter",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 15,
+        "Notes": "(2d8+0)"
+      },
+      "AC": {
+        "Value": 13,
+        "Notes": ""
+      },
+      "InitiativeModifier": 2,
+      "InitiativeAdvantage": false,
+      "Speed": [],
+      "Abilities": {
+        "Str": 7,
+        "Dex": 15,
+        "Con": 11,
+        "Int": 11,
+        "Wis": 11,
+        "Cha": 13
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [],
+      "Languages": [
+        "Gemein",
+        "Elfisch",
+        "Gnomisch",
+        "Goblinisch",
+        "Diebessprache"
+      ],
+      "Challenge": "2",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Daniel",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": "https://s1.directupload.eu/images/250922/cd6ilizw.png"
+    },
+    "Notes": ""
+  },
+  "PersistentCharacters.xg74av3u": {
+    "Id": "xg74av3u",
+    "Version": "3.13.2",
+    "Name": "Akzareth",
+    "Path": "Brudis",
+    "LastUpdateMs": 1775051813089,
+    "CurrentHP": 24,
+    "StatBlock": {
+      "Id": "xg74av3u",
+      "Name": "Akzareth",
+      "Path": "Brudis",
+      "Source": "",
+      "Type": "",
+      "HP": {
+        "Value": 24,
+        "Notes": "(1d1+0)"
+      },
+      "AC": {
+        "Value": 11,
+        "Notes": ""
+      },
+      "InitiativeModifier": 0,
+      "InitiativeAdvantage": false,
+      "Speed": [
+        "9m"
+      ],
+      "Abilities": {
+        "Str": 5,
+        "Dex": 10,
+        "Con": 10,
+        "Int": 12,
+        "Wis": 13,
+        "Cha": 17
+      },
+      "DamageVulnerabilities": [],
+      "DamageResistances": [],
+      "DamageImmunities": [],
+      "ConditionImmunities": [],
+      "Saves": [],
+      "Skills": [],
+      "Senses": [
+        "Passive Wahrnehmung 11"
+      ],
+      "Languages": [
+        "Gemeinsprache",
+        "Gnomisch",
+        "Gebärdensprache"
+      ],
+      "Challenge": "3",
+      "Traits": [],
+      "Actions": [],
+      "BonusActions": [],
+      "Reactions": [],
+      "LegendaryActions": [],
+      "MythicActions": [],
+      "Description": "Mario",
+      "Player": "player",
+      "Version": "3.13.2",
+      "ImageURL": ""
+    },
+    "Notes": ""
+  },
+  "SavedEncounters.Drben-Grovater_Baum_Rotkappen": {
+    "Name": "Großvater Baum Rotkappen",
+    "Path": "Drüben",
+    "Id": "Drben-Grovater_Baum_Rotkappen",
+    "Combatants": [
+      {
+        "Id": "uf38i5ui",
+        "StatBlock": {
+          "Id": "open5e-owlbear",
+          "Name": "Owlbear",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Large Monstrosity, unaligned ",
+          "HP": {
+            "Value": 59,
+            "Notes": "(7d10+21)"
+          },
+          "AC": {
+            "Value": 13,
+            "Notes": "(natural armor)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 40 ft."
+          ],
+          "Abilities": {
+            "Str": 20,
+            "Dex": 12,
+            "Con": 17,
+            "Int": 3,
+            "Wis": 12,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Perception",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "darkvision 60 ft.",
+            "passive Perception 13"
+          ],
+          "Languages": [],
+          "Challenge": "3",
+          "Traits": [
+            {
+              "Name": "Keen Sight and Smell",
+              "Content": "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Multiattack",
+              "Content": "The owlbear makes two attacks: one with its beak and one with its claws."
+            },
+            {
+              "Name": "Beak",
+              "Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 10 (1d10 + 5) piercing damage."
+            },
+            {
+              "Name": "Claws",
+              "Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 59,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Wacholder",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "8gqknibi",
+        "StatBlock": {
+          "Id": "akbq6zhp",
+          "Name": "Rotkappe",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 45,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 14,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "7,5m"
+          ],
+          "Abilities": {
+            "Str": 18,
+            "Dex": 13,
+            "Con": 18,
+            "Int": 10,
+            "Wis": 12,
+            "Cha": 9
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Athletik",
+              "Modifier": 6
+            },
+            {
+              "Name": "Wahrnehmung",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "Dunkelsicht 18m",
+            "Passive Wahrnehmung 13"
+          ],
+          "Languages": [
+            "Gemeinsprache",
+            "Sylvanisch"
+          ],
+          "Challenge": "3",
+          "Traits": [
+            {
+              "Name": "Eisenstiefel",
+              "Content": "Ist bei Geschicklichkeitswürfen im Nachteil",
+              "Usage": ""
+            },
+            {
+              "Name": "Große Stärke",
+              "Content": "Gillt beim Zupacken als mittelgroß\nAußerdem bei Angriffswürfen nicht im Nachteil, wenn schwere Waffe geführt",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "3 Böse Sichel Angriffe",
+              "Usage": ""
+            },
+            {
+              "Name": "Böse Sichel",
+              "Content": "+6 Treffer\n1,5m\n1 Ziel\n2W4+4 Hieb",
+              "Usage": ""
+            },
+            {
+              "Name": "Eiserne Verfolgung",
+              "Content": "Bewegt sich bis zur Bewegungsrate auf Kreatur zu, die sie sehen kann und tritt sie mit den Eisenstiefeln.\nDas Ziel muss SG-14-Geschicklichkeitsrettungswurf bestehen sonst 3W10+4 Wucht und umgestoßen",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": "",
+          "CustomFields": [],
+          "LastUpdateMs": 1762135056756
+        },
+        "CurrentHP": 45,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "btcehgpk",
+        "StatBlock": {
+          "Id": "akbq6zhp",
+          "Name": "Rotkappe",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 45,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 14,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "7,5m"
+          ],
+          "Abilities": {
+            "Str": 18,
+            "Dex": 13,
+            "Con": 18,
+            "Int": 10,
+            "Wis": 12,
+            "Cha": 9
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Athletik",
+              "Modifier": 6
+            },
+            {
+              "Name": "Wahrnehmung",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "Dunkelsicht 18m",
+            "Passive Wahrnehmung 13"
+          ],
+          "Languages": [
+            "Gemeinsprache",
+            "Sylvanisch"
+          ],
+          "Challenge": "3",
+          "Traits": [
+            {
+              "Name": "Eisenstiefel",
+              "Content": "Ist bei Geschicklichkeitswürfen im Nachteil",
+              "Usage": ""
+            },
+            {
+              "Name": "Große Stärke",
+              "Content": "Gillt beim Zupacken als mittelgroß\nAußerdem bei Angriffswürfen nicht im Nachteil, wenn schwere Waffe geführt",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "3 Böse Sichel Angriffe",
+              "Usage": ""
+            },
+            {
+              "Name": "Böse Sichel",
+              "Content": "+6 Treffer\n1,5m\n1 Ziel\n2W4+4 Hieb",
+              "Usage": ""
+            },
+            {
+              "Name": "Eiserne Verfolgung",
+              "Content": "Bewegt sich bis zur Bewegungsrate auf Kreatur zu, die sie sehen kann und tritt sie mit den Eisenstiefeln.\nDas Ziel muss SG-14-Geschicklichkeitsrettungswurf bestehen sonst 3W10+4 Wucht und umgestoßen",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": "",
+          "CustomFields": [],
+          "LastUpdateMs": 1762135056756
+        },
+        "CurrentHP": 45,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 2,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "m2azx092",
+        "StatBlock": {
+          "Id": "akbq6zhp",
+          "Name": "Rotkappe",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 45,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 14,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "7,5m"
+          ],
+          "Abilities": {
+            "Str": 18,
+            "Dex": 13,
+            "Con": 18,
+            "Int": 10,
+            "Wis": 12,
+            "Cha": 9
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Athletik",
+              "Modifier": 6
+            },
+            {
+              "Name": "Wahrnehmung",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "Dunkelsicht 18m",
+            "Passive Wahrnehmung 13"
+          ],
+          "Languages": [
+            "Gemeinsprache",
+            "Sylvanisch"
+          ],
+          "Challenge": "3",
+          "Traits": [
+            {
+              "Name": "Eisenstiefel",
+              "Content": "Ist bei Geschicklichkeitswürfen im Nachteil",
+              "Usage": ""
+            },
+            {
+              "Name": "Große Stärke",
+              "Content": "Gillt beim Zupacken als mittelgroß\nAußerdem bei Angriffswürfen nicht im Nachteil, wenn schwere Waffe geführt",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "3 Böse Sichel Angriffe",
+              "Usage": ""
+            },
+            {
+              "Name": "Böse Sichel",
+              "Content": "+6 Treffer\n1,5m\n1 Ziel\n2W4+4 Hieb",
+              "Usage": ""
+            },
+            {
+              "Name": "Eiserne Verfolgung",
+              "Content": "Bewegt sich bis zur Bewegungsrate auf Kreatur zu, die sie sehen kann und tritt sie mit den Eisenstiefeln.\nDas Ziel muss SG-14-Geschicklichkeitsrettungswurf bestehen sonst 3W10+4 Wucht und umgestoßen",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": "",
+          "CustomFields": [],
+          "LastUpdateMs": 1762135056756
+        },
+        "CurrentHP": 45,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 3,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Drben-Hungriger_Wacholder": {
+    "Name": "Hungriger Wacholder",
+    "Path": "Drüben",
+    "Id": "Drben-Hungriger_Wacholder",
+    "Combatants": [
+      {
+        "Id": "xh1874rk",
+        "StatBlock": {
+          "Id": "open5e-animated-armor",
+          "Name": "Animated Armor",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Construct, unaligned ",
+          "HP": {
+            "Value": 33,
+            "Notes": "(6d8+6)"
+          },
+          "AC": {
+            "Value": 18,
+            "Notes": "(natural armor)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 25 ft."
+          ],
+          "Abilities": {
+            "Str": 14,
+            "Dex": 11,
+            "Con": 13,
+            "Int": 1,
+            "Wis": 3,
+            "Cha": 1
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [
+            "poison",
+            "psychic"
+          ],
+          "ConditionImmunities": [
+            "blinded",
+            "charmed",
+            "deafened",
+            "exhaustion",
+            "frightened",
+            "paralyzed",
+            "petrified",
+            "poisoned"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "blindsight 60 ft. (blind beyond this radius)",
+            "passive Perception 6"
+          ],
+          "Languages": [],
+          "Challenge": "1",
+          "Traits": [
+            {
+              "Name": "Antimagic Susceptibility",
+              "Content": "The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+            },
+            {
+              "Name": "False Appearance",
+              "Content": "While the armor remains motionless, it is indistinguishable from a normal suit of armor."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Multiattack",
+              "Content": "The armor makes two melee attacks."
+            },
+            {
+              "Name": "Slam",
+              "Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 33,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Kleiderständer",
+        "IndexLabel": 1,
+        "Tags": [
+          {
+            "Text": "RK 15",
+            "Hidden": true,
+            "DurationRemaining": -1,
+            "DurationTiming": "StartOfTurn",
+            "DurationCombatantId": ""
+          }
+        ],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "uf38i5ui",
+        "StatBlock": {
+          "Id": "open5e-owlbear",
+          "Name": "Owlbear",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Large Monstrosity, unaligned ",
+          "HP": {
+            "Value": 59,
+            "Notes": "(7d10+21)"
+          },
+          "AC": {
+            "Value": 13,
+            "Notes": "(natural armor)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 40 ft."
+          ],
+          "Abilities": {
+            "Str": 20,
+            "Dex": 12,
+            "Con": 17,
+            "Int": 3,
+            "Wis": 12,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Perception",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "darkvision 60 ft.",
+            "passive Perception 13"
+          ],
+          "Languages": [],
+          "Challenge": "3",
+          "Traits": [
+            {
+              "Name": "Keen Sight and Smell",
+              "Content": "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Multiattack",
+              "Content": "The owlbear makes two attacks: one with its beak and one with its claws."
+            },
+            {
+              "Name": "Beak",
+              "Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 10 (1d10 + 5) piercing damage."
+            },
+            {
+              "Name": "Claws",
+              "Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 59,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Wacholder",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Drben-Verdammte_Dryade": {
+    "Name": "Verdammte Dryade",
+    "Path": "Drüben",
+    "Id": "Drben-Verdammte_Dryade",
+    "Combatants": [
+      {
+        "Id": "z0yykrv2",
+        "StatBlock": {
+          "Id": "open5e-dryad",
+          "Name": "Dryad",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Fey, neutral ",
+          "HP": {
+            "Value": 22,
+            "Notes": "(5d8)"
+          },
+          "AC": {
+            "Value": 11,
+            "Notes": "(16 with _barkskin_)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 30 ft."
+          ],
+          "Abilities": {
+            "Str": 10,
+            "Dex": 12,
+            "Con": 11,
+            "Int": 14,
+            "Wis": 15,
+            "Cha": 18
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Perception",
+              "Modifier": 4
+            },
+            {
+              "Name": "Stealth",
+              "Modifier": 5
+            }
+          ],
+          "Senses": [
+            "darkvision 60 ft.",
+            "passive Perception 14"
+          ],
+          "Languages": [
+            "Elvish",
+            "Sylvan"
+          ],
+          "Challenge": "1",
+          "Traits": [
+            {
+              "Name": "Innate Spellcasting",
+              "Content": "The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components:\n\nAt will: druidcraft\n3/day each: entangle, goodberry\n1/day each: barkskin, pass without trace, shillelagh"
+            },
+            {
+              "Name": "Magic Resistance",
+              "Content": "The dryad has advantage on saving throws against spells and other magical effects."
+            },
+            {
+              "Name": "Speak with Beasts and Plants",
+              "Content": "The dryad can communicate with beasts and plants as if they shared a language."
+            },
+            {
+              "Name": "Tree Stride",
+              "Content": "Once on her turn, the dryad can use 10 ft. of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 ft. of the first tree, appearing in an unoccupied space within 5 ft. of the second tree. Both trees must be large or bigger."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Club",
+              "Content": "Melee Weapon Attack: +2 to hit (+6 to hit with shillelagh), reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage, or 8 (1d8 + 4) bludgeoning damage with shillelagh."
+            },
+            {
+              "Name": "Fey Charm",
+              "Content": "The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.\nEach time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.\nThe dryad can have no more than one humanoid and up to three beasts charmed at a time."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 22,
+        "CurrentNotes": "Innate Spellcasting Slots\n\n[3/3]\n\n[1/1]",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Dryade",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "697uhd4i",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 1",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "pvz9gux5",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 2",
+        "IndexLabel": 2,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "rm8g6rhx",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 3",
+        "IndexLabel": 3,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "7p7urmks",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 4",
+        "IndexLabel": 4,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "hk37u0pp",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 5",
+        "IndexLabel": 5,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "shq4783r",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 6",
+        "IndexLabel": 6,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "22cxds8t",
+        "StatBlock": {
+          "Id": "open5e-awakened-shrub",
+          "Name": "Awakened Shrub",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Small Plant, unaligned ",
+          "HP": {
+            "Value": 10,
+            "Notes": "(3d6)"
+          },
+          "AC": {
+            "Value": 9,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 20 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 8,
+            "Con": 11,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 6
+          },
+          "DamageVulnerabilities": [
+            "fire"
+          ],
+          "DamageResistances": [
+            "piercing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "passive Perception 10"
+          ],
+          "Languages": [
+            "one language known by its creator"
+          ],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "False Appearance",
+              "Content": "While the shrub remains motionless, it is indistinguishable from a normal shrub."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Rake",
+              "Content": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 10,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Strauch 7",
+        "IndexLabel": 7,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Landhaus-Gallertzylinder": {
+    "Name": "Gallertzylinder",
+    "Path": "Landhaus",
+    "Id": "Landhaus-Gallertzylinder",
+    "Combatants": [
+      {
+        "Id": "sspixjcd",
+        "StatBlock": {
+          "Id": "open5e-gelatinous-cube",
+          "Name": "Gelatinous Cube",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Large Ooze, unaligned ",
+          "HP": {
+            "Value": 84,
+            "Notes": "(8d10+40)"
+          },
+          "AC": {
+            "Value": 6,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 15 ft."
+          ],
+          "Abilities": {
+            "Str": 14,
+            "Dex": 3,
+            "Con": 20,
+            "Int": 1,
+            "Wis": 6,
+            "Cha": 1
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [
+            "blinded",
+            "charmed",
+            "deafened",
+            "exhaustion",
+            "frightened",
+            "prone"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "blindsight 60 ft. (blind beyond this radius)",
+            "passive Perception 8"
+          ],
+          "Languages": [],
+          "Challenge": "2",
+          "Traits": [
+            {
+              "Name": "Ooze Cube",
+              "Content": "The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.\nCreatures inside the cube can be seen but have total cover.\nA creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.\nThe cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time."
+            },
+            {
+              "Name": "Transparent",
+              "Content": "Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Pseudopod",
+              "Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) acid damage."
+            },
+            {
+              "Name": "Engulf",
+              "Content": "The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.\nOn a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.\nOn a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.\nAn engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 84,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Gallertzylinder",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Landhaus-Irrlicht": {
+    "Name": "Irrlicht",
+    "Path": "Landhaus",
+    "Id": "Landhaus-Irrlicht",
+    "Combatants": [
+      {
+        "Id": "qjca3gnz",
+        "StatBlock": {
+          "Id": "open5e-will-o-wisp",
+          "Name": "Will-o'-Wisp",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Tiny Undead, chaotic evil ",
+          "HP": {
+            "Value": 22,
+            "Notes": "(9d4)"
+          },
+          "AC": {
+            "Value": 19,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "hover true ft.",
+            "walk 0 ft.",
+            "fly 50 ft."
+          ],
+          "Abilities": {
+            "Str": 1,
+            "Dex": 28,
+            "Con": 10,
+            "Int": 13,
+            "Wis": 14,
+            "Cha": 11
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [
+            "acid",
+            "cold",
+            "fire",
+            "necrotic",
+            "thunder; bludgeoning",
+            "piercing",
+            "and slashing from nonmagical attacks"
+          ],
+          "DamageImmunities": [
+            "lightning",
+            "poison"
+          ],
+          "ConditionImmunities": [
+            "exhaustion",
+            "grappled",
+            "paralyzed",
+            "poisoned",
+            "prone",
+            "restrained",
+            "unconscious"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "darkvision 120 ft.",
+            "passive Perception 12"
+          ],
+          "Languages": [
+            "the languages it knew in life"
+          ],
+          "Challenge": "2",
+          "Traits": [
+            {
+              "Name": "Consume Life",
+              "Content": "As a bonus action, the will-o'-wisp can target one creature it can see within 5 ft. of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points."
+            },
+            {
+              "Name": "Ephemeral",
+              "Content": "The will-o'-wisp can't wear or carry anything."
+            },
+            {
+              "Name": "Incorporeal Movement",
+              "Content": "The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object."
+            },
+            {
+              "Name": "Variable Illumination",
+              "Content": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of ft. equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Shock",
+              "Content": "Melee Spell Attack: +4 to hit, reach 5 ft., one creature. Hit: 9 (2d8) lightning damage."
+            },
+            {
+              "Name": "Invisibility",
+              "Content": "The will-o'-wisp and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell)."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 22,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Irrlicht",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Landhaus-Kchengeier": {
+    "Name": "Küchengeier",
+    "Path": "Landhaus",
+    "Id": "Landhaus-Kchengeier",
+    "Combatants": [
+      {
+        "Id": "f00hpd9k",
+        "StatBlock": {
+          "Id": "open5e-vulture",
+          "Name": "Vulture",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Beast, unaligned ",
+          "HP": {
+            "Value": 5,
+            "Notes": "(1d8+1)"
+          },
+          "AC": {
+            "Value": 10,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 10 ft.",
+            "fly 50 ft."
+          ],
+          "Abilities": {
+            "Str": 7,
+            "Dex": 10,
+            "Con": 13,
+            "Int": 2,
+            "Wis": 12,
+            "Cha": 4
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Perception",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "passive Perception 13"
+          ],
+          "Languages": [],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "Keen Sight and Smell",
+              "Content": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell."
+            },
+            {
+              "Name": "Pack Tactics",
+              "Content": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Beak",
+              "Content": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 5,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Geier 1",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "dd3vj57f",
+        "StatBlock": {
+          "Id": "open5e-vulture",
+          "Name": "Vulture",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Beast, unaligned ",
+          "HP": {
+            "Value": 5,
+            "Notes": "(1d8+1)"
+          },
+          "AC": {
+            "Value": 10,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 10 ft.",
+            "fly 50 ft."
+          ],
+          "Abilities": {
+            "Str": 7,
+            "Dex": 10,
+            "Con": 13,
+            "Int": 2,
+            "Wis": 12,
+            "Cha": 4
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [
+            {
+              "Name": "Perception",
+              "Modifier": 3
+            }
+          ],
+          "Senses": [
+            "passive Perception 13"
+          ],
+          "Languages": [],
+          "Challenge": "0",
+          "Traits": [
+            {
+              "Name": "Keen Sight and Smell",
+              "Content": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell."
+            },
+            {
+              "Name": "Pack Tactics",
+              "Content": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Beak",
+              "Content": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 5,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Geier 2",
+        "IndexLabel": 2,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Landhaus-Kleiderstnder": {
+    "Name": "Kleiderständer",
+    "Path": "Landhaus",
+    "Id": "Landhaus-Kleiderstnder",
+    "Combatants": [
+      {
+        "Id": "xh1874rk",
+        "StatBlock": {
+          "Id": "open5e-animated-armor",
+          "Name": "Animated Armor",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Construct, unaligned ",
+          "HP": {
+            "Value": 33,
+            "Notes": "(6d8+6)"
+          },
+          "AC": {
+            "Value": 18,
+            "Notes": "(natural armor)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 25 ft."
+          ],
+          "Abilities": {
+            "Str": 14,
+            "Dex": 11,
+            "Con": 13,
+            "Int": 1,
+            "Wis": 3,
+            "Cha": 1
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [
+            "poison",
+            "psychic"
+          ],
+          "ConditionImmunities": [
+            "blinded",
+            "charmed",
+            "deafened",
+            "exhaustion",
+            "frightened",
+            "paralyzed",
+            "petrified",
+            "poisoned"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "blindsight 60 ft. (blind beyond this radius)",
+            "passive Perception 6"
+          ],
+          "Languages": [],
+          "Challenge": "1",
+          "Traits": [
+            {
+              "Name": "Antimagic Susceptibility",
+              "Content": "The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+            },
+            {
+              "Name": "False Appearance",
+              "Content": "While the armor remains motionless, it is indistinguishable from a normal suit of armor."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Multiattack",
+              "Content": "The armor makes two melee attacks."
+            },
+            {
+              "Name": "Slam",
+              "Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 33,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Kleiderständer",
+        "IndexLabel": 1,
+        "Tags": [
+          {
+            "Text": "RK 15",
+            "Hidden": true,
+            "DurationRemaining": -1,
+            "DurationTiming": "StartOfTurn",
+            "DurationCombatantId": ""
+          }
+        ],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Landhaus-Wespennest": {
+    "Name": "Wespennest",
+    "Path": "Landhaus",
+    "Id": "Landhaus-Wespennest",
+    "Combatants": [
+      {
+        "Id": "mv78pjz9",
+        "StatBlock": {
+          "Id": "open5e-swarm-of-wasps",
+          "Name": "Swarm of Wasps",
+          "Path": "",
+          "Source": "5e Core Rules",
+          "Type": "Medium Beast, unaligned (Swarm)",
+          "HP": {
+            "Value": 22,
+            "Notes": "(5d8)"
+          },
+          "AC": {
+            "Value": 12,
+            "Notes": "(natural armor)"
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "walk 5 ft.",
+            "fly 30 ft."
+          ],
+          "Abilities": {
+            "Str": 3,
+            "Dex": 13,
+            "Con": 10,
+            "Int": 1,
+            "Wis": 7,
+            "Cha": 1
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ],
+          "DamageImmunities": [],
+          "ConditionImmunities": [
+            "charmed",
+            "frightened",
+            "grappled",
+            "paralyzed",
+            "petrified",
+            "prone",
+            "restrained",
+            "stunned"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "blindsight 10 ft.",
+            "passive Perception 8"
+          ],
+          "Languages": [],
+          "Challenge": "1/2",
+          "Traits": [
+            {
+              "Name": "Swarm",
+              "Content": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Bites",
+              "Content": "Melee Weapon Attack: +3 to hit, reach 0 ft., one target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer."
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.14.0",
+          "ImageURL": ""
+        },
+        "CurrentHP": 22,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Wespenschwarm",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Niedergang-Rindenfra": {
+    "Name": "Rindenfraß",
+    "Path": "Niedergang",
+    "Id": "Niedergang-Rindenfra",
+    "Combatants": [
+      {
+        "Id": "ignvcchq",
+        "StatBlock": {
+          "Id": "j99ky60p",
+          "Name": "Baumplage",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 138,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 23,
+            "Dex": 10,
+            "Con": 20,
+            "Int": 6,
+            "Wis": 10,
+            "Cha": 3
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [
+            "Blind",
+            "Taub"
+          ],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [
+            "Versteht Druidisch und Gemein, kann nicht sprehcne"
+          ],
+          "Challenge": "7",
+          "Traits": [
+            {
+              "Name": "Balegerungsmonster",
+              "Content": "Fügt Objekten und Bauwerken doppelten Schaden zu",
+              "Usage": ""
+            },
+            {
+              "Name": "Falsches Erscheinungsbild",
+              "Content": "Wenn am Anfang des Kampfes bewegungslos: Bei Initiativewurf im Vorteil\nWer nicht gesehen hat, dass Plage sich bewegt, muss SG-18 Nachforschen bestehen, um zu erkennen, dass die Plage belebt ist",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Plage führt Ast-Angriff und Umschlingende-Wurzeln-Angriff durhc",
+              "Usage": ""
+            },
+            {
+              "Name": "Ast",
+              "Content": "Nahkampf (4,5m)\n1 Ziel\n+9 Treffer\n3W6+6 Wucht",
+              "Usage": ""
+            },
+            {
+              "Name": "Umschlingende Wurzeln",
+              "Content": "Nahkampf (4,5m)\n+9 Treffer\nZiel: Kreatur, die noch nicht gepackt wurde\nWird Ziel gepackt (SG-15 Rettungswurf): Zu Beginn jedes Zuges 1W6+6 Wucht\nWurzel hat RK 15 und kann durchtrennt werden, indem sie 6 oder mehr Schaden mit einem Angriff erleidet\nDas verletzt die Plage nicht",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+9 Treffer\n1 Ziel\n3W8+6 Stich",
+              "Usage": ""
+            }
+          ],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "",
+          "LastUpdateMs": 1758580351462
+        },
+        "CurrentHP": 138,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Rindenfraß",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Niedergang-Trittsteine_Seeoger": {
+    "Version": "3.14.0",
+    "Id": "Niedergang-Trittsteine_Seeoger",
+    "Combatants": [
+      {
+        "Id": "synnj6zz",
+        "StatBlock": {
+          "Id": "32qz34k6",
+          "Name": "Seeoger",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 45,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 13,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "3m",
+            "12m (Schwimmen)"
+          ],
+          "Abilities": {
+            "Str": 10,
+            "Dex": 10,
+            "Con": 10,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 10
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "Dunkelsicht 18m",
+            "Passive Wahrnehmung 10"
+          ],
+          "Languages": [
+            "Abyssal",
+            "Aqual"
+          ],
+          "Challenge": "2",
+          "Traits": [],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Zwei Angriffe, einen mit Biss und einem mit Klauen oder Harpune",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+6 Treffen\nEin Ziel\n1W8+4 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Klauen",
+              "Content": "Nahkampf\n+6 Treffen\n1 Ziel\n2W4+4 Hieb",
+              "Usage": ""
+            },
+            {
+              "Name": "Harpune",
+              "Content": "Nah- und Fernkampf (6/18)\n+6 Treffer\n1 Ziel\n2W6+4 Stich\nWenn das Ziel ein riesiges oder kleineres Wesen ist, muss es einen Stärke-Test gegen den Seeoger bestehen oder wird bis zu 6 Meter in Richtung des Seeogers gezogen.",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "",
+          "LastUpdateMs": 1758579530688
+        },
+        "CurrentHP": 45,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Seeoger 1",
+        "IndexLabel": 5,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "kvyxqqe8",
+        "StatBlock": {
+          "Id": "32qz34k6",
+          "Name": "Seeoger",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 45,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 13,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [
+            "3m",
+            "12m (Schwimmen)"
+          ],
+          "Abilities": {
+            "Str": 10,
+            "Dex": 10,
+            "Con": 10,
+            "Int": 10,
+            "Wis": 10,
+            "Cha": 10
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [
+            "Dunkelsicht 18m",
+            "Passive Wahrnehmung 10"
+          ],
+          "Languages": [
+            "Abyssal",
+            "Aqual"
+          ],
+          "Challenge": "2",
+          "Traits": [],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Zwei Angriffe, einen mit Biss und einem mit Klauen oder Harpune",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+6 Treffen\nEin Ziel\n1W8+4 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Klauen",
+              "Content": "Nahkampf\n+6 Treffen\n1 Ziel\n2W4+4 Hieb",
+              "Usage": ""
+            },
+            {
+              "Name": "Harpune",
+              "Content": "Nah- und Fernkampf (6/18)\n+6 Treffer\n1 Ziel\n2W6+4 Stich\nWenn das Ziel ein riesiges oder kleineres Wesen ist, muss es einen Stärke-Test gegen den Seeoger bestehen oder wird bis zu 6 Meter in Richtung des Seeogers gezogen.",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "",
+          "LastUpdateMs": 1758579530688
+        },
+        "CurrentHP": 45,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "Seeoger 2",
+        "IndexLabel": 6,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Name": "Trittsteine Seeoger",
+    "Path": "Niedergang",
+    "LastUpdateMs": 1775051813089
+  },
+  "SavedEncounters.Niedergang-Wachen_alamiert": {
+    "Name": "Wachen alamiert",
+    "Path": "Niedergang",
+    "Id": "Niedergang-Wachen_alamiert",
+    "Combatants": [
+      {
+        "Id": "e4bdgxft",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 1,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "8ak3q7g1",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 2,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "ie42fx5n",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 3,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "tzp68v93",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 4,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "kz3bufdu",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 5,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      },
+      {
+        "Id": "t327274s",
+        "StatBlock": {
+          "Id": "qug8h48a",
+          "Name": "Bullywug",
+          "Path": "Hexenlicht",
+          "Source": "",
+          "Type": "",
+          "HP": {
+            "Value": 11,
+            "Notes": "(1d1+0)"
+          },
+          "AC": {
+            "Value": 15,
+            "Notes": ""
+          },
+          "InitiativeModifier": 0,
+          "InitiativeAdvantage": false,
+          "Speed": [],
+          "Abilities": {
+            "Str": 12,
+            "Dex": 12,
+            "Con": 13,
+            "Int": 7,
+            "Wis": 10,
+            "Cha": 7
+          },
+          "DamageVulnerabilities": [],
+          "DamageResistances": [],
+          "DamageImmunities": [],
+          "ConditionImmunities": [],
+          "Saves": [],
+          "Skills": [],
+          "Senses": [],
+          "Languages": [],
+          "Challenge": "",
+          "Traits": [
+            {
+              "Name": "Amphibie",
+              "Content": "Kann Wasser und Luft atmen",
+              "Usage": ""
+            },
+            {
+              "Name": "Mit Fröschen reden",
+              "Content": "Kann simple Kommunikation mit Fröschen und Kröten reden",
+              "Usage": ""
+            },
+            {
+              "Name": "Sumpf Camouflage",
+              "Content": "Vorteil bei Heimlichkeit in Sumpfigen Terrain",
+              "Usage": ""
+            },
+            {
+              "Name": "Sprung aus dem Stand",
+              "Content": "Kann mit oder ohne Anlauf 6m weit und 3m hoch springen",
+              "Usage": ""
+            }
+          ],
+          "Actions": [
+            {
+              "Name": "Mehrfachangriff",
+              "Content": "Kann 2 Nahkampfangriffe: je Biss und Speer",
+              "Usage": ""
+            },
+            {
+              "Name": "Biss",
+              "Content": "Nahkampf\n+3 Treffen\n1 Ziel\n1W4+1 Stich",
+              "Usage": ""
+            },
+            {
+              "Name": "Speer",
+              "Content": "Nah- oder Fernkampf (6/18)\n+3 Treffer\n1 Ziel\n1W6+1 Stich Einhändig/Geworfen\n1W8+1 Stich Zweihändig",
+              "Usage": ""
+            }
+          ],
+          "BonusActions": [],
+          "Reactions": [],
+          "LegendaryActions": [],
+          "MythicActions": [],
+          "Description": "",
+          "Player": "",
+          "Version": "3.13.2",
+          "ImageURL": "https://s1.directupload.eu/images/250923/o9977yof.png",
+          "LastUpdateMs": 1758579205699
+        },
+        "CurrentHP": 11,
+        "CurrentNotes": "",
+        "TemporaryHP": 0,
+        "Initiative": 0,
+        "InitiativeGroup": null,
+        "Alias": "",
+        "IndexLabel": 6,
+        "Tags": [],
+        "Hidden": false,
+        "RevealedAC": false,
+        "Color": "",
+        "ReactionsSpent": 0,
+        "RoundCounter": 0,
+        "InterfaceVersion": "3.14.0",
+        "ElapsedSeconds": 0
+      }
+    ],
+    "Version": "3.14.0",
+    "LastUpdateMs": 1775051813089
+  }
+}

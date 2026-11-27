@@ -81,6 +81,13 @@ export function BasicInfoTab({ character, updateField }: StepProps) {
           className="w-40"
           label={translator.translate(".name")}
         />
+        <LabeledInput
+          value={character.folder ?? ""}
+          onChange={(e) => updateField("folder", e.target.value)}
+          placeholder="Ordner (optional)"
+          className="w-40"
+          label={translator.translate(".folder")}
+        />
         <LabeledNumberInput
           label={translator.translate(".level")}
           value={character.level}

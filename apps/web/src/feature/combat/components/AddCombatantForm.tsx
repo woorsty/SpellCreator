@@ -26,6 +26,7 @@ const initialValues: Record<string, unknown> = {
   portraitUrl: "",
   imageUrl: "",
   source: "",
+  folder: "Eigene",
   type: "npc",
   initiative: 0,
   initiativeBonus: 0,
@@ -530,6 +531,7 @@ export function AddCombatantForm({
         portraitUrl: monster.portraitUrl ?? "",
         imageUrl: monster.imageUrl ?? "",
         source: monster.source ?? "",
+        folder: monster.folder ?? "Eigene",
         type: "npc",
         initiative: monster.initiative,
         initiativeBonus: monster.initiativeBonus,
@@ -649,6 +651,7 @@ export function AddCombatantForm({
       portraitUrl: v.portraitUrl ? String(v.portraitUrl) : undefined,
       imageUrl: v.imageUrl ? String(v.imageUrl) : undefined,
       source: monster ? (monster.source as "imported" | "custom") : "custom",
+      folder: v.folder ? String(v.folder) : undefined,
       description: v.description ? String(v.description) : undefined,
       strength: toNumber(v.strength),
       dexterity: toNumber(v.dexterity),
@@ -726,6 +729,14 @@ export function AddCombatantForm({
                 value={String(form.source ?? "")}
                 onChange={getFieldHandler("source")}
                 placeholder="z. B. Monsterhandbuch"
+              />
+            </div>
+            <div className="space-y-1">
+              <TextField
+                label="Ordner"
+                value={String(form.folder ?? "")}
+                onChange={getFieldHandler("folder")}
+                placeholder="z. B. Eigene"
               />
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import type { CombatState, Combatant, Condition } from "@repo/domain";
 import { useCombatStore } from "../combatStore";
-import { CombatApi } from "../../../api/combat-api";
 import { CombatantCard } from "./CombatantCard";
 import { AddCombatantForm } from "./AddCombatantForm";
 import { AddCreaturesFromList } from "./AddCreaturesFromList";
@@ -10,8 +9,12 @@ import { ApplyConditionDialog } from "./ApplyConditionDialog";
 import { Button } from "../../../component/ui/Button";
 import { MonsterManager } from "./MonsterManager";
 import { characterSheetToCombatant } from "../utils/creatureToCombatant";
+import { exportEncounter, exportEncounters } from "../utils/export";
+import { parseImprovedInitiative } from "../utils/improvedInitiativeImport";
+import { FolderGroups } from "./FolderGroups";
 import { Card } from "../../../component/ui/Card";
 import { Badge } from "../../../component/ui/Badge";
+import { Dialog } from "../../../component/ui/Dialog";
 import { Input } from "../../../component/ui/Input";
 
 function attributeModifier(score: number | undefined): string {
@@ -39,6 +42,10 @@ export function CombatView({ combat }: { combat: CombatState }) {
     fetchMonsters,
     monsters,
     monstersLoading,
+    encounters,
+    fetchEncounters,
+    saveEncounter,
+    importBundle,
   } = useCombatStore();
 
   const sorted = [...(combat.combatants ?? [])].sort(
@@ -48,6 +55,12 @@ export function CombatView({ combat }: { combat: CombatState }) {
   const [selectedId, setSelectedId] = useState<string | undefined>(active?.id);
 
   const [showAddForm, setShowAddForm] = useState(false);
+const [showSaveEncounter, setShowSaveEncounter] = useState(false);
+const [saveName, setSaveName] = useState("");
+const [saveFolder, setSaveFolder] = useState("");
+const [savePlayers, setSavePlayers] = useState(false);
+  const importInputRef = React.useRef<HTMLInputElement>(null);
+  const [importing, setImporting] = useState(false);
   const [showInitDialog, setShowInitDialog] = useState(false);
   const [initValues, setInitValues] = useState<Record<string, number>>({});
 
@@ -76,7 +89,6 @@ export function CombatView({ combat }: { combat: CombatState }) {
   const [leftTab, setLeftTab] = useState<
     "creatures" | "players" | "encounters"
   >("creatures");
-  const [encounters, setEncounters] = useState<any[]>([]);
   const [showCreaturesList, setShowCreaturesList] = useState(false);
   const [showConditionDialog, setShowConditionDialog] = useState<{
     open: boolean;
@@ -96,13 +108,35 @@ export function CombatView({ combat }: { combat: CombatState }) {
   React.useEffect(() => {
     fetchCreatures();
     fetchMonsters();
-    CombatApi.listEncounters()
-      .then(setEncounters)
-      .catch(() => {});
-  }, [fetchCreatures, fetchMonsters]);
+    fetchEncounters();
+  }, [fetchCreatures, fetchMonsters, fetchEncounters]);
 
   const handleApplyCondition = (combatantId: string) => {
     setShowConditionDialog({ open: true, combatantId });
+  };
+
+  const handleImportFile = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    setImporting(true);
+    try {
+      const text = await file.text();
+      const bundle = parseImprovedInitiative(JSON.parse(text));
+      await importBundle(bundle);
+      const parts = [
+        `${bundle.monsters.length} Monster`,
+        `${bundle.players.length} Spieler`,
+        `${bundle.encounters.length} Encounters`,
+      ];
+      alert(`Import abgeschlossen: ${parts.join(", ")}`);
+    } catch (err) {
+      alert("Import fehlgeschlagen: " + (err as Error).message);
+    } finally {
+      setImporting(false);
+    }
   };
 
   const statusConfig: Record<string, { label: string; color: string }> = {
@@ -161,7 +195,7 @@ export function CombatView({ combat }: { combat: CombatState }) {
 
       <div className="flex flex-1 min-h-0">
         {/* Left: tabs */}
-        <div className="w-96 shrink-0 border-r border-border flex flex-col">
+        <div className="w-[28rem] shrink-0 border-r border-border flex flex-col">
           <div className="flex border-b border-border">
             {(["creatures", "players", "encounters"] as const).map((t) => (
               <button
@@ -183,17 +217,27 @@ export function CombatView({ combat }: { combat: CombatState }) {
             )}
             {leftTab === "players" && (
               <div className="space-y-2">
-                {creatures.map((c, i) => (
-                  <button
-                    key={i}
-                    onClick={() =>
-                      addCombatant(characterSheetToCombatant(c, true))
-                    }
-                    className="w-full text-left p-2 rounded bg-surface-2 text-sm"
-                  >
-                    {c.name}
-                  </button>
-                ))}
+                {creatures.length === 0 ? (
+                  <div className="py-6 text-center text-text-muted text-sm">
+                    Keine Spieler vorhanden.
+                  </div>
+                ) : (
+                  <FolderGroups
+                    items={creatures}
+                    getFolder={(c) => c.folder}
+                    getId={(c) => c.name}
+                    renderItem={(c) => (
+                      <button
+                        onClick={() =>
+                          addCombatant(characterSheetToCombatant(c, true))
+                        }
+                        className="w-full text-left p-2 rounded bg-surface-2 text-sm"
+                      >
+                        {c.name}
+                      </button>
+                    )}
+                  />
+                )}
               </div>
             )}
             {leftTab === "encounters" && (
@@ -201,30 +245,66 @@ export function CombatView({ combat }: { combat: CombatState }) {
                 <Button
                   size="sm"
                   className="w-full"
-                  onClick={async () => {
-                    const enc = await CombatApi.saveEncounter({
-                      id: crypto.randomUUID(),
-                      name: combat.name,
-                      combatants: combat.combatants,
-                      updatedAt: new Date().toISOString(),
-                    } as any);
-                    setEncounters((prev) => [enc, ...prev]);
+                  onClick={() => {
+                    setSaveName(combat.name);
+                    setSaveFolder("");
+                    setSavePlayers(false);
+                    setShowSaveEncounter(true);
                   }}
                 >
                   Aktuellen Kampf speichern
                 </Button>
-                {encounters.map((e) => (
-                  <button
-                    key={e.id}
-                    onClick={async () => {
-                      const enc = await CombatApi.loadEncounter(e.id);
-                      await addCombatants(enc.combatants);
-                    }}
-                    className="w-full text-left p-2 rounded bg-surface-2 text-sm"
+                <input
+                  ref={importInputRef}
+                  type="file"
+                  accept=".json,application/json"
+                  className="hidden"
+                  onChange={handleImportFile}
+                />
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  className="w-full"
+                  disabled={importing}
+                  onClick={() => importInputRef.current?.click()}
+                >
+                  {importing ? "Importiere…" : "Importieren (Improved Initiative)"}
+                </Button>
+                {encounters.length > 0 && (
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    className="w-full"
+                    onClick={() => exportEncounters(encounters)}
                   >
-                    {e.name}
-                  </button>
-                ))}
+                    Alle Encounters exportieren
+                  </Button>
+                )}
+                <FolderGroups
+                  items={encounters}
+                  getFolder={(e) => e.folder}
+                  getId={(e) => e.id}
+                  renderItem={(e) => (
+                    <div className="flex items-center gap-1 bg-surface-2 rounded">
+                      <button
+                        onClick={async () => {
+                          await addCombatants(e.combatants);
+                        }}
+                        className="flex-1 text-left p-2 text-sm"
+                      >
+                        {e.name}
+                      </button>
+                      <button
+                        onClick={() => exportEncounter(e)}
+                        title="Encounter exportieren"
+                        aria-label={`Encounter ${e.name} exportieren`}
+                        className="p-2 text-text-muted hover:text-text text-sm"
+                      >
+                        ⬇️
+                      </button>
+                    </div>
+                  )}
+                />
               </div>
             )}
           </div>
@@ -455,14 +535,47 @@ export function CombatView({ combat }: { combat: CombatState }) {
           loading={creaturesLoading}
         />
       )}
-      {showConditionDialog.open && showConditionDialog.combatantId && (
-        <ApplyConditionDialog
-          open={showConditionDialog.open}
-          onClose={() =>
-            setShowConditionDialog({ open: false, combatantId: undefined })
-          }
-          combatantId={showConditionDialog.combatantId}
-        />
+      {showSaveEncounter && (
+        <Dialog open={showSaveEncounter} onClose={() => setShowSaveEncounter(false)} title="Begegnung speichern">
+          <div className="space-y-3">
+            <Input value={saveName} onChange={(e) => setSaveName(e.target.value)} placeholder="Name" />
+            <Input value={saveFolder} onChange={(e) => setSaveFolder(e.target.value)} placeholder="Ordner (optional)" list="folder-list" />
+            <datalist id="folder-list">
+              {[...new Set(encounters.map((e) => e.folder).filter(Boolean))].map((f) => (
+                <option key={f} value={f} />
+              ))}
+            </datalist>
+            <label className="flex items-center gap-2 text-sm">
+              <input type="checkbox" checked={savePlayers} onChange={(e) => setSavePlayers(e.target.checked)} />
+              Spieler ebenfalls speichern
+            </label>
+            <Button
+              className="w-full"
+              onClick={async () => {
+                if (!saveName.trim()) return;
+                try {
+                  const combatants = savePlayers
+                    ? combat.combatants
+                    : combat.combatants.filter((c) => c.type !== "player");
+                  const now = new Date().toISOString();
+                  await saveEncounter({
+                    id: crypto.randomUUID(),
+                    name: saveName.trim(),
+                    folder: saveFolder.trim() || undefined,
+                    combatants,
+                    updatedAt: now,
+                    createdAt: now,
+                  });
+                  setShowSaveEncounter(false);
+                } catch (e) {
+                  alert("Speichern fehlgeschlagen: " + (e as Error).message);
+                }
+              }}
+            >
+              Speichern
+            </Button>
+          </div>
+        </Dialog>
       )}
     </div>
   );
